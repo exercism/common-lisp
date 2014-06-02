@@ -4,7 +4,23 @@
   "repository": "https://github.com/exercism/xlisp",
   "active": false,
   "problems": [
-
+    "point-mutations",
+    "gigasecond",
+    "rna-transcription",
+    "robot-name",
+    "leap",
+    "grains",
+    "word-count",
+    "bob",
+    "grade-school",
+    "phone-number",
+    "etl",
+    "beer-song",
+    "space-age",
+    "anagram",
+    "nucleotide-count",
+    "meetup",
+    "triangle"
   ],
   "deprecated": [
 
