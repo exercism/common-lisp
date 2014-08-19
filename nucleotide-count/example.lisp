@@ -6,8 +6,7 @@
 
 (define-condition invalid-nucleotide (error) ())
 
-(defparameter +dna-nucleotides+ "ACTG")
-(defparameter +valid-nucleotides+ (concatenate 'string +dna-nucleotides+ "U"))
+(defparameter +valid-nucleotides+ "ACGT")
 
 (defun validate-nucleotide (nucleotide)
   (or (find nucleotide +valid-nucleotides+)
@@ -19,5 +18,5 @@
 
 (defun nucleotide-counts (strand)
   (reduce #'(lambda (h c) (setf (gethash c h) (dna-count c strand)) h)
-	  +dna-nucleotides+
+	  +valid-nucleotides+
 	  :initial-value (make-hash-table)))
