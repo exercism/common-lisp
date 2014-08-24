@@ -9,6 +9,11 @@
 	     (coerce strand 'list))
       (signal 'error)))
 
+(defparameter dna->rna 
+  '((#\C . #\G) (#\G . #\C) (#\A . #\U) (#\T . #\A)))
+
 (defun to-rna (strand)
   (validate-strand strand)
-  (substitute #\U #\T strand))
+  (concatenate 'string
+	       (mapcar #'(lambda (c) (cdr (assoc c dna->rna))) 
+		       (coerce strand 'list))))
