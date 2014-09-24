@@ -15,6 +15,6 @@
 
 (defun response-for (msg)
   (cond ((silence-p msg) "Fine. Be that way!")
-	((shouting-p msg) "Woah, chill out!")
+	((shouting-p msg) "Whoa, chill out!")
 	((questioning-p msg) "Sure.")
 	(t "Whatever.")))
