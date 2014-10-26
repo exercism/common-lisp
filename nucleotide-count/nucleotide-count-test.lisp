@@ -13,21 +13,21 @@
    kvs
    :initial-value (make-hash-table)))
 
-(define-test empty-dna-strand-has-no-adenosine
+(define-test empty-dna-strand-has-no-adenine
   (assert-equal 0 (dna:dna-count #\A "")))
 
 (define-test empty-dna-strand-has-no-nucleotides
   (assert-equalp (make-hash '((#\A 0) (#\T 0) (#\C 0) (#\G 0)))
       (dna:nucleotide-counts "")))
 
-(define-test repetitive-cytidine-gets-counted
+(define-test repetitive-cytosine-gets-counted
   (assert-equal 5 (dna:dna-count #\C "CCCCC")))
 
-(define-test repetitive-sequence-has-only-guanosine
+(define-test repetitive-sequence-has-only-guanine
   (assert-equalp (make-hash '((#\A 0) (#\T 0) (#\C 0) (#\G 8)))
       (dna:nucleotide-counts "GGGGGGGG")))
 
-(define-test counts-only-thymidine
+(define-test counts-only-thymine
   (assert-equal 1 (dna:dna-count #\T "GGGGGTAACCCGG")))
 
 (define-test validates-nucleotides
