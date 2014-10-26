@@ -1,5 +1,6 @@
 (cl:defpackage #:meetup
-  (:use :common-lisp))
+  (:use :common-lisp)
+  (:export :meetup))
 
 (in-package :meetup)
 
@@ -18,54 +19,27 @@
 (defun find-dow-near-date (target-dow direction day month year)
   (let ((direction-factor (* 7 (ecase direction (:before -1) (:after 1))))
 	(dow-of-day (day-of-week day month year)))
-    (list year month (+ day (rem (+ (- target-dow dow-of-day) 
-				    direction-factor) 
+    (list year month (+ day (rem (+ (- target-dow dow-of-day)
+				    direction-factor)
 				 7)))))
 
-(defvar +days-of-the-week+ '(("monday" 0)
-			     ("tuesday" 1)
-			     ("wednesday" 2)
-			     ("thursday" 3)
-			     ("friday" 4)
-			     ("saturday" 5)
-			     ("sunday" 6)))
+(defvar +days-of-the-week+ '((:monday . 0)
+			     (:tuesday . 1)
+			     (:wednesday . 2)
+			     (:thursday . 3)
+			     (:friday . 4)
+			     (:saturday . 5)
+			     (:sunday . 6)))
 
-(defvar +ordinals+ '(("first" 1)
-		     ("second" 2)
-		     ("third" 3)
-		     ("fourth" 4)))
+(defvar +schedules+ '((:first . 1)
+		      (:second . 8)
+		      (:third . 15)
+		      (:fourth . 22)
+		      (:teenth . 13)))
 
-(defun strcat (&rest strs)
-  (apply #'concatenate 'string strs))
-
-(defun make-exported-fn (name fn)
-  (let ((sym (intern (string-upcase name))))
-    (setf (symbol-function sym) fn)
-    (export sym)))
-
-;; create the *teenth functions
-(dolist (dow +days-of-the-week+)
-  (labels ((teenth-ify (dow) (strcat (subseq dow 0 (- (length dow) 3)) "teenth")))
-    (make-exported-fn (teenth-ify (first dow))
-		      #'(lambda (month year)
-			  (find-dow-near-date (second dow) 
-					      :after 13 month year)))))
-
-;; create the ordinal-dow functions
-(dolist (dow +days-of-the-week+)
-  (dolist (ordinal +ordinals+)
-    (make-exported-fn (strcat (first ordinal) "-" (first dow))
-		      #'(lambda (month year)
-			  (find-dow-near-date (second dow) 
-					      :after
-					      (1+ (* 7 (1- (second ordinal))))
-					      month year)))))
-
-;; create the last-dow functions
-(dolist (dow +days-of-the-week+)
-  (make-exported-fn (strcat "last-" (first dow))
-		    #'(lambda (month year)
-			(find-dow-near-date (second dow) 
-					    :before
-					    (last-day-of month year)
-					    month year))))
+(defun meetup (month year dow schedule)
+  (let ((day-num (cdr (assoc dow +days-of-the-week+)))
+	(schedule-offset (cdr (assoc schedule +schedules+))))
+    (if (eq schedule :last)
+	(find-dow-near-date day-num :before (last-day-of month year) month year)
+	(find-dow-near-date day-num :after schedule-offset month year))))
