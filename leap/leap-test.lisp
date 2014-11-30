@@ -13,6 +13,9 @@
 (define-test any-old-year
   (assert-false (leap:leap-year-p 1997)))
 
+(define-test non-leap-even-year
+  (assert-false (leap:leap-year-p 1998)))
+
 (define-test century
   (assert-false (leap:leap-year-p 1900)))
 
