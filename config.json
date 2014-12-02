@@ -1,6 +1,6 @@
 {
   "slug": "lisp",
-  "language": "Lisp",
+  "language": "Common Lisp",
   "repository": "https://github.com/exercism/xlisp",
   "active": false,
   "problems": [
