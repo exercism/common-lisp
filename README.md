@@ -2,6 +2,8 @@
 
 Exercism exercises in Lisp
 
+[![Build Status](https://travis-ci.org/exercism/xlisp.png?branch=master)](https://travis-ci.org/exercism/xlisp)
+
 ## Contributing Guide
 
 Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
