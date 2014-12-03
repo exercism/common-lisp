@@ -1,9 +1,9 @@
-(cl:defpackage #:robot
-  (:use :common-lisp)
-  (:export :build-robot :robot-name :reset-name))
+(defpackage #:robot
+  (:use #:common-lisp)
+  (:export #:build-robot #:robot-name #:reset-name))
 
-(in-package :robot)
-
+(in-package #:robot)
+o
 ;;; useful for debugging
 (defmethod print-object ((object robot) stream)
   (print-unreadable-object (object stream :type t)
