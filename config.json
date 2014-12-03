@@ -2,7 +2,7 @@
   "slug": "lisp",
   "language": "Common Lisp",
   "repository": "https://github.com/exercism/xlisp",
-  "active": false,
+  "active": true,
   "problems": [
     "point-mutations",
     "leap",
