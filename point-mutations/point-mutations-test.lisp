@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:point-mutations-test
-  (:use :common-lisp :lisp-unit))
+(defpackage #:point-mutations-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "dna")
 
-(in-package :point-mutations-test)
+(in-package #:point-mutations-test)
 
 (define-test no-difference-between-empty-strands
   (assert-equal 0 (dna:hamming-distance "" "")))
