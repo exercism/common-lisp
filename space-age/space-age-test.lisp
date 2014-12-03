@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
 (defpackage #:space-age-test
-  (:use :common-lisp :lisp-unit))
+  (:use #:common-lisp #:lisp-unit))
 
 (load "space-age")
 
-(in-package :space-age-test)
+(in-package #:space-age-test)
 
 (defun rounds-to (expected actual)
   (flet ((to-2-places (n) (/ (fround (* 100 n)))))

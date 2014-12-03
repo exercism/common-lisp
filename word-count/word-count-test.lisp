@@ -1,17 +1,17 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:word-count-test
-  (:use :common-lisp :lisp-unit))
+(defpackage #:word-count-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "word-count")
 
-(in-package :word-count-test)
+(in-package #:word-count-test)
 
 (defun assert-assoc-equal (expected actual)
   "The association lists must have the same length and the keys and
   values of the items must match. But the order is not
   important. Equality is tested with equal"
-  (assert-equal 
+  (assert-equal
       (sort expected #'string< :key #'car)
       (sort actual #'string< :key #'car)))
 
@@ -24,12 +24,12 @@
       (phrase:word-count "one of each")))
 
 (define-test count-multiple-occurrences
-  (assert-assoc-equal 
+  (assert-assoc-equal
    '(("one" . 1) ("fish" . 4) ("two". 1) ("red" . 1) ("blue" . 1))
    (phrase:word-count "one fish two fish red fish blue fish")))
 
 (define-test ignore-punctuation
-  (assert-assoc-equal 
+  (assert-assoc-equal
    '(("car" . 1) ("carpet" . 1) ("as" . 1) ("java" . 1) ("javascript" . 1))
    (phrase:word-count "car : carpet as java : javascript!!&@$%^&")))
 

@@ -1,8 +1,8 @@
-(cl:defpackage #:phone
-  (:use :common-lisp)
-  (:export :numbers :area-code :pretty-print))
+(defpackage #:phone
+  (:use #:common-lisp)
+  (:export #:numbers #:area-code #:pretty-print))
 
-(in-package :phone)
+(in-package #:phone)
 
 (defun is-digit-p (c) (char<= #\0 c #\9))
 

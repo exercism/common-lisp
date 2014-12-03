@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:triangle-test
-  (:use :cl :lisp-unit))
+(defpackage #:triangle-test
+  (:use #:cl #:lisp-unit))
 
 (load "triangle")
 
-(in-package :triangle-test)
+(in-package #:triangle-test)
 
 (define-test equilateral-1
   (assert-equal  :equilateral (triangle:triangle 2 2 2)))
@@ -25,4 +25,3 @@
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :triangle-test))
-

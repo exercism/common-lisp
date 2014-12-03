@@ -1,8 +1,8 @@
-(cl:defpackage #:dna
-  (:use :common-lisp)
-  (:export :hamming-distance))
+(defpackage #:dna
+  (:use #:common-lisp)
+  (:export #:hamming-distance))
 
-(in-package :dna)
+(in-package #:dna)
 
 (defun hamming-distance (dna1 dna2)
   (if (= (length dna1) (length dna2))

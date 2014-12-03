@@ -1,8 +1,8 @@
 (cl:defpackage #:leap
-  (:use :common-lisp)
-  (:export :leap-year-p))
+  (:use #:common-lisp)
+  (:export #:leap-year-p))
 
-(in-package :leap)
+(in-package #:leap)
 
 (defun divisible-by-p (n d) (= 0 (rem n d)))
 

@@ -1,8 +1,8 @@
-(cl:defpackage #:beer
-  (:use :common-lisp)
-  (:export :verse :sing))
+(defpackage #:beer
+  (:use #:common-lisp)
+  (:export #:verse #:sing))
 
-(in-package :beer)
+(in-package #:beer)
 
 (defgeneric bottles (n))
 (defmethod bottles (n) (format nil "~A bottle~:P" n))
@@ -23,13 +23,13 @@
   "Go to the store and buy some more")
 
 (defun verse (n)
-  (format nil 
+  (format nil
 	  "~@(~A~)~:* of beer on the wall, ~A of beer.~%~
-           ~A, ~A of beer on the wall.~%"
+	   ~A, ~A of beer on the wall.~%"
 	  (bottles n) (action n) (bottles (left n))))
 
 (defun sing (start &optional (end 0))
-  (format nil 
+  (format nil
 	  "~{~A~^~%~}~%"
 	  (loop for n from start downto end
 	     collecting (verse n))))

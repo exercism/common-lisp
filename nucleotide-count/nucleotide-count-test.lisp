@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:nucleotide-count-test
-  (:use :common-lisp :lisp-unit))
+(defpackage #:nucleotide-count-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "dna")
 
-(in-package :nucleotide-count-test)
+(in-package #:nucleotide-count-test)
 
 (defun make-hash (kvs)
   (reduce

@@ -1,8 +1,8 @@
-(cl:defpackage #:triangle
-  (:use :cl)
-  (:export :triangle))
+(defpackage #:triangle
+  (:use #:cl)
+  (:export #:triangle))
 
-(in-package :triangle)
+(in-package #:triangle)
 
 (defun triangle (a b c)
   (let ((sorted (sort (list a b c) #'>)))

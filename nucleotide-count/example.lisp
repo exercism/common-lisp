@@ -1,8 +1,8 @@
-(cl:defpackage #:dna
-  (:use :common-lisp)
-  (:export :dna-count :nucleotide-counts :invalid-nucleotide))
+(defpackage #:dna
+  (:use #:common-lisp)
+  (:export #:dna-count #:nucleotide-counts #:invalid-nucleotide))
 
-(in-package :dna)
+(in-package #:dna)
 
 (define-condition invalid-nucleotide (error) ())
 

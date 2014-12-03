@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:leap-test
-  (:use :common-lisp :lisp-unit))
+(defpackage #:leap-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "leap-year")
 
-(in-package :leap-test)
+(in-package #:leap-test)
 
 (define-test vanilla-leap-year
   (assert-true (leap:leap-year-p 1996)))

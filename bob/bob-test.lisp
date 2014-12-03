@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:bob-test
-  (:use :common-lisp :lisp-unit))
+(defpackage #:bob-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "bob")
 
-(in-package :bob-test)
+(in-package #:bob-test)
 
 (define-test responds-to-something
   (assert-equal "Whatever." (bob:response-for "Tom-ay-to, tom-aaaah-to.")))
