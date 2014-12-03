@@ -1,8 +1,8 @@
-(cl:defpackage #:meetup
-  (:use :common-lisp)
-  (:export :meetup))
+(defpackage #:meetup
+  (:use #:common-lisp)
+  (:export #:meetup))
 
-(in-package :meetup)
+(in-package #:meetup)
 
 (defun day-of-week (day month year)
   (nth 6 (multiple-value-list

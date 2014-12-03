@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:meetup-test
-  (:use :common-lisp :lisp-unit))
+(defpackage #:meetup-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "meetup")
 
-(in-package :meetup-test)
+(in-package #:meetup-test)
 
 (define-test monteeth-of-may-2013
   (assert-equal '(2013 5 13) (meetup:meetup 5 2013 :monday :teenth)))
