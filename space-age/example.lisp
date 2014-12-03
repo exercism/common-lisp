@@ -1,7 +1,7 @@
 (defpackage #:space-age
-  (:use :common-lisp))
+  (:use #:common-lisp))
 
-(in-package :space-age)
+(in-package #:space-age)
 
 (defvar +earth-period+ 31557600)
 
@@ -18,11 +18,10 @@
 (dolist (planet-info +planets-and-periods+)
   (let ((name (first planet-info))
 	(period (second planet-info)))
-    (let ((symbol (intern (string-upcase 
-			   (concatenate 'string  
+    (let ((symbol (intern (string-upcase
+			   (concatenate 'string
 					"on-"
 					(string name))))))
       (setf (symbol-function symbol)
 	    #'(lambda (seconds) (/ seconds period)))
       (export symbol))))
-
