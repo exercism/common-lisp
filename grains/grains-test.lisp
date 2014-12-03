@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:grains-test
-  (:use :cl :lisp-unit))
+(defpackage #:grains-test
+  (:use #:cl #:lisp-unit))
 
 (load "grains")
 
-(in-package :grains-test)
+(in-package #:grains-test)
 
 (define-test square-1
   (assert-equal 1 (grains:square 1)))
@@ -34,4 +34,3 @@
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :grains-test))
-
