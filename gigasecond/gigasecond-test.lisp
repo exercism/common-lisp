@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:gigasecond-test
-  (:use :cl :lisp-unit))
+(defpackage #:gigasecond-test
+  (:use #:cl #:lisp-unit))
 
 (load "gigasecond")
 
-(in-package :gigasecond-test)
+(in-package #:gigasecond-test)
 
 (define-test from-apr-25-2011
   (assert-equal '(2043 1 1) (gigasecond:from 2011 4 25)))
