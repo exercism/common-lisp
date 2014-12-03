@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage #:phone-number-test
-  (:use :common-lisp :lisp-unit))
+(defpackage #:phone-number-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "phone")
 
-(in-package :phone-number-test)
+(in-package #:phone-number-test)
 
 (define-test cleans-number
   (assert-equal "1234567890" (phone:numbers "(123) 456-7890")))
