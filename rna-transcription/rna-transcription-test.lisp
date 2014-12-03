@@ -1,11 +1,11 @@
 (ql:quickload "lisp-unit")
 
-(cl:defpackage :rna-transcription-test
-  (:use :common-lisp :lisp-unit))
+(defpackage :rna-transcription-test
+  (:use #:common-lisp #:lisp-unit))
 
 (load "dna")
 
-(in-package :rna-transcription-test)
+(in-package #:rna-transcription-test)
 
 (define-test transcribes-cytidine-to-guanosine
   (assert-equal "G" (dna:to-rna "C")))

@@ -1,8 +1,8 @@
-(cl:in-package #:cl-user)
-(cl:defpackage #:dna
+(in-package #:cl-user)
+(defpackage #:dna
   (:use #:cl)
   (:export #:to-rna))
-(cl:in-package #:dna)
+(in-package #:dna)
 
 (defun to-rna (str)
   "Transcribe a string representing DNA nucleotides to RNA."
