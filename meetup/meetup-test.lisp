@@ -3,7 +3,7 @@
 (defpackage #:meetup-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "meetup")
+#-xlisp-test (load "meetup")
 
 (in-package #:meetup-test)
 
@@ -231,6 +231,7 @@
 (define-test last-sunday-of-april-2013
   (assert-equal '(2013 4 28) (meetup:meetup 4 2013 :sunday :last)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :meetup-test))

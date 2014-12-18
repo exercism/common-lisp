@@ -3,7 +3,7 @@
 (defpackage #:space-age-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "space-age")
+#-xlisp-test (load "space-age")
 
 (in-package #:space-age-test)
 
@@ -50,6 +50,7 @@
     (rounds-to 260.16 (space-age:on-earth seconds))
     (rounds-to 1.58 (space-age:on-neptune seconds))))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :space-age-test))

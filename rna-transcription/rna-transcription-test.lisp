@@ -3,7 +3,7 @@
 (defpackage :rna-transcription-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "dna")
+#-xlisp-test (load "dna")
 
 (in-package #:rna-transcription-test)
 
@@ -25,6 +25,7 @@
 (define-test it-validates-dna-strands
   (assert-error 'error (dna:to-rna "XCGFGGTDTTAA")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :rna-transcription-test))

@@ -3,7 +3,7 @@
 (defpackage #:grade-school-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "school")
+#-xlisp-test (load "school")
 
 (in-package #:grade-school-test)
 
@@ -58,6 +58,7 @@
                      (:grade 6 :students ("Kareem")))
                    (school:sorted school))))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :grade-school-test))

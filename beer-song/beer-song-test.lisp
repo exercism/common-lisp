@@ -3,7 +3,7 @@
 (defpackage #:beer-song-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "beer")
+#-xlisp-test (load "beer")
 
 (in-package #:beer-song-test)
 
@@ -59,6 +59,7 @@ Go to the store and buy some more, 99 bottles of beer on the wall.
   (assert-equal +song-8-6+ (beer:sing 8 6))
   (assert-equal +song-3-0+ (beer:sing 3)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :beer-song-test))

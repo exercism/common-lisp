@@ -3,7 +3,7 @@
 (defpackage #:anagram-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "anagram")
+#-xlisp-test (load "anagram")
 
 (in-package #:anagram-test)
 
@@ -45,6 +45,7 @@
   (assert-equal '()
       (anagram:anagrams-for "banana" '("banana"))))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :anagram-test))
