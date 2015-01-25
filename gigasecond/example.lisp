@@ -4,11 +4,11 @@
 
 (in-package #:gigasecond)
 
-(defun from (year month day)
+(defun from (year month day hour minute second)
   (reverse
    (subseq
     (multiple-value-list
      (decode-universal-time
-      (+ (encode-universal-time 0 0 0 day month year)
+      (+ (encode-universal-time second minute hour day month year)
 	 (expt 10 9))))
-    3 6)))
+    0 6)))
