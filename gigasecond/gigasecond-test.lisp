@@ -7,14 +7,20 @@
 
 (in-package #:gigasecond-test)
 
-(define-test from-apr-25-2011
-  (assert-equal '(2043 1 1) (gigasecond:from 2011 4 25)))
+(define-test from-lisp-epoch
+  (assert-equal '(1931 9 10 1 46 40) (gigasecond:from 1900 1 1 0 0 0)))
 
-(define-test from-jun-13-1977
-  (assert-equal '(2009 2 19) (gigasecond:from 1977 6 13)))
+(define-test from-unix-epoch
+  (assert-equal '(2001 9 9 2 46 40) (gigasecond:from 1970 1 1 0 0 0)))
 
-(define-test from-jul-19-1959
-  (assert-equal '(1991 3 27) (gigasecond:from 1959 7 19)))
+(define-test from-20110425T120000Z
+  (assert-equal '(2043 1 1 12 46 40) (gigasecond:from 2011 4 25 12 0 0)))
+
+(define-test from-19770613T235959Z
+  (assert-equal '(2009 2 20 0 46 39) (gigasecond:from 1977 6 13 23 59 59)))
+
+(define-test from-19590719T123030Z
+  (assert-equal '(1991 3 27 14 17 10) (gigasecond:from 1959 7 19 12 30 30)))
 
 ; customize this to test your birthday and find your gigasecond date:
 ; (define-test your-birthday
