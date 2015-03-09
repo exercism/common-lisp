@@ -8,7 +8,9 @@
   (reverse
    (subseq
     (multiple-value-list
-     (decode-universal-time
-      (+ (encode-universal-time second minute hour day month year)
-	 (expt 10 9))))
+     (let ((TZ 0))
+       (decode-universal-time
+        (+ (encode-universal-time second minute hour day month year TZ)
+           (expt 10 9))
+        TZ)))
     0 6)))
