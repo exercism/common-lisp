@@ -13,27 +13,32 @@
 (defparameter *robbie* (robot:build-robot))
 (defparameter *clutz* (robot:build-robot))
 
+(defun robot-name-valid-p (name)
+  (and (= (length name) 5)
+       (every #'is-upper-alpha-p (subseq name 0 2))
+       (every #'is-digit-p (subseq name 2 5))))
+
 (define-test name-matches-expected-pattern
   (let ((name (robot:robot-name *robbie*)))
-    (assert-true (and (= (length name) 5)
-		      (every #'is-upper-alpha-p (subseq name 0 2))
-		      (every #'is-digit-p (subseq name 2 5))))))
+    (assert-true (robot-name-valid-p name))))
 
 (define-test name-is-persistent
-  (assert-equal (robot:robot-name *robbie*) (robot:robot-name *robbie*)))
+  (assert-equal (robot:robot-name *robbie*)
+                (robot:robot-name *robbie*)))
 
 (define-test different-robots-have-different-names
-  (assert-equality (complement #'equal)
-      (robot:robot-name *clutz*)
-      (robot:robot-name *robbie*)))
+  (assert-false
+   (equal (robot:robot-name *clutz*)
+          (robot:robot-name *robbie*))))
 
 (define-test name-can-be-reset
   (let* ((robot (robot:build-robot))
-	 (original-name (robot:robot-name robot)))
+         (original-name (robot:robot-name robot)))
     (robot:reset-name robot)
-    (assert-equality (complement #'equal)
-	(robot:robot-name robot)
-	original-name)))
+    (assert-true (robot-name-valid-p (robot:robot-name robot)))
+    (assert-false
+     (equal (robot:robot-name robot)
+            original-name))))
 
 (let ((*print-errors* t)
       (*print-failures* t))
