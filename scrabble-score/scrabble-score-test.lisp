@@ -7,22 +7,29 @@
 
 (in-package #:scrabble-score-test)
 
-(define-test lower-case-letter
-  (assert-equal 1 (scrabble-score:score-letter #\a)))
+(define-test no-word-has-zero-score
+  (assert-equal 0 (scrabble-score:score-word "")))
 
-(define-test upper-case-letter
-  (assert-equal 1 (scrabble-score:score-letter #\A)))
+(define-test whitespace-only-also-has-zero-score
+  (assert-equal 0 (scrabble-score:score-word
+                   (concatenate 'string '(#\Space #\Newline)))))
 
-(define-test two-letter-word
+(define-test scores-small-word
+  (assert-equal 1 (scrabble-score:score-word "a")))
+
+(define-test is-case-insensitive
+  (assert-equal 1 (scrabble-score:score-word "A")))
+
+(define-test scores-a-slightly-bigger-word
   (assert-equal 2 (scrabble-score:score-word "at")))
 
-(define-test bigger-word-1
+(define-test scores-a-middle-of-the-road-word
   (assert-equal 6 (scrabble-score:score-word "street")))
 
-(define-test bigger-word-2
+(define-test scores-a-peculiar-word
   (assert-equal 22 (scrabble-score:score-word "quirky")))
 
-(define-test all-upper-case-word
+(define-test scores-a-very-long-word
   (assert-equal 20 (scrabble-score:score-word "MULTIBILLIONAIRE")))
 
 (let ((*print-errors* t)

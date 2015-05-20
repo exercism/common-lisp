@@ -1,6 +1,6 @@
 (defpackage #:scrabble-score
   (:use #:cl)
-  (:export #:score-letter #:score-word))
+  (:export #:score-word))
 
 (in-package #:scrabble-score)
 
@@ -13,7 +13,7 @@
 
 (defun score-letter (letter)
   "Returns the score for a single letter."
-  (cdr (assoc letter *letter-scores* :test #'char-equal)))
+  (or (cdr (assoc letter *letter-scores* :test #'char-equal)) 0))
 
 (defun score-word (word)
   "Computes the score for an entire word"
