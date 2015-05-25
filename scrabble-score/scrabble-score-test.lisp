@@ -30,7 +30,7 @@
   (assert-equal 22 (scrabble-score:score-word "quirky")))
 
 (define-test scores-a-very-long-word
-  (assert-equal 20 (scrabble-score:score-word "MULTIBILLIONAIRE")))
+  (assert-equal 27 (scrabble-score:score-word "UNEXCLUSIVENESS")))
 
 (let ((*print-errors* t)
       (*print-failures* t))
