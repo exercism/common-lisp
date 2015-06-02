@@ -3,7 +3,7 @@
 (defpackage #:triangle-test
   (:use #:cl #:lisp-unit))
 
-(load "triangle")
+#-xlisp-test (load "triangle")
 
 (in-package #:triangle-test)
 
@@ -22,6 +22,7 @@
 (define-test invalid-2
   (assert-equal  :illogical (triangle:triangle 1 2 1)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :triangle-test))

@@ -3,7 +3,7 @@
 (defpackage #:point-mutations-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "dna")
+#-xlisp-test (load "dna")
 
 (in-package #:point-mutations-test)
 
@@ -27,6 +27,7 @@
   (assert-equal nil (dna:hamming-distance "AGACAACAGCCAGCCGCCGGATT" "AGACATCTTTCAGCCGCCGGATTAGGCAA"))
   (assert-equal nil (dna:hamming-distance "AGG" "AGACAACAGCCAGCCGCCGGATT")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :point-mutations-test))
