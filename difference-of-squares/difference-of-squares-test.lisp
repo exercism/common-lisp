@@ -3,7 +3,7 @@
 (defpackage #:squares-test
   (:use #:cl #:lisp-unit))
 
-(load "squares")
+#-xlisp-test (load "squares")
 
 (in-package #:squares-test)
 
@@ -28,6 +28,7 @@
 (define-test difference-of-sums-to-100
   (assert-equal 25164150 (squares:difference 100)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :squares-test))

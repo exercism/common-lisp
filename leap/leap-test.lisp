@@ -3,7 +3,7 @@
 (defpackage #:leap-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "leap-year")
+#-xlisp-test (load "leap-year")
 
 (in-package #:leap-test)
 
@@ -22,6 +22,7 @@
 (define-test exceptional-century
   (assert-true (leap:leap-year-p 2400)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :leap-test))

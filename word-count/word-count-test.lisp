@@ -3,7 +3,7 @@
 (defpackage #:word-count-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "word-count")
+#-xlisp-test (load "word-count")
 
 (in-package #:word-count-test)
 
@@ -41,6 +41,7 @@
   (assert-assoc-equal '(("go" . 3) ("on" . 3))
 	  (phrase:word-count "go ON Go On GO on")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :word-count-test))

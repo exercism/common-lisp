@@ -3,7 +3,7 @@
 (defpackage #:nucleotide-count-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "dna")
+#-xlisp-test (load "dna")
 
 (in-package #:nucleotide-count-test)
 
@@ -38,6 +38,7 @@
       (dna:nucleotide-counts
        "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :nucleotide-count-test))

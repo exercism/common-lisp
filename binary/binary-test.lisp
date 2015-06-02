@@ -3,7 +3,7 @@
 (defpackage #:binary-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "binary")
+#-xlisp-test (load "binary")
 
 (in-package #:binary-test)
 
@@ -31,6 +31,7 @@
 (define-test invalid-binary-is-decimal-0
   (assert-equal 0 (binary:to-decimal "carrot")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all))

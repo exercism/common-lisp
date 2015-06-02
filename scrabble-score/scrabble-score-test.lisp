@@ -3,7 +3,7 @@
 (defpackage #:scrabble-score-test
   (:use #:cl #:lisp-unit))
 
-(load "scrabble-score")
+#-xlisp-test (load "scrabble-score")
 
 (in-package #:scrabble-score-test)
 
@@ -32,6 +32,7 @@
 (define-test scores-a-very-long-word
   (assert-equal 27 (scrabble-score:score-word "UNEXCLUSIVENESS")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :scrabble-score-test))

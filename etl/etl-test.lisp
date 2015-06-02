@@ -3,7 +3,7 @@
 (defpackage #:etl-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "etl")
+#-xlisp-test (load "etl")
 
 (in-package #:etl-test)
 
@@ -49,6 +49,7 @@
     (assert-equalp (make-hash expected-output)
 	(etl:transform (make-hash input-data)))))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :etl-test))

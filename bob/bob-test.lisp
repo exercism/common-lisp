@@ -3,7 +3,7 @@
 (defpackage #:bob-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "bob")
+#-xlisp-test (load "bob")
 
 (in-package #:bob-test)
 
@@ -49,6 +49,7 @@
 (define-test responds-to-number-question
   (assert-equal "Sure." (bob:response-for "4?")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all))
