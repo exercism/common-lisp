@@ -3,7 +3,7 @@
 (defpackage #:roman-test
   (:use #:cl #:lisp-unit))
 
-(load "roman")
+#-xlisp-test (load "roman")
 
 (in-package #:roman-test)
 
@@ -61,6 +61,7 @@
 (define-test test-3000
   (assert-equal "MMM" (roman:romanize 3000)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :roman-test))

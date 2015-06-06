@@ -3,7 +3,7 @@
 (defpackage #:robot-name-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "robot")
+#-xlisp-test (load "robot")
 
 (in-package #:robot-name-test)
 
@@ -35,6 +35,7 @@
 	(robot:robot-name robot)
 	original-name)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :robot-name-test))

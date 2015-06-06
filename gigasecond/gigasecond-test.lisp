@@ -3,7 +3,7 @@
 (defpackage #:gigasecond-test
   (:use #:cl #:lisp-unit))
 
-(load "gigasecond")
+#-xlisp-test (load "gigasecond")
 
 (in-package #:gigasecond-test)
 
@@ -26,6 +26,7 @@
 ; (define-test your-birthday
 ;   (assert-equal '(year2 month2 day2) (gigasecond:from year1 month1 day1)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :gigasecond-test))

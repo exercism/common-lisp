@@ -3,7 +3,7 @@
 (defpackage #:grains-test
   (:use #:cl #:lisp-unit))
 
-(load "grains")
+#-xlisp-test (load "grains")
 
 (in-package #:grains-test)
 
@@ -31,6 +31,7 @@
 (define-test total-grains
   (assert-equal 18446744073709551615  (grains:total)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :grains-test))

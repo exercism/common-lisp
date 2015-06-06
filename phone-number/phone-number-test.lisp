@@ -3,7 +3,7 @@
 (defpackage #:phone-number-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "phone")
+#-xlisp-test (load "phone")
 
 (in-package #:phone-number-test)
 
@@ -31,6 +31,7 @@
 (define-test pretty-print-with-full-us-phone-number
   (assert-equal "(123) 456-7890" (phone:pretty-print "11234567890")))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :phone-number-test))

@@ -1,5 +1,33 @@
-language: bash
+language: lisp
+
+env:
+    matrix:
+      # - LISP=abcl
+      # - LISP=allegro
+      - LISP=sbcl
+      - LISP=sbcl32
+      - LISP=ccl
+      - LISP=ccl32
+      - LISP=clisp
+      - LISP=clisp32
+      # - LISP=cmucl
+      - LISP=ecl
+
+matrix:
+  allow_failures:
+    # - env: LISP=abcl
+    # - env: LISP=allegro
+    - env: LISP=ccl
+    - env: LISP=ccl32
+    - env: LISP=clisp
+    - env: LISP=clisp32
+    # - env: LISP=cmucl
+    - env: LISP=ecl
+
+install:
+  - curl -L https://github.com/luismbo/cl-travis/raw/master/install.sh | sh
 
 script:
   - bin/fetch-configlet
   - bin/configlet .
+  - cl -l 'lisp-unit' -f 'bin/xlisp-test.lisp' -e '(when (xlisp-test:run-tests-all) (uiop:quit 4))'
