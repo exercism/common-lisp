@@ -11,8 +11,8 @@
      initially (when (< n 3) (return nil))
      with sqrtn = (1+ (isqrt n))
      with sieve = (make-array n
-                              :element-type 'boolean
-                              :initial-element t)
+			      :element-type 'boolean
+			      :initial-element t)
      for maybe from 2 to sqrtn
      when (aref sieve maybe)
      do
