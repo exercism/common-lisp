@@ -11,18 +11,13 @@
 
 (defun random-robot-name ()
   (concatenate 'string (list (random-alpha-char)
-			     (random-alpha-char)
-			     (random-digit-char)
-			     (random-digit-char)
-			     (random-digit-char))))
+                             (random-alpha-char)
+                             (random-digit-char)
+                             (random-digit-char)
+                             (random-digit-char))))
 
 (defun build-robot () (make-instance 'robot))
 (defclass robot ()
   ((name :reader robot-name :initform (random-robot-name))))
 (defun reset-name (robot)
   (setf (slot-value robot 'name) (random-robot-name)))
-
-;;; useful for debugging
-(defmethod print-object ((object robot) stream)
-  (print-unreadable-object (object stream :type t)
-    (write (robot-name object) :stream stream)))
