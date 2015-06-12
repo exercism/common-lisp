@@ -22,14 +22,23 @@
 (defmethod action ((n (eql 0)))
   "Go to the store and buy some more")
 
+(defun capitalize-first-word (str)
+  (progn
+    (setf (char str 0)
+          (char-upcase (char str 0)))
+    str))
+
 (defun verse (n)
   (format nil
-	  "~@(~A~)~:* of beer on the wall, ~A of beer.~%~
-	   ~A, ~A of beer on the wall.~%"
-	  (bottles n) (action n) (bottles (left n))))
+          "~A of beer on the wall, ~A of beer.~%~
+           ~A, ~A of beer on the wall.~%"
+          (capitalize-first-word (bottles n))
+          (bottles n)
+          (action n)
+          (bottles (left n))))
 
 (defun sing (start &optional (end 0))
   (format nil
-	  "~{~A~^~%~}~%"
-	  (loop for n from start downto end
-	     collecting (verse n))))
+          "~{~A~^~%~}~%"
+          (loop for n from start downto end
+             collecting (verse n))))
