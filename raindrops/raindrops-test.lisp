@@ -3,7 +3,7 @@
 (defpackage #:raindrops-test
   (:use #:common-lisp #:lisp-unit))
 
-(load "raindrops")
+#-xlisp-test (load "raindrops")
 
 (in-package #:raindrops-test)
 
@@ -67,6 +67,7 @@
     (assert-equal "12121"
                   (raindrops:convert 12121)))
 
+#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all :raindrops-test))
