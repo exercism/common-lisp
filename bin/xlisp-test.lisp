@@ -26,10 +26,10 @@
     (format t datum (values-list arguments))))
 
 (defun alert (message)
-  (notice 1 "ALERT: ~A" message))
+  (notice 1 "~&ALERT: ~A~%" message))
 
 (defun inform (message)
-  (notice 2 "INFO: ~A" message))
+  (notice 2 "~&INFO: ~A~%" message))
 
 
 ;;; Managing paths and packages
