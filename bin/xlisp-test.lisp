@@ -128,7 +128,6 @@ http://exercism.io"))
       (dolist (package (list example exercise))
         (when package (delete-package package))))))
 
-
 (defun test-exercises (&optional (verbosity 2))
   "Run all exercise tests."
   (pushnew :xlisp-test *features*)
