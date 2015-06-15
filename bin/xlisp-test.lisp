@@ -1,10 +1,10 @@
 (defpackage #:xlisp-test
   (:use #:cl #:lisp-unit)
   (:export #:run-tests-all
-	   #:excluded-pathname-p
-	   #:example-packages-p
-	   #:test-packages-p
-	   #:problems-p))
+           #:excluded-pathname-p
+           #:example-packages-p
+           #:test-packages-p
+           #:problems-p))
 
 (in-package #:xlisp-test)
 
@@ -40,9 +40,9 @@
 (defun excluded-pathname-p (pathname)
   "Identify an excluded pathname."
   (let ((exclusions (map 'list
-			 (lambda (path)
-			   (truename (make-pathname :directory (list :relative path))))
-			 *excluded-paths*)))
+                         (lambda (path)
+                           (truename (make-pathname :directory (list :relative path))))
+                         *excluded-paths*)))
     (find (truename pathname) exclusions :test #'pathname-match-p)))
 
 (defun list-test-files (name)
@@ -51,10 +51,10 @@
       (setf name (pathname name))
       (setf name (make-pathname :name name :type "lisp")))
   (remove-if #'excluded-pathname-p
-	     (directory (merge-pathnames
-			 name
-			 (make-pathname :directory '(:relative :wild))))
-	     :key #'directory-namestring))
+             (directory (merge-pathnames
+                         name
+                         (make-pathname :directory '(:relative :wild))))
+             :key #'directory-namestring))
 
 
 ;;; Load example exercises
@@ -78,7 +78,7 @@
     (dolist (file *example-files*)
       (load file :verbose (verbosity-p 2) :print (verbosity-p 2)))
     (setf *example-packages*
-	  (set-difference (list-all-packages) packages-before))))
+          (set-difference (list-all-packages) packages-before))))
 
 
 ;;; Load exercise tests, record packages
@@ -105,7 +105,7 @@
     (dolist (file *test-files*)
       (load file :verbose t :print t))
     (setf *test-packages*
-	  (set-difference (list-all-packages) packages-before))))
+          (set-difference (list-all-packages) packages-before))))
 
 
 ;;; Define collection of problematic test results
@@ -153,8 +153,8 @@
   (and (problems-p) (delete-all-problems))
   (dolist (package *test-packages* (problems-p))
     (handler-bind ((test-run-complete
-		    (lambda (condition)
-		      (handle-results (results condition)))))
+                    (lambda (condition)
+                      (handle-results (results condition)))))
       (signal-results)
       (inform (format nil "Running tests in ~S" package))
       (run-tests :all package))))
