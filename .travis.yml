@@ -7,7 +7,6 @@ env:
       - LISP=ccl
       - LISP=ccl32
       - LISP=ecl
-      - LISP=abcl
       - LISP=clisp
       - LISP=clisp32
       # - LISP=allegro
@@ -15,6 +14,7 @@ env:
 
 matrix:
   allow_failures:
+      - LISP=abcl
 
 install:
   - curl -L https://github.com/luismbo/cl-travis/raw/master/install.sh | sh
