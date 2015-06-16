@@ -31,6 +31,9 @@
 (defun inform (message)
   (notice 2 "~&INFO: ~A~%" message))
 
+(defun debug (message &optional (level 4))
+  (notice level "~&DEBUG: ~A~%" message))
+
 
 ;;; Managing paths and packages
 
