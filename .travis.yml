@@ -22,15 +22,9 @@ install:
 script:
   - bin/fetch-configlet
   - bin/configlet .
-  - cl
-    - -l 'lisp-unit'
-    - -l 'cl-json'
-    - -f 'bin/xlisp-test.lisp'
-    - -e '(when (xlisp-test:run-tests-all) (uiop:quit 4))'
+  - cl -l 'lisp-unit' -l 'cl-json' -f 'bin/xlisp-test.lisp' -e '(when (xlisp-test:test-exercises) (uiop:quit 4))'
 
-# Cut and paste to run all tests locally.
-
-# cl -l 'lisp-unit' -l 'cl-json' -f 'bin/xlisp-test.lisp' -e '(when (xlisp-test:run-tests-all) (uiop:quit 4))'
+# Cut and paste above to run all tests locally.
 
 # Add a numeric argument to XLISP-TEST:RUN-TESTS-ALL between 0 and 7
 # to control optional verbosity (default is 2).
