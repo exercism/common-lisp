@@ -4,7 +4,15 @@
            #:excluded-pathname-p
            #:example-packages-p
            #:test-packages-p
-           #:problems-p))
+           #:problems-p)
+  (:documentation "xlisp-test
+
+Script for running the tests for exercism exercises of the xlisp
+track. Used for integration testing on new and changed exercises.
+
+See .travis.yml for how it's run.
+
+http://exercism.io"))
 
 (in-package #:xlisp-test)
 
