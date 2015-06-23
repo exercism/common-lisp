@@ -1,10 +1,16 @@
 (defpackage #:xlisp-test
   (:use #:cl #:lisp-unit)
-  (:export #:run-tests-all
-	   #:excluded-pathname-p
-	   #:example-packages-p
-	   #:test-packages-p
-	   #:problems-p))
+  (:export #:test-exercise
+           #:test-exercises
+           #:problems-p)
+  (:documentation "xlisp-test
+
+Script for running the tests for exercism exercises of the xlisp
+track. Used for integration testing on new and changed exercises.
+
+See .travis.yml for how it's run.
+
+http://exercism.io"))
 
 (in-package #:xlisp-test)
 
@@ -23,89 +29,44 @@
 
 (defun notice (level datum &rest arguments)
   (when (verbosity-p level)
-    (format t datum (values-list arguments))))
+    (unless (find #\~ (first arguments))
+      (push "~A" arguments))
+    (apply #'format t "~&~A: ~@?~%" datum arguments)))
 
-(defun alert (message)
-  (notice 1 "ALERT: ~A" message))
+(defun alert (message &rest arguments)
+  (notice 1 "ALERT" message (values-list arguments)))
 
-(defun inform (message)
-  (notice 2 "INFO: ~A" message))
+(defun inform (message &rest arguments)
+  (notice 2 "INFO" message (values-list arguments)))
+
+(defun babble (message &rest arguments)
+  (notice 4 "DEBUG" message (values-list arguments)))
 
 
 ;;; Managing paths and packages
 
-(defparameter *excluded-paths* '("bin" "docs")
-  "Pathnames in xlisp to exclude from test search")
+(defparameter *exercises*
+  (with-open-file (config-json "config.json")
+    (rest (assoc :problems
+                 (cl-json:decode-json config-json))))
+  "List of exercise names.")
 
-(defun excluded-pathname-p (pathname)
-  "Identify an excluded pathname."
-  (let ((exclusions (map 'list
-			 (lambda (path)
-			   (truename (make-pathname :directory (list :relative path))))
-			 *excluded-paths*)))
-    (find (truename pathname) exclusions :test #'pathname-match-p)))
-
-(defun list-test-files (name)
-  "List files matching `name' in non-excluded subdirectories."
-  (if (wild-pathname-p name)
-      (setf name (pathname name))
-      (setf name (make-pathname :name name :type "lisp")))
-  (remove-if #'excluded-pathname-p
-	     (directory (merge-pathnames
-			 name
-			 (make-pathname :directory '(:relative :wild))))
-	     :key #'directory-namestring))
-
-
-;;; Load example exercises
-
-(defparameter *example-files*
-  (list-test-files "example")
-  "All example files.")
-
-(defparameter *example-packages*
-  ()
-  "All example packages")
-
-(defun example-packages-p ()
-  "What, if any, example packages have been defined?"
-  *example-packages*)
-
-(defun load-examples ()
-  "Load example files, record new packages in `*example-packages'."
-  (inform "Loading examples...")
+(defun load-package (filename)
+  "Load file expecting a single package to be loaded. Errors."
   (let ((packages-before (list-all-packages)))
-    (dolist (file *example-files*)
-      (load file :verbose (verbosity-p 2) :print (verbosity-p 2)))
-    (setf *example-packages*
-	  (set-difference (list-all-packages) packages-before))))
+    (load filename :verbose (verbosity-p 2) :print (verbosity-p 2))
+    (let ((loaded (set-difference (list-all-packages) packages-before)))
+      (typecase (length loaded)
+        ((integer 0 0) (error "No packages loaded."))
+        ((integer 2) (error "Loaded packages ~{~S~^, ~}" loaded)))
+      (let ((package (first loaded)))
+        (babble "Loaded package ~S" package)
+        package))))
 
-
-;;; Load exercise tests, record packages
-
-(defparameter *test-packages*
-  ()
-  "List of test packages.")
-
-(defun test-packages-p ()
-  "What, if any, test packages are defined?"
-  *test-packages*)
-
-(defparameter *test-files*
-  (list-test-files (pathname "*-test.lisp"))
-  ;; Hack to get SBCL (possibly others) to interpret wildcard
-  ;; filenames as they would.
-  "All test files.")
-
-(defun load-test-files ()
-  "Load test files, record new packages in `*test-packages*'."
-  (pushnew :xlisp-test *features*)
-  (inform "Loading test files...")
-  (let ((packages-before (list-all-packages)))
-    (dolist (file *test-files*)
-      (load file :verbose t :print t))
-    (setf *test-packages*
-	  (set-difference (list-all-packages) packages-before))))
+(defun make-xlisp-test-path (exercise-name filename)
+  "Make a pathname object from exercise name and filename"
+  (merge-pathnames (make-pathname :directory (list :relative exercise-name))
+                   (make-pathname :name filename :type "lisp")))
 
 
 ;;; Define collection of problematic test results
@@ -143,18 +104,36 @@
 
 ;;; Define test runner
 
-(defun run-tests-all (&optional (verbosity 2))
-  "Run all tests."
+(defun test-exercise (exercise-name)
+  "Run the exercise test named."
+  (let ((test-example-path
+         (make-xlisp-test-path exercise-name "example"))
+        (test-exercise-path
+         (make-xlisp-test-path exercise-name
+                               (format nil "~A-test" exercise-name)))
+        (example nil)
+        (exercise nil))
+    (unwind-protect
+         (progn
+           (setf example (load-package test-example-path))
+           (babble "Loaded example ~S" example)
+           (setf exercise (load-package test-exercise-path))
+           (babble "Loaded exercise tests ~S" exercise)
+           (handler-bind ((test-run-complete
+                           (lambda (condition)
+                             (handle-results (results condition)))))
+             (signal-results)
+             (inform (format nil "Running tests for ~S" example))
+             (run-tests :all exercise)))
+      (dolist (package (list example exercise))
+        (delete-package package)))))
+
+(defun test-exercises (&optional (verbosity 2))
+  "Run all exercise tests."
+  (pushnew :xlisp-test *features*)
   (setf *verbosity* verbosity)
   (inform (format nil "Verbosity level: ~D" *verbosity*))
   (inform "Running all xlisp tests...")
-  (or *example-packages* (load-examples))
-  (or *test-packages* (load-test-files))
   (and (problems-p) (delete-all-problems))
-  (dolist (package *test-packages* (problems-p))
-    (handler-bind ((test-run-complete
-		    (lambda (condition)
-		      (handle-results (results condition)))))
-      (signal-results)
-      (inform (format nil "Running tests in ~S" package))
-      (run-tests :all package))))
+  (dolist (exercise *exercises* (problems-p))
+    (test-exercise exercise)))
