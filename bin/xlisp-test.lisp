@@ -113,22 +113,21 @@ http://exercism.io"))
                                (format nil "~A-test" exercise-name)))
         (example nil)
         (exercise nil))
-    (handler-case
-        (unwind-protect
+    (signal-results)
+    (unwind-protect
+         (handler-case
              (progn
                (setf example (load-package test-example-path))
                (babble "Loaded example ~S" example)
                (setf exercise (load-package test-exercise-path))
                (babble "Loaded exercise tests ~S" exercise)
-               (handler-bind ((test-run-complete
-                                (lambda (condition)
-                                  (handle-results (results condition)))))
-                 (signal-results)
-                 (inform (format nil "Running tests for ~S" example))
-                 (run-tests :all exercise)))
-          (dolist (package (list example exercise))
-            (delete-package package)))
-      (error (condition) (record-problem condition)))))
+               (inform (format nil "Running tests for ~S" example))
+               (run-tests :all exercise))
+           (test-run-complete (condition) (handle-results (results condition)))
+           (error (condition) (record-problem condition)))
+      (dolist (package (list example exercise))
+        (when package (delete-package package))))))
+
 
 (defun test-exercises (&optional (verbosity 2))
   "Run all exercise tests."
