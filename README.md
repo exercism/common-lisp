@@ -56,7 +56,7 @@ example implementation.
 Before submitting a new exercise please ensure that it passes the
 Travis build.  This build will run all exercises on many Common Lisp
 implementations. To run the build yourself on your implementation load
-`bin/xlisp-test.lisp` and then evaluate `(xlisp-test:test-exercises)`.
+`bin/xlisp-test.lisp` and then evaluate `(xlisp-test:full-build)`.
 
 [CIM](https://github.com/KeenS/CIM) is a tool for working with several
 Common Lisp implementations at the same time. Allowing for easy
@@ -65,14 +65,15 @@ command line. It is recommended that one installs CIM and several
 implementations.
 
 If CIM is installed then running all the tests for one implementation
-can be done with: 
+can be done with (this will return with a non-zero error code if there
+are problems): 
 
-	cl -f bin/xlisp-test.lisp -e '(when (xlisp-test:test-exercises) (uiop:quit 4))'
+	cl -f bin/xlisp-test.lisp -e '(xlisp-test:travis-build)'
 
 To run all the tests for *all* the implementations use this command
 line:
 
-	cim for all do -f bin/xlisp-test.lisp -e '(when (xlisp-test:test-exercises) (uiop:quit 4))'
+	cim for all do -f bin/xlisp-test.lisp -e '(xlisp-test:travis-build)'
 
 ##### Style Guidelines
 

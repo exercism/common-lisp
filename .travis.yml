@@ -22,7 +22,7 @@ install:
 script:
   - bin/fetch-configlet
   - bin/configlet .
-  - cl -f 'bin/xlisp-test.lisp' -e '(when (xlisp-test:test-exercises) (uiop:quit 4))'
+  - cl -f 'bin/xlisp-test.lisp' -e '(xlisp-test:travis-build)'
 
 # Cut and paste above to run all tests locally.
 
