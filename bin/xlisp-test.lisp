@@ -1,3 +1,6 @@
+(ql:quickload "lisp-unit")
+(ql:quickload "cl-json")
+
 (defpackage #:xlisp-test
   (:use #:cl #:lisp-unit)
   (:export #:test-exercise
