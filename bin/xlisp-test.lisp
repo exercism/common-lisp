@@ -1,8 +1,13 @@
+(ql:quickload "lisp-unit")
+(ql:quickload "cl-json")
+
 (defpackage #:xlisp-test
   (:use #:cl #:lisp-unit)
   (:export #:test-exercise
            #:test-exercises
-           #:problems-p)
+           #:problems-p
+           #:full-build
+           #:travis-build)
   (:documentation "xlisp-test
 
 Script for running the tests for exercism exercises of the xlisp
@@ -137,3 +142,11 @@ http://exercism.io"))
   (and (problems-p) (delete-all-problems))
   (dolist (exercise *exercises* (problems-p))
     (test-exercise exercise)))
+
+(defun full-build ()
+  "Execute a full build including all tests."
+  (test-exercises))
+
+(defun travis-build ()
+  "Execute a full build, and if it fails, exit with an error code."
+  (when (full-build) (uiop:quit 4)))

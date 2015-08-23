@@ -42,6 +42,45 @@ A list of exercises yet to be created is in
 [issue #23](https://github.com/exercism/xlisp/issues/23). This might
 be a great place to get started.
 
+#### Development Guidelines
+
+##### Creating a new exercise.
+
+All new exercise submissions should contain not only the test file,
+but the stub of the "production code" (containing the `defpackage` and
+`in-package` forms), and a file `example.lisp` which contains an
+example implementation.
+
+##### Building & Testing
+
+Before submitting a new exercise please ensure that it passes the
+Travis build.  This build will run all exercises on many Common Lisp
+implementations. To run the build yourself on your implementation load
+`bin/xlisp-test.lisp` and then evaluate `(xlisp-test:full-build)`.
+
+[CIM](https://github.com/KeenS/CIM) is a tool for working with several
+Common Lisp implementations at the same time. Allowing for easy
+switching between them and for consistent usage of them from the
+command line. It is recommended that one installs CIM and several
+implementations.
+
+If CIM is installed then running all the tests for one implementation
+can be done with (this will return with a non-zero error code if there
+are problems): 
+
+	cl -f bin/xlisp-test.lisp -e '(xlisp-test:travis-build)'
+
+To run all the tests for *all* the implementations use this command
+line:
+
+	cim for all do -f bin/xlisp-test.lisp -e '(xlisp-test:travis-build)'
+
+##### Style Guidelines
+
+The example implementation should use nothing outside of the Common
+Lisp specification. It should be well designed and not too clever.
+(Save the clever implementation for your submission on Exercism.io.)
+
 ## License
 
 The MIT License (MIT)
