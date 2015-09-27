@@ -4,14 +4,21 @@
 
 (in-package #:raindrops)
 
-(defun convert (n &optional (cases '((3 . "Pling") (5 . "Plang") (7 . "Plong"))))
-  (let ((results
-         (do* ((cs cases (cdr cs))
-               (c (car cs) (car cs))
-               (result (list)))
-              ((null cs) (reverse result))
-           (when (zerop (mod n (car c)))
-             (push (cdr c) result)))))
-    (if results
-        (apply #'concatenate 'string results)
-        (write-to-string n))))
+(defparameter *raindrops*
+  '((3 . "Pling")
+    (5 . "Plang")
+    (7 . "Plong"))
+  "Frequency modulus and impact sound of raindrops.")
+
+(defun convert (integer &optional (raindrops *raindrops*))
+  "String of integer or raindrop sound."
+  (declare (type integer integer))
+  (loop
+     for (div . sound) of-type (integer . string) in raindrops
+     when (zerop (mod integer div))
+     collect sound into sounds
+     finally
+       (return
+         (if sounds
+             (format nil "~{~A~}" sounds)
+             (write-to-string integer)))))
