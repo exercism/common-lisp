@@ -28,7 +28,8 @@
     "binary",
     "allergies",
     "sieve",
-    "strain"
+    "strain",
+    "accumulate"
   ],
   "deprecated": [
 
