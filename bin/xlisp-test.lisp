@@ -21,12 +21,12 @@ http://exercism.io"))
 
 ;;; Optional messaging
 
-(defparameter *verbosity* nil
-  "Verbosity of feedback.
+(defconstant +warn+  1 "Verbosity level for warnings only.")
+(defconstant +info+  2 "Verbosity level for informational messages.")
+(defconstant +debug+ 4 "Verbosity level for debug messages.")
 
-- 1 :: warn
-- 2 :: info
-- 4 :: debug")
+(defparameter *verbosity* nil
+  "Verbosity of feedback.")
 
 (defun verbosity-p (level)
   (check-type level integer)
@@ -39,13 +39,13 @@ http://exercism.io"))
     (apply #'format t "~&~A: ~@?~%" datum arguments)))
 
 (defun alert (message &rest arguments)
-  (notice 1 "ALERT" message (values-list arguments)))
+  (notice +warn+ "ALERT" message (values-list arguments)))
 
 (defun inform (message &rest arguments)
-  (notice 2 "INFO" message (values-list arguments)))
+  (notice +info+ "INFO" message (values-list arguments)))
 
 (defun babble (message &rest arguments)
-  (notice 4 "DEBUG" message (values-list arguments)))
+  (notice +debug+ "DEBUG" message (values-list arguments)))
 
 
 ;;; Managing paths and packages
@@ -59,7 +59,7 @@ http://exercism.io"))
 (defun load-package (filename)
   "Load file expecting a single package to be loaded. Errors."
   (let ((packages-before (list-all-packages)))
-    (load filename :verbose (verbosity-p 2) :print (verbosity-p 2))
+    (load filename :verbose (verbosity-p +info+) :print (verbosity-p +info+))
     (let ((loaded (set-difference (list-all-packages) packages-before)))
       (typecase (length loaded)
         ((integer 0 0) (error "No packages loaded."))
@@ -133,7 +133,7 @@ http://exercism.io"))
       (dolist (package (list example exercise))
         (when package (delete-package package))))))
 
-(defun test-exercises (&optional (verbosity 2))
+(defun test-exercises (&optional (verbosity +info+))
   "Run all exercise tests."
   (pushnew :xlisp-test *features*)
   (setf *verbosity* verbosity)
