@@ -39,6 +39,7 @@
     "docs"
   ],
   "foregone": [
-    "accumulate"
+      "accumulate",
+      "bank-account"
   ]
 }
