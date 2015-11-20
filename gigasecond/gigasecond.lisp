@@ -4,4 +4,4 @@
   (:export #:from))
 (in-package #:gigasecond)
 
-(defun from (year month day))
+(defun from (year month day hour minute second))
