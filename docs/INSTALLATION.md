@@ -6,7 +6,8 @@ brew install sbcl
 brew install clisp
 ```
 
-Then install [QuickLisp](http://www.quicklisp.org/beta/#installation) and download [http://beta.quicklisp.org/quicklisp.lisp](http://beta.quicklisp.org/quicklisp.lisp).
+Then install [QuickLisp](http://www.quicklisp.org/beta/#installation) and download
+[http://beta.quicklisp.org/quicklisp.lisp](http://beta.quicklisp.org/quicklisp.lisp).
 
 ```bash
 curl -O http://beta.quicklisp.org/quicklisp.lisp
