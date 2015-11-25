@@ -47,12 +47,12 @@
      with max = (* 26 26 100)
      with started = (get-universal-time)
      with max-execution-time = 3 ; seconds
-     for i upto max
+     for i below max
      for name = (robot:robot-name (robot:build-robot))
      if (gethash name *robot-names*) do
-       (return 'name-collision)
+       (return (format nil "Name collision: ~a" name))
      if (> (- (get-universal-time) started) max-execution-time) do
-       (return 'implementation-is-slow)
+       (return (format nil "Max execution time of ~a seconds exceeded" max-execution-time))
      do (setf (gethash name *robot-names*) name)))
 
 (define-test names-are-unique ()

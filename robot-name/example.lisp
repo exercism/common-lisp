@@ -4,20 +4,38 @@
 
 (in-package #:robot)
 
-(defun random-alpha-char ()
-  (code-char (+ (char-code #\A) (random 26))))
-(defun random-digit-char ()
-  (code-char (+ (char-code #\0) (random 10))))
+(defparameter *robot-names* (make-hash-table :test #'equal))
 
-(defun random-robot-name ()
-  (concatenate 'string (list (random-alpha-char)
-                             (random-alpha-char)
-                             (random-digit-char)
-                             (random-digit-char)
-                             (random-digit-char))))
-
-(defun build-robot () (make-instance 'robot))
 (defclass robot ()
-  ((name :reader robot-name :initform (random-robot-name))))
+    ((name :initarg :name :accessor robot-name)))
+
+(defun build-robot ()
+  (make-instance 'robot :name (unique-random-name)))
+
+(defun unique-random-name ()
+  (loop
+     for name = (random-name)
+     when (unique-name-p name) do
+       (store-name name)
+       (return name)))
+
+(defun random-name ()
+  (format nil "~c~c~3,'0d"
+          (random-letter)
+          (random-letter)
+          (random 1000)))
+
+(defun random-letter ()
+  (let ((A (char-code #\A))
+        (Z (char-code #\Z)))
+    (code-char (+ A (random (- Z A))))))
+
+(defun unique-name-p (name)
+  (null (gethash name *robot-names*)))
+
+(defun store-name (name)
+  (setf (gethash name *robot-names*) t))
+
 (defun reset-name (robot)
-  (setf (slot-value robot 'name) (random-robot-name)))
+  (with-slots (name) robot
+    (setf name (unique-random-name))))
