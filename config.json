@@ -30,7 +30,8 @@
     "sieve",
     "strain",
     "atbash-cipher",
-    "prime-factors"
+    "prime-factors",
+    "crypto-square"
   ],
   "deprecated": [
 
