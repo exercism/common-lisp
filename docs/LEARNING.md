@@ -6,4 +6,4 @@ resources can help you get started:
 * [Wikibooks book of Common Lisp, First steps](http://en.wikibooks.org/wiki/Common_Lisp/First_steps), by various contributors
 * [Learn X in Y minutes: where X = Common Lisp](http://learnxinyminutes.com/docs/common-lisp/) by Paul Nathan
 * [Northwestern University EECS 325 Readings](http://www.cs.northwestern.edu/academics/courses/325/readings/readings.php), by Chris Riesbeck
-* [The Common Lisp Cookbook](http://cl-cookbook.sourceforge.net/), by various contributors
+* [The Common Lisp Cookbook](http://lispcookbook.github.io/cl-cookbook/), by various contributors ([legacy SF site](http://cl-cookbook.sourceforge.net/))
