@@ -17,7 +17,7 @@ matrix:
       - LISP=abcl
 
 install:
-  - curl -L https://github.com/luismbo/cl-travis/raw/master/install.sh | sh
+  - curl -L https://github.com/arguello/cl-travis/raw/master/install.sh | sh
 
 script:
   - bin/fetch-configlet
