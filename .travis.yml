@@ -2,28 +2,28 @@
 language: lisp
 
 env:
-    matrix:
-      - LISP=sbcl
-      - LISP=sbcl32
-      - LISP=ccl
-      - LISP=ccl32
-      - LISP=ecl
-      - LISP=clisp
-      - LISP=clisp32
-      # - LISP=allegro
-      # - LISP=cmucl
+  matrix:
+  - LISP=sbcl
+  - LISP=sbcl32
+  - LISP=ccl
+  - LISP=ccl32
+  - LISP=ecl
+  - LISP=clisp
+  - LISP=clisp32
+  # - LISP=allegro
+  # - LISP=cmucl
 
 matrix:
   allow_failures:
-      - LISP=abcl
+  - LISP=abcl
 
 install:
-  - curl -L https://github.com/luismbo/cl-travis/raw/master/install.sh | sh
+- curl -L https://github.com/luismbo/cl-travis/raw/master/install.sh | sh
 
 script:
-  - bin/fetch-configlet
-  - bin/configlet .
-  - cl -f 'bin/xlisp-test.lisp' -e '(xlisp-test:travis-build)'
+- bin/fetch-configlet
+- bin/configlet .
+- cl -f 'bin/xlisp-test.lisp' -e '(xlisp-test:travis-build)'
 
 # Cut and paste above to run all tests locally.
 
