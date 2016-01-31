@@ -21,6 +21,8 @@
   (assert-equal  :illogical (triangle:triangle 1 1 50)))
 (define-test invalid-2
   (assert-equal  :illogical (triangle:triangle 1 2 1)))
+(define-test invalid-3
+  (assert-equal :illogical (triangle:triangle 2 4 2)))
 
 #-xlisp-test
 (let ((*print-errors* t)
