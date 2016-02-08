@@ -26,7 +26,7 @@ that fail tests
 
 ### Development setup
 
-Direct contributions to the Common Lisp code in xlisp are always
+Direct contributions to the Common Lisp code in xLisp are always
 welcome. 
 Refer to
 [the Getting Started Guide](http://help.exercism.io/getting-started-with-lisp.html)
@@ -34,7 +34,7 @@ for the Common Lisp track to get your environment set up if needed.
 
 New exercises or changes to existing ones can be submitted via a pull
 request. You will need a GitHub account and you will need to fork
-exercism/xlisp to your account. See
+`exercism/xlisp` to your account. See
 [GitHub Help](https://help.github.com/articles/fork-a-repo/) if you
 are unfamiliar with the process.
 
@@ -53,7 +53,7 @@ submitting the changes.
 
 A contributor will need to install
 [CIM](https://github.com/KeenS/CIM),
-[QuickLisp](https://www.quicklisp.org/beta/), and a few lisp
+[QuickLisp](https://www.quicklisp.org/beta/), and a few Lisp
 implementations. 
 
 ###### CIM
@@ -66,7 +66,7 @@ curl -L https://raw.github.com/KeenS/CIM/master/scripts/cim_installer | /bin/sh
 cim config sh >> ~/.bashrc
 ```
 
-Note: the XLisp team does not currently advise using CIM for
+Note: the xLisp team does not currently advise using CIM for
 installing implementations. While it works well as a
 multi-implementation runner, it is not currently sufficient as a
 multi-implementation installation and upgrade system.
@@ -77,7 +77,7 @@ It is beyond the scope of this document to describe how to install
 different Lisp implementations. Please find those instructions on
 those implementations' websites. 
 
-After installing lisp implementations. Check that CIM can see them by
+After installing Lisp implementations. Check that CIM can see them by
 running `cim list use`. This should list the implementation names
 suffixed with `-system` (designating that CIM did not install them).
 Then to ensure CIM can use them properly run:
