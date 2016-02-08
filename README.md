@@ -44,12 +44,75 @@ be a great place to get started.
 
 #### Development Guidelines
 
+##### Setting up the development environment.
+
+All changes will be built under several implementations via the
+[TravisCI build](https://travis-ci.org/exercism/xlisp) so it advisable
+to be able to run at least some of those same builds locally before
+submitting the changes.
+
+A contributor will need to install
+[CIM](https://github.com/KeenS/CIM),
+[QuickLisp](https://www.quicklisp.org/beta/), and a few lisp
+implementations. 
+
+###### CIM
+
+Instructions for installing CIM can be found in its
+[README](https://github.com/KeenS/CIM#install). The simplest form is:
+
+```
+curl -L https://raw.github.com/KeenS/CIM/master/scripts/cim_installer | /bin/sh
+cim config sh >> ~/.bashrc
+```
+
+Note: the XLisp team does not currently advise using CIM for
+installing implementations. While it works well as a
+multi-implementation runner, it is not currently sufficient as a
+multi-implementation installation and upgrade system.
+
+###### Lisp Implementations
+
+It is beyond the scope of this document to describe how to install
+different Lisp implementations. Please find those instructions on
+those implementations' websites. 
+
+After installing lisp implementations. Check that CIM can see them by
+running `cim list use`. This should list the implementation names
+suffixed with `-system` (designating that CIM did not install them).
+Then to ensure CIM can use them properly run:
+
+```
+for i in `cim list use`; do cim use $i; done
+```
+
+###### QuickLisp
+
+Instructions to install QuickLisp can be found on this
+[website](https://www.quicklisp.org/beta/#installation). Following
+these instructions will install the QuickLisp system into
+`~/.quicklisp`. 
+
+To ensure CIM and all your implementations know and use QuickLisp you
+can run the following commands:
+
+```
+ln ~/quicklisp ~/.cim/quicklisp
+cim for all do -l ~/.quicklisp/setup.lisp -e '(ql:add-to-init-file)'
+```
+
+(the last command will, for each implementation, install QuickLisp
+setup code into that implementation's startup file. It will prompt the
+user for confirmation before doing so.
+
 ##### Creating a new exercise.
 
 All new exercise submissions should contain not only the test file,
 but the stub of the "production code" (containing the `defpackage` and
 `in-package` forms), and a file `example.lisp` which contains an
-example implementation.
+example implementation. The "production code" and `example.lisp` may
+also include an empty function declaration for the functions under
+test.
 
 ##### Building & Testing
 
@@ -57,12 +120,6 @@ Before submitting a new exercise please ensure that it passes the
 Travis build.  This build will run all exercises on many Common Lisp
 implementations. To run the build yourself on your implementation load
 `bin/xlisp-test.lisp` and then evaluate `(xlisp-test:full-build)`.
-
-[CIM](https://github.com/KeenS/CIM) is a tool for working with several
-Common Lisp implementations at the same time. Allowing for easy
-switching between them and for consistent usage of them from the
-command line. It is recommended that one installs CIM and several
-implementations.
 
 If CIM is installed then running all the tests for one implementation
 can be done with (this will return with a non-zero error code if there
