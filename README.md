@@ -2,7 +2,7 @@
 
 Exercism exercises in Lisp
 
-[![Build Status](https://travis-ci.org/exercism/xlisp.png?branch=master)](https://travis-ci.org/exercism/xlisp)
+[![Build Status](https://travis-ci.org/exercism/xlisp.png)](https://travis-ci.org/exercism/xlisp)
 
 ## Contributing To the Common Lisp Track
 
