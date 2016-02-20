@@ -43,7 +43,7 @@ This can be placed in your `~/.emacs` (or `~/.emacs.d/init.el`) in
 order to have it set whenever Emacs is launched.
 
 One suggested add-on for Emacs and Common Lisp is
-(SLIME)[https://github.com/slime/slime] which offers tight integration
+[SLIME](https://github.com/slime/slime) which offers tight integration
 with the REPL; making iterative coding and testing very easy.
 
 
