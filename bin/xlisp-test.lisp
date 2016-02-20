@@ -1,6 +1,6 @@
-(ql:quickload "lisp-unit")
-(ql:quickload "uiop")
-(ql:quickload "cl-json")
+(ql:quickload "lisp-unit" :silent t)
+(ql:quickload "uiop" :silent t)
+(ql:quickload "cl-json" :silent t)
 
 (defpackage #:xlisp-test
   (:use #:cl #:lisp-unit)
