@@ -72,7 +72,7 @@ http://exercism.io"))
 
 (defun make-xlisp-test-path (exercise-name filename)
   "Make a pathname object from exercise name and filename"
-  (merge-pathnames (make-pathname :directory (list :relative exercise-name))
+  (merge-pathnames (make-pathname :directory (list :relative "exercises" exercise-name))
                    (make-pathname :name filename :type "lisp")))
 
 
