@@ -1,4 +1,5 @@
 (ql:quickload "lisp-unit")
+(ql:quickload "uiop")
 (ql:quickload "cl-json")
 
 (defpackage #:xlisp-test
