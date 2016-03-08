@@ -4,7 +4,7 @@
   "repository": "https://github.com/exercism/xlisp",
   "active": true,
   "problems": [
-    "point-mutations",
+    "hamming",
     "leap",
     "grains",
     "gigasecond",
