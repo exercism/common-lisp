@@ -31,7 +31,8 @@
     "strain",
     "atbash-cipher",
     "prime-factors",
-    "crypto-square"
+    "crypto-square",
+    "trinary"
   ],
   "deprecated": [
 
