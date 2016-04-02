@@ -7,7 +7,7 @@ Exercism exercises in Lisp
 ## Contributing To the Common Lisp Track
 
 ### Contributing Guide
- 
+
 Please be familiar with the
 [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
 in the x-api repository. This describes how all the language tracks
@@ -26,11 +26,9 @@ that fail tests
 
 ### Development setup
 
-Direct contributions to the Common Lisp code in xLisp are always
-welcome. 
-Refer to
-[the Getting Started Guide](http://help.exercism.io/getting-started-with-lisp.html)
-for the Common Lisp track to get your environment set up if needed.
+Direct contributions to the Common Lisp code in xLisp are always welcome.
+Refer to [the Getting Started Guide](http://exercism.io/languages/lisp) for the
+Common Lisp track to get your environment set up if needed.
 
 New exercises or changes to existing ones can be submitted via a pull
 request. You will need a GitHub account and you will need to fork
@@ -54,7 +52,7 @@ submitting the changes.
 A contributor will need to install
 [CIM](https://github.com/KeenS/CIM),
 [QuickLisp](https://www.quicklisp.org/beta/), and a few Lisp
-implementations. 
+implementations.
 
 ###### CIM
 
@@ -75,7 +73,7 @@ multi-implementation installation and upgrade system.
 
 It is beyond the scope of this document to describe how to install
 different Lisp implementations. Please find those instructions on
-those implementations' websites. 
+those implementations' websites.
 
 After installing Lisp implementations. Check that CIM can see them by
 running `cim list use`. This should list the implementation names
@@ -91,7 +89,7 @@ for i in `cim list use`; do cim use $i; done
 Instructions to install QuickLisp can be found on this
 [website](https://www.quicklisp.org/beta/#installation). Following
 these instructions will install the QuickLisp system into
-`~/.quicklisp`. 
+`~/.quicklisp`.
 
 To ensure CIM and all your implementations know and use QuickLisp you
 can run the following commands:
@@ -123,7 +121,7 @@ implementations. To run the build yourself on your implementation load
 
 If CIM is installed then running all the tests for one implementation
 can be done with (this will return with a non-zero error code if there
-are problems): 
+are problems):
 
 	cl -f bin/xlisp-test.lisp -e '(xlisp-test:travis-build)'
 

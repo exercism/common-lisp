@@ -1,10 +1,8 @@
 ## Setup
 
-Check out
-[Exercism Help](http://help.exercism.io/getting-started-with-lisp.html)
-for instructions to get started writing Common Lisp. That page will
-explain how to install and setup a Lisp implementation and how to run
-the tests.
+Check out [Exercism Help](http://exercism.io/languages/lisp) for instructions to
+get started writing Common Lisp. That page will explain how to install and setup
+a Lisp implementation and how to run the tests.
 
 ## Formatting
 
@@ -45,7 +43,3 @@ order to have it set whenever Emacs is launched.
 One suggested add-on for Emacs and Common Lisp is
 [SLIME](https://github.com/slime/slime) which offers tight integration
 with the REPL; making iterative coding and testing very easy.
-
-
-
-
