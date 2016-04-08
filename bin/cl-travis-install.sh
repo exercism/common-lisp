@@ -37,6 +37,8 @@ unpack() {
 install_i386_arch() {
     echo "check foreign arch"
     sudo dpkg --print-foreign-architectures
+    # hack for issue https://github.com/luismbo/cl-travis/issues/17
+    sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/etc/apt/sources.list.d/google-chrome.list"
     echo "install i386 arch"
     sudo dpkg --add-architecture i386
     echo "apt-get update"
