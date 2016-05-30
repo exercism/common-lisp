@@ -47,6 +47,9 @@
 (define-test allergic-to-eggs-in-addition-to-other-stuff
   (assert-true (allergies:allergic-to-p 5 "eggs")))
 
+(define-test case-insensitive
+  (assert-true (allergies:allergic-to-p 1 "EGGS")))
+
 (define-test ignore-non-allergen-score-parts
   (assert-equalp
    '("eggs" "shellfish" "strawberries" "tomatoes" "chocolate" "pollen"
