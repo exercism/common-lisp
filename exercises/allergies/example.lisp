@@ -32,5 +32,5 @@
            *allergens-scores*)))
 
 (defun allergic-to-p (score allergen)
-  (score-matches (assoc allergen *allergens-scores* :test #'string=)
+  (score-matches (assoc allergen *allergens-scores* :test #'string-equal)
                  score))
