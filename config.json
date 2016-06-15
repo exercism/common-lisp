@@ -38,7 +38,8 @@
 
   ],
   "ignored": [
-    "docs"
+    "docs",
+    "img"
   ],
   "foregone": [
       "accumulate",
