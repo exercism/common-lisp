@@ -31,6 +31,18 @@
 (define-test invalid-binary-is-decimal-0
   (assert-equal 0 (binary:to-decimal "carrot")))
 
+(define-test invalid-characters-at-beginning
+  (assert-equal 2 (binary:to-decimal "a10")))
+
+(define-test invalid-characters-at-end
+  (assert-equal 2 (binary:to-decimal "10a")))
+
+(define-test invalid-characters-in-middle
+  (assert-equal 2 (binary:to-decimal "1a0")))
+
+(define-test invalid-digits
+  (assert-equal 0 (binary:to-decimal "23")))
+
 #-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
