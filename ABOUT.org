@@ -1,0 +1,69 @@
+#+TITLE: About Common Lisp
+
+#+BEGIN_QUOTE
+"Lisp isn't a language, it's a building material."
+
+Alan Kay
+#+END_QUOTE
+
+* Introduction
+
+Common Lisp inherits and continues Lisp traditions that go back to the
+origins of Lisp in 1960. A brief timeline of the emergence of Common
+Lisp:
+
+- 1981 Formation of the Common Lisp Group
+- 1984 Publication of _Common Lisp the Language_ first edition (CLtL1)
+- 1986 Formation of X3J13 Committee
+- 1990 Publication of _Common Lisp the Language_ second edition (CLtL2)
+- 1992 Publication of _Draft proposed American National Standard Common Lisp_ (dpANS)
+- 1994 Approval of dpANSCL
+- 1995 Publication of ANSI/X3.226 ANSI Common Lisp specification
+- 1995 Publication on World Wide Web of CLtL2
+- 1996 Publication on World Wide Web of _Common Lisp Hyperspec_
+
+Over the intervening decades an astonishing amount of Common Lisp and
+general Lisp advocacy and criticism has been produced. With due
+respect, and having assumed the good intentions of those who have
+written it, we, the maintainers of the Common Lisp Exercism track,
+nonetheless feel programmers new to Common Lisp should treat all such
+writings with extreme skepticism when they come across them. Likewise,
+we feel uncomfortable adding to any of it here.
+
+We will provide links to informational resources instead.
+
+* Links
+
+** Reference
+
+- X3J13; Common Lisp Hyperspec: http://www.lispworks.com/documentation/HyperSpec/Body/01_ab.htm
+
+** History
+
+- X3J13; _Common Lisp Hyperspec 1.1.2 History_; http://www.lispworks.com/documentation/HyperSpec/Body/01_ab.htm
+- McCarthy, John; _History of Lisp_; http://www-formal.stanford.edu/jmc/history/lisp/lisp.html
+- Gabriel and Steele; _The Evolution of Lisp_; http://dreamsongs.com/Files/Hopl2.pdf
+- Pitman, Kent; _Common Lisp: the Untold Story_: http://www.nhplace.com/kent/Papers/cl-untold-story.html
+- Pitman, Kent; _Kent Pitman's CL References_; http://www.nhplace.com/kent/CL/index.html
+
+** Selected Advocacy
+
+- Garret, Ron;
+  - _Why Lisp_; http://blog.rongarret.info/2015/05/why-lisp.html
+  - _Lisping at JPL_; http://www.flownet.com/gat/jpl-lisp.html
+- Pitman and Slashdot;
+  - _Kent M. Pitman Answers On Lisp And Much More_; http://developers.slashdot.org/story/01/11/03/1726251/kent-m-pitman-answers-on-lisp-and-much-more
+  - _Kent M. Pitman's Second Wind_;  http://slashdot.org/story/01/11/13/0420226/Kent-M-Pitmans-Second-Wind
+- Siebel, Peter; _Why Lisp?_; http://www.gigamonkeys.com/book/introduction-why-lisp.html introduction to Practical Common Lisp
+- Norvig, Peter; _Paradigms of Artificial Intelligence Programming: Preface_; http://www.norvig.com/paip-preface.html
+- CLISP; _CLISP Common Lisp Praise_; http://clisp.org/propaganda.html
+- Lispworks; _Common Lisp - Myths and Legends_; http://www.lispworks.com/products/myths_and_legends.html
+- McCarthy, John; _Lisp-Notes on its Past and Future_; http://www-formal.stanford.edu/jmc/lisp20th/lisp20th.html
+
+* References
+
+- X3J13; _Common Lisp Hyperspec 1.1.2 History_; http://www.lispworks.com/documentation/HyperSpec/Body/01_ab.htm
+- McCarthy, John; _History of Lisp_; http://www-formal.stanford.edu/jmc/history/lisp/lisp.html
+- Gabriel and Steele; _The Evolution of Lisp_; http://dreamsongs.com/Files/Hopl2.pdf
+- Pitman, Kent; _Common Lisp: the Untold Story_: http://www.nhplace.com/kent/Papers/cl-untold-story.html
+- Wikipedia; _Common Lisp_; https://en.wikipedia.org/wiki/Common_Lisp
