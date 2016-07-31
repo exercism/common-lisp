@@ -9,7 +9,7 @@ Alan Kay
 * Introduction
 
 Common Lisp inherits and continues Lisp traditions that go back to the
-origins of Lisp in 1960. A brief timeline of the emergence of Common
+origins of Lisp in 1958. A brief timeline of the emergence of Common
 Lisp:
 
 - 1981 Formation of the Common Lisp Group
