@@ -34,6 +34,153 @@
     "crypto-square",
     "trinary"
   ],
+  "exercises": [
+    {
+      "slug": "hamming",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "leap",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "grains",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "gigasecond",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "bob",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "rna-transcription",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "robot-name",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "word-count",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "raindrops",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "grade-school",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "phone-number",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "etl",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "beer-song",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "space-age",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "anagram",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "nucleotide-count",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "meetup",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "triangle",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "difference-of-squares",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "roman-numerals",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "scrabble-score",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "binary",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "allergies",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "sieve",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "strain",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "atbash-cipher",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "prime-factors",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "crypto-square",
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "trinary",
+      "difficulty": 1,
+      "topics": []
+    }
+  ],
   "deprecated": [
 
   ],
