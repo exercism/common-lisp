@@ -3,7 +3,7 @@
 (defpackage #:raindrops-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "raindrops")
+#-xlisp-test (load (merge-pathnames "raindrops" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:raindrops-test)
 

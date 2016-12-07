@@ -3,7 +3,7 @@
 (defpackage #:crypto-square-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "crypto-square")
+#-xlisp-test (load (merge-pathnames "crypto-square" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:crypto-square-test)
 

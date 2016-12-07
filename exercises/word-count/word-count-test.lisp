@@ -3,7 +3,7 @@
 (defpackage #:word-count-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "word-count")
+#-xlisp-test (load (merge-pathnames "word-count" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:word-count-test)
 

@@ -3,7 +3,7 @@
 (defpackage #:strain-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "strain")
+#-xlisp-test (load (merge-pathnames "strain" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:strain-test)
 

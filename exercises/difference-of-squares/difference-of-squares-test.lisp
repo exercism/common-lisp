@@ -3,7 +3,7 @@
 (defpackage #:squares-test
   (:use #:cl #:lisp-unit))
 
-#-xlisp-test (load "squares")
+#-xlisp-test (load (merge-pathnames "squares" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:squares-test)
 

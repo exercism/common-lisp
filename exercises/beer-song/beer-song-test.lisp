@@ -3,7 +3,7 @@
 (defpackage #:beer-song-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "beer")
+#-xlisp-test (load (merge-pathnames "beer" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:beer-song-test)
 

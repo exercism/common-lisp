@@ -3,7 +3,7 @@
 (defpackage #:anagram-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "anagram")
+#-xlisp-test (load (merge-pathnames "anagram" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:anagram-test)
 

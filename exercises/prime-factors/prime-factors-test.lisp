@@ -3,7 +3,7 @@
 (defpackage #:prime-factors-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "prime-factors")
+#-xlisp-test (load (merge-pathnames "prime-factors" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:prime-factors-test)
 

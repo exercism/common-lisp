@@ -3,7 +3,7 @@
 (defpackage #:triangle-test
   (:use #:cl #:lisp-unit))
 
-#-xlisp-test (load "triangle")
+#-xlisp-test (load (merge-pathnames "triangle" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:triangle-test)
 

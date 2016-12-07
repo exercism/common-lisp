@@ -3,7 +3,7 @@
 (defpackage #:phone-number-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "phone")
+#-xlisp-test (load (merge-pathnames "phone" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:phone-number-test)
 

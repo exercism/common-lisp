@@ -3,7 +3,7 @@
 (defpackage #:binary-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "binary")
+#-xlisp-test (load (merge-pathnames "binary" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:binary-test)
 

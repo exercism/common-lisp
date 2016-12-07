@@ -3,7 +3,7 @@
 (defpackage #:trinary-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "trinary")
+#-xlisp-test (load (merge-pathnames "trinary" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:trinary-test)
 

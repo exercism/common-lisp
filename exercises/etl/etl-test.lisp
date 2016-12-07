@@ -3,7 +3,7 @@
 (defpackage #:etl-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "etl")
+#-xlisp-test (load (merge-pathnames "etl" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:etl-test)
 

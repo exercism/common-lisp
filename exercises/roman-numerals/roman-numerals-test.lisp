@@ -3,7 +3,7 @@
 (defpackage #:roman-test
   (:use #:cl #:lisp-unit))
 
-#-xlisp-test (load "roman")
+#-xlisp-test (load (merge-pathnames "roman" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:roman-test)
 
