@@ -12,8 +12,8 @@
   values of the items must match. But the order is not
   important. Equality is tested with equal"
   (assert-equal
-      (sort expected #'string< :key #'car)
-      (sort actual #'string< :key #'car)))
+      (sort (copy-seq expected) #'string< :key #'car)
+      (sort (copy-seq actual) #'string< :key #'car)))
 
 (define-test count-one-word
   (assert-assoc-equal '(("word" . 1))
