@@ -3,7 +3,7 @@
 (defpackage #:sieve-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "sieve")
+#-xlisp-test (load (merge-pathnames "sieve" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:sieve-test)
 

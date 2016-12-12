@@ -3,7 +3,7 @@
 (defpackage #:atbash-cipher-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "atbash-cipher")
+#-xlisp-test (load (merge-pathnames "atbash-cipher" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:atbash-cipher-test)
 

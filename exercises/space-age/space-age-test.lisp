@@ -3,7 +3,7 @@
 (defpackage #:space-age-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "space-age")
+#-xlisp-test (load (merge-pathnames "space-age" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:space-age-test)
 

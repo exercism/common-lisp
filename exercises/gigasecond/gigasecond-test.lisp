@@ -3,7 +3,7 @@
 (defpackage #:gigasecond-test
   (:use #:cl #:lisp-unit))
 
-#-xlisp-test (load "gigasecond")
+#-xlisp-test (load (merge-pathnames "gigasecond" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:gigasecond-test)
 

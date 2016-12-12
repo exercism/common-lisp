@@ -3,7 +3,7 @@
 (defpackage #:nucleotide-count-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "dna")
+#-xlisp-test (load (merge-pathnames "dna" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:nucleotide-count-test)
 

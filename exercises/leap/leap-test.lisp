@@ -3,7 +3,7 @@
 (defpackage #:leap-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "leap-year")
+#-xlisp-test (load (merge-pathnames "leap-year" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:leap-test)
 

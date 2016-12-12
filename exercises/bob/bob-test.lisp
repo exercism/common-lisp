@@ -3,7 +3,7 @@
 (defpackage #:bob-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "bob")
+#-xlisp-test (load (merge-pathnames "bob" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:bob-test)
 

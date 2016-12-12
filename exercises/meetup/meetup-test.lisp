@@ -3,7 +3,7 @@
 (defpackage #:meetup-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "meetup")
+#-xlisp-test (load (merge-pathnames "meetup" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:meetup-test)
 

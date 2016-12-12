@@ -3,7 +3,7 @@
 (defpackage #:grade-school-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "school")
+#-xlisp-test (load (merge-pathnames "school" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:grade-school-test)
 

@@ -3,7 +3,7 @@
 (defpackage #:allergies-test
   (:use #:common-lisp #:lisp-unit))
 
-#-xlisp-test (load "allergies")
+#-xlisp-test (load (merge-pathnames "allergies" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:allergies-test)
 

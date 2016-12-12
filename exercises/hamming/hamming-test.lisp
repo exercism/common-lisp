@@ -1,6 +1,6 @@
 (ql:quickload "lisp-unit")
 
-#-xlisp-test (load "hamming")
+#-xlisp-test (load (merge-pathnames "hamming" (or *load-pathname* *default-pathname-defaults*)))
 
 (defpackage #:hamming-test
   (:use #:common-lisp #:lisp-unit))

@@ -3,7 +3,7 @@
 (defpackage #:grains-test
   (:use #:cl #:lisp-unit))
 
-#-xlisp-test (load "grains")
+#-xlisp-test (load (merge-pathnames "grains" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:grains-test)
 

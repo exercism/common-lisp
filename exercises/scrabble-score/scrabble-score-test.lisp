@@ -3,7 +3,7 @@
 (defpackage #:scrabble-score-test
   (:use #:cl #:lisp-unit))
 
-#-xlisp-test (load "scrabble-score")
+#-xlisp-test (load (merge-pathnames "scrabble-score" (or *load-pathname* *default-pathname-defaults*)))
 
 (in-package #:scrabble-score-test)
 
