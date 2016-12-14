@@ -45,6 +45,10 @@
   (assert-equal '()
       (anagram:anagrams-for "banana" '("banana"))))
 
+(define-test word-is-not-own-anagram-case-insensitively
+  (assert-equal '()
+      (anagram:anagrams-for "bananarama" '("BananaRama"))))
+
 #-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
