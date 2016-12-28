@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "binary")
 
 (defpackage #:binary-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "binary")
 
 (in-package #:binary-test)
 

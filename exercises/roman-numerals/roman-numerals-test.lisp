@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "roman")
 
 (defpackage #:roman-test
   (:use #:cl #:lisp-unit))
-
-#-xlisp-test (load "roman")
 
 (in-package #:roman-test)
 

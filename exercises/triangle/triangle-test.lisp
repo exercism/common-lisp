@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "triangle")
 
 (defpackage #:triangle-test
   (:use #:cl #:lisp-unit))
-
-#-xlisp-test (load "triangle")
 
 (in-package #:triangle-test)
 

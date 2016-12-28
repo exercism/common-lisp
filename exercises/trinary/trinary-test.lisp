@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "trinary")
 
 (defpackage #:trinary-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "trinary")
 
 (in-package #:trinary-test)
 

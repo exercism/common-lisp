@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "word-count")
 
 (defpackage #:word-count-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "word-count")
 
 (in-package #:word-count-test)
 

@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "scrabble-score")
 
 (defpackage #:scrabble-score-test
   (:use #:cl #:lisp-unit))
-
-#-xlisp-test (load "scrabble-score")
 
 (in-package #:scrabble-score-test)
 

@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "gigasecond")
 
 (defpackage #:gigasecond-test
   (:use #:cl #:lisp-unit))
-
-#-xlisp-test (load "gigasecond")
 
 (in-package #:gigasecond-test)
 

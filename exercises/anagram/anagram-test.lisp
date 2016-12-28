@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "anagram")
 
 (defpackage #:anagram-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "anagram")
 
 (in-package #:anagram-test)
 

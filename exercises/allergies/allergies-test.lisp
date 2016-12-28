@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "allergies")
 
 (defpackage #:allergies-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "allergies")
 
 (in-package #:allergies-test)
 

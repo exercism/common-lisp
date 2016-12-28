@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "strain")
 
 (defpackage #:strain-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "strain")
 
 (in-package #:strain-test)
 

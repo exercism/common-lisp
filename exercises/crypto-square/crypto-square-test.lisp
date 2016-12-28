@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "crypto-square")
 
 (defpackage #:crypto-square-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "crypto-square")
 
 (in-package #:crypto-square-test)
 
