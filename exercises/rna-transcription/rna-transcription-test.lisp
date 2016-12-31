@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "dna")
 
 (defpackage :rna-transcription-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "dna")
 
 (in-package #:rna-transcription-test)
 

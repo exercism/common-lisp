@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "squares")
 
 (defpackage #:squares-test
   (:use #:cl #:lisp-unit))
-
-#-xlisp-test (load "squares")
 
 (in-package #:squares-test)
 

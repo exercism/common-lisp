@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "sieve")
 
 (defpackage #:sieve-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "sieve")
 
 (in-package #:sieve-test)
 

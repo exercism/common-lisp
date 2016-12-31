@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "school")
 
 (defpackage #:grade-school-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "school")
 
 (in-package #:grade-school-test)
 

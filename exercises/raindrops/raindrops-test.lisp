@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "raindrops")
 
 (defpackage #:raindrops-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "raindrops")
 
 (in-package #:raindrops-test)
 

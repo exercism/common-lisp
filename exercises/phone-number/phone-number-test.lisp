@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "phone")
 
 (defpackage #:phone-number-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "phone")
 
 (in-package #:phone-number-test)
 

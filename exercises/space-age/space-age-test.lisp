@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "space-age")
 
 (defpackage #:space-age-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "space-age")
 
 (in-package #:space-age-test)
 

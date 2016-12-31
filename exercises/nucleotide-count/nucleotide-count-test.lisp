@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "dna")
 
 (defpackage #:nucleotide-count-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "dna")
 
 (in-package #:nucleotide-count-test)
 

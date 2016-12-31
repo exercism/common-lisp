@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "grains")
 
 (defpackage #:grains-test
   (:use #:cl #:lisp-unit))
-
-#-xlisp-test (load "grains")
 
 (in-package #:grains-test)
 

@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "robot")
 
 (defpackage #:robot-name-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "robot")
 
 (in-package #:robot-name-test)
 

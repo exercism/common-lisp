@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "etl")
 
 (defpackage #:etl-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "etl")
 
 (in-package #:etl-test)
 

@@ -1,5 +1,4 @@
 (ql:quickload "lisp-unit")
-
 #-xlisp-test (load "hamming")
 
 (defpackage #:hamming-test

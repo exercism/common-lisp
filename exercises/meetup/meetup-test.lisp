@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "meetup")
 
 (defpackage #:meetup-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "meetup")
 
 (in-package #:meetup-test)
 

@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "atbash-cipher")
 
 (defpackage #:atbash-cipher-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "atbash-cipher")
 
 (in-package #:atbash-cipher-test)
 

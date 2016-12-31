@@ -1,9 +1,8 @@
 (ql:quickload "lisp-unit")
+#-xlisp-test (load "prime-factors")
 
 (defpackage #:prime-factors-test
   (:use #:common-lisp #:lisp-unit))
-
-#-xlisp-test (load "prime-factors")
 
 (in-package #:prime-factors-test)
 
