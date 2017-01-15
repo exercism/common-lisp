@@ -1,5 +1,5 @@
-Common Lisp is the most prominent, (together with Scheme) offshoot of the long-running family of Lisp programming languages. 
-It's a multi-paradigm programming language that allows you to to choose the approach and paradigm 
+Common Lisp is an offshoot of the long-running family of Lisp programming languages. 
+It's a multi-paradigm programming language that allows you to choose the approach and paradigm 
 according to your application domain.
 
 Common Lisp has fast prototyping capabilities, and exceptional support for object oriented programming. 
