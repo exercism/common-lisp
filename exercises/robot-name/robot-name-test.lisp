@@ -13,11 +13,10 @@
 (defparameter *clutz* (robot:build-robot))
 
 (define-test name-matches-expected-pattern
-  (flet ((name-has-correct-pattern (name)
-           (and (= (length name) 5)
-                (every #'is-upper-alpha-p (subseq name 0 2))
-                (every #'is-digit-p (subseq name 2 5)))))
-    (assert-true (name-has-correct-pattern (robot:robot-name *robbie*)))))
+  (let ((name (robot:robot-name *robbie*)))
+    (assert-true (= (length name) 5))
+    (assert-true (every #'is-upper-alpha-p (subseq name 0 2)))
+    (assert-true (every #'is-digit-p (subseq name 2 5)))))
 
 (define-test name-is-persistent
   (assert-equal (robot:robot-name *robbie*) (robot:robot-name *robbie*)))
