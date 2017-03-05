@@ -3,10 +3,14 @@ one of the learning section.
 
 ### Important resources
 
-* [The Common Lisp HyperSpec](http://www.lispworks.com/documentation/common-lisp.html), by X3J13 committee. The Common Lisp Standard
-* [Common Lisp the Language, 2nd Edition](http://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html), by Guy Steele
-* [Common Lisp Document Repository](http://cdr.eurolisp.org/) a collection of emergent and de-facto standards
-* [Common-Lisp.net](http://common-lisp.net/), project hosting and gateway
+* [The Common Lisp HyperSpec](http://www.lispworks.com/documentation/common-lisp.html),
+  by X3J13 committee. The Common Lisp Standard
+* [Common Lisp the Language, 2nd Edition](http://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html),
+  by Guy Steele
+* [Common Lisp Document Repository](http://cdr.eurolisp.org/) a
+  collection of emergent and de-facto standards
+* [Common-Lisp.net](http://common-lisp.net/), project hosting and
+  gateway
 * [The Common Lisp Wiki](http://www.cliki.net/)
 
 ### Free books
@@ -14,16 +18,21 @@ one of the learning section.
 There are many other great books you can find links to. These are the
 most popularly linked introductory works.
 
-* [Practical Common Lisp](http://www.gigamonkeys.com/book/), by Peter Seibel
-* [Common Lisp: A Gentle Introduction to Symbolic Computation](http://www-cgi.cs.cmu.edu/afs/cs.cmu.edu/user/dst/www/LispBook/index.html) (PDF), by David S. Touretzky
-* [Common Lisp: An Interactive Approach](http://www.cse.buffalo.edu/~shapiro/Commonlisp/) (PDF), by Stuart C. Shapiro
-* [Successful Lisp: How to Understand and Use Common Lisp](http://psg.com/~dlamkins/sl/cover.html), by David B. Lamkins
+* [Practical Common Lisp](http://www.gigamonkeys.com/book/), by Peter
+  Seibel
+* [Common Lisp: A Gentle Introduction to Symbolic Computation](http://www-cgi.cs.cmu.edu/afs/cs.cmu.edu/user/dst/www/LispBook/index.html) (PDF),
+  by David S. Touretzky
+* [Common Lisp: An Interactive Approach](http://www.cse.buffalo.edu/~shapiro/Commonlisp/) (PDF),
+  by Stuart C. Shapiro
+* [Successful Lisp: How to Understand and Use Common Lisp](http://psg.com/~dlamkins/sl/cover.html),
+  by David B. Lamkins
 
 Following these are two more advanced books, but beginners shouldn't
 be afraid of them, they're quite accessible and "classics".
 
 * [On Lisp](http://www.paulgraham.com/onlisptext.html), by Paul Graham
-* [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/), by Abelson, Sussman, and Sussman
+* [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/),
+  by Abelson, Sussman, and Sussman
 
 The last is actually on a related Lisp dialect, Scheme, but it's very
 helpful book, generally. If you find you prefer Scheme, it's an
