@@ -1,3 +1,7 @@
+Start up your Lisp implementation in the directory of the exercise you
+are working on (or change the current directory for an already running
+Lisp implementation to that directory).
+
 Load the test file into your running Lisp implementation, for example,
 `(load "point-mutations-test")`. This will run the tests the first
 time automatically. After that you can run the test suite in the REPL
