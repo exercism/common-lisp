@@ -1,4 +1,6 @@
-Install a lisp implementation such as SBCL or CLisp. Both can be installed via Homebrew on Mac OS X.
+Install a lisp implementation such as [SBCL](http://www.sbcl.org/)
+or [CLisp](http://clisp.org/). Both can be installed via Homebrew on
+Mac OS X.
 
 ```bash
 brew install sbcl
@@ -6,7 +8,11 @@ brew install sbcl
 brew install clisp
 ```
 
-Then install [QuickLisp](http://www.quicklisp.org/beta/#installation) and download
+(See their homepages for instructions for installing on other
+platforms.) 
+
+Then install [QuickLisp](http://www.quicklisp.org/beta/#installation)
+and download
 [http://beta.quicklisp.org/quicklisp.lisp](http://beta.quicklisp.org/quicklisp.lisp).
 
 ```bash
@@ -19,7 +25,8 @@ Load it into your running Lisp implementation, and type:
 (quicklisp-quickstart:install)
 ```
 
-To add the startup code to your init file so that the next time you start the lisp interpreter QuickLisp will be loaded, type:
+To add the startup code to your init file so that the next time you
+start the lisp interpreter QuickLisp will be loaded, type:
 
 ```lisp
 (ql:add-to-init-file)
@@ -31,4 +38,5 @@ Optionally load lisp-unit:
 (ql:quickload "lisp-unit")
 ```
 
-This will be done the first time you run any exercises tests. But you can do it now if you want.
+This will be done the first time you run any exercises tests. But you
+can do it now if you want.
