@@ -1,8 +1,9 @@
 # xLisp
 
+[![Build Status](https://travis-ci.org/exercism/xlisp.svg)](https://travis-ci.org/exercism/xlisp)
+
 Exercism exercises in Lisp
 
-[![Build Status](https://travis-ci.org/exercism/xlisp.png)](https://travis-ci.org/exercism/xlisp)
 
 ## Contributing To the Common Lisp Track
 
