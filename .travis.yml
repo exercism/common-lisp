@@ -1,6 +1,8 @@
 ---
 language: lisp
 
+sudo: false
+
 env:
   matrix:
     - LISP=sbcl
