@@ -11,7 +11,7 @@ brew install clisp
 See their homepages for instructions for installing on other
 platforms.
 
-We will use [QuickLisp] for package management. To install QuickLisp, first download quicklisp.lisp: 
+We will use [QuickLisp] for Lisp library management. To install QuickLisp, first download quicklisp.lisp: 
 
 ```bash
 curl -O http://beta.quicklisp.org/quicklisp.lisp
