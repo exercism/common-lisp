@@ -8,22 +8,22 @@ brew install sbcl
 brew install clisp
 ```
 
-(See their homepages for instructions for installing on other
-platforms.) 
+See their homepages for instructions for installing on other
+platforms.
 
-Then install [QuickLisp](http://www.quicklisp.org/beta/#installation)
-and download
-[http://beta.quicklisp.org/quicklisp.lisp](http://beta.quicklisp.org/quicklisp.lisp).
+We will use [QuickLisp] for package management. To install QuickLisp, first download quicklisp.lisp: 
 
 ```bash
 curl -O http://beta.quicklisp.org/quicklisp.lisp
 ```
 
-Load it into your running Lisp implementation, and type:
+Then load it into your running Lisp implementation, e.g. using ```(load "quicklisp.lisp")``` in clisp. To complete the installation type:
 
 ```lisp
 (quicklisp-quickstart:install)
 ```
+
+Read more details about installing QuickLisp [here](http://www.quicklisp.org/beta/#installation).
 
 To add the startup code to your init file so that the next time you
 start the lisp interpreter QuickLisp will be loaded, type:
