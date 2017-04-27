@@ -17,14 +17,14 @@ We will use [QuickLisp](http://www.quicklisp.org/beta/#installation) for Lisp li
 curl -O http://beta.quicklisp.org/quicklisp.lisp
 ```
 
-Now launch your lisp implementation, and copy-paste the following expressions to finish QuickLisp installtion:
+Now launch lisp, and copy-paste the following expressions to finish QuickLisp installation:
 
 ```lisp
 > (quicklisp-quickstart:install)  ;; this will install quicklisp
 > (ql:add-to-init-file)           ;; this will add quicklisp setup to your init file (recommended)
 ```
 
-See the documentation of your lisp implementation on how to load quicklisp.lisp into your running lisp environment.
+See the documentation of your lisp implementation on how to load quicklisp.lisp into lisp.
 
 Optionally load lisp-unit:
 
