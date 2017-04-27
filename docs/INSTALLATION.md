@@ -11,26 +11,18 @@ brew install clisp
 See their homepages for instructions for installing on other
 platforms.
 
-We will use [QuickLisp] for Lisp library management. To install QuickLisp, first download quicklisp.lisp: 
+We will use [QuickLisp](http://www.quicklisp.org/beta/#installation) for Lisp library management. To install QuickLisp: 
 
 ```bash
 curl -O http://beta.quicklisp.org/quicklisp.lisp
 ```
 
-Then load it into your running Lisp implementation, e.g. using ```(load "quicklisp.lisp")``` in clisp. To complete the installation type:
+Now launch your lisp implementation and paste in the following expressions and evaluate them:
 
-```lisp
-(quicklisp-quickstart:install)
-```
+> (quicklisp-quickstart:install)  ;; this will install quicklisp
+> (ql:add-to-init-file)           ;; this will add quicklisp setup to your init file (recommended)
 
-Read more details about installing QuickLisp [here](http://www.quicklisp.org/beta/#installation).
-
-To add the startup code to your init file so that the next time you
-start the lisp interpreter QuickLisp will be loaded, type:
-
-```lisp
-(ql:add-to-init-file)
-```
+See the documentation of your lisp implementation, on how to load quicklisp.lisp into your running lisp environment.
 
 Optionally load lisp-unit:
 
