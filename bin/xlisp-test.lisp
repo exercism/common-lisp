@@ -52,9 +52,13 @@ http://exercism.io"))
 ;;; Managing paths and packages
 
 (defparameter *exercises*
-  (with-open-file (config-json "config.json")
-    (rest (assoc :problems
-                 (cl-json:decode-json config-json))))
+  (flet ((slug-name (exercise-config)
+           (cdr (assoc :slug exercise-config))))
+    (with-open-file (config-json "config.json")
+      (map 'list
+           #'slug-name
+           (cdr (assoc :exercises
+                        (cl-json:decode-json config-json))))))
   "List of exercise names.")
 
 (defun load-package (filename)
