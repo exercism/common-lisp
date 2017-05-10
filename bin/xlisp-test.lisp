@@ -135,13 +135,16 @@ http://exercism.io"))
       (dolist (package (list example exercise))
         (when package (delete-package package))))))
 
-(defun test-exercises (&optional (verbosity +info+))
+(defun test-exercises (&optional (verbosity (+ +warn+ +info+)))
   "Run all exercise tests."
   (pushnew :xlisp-test *features*)
   (setf *verbosity* verbosity)
   (inform (format nil "Verbosity level: ~D" *verbosity*))
   (inform "Running all xlisp tests...")
   (and (problems-p) (delete-all-problems))
+  (unless *exercises*
+    (alert "No exercises defined.")
+    (uiop:quit 2))
   (dolist (exercise *exercises* (problems-p))
     (test-exercise exercise)))
 
