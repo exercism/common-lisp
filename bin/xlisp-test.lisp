@@ -20,6 +20,17 @@ http://exercism.io"))
 
 (in-package #:xlisp-test)
 
+;;; Exit states
+
+;;;; http://tldp.org/LDP/abs/html/exitcodes.html
+
+(defconstant +exit-tests-did-not-run+ 3
+  "Exit status for when tests don't run.")
+
+(defconstant +exit-tests-failed+ 4
+  "Exit status for when tests fail.")
+
+
 ;;; Optional messaging
 
 (defconstant +warn+  1 "Verbosity level for warnings only.")
@@ -148,7 +159,7 @@ http://exercism.io"))
   (and (problems-p) (delete-all-problems))
   (unless *exercises*
     (alert "No exercises defined.")
-    (uiop:quit 2))
+    (uiop:quit +exit-tests-did-not-run+))
   (dolist (exercise *exercises* (problems-p))
     (test-exercise exercise)))
 
@@ -158,4 +169,4 @@ http://exercism.io"))
 
 (defun travis-build ()
   "Execute a full build, and if it fails, exit with an error code."
-  (when (full-build) (uiop:quit 4)))
+  (when (full-build) (uiop:quit +exit-tests-failed+)))
