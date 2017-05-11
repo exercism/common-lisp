@@ -35,4 +35,4 @@ script:
 # Cut and paste above to run all tests locally.
 
 # Add a numeric argument to XLISP-TEST:RUN-TESTS-ALL between 0 and 7
-# to control optional verbosity (default is 2).
+# to control optional verbosity (default is 3).

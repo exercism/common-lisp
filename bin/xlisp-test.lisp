@@ -20,6 +20,17 @@ http://exercism.io"))
 
 (in-package #:xlisp-test)
 
+;;; Exit states
+
+;;;; http://tldp.org/LDP/abs/html/exitcodes.html
+
+(defconstant +exit-tests-did-not-run+ 3
+  "Exit status for when tests don't run.")
+
+(defconstant +exit-tests-failed+ 4
+  "Exit status for when tests fail.")
+
+
 ;;; Optional messaging
 
 (defconstant +warn+  1 "Verbosity level for warnings only.")
@@ -52,9 +63,13 @@ http://exercism.io"))
 ;;; Managing paths and packages
 
 (defparameter *exercises*
-  (with-open-file (config-json "config.json")
-    (rest (assoc :problems
-                 (cl-json:decode-json config-json))))
+  (flet ((slug-name (exercise-config)
+           (cdr (assoc :slug exercise-config))))
+    (with-open-file (config-json "config.json")
+      (map 'list
+           #'slug-name
+           (cdr (assoc :exercises
+                        (cl-json:decode-json config-json))))))
   "List of exercise names.")
 
 (defun load-package (filename)
@@ -135,13 +150,16 @@ http://exercism.io"))
       (dolist (package (list example exercise))
         (when package (delete-package package))))))
 
-(defun test-exercises (&optional (verbosity +info+))
+(defun test-exercises (&optional (verbosity (+ +warn+ +info+)))
   "Run all exercise tests."
   (pushnew :xlisp-test *features*)
   (setf *verbosity* verbosity)
   (inform (format nil "Verbosity level: ~D" *verbosity*))
   (inform "Running all xlisp tests...")
   (and (problems-p) (delete-all-problems))
+  (unless *exercises*
+    (alert "No exercises defined.")
+    (uiop:quit +exit-tests-did-not-run+))
   (dolist (exercise *exercises* (problems-p))
     (test-exercise exercise)))
 
@@ -151,4 +169,4 @@ http://exercism.io"))
 
 (defun travis-build ()
   "Execute a full build, and if it fails, exit with an error code."
-  (when (full-build) (uiop:quit 4)))
+  (when (full-build) (uiop:quit +exit-tests-failed+)))
