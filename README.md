@@ -50,25 +50,18 @@ All changes will be built under several implementations via the
 to be able to run at least some of those same builds locally before
 submitting the changes.
 
-A contributor will need to install
-[CIM](https://github.com/KeenS/CIM),
-[QuickLisp](https://www.quicklisp.org/beta/), and a few Lisp
-implementations.
+A contributor will need to install:
 
-###### CIM
+* [Roswell](https://github.com/roswell/roswell)
+* [QuickLisp](https://www.quicklisp.org/beta/)
+* and a few Lisp implementations.
 
-Instructions for installing CIM can be found in its
-[README](https://github.com/KeenS/CIM#install). The simplest form is:
 
-```
-curl -L https://raw.github.com/KeenS/CIM/master/scripts/cim_installer | /bin/sh
-cim config sh >> ~/.bashrc
-```
+###### Roswell
 
-Note: the xLisp team does not currently advise using CIM for
-installing implementations. While it works well as a
-multi-implementation runner, it is not currently sufficient as a
-multi-implementation installation and upgrade system.
+Instructions for installing Roswell can be found in
+its
+[README](https://github.com/roswell/roswell#installation-dependency--usage).
 
 ###### Lisp Implementations
 
@@ -76,33 +69,13 @@ It is beyond the scope of this document to describe how to install
 different Lisp implementations. Please find those instructions on
 those implementations' websites.
 
-After installing Lisp implementations. Check that CIM can see them by
-running `cim list use`. This should list the implementation names
-suffixed with `-system` (designating that CIM did not install them).
-Then to ensure CIM can use them properly run:
-
-```
-for i in `cim list use`; do cim use $i; done
-```
+After installing Lisp implementations. Check that Roswell can see them by
+running `ros list installed`.
 
 ###### QuickLisp
 
-Instructions to install QuickLisp can be found on this
-[website](https://www.quicklisp.org/beta/#installation). Following
-these instructions will install the QuickLisp system into
-`~/.quicklisp`.
-
-To ensure CIM and all your implementations know and use QuickLisp you
-can run the following commands:
-
-```
-ln ~/quicklisp ~/.cim/quicklisp
-cim for all do -l ~/.quicklisp/setup.lisp -e '(ql:add-to-init-file)'
-```
-
-(the last command will, for each implementation, install QuickLisp
-setup code into that implementation's startup file. It will prompt the
-user for confirmation before doing so.
+Although [QuickLisp](https://www.quicklisp.org/beta/) is
+required, Roswell will install and configure it for you, by default.
 
 ##### Creating a new exercise.
 
@@ -120,16 +93,11 @@ Travis build.  This build will run all exercises on many Common Lisp
 implementations. To run the build yourself on your implementation load
 `bin/xlisp-test.lisp` and then evaluate `(xlisp-test:full-build)`.
 
-If CIM is installed then running all the tests for one implementation
-can be done with (this will return with a non-zero error code if there
-are problems):
+If Roswell is installed then running all the tests for one
+implementation can be done with (this will return with a non-zero
+error code if there are problems):
 
-	cl -f bin/xlisp-test.lisp -e '(xlisp-test:travis-build)'
-
-To run all the tests for *all* the implementations use this command
-line:
-
-	cim for all do -f bin/xlisp-test.lisp -e '(xlisp-test:travis-build)'
+    ros run -l 'bin/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
 
 ##### Style Guidelines
 
