@@ -20,6 +20,7 @@ curl -O http://beta.quicklisp.org/quicklisp.lisp
 Now launch lisp, and copy-paste the following expressions to finish QuickLisp installation:
 
 ```lisp
+> (load "quicklisp.lisp")         ;; this will load the downloaded lisp file
 > (quicklisp-quickstart:install)  ;; this will install quicklisp
 > (ql:add-to-init-file)           ;; this will add quicklisp setup to your init file (recommended)
 ```
