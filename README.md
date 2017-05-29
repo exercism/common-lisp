@@ -105,8 +105,3 @@ The example implementation should use nothing outside of the Common
 Lisp specification. It should be well designed and not too clever.
 (Save the clever implementation for your submission on Exercism.io.)
 
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
