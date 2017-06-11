@@ -7,232 +7,290 @@
     {
       "slug": "hamming",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Equality",
-                 "Strings",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Equality",
+        "Strings",
+        "Filtering"
+      ]
     },
     {
       "slug": "leap",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Equality",
-                 "Integers",
-                 "Logic"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Equality",
+        "Integers",
+        "Logic"
+      ]
     },
     {
       "slug": "grains",
       "difficulty": 1,
-      "topics": ["Variables",
-                 "Integers",
-                 "Mathematics"]
+      "topics": [
+        "Variables",
+        "Integers",
+        "Mathematics"
+      ]
     },
     {
       "slug": "gigasecond",
       "difficulty": 1,
-      "topics": ["Variables",
-                 "Integers",
-                 "Date",
-                 "Time",
-                 "Transforming"]
+      "topics": [
+        "Variables",
+        "Integers",
+        "Date",
+        "Time",
+        "Transforming"
+      ]
     },
     {
       "slug": "bob",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Strings",
-                 "Parsing"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Strings",
+        "Parsing"
+      ]
     },
     {
       "slug": "rna-transcription",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Strings",
-                 "Transforming"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Strings",
+        "Transforming"
+      ]
     },
     {
       "slug": "robot-name",
       "difficulty": 1,
-      "topics": ["Variables",
-                 "Strings",
-                 "Randomness"]
+      "topics": [
+        "Variables",
+        "Strings",
+        "Randomness"
+      ]
     },
     {
       "slug": "word-count",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Strings",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Strings",
+        "Filtering"
+      ]
     },
     {
       "slug": "raindrops",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Integers",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Integers",
+        "Filtering"
+      ]
     },
     {
       "slug": "grade-school",
       "difficulty": 1,
-      "topics": ["Interfaces",
-                 "Variables",
-                 "Lists",
-                 "Maps",
-                 "Sorting"]
+      "topics": [
+        "Interfaces",
+        "Variables",
+        "Lists",
+        "Maps",
+        "Sorting"
+      ]
     },
     {
       "slug": "phone-number",
       "difficulty": 1,
-      "topics": ["Interfaces",
-                 "Strings",
-                 "Parsing"]
+      "topics": [
+        "Interfaces",
+        "Strings",
+        "Parsing"
+      ]
     },
     {
       "slug": "etl",
       "difficulty": 1,
-      "topics": ["Control-flow (loops)",
-                 "Maps",
-                 "Transforming"]
+      "topics": [
+        "Control-flow (loops)",
+        "Maps",
+        "Transforming"
+      ]
     },
     {
       "slug": "beer-song",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Integers",
-                 "Text formatting"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Integers",
+        "Text formatting"
+      ]
     },
     {
       "slug": "space-age",
       "difficulty": 1,
-      "topics": ["Interfaces",
-                 "Floating-point numbers",
-                 "Transforming"]
+      "topics": [
+        "Interfaces",
+        "Floating-point numbers",
+        "Transforming"
+      ]
     },
     {
       "slug": "anagram",
       "difficulty": 1,
-      "topics": ["Equality",
-                 "Strings",
-                 "Filtering"]
+      "topics": [
+        "Equality",
+        "Strings",
+        "Filtering"
+      ]
     },
     {
       "slug": "nucleotide-count",
       "difficulty": 1,
-      "topics": ["Control-flow (loops)",
-                 "Strings",
-                 "Maps",
-                 "Sorting"]
+      "topics": [
+        "Control-flow (loops)",
+        "Strings",
+        "Maps",
+        "Sorting"
+      ]
     },
     {
       "slug": "meetup",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Dates",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Dates",
+        "Filtering"
+      ]
     },
     {
       "slug": "triangle",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Integers",
-                 "Floating-point numbers",
-                 "Mathematics",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Integers",
+        "Floating-point numbers",
+        "Mathematics",
+        "Filtering"
+      ]
     },
     {
       "slug": "difference-of-squares",
       "difficulty": 1,
-      "topics": ["Control-flow (loops)",
-                 "Integers",
-                 "Floating-point numbers",
-                 "Mathematics"]
+      "topics": [
+        "Control-flow (loops)",
+        "Integers",
+        "Floating-point numbers",
+        "Mathematics"
+      ]
     },
     {
       "slug": "roman-numerals",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Integers",
-                 "Strings",
-                 "Text formatting"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Integers",
+        "Strings",
+        "Text formatting"
+      ]
     },
     {
       "slug": "scrabble-score",
       "difficulty": 1,
-      "topics": ["Control-flow (loops)",
-                 "Maps",
-                 "Strings",
-                 "Games"]
+      "topics": [
+        "Control-flow (loops)",
+        "Maps",
+        "Strings",
+        "Games"
+      ]
     },
     {
       "slug": "binary",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Integers",
-                 "Bitwise operations"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Integers",
+        "Bitwise operations"
+      ]
     },
     {
       "slug": "allergies",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Integers",
-                 "Bitwise operations",
-                 "Text formatting"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Integers",
+        "Bitwise operations",
+        "Text formatting"
+      ]
     },
     {
       "slug": "sieve",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Integers",
-                 "Maps",
-                 "Mathematics",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Integers",
+        "Maps",
+        "Mathematics",
+        "Filtering"
+      ]
     },
     {
       "slug": "strain",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Sequences",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Sequences",
+        "Filtering"
+      ]
     },
     {
       "slug": "atbash-cipher",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Sequences",
-                 "Transforming"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Sequences",
+        "Transforming"
+      ]
     },
     {
       "slug": "prime-factors",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Integers",
-                 "Maps",
-                 "Mathematics",
-                 "Filtering"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Integers",
+        "Maps",
+        "Mathematics",
+        "Filtering"
+      ]
     },
     {
       "slug": "crypto-square",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Control-flow (loops)",
-                 "Strings",
-                 "Arrays",
-                 "Transforming"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Strings",
+        "Arrays",
+        "Transforming"
+      ]
     },
     {
       "slug": "trinary",
       "difficulty": 1,
-      "topics": ["Control-flow (conditionals)",
-                 "Integers",
-                 "Mathematics"]
+      "topics": [
+        "Control-flow (conditionals)",
+        "Integers",
+        "Mathematics"
+      ]
     }
   ],
   "deprecated": [
@@ -243,7 +301,7 @@
     "img"
   ],
   "foregone": [
-      "accumulate",
-      "bank-account"
+    "accumulate",
+    "bank-account"
   ]
 }
