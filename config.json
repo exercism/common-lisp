@@ -296,10 +296,6 @@
   "deprecated": [
 
   ],
-  "ignored": [
-    "docs",
-    "img"
-  ],
   "foregone": [
     "accumulate",
     "bank-account"
