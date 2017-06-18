@@ -1,7 +1,7 @@
 {
-  "slug": "lisp",
+  "slug": "common-lisp",
   "language": "Common Lisp",
-  "repository": "https://github.com/exercism/xlisp",
+  "repository": "https://github.com/exercism/common-lisp",
   "active": true,
   "exercises": [
     {
