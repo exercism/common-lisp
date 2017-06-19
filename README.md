@@ -1,6 +1,6 @@
 # xLisp
 
-[![Build Status](https://travis-ci.org/exercism/xlisp.svg)](https://travis-ci.org/exercism/xlisp)
+[![Build Status](https://travis-ci.org/exercism/common-lisp.svg)](https://travis-ci.org/exercism/common-lisp)
 
 Exercism exercises in Lisp
 
