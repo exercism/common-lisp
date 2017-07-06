@@ -128,6 +128,7 @@ http://exercism.io"))
 
 (defun test-exercise (exercise-name &optional (verbosity (+ +warn+ +info+)))
   "Run the exercise test named."
+  (pushnew :xlisp-test *features*)
   (let ((*verbosity* verbosity)
         (test-example-path
              (make-xlisp-test-path exercise-name "example"))
