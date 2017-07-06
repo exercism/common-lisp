@@ -126,10 +126,12 @@ http://exercism.io"))
 
 ;;; Define test runner
 
-(defun test-exercise (exercise-name)
+(defun test-exercise (exercise-name &optional (verbosity (+ +warn+ +info+)))
   "Run the exercise test named."
-  (let ((test-example-path
-         (make-xlisp-test-path exercise-name "example"))
+  (pushnew :xlisp-test *features*)
+  (let ((*verbosity* verbosity)
+        (test-example-path
+             (make-xlisp-test-path exercise-name "example"))
         (test-exercise-path
          (make-xlisp-test-path exercise-name
                                (format nil "~A-test" exercise-name)))
@@ -153,15 +155,15 @@ http://exercism.io"))
 (defun test-exercises (&optional (verbosity (+ +warn+ +info+)))
   "Run all exercise tests."
   (pushnew :xlisp-test *features*)
-  (setf *verbosity* verbosity)
-  (inform (format nil "Verbosity level: ~D" *verbosity*))
-  (inform "Running all xlisp tests...")
-  (and (problems-p) (delete-all-problems))
-  (unless *exercises*
-    (alert "No exercises defined.")
-    (uiop:quit +exit-tests-did-not-run+))
-  (dolist (exercise *exercises* (problems-p))
-    (test-exercise exercise)))
+  (let ((*verbosity* verbosity))
+    (inform (format nil "Verbosity level: ~D" *verbosity*))
+    (inform "Running all xlisp tests...")
+    (and (problems-p) (delete-all-problems))
+    (unless *exercises*
+      (alert "No exercises defined.")
+      (uiop:quit +exit-tests-did-not-run+))
+    (dolist (exercise *exercises* (problems-p))
+      (test-exercise exercise *verbosity*))))
 
 (defun full-build ()
   "Execute a full build including all tests."
