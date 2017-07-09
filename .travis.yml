@@ -25,7 +25,7 @@ install:
 
 before_script:
   - bin/fetch-configlet
-  - bin/configlet .
+  - bin/configlet lint .
 
 script:
   - ros run -l 'bin/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
