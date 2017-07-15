@@ -291,6 +291,16 @@
         "Integers",
         "Mathematics"
       ]
+    },
+    {
+      "slug": "pascals-triangle",
+      "difficulty": 1,
+      "topics": [
+          "Control-flow (loops)",
+          "Mathematics",
+          "Integers",
+          "Sequences"
+      ]
     }
   ],
   "deprecated": [
