@@ -1,27 +1,42 @@
 ---
-language: lisp
+language: common-lisp
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - libc6-i386
+      - openjdk-7-jre
 
 env:
+  global:
+    - PATH=~/.roswell/bin:$PATH
+    - ROSWELL_INSTALL_DIR=$HOME/.roswell
   matrix:
-    - LISP=sbcl-bin
-    - LISP=ccl-bin
-    - LISP=ecl
-    # - LISP=clisp
+    - LISP=sbcl
     - LISP=abcl-bin
     - LISP=allegro
-    # - LISP=clasp
-    # - LISP=cmu-bin
+    - LISP=ccl-bin
+    - LISP=ecl
+    - LISP=clasp
+    - LISP=clisp
+    - LISP=cmu-bin
+    #- LISP=sbcl-bin
 
 matrix:
   fast_finish: true
   allow_failures:
-    - env: LISP=abcl-bin
-    - env: LISP=allegro
-    # - env: LISP=cmu-bin
-    # - env: LISP=clasp
+    - env: LISP=clasp
+    - env: LISP=clisp
+    - env: LISP=cmu-bin
 
 install:
   - curl -L 'https://raw.githubusercontent.com/snmsts/roswell/release/scripts/install-for-ci.sh' | sh
+
+cache:
+  directories:
+    - $HOME/.roswell
+    - $HOME/.config/common-lisp
 
 before_script:
   - bin/fetch-configlet
