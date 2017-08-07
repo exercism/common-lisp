@@ -20,8 +20,8 @@ env:
     - LISP=clisp
     - LISP=cmu-bin
     - LISP=ecl
-    - LISP=sbcl-bin
     - LISP=sbcl
+    #- LISP=sbcl-bin
 
 matrix:
   fast_finish: true
