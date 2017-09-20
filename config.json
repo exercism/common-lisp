@@ -205,6 +205,18 @@
       ]
     },
     {
+      "uuid": "b3ad38c2-2962-4b47-9b14-20ca262ebff6",
+      "slug": "collatz-conjecture",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "Integer",
+        "Recursivity",
+        "Mathematics"
+      ]
+    },
+    {
       "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
       "slug": "meetup",
       "core": false,
