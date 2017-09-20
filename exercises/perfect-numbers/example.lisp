@@ -9,7 +9,7 @@
                  (loop for x from 1 to (floor n 2) collect x)))
 
 (defun classify (n)
-  (cond ((< n 1)  (warn "error: Just defined for natural numbers."))
+  (cond ((< n 1)                         NIL)
         ((= n (apply #'+ (divisors n)))  "perfect")
         ((< n (apply #'+ (divisors n)))  "abundant")
         (T                               "deficient")))
