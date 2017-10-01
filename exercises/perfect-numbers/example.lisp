@@ -10,7 +10,7 @@
 
 (defun classify (n)
   (if (> n 0)
-    (let ((div-sum (apply #'+ (divisors n))))
+    (let ((div-sum (reduce #'+ (divisors n))))
       (cond ((= n div-sum) "perfect")
             ((< n div-sum) "abundant")
             (T             "deficient")))
