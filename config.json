@@ -3,6 +3,16 @@
   "active": true,
   "exercises": [
     {
+      "uuid": "d4af6cfa-d468-15b5-dcdf-7d717ddf6556",
+      "slug": "hello-world",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "Strings"
+      ]
+    },
+    {
       "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
       "slug": "hamming",
       "core": false,
