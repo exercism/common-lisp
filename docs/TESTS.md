@@ -9,18 +9,33 @@ with `(lisp-unit:run-tests :all :point-mutations-test)`.
 
 ## Making your first Common Lisp solution
 
-To create lisp code that can be loaded with `(load "dna")`
-for the first exercise, put this code in `dna.lisp`:
+To create lisp code that can be loaded with `#-xlisp-test (load "hamming")`
+for the first exercise, put this code in `hamming.lisp`:
 
 ```lisp
-(in-package #:cl-user)
-(defpackage #:dna
-  (:use #:common-lisp)
-  (:export #:hamming-distance))
+(defpackage #:hamming
+  (:use #:cl)
+  (:export #:distance))
 
-(in-package #:dna)
+(in-package #:hamming)
 
-(defun hamming-distance (dna1 dna2)
-  "Determine number of mutations between DNA strands by computing the Hamming Distance."
+(defun distance (dna1 dna2)
+  "Number of positional differences in two equal length dna strands."
+  ;;; your solution here
   )
 ```
+
+Then you can run the test with one of these commands
+
+```
+clisp -i ~/.clisprc.lisp hamming-test.lisp
+```
+
+That way you load your `.clisprc.lisp` which will be loading the quickload then running the test. Or you can do it like this
+
+```
+clisp -i hamming-test.lisp -x '(ext:exit)'
+```
+
+
+*Notes:* Remember you should install the quickload before doing this.
