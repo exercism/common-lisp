@@ -15,7 +15,7 @@
     {
       "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
       "slug": "hamming",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
@@ -29,7 +29,7 @@
     {
       "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
       "slug": "leap",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
@@ -68,7 +68,7 @@
     {
       "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
       "slug": "bob",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
@@ -167,7 +167,7 @@
     {
       "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
       "slug": "beer-song",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
@@ -330,7 +330,7 @@
     {
       "uuid": "40f3b911-0739-4fec-95cc-cfab99788c19",
       "slug": "sieve",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
