@@ -16,19 +16,11 @@ env:
     - LISP=sbcl-bin
     - LISP=abcl-bin
     - LISP=ccl-bin
-    - LISP=cmu-bin
-    - LISP=allegro
     - LISP=ecl
-    - LISP=clasp
     - LISP=clisp
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - env: LISP=clasp
-    - env: LISP=clisp
-    - env: LISP=cmu-bin
-    - env: LISP=allegro
 
 
 install:
