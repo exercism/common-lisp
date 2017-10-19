@@ -9,7 +9,7 @@ with `(lisp-unit:run-tests :all :point-mutations-test)`.
 
 ## Making your first Common Lisp solution
 
-To create lisp code that can be loaded with `#-xlisp-test (load "hamming")`
+To create lisp code that can be loaded with `(load "hamming")`
 for the first exercise, put this code in `hamming.lisp`:
 
 ```lisp
@@ -25,17 +25,36 @@ for the first exercise, put this code in `hamming.lisp`:
   )
 ```
 
-Then you can run the test with one of these commands
+## How to run the tests
+
+If you have a running Lisp implementation you can load the test file 
+with the command: `(load "hamming-tests")`.
+
+If instead you'd like to do it from the command line the command you
+need to run depends upon the implementation. Please refer to the
+documentation for your implementation. Here we'll give examples of how
+to do it in two common implementations: 
+[Clisp](https://clisp.sourceforge.io) & [SBCL](http://www.sbcl.org).
+
+It is important to make sure that the command you run will load the
+implementation's init file, which is needed to ensure QuickLisp is
+loaded, then loads the test file, then exits back the command line.
+
+### Clisp
+
+Either of the following commands will work:
 
 ```
 clisp -i ~/.clisprc.lisp hamming-test.lisp
 ```
 
-That way you load your `.clisprc.lisp` which will be loading the quickload then running the test. Or you can do it like this
-
 ```
 clisp -i hamming-test.lisp -x '(ext:exit)'
 ```
 
+### SBCL
 
-*Notes:* Remember you should install the quickload before doing this.
+```
+sbcl --load hamming-test.lisp --quit
+```
+
