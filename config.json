@@ -30,6 +30,16 @@
       ]
     },
     {
+      "uuid": "428e5b28-31b6-4c84-8eae-d7753d45efc1",
+      "slug": "sublist",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "Lists"
+      ]
+    },
+    {
       "uuid": "eb3a92bf-0748-4406-ba67-9e27e367ae45",
       "slug": "grains",
       "core": false,
