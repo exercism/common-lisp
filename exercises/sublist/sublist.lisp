@@ -4,5 +4,5 @@
 
 (in-package #:sublist)
 
-;; what is list1 of list2 (sublist, superlist, equal or unequal)
-(defun sublist (list1 list2))
+(defun sublist (list1 list2)
+  "what is list1 of list2 (sublist, superlist, equal or unequal)")

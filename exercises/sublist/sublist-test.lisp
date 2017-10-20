@@ -8,38 +8,38 @@
 
 
 ;; Equal lists tests:
-(define-test empty-equal
+(define-test empty-lists
   (assert-equal "equal" (sublist:sublist (list)
                                          (list))))
 
-(define-test same-elements-are-equal
+(define-test list-equals-itself
   (assert-equal "equal" (sublist:sublist (list 1 2 3)
                                          (list 1 2 3))))
 
 
 ;; Unequal lists tests:
-(define-test different-lists-are-unequal
+(define-test different-lists
   (assert-equal "unequal" (sublist:sublist (list 1 2 3)
                                            (list 2 3 4))))
 
-(define-test first-list-missing-element
+(define-test first-list-missing-element-from-second-list
   (assert-equal "unequal" (sublist:sublist (list 1 3)
                                            (list 1 2 3))))
 
-(define-test second-list-missing-element
+(define-test second-list-missing-element-from-first-list
   (assert-equal "unequal" (sublist:sublist (list 1 2 3)
                                            (list 1 3))))
 
-(define-test order-matters-in-lists
+(define-test order-matters-to-a-lists
   (assert-equal "unequal" (sublist:sublist (list 1 2 3)
                                            (list 3 2 1))))
 
-(define-test same-digits-sifferent-numbers
+(define-test same-digits-different-numbers
   (assert-equal "unequal" (sublist:sublist (list 1 0 1)
                                            (list 10 1))))
 
 ;; Sublist lists tests:
-(define-test empty-list-with-not-empty
+(define-test empty-list-within-non-empty-list
   (assert-equal "sublist" (sublist:sublist (list)
                                            (list 1 2 3))))
 
@@ -65,7 +65,7 @@
 
 
 ;; Superlist lists tests:
-(define-test not-empty-contains-empty
+(define-test not-empty-list-contains-empty-list
   (assert-equal "superlist" (sublist:sublist (list 1 2 3)
                                              (list))))
 
