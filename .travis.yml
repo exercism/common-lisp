@@ -13,22 +13,15 @@ env:
     - PATH=~/.roswell/bin:$PATH
     - ROSWELL_INSTALL_DIR=$HOME/.roswell
   matrix:
-    - LISP=sbcl
+    - LISP=sbcl-bin
     - LISP=abcl-bin
-    - LISP=allegro
     - LISP=ccl-bin
     - LISP=ecl
-    - LISP=clasp
     - LISP=clisp
-    - LISP=cmu-bin
-    #- LISP=sbcl-bin
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - env: LISP=clasp
-    - env: LISP=clisp
-    - env: LISP=cmu-bin
+
 
 install:
   - curl -L 'https://raw.githubusercontent.com/snmsts/roswell/release/scripts/install-for-ci.sh' | sh

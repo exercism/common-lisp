@@ -29,7 +29,6 @@ allergens that score 256, 512, 1024, etc.).  Your program should
 ignore those components of the score.  For example, if the allergy
 score is 257, your program should only report the eggs (1) allergy.
 
-
 ## Setup
 
 Check out [Exercism Help](http://exercism.io/languages/lisp) for instructions to

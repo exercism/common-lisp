@@ -1,43 +1,18 @@
-# Scrabble Score
+# Hello World
 
-Given a word, compute the scrabble score for that word.
+The classical introductory exercise. Just say "Hello, World!".
 
-## Letter Values
+["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
+the traditional first program for beginning programming in a new language
+or environment.
 
-You'll need these:
+The objectives are simple:
 
-```text
-Letter                           Value
-A, E, I, O, U, L, N, R, S, T       1
-D, G                               2
-B, C, M, P                         3
-F, H, V, W, Y                      4
-K                                  5
-J, X                               8
-Q, Z                               10
-```
+- Write a function that returns the string "Hello, World!".
+- Run the test suite and make sure that it succeeds.
+- Submit your solution and check it at the website.
 
-## Examples
-
-"cabbage" should be scored as worth 14 points:
-
-- 3 points for C
-- 1 point for A, twice
-- 3 points for B, twice
-- 2 points for G
-- 1 point for E
-
-And to total:
-
-- `3 + 2*1 + 2*3 + 2 + 1`
-- = `3 + 2 + 6 + 3`
-- = `5 + 9`
-- = 14
-
-## Extensions
-
-- You can play a double or a triple letter.
-- You can play a double or a triple word.
+If everything goes well, you will be ready to fetch your first real exercise.
 
 ## Setup
 
@@ -87,7 +62,7 @@ with the REPL; making iterative coding and testing very easy.
 
 ## Source
 
-Inspired by the Extreme Startup game [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
+This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
