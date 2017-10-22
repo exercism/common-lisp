@@ -252,6 +252,16 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "isogram",
+      "topics": [
+        "Strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "89ea51d0-3f7e-4e07-8e2b-4dde4c76608b"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "meetup",
       "topics": [
         "control_flow_conditionals",
