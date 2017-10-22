@@ -2,6 +2,18 @@
   "active": true,
   "exercises": [
     {
+      "uuid": "6efa02be-0f9e-1d80-7efb-536d383535c98b1d883",
+      "slug": "acronym",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "d4af6cfa-d468-15b5-dcdf-7d717ddf6556",
+      "slug": "hello-world",
       "core": true,
       "difficulty": 1,
       "slug": "hello-world",
