@@ -1,55 +1,55 @@
 {
+  "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
-      "github_username": "verdammelt",
-      "show_on_website": true,
       "alumnus": false,
-      "name": "Mark Simpson",
+      "avatar_url": null,
       "bio": "I have always been interested in Lisps since taking the SICP course in college. I love the expressiveness and conciseness of the simple syntax, and the ability to build the language upward to meet the domain.",
+      "github_username": "verdammelt",
       "link_text": "Code and Cocktails",
       "link_url": "http://code-and-cocktails.herokuapp.com/",
-      "avatar_url": null
+      "name": "Mark Simpson",
+      "show_on_website": true
     },
     {
+      "alumnus": false,
+      "avatar_url": null,
+      "bio": null,
       "github_username": "oubiwann",
-      "show_on_website": false,
-      "alumnus": false,
-      "name": null,
-      "bio": null,
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": null,
+      "show_on_website": false
     },
     {
+      "alumnus": false,
+      "avatar_url": null,
+      "bio": null,
       "github_username": "arguello",
-      "show_on_website": false,
-      "alumnus": false,
-      "name": null,
-      "bio": null,
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": null,
+      "show_on_website": false
     },
     {
+      "alumnus": false,
+      "avatar_url": null,
+      "bio": null,
       "github_username": "yurrriq",
-      "show_on_website": false,
-      "alumnus": false,
-      "name": null,
-      "bio": null,
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": null,
+      "show_on_website": false
     },
     {
-      "github_username": "wobh",
-      "show_on_website": false,
       "alumnus": false,
-      "name": null,
+      "avatar_url": null,
       "bio": null,
+      "github_username": "wobh",
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": null,
+      "show_on_website": false
     }
-  ],
-  "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md"
+  ]
 }
