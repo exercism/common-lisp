@@ -2,7 +2,7 @@
 #-xlisp-test (load "acronym")
 
 (defpackage #:acronym-test
-  (:use #:common-lisp #:lisp-unit #:acronym))
+  (:use #:common-lisp #:lisp-unit))
 
 (in-package #:acronym-test)
 
@@ -10,37 +10,37 @@
 (define-test empty-gives-empty
   (assert-equal
     ""
-    (acronym "")))
+    (acronym:acronym "")))
 
 (define-test png-test
   (assert-equal
     "PNG"
-    (acronym "Portable Network Graphics")))
+    (acronym:acronym "Portable Network Graphics")))
 
 (define-test ror-test
   (assert-equal
     "ROR"
-    (acronym "Ruby on Rails")))
+    (acronym:acronym "Ruby on Rails")))
 
 (define-test html-test
   (assert-equal
     "HTML"
-    (acronym "HyperText Markup Language")))
+    (acronym:acronym "HyperText Markup Language")))
 
 (define-test fifo-test
   (assert-equal
     "FIFO"
-    (acronym "First In, First Out")))
+    (acronym:acronym "First In, First Out")))
 
 (define-test php-test
   (assert-equal
     "PHP"
-    (acronym "PHP: Hypertext Preprocessor")))
+    (acronym:acronym "PHP: Hypertext Preprocessor")))
 
 (define-test cmos-test
   (assert-equal
     "CMOS"
-    (acronym "Complementary metal-oxide semiconductor")))
+    (acronym:acronym "Complementary metal-oxide semiconductor")))
 
 #-xlisp-test
 (let ((*print-errors* t)
