@@ -11,12 +11,6 @@ Examples of isograms:
 
 The word *isograms*, however, is not an isogram, because the s repeats.
 
-# Implementation notes
-
-The Hamming distance is only defined for sequences of equal length. This means
-that based on the definition, each language could deal with getting sequences
-of equal length differently.
-
 ## Setup
 
 Check out [Exercism Help](http://exercism.io/languages/lisp) for instructions to
