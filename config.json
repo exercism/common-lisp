@@ -26,20 +26,16 @@
       "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9"
     },
     {
-      "uuid": "428e5b28-31b6-4c84-8eae-d7753d45efc1",
-      "slug": "sublist",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 1,
+      "slug": "sublist",
       "topics": [
-        "Lists"
-      ]
+        "lists"
+      ],
+      "unlocked_by": null,
+      "uuid": "428e5b28-31b6-4c84-8eae-d7753d45efc1"
     },
     {
-      "uuid": "eb3a92bf-0748-4406-ba67-9e27e367ae45",
-      "slug": "grains",
-      "core": false,
-      "unlocked_by": null,
       "core": true,
       "difficulty": 1,
       "slug": "leap",
