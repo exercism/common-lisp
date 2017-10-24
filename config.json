@@ -2,19 +2,17 @@
   "active": true,
   "exercises": [
     {
-      "uuid": "6efa02be-0f9e-1d80-7efb-536d383535c98b1d883",
-      "slug": "acronym",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 1,
+      "slug": "acronym",
       "topics": [
-        "Strings",
-        "Transforming"
-      ]
+        "strings",
+        "transforming"
+      ],
+      "unlocked_by": null,
+      "uuid": "6efa02be-0f9e-1d80-7efb-536d383535c98b1d883"
     },
     {
-      "uuid": "d4af6cfa-d468-15b5-dcdf-7d717ddf6556",
-      "slug": "hello-world",
       "core": true,
       "difficulty": 1,
       "slug": "hello-world",
@@ -263,7 +261,7 @@
       "difficulty": 1,
       "slug": "isogram",
       "topics": [
-        "Strings"
+        "strings"
       ],
       "unlocked_by": null,
       "uuid": "89ea51d0-3f7e-4e07-8e2b-4dde4c76608b"
