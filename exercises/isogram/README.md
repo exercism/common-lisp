@@ -59,7 +59,7 @@ with the REPL; making iterative coding and testing very easy.
 
 ## Source
 
-Learn more about Isograms at [wikipedia](https://en.wikipedia.org/wiki/Isogram")
+Learn more about Isograms at [wikipedia](https://en.wikipedia.org/wiki/Isogram)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
