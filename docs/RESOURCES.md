@@ -37,3 +37,14 @@ be afraid of them, they're quite accessible and "classics".
 The last is actually on a related Lisp dialect, Scheme, but it's very
 helpful book, generally. If you find you prefer Scheme, it's an
 excellent start.
+
+
+### Quick reference
+
+Quick-guides / cheat sheets for Common Lisp:
+
+* [The Common Lisp Cookbook](http://lispcookbook.github.io/cl-cookbook/)
+  by various contributors, includes quick help on often used commands or features. 
+  ([legacy SF site](http://cl-cookbook.sourceforge.net/))
+* [Common Lisp Quick Reference](http://clqr.boundp.org/) is a print-it-yourself booklet for having a quick reference handy.
+* [Simplified Common Lisp Reference](http://jtra.cz/stuff/lisp/sclr/index.html) gives a quick glance at often used commands, ideal for newcomers.
