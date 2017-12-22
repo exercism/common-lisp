@@ -1,3 +1,29 @@
+*What's needed*
+
+The basic items needed for developing in Common Lisp are:
+
+- A Lisp "Implementation", which will allow you to compile and execute code, as well as supply a REPL.
+- A Text editor with facilities for Lisp code. 
+- (Nice to have) The often-used reference for the Common Lisp language, the "Common Lisp Hyperspec", available online [here](http://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm)
+
+*Fast Start*
+
+Newbies to CL, particularly ones with previous experience with Emacs, can get an easy & quick start by installing Portacle, the Portable Common Lisp Environment. Free and full featured, it works in all common platforms and comes pre-configured "out of the box". This will supply:
+
+- A Lisp implementation: SBCL, including Quicklisp and ASDF.
+- A Text editor: Emacs
+... with lots of add-ons for writing with Lisp code: 
+- SLIME, the "Superior Lisp Interaction Mode for Emacs" turns Emacs into a Common Lisp IDE
+- ParEdit, which makes working with parentheses easy. 
+
+Everything comes already configured out of the box. Install Portacle by downloading from the [front page](https://portacle.github.io/)
+
+Note: Emacs (text editor) can be disorienting at first, if you're not accustomed to it. Fortunately there are many primers on Emacs and SLIME available online. 
+
+*Traditional Start*
+
+If you prefer installing components separately, besides installing your favorite editor for Lisp code, these would be the steps:
+
 Install a lisp implementation such as [SBCL](http://www.sbcl.org/)
 or [CLisp](http://clisp.org/). Both can be installed via Homebrew on
 Mac OS X.
