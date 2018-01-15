@@ -2,6 +2,16 @@
   "active": true,
   "exercises": [
     {
+      "core": true,
+      "difficulty": 1,
+      "slug": "hello-world",
+      "topics": [
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "d4af6cfa-d468-15b5-dcdf-7d717ddf6556"
+    },
+    {
       "core": false,
       "difficulty": 1,
       "slug": "acronym",
@@ -11,16 +21,6 @@
       ],
       "unlocked_by": null,
       "uuid": "a999c375-f2e2-4d47-a9e2-5af923cd46d1"
-    },
-    {
-      "core": true,
-      "difficulty": 1,
-      "slug": "hello-world",
-      "topics": [
-        "strings"
-      ],
-      "unlocked_by": null,
-      "uuid": "d4af6cfa-d468-15b5-dcdf-7d717ddf6556"
     },
     {
       "core": true,
