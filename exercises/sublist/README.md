@@ -63,6 +63,5 @@ One suggested add-on for Emacs and Common Lisp is
 [SLIME](https://github.com/slime/slime) which offers tight integration
 with the REPL; making iterative coding and testing very easy.
 
-
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
