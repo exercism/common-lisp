@@ -1,3 +1,5 @@
+# Isogram
+
 Determine if a word or phrase is an isogram.
 
 An isogram (also known as a "nonpattern word") is a word or phrase without a repeating letter, however spaces and hyphens are allowed to appear multiple times.
@@ -59,7 +61,7 @@ with the REPL; making iterative coding and testing very easy.
 
 ## Source
 
-Learn more about Isograms at [wikipedia](https://en.wikipedia.org/wiki/Isogram)
+Wikipedia [https://en.wikipedia.org/wiki/Isogram](https://en.wikipedia.org/wiki/Isogram)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
