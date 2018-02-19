@@ -22,11 +22,6 @@
     "ROR"
     (acronym:acronym "Ruby on Rails")))
 
-(define-test html-test
-  (assert-equal
-    "HTML"
-    (acronym:acronym "HyperText Markup Language")))
-
 (define-test fifo-test
   (assert-equal
     "FIFO"
