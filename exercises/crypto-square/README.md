@@ -52,7 +52,7 @@ Those spaces should be distributed evenly, added to the end of the last
 `n` chunks.
 
 ```text
-imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau 
+imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau
 ```
 
 Notice that were we to stack these, we could visually decode the
@@ -71,7 +71,7 @@ sseoau
 
 ## Setup
 
-Check out [Exercism Help](http://exercism.io/languages/lisp) for instructions to
+Check out [Exercism Help](http://exercism.io/languages/common-lisp) for instructions to
 get started writing Common Lisp. That page will explain how to install and setup
 a Lisp implementation and how to run the tests.
 

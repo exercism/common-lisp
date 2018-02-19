@@ -28,7 +28,7 @@ that fail tests
 ### Development setup
 
 Direct contributions to the Common Lisp code in xLisp are always welcome.
-Refer to [the Getting Started Guide](http://exercism.io/languages/lisp) for the
+Refer to [the Getting Started Guide](http://exercism.io/languages/common-lisp) for the
 Common Lisp track to get your environment set up if needed.
 
 New exercises or changes to existing ones can be submitted via a pull
@@ -104,4 +104,3 @@ error code if there are problems):
 The example implementation should use nothing outside of the Common
 Lisp specification. It should be well designed and not too clever.
 (Save the clever implementation for your submission on Exercism.io.)
-
