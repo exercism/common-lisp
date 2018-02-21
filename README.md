@@ -19,7 +19,7 @@ adding new problems.
 ### Issues
 
 Feel free to file any issues at
-https://github.com/exercism/xlisp/issues for problems of any size.
+https://github.com/exercism/common-lisp/issues for problems of any size.
 Feel free to report typographical errors or poor wording for example.
 You can greatly help improve the quality of the exercises by filing
 reports of invalid solutions that pass tests or of valid solutions
@@ -37,16 +37,12 @@ request. You will need a GitHub account and you will need to fork
 [GitHub Help](https://help.github.com/articles/fork-a-repo/) if you
 are unfamiliar with the process.
 
-A list of exercises yet to be created is in
-[issue #23](https://github.com/exercism/xlisp/issues/23). This might
-be a great place to get started.
-
 #### Development Guidelines
 
 ##### Setting up the development environment.
 
 All changes will be built under several implementations via the
-[TravisCI build](https://travis-ci.org/exercism/xlisp) so it advisable
+[TravisCI build](https://travis-ci.org/exercism/common-lisp) so it advisable
 to be able to run at least some of those same builds locally before
 submitting the changes.
 
