@@ -52,7 +52,7 @@ Those spaces should be distributed evenly, added to the end of the last
 `n` chunks.
 
 ```text
-imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau
+imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau 
 ```
 
 Notice that were we to stack these, we could visually decode the
