@@ -2,54 +2,54 @@
   "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": "I have always been interested in Lisps since taking the SICP course in college. I love the expressiveness and conciseness of the simple syntax, and the ability to build the language upward to meet the domain.",
       "github_username": "verdammelt",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Mark Simpson",
       "link_text": "Code and Cocktails",
       "link_url": "http://code-and-cocktails.herokuapp.com/",
-      "name": "Mark Simpson",
-      "show_on_website": true
+      "avatar_url": null,
+      "bio": "I have always been interested in Lisps since taking the SICP course in college. I love the expressiveness and conciseness of the simple syntax, and the ability to build the language upward to meet the domain."
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
       "github_username": "oubiwann",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": null,
       "link_text": null,
       "link_url": null,
-      "name": null,
-      "show_on_website": false
+      "avatar_url": null,
+      "bio": null
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
       "github_username": "arguello",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": null,
       "link_text": null,
       "link_url": null,
-      "name": null,
-      "show_on_website": false
+      "avatar_url": null,
+      "bio": null
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
       "github_username": "yurrriq",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": null,
       "link_text": null,
       "link_url": null,
-      "name": null,
-      "show_on_website": false
+      "avatar_url": null,
+      "bio": null
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
       "github_username": "wobh",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": null,
       "link_text": null,
       "link_url": null,
-      "name": null,
-      "show_on_website": false
+      "avatar_url": null,
+      "bio": null
     }
   ]
 }
