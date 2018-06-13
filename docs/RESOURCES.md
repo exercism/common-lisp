@@ -24,7 +24,7 @@ most popularly linked introductory works.
   by David S. Touretzky
 * [Common Lisp: An Interactive Approach](http://www.cse.buffalo.edu/~shapiro/Commonlisp/) (PDF),
   by Stuart C. Shapiro
-* [Successful Lisp: How to Understand and Use Common Lisp](http://psg.com/~dlamkins/sl/cover.html),
+* [Successful Lisp: How to Understand and Use Common Lisp](http://successful-lisp.blogspot.com/),
   by David B. Lamkins
 
 Following these are two more advanced books, but beginners shouldn't
