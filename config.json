@@ -1,7 +1,7 @@
 {
   "language": "Common Lisp",
   "active": true,
-  "blurb": "",
+  "blurb": "A programmable programming language.",
   "foregone": [
     "accumulate",
     "bank-account"
