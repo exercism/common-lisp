@@ -121,7 +121,7 @@
       "uuid": "79a4a35c-40d6-4e2d-92a1-005c40b4f4c5",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "randomness",
         "strings",
@@ -133,7 +133,7 @@
       "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
         "control_flow_loops",
@@ -158,7 +158,7 @@
       "uuid": "841641f2-16ba-4dc5-af1b-ffae5052853a",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "interfaces",
         "lists",
@@ -172,7 +172,7 @@
       "uuid": "d1d86b51-a3f4-4276-a18c-6db54bc8dfcc",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "interfaces",
         "parsing",
@@ -196,7 +196,7 @@
       "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
       "core": true,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
         "control_flow_loops",
@@ -278,7 +278,7 @@
       "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
         "dates",
@@ -397,7 +397,7 @@
       "uuid": "71a1fdb6-414e-452c-8d24-03f2a5621e62",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
         "control_flow_loops",
@@ -410,7 +410,7 @@
       "uuid": "cc138097-7c0f-44b4-b07e-2a24f6475986",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
         "control_flow_loops",
@@ -425,7 +425,7 @@
       "uuid": "fcfc6b44-597d-4a03-bf02-6be5c8f7ae4e",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "arrays",
         "control_flow_conditionals",
