@@ -1,11 +1,11 @@
-# xLisp
+# Common Lisp
 
 [![Build Status](https://travis-ci.org/exercism/common-lisp.svg)](https://travis-ci.org/exercism/common-lisp)
 
 Exercism exercises in Lisp
 
 
-## Contributing To the Common Lisp Track
+## Contributing to the Common Lisp Track
 
 ### Contributing Guide
 
