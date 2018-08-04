@@ -74,7 +74,6 @@
       "difficulty": 1,
       "topics": [
         "integers",
-        "mathematics",
         "variables"
       ]
     },
@@ -249,7 +248,7 @@
       "difficulty": 1,
       "topics": [
         "integer",
-        "mathematics",
+        "math",
         "recursivity"
       ]
     },
@@ -260,6 +259,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+        "math",
         "number_theory"
       ]
     },
@@ -295,8 +295,7 @@
         "control_flow_conditionals",
         "filtering",
         "floating_point_numbers",
-        "integers",
-        "mathematics"
+        "integers"
       ]
     },
     {
@@ -309,7 +308,7 @@
         "control_flow_loops",
         "floating_point_numbers",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -348,7 +347,8 @@
       "topics": [
         "bitwise_operations",
         "control_flow_conditionals",
-        "integers"
+        "integers",
+        "math"
       ]
     },
     {
@@ -376,7 +376,7 @@
         "filtering",
         "integers",
         "maps",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -417,7 +417,7 @@
         "filtering",
         "integers",
         "maps",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -443,7 +443,7 @@
       "topics": [
         "control_flow_conditionals",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -455,7 +455,7 @@
       "topics": [
         "control_flow_loops",
         "integers",
-        "mathematics",
+        "math",
         "sequences"
       ]
     }
