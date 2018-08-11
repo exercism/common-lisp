@@ -37,7 +37,7 @@ of equal length differently.
 
 ## Setup
 
-Check out [Exercism Help](http://exercism.io/languages/common-lisp) for instructions to
+Check out [Exercism Help](http://exercism.io/tracks/common-lisp) for instructions to
 get started writing Common Lisp. That page will explain how to install and setup
 a Lisp implementation and how to run the tests.
 
