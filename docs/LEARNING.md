@@ -2,6 +2,7 @@ Exercism provides exercises and feedback but can be difficult to jump
 into for those learning Common Lisp for the first time. These
 resources can help you get started:
 
+* [A Road to Common Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/), a blog post explaining one person's road to Common Lisp and their opinions on how to get started with it.
 * [Practical Common Lisp](http://www.gigamonkeys.com/book/), a complete book for learning Common Lisp, available free online (as well as in print)
 * [Cliki.net Getting Start Started Page](http://cliki.net/Getting%20Started),
   by various contributors
