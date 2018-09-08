@@ -6,59 +6,34 @@
 
 (in-package #:crypto-square-test)
 
-(define-test super-simple
+(define-test empty-plaintext-results-in-an-empty-ciphertext
   (assert-equal
-   "ac bd"
-   (crypto-square:encipher "abcd")))
-
-(define-test still-simple
+   ""
+   (crypto-square:encipher "")))
+(define-test lowercase
   (assert-equal
-   "ttt iao cce"
-   (crypto-square:encipher "tic tac toe"))  )
-
-(define-test a-little-harder
+   "a"
+   (crypto-square:encipher"A")))
+(define-test remove-spaces
   (assert-equal
-   "acb bar rda aa" (crypto-square:encipher "abracadabra")))
-
-(define-test example-1
+   "b"
+   (crypto-square:encipher "  b ")))
+(define-test remove-punctuation
   (assert-equal
-   "hifei acedl veeol eddgo aatcu nyhht"
-   (crypto-square:encipher "Have a nice day. Feed the dog & chill out!")))
-
-(define-test example-2
+   "1"
+   (crypto-square:encipher "@1,%!")))
+(define-test 9-character-plaintext-results-in-3-chunks-of-3-characters
   (assert-equal
-   "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau"
-   (crypto-square:encipher "If man was meant to stay on the ground god would have given us roots")))
-
-(define-test cipher-0
+   "tsf hiu isn"
+   (crypto-square:encipher "This is fun!")))
+(define-test 8-character-plaintext-results-in-3-chunks-the-last-one-with-a-trailing-space
   (assert-equal
-   "neewl exhie vtetw ehaho ririe vntds"
-   (crypto-square:encipher "Never vex thine heart with idle woes.")))
-
-(define-test cipher-1
+   "clu hlt io "
+   (crypto-square:encipher "Chill out.")))
+(define-test 54-character-plaintext-results-in-7-chunks-the-last-two-with-trailing-spaces
   (assert-equal
-   "tasney inicds miohoo elntu illib suuml"
-   (crypto-square:encipher "Time is an illusion. Lunchtime doubly so.")))
-
-(define-test cipher-2
-  (assert-equal
-   "wneiaw eorene awssci liprer lneoid ktcms"
-   (crypto-square:encipher "We all know interspecies romance is weird.")))
-
-(define-test cipher-3
-  (assert-equal
-   "msemo aanin dnin ndla etlt shui"
-   (crypto-square:encipher "Madness, and then illumination.")))
-
-(define-test cipher-4
-  (assert-equal
-   "vrel aepe mset paoo irpo"
-   (crypto-square:encipher "Vampires are people too!")))
-
-(define-test special-case
-  (assert-equal
-   "sator arepo tenet opera rotas"
-   (crypto-square:encipher "sator arepo tenet opera rotas")))
+   "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
+   (crypto-square:encipher "If man was meant to stay on the ground, god would have given us roots.")))
 
 #-xlisp-test
 (let ((*print-errors* t)
