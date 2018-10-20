@@ -2,9 +2,9 @@
 #-xlisp-test (load "octal")
 
 (defpackage #:octal-test
-  :use #:cl #:lisp-unit)
+  (:use #:cl #:lisp-unit))
 
-(in-package #:binary-test)
+(in-package #:octal-test)
 
 (define-test octal-1-is-decimal-1
   (assert-equal 1 (octal:to-decimal "1")))
