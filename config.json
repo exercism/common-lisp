@@ -30,6 +30,14 @@
       ]
     },
     {
+      "slug": "octal",
+      "uuid": "1441ed13-627d-4743-83eb-bd9152f9b788",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 0,
+      "topics": null
+    },
+    {
       "slug": "hamming",
       "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
       "core": true,
