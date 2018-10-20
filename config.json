@@ -30,6 +30,17 @@
       ]
     },
     {
+      "slug": "twelve-days",
+      "uuid": "40ce6656-b8f5-4156-94b6-d634876215b2",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "strings"
+      ]
+    },
+    {
       "slug": "hamming",
       "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
       "core": true,
