@@ -1,0 +1,34 @@
+(in-package #:cl-user)
+(defpackage #:bob
+  (:use #:cl)
+  (:export #:response-for))
+(in-package #:bob)
+
+(define-test single-digit-strings-can-not-be-valid
+  (assert-equal ))
+(define-test a-single-zero-is-invalid
+  (assert-equal ))
+(define-test a-simple-valid-sin-that-remains-valid-if-reversed
+  (assert-equal ))
+(define-test a-simple-valid-sin-that-becomes-invalid-if-reversed
+  (assert-equal ))
+(define-test a-valid-canadian-sin
+  (assert-equal ))
+(define-test invalid-canadian-sin
+  (assert-equal ))
+(define-test invalid-credit-card
+  (assert-equal ))
+(define-test valid-strings-with-a-non-digit-included-become-invalid
+  (assert-equal ))
+(define-test valid-strings-with-punctuation-included-become-invalid
+  (assert-equal ))
+(define-test valid-strings-with-symbols-included-become-invalid
+  (assert-equal ))
+(define-test single-zero-with-space-is-invalid
+  (assert-equal ))
+(define-test more-than-a-single-zero-is-valid
+  (assert-equal ))
+(define-test input-digit-9-is-correctly-converted-to-output-digit-9
+  (assert-equal ))
+(define-test strings-with-non-digits-is-invalid
+  (assert-equal ))
