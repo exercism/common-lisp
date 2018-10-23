@@ -7,13 +7,8 @@
 
 (defun is-valid (input)
   (let ((num (remove #\Space input)))
-    (if (or (< (length num) 2)
-            (not (reduce (lambda (t/f char)
-                          (and t/f
-                              (char<= #\0 char #\9)))
-                        num
-                        :initial-value t)))
-        nil
+    (when (and (<= 2 (length num))
+               (every #'digit-char-p num))
         (gen-checksum num))))
 
 (defun gen-checksum (num)
@@ -29,8 +24,7 @@
                          (1+ elm))
                   (= 0 (mod tot 10)))))
     (rec-num (nreverse
-              (map 'list
-                   (lambda (x) x)
-                   num))
+              (coerce num
+                      'list))
              0
              1)))
