@@ -48,3 +48,7 @@
 (define-test strings-with-non-digits-is-invalid
   (assert-false (luhn:is-valid ":9")))
 
+#-xlisp-test
+(let ((*print-errors* t)
+      (*print-failures* t))
+  (run-tests :all :luhn-test))
