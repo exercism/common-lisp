@@ -35,7 +35,7 @@
       "uuid": "9b01a3bd-68fe-4171-8e5e-ff3351865aaf",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 4,
+      "difficulty": 1,
       "topics": [
         "integers",
         "map",
