@@ -95,7 +95,7 @@ http://exercism.io"))
 
 ;;; Define collection of problematic test results
 
-(defparameter *problems*
+(defvar *problems*
   ()
   "Record of failed or errored test results")
 
