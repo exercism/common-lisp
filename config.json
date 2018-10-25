@@ -32,6 +32,17 @@
       ]
     },
     {
+      "slug": "luhn",
+      "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
+      "core": false,
+      "difficulty": 5,
+      "topics": [
+        "algorithms",
+        "strings",
+        "transforming"
+      ]
+    },
+    {
       "slug": "acronym",
       "uuid": "a999c375-f2e2-4d47-a9e2-5af923cd46d1",
       "core": false,
@@ -40,6 +51,17 @@
       "topics": [
         "strings",
         "transforming"
+      ]
+    },
+    {
+      "slug": "twelve-days",
+      "uuid": "40ce6656-b8f5-4156-94b6-d634876215b2",
+      "core": false,
+      "unlocked_by": "beer-song",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "strings"
       ]
     },
     {
