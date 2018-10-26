@@ -46,9 +46,11 @@ http://exercism.io"))
 
 (defun notice (level datum &rest arguments)
   (when (verbosity-p level)
-    (unless (find #\~ (first arguments))
-      (push "~A" arguments))
-    (apply #'format t "~&~A: ~@?~%" datum arguments)))
+    (format *standard-output*
+            "~2&~A: ~?~%"
+            datum
+            (first arguments)
+            (rest arguments))))
 
 (defun alert (message &rest arguments)
   (notice +warn+ "ALERT" message (values-list arguments)))
@@ -93,7 +95,7 @@ http://exercism.io"))
 
 ;;; Define collection of problematic test results
 
-(defparameter *problems*
+(defvar *problems*
   ()
   "Record of failed or errored test results")
 
