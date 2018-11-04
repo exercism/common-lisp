@@ -3,7 +3,7 @@
 (ql:quickload "cl-json" :silent t)
 
 (defpackage #:xlisp-test
-  (:use #:cl #:lisp-unit)
+  (:use #:cl)
   (:export #:test-exercise
            #:test-exercises
            #:problems-p
@@ -118,11 +118,11 @@ http://exercism.io"))
 
 (defun handle-results (results)
   "Handle lisp-unit's test-run-complete signal."
-  (when (failed-tests results)
-    (print-failures results)
+  (when (lisp-unit:failed-tests results)
+    (lisp-unit:print-failures results)
     (record-problem results))
-  (when (error-tests results)
-    (print-errors results)
+  (when (lisp-unit:error-tests results)
+    (lisp-unit:print-errors results)
     (record-problem results)))
 
 
@@ -139,7 +139,7 @@ http://exercism.io"))
                                (format nil "~A-test" exercise-name)))
         (example nil)
         (exercise nil))
-    (signal-results)
+    (lisp-unit:signal-results)
     (unwind-protect
          (handler-case
              (progn
@@ -148,8 +148,9 @@ http://exercism.io"))
                (setf exercise (load-package test-exercise-path))
                (babble "Loaded exercise tests ~S" exercise)
                (inform (format nil "Running tests for ~S" example))
-               (run-tests :all exercise))
-           (test-run-complete (condition) (handle-results (results condition)))
+               (lisp-unit:run-tests :all exercise))
+           (lisp-unit:test-run-complete (condition)
+             (handle-results (lisp-unit:results condition)))
            (error (condition) (record-problem condition)))
       (dolist (package (list example exercise))
         (when package (delete-package package))))))
