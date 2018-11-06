@@ -22,6 +22,7 @@
       "slug": "luhn",
       "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
       "core": false,
+      "unlocked_by": null,
       "difficulty": 5,
       "topics": [
         "algorithms",
