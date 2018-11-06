@@ -73,14 +73,38 @@ running `ros list installed`.
 Although [QuickLisp](https://www.quicklisp.org/beta/) is
 required, Roswell will install and configure it for you, by default.
 
-##### Creating a new exercise.
+#### Creating a new exercise.
 
-All new exercise submissions should contain not only the test file,
-but the stub of the "production code" (containing the `defpackage` and
-`in-package` forms), and a file `example.lisp` which contains an
-example implementation. The "production code" and `example.lisp` may
-also include an empty function declaration for the functions under
-test.
+There are many exercises for Exercism. This track does not yet
+implement all of them for Common Lisp. Please see the info about all
+exercises in the
+[`problem-specifications`](https://github.com/exercism/problem-specifications)
+repository. To create a good submission for a new exercise you will
+need to have cloned the above repository and ensure it is up to date.
+
+0. Choose the exercise you'd like to create from the
+   [`problem-specifications`](https://github.com/exercism/problem-specifications)
+   repository.
+1. Create an exercise sub-directory for your exercise: `mkdir
+   exercises/<your-exercise>`.
+2. Use `./bin/configlet` to get the `README`: `./bin/configlet
+   generate . --only <your-exercise> --spec-path
+   <path-to-problem-specifications>`.
+3. Using the canonical data found in the `problems-specifications`
+   repository create tests for the exercise. A template for the test
+   file can be found in
+   [`docs/template-test.lisp`](docs/template-test.lisp) (change
+   `exercise` to the name of your exercise in kebab-case).
+4. Create an example implementation which passes the tests. This does
+   not need to be clever or amazing (save that for your own solution
+   submission), but it should have good style and idiom and use
+   nothing outside of the Common Lisp specification.
+5. Create a stub "production file" for the mentee to start with. A
+   template for this file can be found in
+   [`/template-production.lisp`](docs/template-production.lisp). 
+6. Add your exercise to `config.json` and use `./bin/configlet` to
+   ensure that it is well formatted: `./bin/configlet fmt .`.
+7. Create a PR.
 
 ##### Building & Testing
 
@@ -94,9 +118,3 @@ implementation can be done with (this will return with a non-zero
 error code if there are problems):
 
     ros run -l 'bin/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
-
-##### Style Guidelines
-
-The example implementation should use nothing outside of the Common
-Lisp specification. It should be well designed and not too clever.
-(Save the clever implementation for your submission on Exercism.io.)
