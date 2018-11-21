@@ -1,7 +1,5 @@
 ;; TODO
 ;; - assert-error
-;; - production code stub
-;; - example code file
 ;; - exercise comment in test file
 ;; - exercise version number in test file
 
@@ -88,16 +86,12 @@
       (write-tests stream test-data)
       (write-epilogue stream test-data))))
 
-(defun make-production-code (test-data)
-  (let* ((exercise (exercise-name test-data))
-         (exercise-directory (exercise-directory-pathname exercise))
-         (production-file (make-pathname :name exercise
-                                         :type "lisp"
-                                         :defaults exercise-directory)))
-    (with-open-file (stream production-file
-                            :direction :output
-                            :if-exists :supersede
-                            :if-does-not-exist :create)
+(defun write-production-code (file test-data)
+  (with-open-file (stream file
+                          :direction :output
+                          :if-exists :supersede
+                          :if-does-not-exist :create)
+    (let ((exercise (exercise-name test-data)))
       (format stream "(in-package #:cl-user)~%")
       (format stream "(defpackage #:~A
   (:use #:cl)
@@ -107,11 +101,28 @@
       (format stream "(in-package #:~A)~%~%" exercise)
       (format stream ";; functions go here~% "))))
 
+(defun make-production-code (test-data)
+  (let* ((exercise (exercise-name test-data))
+         (exercise-directory (exercise-directory-pathname exercise))
+         (production-file (make-pathname :name exercise
+                                         :type "lisp"
+                                         :defaults exercise-directory)))
+    (write-production-code production-file test-data)))
+
+(defun make-example-code (test-data)
+  (let* ((exercise (exercise-name test-data))
+         (exercise-directory (exercise-directory-pathname exercise))
+         (example-file (make-pathname :name "example"
+                                         :type "lisp"
+                                         :defaults exercise-directory)))
+    (write-production-code example-file test-data)))
+
 (defun generate (exercise)
   (let ((test-data (read-exercise-data (canonical-data-pathname exercise))))
     (if test-data
         (progn
           (make-exercise-directory test-data)
           (make-test-code test-data)
-          (make-production-code test-data))
+          (make-production-code test-data)
+          (make-example-code test-data))
         (format t "No data found for exercise: ~A" exercise))))
