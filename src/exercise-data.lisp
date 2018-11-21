@@ -46,4 +46,7 @@
   (mapcar #'cdr (cdr (assoc :input exercise-case))))
 
 (defun exercise-case-expected (exercise-case)
-  (cdr (assoc :expected exercise-case)))
+  (let ((expected (cdr (assoc :expected exercise-case))))
+    (if (and (listp expected) (eq (caar expected) :error))
+        (car expected)
+        expected)))

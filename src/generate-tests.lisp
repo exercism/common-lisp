@@ -1,7 +1,5 @@
-;; TODO
-;; - assert-error
-
-(load "./exercise-data")
+(eval-when (:compile-toplevel)
+  (load "./exercise-data"))
 
 (defpackage :generate-tests
   (:use :cl :exercise-data)
@@ -47,7 +45,7 @@
 
 (defun write-epilogue (stream test-data)
   (declare (ignore test-data))
-  (format stream "#-xlisp-test
+  (format stream "~%#-xlisp-test
 (let ((*print-errors* t)
       (*print-failures* t))
   (run-tests :all))")
@@ -59,16 +57,19 @@
         (inputs (exercise-case-inputs case))
         (expected (exercise-case-expected case)))
 
-    (format stream "~%(define-test
-  ~A
-  (assert-equal
-    ~S
-    (~A:~A~{ ~S~})))"
-            (substitute #\- #\space description)
-            expected package (string-downcase (car function))
-            inputs))
+    (format stream "~%(define-test~%  ~A~%" (substitute #\- #\Space description))
 
-  (terpri stream))
+    (if (and (listp expected) (eq (car expected) :error))
+        (progn (format stream "  (assert-error~%")
+               (format stream "    '~A~%"
+                       (string-downcase (substitute #\- #\Space (cdr expected))))
+               (format stream "    (~A:~A~{ ~S~}))"
+                       package (string-downcase (car function)) inputs))
+        (progn (format stream "  (assert-equal~%")
+               (format stream "    ~S~%" expected)
+               (format stream "    (~A:~A~{ ~S~}))"
+                       package (string-downcase (car function)) inputs)))
+    (format stream ")~%")))
 
 (defun write-tests (stream test-data)
   (let ((cases (exercise-cases test-data))
