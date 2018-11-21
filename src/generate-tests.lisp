@@ -1,7 +1,7 @@
 ;; TODO
 ;; - assert-error
-;; - exercise comment in test file
-;; - exercise version number in test file
+
+(load "./exercise-data")
 
 (defpackage :generate-tests
   (:use :cl :exercise-data)
@@ -27,15 +27,22 @@
 
 (defun write-prologue (stream test-data)
   (let* ((name (exercise-name test-data))
+         (version (exercise-version test-data))
+         (comments (exercise-comments test-data))
          (test-package (format nil "~a-test" name)))
-    (format stream "~
+    (format stream ";;;
+;;; ~A v~A
+;;;~{~%;;; ~A~}
+;;;
 (ql:quickload ~w)
 #-xlisp-test (load ~w)
 
 (defpackage #:~a
   (:use #:common-lisp #:lisp-unit))
 
-(in-package #:~a)" "lisp-unit" name test-package test-package))
+(in-package #:~a)"
+            name version comments
+            "lisp-unit" name test-package test-package))
   (terpri stream))
 
 (defun write-epilogue (stream test-data)

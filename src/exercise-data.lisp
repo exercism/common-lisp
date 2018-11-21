@@ -7,6 +7,8 @@
   (:use #:cl)
   (:export #:read-exercise-data
            #:exercise-name
+           #:exercise-version
+           #:exercise-comments
            #:exercise-cases
            #:exercise-case-name
            #:exercise-case-function-info
@@ -24,8 +26,8 @@
 (defun exercise-name (exercise-data)
   (cdr (assoc :exercise exercise-data)))
 
-(defun exercise-comment (exercise-data)
-  (cdr (assoc :comment exercise-data)))
+(defun exercise-comments (exercise-data)
+  (cdr (assoc :comments exercise-data)))
 
 (defun exercise-version (exercise-data)
   (cdr (assoc :version exercise-data)))
