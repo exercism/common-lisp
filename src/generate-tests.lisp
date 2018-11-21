@@ -91,15 +91,22 @@
                           :direction :output
                           :if-exists :supersede
                           :if-does-not-exist :create)
-    (let ((exercise (exercise-name test-data)))
+    (let ((exercise (exercise-name test-data))
+          (functions (remove-duplicates
+                      (mapcar #'exercise-case-function-info
+                              (exercise-cases test-data))
+                      :test #'equal)))
       (format stream "(in-package #:cl-user)~%")
       (format stream "(defpackage #:~A
   (:use #:cl)
   (:export~{ #:~A~})~%"
               exercise
-              '("functions" "to" "export"))
+              (mapcar #'(lambda (fn) (string-downcase (car fn))) functions))
       (format stream "(in-package #:~A)~%~%" exercise)
-      (format stream ";; functions go here~% "))))
+      (dolist (fn functions)
+        (let ((name (string-downcase (car fn)))
+              (args (mapcar #'string-downcase (cdr fn))))
+          (format stream "(defun ~A ~A)~%~%" name args))))))
 
 (defun make-production-code (test-data)
   (let* ((exercise (exercise-name test-data))
