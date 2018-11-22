@@ -115,10 +115,7 @@
                           :if-exists :supersede
                           :if-does-not-exist :create)
     (let ((exercise (exercise-name test-data))
-          (functions (remove-duplicates
-                      (mapcar #'exercise-case-function-info
-                              (exercise-cases test-data))
-                      :test #'equal)))
+          (functions (exercise-all-function-info test-data)))
       (format stream "(in-package #:cl-user)~%")
       (format stream "(defpackage #:~A
   (:use #:cl)

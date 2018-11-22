@@ -10,6 +10,7 @@
            #:exercise-version
            #:exercise-comments
            #:exercise-cases
+           #:exercise-all-function-info
            #:exercise-case-name
            #:exercise-case-function-info
            #:exercise-case-inputs
@@ -34,6 +35,11 @@
 
 (defun exercise-cases (exercise-data)
   (cdr (assoc :cases exercise-data)))
+
+(defun exercise-all-function-info (exercise-data)
+  (remove-duplicates
+   (mapcar #'exercise-case-function-info
+           (exercise-cases exercise-data))))
 
 (defun exercise-case-name (exercise-case)
   (cdr (assoc :description exercise-case)))
