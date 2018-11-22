@@ -23,6 +23,8 @@
   (merge-pathnames (make-pathname :directory (list :relative exercise))
                    *canonical-data-pathname-defaults*))
 
+(defun kebab-case (str) (substitute #\- #\Space (string-downcase str)))
+
 (defun write-prologue (stream test-data)
   (let* ((name (exercise-name test-data))
          (version (exercise-version test-data))
@@ -51,30 +53,43 @@
   (run-tests :all))")
   (terpri stream))
 
-(defun write-test (stream package case)
-  (let ((description (exercise-case-name case))
+(defun write-test (stream package case indent-level)
+  (let ((indent (* indent-level 2))
+        (name (kebab-case (exercise-case-name case)))
         (function (exercise-case-function-info case))
         (inputs (exercise-case-inputs case))
-        (expected (exercise-case-expected case)))
+        (expected (exercise-case-expected case))
+        (sub-tests (exercise-cases case)))
 
-    (format stream "~%(define-test~%  ~A~%" (substitute #\- #\Space description))
+    (let ((expected-error-p (and (listp expected)
+                                 (eq (car expected) :error)))
+          (has-sub-tests-p (not (null sub-tests))))
 
-    (if (and (listp expected) (eq (car expected) :error))
-        (progn (format stream "  (assert-error~%")
-               (format stream "    '~A~%"
-                       (string-downcase (substitute #\- #\Space (cdr expected))))
-               (format stream "    (~A:~A~{ ~S~}))"
-                       package (string-downcase (car function)) inputs))
-        (progn (format stream "  (assert-equal~%")
-               (format stream "    ~S~%" expected)
-               (format stream "    (~A:~A~{ ~S~}))"
-                       package (string-downcase (car function)) inputs)))
-    (format stream ")~%")))
+      (format stream "~%~v,0T(define-test~%" indent)
+      (format stream "~v,0T  ~A" indent name)
+
+     (cond (expected-error-p
+            (progn (format stream "~v,0T  (assert-error~%" indent)
+                   (format stream "~v,0T    '~A~%"
+                           indent
+                           (kebab-case (cdr expected)))
+                   (format stream "~v,0T    (~A:~A~{ ~S~}))"
+                           indent
+                           package (kebab-case (car function)) inputs)))
+           (has-sub-tests-p
+            (dolist (sub-test sub-tests) (write-test stream package sub-test (1+ indent))))
+           (t
+            (progn (format stream "~v,0T  (assert-equal~%" indent)
+                   (format stream "~v,0T    ~S~%" indent expected)
+                   (format stream "~v,0T    (~A:~A~{ ~S~}))"
+                           indent
+                           package (kebab-case (car function)) inputs))))
+      (format stream ")"))))
 
 (defun write-tests (stream test-data)
   (let ((cases (exercise-cases test-data))
         (package (exercise-name test-data)))
-    (dolist (case cases) (write-test stream package case))))
+    (dolist (case cases) (write-test stream package case 0) (terpri stream))))
 
 (defun make-exercise-directory (test-data)
   (ensure-directories-exist
@@ -109,11 +124,11 @@
   (:use #:cl)
   (:export~{ #:~A~})~%"
               exercise
-              (mapcar #'(lambda (fn) (string-downcase (car fn))) functions))
+              (mapcar #'(lambda (fn) (kebab-case (car fn))) functions))
       (format stream "(in-package #:~A)~%~%" exercise)
       (dolist (fn functions)
-        (let ((name (string-downcase (car fn)))
-              (args (mapcar #'string-downcase (cdr fn))))
+        (let ((name (kebab-case (car fn)))
+              (args (mapcar #'kebab-case (cdr fn))))
           (format stream "(defun ~A ~A)~%~%" name args))))))
 
 (defun make-production-code (test-data)
