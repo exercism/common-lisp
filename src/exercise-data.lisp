@@ -37,9 +37,16 @@
   (cdr (assoc :cases exercise-data)))
 
 (defun exercise-all-function-info (exercise-data)
-  (remove-duplicates
-   (mapcar #'exercise-case-function-info
-           (exercise-cases exercise-data))))
+  (reduce
+   #'(lambda (acc case)
+       (dolist (fn
+                (if (exercise-cases case)
+                    (exercise-all-function-info case)
+                    (list (exercise-case-function-info case)))
+                acc)
+         (pushnew fn acc :test #'equal)))
+   (exercise-cases exercise-data)
+   :initial-value (list)))
 
 (defun exercise-case-name (exercise-case)
   (cdr (assoc :description exercise-case)))
