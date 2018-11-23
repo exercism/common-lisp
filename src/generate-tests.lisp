@@ -1,5 +1,4 @@
-(eval-when (:compile-toplevel)
-  (load "./exercise-data"))
+(load "./exercise-data")
 
 (defpackage :generate-tests
   (:use :cl :exercise-data)

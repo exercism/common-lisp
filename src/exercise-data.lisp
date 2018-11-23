@@ -1,5 +1,4 @@
-(eval-when (:compile-toplevel :load-toplevel)
-  (ql:quickload "cl-json"))
+(ql:quickload "cl-json")
 
 (in-package #:cl)
 
@@ -36,18 +35,6 @@
 (defun exercise-cases (exercise-data)
   (cdr (assoc :cases exercise-data)))
 
-(defun exercise-all-function-info (exercise-data)
-  (reduce
-   #'(lambda (acc case)
-       (dolist (fn
-                (if (exercise-cases case)
-                    (exercise-all-function-info case)
-                    (list (exercise-case-function-info case)))
-                acc)
-         (pushnew fn acc :test #'equal)))
-   (exercise-cases exercise-data)
-   :initial-value (list)))
-
 (defun exercise-case-name (exercise-case)
   (cdr (assoc :description exercise-case)))
 
@@ -63,3 +50,15 @@
     (if (and (listp expected) (eq (caar expected) :error))
         (car expected)
         expected)))
+
+(defun exercise-all-function-info (exercise-data)
+  (reduce
+   #'(lambda (acc case)
+       (dolist (fn
+                (if (exercise-cases case)
+                    (exercise-all-function-info case)
+                    (list (exercise-case-function-info case)))
+                acc)
+         (pushnew fn acc :test #'equal)))
+   (exercise-cases exercise-data)
+   :initial-value (list)))
