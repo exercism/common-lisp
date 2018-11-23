@@ -86,8 +86,13 @@
     (format stream "~%~%")))
 
 (defun make-exercise-directory (test-data)
-  (ensure-directories-exist
-   (exercise-directory-pathname (exercise-name test-data))))
+  (let ((directory (exercise-directory-pathname (exercise-name test-data))))
+    (format *standard-output* "Checking for directory ~A ..." directory)
+    (multiple-value-bind (path created)
+        (ensure-directories-exist directory)
+      (declare (ignore path))
+      (when created (format *standard-output* "created."))
+      (terpri *standard-output*))))
 
 (defun make-test-code (test-data)
   (let* ((exercise (exercise-name test-data))
@@ -101,7 +106,8 @@
                             :if-exists :supersede)
       (write-prologue stream test-data)
       (write-tests stream test-data)
-      (write-epilogue stream test-data))))
+      (write-epilogue stream test-data))
+    (format *standard-output* "Wrote ~A~&" test-file)))
 
 (defun write-production-code (file test-data)
   (with-open-file (stream file
@@ -129,7 +135,8 @@
          (production-file (make-pathname :name exercise
                                          :type "lisp"
                                          :defaults exercise-directory)))
-    (write-production-code production-file test-data)))
+    (write-production-code production-file test-data)
+    (format *standard-output* "Wrote ~A~&" production-file)))
 
 (defun make-example-code (test-data)
   (let* ((exercise (exercise-name test-data))
@@ -137,7 +144,8 @@
          (example-file (make-pathname :name "example"
                                          :type "lisp"
                                          :defaults exercise-directory)))
-    (write-production-code example-file test-data)))
+    (write-production-code example-file test-data)
+        (format *standard-output* "Wrote ~A~&" example-file)))
 
 (defun generate (exercise)
   (let ((test-data (read-exercise-data (canonical-data-pathname exercise))))
