@@ -44,8 +44,11 @@
   (declare (ignore test-data))
   (format stream "#-xlisp-test~%")
   (format stream "(let ((*print-errors* t)~%")
-  (format stream "      (*print-failures* t)~%")
-  (format stream "  (run-tests :all)~%"))
+  (format stream "      (*print-failures* t))~%")
+  (format stream "  (run-tests :all))~%"))
+
+(defun format-values (stream argument colon-modifier-p at-sign-p &rest other-args)
+  (format stream "~:[~;'~]~S" (listp argument) argument))
 
 (defun write-test (stream package case indent-level)
   (let ((indent (* indent-level 2))
@@ -60,22 +63,22 @@
           (has-sub-tests-p (not (null sub-tests))))
 
       (format stream "~%~v,0T(define-test~%" indent)
-      (format stream "~v,0T  ~A" indent name)
+      (format stream "~v,0T  ~A~%" indent name)
 
      (cond (expected-error-p
             (progn (format stream "~v,0T  (assert-error~%" indent)
                    (format stream "~v,0T    '~A~%"
                            indent
                            (kebab-case (cdr expected)))
-                   (format stream "~v,0T    (~A:~A~{ ~S~}))"
+                   (format stream "~v,0T    (~A:~A~{ ~/generate-tests:format-values/~}))"
                            indent
                            package (kebab-case (car function)) inputs)))
            (has-sub-tests-p
             (dolist (sub-test sub-tests) (write-test stream package sub-test (1+ indent))))
            (t
             (progn (format stream "~v,0T  (assert-equal~%" indent)
-                   (format stream "~v,0T    ~S~%" indent expected)
-                   (format stream "~v,0T    (~A:~A~{ ~S~}))"
+                   (format stream "~v,0T    ~/generate-tests:format-values/~%" indent expected)
+                   (format stream "~v,0T    (~A:~A~{ ~/generate-tests:format-values/~}))"
                            indent
                            package (kebab-case (car function)) inputs))))
       (format stream ")"))))
@@ -119,7 +122,7 @@
       (format stream "(in-package #:cl-user)~%")
       (format stream "(defpackage #:~A~%" exercise)
       (format stream "  (:use #:cl)~%")
-      (format stream "  (:export~{ #:~A~})~%"
+      (format stream "  (:export~{ #:~A~}))~%"
               (mapcar #'(lambda (fn) (kebab-case (car fn))) functions))
       (format stream "(in-package #:~A)~%" exercise)
       (format stream "~%")

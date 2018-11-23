@@ -47,7 +47,9 @@
 
 (defun exercise-case-expected (exercise-case)
   (let ((expected (cdr (assoc :expected exercise-case))))
-    (if (and (listp expected) (eq (caar expected) :error))
+    (if (and (listp expected)
+             (listp (car expected))
+             (eq (caar expected) :error))
         (car expected)
         expected)))
 
