@@ -30,28 +30,23 @@
          (version (exercise-version test-data))
          (comments (exercise-comments test-data))
          (test-package (format nil "~a-test" name)))
-    (format stream ";;;
-;;; ~A v~A
-;;;~{~%;;; ~A~}
-;;;
-(ql:quickload ~w)
-#-xlisp-test (load ~w)
-
-(defpackage #:~a
-  (:use #:common-lisp #:lisp-unit))
-
-(in-package #:~a)"
-            name version comments
-            "lisp-unit" name test-package test-package))
-  (terpri stream))
+    (format stream "~{;;; ~A~%~}"
+            (append (list "" (format nil "~A v~A" name version) "")
+                    (when comments (append comments (list "")))))
+    (format stream "(ql:quickload \"lisp-unit\")~%")
+    (format stream "#-xlisp-test (load ~w)~%" name)
+    (format stream "~%")
+    (format stream "(defpackage #:~a~%" test-package)
+    (format stream "  (:use #:common-lisp #:lisp-unit))")
+    (format stream "~%")
+    (format stream "(in-package #:~a)~%" test-package)))
 
 (defun write-epilogue (stream test-data)
   (declare (ignore test-data))
-  (format stream "~%#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all))")
-  (terpri stream))
+  (format stream "#-xlisp-test~%")
+  (format stream "(let ((*print-errors* t)~%")
+  (format stream "      (*print-failures* t)~%")
+  (format stream "  (run-tests :all)~%"))
 
 (defun write-test (stream package case indent-level)
   (let ((indent (* indent-level 2))
@@ -87,9 +82,9 @@
       (format stream ")"))))
 
 (defun write-tests (stream test-data)
-  (let ((cases (exercise-cases test-data))
-        (package (exercise-name test-data)))
-    (dolist (case cases) (write-test stream package case 0) (terpri stream))))
+  (dolist (case (exercise-cases test-data))
+    (write-test stream (exercise-name test-data) case 0)
+    (format stream "~%~%")))
 
 (defun make-exercise-directory (test-data)
   (ensure-directories-exist
@@ -117,16 +112,17 @@
     (let ((exercise (exercise-name test-data))
           (functions (exercise-all-function-info test-data)))
       (format stream "(in-package #:cl-user)~%")
-      (format stream "(defpackage #:~A
-  (:use #:cl)
-  (:export~{ #:~A~})~%"
-              exercise
+      (format stream "(defpackage #:~A~%" exercise)
+      (format stream "  (:use #:cl)~%")
+      (format stream "  (:export~{ #:~A~})~%"
               (mapcar #'(lambda (fn) (kebab-case (car fn))) functions))
-      (format stream "(in-package #:~A)~%~%" exercise)
+      (format stream "(in-package #:~A)~%" exercise)
+      (format stream "~%")
       (dolist (fn functions)
         (let ((name (kebab-case (car fn)))
               (args (mapcar #'kebab-case (cdr fn))))
-          (format stream "(defun ~A ~A)~%~%" name args))))))
+          (format stream "(defun ~A ~A)~%" name args)
+          (format stream "~%"))))))
 
 (defun make-production-code (test-data)
   (let* ((exercise (exercise-name test-data))
