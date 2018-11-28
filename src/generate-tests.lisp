@@ -48,6 +48,7 @@
   (format stream "  (run-tests :all))~%"))
 
 (defun format-values (stream argument colon-modifier-p at-sign-p &rest other-args)
+  (declare (ignore colon-modifier-p at-sign-p other-args))
   (format stream "~:[~;'~]~S" (listp argument) argument))
 
 (defun write-test (stream package case indent-level)
