@@ -1,5 +1,6 @@
 *.swp
 *.beam
+*.fasl
 .DS_Store
 tmp
 bin/configlet
