@@ -1,8 +1,7 @@
 (in-package #:cl-user)
 (defpackage #:armstrong-numbers
   (:use #:cl)
-  (:export #:isarmstrongnumber))
+  (:export #:armstrong-number-p))
 (in-package #:armstrong-numbers)
 
-(defun isarmstrongnumber (number))
-
+(defun armstrong-number-p (number))
