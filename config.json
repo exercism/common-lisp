@@ -494,6 +494,18 @@
         "math",
         "sequences"
       ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "9319d1a6-276f-4b3b-8305-fc022cc48ef2",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "integers",
+        "lists",
+        "math"
+      ]
     }
   ]
 }
