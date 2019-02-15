@@ -27,13 +27,13 @@ that fail tests
 
 ### Development setup
 
-Direct contributions to the Common Lisp code in xLisp are always welcome.
+Direct contributions to the Common Lisp code in this track are always welcome.
 Refer to [the Getting Started Guide](http://exercism.io/languages/common-lisp) for the
 Common Lisp track to get your environment set up if needed.
 
 New exercises or changes to existing ones can be submitted via a pull
 request. You will need a GitHub account and you will need to fork
-`exercism/xlisp` to your account. See
+`exercism/common-lisp` to your account. See
 [GitHub Help](https://help.github.com/articles/fork-a-repo/) if you
 are unfamiliar with the process.
 
