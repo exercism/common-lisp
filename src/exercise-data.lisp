@@ -1,7 +1,3 @@
-(ql:quickload "cl-json")
-
-(in-package #:cl)
-
 (defpackage #:exercise-data
   (:use #:cl)
   (:export #:read-exercise-data

@@ -1,5 +1,3 @@
-(load "./exercise-data")
-
 (defpackage :generate-tests
   (:use :cl :exercise-data)
   (:export :generate))
