@@ -111,10 +111,10 @@ need to have cloned the above repository and ensure it is up to date.
 Before submitting a new exercise please ensure that it passes the
 Travis build.  This build will run all exercises on many Common Lisp
 implementations. To run the build yourself on your implementation load
-`bin/xlisp-test.lisp` and then evaluate `(xlisp-test:full-build)`.
+`src/xlisp-test.lisp` and then evaluate `(xlisp-test:full-build)`.
 
 If Roswell is installed then running all the tests for one
 implementation can be done with (this will return with a non-zero
 error code if there are problems):
 
-    ros run -l 'bin/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
+    ros run -l 'src/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
