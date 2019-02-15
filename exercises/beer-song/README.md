@@ -357,7 +357,7 @@ powerful add-on packages available. The only thing that one needs to
 do with a stock emacs to make it work well with exercism.io is to
 evaluate the following code:
 
-`(setq indent-tab-mode nil)`
+`(setq-default indent-tab-mode nil)`
 
 This can be placed in your `~/.emacs` (or `~/.emacs.d/init.el`) in
 order to have it set whenever Emacs is launched.
