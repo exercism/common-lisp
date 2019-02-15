@@ -1,8 +1,8 @@
-(defpackage :generate-tests
+(defpackage :generate-exercise
   (:use :cl :exercise-data)
   (:export :generate))
 
-(in-package :generate-tests)
+(in-package :generate-exercise)
 
 (defparameter *exercise-pathname-defaults*
   (make-pathname :directory '(:relative "../exercises")))
@@ -69,15 +69,15 @@
                    (format stream "~v,0T    '~A~%"
                            indent
                            (kebab-case (cdr expected)))
-                   (format stream "~v,0T    (~A:~A~{ ~/generate-tests:format-values/~}))"
+                   (format stream "~v,0T    (~A:~A~{ ~/generate-exercise:format-values/~}))"
                            indent
                            package (kebab-case (car function)) inputs)))
            (has-sub-tests-p
             (dolist (sub-test sub-tests) (write-test stream package sub-test (1+ indent))))
            (t
             (progn (format stream "~v,0T  (assert-equal~%" indent)
-                   (format stream "~v,0T    ~/generate-tests:format-values/~%" indent expected)
-                   (format stream "~v,0T    (~A:~A~{ ~/generate-tests:format-values/~}))"
+                   (format stream "~v,0T    ~/generate-exercise:format-values/~%" indent expected)
+                   (format stream "~v,0T    (~A:~A~{ ~/generate-exercise:format-values/~}))"
                            indent
                            package (kebab-case (car function)) inputs))))
       (format stream ")"))))

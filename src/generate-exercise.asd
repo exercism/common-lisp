@@ -8,4 +8,4 @@
 
   :serial t
   :components ((:file "exercise-data")
-               (:file "generate-tests")))
+               (:file "generate-exercise")))
