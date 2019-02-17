@@ -1,26 +1,31 @@
-(load "./exercise-data")
-
-(defpackage :generate-tests
+(defpackage :generate-exercise
   (:use :cl :exercise-data)
-  (:export :generate))
+  (:export
+   :generate
+   :*exercises-pathname*
+   :*problem-specifications-pathname*))
 
-(in-package :generate-tests)
+(in-package :generate-exercise)
 
-(defparameter *exercise-pathname-defaults*
-  (make-pathname :directory '(:relative "../exercises")))
+(defparameter *exercises-pathname*
+  (make-pathname :directory '(:relative "exercises")))
+(defparameter *problem-specifications-pathname*
+  (make-pathname :directory '(:relative :up "problem-specifications")))
 
 (defun exercise-directory-pathname (exercise)
   (merge-pathnames (make-pathname :directory (list :relative exercise))
-                   *exercise-pathname-defaults*))
+                   *exercises-pathname*))
 
-(defparameter *canonical-data-pathname-defaults*
-  (make-pathname :directory '(:relative "../../problem-specifications/exercises")
-                 :name "canonical-data"
-                 :type "json"))
+(defun canonical-data-pathname-defaults ()
+    (merge-pathnames
+     (make-pathname :directory '(:relative "exercises")
+                    :name "canonical-data"
+                    :type "json")
+     *problem-specifications-pathname*))
 
 (defun canonical-data-pathname (exercise)
   (merge-pathnames (make-pathname :directory (list :relative exercise))
-                   *canonical-data-pathname-defaults*))
+                   (canonical-data-pathname-defaults)))
 
 (defun kebab-case (str) (substitute #\- #\Space (string-downcase str)))
 
@@ -71,15 +76,15 @@
                    (format stream "~v,0T    '~A~%"
                            indent
                            (kebab-case (cdr expected)))
-                   (format stream "~v,0T    (~A:~A~{ ~/generate-tests:format-values/~}))"
+                   (format stream "~v,0T    (~A:~A~{ ~/generate-exercise:format-values/~}))"
                            indent
                            package (kebab-case (car function)) inputs)))
            (has-sub-tests-p
             (dolist (sub-test sub-tests) (write-test stream package sub-test (1+ indent))))
            (t
             (progn (format stream "~v,0T  (assert-equal~%" indent)
-                   (format stream "~v,0T    ~/generate-tests:format-values/~%" indent expected)
-                   (format stream "~v,0T    (~A:~A~{ ~/generate-tests:format-values/~}))"
+                   (format stream "~v,0T    ~/generate-exercise:format-values/~%" indent expected)
+                   (format stream "~v,0T    (~A:~A~{ ~/generate-exercise:format-values/~}))"
                            indent
                            package (kebab-case (car function)) inputs))))
       (format stream ")"))))
@@ -151,7 +156,10 @@
     (write-production-code example-file test-data)
         (format *standard-output* "Wrote ~A~&" example-file)))
 
-(defun generate (exercise)
+(defun generate (exercise
+                 &optional
+                   (*problem-specifications-pathname* *problem-specifications-pathname*)
+                   (*exercises-pathname* *exercises-pathname*))
   (let ((test-data (read-exercise-data (canonical-data-pathname exercise))))
     (if test-data
         (progn

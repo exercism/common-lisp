@@ -106,6 +106,18 @@ need to have cloned the above repository and ensure it is up to date.
    ensure that it is well formatted: `./bin/configlet fmt .`.
 7. Create a PR.
 
+##### Experimental Exercise Generation
+
+Load the `generate-exercise` ASDF system (found in `src`) and then
+call the function `generate-exercise:generate` with the name the
+exercise in problem specifications repository you'd like to stub out.
+Also provide the path to the problems specifications repository and
+the `exericses` directory to put the new exercise into.
+
+Alternatively use the `generate-exercise/executable` ASDF system to
+create the standalone executable `bin/generate-exercise` which can do
+the same (use `bin/generate-exercise -h` to see the usage info).
+
 ##### Building & Testing
 
 Before submitting a new exercise please ensure that it passes the
