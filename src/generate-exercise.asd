@@ -7,8 +7,9 @@
   :depends-on ("cl-json" "uiop")
 
   :serial t
-  :components ((:file "exercise-data")
-               (:file "generate-exercise")))
+  :components ((:module "generate-exercise"
+                        :components ((:file "exercise-data")
+                                     (:file "generate-exercise")))))
 
 (defsystem "generate-exercise/executable"
   :name "generate-execercise/executeable"
