@@ -37,7 +37,7 @@ before_script:
   - bin/configlet lint .
 
 script:
-  - ros run -l 'src/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
+  - ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
 
 # Cut and paste above to run all tests locally.
 

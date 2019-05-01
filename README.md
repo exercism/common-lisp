@@ -121,12 +121,15 @@ the same (use `bin/generate-exercise -h` to see the usage info).
 ##### Building & Testing
 
 Before submitting a new exercise please ensure that it passes the
-Travis build.  This build will run all exercises on many Common Lisp
+Travis build. This build will run all exercises on many Common Lisp
 implementations. To run the build yourself on your implementation load
-`src/xlisp-test.lisp` and then evaluate `(xlisp-test:full-build)`.
+`src/xlisp-test/xlisp-test.lisp` and then evaluate
+`(xlisp-test:full-build)`. The same can be done by calling `asdf:make`
+on the `"xlisp-test/test"` system (ASDF system definition file is
+`src/xlisp-test.asd`).
 
 If Roswell is installed then running all the tests for one
 implementation can be done with (this will return with a non-zero
 error code if there are problems):
 
-    ros run -l 'src/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
+    ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
