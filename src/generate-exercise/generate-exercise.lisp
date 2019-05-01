@@ -161,19 +161,13 @@
          (exercise-directory (exercise-directory-pathname exercise))
          (readme (make-pathname :name "README" :type "md" :defaults exercise-directory)))
     (multiple-value-bind (stdout stderr exit-code)
-        (uiop/run-program:run-program (list "./bin/configlet" "generate" "."
-                                        "--only" exercise "--spec-path"
-                                        (namestring *problem-specifications-pathname*))
-                                      :force-shell t
-                                      :output :string
-                                      :error-output :string
-                                      :ignore-error-status t)
+        (configlet:generate exercise (namestring *problem-specifications-pathname*))
       (declare (ignore stdout))
       (cond ((not (zerop exit-code))
              (format *error-output*
                      "Error running ./bin/configlet: ~%\"~A\"" stderr))
             ((probe-file readme)
-             (format *standard-output* "Wrote ~A" readme))
+             (format *standard-output* "Wrote ~A~&" readme))
             (t (format *error-output*
                        "./bin/configlet command successful but no readme file created!"))))))
 
@@ -184,24 +178,18 @@
                                               :direction :input
                                               :if-does-not-exist :error)
                         (cl-json:decode-json-strict stream))))
+
     (setf (cdr (assoc :exercises config-data))
           (append (cdr (assoc :exercises config-data))
                   `(((:slug . ,exercise)
-                     (:uuid .
-                            ,(first (uiop/run-program:run-program
-                                     '("./bin/configlet" "uuid")
-                                     :force-shell t
-                                     :ignore-error-status t
-                                     :output :lines)))))))
+                     (:uuid . ,(configlet:uuid))))))
 
     (with-open-file (stream config-file
                             :direction :output
                             :if-exists :supersede)
       (cl-json:encode-json config-data stream))
-    (uiop/run-program:run-program '("./bin/configlet" "fmt" ".")
-                                  :force-shell t
-                                  :ignore-error-status t)
-    (format *standard-output* "Wrote ~A" config-file)))
+    (configlet:format)
+    (format *standard-output* "Wrote ~A~&" config-file)))
 
 (defun generate (exercise
                  &optional

@@ -9,6 +9,7 @@
   :serial t
   :components ((:module "generate-exercise"
                         :components ((:file "exercise-data")
+                                     (:file "configlet")
                                      (:file "generate-exercise")))))
 
 (defsystem "generate-exercise/executable"
