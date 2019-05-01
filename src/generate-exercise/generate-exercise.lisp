@@ -177,6 +177,32 @@
             (t (format *error-output*
                        "./bin/configlet command successful but no readme file created!"))))))
 
+(defun modify-track-config (test-data)
+  (let* ((exercise (exercise-name test-data))
+         (config-file (make-pathname :name "config" :type "json"))
+         (config-data (with-open-file (stream config-file
+                                              :direction :input
+                                              :if-does-not-exist :error)
+                        (cl-json:decode-json-strict stream))))
+    (setf (cdr (assoc :exercises config-data))
+          (append (cdr (assoc :exercises config-data))
+                  `(((:slug . ,exercise)
+                     (:uuid .
+                            ,(first (uiop/run-program:run-program
+                                     '("./bin/configlet" "uuid")
+                                     :force-shell t
+                                     :ignore-error-status t
+                                     :output :lines)))))))
+
+    (with-open-file (stream config-file
+                            :direction :output
+                            :if-exists :supersede)
+      (cl-json:encode-json config-data stream))
+    (uiop/run-program:run-program '("./bin/configlet" "fmt" ".")
+                                  :force-shell t
+                                  :ignore-error-status t)
+    (format *standard-output* "Wrote ~A" config-file)))
+
 (defun generate (exercise
                  &optional
                    (*problem-specifications-pathname* *problem-specifications-pathname*)
@@ -188,5 +214,6 @@
           (make-test-code test-data)
           (make-production-code test-data)
           (make-example-code test-data)
-          (make-readme test-data))
+          (make-readme test-data)
+          (modify-track-config test-data))
         (format t "No data found for exercise: ~A" exercise))))
