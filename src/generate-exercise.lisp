@@ -154,7 +154,28 @@
                                          :type "lisp"
                                          :defaults exercise-directory)))
     (write-production-code example-file test-data)
-        (format *standard-output* "Wrote ~A~&" example-file)))
+    (format *standard-output* "Wrote ~A~&" example-file)))
+
+(defun make-readme (test-data)
+  (let* ((exercise (exercise-name test-data))
+         (exercise-directory (exercise-directory-pathname exercise))
+         (readme (make-pathname :name "README" :type "md" :defaults exercise-directory)))
+    (multiple-value-bind (stdout stderr exit-code)
+        (uiop/run-program:run-program (list "./bin/configlet" "generate" "."
+                                        "--only" exercise "--spec-path"
+                                        (namestring *problem-specifications-pathname*))
+                                      :force-shell t
+                                      :output :string
+                                      :error-output :string
+                                      :ignore-error-status t)
+      (declare (ignore stdout))
+      (cond ((not (zerop exit-code))
+             (format *error-output*
+                     "Error running ./bin/configlet: ~%\"~A\"" stderr))
+            ((probe-file readme)
+             (format *standard-output* "Wrote ~A" readme))
+            (t (format *error-output*
+                       "./bin/configlet command successful but no readme file created!"))))))
 
 (defun generate (exercise
                  &optional
@@ -166,5 +187,6 @@
           (make-exercise-directory test-data)
           (make-test-code test-data)
           (make-production-code test-data)
-          (make-example-code test-data))
+          (make-example-code test-data)
+          (make-readme test-data))
         (format t "No data found for exercise: ~A" exercise))))

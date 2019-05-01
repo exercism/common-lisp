@@ -4,7 +4,7 @@
   :description "Generate Exercises"
   :long-description "Utility to generate exercism exercises from canonical test data"
 
-  :depends-on ("cl-json")
+  :depends-on ("cl-json" "uiop")
 
   :serial t
   :components ((:file "exercise-data")
