@@ -1,7 +1,12 @@
 (defpackage :configlet
   (:use :common-lisp)
   (:shadow :format :run-program)
-  (:export :download :format :uuid :generate))
+  (:export :download
+           :format
+           :generate
+           :installed-p
+           :upgrade
+           :uuid))
 
 (in-package :configlet)
 
@@ -18,8 +23,14 @@
 (defun configlet-command (command &rest args)
   (append (list "./bin/configlet" command) args))
 
+(defun installed-p ()
+  (probe-file "./bin/configlet"))
+
 (defun download ()
   (run-program "./bin/fetch-configlet"))
+
+(defun upgrade (&key (output nil))
+  (run-program (configlet-command "upgrade") :output output))
 
 (defun format ()
   (run-program (configlet-command "fmt" ".")
