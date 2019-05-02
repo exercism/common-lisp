@@ -173,23 +173,17 @@
 
 (defun modify-track-config (test-data)
   (let* ((exercise (exercise-name test-data))
-         (config-file (make-pathname :name "config" :type "json"))
-         (config-data (with-open-file (stream config-file
-                                              :direction :input
-                                              :if-does-not-exist :error)
-                        (cl-json:decode-json-strict stream))))
+         (config-data (config-data:read))
+         (new-slug (list (cons :slug exercise)
+                         (cons :uuid (configlet:uuid)))))
 
-    (setf (cdr (assoc :exercises config-data))
-          (append (cdr (assoc :exercises config-data))
-                  `(((:slug . ,exercise)
-                     (:uuid . ,(configlet:uuid))))))
+    (if (config-data:get-exercise exercise config-data)
+        (setf (config-data:get-exercise exercise config-data) new-slug)
+        (config-data:add-exercise new-slug config-data))
 
-    (with-open-file (stream config-file
-                            :direction :output
-                            :if-exists :supersede)
-      (cl-json:encode-json config-data stream))
-    (configlet:format)
-    (format *standard-output* "Wrote ~A~&" config-file)))
+    (config-data:write config-data)
+
+    (format *standard-output* "Wrote ~A~&" config-data:*config-pathname*)))
 
 (defun generate (exercise
                  &optional
