@@ -154,7 +154,36 @@
                                          :type "lisp"
                                          :defaults exercise-directory)))
     (write-production-code example-file test-data)
-        (format *standard-output* "Wrote ~A~&" example-file)))
+    (format *standard-output* "Wrote ~A~&" example-file)))
+
+(defun make-readme (test-data)
+  (let* ((exercise (exercise-name test-data))
+         (exercise-directory (exercise-directory-pathname exercise))
+         (readme (make-pathname :name "README" :type "md" :defaults exercise-directory)))
+    (multiple-value-bind (stdout stderr exit-code)
+        (configlet:generate exercise (namestring *problem-specifications-pathname*))
+      (declare (ignore stdout))
+      (cond ((not (zerop exit-code))
+             (format *error-output*
+                     "Error running ./bin/configlet: ~%\"~A\"" stderr))
+            ((probe-file readme)
+             (format *standard-output* "Wrote ~A~&" readme))
+            (t (format *error-output*
+                       "./bin/configlet command successful but no readme file created!"))))))
+
+(defun modify-track-config (test-data)
+  (let* ((exercise (exercise-name test-data))
+         (config-data (config-data:read))
+         (new-slug (list (cons :slug exercise)
+                         (cons :uuid (configlet:uuid)))))
+
+    (if (config-data:get-exercise exercise config-data)
+        (setf (config-data:get-exercise exercise config-data) new-slug)
+        (config-data:add-exercise new-slug config-data))
+
+    (config-data:write config-data)
+
+    (format *standard-output* "Wrote ~A~&" config-data:*config-pathname*)))
 
 (defun generate (exercise
                  &optional
@@ -166,5 +195,7 @@
           (make-exercise-directory test-data)
           (make-test-code test-data)
           (make-production-code test-data)
-          (make-example-code test-data))
+          (make-example-code test-data)
+          (make-readme test-data)
+          (modify-track-config test-data))
         (format t "No data found for exercise: ~A" exercise))))
