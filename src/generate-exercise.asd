@@ -20,6 +20,8 @@
   :name "generate-execercise/executeable"
   :depends-on ("generate-exercise" "unix-opts")
   :build-operation program-op
-  :build-pathname "../bin/generate-exercise"
+  :build-pathname "../../bin/generate-exercise"
   :entry-point "generate-exercise-main:main"
+  :pathname "generate-exercise"
   :components ((:file "generate-exercise-main")))
+
