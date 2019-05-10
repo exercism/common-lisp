@@ -40,7 +40,7 @@ platforms.
 We will use [QuickLisp](http://www.quicklisp.org/beta/#installation) for Lisp library management. To install QuickLisp: 
 
 ```bash
-curl -O http://beta.quicklisp.org/quicklisp.lisp
+curl -O https://beta.quicklisp.org/quicklisp.lisp
 ```
 
 Now launch lisp, and copy-paste the following expressions to finish QuickLisp installation:
