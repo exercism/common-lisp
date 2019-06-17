@@ -19,6 +19,18 @@
       ]
     },
     {
+      "slug": "two-fer",
+      "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "optional_values",
+        "text_formatting"
+      ]
+    },
+    {
       "slug": "luhn",
       "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
       "core": false,
