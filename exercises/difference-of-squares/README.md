@@ -12,11 +12,16 @@ Hence the difference between the square of the sum of the first
 ten natural numbers and the sum of the squares of the first ten
 natural numbers is 3025 - 385 = 2640.
 
+You are not expected to discover an efficient solution to this yourself from
+first principles; research is allowed, indeed, encouraged. Finding the best
+algorithm for the problem is a key skill in software engineering.
+
 ## Setup
 
-Check out [Exercism Help](http://exercism.io/tracks/common-lisp) for instructions to
-get started writing Common Lisp. That page will explain how to install and setup
-a Lisp implementation and how to run the tests.
+Check out [Installing Common
+Lisp](https://exercism.io/tracks/common-lisp/installation) for
+instructions to get started or take a look at the guides available in
+the [track's side bar](https://exercism.io/my/tracks/common-lisp).
 
 ## Formatting
 
@@ -49,7 +54,7 @@ powerful add-on packages available. The only thing that one needs to
 do with a stock emacs to make it work well with exercism.io is to
 evaluate the following code:
 
-`(setq-default indent-tab-mode nil)`
+`(setq-default indent-tabs-mode nil)`
 
 This can be placed in your `~/.emacs` (or `~/.emacs.d/init.el`) in
 order to have it set whenever Emacs is launched.

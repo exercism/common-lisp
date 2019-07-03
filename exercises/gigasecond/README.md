@@ -1,14 +1,16 @@
 # Gigasecond
 
-Calculate the moment when someone has lived for 10^9 seconds.
+Given a moment, determine the moment that would be after a gigasecond
+has passed.
 
 A gigasecond is 10^9 (1,000,000,000) seconds.
 
 ## Setup
 
-Check out [Exercism Help](http://exercism.io/tracks/common-lisp) for instructions to
-get started writing Common Lisp. That page will explain how to install and setup
-a Lisp implementation and how to run the tests.
+Check out [Installing Common
+Lisp](https://exercism.io/tracks/common-lisp/installation) for
+instructions to get started or take a look at the guides available in
+the [track's side bar](https://exercism.io/my/tracks/common-lisp).
 
 ## Formatting
 
@@ -41,7 +43,7 @@ powerful add-on packages available. The only thing that one needs to
 do with a stock emacs to make it work well with exercism.io is to
 evaluate the following code:
 
-`(setq-default indent-tab-mode nil)`
+`(setq-default indent-tabs-mode nil)`
 
 This can be placed in your `~/.emacs` (or `~/.emacs.d/init.el`) in
 order to have it set whenever Emacs is launched.

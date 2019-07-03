@@ -13,9 +13,6 @@ on every year that is evenly divisible by 4
 For example, 1997 is not a leap year, but 1996 is.  1900 is not a leap
 year, but 2000 is.
 
-If your language provides a method in the standard library that does
-this look-up, pretend it doesn't exist and implement it yourself.
-
 ## Notes
 
 Though our exercise adopts some very simple rules, there is more to
@@ -28,9 +25,10 @@ phenomenon, go watch [this youtube video][video].
 
 ## Setup
 
-Check out [Exercism Help](http://exercism.io/tracks/common-lisp) for instructions to
-get started writing Common Lisp. That page will explain how to install and setup
-a Lisp implementation and how to run the tests.
+Check out [Installing Common
+Lisp](https://exercism.io/tracks/common-lisp/installation) for
+instructions to get started or take a look at the guides available in
+the [track's side bar](https://exercism.io/my/tracks/common-lisp).
 
 ## Formatting
 
@@ -63,7 +61,7 @@ powerful add-on packages available. The only thing that one needs to
 do with a stock emacs to make it work well with exercism.io is to
 evaluate the following code:
 
-`(setq-default indent-tab-mode nil)`
+`(setq-default indent-tabs-mode nil)`
 
 This can be placed in your `~/.emacs` (or `~/.emacs.d/init.el`) in
 order to have it set whenever Emacs is launched.
