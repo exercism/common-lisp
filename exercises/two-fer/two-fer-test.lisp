@@ -9,11 +9,16 @@
 (in-package #:two-fer-test)
 
 (define-test
-  no-name-given
+  no-name-given-nil
   (assert-equal
     "One for you, one for me."
     (two-fer:twofer nil)))
 
+(define-test
+  no-name-given-empty
+  (assert-equal
+   "One for you, one for me."
+   (two-fer:twofer "")))
 
 (define-test
   a-name-given
