@@ -5,4 +5,4 @@
 (in-package #:two-fer)
 
 (defun twofer (name)
-  (format nil "One for ~a, one for me." (if (or (null name) (string= name "")) "you" name)))
+  (format nil "One for ~a, one for me." (or name "you")))
