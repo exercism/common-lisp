@@ -9,10 +9,10 @@
 (in-package #:two-fer-test)
 
 (define-test
-  no-name-given
-  (assert-equal
-    "One for you, one for me."
-    (two-fer:twofer nil)))
+    no-name-given-nil
+    (assert-equal
+     "One for you, one for me."
+     (two-fer:twofer nil)))
 
 
 (define-test
@@ -23,10 +23,16 @@
 
 
 (define-test
-  another-name-given
-  (assert-equal
-    "One for Bob, one for me."
-    (two-fer:twofer "Bob")))
+    another-name-given
+    (assert-equal
+     "One for Bob, one for me."
+     (two-fer:twofer "Bob")))
+
+(define-test
+    no-name-given
+    (assert-equal
+     "One for you, one for me."
+     (two-fer:twofer)))
 
 #-xlisp-test
 (let ((*print-errors* t)
