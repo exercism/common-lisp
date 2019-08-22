@@ -25,8 +25,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "strings",
         "optional_values",
+        "strings",
         "text_formatting"
       ]
     },
@@ -517,6 +517,16 @@
         "integers",
         "lists",
         "math"
+      ]
+    },
+    {
+      "slug": "robot-simulator",
+      "uuid": "d218cf9e-3b35-4357-9734-87142c22d551",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "misc"
       ]
     }
   ]
