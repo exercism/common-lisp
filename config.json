@@ -415,7 +415,7 @@
     {
       "slug": "sieve",
       "uuid": "40f3b911-0739-4fec-95cc-cfab99788c19",
-      "core": true,
+      "core": false,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
