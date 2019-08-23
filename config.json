@@ -45,6 +45,18 @@
       ]
     },
     {
+      "slug": "rna-transcription",
+      "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "strings",
+        "transforming"
+      ]
+    },
+    {
       "slug": "leap",
       "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
       "core": true,
@@ -58,38 +70,13 @@
       ]
     },
     {
-      "slug": "bob",
-      "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
+      "slug": "anagram",
+      "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
-        "parsing",
-        "strings"
-      ]
-    },
-    {
-      "slug": "rna-transcription",
-      "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "control_flow_conditionals",
-        "strings",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "word-count",
-      "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "equality",
         "filtering",
         "strings"
       ]
@@ -108,18 +95,6 @@
       ]
     },
     {
-      "slug": "anagram",
-      "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "equality",
-        "filtering",
-        "strings"
-      ]
-    },
-    {
       "slug": "roman-numerals",
       "uuid": "150d3608-d234-4c9e-ab6d-2d91f8a2c855",
       "core": true,
@@ -131,6 +106,31 @@
         "integers",
         "strings",
         "text_formatting"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "filtering",
+        "strings"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "parsing",
+        "strings"
       ]
     },
     {
