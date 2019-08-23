@@ -31,6 +31,109 @@
       ]
     },
     {
+      "slug": "hamming",
+      "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "equality",
+        "filtering",
+        "strings"
+      ]
+    },
+    {
+      "slug": "leap",
+      "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "equality",
+        "integers",
+        "logic"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "parsing",
+        "strings"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "strings",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "filtering",
+        "strings"
+      ]
+    },
+    {
+      "slug": "beer-song",
+      "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "anagram",
+      "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "equality",
+        "filtering",
+        "strings"
+      ]
+    },
+    {
+      "slug": "roman-numerals",
+      "uuid": "150d3608-d234-4c9e-ab6d-2d91f8a2c855",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
       "slug": "luhn",
       "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
       "core": false,
@@ -78,20 +181,6 @@
       ]
     },
     {
-      "slug": "hamming",
-      "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "equality",
-        "filtering",
-        "strings"
-      ]
-    },
-    {
       "slug": "sublist",
       "uuid": "428e5b28-31b6-4c84-8eae-d7753d45efc1",
       "core": false,
@@ -99,19 +188,6 @@
       "difficulty": 1,
       "topics": [
         "lists"
-      ]
-    },
-    {
-      "slug": "leap",
-      "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "control_flow_conditionals",
-        "equality",
-        "integers",
-        "logic"
       ]
     },
     {
@@ -140,30 +216,6 @@
       ]
     },
     {
-      "slug": "bob",
-      "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "control_flow_conditionals",
-        "parsing",
-        "strings"
-      ]
-    },
-    {
-      "slug": "rna-transcription",
-      "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "control_flow_conditionals",
-        "strings",
-        "transforming"
-      ]
-    },
-    {
       "slug": "robot-name",
       "uuid": "79a4a35c-40d6-4e2d-92a1-005c40b4f4c5",
       "core": false,
@@ -173,19 +225,6 @@
         "randomness",
         "strings",
         "variables"
-      ]
-    },
-    {
-      "slug": "word-count",
-      "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "filtering",
-        "strings"
       ]
     },
     {
@@ -239,19 +278,6 @@
       ]
     },
     {
-      "slug": "beer-song",
-      "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "integers",
-        "text_formatting"
-      ]
-    },
-    {
       "slug": "space-age",
       "uuid": "d24cf0ea-876f-4775-969b-99970425e413",
       "core": false,
@@ -261,18 +287,6 @@
         "floating_point_numbers",
         "interfaces",
         "transforming"
-      ]
-    },
-    {
-      "slug": "anagram",
-      "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "equality",
-        "filtering",
-        "strings"
       ]
     },
     {
@@ -357,20 +371,6 @@
         "floating_point_numbers",
         "integers",
         "math"
-      ]
-    },
-    {
-      "slug": "roman-numerals",
-      "uuid": "150d3608-d234-4c9e-ab6d-2d91f8a2c855",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "integers",
-        "strings",
-        "text_formatting"
       ]
     },
     {
