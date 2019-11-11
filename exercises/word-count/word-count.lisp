@@ -1,5 +1,7 @@
 (in-package #:cl-user)
-(defpackage #:phrase
+(defpackage #:word-count
   (:use #:cl)
-  (:export #:word-count))
-(in-package #:phrase)
+  (:export #:count-words))
+(in-package #:word-count)
+
+(defun count-words (sentence))

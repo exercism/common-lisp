@@ -115,8 +115,8 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "filtering",
         "strings"
       ]
