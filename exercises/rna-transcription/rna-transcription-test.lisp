@@ -1,5 +1,5 @@
 (ql:quickload "lisp-unit")
-#-xlisp-test (load "dna")
+#-xlisp-test (load "rna-transcription")
 
 (defpackage :rna-transcription-test
   (:use #:common-lisp #:lisp-unit))
@@ -7,22 +7,22 @@
 (in-package #:rna-transcription-test)
 
 (define-test transcribes-cytidine-to-guanosine
-  (assert-equal "G" (dna:to-rna "C")))
+  (assert-equal "G" (rna-transcription:to-rna "C")))
 
 (define-test transcribes-guanosine-to-cytidine
-  (assert-equal "C" (dna:to-rna "G")))
+  (assert-equal "C" (rna-transcription:to-rna "G")))
 
 (define-test transcribes-adenosine-to-uracile
-  (assert-equal "U" (dna:to-rna "A")))
+  (assert-equal "U" (rna-transcription:to-rna "A")))
 
 (define-test it-transcribes-thymidine-to-adenosine
-  (assert-equal "A" (dna:to-rna "T")))
+  (assert-equal "A" (rna-transcription:to-rna "T")))
 
 (define-test it-transcribes-all-nucleotides
-  (assert-equal "UGCACCAGAAUU" (dna:to-rna "ACGTGGTCTTAA")))
+  (assert-equal "UGCACCAGAAUU" (rna-transcription:to-rna "ACGTGGTCTTAA")))
 
 (define-test it-validates-dna-strands
-  (assert-error 'error (dna:to-rna "XCGFGGTDTTAA")))
+  (assert-error 'error (rna-transcription:to-rna "XCGFGGTDTTAA")))
 
 #-xlisp-test
 (let ((*print-errors* t)
