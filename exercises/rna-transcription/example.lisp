@@ -1,12 +1,12 @@
-(defpackage #:dna
+(defpackage #:rna-transcription
   (:use #:common-lisp)
   (:export #:to-rna))
 
-(in-package #:dna)
+(in-package #:rna-transcription)
 
 (defun validate-strand (strand)
   (or (every #'(lambda (c) (find c "ATCGU"))
-	     (coerce strand 'list))
+             (coerce strand 'list))
       (signal 'error)))
 
 (defparameter dna->rna
@@ -15,5 +15,5 @@
 (defun to-rna (strand)
   (validate-strand strand)
   (concatenate 'string
-	       (mapcar #'(lambda (c) (cdr (assoc c dna->rna)))
-		       (coerce strand 'list))))
+               (mapcar #'(lambda (c) (cdr (assoc c dna->rna)))
+                       (coerce strand 'list))))
