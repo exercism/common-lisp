@@ -37,8 +37,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "equality",
         "filtering",
         "strings"
@@ -51,7 +51,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "strings",
         "transforming"
       ]
@@ -63,7 +63,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "equality",
         "integers",
         "logic"
@@ -88,8 +88,8 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "text_formatting"
       ]
@@ -101,8 +101,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "strings",
         "text_formatting"
@@ -128,7 +128,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "parsing",
         "strings"
       ]
@@ -153,7 +153,6 @@
       "difficulty": 1,
       "topics": [
         "integers",
-        "map",
         "math",
         "transforming"
       ]
@@ -208,7 +207,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "date",
+        "dates",
         "integers",
         "time",
         "transforming",
@@ -234,7 +233,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "filtering",
         "integers"
       ]
@@ -272,7 +271,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "maps",
         "transforming"
       ]
@@ -296,7 +295,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "maps",
         "sorting",
         "strings"
@@ -309,9 +308,9 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "integer",
+        "integers",
         "math",
-        "recursivity"
+        "recursion"
       ]
     },
     {
@@ -321,8 +320,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "math",
-        "number_theory"
+        "math"
       ]
     },
     {
@@ -342,7 +340,7 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "dates",
         "filtering"
       ]
@@ -354,7 +352,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "filtering",
         "floating_point_numbers",
         "integers"
@@ -367,7 +365,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "floating_point_numbers",
         "integers",
         "math"
@@ -380,7 +378,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "games",
         "maps",
         "strings"
@@ -394,7 +392,7 @@
       "difficulty": 1,
       "topics": [
         "bitwise_operations",
-        "control_flow_conditionals",
+        "conditionals",
         "integers",
         "math"
       ]
@@ -407,7 +405,7 @@
       "difficulty": 1,
       "topics": [
         "bitwise_operations",
-        "control_flow_conditionals",
+        "conditionals",
         "integers",
         "text_formatting"
       ]
@@ -419,7 +417,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "control_flow_loops",
         "filtering",
         "integers",
@@ -526,7 +524,9 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "misc"
+        "loops",
+        "sequences",
+        "strings"
       ]
     }
   ]
