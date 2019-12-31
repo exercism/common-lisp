@@ -1,36 +1,30 @@
 ---
-language: common-lisp
-sudo: false
-
-addons:
-  apt:
-    packages:
-      - libc6-i386
-      - openjdk-7-jre
+language: minimal
+os: linux
 
 env:
   global:
     - PATH=~/.roswell/bin:$PATH
     - ROSWELL_INSTALL_DIR=$HOME/.roswell
-  matrix:
+  jobs:
     - LISP=sbcl-bin
     - LISP=abcl-bin
     - LISP=ccl-bin
     - LISP=ecl
     - LISP=clisp
 
-matrix:
+jobs:
   fast_finish: true
   allow_failures:
     - env: LISP=clisp
-
-install:
-  - ./bin/travis-roswell-setup.sh
 
 cache:
   directories:
     - $HOME/.roswell
     - $HOME/.config/common-lisp
+
+install:
+  - ./bin/travis-roswell-setup.sh
 
 before_script:
   - bin/fetch-configlet
