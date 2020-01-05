@@ -1,5 +1,5 @@
 (ql:quickload "lisp-unit")
-#-xlisp-test (load "pascal")
+#-xlisp-test (load "pascals-triangle")
 
 (defpackage #:pascal-test
   (:use #:common-lisp #:lisp-unit))
