@@ -1,5 +1,5 @@
 (ql:quickload "lisp-unit")
-#-xlisp-test (load "beer")
+#-xlisp-test (load "beer-song")
 
 (defpackage #:beer-song-test
   (:use #:common-lisp #:lisp-unit))
