@@ -1,5 +1,5 @@
 (ql:quickload "lisp-unit")
-#-xlisp-test (load "roman")
+#-xlisp-test (load "roman-numerals")
 
 (defpackage #:roman-test
   (:use #:cl #:lisp-unit))
