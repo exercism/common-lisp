@@ -1,5 +1,5 @@
 (ql:quickload "lisp-unit")
-#-xlisp-test (load "squares")
+#-xlisp-test (load "difference-of-squares")
 
 (defpackage #:squares-test
   (:use #:cl #:lisp-unit))
