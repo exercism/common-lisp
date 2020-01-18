@@ -1,6 +1,6 @@
 (defpackage #:bob
   (:use #:common-lisp)
-  (:export #:response-for))
+  (:export #:response))
 
 (in-package #:bob)
 
@@ -15,7 +15,7 @@
   (let ((msg (string-trim '(#\Space #\Newline #\Tab #\Page) msg)))
     (equal #\? (char msg (1- (length msg))))))
 
-(defun response-for (msg)
+(defun response (msg)
   (cond ((silence-p msg) "Fine. Be that way!")
         ((and (shouting-p msg)
               (questioning-p msg)) "Calm down, I know what I'm doing!")
