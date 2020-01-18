@@ -43,7 +43,7 @@
     },
     {
       "github_username": "wobh",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": null,
       "link_text": null,
