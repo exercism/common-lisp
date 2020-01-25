@@ -1,6 +1,8 @@
+(in-package #:cl-user)
 (defpackage #:hello-world
-  (:use #:common-lisp)
-  (:export #:hello-world)
-  (:nicknames #:hw))
-
+  (:use #:cl)
+  (:export #:hello))
 (in-package #:hello-world)
+
+(defun hello NIL)
+
