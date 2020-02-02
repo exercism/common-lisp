@@ -2,8 +2,7 @@
 ;;; bob v1.6.0
 ;;;
 (ql:quickload "lisp-unit")
-;; #-xlisp-test (load "bob")
-#-xlisp-test (load "example")
+#-xlisp-test (load "bob")
 
 (defpackage #:bob-test
   (:use #:common-lisp #:lisp-unit))
