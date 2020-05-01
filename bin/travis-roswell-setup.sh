@@ -1,12 +1,13 @@
 #!/bin/sh
 set -e
 
+ROSWELL_RELEASE_VERSION=20.04.14.105
 ROSWELL_TARBALL_PATH=$HOME/roswell.tar.gz
 ROSWELL_DIR=$HOME/.roswell
 ROSWELL_REPO=${ROSWELL_REPO:-https://github.com/roswell/roswell}
 ROSWELL_BRANCH=${ROSWELL_BRANCH:-release}
 ROSWELL_INSTALL_DIR=${ROSWELL_INSTALL_DIR:-/usr/local}
-ROSWELL_PLATFORMHTML_BASE=${ROSWELL_PLATFORMHTML_BASE:-https://github.com/roswell/sbcl_bin/releases/download/files/build.html}
+ROSWELL_PLATFORMHTML_BASE=${ROSWELL_PLATFORMHTML_BASE:-https://github.com/roswell/sbcl_bin/releases/download/files/sbcl-bin_uri.tsv}
 ROSWELL_SBCL_BIN_URI=${ROSWELL_SBCL_BIN_URI:-https://github.com/roswell/sbcl_bin/releases/download/}
 ROSWELL_QUICKLISP_DIST_URI=${ROSWELL_QUICKLISP_DIST_URI:-http://beta.quicklisp.org/dist/quicklisp.txt}
 
@@ -105,27 +106,64 @@ install_ecl () {
     fi
 }
 
-if which sudo >/dev/null; then
+if which sudo 2>&1 >/dev/null; then
     SUDO=sudo
 fi
 
+install_roswell_bin () {
+    if uname -s | grep -E "MSYS_NT|MINGW64" >/dev/null; then
+        if [ $ROSWELL_BRANCH = release ]; then
+            fetch "https://github.com/roswell/roswell/releases/download/v$ROSWELL_RELEASE_VERSION/roswell_${ROSWELL_RELEASE_VERSION}_amd64.zip" /tmp/roswell.zip
+            unzip /tmp/roswell.zip -d /tmp/ >/dev/null
+            mkdir -p $ROSWELL_INSTALL_DIR/bin
+            cp /tmp/roswell/ros.exe $ROSWELL_INSTALL_DIR/bin
+            cp -r /tmp/roswell/lisp $ROSWELL_INSTALL_DIR/bin/lisp
+        fi
+    elif uname -s | grep -E "MINGW32" >/dev/null; then
+        if [ $ROSWELL_BRANCH = release ]; then
+            fetch "https://github.com/roswell/roswell/releases/download/v$ROSWELL_RELEASE_VERSION/roswell_${ROSWELL_RELEASE_VERSION}_i686.zip" /tmp/roswell.zip
+            unzip /tmp/roswell.zip -d /tmp/ >/dev/null
+            mkdir -p $ROSWELL_INSTALL_DIR/bin
+            cp /tmp/roswell/ros.exe $ROSWELL_INSTALL_DIR/bin
+            cp -r /tmp/roswell/lisp $ROSWELL_INSTALL_DIR/bin/lisp
+        fi
+    elif uname -s |grep Linux >/dev/null && uname -m |grep x86_64 >/dev/null && which dpkg >/dev/null; then
+        if ! [ -w "$ROSWELL_INSTALL_DIR" ]; then
+            if [ $ROSWELL_BRANCH = release ]; then
+                fetch "https://github.com/roswell/roswell/releases/download/v$ROSWELL_RELEASE_VERSION/roswell_$ROSWELL_RELEASE_VERSION-1_amd64.deb" /tmp/roswell.deb
+            fi
+            if [ -f /tmp/roswell.deb ]; then
+                $SUDO dpkg -i /tmp/roswell.deb
+            fi
+        fi
+    elif [ `uname` = "Darwin" ] && [ $ROSWELL_BRANCH = release ]; then
+        apt_unless_installed roswell
+    fi
+}
+
+install_roswell_src () {
+    if ! which ros >/dev/null; then
+        fetch "$ROSWELL_REPO/archive/$ROSWELL_BRANCH.tar.gz" "$ROSWELL_TARBALL_PATH"
+        extract -z "$ROSWELL_TARBALL_PATH" "$ROSWELL_DIR"
+        cd $ROSWELL_DIR
+        sh bootstrap
+        mkdir -p ~/.roswell
+        echo "sbcl-bin-version-uri	0	$ROSWELL_PLATFORMHTML_BASE" >> ~/.roswell/config;
+        echo "sbcl-bin-uri	0	$ROSWELL_SBCL_BIN_URI" >> ~/.roswell/config;
+        ./configure --prefix=$ROSWELL_INSTALL_DIR
+        make
+        if [ -w "$ROSWELL_INSTALL_DIR" ]; then
+            make install
+        else
+            $SUDO make install
+        fi
+    fi
+}
+
 if ! which ros >/dev/null; then
     echo "Installing Roswell..."
-
-    fetch "$ROSWELL_REPO/archive/$ROSWELL_BRANCH.tar.gz" "$ROSWELL_TARBALL_PATH"
-    extract -z "$ROSWELL_TARBALL_PATH" "$ROSWELL_DIR"
-    cd $ROSWELL_DIR
-    sh bootstrap
-    mkdir -p ~/.roswell
-    echo "sbcl-bin-version-uri	0	$ROSWELL_PLATFORMHTML_BASE" >> ~/.roswell/config;
-    echo "sbcl-bin-uri	0	$ROSWELL_SBCL_BIN_URI" >> ~/.roswell/config;
-    ./configure --prefix=$ROSWELL_INSTALL_DIR
-    make
-    if [ -w "$ROSWELL_INSTALL_DIR" ]; then
-        make install
-    else
-        $SUDO make install
-    fi
+    install_roswell_bin
+    install_roswell_src
     echo "Roswell has been installed."
 else
     echo "Detected Roswell."
@@ -133,7 +171,7 @@ fi
 
 case "$LISP" in
     alisp|allegro)
-	apt_unless_installed libc6-i386
+        apt_unless_installed libc6-i386
         LISP=allegro
         ;;
     cmu|cmucl|cmu-bin)
@@ -195,7 +233,11 @@ ros -e '(format t "~&~A ~A up and running! (ASDF ~A)~2%"
                 #+asdf(asdf:asdf-version) #-asdf "not required")' || exit 1
 
 # Setup ASDF source regisry
-ASDF_SR_CONF_DIR="$HOME/.config/common-lisp/source-registry.conf.d"
+if [ "$LOCALAPPDATA" ]; then
+    ASDF_SR_CONF_DIR="$LOCALAPPDATA/config/common-lisp/source-registry.conf.d"
+else
+    ASDF_SR_CONF_DIR="$HOME/.config/common-lisp/source-registry.conf.d"
+fi
 ASDF_SR_CONF_FILE="$ASDF_SR_CONF_DIR/ci.conf"
 LOCAL_LISP_TREE="$HOME/lisp"
 
@@ -204,6 +246,14 @@ mkdir -p "$LOCAL_LISP_TREE"
 if [ "$TRAVIS" ]; then
     echo "(:tree \"$TRAVIS_BUILD_DIR/\")" > "$ASDF_SR_CONF_FILE"
 elif [ "$CIRCLECI" ]; then
-    echo "(:tree \"$HOME/$CIRCLE_PROJECT_REPONAME/\")" > "$ASDF_SR_CONF_FILE"
+    echo "(:tree \"$CIRCLE_WORKING_DIRECTORY/\")" > "$ASDF_SR_CONF_FILE"
+elif [ "$GITHUB_WORKSPACE" ]; then
+    if uname -s | grep -E "MSYS_NT|MINGW" >/dev/null; then
+        GITHUB_WORKSPACE_LISP=`echo $GITHUB_WORKSPACE | sed -e 's/\\\\/\//g'`
+        echo "(:tree \"$GITHUB_WORKSPACE_LISP/\")" > "$ASDF_SR_CONF_FILE"
+    else
+        echo "(:tree \"$GITHUB_WORKSPACE/\")" > "$ASDF_SR_CONF_FILE"
+    fi
 fi
 echo "(:tree \"$LOCAL_LISP_TREE/\")" >> "$ASDF_SR_CONF_FILE"
+echo "ASDF source registry configurations at ${ASDF_SR_CONF_FILE}."
