@@ -9,14 +9,13 @@ env:
   jobs:
     - LISP=sbcl-bin
     - LISP=abcl-bin
-    - LISP=ccl-bin
     - LISP=ecl
     - LISP=clisp
 
 jobs:
   fast_finish: true
   allow_failures:
-    - env: LISP=clisp
+    - env: LISP=ccl-bin
 
 cache:
   directories:
