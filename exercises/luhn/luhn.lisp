@@ -1,8 +1,8 @@
 (in-package #:cl-user)
 (defpackage #:luhn
   (:use #:cl)
-  (:export #:is-valid))
+  (:export #:valid-p))
 
 (in-package #:luhn)
 
-(defun is-valid (input))
+(defun valid-p (input))
