@@ -5,7 +5,7 @@
 
 (in-package #:luhn)
 
-(defun is-valid (input)
+(defun valid-p (input)
   (let ((num (remove #\Space input)))
     (when (and (<= 2 (length num))
                (every #'digit-char-p num))
