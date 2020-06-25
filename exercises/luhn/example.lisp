@@ -1,7 +1,7 @@
 (in-package #:cl-user)
 (defpackage #:luhn
   (:use #:cl)
-  (:export #:is-valid))
+  (:export #:valid-p))
 
 (in-package #:luhn)
 
