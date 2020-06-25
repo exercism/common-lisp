@@ -1,11 +1,11 @@
 (in-package #:cl-user)
 (defpackage #:luhn
   (:use #:cl)
-  (:export #:is-valid))
+  (:export #:validp))
 
 (in-package #:luhn)
 
-(defun is-valid (input)
+(defun validp (input)
   (let ((num (remove #\Space input)))
     (when (and (<= 2 (length num))
                (every #'digit-char-p num))
