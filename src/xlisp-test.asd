@@ -6,7 +6,9 @@
   :depends-on ("cl-json")
 
   :pathname "xlisp-test"
-  :components ((:file "xlisp-test")))
+  :components ((:file "xlisp-test"))
+
+  :in-order-to ((test-op (test-op "xlisp-test/test"))))
 
 (defsystem "xlisp-test/test"
   :description "Runs all exercise tests when loaded."
