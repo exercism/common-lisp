@@ -5,9 +5,6 @@
 
 (in-package #:binary-search)
 
-(define-condition value-error (error)
-  ())
-
 (defun binary-find (arr el)
   (loop
     with low = 0
@@ -20,4 +17,4 @@
 	((< (aref arr mid) el)
 	 (setf low (1+ mid)))
 	(t (return mid)))
-    finally (error 'value-error)))
+    finally (return nil)))

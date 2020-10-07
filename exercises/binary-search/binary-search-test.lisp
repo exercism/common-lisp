@@ -25,19 +25,19 @@
   (assert-equal (binary-search:binary-find #(1 3 5 8 13 21 34 55 89 144 233 377) 21) 5))
 
 (define-test identifies-that-a-value-is-not-included-in-the-array
-  (assert-error 'binary-search:value-error (binary-search:binary-find #(1 3 4 6 8 9 11) 7)))
+  (assert-equal (binary-search:binary-find #(1 3 4 6 8 9 11) 7) nil))
 
 (define-test a-value-smaller-than-the-array-s-smallest-value-is-not-found
-  (assert-error 'binary-search:value-error (binary-search:binary-find #(1 3 4 6 8 9 11) 0)))
+  (assert-equal (binary-search:binary-find #(1 3 4 6 8 9 11) 0) nil))
 
 (define-test a-value-larger-than-the-array-s-largest-value-is-not-found
-  (assert-error 'binary-search:value-error (binary-search:binary-find #(1 3 4 6 8 9 11) 13)))
+  (assert-equal (binary-search:binary-find #(1 3 4 6 8 9 11) 13) nil))
 
 (define-test nothing-is-found-in-an-empty-array
-  (assert-error 'binary-search:value-error (binary-search:binary-find #() 1)))
+  (assert-equal (binary-search:binary-find #() 1) nil))
 
 (define-test nothing-is-found-when-the-left-and-right-bounds-cross
-  (assert-error 'binary-search:value-error (binary-search:binary-find #(1 2) 0)))
+  (assert-equal (binary-search:binary-find #(1 2) 0) nil))
 
 #-xlisp-test
 (let ((*print-errors* t)

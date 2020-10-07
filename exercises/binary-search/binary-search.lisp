@@ -5,8 +5,5 @@
 
 (in-package #:binary-search)
 
-(define-condition value-error (error)
-  ())
-
 (defun binary-find (arr el)
   )

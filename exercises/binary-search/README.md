@@ -34,6 +34,11 @@ A binary search halves the number of items to check with each iteration,
 so locating an item (or determining its absence) takes logarithmic time.
 A binary search is a dichotomic divide and conquer search algorithm.
 
+## Note
+
+Implement binary search yourself. Do not use built-in functions such
+as `find`.
+
 ## Setup
 
 Check out [Installing Common
