@@ -38,9 +38,9 @@
       "difficulty": 1,
       "topics": [
         "conditionals",
-        "loops",
         "equality",
         "filtering",
+        "loops",
         "strings"
       ]
     },
@@ -89,8 +89,8 @@
       "difficulty": 2,
       "topics": [
         "conditionals",
-        "loops",
         "integers",
+        "loops",
         "text_formatting"
       ]
     },
@@ -102,8 +102,8 @@
       "difficulty": 1,
       "topics": [
         "conditionals",
-        "loops",
         "integers",
+        "loops",
         "strings",
         "text_formatting"
       ]
@@ -116,8 +116,8 @@
       "difficulty": 2,
       "topics": [
         "conditionals",
-        "loops",
         "filtering",
+        "loops",
         "strings"
       ]
     },
@@ -365,9 +365,9 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "loops",
         "floating_point_numbers",
         "integers",
+        "loops",
         "math"
       ]
     },
@@ -378,8 +378,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "loops",
         "games",
+        "loops",
         "maps",
         "strings"
       ]
@@ -418,9 +418,9 @@
       "difficulty": 1,
       "topics": [
         "conditionals",
-        "loops",
         "filtering",
         "integers",
+        "loops",
         "maps",
         "math"
       ]
@@ -433,8 +433,8 @@
       "difficulty": 1,
       "topics": [
         "conditionals",
-        "loops",
         "filtering",
+        "loops",
         "sequences"
       ]
     },
@@ -459,9 +459,9 @@
       "difficulty": 2,
       "topics": [
         "conditionals",
-        "loops",
         "filtering",
         "integers",
+        "loops",
         "maps",
         "math"
       ]
@@ -499,8 +499,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "loops",
         "integers",
+        "loops",
         "math",
         "sequences"
       ]
@@ -523,6 +523,18 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
+      "topics": [
+        "loops",
+        "sequences",
+        "strings"
+      ]
+    },
+    {
+      "slug": "binary-search",
+      "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
         "loops",
         "sequences",
