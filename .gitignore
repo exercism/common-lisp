@@ -5,5 +5,7 @@
 tmp
 bin/configlet
 bin/configlet.exe
+bin/canonical_data_syncer
+bin/canonical_data_syncer.exe
 bin/generate-exercise
 *~
