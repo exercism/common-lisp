@@ -44,5 +44,5 @@ jobs:
       - name: Run exercises with ${{steps.install-lisp.outputs.lisp-version}}
         env:
           LISP: ${{matrix.lisp}}
-        run: ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
+        run: ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:ci-build)' -q
 
