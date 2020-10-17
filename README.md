@@ -1,9 +1,9 @@
-# Common Lisp
+# Common Lisp 
 
-[![Build Status](https://travis-ci.org/exercism/common-lisp.svg)](https://travis-ci.org/exercism/common-lisp)
+[![Configlet Lint Status](https://github.com/exercism/common-lisp/workflows/configlet-lint/badge.svg)](https://github.com/exercism/common-lisp/workflows/configlet-lint/badge.svg)
+[![Exercise Test Status](https://github.com/exercism/common-lisp/workflows/exercise-tests/badge.svg)](https://github.com/exercism/common-lisp/workflows/exercise-tests/badge.svg)
 
 Exercism exercises in Lisp
-
 
 ## Contributing to the Common Lisp Track
 
