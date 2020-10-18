@@ -8,13 +8,11 @@
            #:test-exercises
            #:problems-p
            #:full-build
-           #:travis-build)
+           #:ci-build)
   (:documentation "xlisp-test
 
 Script for running the tests for exercism exercises of the xlisp
 track. Used for integration testing on new and changed exercises.
-
-See .travis.yml for how it's run.
 
 http://exercism.io"))
 
@@ -172,6 +170,6 @@ http://exercism.io"))
   "Execute a full build including all tests."
   (test-exercises))
 
-(defun travis-build ()
+(defun ci-build ()
   "Execute a full build, and if it fails, exit with an error code."
   (when (full-build) (uiop:quit +exit-tests-failed+)))
