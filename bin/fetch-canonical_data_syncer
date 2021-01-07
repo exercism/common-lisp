@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 set -eo pipefail
 
@@ -35,7 +35,6 @@ fi
 FILENAME="canonical_data_syncer-${OS}-${ARCH}.${EXT}"
 
 get_url () {
-    ##    curl --header "$HEADER" -s --location "${FINAL_RELEASE}" |
     curl -s --location "${FINAL_RELEASE}" |
         awk -v filename=$FILENAME '$1 ~ /browser_download_url/ && $2 ~ filename { print $2 }' |
         tr -d '"'
