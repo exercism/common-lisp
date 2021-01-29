@@ -1,6 +1,12 @@
 {
   "language": "Common Lisp",
   "active": true,
+  "status": {
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
+  },
   "blurb": "A programmable programming language.",
   "version": 3,
   "foregone": [
