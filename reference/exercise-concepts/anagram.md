@@ -26,9 +26,9 @@ have a type concept of `sequence` which is a super-concept of types
 such as `list`, `array` etc..
 
 [v2-exercise]: https://github.com/exercism/common-lisp/blob/master/exercises/anagram/example.lisp
-[concepts]: ../../../../reference/concepts
-[types]: ../../../../reference/types
-[strings]: ../../../../reference/types/string.md
-[functions]: ../../../../reference/concepts/functions.md
-[hof]: ../../../../reference/concepts/higher_order_functions.md
-[sameness]: ../../../../reference/concepts/sameness.md
+[concepts]: https://github.com/exercism/v3/blob/main/reference/concepts
+[types]: https://github.com/exercism/v3/blob/main/reference/types
+[strings]: https://github.com/exercism/v3/blob/main/reference/types/string.md
+[functions]: https://github.com/exercism/v3/blob/main/reference/concepts/functions.md
+[hof]: https://github.com/exercism/v3/blob/main/reference/concepts/higher_order_functions.md
+[sameness]: https://github.com/exercism/v3/blob/main/reference/concepts/sameness.md

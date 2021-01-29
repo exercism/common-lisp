@@ -104,11 +104,11 @@ post them as comments in the exercise's GitHub issue.
 [analyzer]: https://github.com/exercism/common-lisp-analyzer
 [representer]: https://github.com/exercism/common-lisp-representer
 [concept-exercises]: ../exercises/concept/README.md
-[how-to-implement-a-concept-exercise]: ../../../docs/maintainers/generic-how-to-implement-a-concept-exercise.md
-[docs-concept-exercises]: ../../../docs/concept-exercises.md
-[docs-rationale-for-v3]: ../../../docs/rationale-for-v3.md
-[docs-features-of-v3]: ../../../docs/features-of-v3.md
+[how-to-implement-a-concept-exercise]: https://github.com/exercism/v3/blob/main/docs/maintainers/generic-how-to-implement-a-concept-exercise.md
+[docs-concept-exercises]: https://github.com/exercism/v3/blob/main/docs/concept-exercises.md
+[docs-rationale-for-v3]: https://github.com/exercism/v3/blob/main/docs/rationale-for-v3.md
+[docs-features-of-v3]: https://github.com/exercism/v3/blob/main/docs/features-of-v3.md
 [anatomy-of-a-concept-exercise]: https://www.youtube.com/watch?v=gkbBqd7hPrA
-[reference]: ../../../reference
+[reference]: https://github.com/exercism/v3/blob/main/reference
 [socks-and-sexprs]: ../exercises/concept/socks-and-sexprs
 [scaffolder]: ../bin/generate-scaffolding/README.md
