@@ -2,6 +2,7 @@
   "language": "Common Lisp",
   "active": true,
   "blurb": "A programmable programming language.",
+  "version": 3,
   "foregone": [
     "accumulate",
     "bank-account"
