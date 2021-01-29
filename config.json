@@ -14,10 +14,6 @@
     "indent_style": "space",
     "indent_size": 2
   },
-  "foregone": [
-    "accumulate",
-    "bank-account"
-  ],
   "exercises": {
     "practice": [
       {
@@ -553,6 +549,10 @@
           "transforming"
         ]
       }
+    ],
+    "foregone": [
+      "accumulate",
+      "bank-account"
     ]
   }
 }
