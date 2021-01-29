@@ -906,7 +906,7 @@
     "paradigm/object_oriented",
     "paradigm/procedural",
     "typing/dynamic",
-    "typing/weak",
+    "typing/strong",
     "execution_mode/compiled",
     "execution_mode/interpreted",
     "platform/windows",
