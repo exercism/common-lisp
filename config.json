@@ -1,5 +1,6 @@
 {
   "language": "Common Lisp",
+  "slug": "common-lisp",
   "active": true,
   "status": {
     "concept_exercises": false,
