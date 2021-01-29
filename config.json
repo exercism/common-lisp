@@ -26,7 +26,8 @@
           "cons",
           "symbols"
         ],
-        "prerequisites": []
+        "prerequisites": [],
+        "status": "wip"
       },
       {
         "slug": "key-comparison",
@@ -42,7 +43,8 @@
           "integers",
           "cons",
           "arrays"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "pizza-pi",
@@ -55,7 +57,8 @@
         ],
         "prerequisites": [
           "expressions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "destructuring-assignment",
@@ -69,7 +72,8 @@
           "functions",
           "loop.basic",
           "variables"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "code-as-data",
@@ -85,7 +89,8 @@
           "expressions",
           "enumeration",
           "higher-order-functions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "multiple-values",
@@ -99,7 +104,8 @@
           "variables",
           "functions",
           "expressions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "hash-tables",
@@ -114,7 +120,8 @@
           "symbols",
           "variables",
           "higher-order-functions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "structures",
@@ -127,7 +134,8 @@
           "functions",
           "variables",
           "symbols"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "characters",
@@ -138,7 +146,8 @@
         "prerequisites": [
           "integers",
           "truthy-and-falsy"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "sets",
@@ -152,7 +161,8 @@
           "cons",
           "sameness",
           "functions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "assignment",
@@ -165,7 +175,8 @@
           "lists",
           "strings",
           "expressions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "nested-functions",
@@ -178,7 +189,8 @@
           "functions",
           "higher-order-functions",
           "symbols"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "recursion",
@@ -194,7 +206,8 @@
           "arithmetic",
           "lists",
           "cons"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "anonymous-functions",
@@ -207,7 +220,8 @@
           "higher-order-functions",
           "variables",
           "expressions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "higher-order-functions",
@@ -221,7 +235,8 @@
           "functions",
           "truthy-and-falsy",
           "symbols"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "leslies-lists",
@@ -234,7 +249,8 @@
           "cons",
           "symbols",
           "arithmetic"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "packages",
@@ -246,7 +262,8 @@
           "variables",
           "symbols",
           "functions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "enumeration",
@@ -259,7 +276,8 @@
           "arithmetic",
           "strings",
           "lists"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "strings",
@@ -270,7 +288,8 @@
         ],
         "prerequisites": [
           "expressions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "variables",
@@ -285,7 +304,8 @@
           "floating-point-numbers",
           "integers",
           "printing"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "pal-picker",
@@ -301,7 +321,8 @@
           "arithmetic",
           "symbols",
           "strings"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "lillys-lasagna",
@@ -314,7 +335,8 @@
           "expressions",
           "integers",
           "arithmetic"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "lillys-lasagna-leftovers",
@@ -330,7 +352,8 @@
           "functions",
           "symbols",
           "conditionals"
-        ]
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
