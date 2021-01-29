@@ -900,5 +900,22 @@
     }
   ],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "paradigm/functional",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "paradigm/procedural",
+    "typing/dynamic",
+    "typing/weak",
+    "execution_mode/compiled",
+    "execution_mode/interpreted",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "runtime/language_specific",
+    "used_for/artificial_intelligence",
+    "used_for/backends",
+    "used_for/games",
+    "used_for/scripts"
+  ]
 }
