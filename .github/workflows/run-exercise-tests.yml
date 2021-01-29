@@ -19,7 +19,7 @@ jobs:
 
       - name: Cache .roswell
         id: cache-dot-roswell
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.3
         with:
           path: ~/.roswell
           key: ${{ runner.os }}-dot-roswell-${{ matrix.lisp }}-${{ hashFiles('**/*.asd') }}
