@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Install SBCL & QuickLisp
         run: |
           sudo apt install sbcl
@@ -14,6 +17,7 @@ jobs:
           sbcl --disable-debugger \
                --load quicklisp.lisp \
                --eval "(quicklisp-quickstart:install)" \
+               --eval "(push (merge-pathnames \"src/\") asdf:*central-registry*)" \
                --eval "(sb-ext:save-lisp-and-die \"${HOME}/ql-sbcl\" :executable t)" \
                --quit
 
@@ -21,5 +25,8 @@ jobs:
         run: |
           ${HOME}/ql-sbcl --eval "(format t \"~A-~A\" (lisp-implementation-type) (lisp-implementation-version))"
 
-          
-        
+      - name: Run Tests
+        run: |
+          ${HOME}/ql-sbcl --eval "(ql:quickload \"test-exercises\")" \
+                          --eval "(asdf:test-system \"test-exercises\")" \
+                          --quit
