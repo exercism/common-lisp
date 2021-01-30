@@ -1,0 +1,25 @@
+name: Test Exercises
+
+on: [push, pull_request]
+
+jobs:
+  sbcl-install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install SBCL & QuickLisp
+        run: |
+          sudo apt install sbcl
+          curl -O http://beta.quicklisp.org/quicklisp.lisp
+          sbcl --disable-debugger \
+               --load quicklisp.lisp \
+               --eval "(quicklisp-quickstart:install)" \
+               --eval "(sb-ext:save-lisp-and-die \"${HOME}/ql-sbcl\" :executable t)" \
+               --quit
+
+      - name: SBCL Version
+        run: |
+          ${HOME}/ql-sbcl --eval "(format t \"~A-~A\" (lisp-implementation-type) (lisp-implementation-version))"
+
+          
+        
