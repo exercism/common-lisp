@@ -1,7 +1,9 @@
 # Common Lisp 
 
-[![Configlet Lint Status](https://github.com/exercism/common-lisp/workflows/configlet-lint/badge.svg)](https://github.com/exercism/common-lisp/workflows/configlet-lint/badge.svg)
-[![Exercise Test Status](https://github.com/exercism/common-lisp/workflows/exercise-tests/badge.svg)](https://github.com/exercism/common-lisp/workflows/exercise-tests/badge.svg)
+[![Configlet Lint Status](https://github.com/exercism/common-lisp/workflows/Configlet%20CI/badge.svg)](https://github.com/exercism/common-lisp/workflows/Configlet%20CI/badge.svg)
+
+
+<!-- [![Exercise Test Status](https://github.com/exercism/common-lisp/workflows/exercise-tests/badge.svg)](https://github.com/exercism/common-lisp/workflows/exercise-tests/badge.svg) -->
 
 Exercism exercises in Lisp
 
