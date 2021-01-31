@@ -13,28 +13,28 @@
    :initial-value (make-hash-table)))
 
 (define-test empty-dna-strand-has-no-adenine
-  (assert-equal 0 (dna:dna-count #\A "")))
+  (assert-equal 0 (nucleotide-count:dna-count #\A "")))
 
 (define-test empty-dna-strand-has-no-nucleotides
   (assert-equalp (make-hash '((#\A 0) (#\T 0) (#\C 0) (#\G 0)))
-      (dna:nucleotide-counts "")))
+      (nucleotide-count:nucleotide-counts "")))
 
 (define-test repetitive-cytosine-gets-counted
-  (assert-equal 5 (dna:dna-count #\C "CCCCC")))
+  (assert-equal 5 (nucleotide-count:dna-count #\C "CCCCC")))
 
 (define-test repetitive-sequence-has-only-guanine
   (assert-equalp (make-hash '((#\A 0) (#\T 0) (#\C 0) (#\G 8)))
-      (dna:nucleotide-counts "GGGGGGGG")))
+      (nucleotide-count:nucleotide-counts "GGGGGGGG")))
 
 (define-test counts-only-thymine
-  (assert-equal 1 (dna:dna-count #\T "GGGGGTAACCCGG")))
+  (assert-equal 1 (nucleotide-count:dna-count #\T "GGGGGTAACCCGG")))
 
 (define-test validates-nucleotides
-  (assert-error 'dna:invalid-nucleotide (dna:dna-count #\X "GACT")))
+  (assert-error 'nucleotide-count:invalid-nucleotide (nucleotide-count:dna-count #\X "GACT")))
 
 (define-test counts-all-nucleotides
   (assert-equalp (make-hash '((#\A 20) (#\T 21) (#\G 17) (#\C 12)))
-      (dna:nucleotide-counts
+      (nucleotide-count:nucleotide-counts
        "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")))
 
 #-xlisp-test

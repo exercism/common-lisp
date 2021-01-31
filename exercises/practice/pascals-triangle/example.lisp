@@ -1,8 +1,8 @@
-(defpackage #:pascal
+(defpackage #:pascals-triangle
   (:use #:common-lisp)
   (:export #:rows))
 
-(in-package #:pascal)
+(in-package #:pascals-triangle)
 
 (defun fact (n)
   (loop for i from 0 to n

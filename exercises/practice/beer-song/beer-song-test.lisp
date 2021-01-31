@@ -50,13 +50,13 @@
            ~%"))
 
 (define-test test-verse
-  (assert-equal +verse-8+ (beer:verse 8))
-  (assert-equal +verse-2+ (beer:verse 2))
-  (assert-equal +verse-1+ (beer:verse 1)))
+  (assert-equal +verse-8+ (beer-song:verse 8))
+  (assert-equal +verse-2+ (beer-song:verse 2))
+  (assert-equal +verse-1+ (beer-song:verse 1)))
 
 (define-test test-song
-  (assert-equal +song-8-6+ (beer:sing 8 6))
-  (assert-equal +song-3-0+ (beer:sing 3)))
+  (assert-equal +song-8-6+ (beer-song:sing 8 6))
+  (assert-equal +song-3-0+ (beer-song:sing 3)))
 
 #-xlisp-test
 (let ((*print-errors* t)

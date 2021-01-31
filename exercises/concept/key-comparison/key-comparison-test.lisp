@@ -41,7 +41,7 @@
 (test the-maze-of-strings "The key must match strings."
   (is (eq 'victory (open-room :room-strings #'key-strings))))
 
-(test the maze-of-case-insensitive-strings "The key must match strings regardless of case"
+(test the-maze-of-case-insensitive-strings "The key must match strings regardless of case"
   (is (eq 'victory (open-room :room-strings-case-insensitively
                               #'key-strings-case-insensitively))))
 

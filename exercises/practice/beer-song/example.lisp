@@ -1,8 +1,8 @@
-(defpackage #:beer
+(defpackage #:beer-song
   (:use #:common-lisp)
   (:export #:verse #:sing))
 
-(in-package #:beer)
+(in-package #:beer-song)
 
 (defgeneric bottles (n))
 (defmethod bottles (n) (format nil "~A bottle~:P" n))

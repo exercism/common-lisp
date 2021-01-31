@@ -1,9 +1,9 @@
 (in-package #:cl-user)
-(defpackage #:dna
+(defpackage #:nucleotide-count
   (:use #:common-lisp)
   (:export #:dna-count #:nucleotide-counts #:invalid-nucleotide))
 
-(in-package #:dna)
+(in-package #:nucleotide-count)
 
 (defun dna-count (nucleotide strand)
   "Returns a count of the given nucleotide appearing in a DNA strand."

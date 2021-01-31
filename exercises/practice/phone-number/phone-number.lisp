@@ -1,9 +1,9 @@
 (in-package #:cl-user)
-(defpackage #:phone
+(defpackage #:phone-number
   (:use #:common-lisp)
   (:export #:numbers #:area-code #:pretty-print))
 
-(in-package #:phone)
+(in-package #:phone-number)
 
 (defun numbers (phone-number)
   "Converts a phone number string into a string of digits."
