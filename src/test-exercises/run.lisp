@@ -11,7 +11,7 @@
          (progn
            (dolist (f (append solution-files exemplar-files test-files))
              (load-exercise-file data f))
-           (lisp-unit:run-tests :all (find-exercise-package data :test t)))
+           (list (lisp-unit:run-tests :all (find-exercise-package data :test t))))
       (delete-package (find-exercise-package data :test t))
       (delete-package (find-exercise-package data)))))
 
