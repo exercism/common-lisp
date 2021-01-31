@@ -12,8 +12,8 @@
            (dolist (f (append solution-files exemplar-files test-files))
              (load-exercise-file data f))
            (lisp-unit:run-tests :all (find-exercise-package data :test t)))
-      (delete-package (find-exercise-package data))
-      (delete-package (find-exercise-package data :test t)))))
+      (delete-package (find-exercise-package data :test t))
+      (delete-package (find-exercise-package data)))))
 
 (defun test-v3-exercise (data)
   (let ((test-files (aget :test (aget :files data)))
@@ -25,7 +25,9 @@
              (load-exercise-file data f))
            (fiveam:run (find-symbol
                         (format nil "~A-SUITE" (symbol-name (aget :slug data)))
-                        (find-exercise-package data :test t)))))))
+                        (find-exercise-package data :test t))))
+      (delete-package (find-exercise-package data :test t))
+      (delete-package (find-exercise-package data)))))
 
 (defun test-exercise (dir)
   (sb-ext:gc :full t)
