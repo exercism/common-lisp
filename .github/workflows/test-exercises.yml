@@ -3,7 +3,7 @@ name: Test Exercises
 on: [push, pull_request]
 
 jobs:
-  sbcl-install:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
