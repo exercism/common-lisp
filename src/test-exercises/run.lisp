@@ -33,7 +33,9 @@
   (sb-ext:gc :full t)
   (let ((data (gather-exercise-data dir)))
     (pairlis '(:exercise :results)
-              (list data
-                    (if (aget :v2 data)
-                        (test-v2-exercise data)
-                        (test-v3-exercise data))))))
+             (list data
+                   (handler-case
+                       (if (aget :v2 data)
+                           (test-v2-exercise data)
+                           (test-v3-exercise data))
+                     (error (c) (list c)))))))

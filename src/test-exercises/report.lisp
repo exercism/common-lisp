@@ -9,23 +9,28 @@
   (incf (getf totals :errors) (getf delta :errors))
   totals)
 
+(defun failure (obj) (format t "~&;;; >>>FAILURE: ~A" obj))
+
 (defgeneric report-test-result (result))
 
 (defmethod report-test-result ((result lisp-unit::test-results-db))
-  (dolist (f (append (lisp-unit:failed-tests result)
-                     (lisp-unit:error-tests result)))
-    (format t "~&;;; FAILURE: ~S" f))
+  (map nil #'failure (append (lisp-unit:failed-tests result)
+                             (lisp-unit:error-tests result)))
 
   (make-totals :pass (lisp-unit::pass result)
                :fail (lisp-unit::fail result)
                :errors (lisp-unit::exerr result)))
 
 (defmethod report-test-result ((result fiveam::test-failure))
-  (format t "~&;;; FAILURE: ~S" (fiveam::name (fiveam::test-case result)))
+  (failure (fiveam::name (fiveam::test-case result)))
   (make-totals :fail 1))
 
 (defmethod report-test-result ((result fiveam::test-passed))
   (make-totals :pass 1))
+
+(defmethod report-test-result ((result error))
+  (failure result)
+  (make-totals :errors 1))
 
 (defun report-result (result)
   (let ((exercise (aget :exercise result))
@@ -35,10 +40,11 @@
                               (add-totals totals (report-test-result result)))
                           results
                           :initial-value (make-totals))))
-    (format t "~&;; ~A ~A ~S"
-            (aget :type exercise)
-            (aget :slug exercise)
-            totals)
+
+      (format t "~&;; ~A ~A ~A"
+              (aget :type exercise)
+              (aget :slug exercise)
+              totals)
 
       totals)))
 
