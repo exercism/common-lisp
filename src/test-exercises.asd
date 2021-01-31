@@ -9,6 +9,11 @@
   :pathname "test-exercises"
   :serial t
   :components ((:file "packages")
+               (:file "utils")
+               (:file "exercises")
+               (:file "run")
+               (:file "report")
+               (:file "paths")
                (:file "main"))
 
   :perform (test-op (o c)
