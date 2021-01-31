@@ -32,6 +32,8 @@
 (defun test-exercise (dir)
   (sb-ext:gc :full t)
   (let ((data (gather-exercise-data dir)))
-    (if (aget :v2 data)
-        (test-v2-exercise data)
-        (test-v3-exercise data))))
+    (pairlis '(:exercise :results)
+              (list data
+                    (if (aget :v2 data)
+                        (test-v2-exercise data)
+                        (test-v3-exercise data))))))
