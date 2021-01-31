@@ -1,9 +1,9 @@
 (in-package #:cl-user)
-(defpackage #:beer
+(defpackage #:beer-song
   (:use #:common-lisp)
   (:export #:verse #:sing))
 
-(in-package #:beer)
+(in-package #:beer-song)
 (defun verse (n)
   "Returns a string verse for a given number."
   )

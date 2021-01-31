@@ -1,8 +1,8 @@
-(defpackage #:phone
+(defpackage #:phone-number
   (:use #:common-lisp)
   (:export #:numbers #:area-code #:pretty-print))
 
-(in-package #:phone)
+(in-package #:phone-number)
 
 (defun is-digit-p (c) (char<= #\0 c #\9))
 
@@ -11,7 +11,7 @@
 
 (defun trim-leading-one (string)
   (if (and (= 11 (length string))
-	   (equal #\1 (char string 0)))
+           (equal #\1 (char string 0)))
       (subseq string 1)
       string))
 
@@ -20,8 +20,8 @@
 
 (defun numbers (number-string)
   (reduce #'(lambda (s fn) (funcall fn s))
-	  '(strip-non-digits trim-leading-one ensure-valid)
-	  :initial-value number-string))
+          '(strip-non-digits trim-leading-one ensure-valid)
+          :initial-value number-string))
 
 (defun area-code (number-string)
   (subseq (numbers number-string) 0 3))
@@ -34,6 +34,6 @@
 
 (defun pretty-print (number-string)
   (format nil "(~D) ~D-~D"
-	  (area-code number-string)
-	  (exchange number-string)
-	  (subscriber number-string)))
+          (area-code number-string)
+          (exchange number-string)
+          (subscriber number-string)))

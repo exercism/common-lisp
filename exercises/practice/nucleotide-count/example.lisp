@@ -1,8 +1,8 @@
-(defpackage #:dna
+(defpackage #:nucleotide-count
   (:use #:common-lisp)
   (:export #:dna-count #:nucleotide-counts #:invalid-nucleotide))
 
-(in-package #:dna)
+(in-package #:nucleotide-count)
 
 (define-condition invalid-nucleotide (error) ())
 
@@ -18,5 +18,5 @@
 
 (defun nucleotide-counts (strand)
   (reduce #'(lambda (h c) (setf (gethash c h) (dna-count c strand)) h)
-	  +valid-nucleotides+
-	  :initial-value (make-hash-table)))
+          +valid-nucleotides+
+          :initial-value (make-hash-table)))

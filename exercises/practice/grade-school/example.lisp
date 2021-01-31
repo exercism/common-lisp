@@ -1,8 +1,8 @@
-(defpackage #:school
+(defpackage #:grade-school
   (:use #:common-lisp)
   (:export #:make-school #:add #:grade-roster #:grade #:sorted))
 
-(in-package #:school)
+(in-package #:grade-school)
 
 (defclass school ()
   ((roster :accessor roster :initform (make-hash-table))))
