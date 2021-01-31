@@ -4,7 +4,7 @@
   :author "Mark Simpson"
   :mailto "verdammelt@gmail.com"
 
-  :depends-on ()
+  :depends-on ("cl-json" "fiveam" "lisp-unit")
 
   :pathname "test-exercises"
   :serial t
