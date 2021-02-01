@@ -3,7 +3,7 @@ name: Test Exercises
 on: [push, pull_request]
 
 jobs:
-  run-tests:
+  install-sbcl:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,9 +21,26 @@ jobs:
                --eval "(sb-ext:save-lisp-and-die \"${HOME}/ql-sbcl\" :executable t)" \
                --quit
 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: sbcl-and-quicklisp
+          if-no-files-found: error
+          path: |
+            ~/ql-sbcl
+            ~/quicklisp
+
       - name: SBCL Version
         run: |
           ${HOME}/ql-sbcl --eval "(format t \"~A-~A\" (lisp-implementation-type) (lisp-implementation-version))"
+
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: sbcl-and-quicklisp
+    
 
       - name: Run Tests
         run: |
