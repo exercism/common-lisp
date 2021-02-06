@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "All of Computer Science",
-  "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-"
-}
+{"v2":true,"source_url":"http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-","source":"All of Computer Science","files":{"test":["trinary-test.lisp"],"solution":["trinary.lisp"],"example":["example.lisp"]},"authors":null}

@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "Problem 6 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=6"
-}
+{"v2":true,"source_url":"http://projecteuler.net/problem=6","source":"Problem 6 at Project Euler","files":{"test":["difference-of-squares-test.lisp"],"solution":["difference-of-squares.lisp"],"example":["example.lisp"]},"authors":null}

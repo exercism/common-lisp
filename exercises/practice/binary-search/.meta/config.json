@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"
-}
+{"v2":true,"source_url":"http://en.wikipedia.org/wiki/Binary_search_algorithm","source":"Wikipedia","files":{"test":["binary-search-test.lisp"],"solution":["binary-search.lisp"],"example":["example.lisp"]},"authors":null}

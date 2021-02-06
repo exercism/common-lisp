@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month",
-  "source_url": "https://twitter.com/copiousfreetime"
-}
+{"v2":true,"source_url":"https://twitter.com/copiousfreetime","source":"Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month","files":{"test":["meetup-test.lisp"],"solution":["meetup.lisp"],"example":["example.lisp"]},"authors":null}

@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "A pairing session with Phil Battos at gSchool",
-  "source_url": "http://gschool.it"
-}
+{"v2":true,"source_url":"http://gschool.it","source":"A pairing session with Phil Battos at gSchool","files":{"test":["grade-school-test.lisp"],"solution":["grade-school.lisp"],"example":["example.lisp"]},"authors":null}

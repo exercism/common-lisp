@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "Pascal's Triangle at Wolfram Math World",
-  "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"
-}
+{"v2":true,"source_url":"http://mathworld.wolfram.com/PascalsTriangle.html","source":"Pascal's Triangle at Wolfram Math World","files":{"test":["pascals-triangle-test.lisp"],"solution":["pascals-triangle.lisp"],"example":["example.lisp"]},"authors":null}

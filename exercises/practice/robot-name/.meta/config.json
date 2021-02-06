@@ -1,9 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "A debugging session with Paul Blackwell at gSchool."
-}
+{"v2":true,"source":"A debugging session with Paul Blackwell at gSchool.","files":{"test":["robot-name-test.lisp"],"solution":["robot-name.lisp"],"example":["example.lisp"]},"authors":null}
