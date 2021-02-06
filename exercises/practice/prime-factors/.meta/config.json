@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "The Prime Factors Kata by Uncle Bob",
-  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"
-}
+{"v2":true,"source_url":"http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata","source":"The Prime Factors Kata by Uncle Bob","files":{"test":["prime-factors-test.lisp"],"solution":["prime-factors.lisp"],"example":["example.lisp"]},"authors":null}

@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Isogram"
-}
+{"v2":true,"source_url":"https://en.wikipedia.org/wiki/Isogram","source":"Wikipedia","files":{"test":["isogram-test.lisp"],"solution":["isogram.lisp"],"example":["example.lisp"]},"authors":null}

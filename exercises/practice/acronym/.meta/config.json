@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "Julien Vanier",
-  "source_url": "https://github.com/monkbroc"
-}
+{"v2":true,"source_url":"https://github.com/monkbroc","source":"Julien Vanier","files":{"test":["acronym-test.lisp"],"solution":["acronym.lisp"],"example":["example.lisp"]},"authors":null}

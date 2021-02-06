@@ -1,9 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
-}
+{"v2":true,"source":"This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour.","files":{"test":["word-count-test.lisp"],"solution":["word-count.lisp"],"example":["example.lisp"]},"authors":null}

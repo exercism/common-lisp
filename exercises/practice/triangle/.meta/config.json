@@ -1,10 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source": "The Ruby Koans triangle project, parts 1 & 2",
-  "source_url": "http://rubykoans.com"
-}
+{"v2":true,"source_url":"http://rubykoans.com","source":"The Ruby Koans triangle project, parts 1 & 2","files":{"test":["triangle-test.lisp"],"solution":["triangle.lisp"],"example":["example.lisp"]},"authors":null}

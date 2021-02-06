@@ -1,9 +1,1 @@
-{
-  "authors": [],
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": []
-  },
-  "source_url": "https://github.com/exercism/problem-specifications/issues/757"
-}
+{"v2":true,"source_url":"https://github.com/exercism/problem-specifications/issues/757","files":{"test":["two-fer-test.lisp"],"solution":["two-fer.lisp"],"example":["example.lisp"]},"authors":null}
