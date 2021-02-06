@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://pine.fm/LearnToProgram/?Chapter=06","source":"Learn to Program by Chris Pine","files":{"test":["beer-song-test.lisp"],"solution":["beer-song.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://pine.fm/LearnToProgram/?Chapter=06",
+  "source": "Learn to Program by Chris Pine",
+  "files": {
+    "test": ["beer-song-test.lisp"],
+    "solution": ["beer-song.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

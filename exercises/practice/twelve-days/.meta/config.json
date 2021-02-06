@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)","source":"Wikipedia","files":{"test":["twelve-days-test.lisp"],"solution":["twelve-days.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)",
+  "source": "Wikipedia",
+  "files": {
+    "test": ["twelve-days-test.lisp"],
+    "solution": ["twelve-days.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

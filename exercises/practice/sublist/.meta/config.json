@@ -1,1 +1,9 @@
-{"v2":true,"files":{"test":["sublist-test.lisp"],"solution":["sublist.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "files": {
+    "test": ["sublist-test.lisp"],
+    "solution": ["sublist.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

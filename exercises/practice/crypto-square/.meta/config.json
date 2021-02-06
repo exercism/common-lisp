@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html","source":"J Dalbey's Programming Practice problems","files":{"test":["crypto-square-test.lisp"],"solution":["crypto-square.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html",
+  "source": "J Dalbey's Programming Practice problems",
+  "files": {
+    "test": ["crypto-square-test.lisp"],
+    "solution": ["crypto-square.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

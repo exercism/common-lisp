@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://www.javaranch.com/leap.jsp","source":"JavaRanch Cattle Drive, exercise 3","files":{"test":["leap-test.lisp"],"solution":["leap.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://www.javaranch.com/leap.jsp",
+  "source": "JavaRanch Cattle Drive, exercise 3",
+  "files": {
+    "test": ["leap-test.lisp"],
+    "solution": ["leap.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

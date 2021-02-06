@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://rosalind.info/problems/hamm/","source":"The Calculating Point Mutations problem at Rosalind","files":{"test":["hamming-test.lisp"],"solution":["hamming.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://rosalind.info/problems/hamm/",
+  "source": "The Calculating Point Mutations problem at Rosalind",
+  "files": {
+    "test": ["hamming-test.lisp"],
+    "solution": ["hamming.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

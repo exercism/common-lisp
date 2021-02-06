@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"","source":"Inspired by an interview question at a famous company.","files":{"test":["robot-simulator-test.lisp"],"solution":["robot-simulator.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "",
+  "source": "Inspired by an interview question at a famous company.",
+  "files": {
+    "test": ["robot-simulator-test.lisp"],
+    "solution": ["robot-simulator.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

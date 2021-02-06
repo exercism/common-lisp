@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://en.wikipedia.org/wiki/Luhn_algorithm","source":"The Luhn Algorithm on Wikipedia","files":{"test":["luhn-test.lisp"],"solution":["luhn.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm",
+  "source": "The Luhn Algorithm on Wikipedia",
+  "files": {
+    "test": ["luhn-test.lisp"],
+    "solution": ["luhn.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

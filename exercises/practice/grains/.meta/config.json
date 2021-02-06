@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://www.javaranch.com/grains.jsp","source":"JavaRanch Cattle Drive, exercise 6","files":{"test":["grains-test.lisp"],"solution":["grains.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://www.javaranch.com/grains.jsp",
+  "source": "JavaRanch Cattle Drive, exercise 6",
+  "files": {
+    "test": ["grains-test.lisp"],
+    "solution": ["grains.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://shop.oreilly.com/product/0636920029687.do","source":"Taken from Chapter 2 of Functional Thinking by Neal Ford.","files":{"test":["perfect-numbers-test.lisp"],"solution":["perfect-numbers.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://shop.oreilly.com/product/0636920029687.do",
+  "source": "Taken from Chapter 2 of Functional Thinking by Neal Ford.",
+  "files": {
+    "test": ["perfect-numbers-test.lisp"],
+    "solution": ["perfect-numbers.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}
