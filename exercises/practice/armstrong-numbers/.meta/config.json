@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"https://en.wikipedia.org/wiki/Narcissistic_number","source":"Wikipedia","files":{"test":["armstrong-numbers-test.lisp"],"solution":["armstrong-numbers.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number",
+  "source": "Wikipedia",
+  "files": {
+    "test": ["armstrong-numbers-test.lisp"],
+    "solution": ["armstrong-numbers.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

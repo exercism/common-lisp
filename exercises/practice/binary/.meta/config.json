@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-","source":"All of Computer Science","files":{"test":["binary-test.lisp"],"solution":["binary.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-",
+  "source": "All of Computer Science",
+  "files": {
+    "test": ["binary-test.lisp"],
+    "solution": ["binary.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

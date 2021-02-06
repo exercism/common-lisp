@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://tutorials.jumpstartlab.com/projects/eventmanager.html","source":"Event Manager by JumpstartLab","files":{"test":["phone-number-test.lisp"],"solution":["phone-number.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html",
+  "source": "Event Manager by JumpstartLab",
+  "files": {
+    "test": ["phone-number-test.lisp"],
+    "solution": ["phone-number.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

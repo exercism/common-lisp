@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://jumpstartlab.com","source":"The Jumpstart Lab team","files":{"test":["etl-test.lisp"],"solution":["etl.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://jumpstartlab.com",
+  "source": "The Jumpstart Lab team",
+  "files": {
+    "test": ["etl-test.lisp"],
+    "solution": ["etl.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

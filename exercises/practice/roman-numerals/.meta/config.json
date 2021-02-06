@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals","source":"The Roman Numeral Kata","files":{"test":["roman-numerals-test.lisp"],"solution":["roman-numerals.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals",
+  "source": "The Roman Numeral Kata",
+  "files": {
+    "test": ["roman-numerals-test.lisp"],
+    "solution": ["roman-numerals.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

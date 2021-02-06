@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://en.wikipedia.org/wiki/Atbash","source":"Wikipedia","files":{"test":["atbash-cipher-test.lisp"],"solution":["atbash-cipher.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://en.wikipedia.org/wiki/Atbash",
+  "source": "Wikipedia",
+  "files": {
+    "test": ["atbash-cipher-test.lisp"],
+    "solution": ["atbash-cipher.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

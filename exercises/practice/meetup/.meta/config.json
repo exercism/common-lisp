@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"https://twitter.com/copiousfreetime","source":"Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month","files":{"test":["meetup-test.lisp"],"solution":["meetup.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "https://twitter.com/copiousfreetime",
+  "source": "Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month",
+  "files": {
+    "test": ["meetup-test.lisp"],
+    "solution": ["meetup.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

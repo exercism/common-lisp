@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes","source":"Sieve of Eratosthenes at Wikipedia","files":{"test":["sieve-test.lisp"],"solution":["sieve.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes",
+  "source": "Sieve of Eratosthenes at Wikipedia",
+  "files": {
+    "test": ["sieve-test.lisp"],
+    "solution": ["sieve.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

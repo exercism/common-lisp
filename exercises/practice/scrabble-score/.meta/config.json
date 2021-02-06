@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"https://github.com/rchatley/extreme_startup","source":"Inspired by the Extreme Startup game","files":{"test":["scrabble-score-test.lisp"],"solution":["scrabble-score.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "https://github.com/rchatley/extreme_startup",
+  "source": "Inspired by the Extreme Startup game",
+  "files": {
+    "test": ["scrabble-score-test.lisp"],
+    "solution": ["scrabble-score.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}

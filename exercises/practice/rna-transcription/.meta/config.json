@@ -1,1 +1,11 @@
-{"v2":true,"source_url":"http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html","source":"Hyperphysics","files":{"test":["rna-transcription-test.lisp"],"solution":["rna-transcription.lisp"],"example":["example.lisp"]},"authors":null}
+{
+  "v2": true,
+  "source_url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html",
+  "source": "Hyperphysics",
+  "files": {
+    "test": ["rna-transcription-test.lisp"],
+    "solution": ["rna-transcription.lisp"],
+    "example": ["example.lisp"]
+  },
+  "authors": []
+}
