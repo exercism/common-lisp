@@ -2,16 +2,15 @@
 
 (defun slurp-exercise-config (dir)
   (let ((config-file (merge-pathnames ".meta/config.json" dir)))
-    (if (probe-file config-file)
-        (cl-json:decode-json-from-source config-file)
-        (error 'file-error :pathname config-file))))
+    (with-open-file (input config-file :direction :input :if-does-not-exist :error)
+      (yason:parse input :object-key-fn #'keywordize :object-as :alist))))
 
 (defun gather-exercise-data (dir)
   (destructuring-bind (type slug)
       (mapcar #'keywordize (last (pathname-directory dir) 2))
     (let ((config (slurp-exercise-config dir)))
       (pairlis '(:directory :type :slug :files :v2)
-               (list dir type slug (aget :files config) (aget :v-2 config))))))
+               (list dir type slug (aget :files config) (aget :v2 config))))))
 
 (defun load-exercise-file (exercise file)
   (let ((*default-pathname-defaults* (aget :directory exercise))
