@@ -16,7 +16,8 @@
 (defun load-exercise-file (exercise file)
   (let ((*default-pathname-defaults* (aget :directory exercise))
         (*load-verbose* t))
-    (load file)))
+    (handler-bind ((style-warning #'muffle-warning))
+      (load file))))
 
 (defun find-exercise-package (exercise &key (test nil))
   (let ((slug (symbol-name (aget :slug exercise))))
