@@ -1188,7 +1188,38 @@
       "blurb": "TODO: add blurb for scope concept"
     }
   ],
-  "key_features": [],
+  "key_features": [
+    {
+      "icon": "feature-interactive",
+      "title": "Interactive",
+      "content": "Common Lisp has a full featured REPL, development can happen as a 'conversation' with the system."
+    },
+    {
+      "icon": "feature-inspectable",
+      "title": "Inspectible",
+      "content": "Common Lisp is fully inspectable with functions such as `inspect`, `documentation`, and `describe`."
+    },
+    {
+      "icon": "feature-homoiconicity",
+      "title": "Homoiconicity",
+      "content": "Code has the same structure as data, allowing for powerful macros: code that writes code."
+    },
+    {
+      "icon": "feature-extensible",
+      "title": "Extensible",
+      "content": "Generic functions allow for extending existing features by specializing, overriding or wrapping."
+    },
+    {
+      "icon": "feature-standardized",
+      "title": "Standardized",
+      "content": "The language is very stable, code written 30+ years ago will still run 30+ years from now."
+    },
+    {
+      "icon": "feature-multiple-implementations",
+      "title": "Multiple Implementations",
+      "content": "Multiple implementations provide choices to match your needs: JVM? embedded? optimized?"
+    }
+  ],
   "tags": [
     "paradigm/functional",
     "paradigm/imperative",
