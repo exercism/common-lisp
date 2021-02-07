@@ -12,7 +12,9 @@
          (progn
            (dolist (f (append solution-files exemplar-files test-files))
              (load-exercise-file data f))
-           (list (lisp-unit:run-tests :all (find-exercise-package data :test t))))
+           (list
+            (let ((lisp-unit:*summarize-results* nil))
+              (lisp-unit:run-tests :all (find-exercise-package data :test t)))))
       (delete-package (find-exercise-package data :test t))
       (delete-package (find-exercise-package data)))))
 
@@ -24,9 +26,10 @@
          (progn
            (dolist (f (append test-files exemplar-files))
              (load-exercise-file data f))
-           (fiveam:run (find-symbol
-                        (format nil "~A-SUITE" (symbol-name (aget :slug data)))
-                        (find-exercise-package data :test t))))
+           (let ((fiveam:*print-names* nil))
+             (fiveam:run (find-symbol
+                          (format nil "~A-SUITE" (symbol-name (aget :slug data)))
+                          (find-exercise-package data :test t)))))
       (delete-package (find-exercise-package data :test t))
       (delete-package (find-exercise-package data)))))
 
