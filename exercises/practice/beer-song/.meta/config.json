@@ -3,9 +3,15 @@
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=06",
   "source": "Learn to Program by Chris Pine",
   "files": {
-    "test": ["beer-song-test.lisp"],
-    "solution": ["beer-song.lisp"],
-    "example": ["example.lisp"]
+    "test": [
+      "beer-song-test.lisp"
+    ],
+    "solution": [
+      "beer-song.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
   "authors": []
 }
