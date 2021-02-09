@@ -2,9 +2,15 @@
   "v2": true,
   "source_url": "https://github.com/exercism/problem-specifications/issues/757",
   "files": {
-    "test": ["two-fer-test.lisp"],
-    "solution": ["two-fer.lisp"],
-    "example": ["example.lisp"]
+    "test": [
+      "two-fer-test.lisp"
+    ],
+    "solution": [
+      "two-fer.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
   "authors": []
 }
