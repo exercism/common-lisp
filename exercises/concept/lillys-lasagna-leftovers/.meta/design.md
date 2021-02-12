@@ -1,3 +1,5 @@
+# Design
+
 ## Goal
 
 This exercise should focus on teaching about the special types of arguments to `defun`: `&key`, `&rest`, `&optional`.

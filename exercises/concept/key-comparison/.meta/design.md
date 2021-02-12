@@ -1,3 +1,5 @@
+# Design
+
 ## Learning objectives
 
 - Be familiar with `eq`, `eql`, `equal` and `equalp` and how each builds upon the previous.

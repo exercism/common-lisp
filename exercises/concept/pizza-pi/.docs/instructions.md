@@ -1,3 +1,5 @@
+# Instructions
+
 Lilly, a culinarily-inclined Lisp Alien, wants to throw a pizza party for
 themselves and some friends but, wanting to make the most of their ingredients, would
 like to know exactly how much of each component they'll need before starting.

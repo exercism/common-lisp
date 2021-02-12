@@ -1,3 +1,5 @@
+# Instructions
+
 Leslie the Lisp Alien needs to do some shopping. It is very important to have a shopping list. One needs to add things to it, and remove things from it.
 
 Of course simple pen and paper will not do for a Lisp Alien. "List" is most of the word "Lisp" even!. There must be some functions written to help keep track of the shopping.

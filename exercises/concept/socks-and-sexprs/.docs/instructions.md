@@ -1,3 +1,5 @@
+# Instructions
+
 You! Yes you, brave lisper! [Lenny the lisp alien][alien] needs your help! Lenny
 wants to go hang out with all the other lisp aliens, but their parents have told Lenny
 that they're not going anywhere until their room is clean.

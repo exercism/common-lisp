@@ -1,3 +1,5 @@
+# Design
+
 This issue describes how to implement the `lists` concept exercise for the Common Lisp track.
 
 ## Getting started

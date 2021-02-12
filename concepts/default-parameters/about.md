@@ -1,3 +1,5 @@
+# About
+
 An optional parameter is designated by the `&optional` lambda list keyword in a lambda list. Optional parameters are not required, can have a default and also can specify a "supplied-p parameter" which will be "true" or "false" depending on whether an argument was provided for the parameter.
 
 ```lisp

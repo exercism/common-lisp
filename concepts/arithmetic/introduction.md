@@ -1,3 +1,5 @@
+# Introduction
+
 Common Lisp uses the standard arithmetic operators for most operations but is
 somewhat unique in using a "prefix-notation" as opposed to the more familiar
 "infix-notion". More visually:

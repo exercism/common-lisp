@@ -1,3 +1,5 @@
+# Design
+
 ## Goal
 
 This exercise should focus on teaching `defun` The student should be comfortable defining top-level functions. They should also be introduced to the usage of docstrings.

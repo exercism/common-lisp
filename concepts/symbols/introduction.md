@@ -1,3 +1,5 @@
+# Introduction
+
 Symbols in Common Lisp are special values that can point to other values or, in the
 case of _keywords_, themselves. When symbols are evaluated by Lisp, they are
 replaced with the values they point to:

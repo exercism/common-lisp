@@ -1,3 +1,5 @@
+# About
+
 [Lists][hyper-cons-as-list] are a very common data type in Common Lisp. They are made up of a sequence of [cons][../cons/about.md] cells. Each `car` is an element of the list and every `cdr` is a either the next cons cell or a terminating atom.
 
 A list which terminates with the empty list is called a "proper list".

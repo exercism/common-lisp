@@ -1,3 +1,5 @@
+# About
+
 TODO: Discuss fixnum and bignum, mention the size limits of fixnums (2^32, 2^64?)
 
 Integers are whole numbers without a decimal point (like `-6`, `0`, `25`, `1234`, etc.)

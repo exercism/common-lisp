@@ -1,3 +1,5 @@
+# Instructions
+
 Leslie the Lisp Alien is programming their maze-robot (as young Lisp Aliens are wont to do) and needs some help. The maze consists of a series of rooms. Each room as a choices of doors. Each door needs a key. If you use the wrong key at a door it is likely to explode (do not worry for the robot, there will be no damage but buffing out the scorch marks is quite annoying for Leslie). If the robot doesn't have a key that opens any doors then the whole room will explode! (Again, do not worry it will not damage but will be annoying to clean.)
 
 What you need to help Leslie with is to give the robot the correct key for each room. The robot will use the key on each door in the room in order and go through the first door that opens.
