@@ -11,7 +11,7 @@ Common Lisp uses the standard arithmetic operators for most operations but is so
 
 While prefix notion turns some operations like `2 + 2` into the somewhat unfamiliar `(+ 2 2)` form, it makes it much easier to operate on more than one number at a time.
 
-### Arithmetic Operators With a Single Argument
+## Arithmetic Operators With a Single Argument
 
 As a small quirk, the `-` and `/` operators have a special meanings when applied to only one number:
 
@@ -24,7 +24,7 @@ As a small quirk, the `-` and `/` operators have a special meanings when applied
 (/ 0.1) ; => 10.0
 ```
 
-### Comparing Numbers
+## Comparing Numbers
 
 Finally, you may find it useful to compare different numbers using functions like `=` (equal), `/=` (not equal to), and `>=` (greater than or equal to). When these comparisons are true (as in `(= 1 1)`), they return `T` and when they aren't (as in `(> 0 1)`), they return `NIL`.
 

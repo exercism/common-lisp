@@ -11,7 +11,7 @@ As an example:
 (* x (if (evenp x) 2 1))
 ```
 
-### Single-Branch Conditionals
+## Single-Branch Conditionals
 
 The conditionals `when` and `unless` evaluate some code only when the provided test is true or false respectively – evaluating to `nil` otherwise.
 
@@ -20,7 +20,7 @@ The conditionals `when` and `unless` evaluate some code only when the provided t
 (unless (= 2 2) "Time to panic!") ; => NIL
 ```
 
-### The Two-Branch Conditional
+## The Two-Branch Conditional
 
 The `if` conditional evaluates the first expression of the body when the test is true and the second one otherwise.
 
@@ -28,7 +28,7 @@ The `if` conditional evaluates the first expression of the body when the test is
 (if (= 2 2) 'how-honest 'you-liar) ; => HOW-HONEST
 ```
 
-### Many-Branch Conditionals
+## Many-Branch Conditionals
 
 The Lisp "super-conditional" is `cond`, which can have an infinite number of branches. Each branch has a test condition and body expression that are surrounded by an extra pair of parentheses. If all of the tests evaluate to false, then `nil` is returned.
 
@@ -52,7 +52,7 @@ If you just want to test one value against a number of branches, you can use the
 ; => "???"
 ```
 
-### The Stealth Conditionals
+## The Stealth Conditionals
 
 The boolean `and` and `or` operations in Common Lisp are short-circuiting macros
 that can be used to reduce the duplication of certain conditional
@@ -74,7 +74,7 @@ no true values:
 (or () NIL nil) ; => NIL
 ```
 
-### I'm Exhausted...
+## I'm Exhausted...
 
 As mentioned previously, when none of the branches in a `case` statement match,
 and there is no `otherwise` clause, `nil` is returned. Occasionally, however, a
