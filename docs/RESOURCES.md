@@ -3,7 +3,7 @@
 There are many more excellent resources, most of them crosslinked in
 one of the learning section.
 
-### Important resources
+## Important resources
 
 * [The Common Lisp HyperSpec](http://www.lispworks.com/documentation/common-lisp.html),
   by X3J13 committee. The Common Lisp Standard
@@ -15,7 +15,7 @@ one of the learning section.
   gateway
 * [The Common Lisp Wiki](http://www.cliki.net/)
 
-### Free books
+## Free books
 
 There are many other great books you can find links to. These are the
 most popularly linked introductory works.
@@ -41,7 +41,7 @@ helpful book, generally. If you find you prefer Scheme, it's an
 excellent start.
 
 
-### Quick reference
+## Quick reference
 
 Quick-guides / cheat sheets for Common Lisp:
 

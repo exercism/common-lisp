@@ -4,7 +4,7 @@ Sameness is the concept about equality of things.
 
 Common Lisp, like other languages has a set of rules on how to decide if two objects are the 'same'. These rules define four levels, each with a function that performs that level of checking. The levels are ordered from strictest to loosest.
 
-### `eq`
+## `eq`
 
 The first level is object identity. This equality is checked with the function [`eq`][hyper-eq]. The two objects being checked for equality must be the very same object:
 
@@ -16,7 +16,7 @@ The first level is object identity. This equality is checked with the function [
 (let ((list1 '(a b c)) (list2 list1)) (eq list1 list2)) ; => T (these two lists are the same list)
 ```
 
-### `eql`
+## `eql`
 
 The second level adds equality of numbers and characters. This equality is checked with the function [`eql`][hyper-eql]. The way the checking is done depends upon the types of the arguments:
 
@@ -33,7 +33,7 @@ The second level adds equality of numbers and characters. This equality is check
 
 One may wonder why numbers and characters are not compared for object identity with [`eq`][hyper-eq]. The Common Lisp standard allows implementations to copy numbers and characters if they choose to do so. Thus `0` and `0` may not be [`eq`][hyper-eq] as they may be different instances of the number `0`.
 
-### `equal`
+## `equal`
 
 The third level checks for structural similarity. This equality is checked with [`equal`][hyper-equal]. The way the checking is done depends upon the types of the arguments:
 
@@ -53,7 +53,7 @@ The third level checks for structural similarity. This equality is checked with 
 (equal #P"foo/bar.md" #P"foo/bar.md") ; => T (pathnames are equal if "functionally equivalent"
 ```
 
-### `equalp`
+## `equalp`
 
 The fourth and most loose level of equality is checked with [`equalp`][hyper-equalp]. The how the checking is done depends upon the types:
 
@@ -73,7 +73,7 @@ The fourth and most loose level of equality is checked with [`equalp`][hyper-equ
 (equal #S(TEST :SLOT1 'a :SLOT2 'b) #S(TEST :SLOT1 'a :SLOT2 'b)) ; => T (structures of the same class with slots that have values which are `equalp`)
 ```
 
-### Type-specific functions
+## Type-specific functions
 
 The above are the 'generic' equality functions. They work, as defined, for any type. This can be useful when one writes generic code that does not know the types of objects it will be comparing until run-time. However it is generally considered "better style" to use type specific equality functions when one knows the types being compared. For example `string=` rather than `equal`. These functions will be presented and discussed in later concepts.
 
