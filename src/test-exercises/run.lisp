@@ -3,11 +3,14 @@
 ;; for v2 test running
 (pushnew :xlisp-test *features*)
 
+(defun example-files (data)
+  (or (aget :exemplar (aget :files data))
+      (aget :example (aget :files data))))
+
 (defun test-v2-exercise (data)
   (let ((test-files (aget :test (aget :files data)))
         (solution-files (aget :solution (aget :files data)))
-        (exemplar-files (or (aget :exemplar (aget :files data))
-                            (aget :example (aget :files data)))))
+        (exemplar-files (example-files data)))
     (unwind-protect
          (progn
            (dolist (f (append solution-files exemplar-files test-files))
@@ -20,8 +23,7 @@
 
 (defun test-v3-exercise (data)
   (let ((test-files (aget :test (aget :files data)))
-        (exemplar-files (aget :exemplar (aget :files data))))
-
+        (exemplar-files (example-files data)))
     (unwind-protect
          (progn
            (dolist (f (append test-files exemplar-files))
