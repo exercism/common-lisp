@@ -1,3 +1,5 @@
+# Instructions
+
 When the Lisp aliens first came to Earth, they encountered countless weird and
 wonderful things, but one of their favorite discoveries was that of
 "pets". Let's be honest, what sort of alien wouldn't gush over a puppy or

@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Eli Bendersky has written [a good page][eli-lisp-equality] explaining the differences between the generic equality predicates in Common Lisp.

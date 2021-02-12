@@ -1,3 +1,5 @@
+# Resources
+
 There are many more excellent resources, most of them crosslinked in
 one of the learning section.
 

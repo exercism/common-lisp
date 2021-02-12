@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Make `preparation-time-in-minutes` easier to use
 
     - A "rest parameter" will collect all arguments not consumed by other parameters into a list.

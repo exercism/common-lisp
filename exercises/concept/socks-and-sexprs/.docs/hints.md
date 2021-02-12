@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Refresh Lenny on symbols
 
 - If you are having trouble returning a symbol from a function, you might need

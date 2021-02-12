@@ -1,3 +1,5 @@
+# Introduction
+
 Like many languages Common Lisp contains integers. These are whole numbers without a decimal point (like `-6`, `0`, `25`, `1234`,
 etc.)
 

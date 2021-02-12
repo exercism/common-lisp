@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - It might be useful to have a list of all of the numeric operations in Lisp –

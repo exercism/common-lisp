@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Making a new list
 
 - Common Lisp has a [rather descriptively named function][hyper-list] for making a _LIST_.

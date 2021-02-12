@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - If you're not sure where to start, try counting the number of "branches" that

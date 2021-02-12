@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Define the expected oven time in minutes
 
 - A global, named function is defined with

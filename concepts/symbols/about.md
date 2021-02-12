@@ -1,4 +1,4 @@
-## Reference
+# Reference
 
 ```lisp
 ;; Returning a symbol from a `defun`
