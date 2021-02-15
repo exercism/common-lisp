@@ -1197,7 +1197,7 @@
     {
       "icon": "feature-inspectable",
       "title": "Inspectible",
-      "content": "Common Lisp is fully inspectable with functions such as `inspect`, `documentation`, and `describe`."
+      "content": "Common Lisp is fully inspectable with built-in functions for exploring every part of the language."
     },
     {
       "icon": "feature-homoiconicity",
@@ -1207,17 +1207,17 @@
     {
       "icon": "feature-extensible",
       "title": "Extensible",
-      "content": "Generic functions allow for extending existing features by specializing, overriding or wrapping."
+      "content": "Generic functions, reader-macros, and flexible namespacing allow for the easy creation of DSLs"
     },
     {
       "icon": "feature-standardized",
       "title": "Standardized",
-      "content": "The language is very stable, code written 30+ years ago will still run 30+ years from now."
+      "content": "The language is very stable, with multiple implementations to match your needs – JVM, embedded, etc."
     },
     {
-      "icon": "feature-multiple-implementations",
-      "title": "Multiple Implementations",
-      "content": "Multiple implementations provide choices to match your needs: JVM? embedded? optimized?"
+      "icon": "feature-multiparadigm",
+      "title": "Multiparadigm",
+      "content": "Whether you prefer a functional style or something more object-oriented, Lisp adapts to your needs."
     }
   ],
   "tags": [
