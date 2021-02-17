@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program",
-  "source": "This is an exercise to introduce users to using Exercism",
-  "files": {
-    "test": [
+  "source_url":"http://en.wikipedia.org/wiki/%22Hello,_world!%22_program",
+  "source":"This is an exercise to introduce users to using Exercism",
+  "files":{
+    "test":[
       "hello-world-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "hello-world.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }
