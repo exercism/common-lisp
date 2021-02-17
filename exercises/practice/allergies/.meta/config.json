@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "http://jumpstartlab.com",
-  "source": "Jumpstart Lab Warm-up",
-  "files": {
-    "test": [
+  "source_url":"http://jumpstartlab.com",
+  "source":"Jumpstart Lab Warm-up",
+  "files":{
+    "test":[
       "allergies-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "allergies.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

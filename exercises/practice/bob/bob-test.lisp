@@ -1,191 +1,108 @@
-;;;
-;;; bob v1.6.0
-;;;
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "bob")
+;; Ensures that bob.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "bob")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from bob and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:bob-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
+
+;; Enter the testing package
 (in-package #:bob-test)
 
-(define-test
-  stating-something
-  (assert-equal
-    "Whatever."
-    (bob:response "Tom-ay-to, tom-aaaah-to.")))
+;; Define and enter a new FiveAM test-suite
+(def-suite* bob-suite)
 
+(test stating-something
+ (is (equal "Whatever." (bob:response "Tom-ay-to, tom-aaaah-to."))))
 
-(define-test
-  shouting
-  (assert-equal
-    "Whoa, chill out!"
-    (bob:response "WATCH OUT!")))
+(test shouting (is (equal "Whoa, chill out!" (bob:response "WATCH OUT!"))))
 
+(test shouting-gibberish
+ (is (equal "Whoa, chill out!" (bob:response "FCECDFCAAB"))))
 
-(define-test
-  shouting-gibberish
-  (assert-equal
-    "Whoa, chill out!"
-    (bob:response "FCECDFCAAB")))
+(test asking-a-question
+ (is
+  (equal "Sure."
+         (bob:response "Does this cryogenic chamber make me look fat?"))))
 
+(test asking-a-numeric-question
+ (is (equal "Sure." (bob:response "You are, what, like 15?"))))
 
-(define-test
-  asking-a-question
-  (assert-equal
-    "Sure."
-    (bob:response "Does this cryogenic chamber make me look fat?")))
+(test asking-gibberish (is (equal "Sure." (bob:response "fffbbcbeab?"))))
 
+(test talking-forcefully (is (equal "Whatever." (bob:response "Hi there!"))))
 
-(define-test
-  asking-a-numeric-question
-  (assert-equal
-    "Sure."
-    (bob:response "You are, what, like 15?")))
+(test using-acronyms-in-regular-speech
+ (is
+  (equal "Whatever."
+         (bob:response "It's OK if you don't want to go work for NASA."))))
 
+(test forceful-question
+ (is
+  (equal "Calm down, I know what I'm doing!"
+         (bob:response "WHAT'S GOING ON?"))))
 
-(define-test
-  asking-gibberish
-  (assert-equal
-    "Sure."
-    (bob:response "fffbbcbeab?")))
+(test shouting-numbers
+ (is (equal "Whoa, chill out!" (bob:response "1, 2, 3 GO!"))))
 
+(test no-letters (is (equal "Whatever." (bob:response "1, 2, 3"))))
 
-(define-test
-  talking-forcefully
-  (assert-equal
-    "Whatever."
-    (bob:response "Hi there!")))
+(test question-with-no-letters (is (equal "Sure." (bob:response "4?"))))
 
+(test shouting-with-special-characters
+ (is
+  (equal "Whoa, chill out!"
+         (bob:response "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"))))
 
-(define-test
-  using-acronyms-in-regular-speech
-  (assert-equal
-    "Whatever."
-    (bob:response "It's OK if you don't want to go work for NASA.")))
+(test shouting-with-no-exclamation-mark
+ (is (equal "Whoa, chill out!" (bob:response "I HATE THE DENTIST"))))
 
+(test statement-containing-question-mark
+ (is (equal "Whatever." (bob:response "Ending with ? means a question."))))
 
-(define-test
-  forceful-question
-  (assert-equal
-    "Calm down, I know what I'm doing!"
-    (bob:response "WHAT'S GOING ON?")))
+(test non-letters-with-question (is (equal "Sure." (bob:response ":) ?"))))
 
+(test prattling-on
+ (is (equal "Sure." (bob:response "Wait! Hang on. Are you going to be OK?"))))
 
-(define-test
-  shouting-numbers
-  (assert-equal
-    "Whoa, chill out!"
-    (bob:response "1, 2, 3 GO!")))
+(test silence (is (equal "Fine. Be that way!" (bob:response ""))))
 
+(test prolonged-silence
+ (is (equal "Fine. Be that way!" (bob:response "          "))))
 
-(define-test
-  no-letters
-  (assert-equal
-    "Whatever."
-    (bob:response "1, 2, 3")))
+(test alternate-silence
+ (is (equal "Fine. Be that way!" (bob:response "										"))))
 
-
-(define-test
-  question-with-no-letters
-  (assert-equal
-    "Sure."
-    (bob:response "4?")))
-
-
-(define-test
-  shouting-with-special-characters
-  (assert-equal
-    "Whoa, chill out!"
-    (bob:response "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!")))
-
-
-(define-test
-  shouting-with-no-exclamation-mark
-  (assert-equal
-    "Whoa, chill out!"
-    (bob:response "I HATE THE DENTIST")))
-
-
-(define-test
-  statement-containing-question-mark
-  (assert-equal
-    "Whatever."
-    (bob:response "Ending with ? means a question.")))
-
-
-(define-test
-  non-letters-with-question
-  (assert-equal
-    "Sure."
-    (bob:response ":) ?")))
-
-
-(define-test
-  prattling-on
-  (assert-equal
-    "Sure."
-    (bob:response "Wait! Hang on. Are you going to be OK?")))
-
-
-(define-test
-  silence
-  (assert-equal
-    "Fine. Be that way!"
-    (bob:response "")))
-
-
-(define-test
-  prolonged-silence
-  (assert-equal
-    "Fine. Be that way!"
-    (bob:response "          ")))
-
-
-(define-test
-  alternate-silence
-  (assert-equal
-    "Fine. Be that way!"
-    (bob:response "										")))
-
-
-(define-test
-  multiple-line-question
-  (assert-equal
-    "Whatever."
-    (bob:response (format nil "~%
+(test multiple-line-question
+ (is
+  (equal "Whatever."
+         (bob:response
+          (format nil "~%
 Does this cryogenic chamber make me look fat?~%
-No."))))
+No.")))))
 
+(test starting-with-whitespace
+ (is (equal "Whatever." (bob:response "         hmmmmmmm..."))))
 
-(define-test
-  starting-with-whitespace
-  (assert-equal
-    "Whatever."
-    (bob:response "         hmmmmmmm...")))
+(test ending-with-whitespace
+ (is
+  (equal "Sure." (bob:response "Okay if like my  spacebar  quite a bit?   "))))
 
+(test other-whitespace
+ (is
+  (equal "Fine. Be that way!"
+         (bob:response
+          (format nil "~%
+        ")))))
 
-(define-test
-  ending-with-whitespace
-  (assert-equal
-    "Sure."
-    (bob:response "Okay if like my  spacebar  quite a bit?   ")))
+(test non-question-ending-with-whitespace
+ (is
+  (equal "Whatever."
+         (bob:response "This is a statement ending with whitespace      "))))
 
-
-(define-test
-  other-whitespace
-  (assert-equal
-    "Fine. Be that way!"
-    (bob:response (format nil "~%
-        "))))
-
-
-(define-test
-  non-question-ending-with-whitespace
-  (assert-equal
-    "Whatever."
-    (bob:response "This is a statement ending with whitespace      ")))
-
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all))
+(defun run-tests (&optional (test-or-suite 'bob-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

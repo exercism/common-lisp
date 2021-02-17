@@ -1,56 +1,60 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "strain")
+;; Ensures that strain.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "strain")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from strain and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:strain-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:strain-test)
 
-(define-test empty-keep
-  (assert-equal '() (strain:keep #'under-10-p '())))
+;; Define and enter a new FiveAM test-suite
+(def-suite* strain-suite)
 
-(define-test keep-everything
-  (assert-equal '(1 2 3) (strain:keep #'under-10-p '(1 2 3))))
+(test empty-keep (is (equal 'nil (strain:keep #'under-10-p 'nil))))
 
-(define-test keep-first-last
-  (assert-equal '(1 3) (strain:keep #'oddp '(1 2 3))))
+(test keep-everything (is (equal '(1 2 3) (strain:keep #'under-10-p '(1 2 3)))))
 
-(define-test keep-nothing
-  (assert-equal '() (strain:keep #'evenp '(1 3 5 7))))
+(test keep-first-last (is (equal '(1 3) (strain:keep #'oddp '(1 2 3)))))
 
-(define-test keep-neither-first-nor-last
-  (assert-equal '(2) (strain:keep #'evenp '(1 2 3))))
+(test keep-nothing (is (equal 'nil (strain:keep #'evenp '(1 3 5 7)))))
 
-(define-test keep-strings
-  (let ((strs '("apple" "zebra" "banana" "zombies" "cherimoya" "zealot")))
-    (assert-equal '("zebra" "zombies" "zealot")
-              (strain:keep #'starts-with-z-p strs))))
+(test keep-neither-first-nor-last
+ (is (equal '(2) (strain:keep #'evenp '(1 2 3)))))
 
-(define-test empty-discard
-  (assert-equal '() (strain:discard #'under-10-p '())))
+(test keep-strings
+ (let ((strs '("apple" "zebra" "banana" "zombies" "cherimoya" "zealot")))
+   (is
+    (equal '("zebra" "zombies" "zealot")
+           (strain:keep #'starts-with-z-p strs)))))
 
-(define-test discard-everything
-  (assert-equal '() (strain:discard #'under-10-p '(1 2 3))))
+(test empty-discard (is (equal 'nil (strain:discard #'under-10-p 'nil))))
 
-(define-test discard-first-and-last
-  (assert-equal '(2) (strain:discard #'oddp '(1 2 3))))
+(test discard-everything
+ (is (equal 'nil (strain:discard #'under-10-p '(1 2 3)))))
 
-(define-test discard-nothing
-  (assert-equal '(1 3 5 7) (strain:discard #'evenp '(1 3 5 7))))
+(test discard-first-and-last (is (equal '(2) (strain:discard #'oddp '(1 2 3)))))
 
-(define-test discard-neither-first-nor-last
-  (assert-equal '(1 3) (strain:discard #'evenp '(1 2 3))))
+(test discard-nothing
+ (is (equal '(1 3 5 7) (strain:discard #'evenp '(1 3 5 7)))))
 
-(define-test discard-strings
-  (let ((strs '("apple" "zebra" "banana" "zombies" "cherimoya" "zealot")))
-    (assert-equal '("apple" "banana" "cherimoya")
-              (strain:discard #'starts-with-z-p strs))))
+(test discard-neither-first-nor-last
+ (is (equal '(1 3) (strain:discard #'evenp '(1 2 3)))))
+
+(test discard-strings
+ (let ((strs '("apple" "zebra" "banana" "zombies" "cherimoya" "zealot")))
+   (is
+    (equal '("apple" "banana" "cherimoya")
+           (strain:discard #'starts-with-z-p strs)))))
 
 (defun under-10-p (n) (< n 10))
 
 (defun starts-with-z-p (s) (char= (char s 0) #\z))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :strain-test))
+(defun run-tests (&optional (test-or-suite 'strain-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

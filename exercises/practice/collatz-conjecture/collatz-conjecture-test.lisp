@@ -1,31 +1,32 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "collatz-conjecture")
+;; Ensures that collatz-conjecture.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "collatz-conjecture")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from collatz-conjecture and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:collatz-conjecture-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:collatz-conjecture-test)
 
-(define-test steps-for-1
-  (assert-equal 0 (collatz-conjecture:collatz 1)))
+;; Define and enter a new FiveAM test-suite
+(def-suite* collatz-conjecture-suite)
 
-(define-test steps-for-16
-  (assert-equal 4 (collatz-conjecture:collatz 16)))
+(test steps-for-1 (is (equal 0 (collatz-conjecture:collatz 1))))
 
-(define-test steps-for-12
-  (assert-equal 9 (collatz-conjecture:collatz 12)))
+(test steps-for-16 (is (equal 4 (collatz-conjecture:collatz 16))))
 
-(define-test steps-for-1000000
-  (assert-equal 152 (collatz-conjecture:collatz 1000000)))
+(test steps-for-12 (is (equal 9 (collatz-conjecture:collatz 12))))
 
-(define-test steps-for-0
-  (assert-equal NIL (collatz-conjecture:collatz 0)))
+(test steps-for-1000000 (is (equal 152 (collatz-conjecture:collatz 1000000))))
 
-(define-test steps-for-negative
-  (assert-equal NIL (collatz-conjecture:collatz (- 0 15))))
+(test steps-for-0 (is (equal nil (collatz-conjecture:collatz 0))))
 
+(test steps-for-negative (is (equal nil (collatz-conjecture:collatz (- 0 15)))))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all))
+(defun run-tests (&optional (test-or-suite 'collatz-conjecture-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

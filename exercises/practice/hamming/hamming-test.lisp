@@ -1,32 +1,42 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "hamming")
+;; Ensures that hamming.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "hamming")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from hamming and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:hamming-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:hamming-test)
 
-(define-test no-difference-between-empty-strands
-  (assert-equal 0 (hamming:distance "" "")))
+;; Define and enter a new FiveAM test-suite
+(def-suite* hamming-suite)
 
-(define-test no-difference-between-identical-strands
-  (assert-equal 0 (hamming:distance "GGACTGA" "GGACTGA")))
+(test no-difference-between-empty-strands
+ (is (equal 0 (hamming:distance "" ""))))
 
-(define-test complete-hamming-distance-in-small-strand
-  (assert-equal 3 (hamming:distance "ACT" "GGA")))
+(test no-difference-between-identical-strands
+ (is (equal 0 (hamming:distance "GGACTGA" "GGACTGA"))))
 
-(define-test small-hamming-distance-in-middle-somewhere
-  (assert-equal 1 (hamming:distance "GGACG" "GGTCG")))
+(test complete-hamming-distance-in-small-strand
+ (is (equal 3 (hamming:distance "ACT" "GGA"))))
 
-(define-test larger-distance
-  (assert-equal 2 (hamming:distance "ACCAGGG" "ACTATGG")))
+(test small-hamming-distance-in-middle-somewhere
+ (is (equal 1 (hamming:distance "GGACG" "GGTCG"))))
 
-(define-test invalid-to-get-distance-for-different-length-strings
-  (assert-equal nil (hamming:distance "AGACAACAGCCAGCCGCCGGATT" "AGGCAA"))
-  (assert-equal nil (hamming:distance "AGACAACAGCCAGCCGCCGGATT" "AGACATCTTTCAGCCGCCGGATTAGGCAA"))
-  (assert-equal nil (hamming:distance "AGG" "AGACAACAGCCAGCCGCCGGATT")))
+(test larger-distance (is (equal 2 (hamming:distance "ACCAGGG" "ACTATGG"))))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :hamming-test))
+(test invalid-to-get-distance-for-different-length-strings
+ (is (equal nil (hamming:distance "AGACAACAGCCAGCCGCCGGATT" "AGGCAA")))
+ (is
+  (equal nil
+         (hamming:distance "AGACAACAGCCAGCCGCCGGATT"
+                           "AGACATCTTTCAGCCGCCGGATTAGGCAA")))
+ (is (equal nil (hamming:distance "AGG" "AGACAACAGCCAGCCGCCGGATT"))))
+
+(defun run-tests (&optional (test-or-suite 'hamming-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

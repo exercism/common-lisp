@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "http://pine.fm/LearnToProgram/?Chapter=06",
-  "source": "Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial.",
-  "files": {
-    "test": [
+  "source_url":"http://pine.fm/LearnToProgram/?Chapter=06",
+  "source":"Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial.",
+  "files":{
+    "test":[
       "bob-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "bob.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

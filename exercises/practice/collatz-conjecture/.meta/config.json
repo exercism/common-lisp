@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "https://en.wikipedia.org/wiki/3x_%2B_1_problem",
-  "source": "An unsolved problem in mathematics named after mathematician Lothar Collatz",
-  "files": {
-    "test": [
+  "source_url":"https://en.wikipedia.org/wiki/3x_%2B_1_problem",
+  "source":"An unsolved problem in mathematics named after mathematician Lothar Collatz",
+  "files":{
+    "test":[
       "collatz-conjecture-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "collatz-conjecture.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

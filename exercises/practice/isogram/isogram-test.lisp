@@ -1,39 +1,45 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "isogram")
+;; Ensures that isogram.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "isogram")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from isogram and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:isogram-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:isogram-test)
 
-(define-test empty-string
-  (assert-true (isogram:is-isogram "")))
+;; Define and enter a new FiveAM test-suite
+(def-suite* isogram-suite)
 
-(define-test isogram-with-only-lower-case-characters
-  (assert-true (isogram:is-isogram "isogram")))
+(test empty-string (is (isogram:is-isogram "")))
 
-(define-test word-with-one-duplicated-character
-  (assert-false (isogram:is-isogram "eleven")))
+(test isogram-with-only-lower-case-characters
+ (is (isogram:is-isogram "isogram")))
 
-(define-test longest-reported-english-isogram
-  (assert-true (isogram:is-isogram "subdermatoglyphic")))
+(test word-with-one-duplicated-character
+ (is (not (isogram:is-isogram "eleven"))))
 
-(define-test word-with-duplicated-character-in-mixed-case
-  (assert-false (isogram:is-isogram "Alphabet")))
+(test longest-reported-english-isogram
+ (is (isogram:is-isogram "subdermatoglyphic")))
 
-(define-test hypothetical-isogrammic-word-with-hyphen
-  (assert-true (isogram:is-isogram "thumbscrew-japingly")))
+(test word-with-duplicated-character-in-mixed-case
+ (is (not (isogram:is-isogram "Alphabet"))))
 
-(define-test isogram-with-duplicated-hyphen
-  (assert-true (isogram:is-isogram "six-year-old")))
+(test hypothetical-isogrammic-word-with-hyphen
+ (is (isogram:is-isogram "thumbscrew-japingly")))
 
-(define-test made-up-name-that-is-an-isogam
-  (assert-true (isogram:is-isogram "Emily Jung Schwartzkopf")))
+(test isogram-with-duplicated-hyphen (is (isogram:is-isogram "six-year-old")))
 
-(define-test duplicated-character-in-the-middle
-  (assert-false (isogram:is-isogram "accentor")))
+(test made-up-name-that-is-an-isogam
+ (is (isogram:is-isogram "Emily Jung Schwartzkopf")))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :isogram-test))
+(test duplicated-character-in-the-middle
+ (is (not (isogram:is-isogram "accentor"))))
+
+(defun run-tests (&optional (test-or-suite 'isogram-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

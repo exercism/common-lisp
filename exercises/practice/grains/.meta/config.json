@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "http://www.javaranch.com/grains.jsp",
-  "source": "JavaRanch Cattle Drive, exercise 6",
-  "files": {
-    "test": [
+  "source_url":"http://www.javaranch.com/grains.jsp",
+  "source":"JavaRanch Cattle Drive, exercise 6",
+  "files":{
+    "test":[
       "grains-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "grains.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

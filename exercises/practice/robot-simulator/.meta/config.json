@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "",
-  "source": "Inspired by an interview question at a famous company.",
-  "files": {
-    "test": [
+  "source_url":"",
+  "source":"Inspired by an interview question at a famous company.",
+  "files":{
+    "test":[
       "robot-simulator-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "robot-simulator.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

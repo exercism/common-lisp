@@ -1,43 +1,35 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "acronym")
+;; Ensures that acronym.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "acronym")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from acronym and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:acronym-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:acronym-test)
 
+;; Define and enter a new FiveAM test-suite
+(def-suite* acronym-suite)
 
-(define-test empty-gives-empty
-  (assert-equal
-    ""
-    (acronym:acronym "")))
+(test empty-gives-empty (is (equal "" (acronym:acronym ""))))
 
-(define-test png-test
-  (assert-equal
-    "PNG"
-    (acronym:acronym "Portable Network Graphics")))
+(test png-test (is (equal "PNG" (acronym:acronym "Portable Network Graphics"))))
 
-(define-test ror-test
-  (assert-equal
-    "ROR"
-    (acronym:acronym "Ruby on Rails")))
+(test ror-test (is (equal "ROR" (acronym:acronym "Ruby on Rails"))))
 
-(define-test fifo-test
-  (assert-equal
-    "FIFO"
-    (acronym:acronym "First In, First Out")))
+(test fifo-test (is (equal "FIFO" (acronym:acronym "First In, First Out"))))
 
-(define-test php-test
-  (assert-equal
-    "PHP"
-    (acronym:acronym "PHP: Hypertext Preprocessor")))
+(test php-test
+ (is (equal "PHP" (acronym:acronym "PHP: Hypertext Preprocessor"))))
 
-(define-test cmos-test
-  (assert-equal
-    "CMOS"
-    (acronym:acronym "Complementary metal-oxide semiconductor")))
+(test cmos-test
+ (is
+  (equal "CMOS" (acronym:acronym "Complementary metal-oxide semiconductor"))))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :acronym-test))
+(defun run-tests (&optional (test-or-suite 'acronym-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

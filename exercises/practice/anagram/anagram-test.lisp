@@ -1,54 +1,59 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "anagram")
+;; Ensures that anagram.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "anagram")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from anagram and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:anagram-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:anagram-test)
 
-(define-test no-matches
-  (assert-equal '()
-      (anagram:anagrams-for
-       "diaper"
-       '("hello" "world" "zombies" "pants"))))
+;; Define and enter a new FiveAM test-suite
+(def-suite* anagram-suite)
 
-(define-test detect-simple-anagram
-  (assert-equal '("tan")
-      (anagram:anagrams-for "ant" '("tan" "stand" "at"))))
+(test no-matches
+ (is
+  (equal 'nil
+         (anagram:anagrams-for "diaper" '("hello" "world" "zombies" "pants")))))
 
-(define-test does-not-confuse-different-duplicates
-  (assert-equal '() (anagram:anagrams-for "galea" '("eagle"))))
+(test detect-simple-anagram
+ (is (equal '("tan") (anagram:anagrams-for "ant" '("tan" "stand" "at")))))
 
-(define-test eliminate-anagram-subsets
-  (assert-equal '() (anagram:anagrams-for "good" '("dog" "goody"))))
+(test does-not-confuse-different-duplicates
+ (is (equal 'nil (anagram:anagrams-for "galea" '("eagle")))))
 
-(define-test detect-anagram
-  (assert-equal '("inlets")
-      (anagram:anagrams-for
-       "listen"
-       '("enlists" "google" "inlets" "banana"))))
+(test eliminate-anagram-subsets
+ (is (equal 'nil (anagram:anagrams-for "good" '("dog" "goody")))))
 
-(define-test multiple-anagrams
-  (assert-equal '("gallery" "regally" "largely")
-      (anagram:anagrams-for
-       "allergy"
-       '("gallery" "ballerina" "regally" "clergy" "largely" "leading"))))
+(test detect-anagram
+ (is
+  (equal '("inlets")
+         (anagram:anagrams-for "listen"
+                               '("enlists" "google" "inlets" "banana")))))
 
-(define-test case-insensitive-anagrams
-  (assert-equal '("Carthorse")
-      (anagram:anagrams-for
-       "Orchestra"
-       '("cashregister" "Carthorse" "radishes"))))
+(test multiple-anagrams
+ (is
+  (equal '("gallery" "regally" "largely")
+         (anagram:anagrams-for "allergy"
+                               '("gallery" "ballerina" "regally" "clergy"
+                                 "largely" "leading")))))
 
-(define-test word-is-not-own-anagram
-  (assert-equal '()
-      (anagram:anagrams-for "banana" '("banana"))))
+(test case-insensitive-anagrams
+ (is
+  (equal '("Carthorse")
+         (anagram:anagrams-for "Orchestra"
+                               '("cashregister" "Carthorse" "radishes")))))
 
-(define-test word-is-not-own-anagram-case-insensitively
-  (assert-equal '()
-      (anagram:anagrams-for "bananarama" '("BananaRama"))))
+(test word-is-not-own-anagram
+ (is (equal 'nil (anagram:anagrams-for "banana" '("banana")))))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :anagram-test))
+(test word-is-not-own-anagram-case-insensitively
+ (is (equal 'nil (anagram:anagrams-for "bananarama" '("BananaRama")))))
+
+(defun run-tests (&optional (test-or-suite 'anagram-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))
