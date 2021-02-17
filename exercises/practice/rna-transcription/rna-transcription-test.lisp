@@ -1,30 +1,38 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "rna-transcription")
+;; Ensures that rna-transcription.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "rna-transcription")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from rna-transcription and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage :rna-transcription-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:rna-transcription-test)
 
-(define-test transcribes-cytidine-to-guanosine
-  (assert-equal "G" (rna-transcription:to-rna "C")))
+;; Define and enter a new FiveAM test-suite
+(def-suite* rna-transcription-suite)
 
-(define-test transcribes-guanosine-to-cytidine
-  (assert-equal "C" (rna-transcription:to-rna "G")))
+(test transcribes-cytidine-to-guanosine
+ (is (equal "G" (rna-transcription:to-rna "C"))))
 
-(define-test transcribes-adenosine-to-uracile
-  (assert-equal "U" (rna-transcription:to-rna "A")))
+(test transcribes-guanosine-to-cytidine
+ (is (equal "C" (rna-transcription:to-rna "G"))))
 
-(define-test it-transcribes-thymidine-to-adenosine
-  (assert-equal "A" (rna-transcription:to-rna "T")))
+(test transcribes-adenosine-to-uracile
+ (is (equal "U" (rna-transcription:to-rna "A"))))
 
-(define-test it-transcribes-all-nucleotides
-  (assert-equal "UGCACCAGAAUU" (rna-transcription:to-rna "ACGTGGTCTTAA")))
+(test it-transcribes-thymidine-to-adenosine
+ (is (equal "A" (rna-transcription:to-rna "T"))))
 
-(define-test it-validates-dna-strands
-  (assert-error 'error (rna-transcription:to-rna "XCGFGGTDTTAA")))
+(test it-transcribes-all-nucleotides
+ (is (equal "UGCACCAGAAUU" (rna-transcription:to-rna "ACGTGGTCTTAA"))))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :rna-transcription-test))
+(test it-validates-dna-strands
+ (signals error (rna-transcription:to-rna "XCGFGGTDTTAA")))
+
+(defun run-tests (&optional (test-or-suite 'rna-transcription-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

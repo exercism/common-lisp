@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "http://rosalind.info/problems/dna/",
-  "source": "The Calculating DNA Nucleotides_problem at Rosalind",
-  "files": {
-    "test": [
+  "source_url":"http://rosalind.info/problems/dna/",
+  "source":"The Calculating DNA Nucleotides_problem at Rosalind",
+  "files":{
+    "test":[
       "nucleotide-count-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "nucleotide-count.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }
