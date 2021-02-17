@@ -83,6 +83,22 @@
   (declare (ignore slug))
   `(is (equal ,@(cdr form))))
 
+(defun transform-assert-equalp (slug form)
+  (declare (ignore slug))
+  `(is (equalp ,@(cdr form))))
+
+(defun transform-assert-true (slug form)
+  (declare (ignore slug))
+  `(is ,@(cdr form)))
+
+(defun transform-assert-false (slug form)
+  (declare (ignore slug))
+  `(is (not ,@(cdr form))))
+
+(defun transform-assert-error (slug form)
+  (declare (ignore slug))
+  `(signals ,@(cdr form)))
+
 (defun run-test-block-p (form)
   "Checks if LET expression is the old v2 'run-test' block by looking at first
 variable binding."
@@ -120,6 +136,14 @@ variable binding."
                  result))
           ((eq (car form) 'assert-equal)
            (push (transform-assert-equal slug form) result))
+          ((eq (car form) 'assert-equalp)
+           (push (transform-assert-equalp slug form) result))
+          ((eq (car form) 'assert-true)
+           (push (transform-assert-true slug form) result))
+          ((eq (car form) 'assert-false)
+           (push (transform-assert-false slug form) result))
+          ((eq (car form) 'assert-error)
+           (push (transform-assert-error slug form) result))
           (t (push (transform slug form) result)))))
 
 ;;;
