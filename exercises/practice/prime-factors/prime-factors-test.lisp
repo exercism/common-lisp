@@ -1,79 +1,72 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "prime-factors")
+;; Ensures that prime-factors.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "prime-factors")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from prime-factors and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:prime-factors-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:prime-factors-test)
 
-(define-test one
-  (assert-equal '() (prime-factors:factors-of 1)))
+;; Define and enter a new FiveAM test-suite
+(def-suite* prime-factors-suite)
 
-(define-test two
-  (assert-equal '(2) (prime-factors:factors-of 2)))
+(test one (is (equal 'nil (prime-factors:factors-of 1))))
 
-(define-test three
-  (assert-equal '(3) (prime-factors:factors-of 3)))
+(test two (is (equal '(2) (prime-factors:factors-of 2))))
 
-(define-test four
-  (assert-equal '(2 2) (prime-factors:factors-of 4)))
+(test three (is (equal '(3) (prime-factors:factors-of 3))))
 
-(define-test six
-  (assert-equal '(2 3) (sort (prime-factors:factors-of 6) #'<)))
+(test four (is (equal '(2 2) (prime-factors:factors-of 4))))
 
-(define-test eight
-  (assert-equal '(2 2 2) (prime-factors:factors-of 8)))
+(test six (is (equal '(2 3) (sort (prime-factors:factors-of 6) #'<))))
 
-(define-test nine
-  (assert-equal '(3 3) (prime-factors:factors-of 9)))
+(test eight (is (equal '(2 2 2) (prime-factors:factors-of 8))))
 
-(define-test twenty-seven
-  (assert-equal '(3 3 3) (prime-factors:factors-of 27)))
+(test nine (is (equal '(3 3) (prime-factors:factors-of 9))))
 
-(define-test six-hundred-twenty-five
-  (assert-equal '(5 5 5 5) (prime-factors:factors-of 625)))
+(test twenty-seven (is (equal '(3 3 3) (prime-factors:factors-of 27))))
 
-(define-test a-large-number
-  (assert-equal '(5 17 23 461)
-                (sort (prime-factors:factors-of 901255) #'<)))
+(test six-hundred-twenty-five
+ (is (equal '(5 5 5 5) (prime-factors:factors-of 625))))
 
-(define-test a-huge-number
-  (assert-equal '(11 9539 894119)
-                (sort (prime-factors:factors-of 93819012551) #'<)))
+(test a-large-number
+ (is (equal '(5 17 23 461) (sort (prime-factors:factors-of 901255) #'<))))
 
-(define-test triple-squares-number
-  (assert-equal '(2 2 5 5 7 7)
-                (sort (prime-factors:factors-of 4900) #'<)))
+(test a-huge-number
+ (is
+  (equal '(11 9539 894119) (sort (prime-factors:factors-of 93819012551) #'<))))
 
-(define-test mersenne-composite-1
-  (assert-equal '(23 89)
-                (sort (prime-factors:factors-of 2047) #'<)))
+(test triple-squares-number
+ (is (equal '(2 2 5 5 7 7) (sort (prime-factors:factors-of 4900) #'<))))
 
-(define-test fermat-composite-1
-  (assert-equal '(641 6700417)
-                (sort (prime-factors:factors-of 4294967297) #'<)))
+(test mersenne-composite-1
+ (is (equal '(23 89) (sort (prime-factors:factors-of 2047) #'<))))
 
-(define-test weak-probable-prime
-  (assert-equal '(11 31)
-                (sort (prime-factors:factors-of 341) #'<)))
+(test fermat-composite-1
+ (is (equal '(641 6700417) (sort (prime-factors:factors-of 4294967297) #'<))))
 
-(define-test strong-probable-prime
-  (assert-equal '(7 31 73)
-                (sort (prime-factors:factors-of 15841) #'<)))
+(test weak-probable-prime
+ (is (equal '(11 31) (sort (prime-factors:factors-of 341) #'<))))
 
-(define-test carmichael-small-1
-  (assert-equal '(3 11 17)
-                (sort (prime-factors:factors-of 561) #'<)))
+(test strong-probable-prime
+ (is (equal '(7 31 73) (sort (prime-factors:factors-of 15841) #'<))))
 
-(define-test carmichael-small-2
-  (assert-equal '(11 13 17 31)
-                (sort (prime-factors:factors-of 75361) #'<)))
+(test carmichael-small-1
+ (is (equal '(3 11 17) (sort (prime-factors:factors-of 561) #'<))))
 
-(define-test pseudoprime-smallish
-  (assert-equal '(1303 16927 157543)
-                (sort (prime-factors:factors-of 3474749660383) #'<)))
+(test carmichael-small-2
+ (is (equal '(11 13 17 31) (sort (prime-factors:factors-of 75361) #'<))))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :prime-factors-test))
+(test pseudoprime-smallish
+ (is
+  (equal '(1303 16927 157543)
+         (sort (prime-factors:factors-of 3474749660383) #'<))))
+
+(defun run-tests (&optional (test-or-suite 'prime-factors-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

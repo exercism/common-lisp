@@ -1,69 +1,44 @@
-;;;
-;;; armstrong-numbers v1.0.0
-;;;
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "armstrong-numbers")
+;; Ensures that armstrong-numbers.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "armstrong-numbers")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from armstrong-numbers and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:armstrong-numbers-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
+
+;; Enter the testing package
 (in-package #:armstrong-numbers-test)
 
-(define-test
-  single-digit-numbers-are-armstrong-numbers
-  (assert-equal
-    T
-    (armstrong-numbers:armstrong-number-p 5)))
+;; Define and enter a new FiveAM test-suite
+(def-suite* armstrong-numbers-suite)
 
+(test single-digit-numbers-are-armstrong-numbers
+ (is (equal t (armstrong-numbers:armstrong-number-p 5))))
 
-(define-test
-  there-are-no-2-digit-armstrong-numbers
-  (assert-equal
-    'NIL
-    (armstrong-numbers:armstrong-number-p 10)))
+(test there-are-no-2-digit-armstrong-numbers
+ (is (equal 'nil (armstrong-numbers:armstrong-number-p 10))))
 
+(test three-digit-number-that-is-an-armstrong-number
+ (is (equal t (armstrong-numbers:armstrong-number-p 153))))
 
-(define-test
-  three-digit-number-that-is-an-armstrong-number
-  (assert-equal
-    T
-    (armstrong-numbers:armstrong-number-p 153)))
+(test three-digit-number-that-is-not-an-armstrong-number
+ (is (equal 'nil (armstrong-numbers:armstrong-number-p 100))))
 
+(test four-digit-number-that-is-an-armstrong-number
+ (is (equal t (armstrong-numbers:armstrong-number-p 9474))))
 
-(define-test
-  three-digit-number-that-is-not-an-armstrong-number
-  (assert-equal
-    'NIL
-    (armstrong-numbers:armstrong-number-p 100)))
+(test four-digit-number-that-is-not-an-armstrong-number
+ (is (equal 'nil (armstrong-numbers:armstrong-number-p 9475))))
 
+(test seven-digit-number-that-is-an-armstrong-number
+ (is (equal t (armstrong-numbers:armstrong-number-p 9926315))))
 
-(define-test
-  four-digit-number-that-is-an-armstrong-number
-  (assert-equal
-    T
-    (armstrong-numbers:armstrong-number-p 9474)))
+(test seven-digit-number-that-is-not-an-armstrong-number
+ (is (equal 'nil (armstrong-numbers:armstrong-number-p 9926314))))
 
-
-(define-test
-  four-digit-number-that-is-not-an-armstrong-number
-  (assert-equal
-    'NIL
-    (armstrong-numbers:armstrong-number-p 9475)))
-
-
-(define-test
-  seven-digit-number-that-is-an-armstrong-number
-  (assert-equal
-    T
-    (armstrong-numbers:armstrong-number-p 9926315)))
-
-
-(define-test
-  seven-digit-number-that-is-not-an-armstrong-number
-  (assert-equal
-    'NIL
-    (armstrong-numbers:armstrong-number-p 9926314)))
-
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all))
+(defun run-tests (&optional (test-or-suite 'armstrong-numbers-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

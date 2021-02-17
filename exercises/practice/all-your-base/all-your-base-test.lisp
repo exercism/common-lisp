@@ -1,88 +1,71 @@
-(ql:quickload "lisp-unit")
-#-xlisp-test (load "all-your-base")
+;; Ensures that all-your-base.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "all-your-base")
+  (quicklisp-client:quickload :fiveam))
 
+;; Defines the testing package with symbols from all-your-base and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage #:all-your-base-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:fiveam)
+  (:export #:run-tests))
 
+;; Enter the testing package
 (in-package #:all-your-base-test)
 
-(define-test single-bit-one-to-decimal
-  (assert-equal '( 1 )
-                (all-your-base:rebase '( 1 ) 2 10)))
+;; Define and enter a new FiveAM test-suite
+(def-suite* all-your-base-suite)
 
-(define-test binary-to-single-decimal
-  (assert-equal '( 5 )
-                (all-your-base:rebase '( 1 0 1 ) 2 10)))
+(test single-bit-one-to-decimal
+ (is (equal '(1) (all-your-base:rebase '(1) 2 10))))
 
-(define-test single-decimal-to-binary
-  (assert-equal '( 1 0 1 )
-                (all-your-base:rebase '( 5 ) 10 2)))
+(test binary-to-single-decimal
+ (is (equal '(5) (all-your-base:rebase '(1 0 1) 2 10))))
 
-(define-test binary-to-multiple-decimal
-  (assert-equal '( 4 2 )
-                (all-your-base:rebase '( 1 0 1 0 1 0 ) 2 10)))
+(test single-decimal-to-binary
+ (is (equal '(1 0 1) (all-your-base:rebase '(5) 10 2))))
 
-(define-test decimal-to-binary
-  (assert-equal '( 1 0 1 0 1 0 )
-                (all-your-base:rebase '( 4 2 ) 10 2)))
+(test binary-to-multiple-decimal
+ (is (equal '(4 2) (all-your-base:rebase '(1 0 1 0 1 0) 2 10))))
 
-(define-test trinary-to-hexadecimal
-  (assert-equal '( 2 10 )
-                (all-your-base:rebase '( 1 1 2 0 ) 3 16)))
+(test decimal-to-binary
+ (is (equal '(1 0 1 0 1 0) (all-your-base:rebase '(4 2) 10 2))))
 
-(define-test hexadecimal-to-trinary
-  (assert-equal '( 1 1 2 0 )
-                (all-your-base:rebase '( 2 10 ) 16 3)))
+(test trinary-to-hexadecimal
+ (is (equal '(2 10) (all-your-base:rebase '(1 1 2 0) 3 16))))
 
-(define-test number-15-bit-integer
-  (assert-equal '( 6 10 45 )
-                (all-your-base:rebase '( 3 46 60 ) 97 73)))
+(test hexadecimal-to-trinary
+ (is (equal '(1 1 2 0) (all-your-base:rebase '(2 10) 16 3))))
 
-(define-test empty-list
-  (assert-equal '( 0 )
-                (all-your-base:rebase '() 2 10)))
+(test number-15-bit-integer
+ (is (equal '(6 10 45) (all-your-base:rebase '(3 46 60) 97 73))))
 
-(define-test single-zero
-  (assert-equal '( 0 )
-                (all-your-base:rebase '( 0 ) 10 2)))
+(test empty-list (is (equal '(0) (all-your-base:rebase 'nil 2 10))))
 
-(define-test multiple-zeros
-  (assert-equal '( 0 )
-                (all-your-base:rebase '( 0 0 0 ) 10 2)))
+(test single-zero (is (equal '(0) (all-your-base:rebase '(0) 10 2))))
 
-(define-test leading-zeros
-  (assert-equal '( 4 2 )
-                (all-your-base:rebase '( 0 6 0 ) 7 10)))
+(test multiple-zeros (is (equal '(0) (all-your-base:rebase '(0 0 0) 10 2))))
 
-(define-test input-base-is-one
-  (assert-false (all-your-base:rebase '( 0 ) 1 10)))
+(test leading-zeros (is (equal '(4 2) (all-your-base:rebase '(0 6 0) 7 10))))
 
-(define-test input-base-is-zero
-  (assert-false (all-your-base:rebase '() 0 10)))
+(test input-base-is-one (is (not (all-your-base:rebase '(0) 1 10))))
 
-(define-test input-base-is-negative
-  (assert-false (all-your-base:rebase '( 1 ) -2 10)))
+(test input-base-is-zero (is (not (all-your-base:rebase 'nil 0 10))))
 
-(define-test negative-digit
-  (assert-false (all-your-base:rebase '( 1 -1 1 0 1 0 ) 2 10)))
+(test input-base-is-negative (is (not (all-your-base:rebase '(1) -2 10))))
 
-(define-test invalid-positive-digit
-  (assert-false (all-your-base:rebase '( 1 2 1 0 1 0 ) 2 10)))
+(test negative-digit (is (not (all-your-base:rebase '(1 -1 1 0 1 0) 2 10))))
 
-(define-test output-base-is-one
-  (assert-false (all-your-base:rebase '( 1 0 1 0 1 0 ) 2 1)))
+(test invalid-positive-digit
+ (is (not (all-your-base:rebase '(1 2 1 0 1 0) 2 10))))
 
-(define-test output-base-is-zero
-  (assert-false (all-your-base:rebase '( 7 ) 10 0)))
+(test output-base-is-one (is (not (all-your-base:rebase '(1 0 1 0 1 0) 2 1))))
 
-(define-test output-base-is-negative
-  (assert-false (all-your-base:rebase '( 1 ) 2 -7)))
+(test output-base-is-zero (is (not (all-your-base:rebase '(7) 10 0))))
 
-(define-test both-bases-are-negative
-  (assert-false (all-your-base:rebase '( 1 ) -2 -7)))
+(test output-base-is-negative (is (not (all-your-base:rebase '(1) 2 -7))))
 
+(test both-bases-are-negative (is (not (all-your-base:rebase '(1) -2 -7))))
 
-#-xlisp-test
-(let ((*print-errors* t)
-      (*print-failures* t))
-  (run-tests :all :all-your-base-test))
+(defun run-tests (&optional (test-or-suite 'all-your-base-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

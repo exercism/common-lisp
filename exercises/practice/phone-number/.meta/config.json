@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html",
-  "source": "Event Manager by JumpstartLab",
-  "files": {
-    "test": [
+  "source_url":"http://tutorials.jumpstartlab.com/projects/eventmanager.html",
+  "source":"Event Manager by JumpstartLab",
+  "files":{
+    "test":[
       "phone-number-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "phone-number.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

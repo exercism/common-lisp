@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "http://pine.fm/LearnToProgram/?Chapter=09",
-  "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",
-  "files": {
-    "test": [
+  "source_url":"http://pine.fm/LearnToProgram/?Chapter=09",
+  "source":"Chapter 9 in Chris Pine's online Learn to Program tutorial.",
+  "files":{
+    "test":[
       "gigasecond-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "gigasecond.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

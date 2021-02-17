@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "https://en.wikipedia.org/wiki/Isogram",
-  "source": "Wikipedia",
-  "files": {
-    "test": [
+  "source_url":"https://en.wikipedia.org/wiki/Isogram",
+  "source":"Wikipedia",
+  "files":{
+    "test":[
       "isogram-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "isogram.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }

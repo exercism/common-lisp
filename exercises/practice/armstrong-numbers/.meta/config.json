@@ -1,17 +1,16 @@
 {
-  "v2": true,
-  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number",
-  "source": "Wikipedia",
-  "files": {
-    "test": [
+  "source_url":"https://en.wikipedia.org/wiki/Narcissistic_number",
+  "source":"Wikipedia",
+  "files":{
+    "test":[
       "armstrong-numbers-test.lisp"
     ],
-    "solution": [
+    "solution":[
       "armstrong-numbers.lisp"
     ],
-    "example": [
+    "example":[
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors":null
 }
