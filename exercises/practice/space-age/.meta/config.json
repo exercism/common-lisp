@@ -1,17 +1,10 @@
 {
-  "v2": true,
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=01",
   "source": "Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial.",
   "files": {
-    "test": [
-      "space-age-test.lisp"
-    ],
-    "solution": [
-      "space-age.lisp"
-    ],
-    "example": [
-      ".meta/example.lisp"
-    ]
+    "test": ["space-age-test.lisp"],
+    "solution": ["space-age.lisp"],
+    "example": [".meta/example.lisp"]
   },
   "authors": []
 }
