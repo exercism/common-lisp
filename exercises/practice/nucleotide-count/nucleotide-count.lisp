@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:nucleotide-count
   (:use #:common-lisp)
   (:export #:dna-count #:nucleotide-counts #:invalid-nucleotide))

@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:twelve-days
   (:use #:cl)
   (:export #:recite))

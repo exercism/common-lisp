@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:armstrong-numbers
   (:use #:cl)
   (:export #:armstrong-number-p))

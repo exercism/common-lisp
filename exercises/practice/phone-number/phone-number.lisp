@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:phone-number
   (:use #:common-lisp)
   (:export #:numbers #:area-code #:pretty-print))

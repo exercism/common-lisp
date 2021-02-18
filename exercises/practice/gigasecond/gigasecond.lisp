@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:gigasecond
   (:use #:cl)
   (:export #:from))

@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:allergies
   (:use #:common-lisp)
   (:shadow #:list)

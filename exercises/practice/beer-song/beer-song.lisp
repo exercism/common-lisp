@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:beer-song
   (:use #:common-lisp)
   (:export #:verse #:sing))
