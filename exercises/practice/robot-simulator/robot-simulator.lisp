@@ -1,5 +1,5 @@
 (defpackage #:robot-simulator
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:+north+ #:+east+ #:+south+ #:+west+ #:execute-sequence
            #:robot #:robot-position #:robot-bearing #:make-robot))
 

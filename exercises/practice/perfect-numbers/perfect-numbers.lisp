@@ -1,5 +1,5 @@
 (defpackage #:perfect-numbers
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:classify))
 
 (in-package #:perfect-numbers)

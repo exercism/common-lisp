@@ -1,5 +1,5 @@
 (defpackage #:grade-school
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:make-school #:add #:grade-roster #:grade #:sorted))
 
 (in-package #:grade-school)

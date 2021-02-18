@@ -1,5 +1,5 @@
 (defpackage #:meetup
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:meetup))
 
 (in-package #:meetup)

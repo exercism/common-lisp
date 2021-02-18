@@ -1,5 +1,5 @@
 (defpackage #:binary-search
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:binary-find #:value-error))
 
 (in-package #:binary-search)

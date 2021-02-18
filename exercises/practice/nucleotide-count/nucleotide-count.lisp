@@ -1,5 +1,5 @@
 (defpackage #:nucleotide-count
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:dna-count #:nucleotide-counts #:invalid-nucleotide))
 
 (in-package #:nucleotide-count)

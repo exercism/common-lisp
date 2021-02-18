@@ -1,5 +1,5 @@
 (defpackage #:acronym
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:acronym))
 
 (in-package #:acronym)

@@ -1,5 +1,5 @@
 (defpackage #:prime-factors
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export :factors-of))
 
 (in-package #:prime-factors)

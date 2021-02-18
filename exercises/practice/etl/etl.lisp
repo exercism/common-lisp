@@ -1,5 +1,5 @@
 (defpackage #:etl
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:transform))
 
 (in-package #:etl)

@@ -1,5 +1,5 @@
 (defpackage #:anagram
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:anagrams-for))
 
 (in-package #:anagram)

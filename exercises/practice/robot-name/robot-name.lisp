@@ -1,5 +1,5 @@
 (defpackage #:robot-name
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:build-robot #:robot-name #:reset-name))
 
 (in-package #:robot-name)

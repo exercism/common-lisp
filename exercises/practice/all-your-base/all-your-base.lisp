@@ -1,5 +1,5 @@
 (defpackage #:all-your-base
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:rebase))
 
 (in-package #:all-your-base)
