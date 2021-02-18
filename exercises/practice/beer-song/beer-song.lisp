@@ -1,5 +1,5 @@
 (defpackage #:beer-song
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:verse #:sing))
 
 (in-package #:beer-song)

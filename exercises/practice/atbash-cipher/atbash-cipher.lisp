@@ -1,5 +1,5 @@
 (defpackage #:atbash-cipher
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:encode))
 
 (in-package #:atbash-cipher)

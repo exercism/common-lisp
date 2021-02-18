@@ -1,5 +1,5 @@
 (defpackage #:strain
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:keep #:discard))
 
 (in-package #:strain)

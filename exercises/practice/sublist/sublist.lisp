@@ -1,5 +1,5 @@
 (defpackage #:sublist
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:sublist))
 
 (in-package #:sublist)

@@ -1,5 +1,5 @@
 (defpackage #:raindrops
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:convert))
 
 (in-package #:raindrops)

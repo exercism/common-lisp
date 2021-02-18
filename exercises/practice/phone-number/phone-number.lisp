@@ -1,5 +1,5 @@
 (defpackage #:phone-number
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:numbers #:area-code #:pretty-print))
 
 (in-package #:phone-number)

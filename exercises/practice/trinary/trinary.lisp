@@ -1,5 +1,5 @@
 (defpackage #:trinary
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:to-decimal))
 
 (in-package #:trinary)

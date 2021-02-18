@@ -1,5 +1,5 @@
 (defpackage #:leap
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:leap-year-p))
 (in-package #:leap)
 

@@ -1,5 +1,5 @@
 (defpackage #:collatz-conjecture
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:collatz))
 
 (in-package #:collatz-conjecture)

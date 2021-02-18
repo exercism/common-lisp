@@ -1,5 +1,5 @@
 (defpackage #:allergies
-  (:use #:common-lisp)
+  (:use #:cl)
   (:shadow #:list)
   (:export #:allergic-to-p #:list))
 
