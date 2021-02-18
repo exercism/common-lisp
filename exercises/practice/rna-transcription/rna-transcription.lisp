@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:rna-transcription
   (:use #:cl)
   (:export #:to-rna))

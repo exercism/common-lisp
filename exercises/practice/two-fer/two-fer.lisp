@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:two-fer
   (:use #:cl)
   (:export #:twofer))

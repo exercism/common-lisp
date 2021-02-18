@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:luhn
   (:use #:cl)
   (:export #:validp))

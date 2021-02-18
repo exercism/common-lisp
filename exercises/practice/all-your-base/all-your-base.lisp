@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:all-your-base
   (:use #:common-lisp)
   (:export #:rebase))

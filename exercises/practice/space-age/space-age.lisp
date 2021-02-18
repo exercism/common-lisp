@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:space-age
   (:use #:cl)
   (:export #:on-mercury

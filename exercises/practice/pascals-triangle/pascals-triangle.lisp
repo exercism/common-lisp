@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:pascals-triangle
   (:use #:cl)
   (:export #:rows))

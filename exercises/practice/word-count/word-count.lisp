@@ -1,4 +1,3 @@
-(in-package #:cl-user)
 (defpackage #:word-count
   (:use #:cl)
   (:export #:count-words))
