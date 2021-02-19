@@ -967,7 +967,7 @@
     {
       "icon": "feature-extensible",
       "title": "Extensible",
-      "content": "Generic functions, reader-macros, and flexible namespacing allow for the easy creation of DSLs"
+      "content": "Generic functions, reader-macros, and flexible namespacing allow for the extension of the language"
     },
     {
       "icon": "feature-standardized",
