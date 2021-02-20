@@ -64,7 +64,7 @@
           "loop.basic",
           "variables"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "code-as-data",
@@ -79,7 +79,7 @@
           "enumeration",
           "higher-order-functions"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "multiple-values",
@@ -92,7 +92,7 @@
           "functions",
           "expressions"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "hash-tables",
@@ -106,21 +106,21 @@
           "variables",
           "higher-order-functions"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "structures",
         "uuid": "973c5db0-73c2-11eb-a098-542696d187f9",
         "concepts": ["structures"],
         "prerequisites": ["assignment", "functions", "variables", "symbols"],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "characters",
         "uuid": "974ec504-73c2-11eb-8e58-542696d187f9",
         "concepts": ["characters"],
         "prerequisites": ["integers", "truthy-and-falsy"],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "sets",
@@ -133,14 +133,14 @@
           "sameness",
           "functions"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "assignment",
         "uuid": "977c8cbe-73c2-11eb-a7db-542696d187f9",
         "concepts": ["assignment"],
         "prerequisites": ["variables", "lists", "strings", "expressions"],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "nested-functions",
@@ -152,7 +152,7 @@
           "higher-order-functions",
           "symbols"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "recursion",
@@ -167,7 +167,7 @@
           "lists",
           "cons"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "anonymous-functions",
@@ -179,7 +179,7 @@
           "variables",
           "expressions"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "higher-order-functions",
@@ -192,7 +192,7 @@
           "truthy-and-falsy",
           "symbols"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "leslies-lists",
@@ -207,21 +207,21 @@
         "uuid": "982cf5ea-73c2-11eb-b01c-542696d187f9",
         "concepts": ["packages"],
         "prerequisites": ["variables", "symbols", "functions"],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "enumeration",
         "uuid": "984f2afc-73c2-11eb-a47e-542696d187f9",
         "concepts": ["enumeration", "loop.basic"],
         "prerequisites": ["arithmetic", "strings", "lists"],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "strings",
         "uuid": "9893b28a-73c2-11eb-a2c5-542696d187f9",
         "concepts": ["strings", "printing"],
         "prerequisites": ["expressions"],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "variables",
@@ -234,7 +234,7 @@
           "integers",
           "printing"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "pal-picker",
