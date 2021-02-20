@@ -281,7 +281,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "two-fer",
@@ -291,7 +291,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["optional_values", "strings", "text_formatting"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "hamming",
@@ -301,7 +301,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["conditionals", "equality", "filtering", "loops", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "rna-transcription",
@@ -311,7 +311,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["conditionals", "strings", "transforming"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "leap",
@@ -321,7 +321,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["conditionals", "equality", "integers", "logic"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "anagram",
@@ -331,7 +331,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["equality", "filtering", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "beer-song",
@@ -341,7 +341,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": ["conditionals", "integers", "loops", "text_formatting"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "roman-numerals",
@@ -357,7 +357,7 @@
           "strings",
           "text_formatting"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "word-count",
@@ -367,7 +367,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": ["conditionals", "filtering", "loops", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "bob",
@@ -377,7 +377,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["conditionals", "parsing", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "twelve-days",
@@ -387,7 +387,7 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": ["algorithms", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "acronym",
@@ -397,7 +397,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["strings", "transforming"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "all-your-base",
@@ -407,7 +407,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["integers", "math", "transforming"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "allergies",
@@ -422,7 +422,7 @@
           "integers",
           "text_formatting"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "armstrong-numbers",
@@ -432,7 +432,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["integers", "lists", "math"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "binary",
@@ -442,7 +442,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["bitwise_operations", "conditionals", "integers", "math"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "binary-search",
@@ -452,7 +452,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["loops", "sequences", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "collatz-conjecture",
@@ -462,7 +462,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["integers", "math", "recursion"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "difference-of-squares",
@@ -472,7 +472,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["floating_point_numbers", "integers", "loops", "math"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "etl",
@@ -482,7 +482,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["loops", "maps", "transforming"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "gigasecond",
@@ -492,7 +492,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["dates", "integers", "time", "transforming", "variables"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "grains",
@@ -502,7 +502,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["integers", "variables"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "isogram",
@@ -512,7 +512,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "nucleotide-count",
@@ -522,7 +522,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["loops", "maps", "sorting", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "pascals-triangle",
@@ -532,7 +532,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["integers", "loops", "math", "sequences"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "perfect-numbers",
@@ -542,7 +542,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["math"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "raindrops",
@@ -552,7 +552,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["conditionals", "filtering", "integers"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "scrabble-score",
@@ -562,7 +562,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["games", "loops", "maps", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "sieve",
@@ -579,7 +579,7 @@
           "maps",
           "math"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "space-age",
@@ -589,7 +589,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["floating_point_numbers", "interfaces", "transforming"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "strain",
@@ -599,7 +599,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["conditionals", "filtering", "loops", "sequences"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "sublist",
@@ -609,7 +609,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["lists"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "triangle",
@@ -624,7 +624,7 @@
           "floating_point_numbers",
           "integers"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "trinary",
@@ -634,7 +634,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["conditionals", "integers", "math"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "atbash-cipher",
@@ -644,7 +644,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": ["conditionals", "loops", "sequences", "transforming"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "grade-school",
@@ -654,7 +654,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": ["interfaces", "lists", "maps", "sorting", "variables"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "phone-number",
@@ -664,7 +664,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": ["interfaces", "parsing", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "prime-factors",
@@ -681,7 +681,7 @@
           "maps",
           "math"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "robot-name",
@@ -691,7 +691,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": ["randomness", "strings", "variables"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "robot-simulator",
@@ -701,7 +701,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": ["loops", "sequences", "strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "crypto-square",
@@ -717,7 +717,7 @@
           "strings",
           "transforming"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "meetup",
@@ -727,7 +727,7 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": ["conditionals", "dates", "filtering"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "luhn",
@@ -737,7 +737,7 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": ["algorithms", "strings", "transforming"],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
