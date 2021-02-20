@@ -55,7 +55,7 @@
       },
       {
         "slug": "destructuring-assignment",
-        "uuid": null,
+        "uuid": "96c80fc8-73c2-11eb-97e8-542696d187f9",
         "concepts": ["destructuring-assignment"],
         "prerequisites": [
           "lists",
@@ -68,7 +68,7 @@
       },
       {
         "slug": "code-as-data",
-        "uuid": null,
+        "uuid": "96f7db90-73c2-11eb-bb96-542696d187f9",
         "concepts": ["code-as-data"],
         "prerequisites": [
           "lists",
@@ -83,7 +83,7 @@
       },
       {
         "slug": "multiple-values",
-        "uuid": null,
+        "uuid": "970eb7a2-73c2-11eb-bc3e-542696d187f9",
         "concepts": ["multiple-values"],
         "prerequisites": [
           "lists",
@@ -96,7 +96,7 @@
       },
       {
         "slug": "hash-tables",
-        "uuid": null,
+        "uuid": "97258586-73c2-11eb-bf7b-542696d187f9",
         "concepts": ["hash-tables"],
         "prerequisites": [
           "assignment",
@@ -110,21 +110,21 @@
       },
       {
         "slug": "structures",
-        "uuid": null,
+        "uuid": "973c5db0-73c2-11eb-a098-542696d187f9",
         "concepts": ["structures"],
         "prerequisites": ["assignment", "functions", "variables", "symbols"],
         "status": "beta"
       },
       {
         "slug": "characters",
-        "uuid": null,
+        "uuid": "974ec504-73c2-11eb-8e58-542696d187f9",
         "concepts": ["characters"],
         "prerequisites": ["integers", "truthy-and-falsy"],
         "status": "beta"
       },
       {
         "slug": "sets",
-        "uuid": null,
+        "uuid": "9765addc-73c2-11eb-b1c0-542696d187f9",
         "concepts": ["sets"],
         "prerequisites": [
           "lists",
@@ -137,14 +137,14 @@
       },
       {
         "slug": "assignment",
-        "uuid": null,
+        "uuid": "977c8cbe-73c2-11eb-a7db-542696d187f9",
         "concepts": ["assignment"],
         "prerequisites": ["variables", "lists", "strings", "expressions"],
         "status": "beta"
       },
       {
         "slug": "nested-functions",
-        "uuid": null,
+        "uuid": "97a36aa0-73c2-11eb-9526-542696d187f9",
         "concepts": ["nested-functions"],
         "prerequisites": [
           "variables",
@@ -156,7 +156,7 @@
       },
       {
         "slug": "recursion",
-        "uuid": null,
+        "uuid": "97ca683a-73c2-11eb-bdec-542696d187f9",
         "concepts": ["recursion"],
         "prerequisites": [
           "nested-functions",
@@ -171,7 +171,7 @@
       },
       {
         "slug": "anonymous-functions",
-        "uuid": null,
+        "uuid": "97ea45e2-73c2-11eb-ba25-542696d187f9",
         "concepts": ["anonymous-functions"],
         "prerequisites": [
           "functions",
@@ -183,7 +183,7 @@
       },
       {
         "slug": "higher-order-functions",
-        "uuid": null,
+        "uuid": "9809ed16-73c2-11eb-8678-542696d187f9",
         "concepts": ["higher-order-functions"],
         "prerequisites": [
           "lists",
@@ -204,28 +204,28 @@
       },
       {
         "slug": "packages",
-        "uuid": null,
+        "uuid": "982cf5ea-73c2-11eb-b01c-542696d187f9",
         "concepts": ["packages"],
         "prerequisites": ["variables", "symbols", "functions"],
         "status": "beta"
       },
       {
         "slug": "enumeration",
-        "uuid": null,
+        "uuid": "984f2afc-73c2-11eb-a47e-542696d187f9",
         "concepts": ["enumeration", "loop.basic"],
         "prerequisites": ["arithmetic", "strings", "lists"],
         "status": "beta"
       },
       {
         "slug": "strings",
-        "uuid": null,
+        "uuid": "9893b28a-73c2-11eb-a2c5-542696d187f9",
         "concepts": ["strings", "printing"],
         "prerequisites": ["expressions"],
         "status": "beta"
       },
       {
         "slug": "variables",
-        "uuid": null,
+        "uuid": "98e4f8d4-73c2-11eb-8fee-542696d187f9",
         "concepts": ["constants", "variables"],
         "prerequisites": [
           "arithmetic",
