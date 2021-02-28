@@ -542,6 +542,12 @@
   },
   "concepts": [
     {
+      "uuid": "A3937CD9-A0E5-40CF-9ABC-5D9949BC32BA",
+      "slug": "algorithms",
+      "name": "Algorithms",
+      "blurb": "TODO: add blurb about algorithms"
+    },
+    {
       "uuid": "223d816f-c09e-4269-81fb-69db0c6fb1cd",
       "slug": "anonymous-functions",
       "name": "Anonymous Functions",
@@ -564,6 +570,12 @@
       "slug": "assignment",
       "name": "Assignment",
       "blurb": "TODO: add blurb for assignment concept"
+    },
+    {
+      "uuid": "C8E4BD5A-45C7-49BB-8258-FCD17ADA4AB1",
+      "slug": "bitwise_operations",
+      "name": "Bitwise_Operations",
+      "blurb": "TODO: add blurb about bitwise_operations"
     },
     {
       "uuid": "3147bf8d-9050-4f1a-b267-25f297fc80d7",
@@ -602,6 +614,18 @@
       "blurb": "TODO: add blurb for constants concept"
     },
     {
+      "uuid": "0F266C74-D16D-4120-91AD-16B15F0F3C8C",
+      "slug": "dates",
+      "name": "Dates",
+      "blurb": "TODO: add blurb about dates"
+    },
+    {
+      "uuid": "7F1F362F-68A1-4D6E-BA55-8EF17C8C1243",
+      "slug": "default-parameters",
+      "name": "Default-Parameters",
+      "blurb": "TODO: add blurb about default-parameters"
+    },
+    {
       "uuid": "92231d37-27e3-4692-96d4-ff9822a83132",
       "slug": "destructuring-assignment",
       "name": "Destructuring Assignment",
@@ -614,10 +638,22 @@
       "blurb": "TODO: add blurb for enumeration concept"
     },
     {
+      "uuid": "5C8F971B-A1E8-449A-BDA0-921B78432633",
+      "slug": "equality",
+      "name": "Equality",
+      "blurb": "TODO: add blurb about equality"
+    },
+    {
       "uuid": "80ea7d53-76aa-4e89-9d70-45548181a6eb",
       "slug": "expressions",
       "name": "Expressions",
       "blurb": "TODO: add blurb for expressions concept"
+    },
+    {
+      "uuid": "303BC3DB-B089-45C5-804A-F01945278CD8",
+      "slug": "filtering",
+      "name": "Filtering",
+      "blurb": "TODO: add blurb about filtering"
     },
     {
       "uuid": "0d0ae380-7f1f-4ac7-8900-d501afd7a48a",
@@ -626,10 +662,22 @@
       "blurb": "TODO: add blurb for floating-point-numbers concept"
     },
     {
+      "uuid": "A338E90B-B147-4B22-B839-F33A741062E8",
+      "slug": "floating_point_numbers",
+      "name": "Floating_Point_Numbers",
+      "blurb": "TODO: add blurb about floating_point_numbers"
+    },
+    {
       "uuid": "a7b463d3-4d7f-4b4a-8a47-28307219541d",
       "slug": "functions",
       "name": "Functions",
       "blurb": "A reuable set of expressions"
+    },
+    {
+      "uuid": "83A7FF61-2677-48C3-87A0-3E5121D25621",
+      "slug": "games",
+      "name": "Games",
+      "blurb": "TODO: add blurb about games"
     },
     {
       "uuid": "778561a9-c735-4c26-8d07-1baa71b8f94a",
@@ -650,6 +698,12 @@
       "blurb": "TODO: add blurb for integers concept"
     },
     {
+      "uuid": "521E9105-D752-4F8C-A980-51C33D7B97CA",
+      "slug": "interfaces",
+      "name": "Interfaces",
+      "blurb": "TODO: add blurb about interfaces"
+    },
+    {
       "uuid": "4a364c88-4d16-11eb-8dd3-542696d187f9",
       "slug": "lambda-list",
       "name": "Lambda List",
@@ -662,10 +716,34 @@
       "blurb": "A recursive data structure made from a head and tail."
     },
     {
+      "uuid": "0BAD981A-8BC8-4CD1-9FE5-D9D516702EA5",
+      "slug": "logic",
+      "name": "Logic",
+      "blurb": "TODO: add blurb about logic"
+    },
+    {
       "uuid": "5a6598c3-8d92-4eca-b36e-42ba4b435237",
       "slug": "loop.basic",
       "name": "Loop Basic",
       "blurb": "TODO: add blurb for loop.basic concept"
+    },
+    {
+      "uuid": "339804CB-9945-4C0A-B6D8-6EE94F494358",
+      "slug": "looping",
+      "name": "Looping",
+      "blurb": "TODO: add blurb about looping"
+    },
+    {
+      "uuid": "AB9BCE83-F376-4276-BEF4-FAB1F2A647CE",
+      "slug": "loops",
+      "name": "Loops",
+      "blurb": "TODO: add blurb about loops"
+    },
+    {
+      "uuid": "78C45D84-393A-4BD9-A7F6-953D0EB77180",
+      "slug": "maps",
+      "name": "Maps",
+      "blurb": "TODO: add blurb about maps"
     },
     {
       "uuid": "eb5772d1-756f-48b3-bbaa-7481e10c2bfe",
@@ -674,10 +752,22 @@
       "blurb": "TODO: add blurb for multiple-values concept"
     },
     {
+      "uuid": "26B42ED8-3CAF-4151-997C-D1C031082FEE",
+      "slug": "named-parameters",
+      "name": "Named-Parameters",
+      "blurb": "TODO: add blurb about named-parameters"
+    },
+    {
       "uuid": "654667dc-547a-4ec9-8e83-d1b3df4bbeba",
       "slug": "nested-functions",
       "name": "Nested Functions",
       "blurb": "TODO: add blurb for nested-functions concept"
+    },
+    {
+      "uuid": "CDB18430-5DF3-4A84-8BD3-3490A8B4ED4D",
+      "slug": "optional_values",
+      "name": "Optional_Values",
+      "blurb": "TODO: add blurb about optional_values"
     },
     {
       "uuid": "58adfe20-f67b-40df-a68a-4c5e07ab5c21",
@@ -686,10 +776,22 @@
       "blurb": "TODO: add blurb for packages concept"
     },
     {
+      "uuid": "AE0BD0F2-B0C4-4A2A-94C3-056762EF1C88",
+      "slug": "parsing",
+      "name": "Parsing",
+      "blurb": "TODO: add blurb about parsing"
+    },
+    {
       "uuid": "c54d3099-ce89-4745-942a-ab8e1ec00ad3",
       "slug": "printing",
       "name": "Printing",
       "blurb": "TODO: add blurb for printing concept"
+    },
+    {
+      "uuid": "AD767D61-6694-4AD1-B32C-5E546A885748",
+      "slug": "randomness",
+      "name": "Randomness",
+      "blurb": "TODO: add blurb about randomness"
     },
     {
       "uuid": "9dc0a29a-6742-43ee-a03d-581dff2c1855",
@@ -698,16 +800,40 @@
       "blurb": "TODO: add blurb for recursion concept"
     },
     {
+      "uuid": "2EB9757E-E38C-49A7-B192-41E64D9E535A",
+      "slug": "rest-parameters",
+      "name": "Rest-Parameters",
+      "blurb": "TODO: add blurb about rest-parameters"
+    },
+    {
       "uuid": "c04de4d9-d69f-429f-916f-48ab461112ee",
       "slug": "sameness",
       "name": "Sameness",
       "blurb": "TODO: add blurb for sameness concept"
     },
     {
+      "uuid": "5bbd40fe-3382-11eb-b6f1-542696d187f9",
+      "slug": "scope",
+      "name": "Scope",
+      "blurb": "TODO: add blurb for scope concept"
+    },
+    {
+      "uuid": "63AAB4A6-5E27-4A48-B8C3-8E6BD94E92B5",
+      "slug": "sequences",
+      "name": "Sequences",
+      "blurb": "TODO: add blurb about sequences"
+    },
+    {
       "uuid": "5774aac1-e8c6-439f-97ee-27f4febc1b26",
       "slug": "sets",
       "name": "Sets",
       "blurb": "TODO: add blurb for sets concept"
+    },
+    {
+      "uuid": "21035C93-D98F-40E2-9B20-BB3721FAAF87",
+      "slug": "sorting",
+      "name": "Sorting",
+      "blurb": "TODO: add blurb about sorting"
     },
     {
       "uuid": "630eaa07-1239-4548-be46-e695c8a2c73f",
@@ -728,6 +854,24 @@
       "blurb": "TODO: add blurb for symbols concept"
     },
     {
+      "uuid": "81703629-8F45-46D0-851D-0929DEDFB1D6",
+      "slug": "text_formatting",
+      "name": "Text_Formatting",
+      "blurb": "TODO: add blurb about text_formatting"
+    },
+    {
+      "uuid": "5F108669-35A8-4DED-BEA0-CE30B53DF702",
+      "slug": "time",
+      "name": "Time",
+      "blurb": "TODO: add blurb about time"
+    },
+    {
+      "uuid": "DAB358F6-AD6C-4D78-8037-B54D1A284081",
+      "slug": "transforming",
+      "name": "Transforming",
+      "blurb": "TODO: add blurb about transforming"
+    },
+    {
       "uuid": "59de6711-b247-4f06-8030-94633cf16a65",
       "slug": "truthy-and-falsy",
       "name": "Truthy And Falsy",
@@ -738,12 +882,6 @@
       "slug": "variables",
       "name": "Variables",
       "blurb": "TODO: add blurb for variables concept"
-    },
-    {
-      "uuid": "5bbd40fe-3382-11eb-b6f1-542696d187f9",
-      "slug": "scope",
-      "name": "Scope",
-      "blurb": "TODO: add blurb for scope concept"
     }
   ],
   "key_features": [
