@@ -124,7 +124,7 @@
         "difficulty": 1,
         "practices": [
           "conditionals",
-          "equality",
+          "sameness",
           "filtering",
           "loops",
           "strings"
@@ -146,7 +146,7 @@
         "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["conditionals", "equality", "integers", "logic"],
+        "practices": ["conditionals", "sameness", "integers", "logic"],
         "status": "beta"
       },
       {
@@ -155,7 +155,7 @@
         "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["equality", "filtering", "strings"],
+        "practices": ["sameness", "filtering", "strings"],
         "status": "beta"
       },
       {
@@ -636,12 +636,6 @@
       "slug": "enumeration",
       "name": "Enumeration",
       "blurb": "TODO: add blurb for enumeration concept"
-    },
-    {
-      "uuid": "5C8F971B-A1E8-449A-BDA0-921B78432633",
-      "slug": "equality",
-      "name": "Equality",
-      "blurb": "TODO: add blurb about equality"
     },
     {
       "uuid": "80ea7d53-76aa-4e89-9d70-45548181a6eb",
