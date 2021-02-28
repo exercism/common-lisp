@@ -111,7 +111,7 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
-        "practices": ["optional_values", "strings", "text_formatting"],
+        "practices": ["optional-values", "strings", "text-formatting"],
         "prerequisites": [],
         "difficulty": 1,
         "status": "beta"
@@ -164,7 +164,7 @@
         "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
         "prerequisites": [],
         "difficulty": 2,
-        "practices": ["conditionals", "integers", "loops", "text_formatting"],
+        "practices": ["conditionals", "integers", "loops", "text-formatting"],
         "status": "beta"
       },
       {
@@ -178,7 +178,7 @@
           "integers",
           "loops",
           "strings",
-          "text_formatting"
+          "text-formatting"
         ],
         "status": "beta"
       },
@@ -206,7 +206,7 @@
         "uuid": "40ce6656-b8f5-4156-94b6-d634876215b2",
         "prerequisites": [],
         "difficulty": 4,
-        "practices": ["strings", "text_formatting", "looping"],
+        "practices": ["strings", "text-formatting", "looping"],
         "status": "beta"
       },
       {
@@ -234,10 +234,10 @@
         "prerequisites": [],
         "difficulty": 1,
         "practices": [
-          "bitwise_operations",
+          "bitwise-operations",
           "conditionals",
           "integers",
-          "text_formatting"
+          "text-formatting"
         ],
         "status": "beta"
       },
@@ -257,7 +257,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "practices": [
-          "bitwise_operations",
+          "bitwise-operations",
           "conditionals",
           "integers",
           "arithmetic"
@@ -289,7 +289,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "practices": [
-          "floating_point_numbers",
+          "floating-point-numbers",
           "integers",
           "loops",
           "arithmetic"
@@ -399,7 +399,7 @@
         "uuid": "d24cf0ea-876f-4775-969b-99970425e413",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["floating_point_numbers", "interfaces", "transforming"],
+        "practices": ["floating-point-numbers", "interfaces", "transforming"],
         "status": "beta"
       },
       {
@@ -429,7 +429,7 @@
         "practices": [
           "conditionals",
           "filtering",
-          "floating_point_numbers",
+          "floating-point-numbers",
           "integers"
         ],
         "status": "beta"
@@ -573,9 +573,9 @@
     },
     {
       "uuid": "C8E4BD5A-45C7-49BB-8258-FCD17ADA4AB1",
-      "slug": "bitwise_operations",
-      "name": "Bitwise_Operations",
-      "blurb": "TODO: add blurb about bitwise_operations"
+      "slug": "bitwise-operations",
+      "name": "Bitwise-Operations",
+      "blurb": "TODO: add blurb about bitwise-operations"
     },
     {
       "uuid": "3147bf8d-9050-4f1a-b267-25f297fc80d7",
@@ -660,12 +660,6 @@
       "slug": "floating-point-numbers",
       "name": "Floating Point Numbers",
       "blurb": "TODO: add blurb for floating-point-numbers concept"
-    },
-    {
-      "uuid": "A338E90B-B147-4B22-B839-F33A741062E8",
-      "slug": "floating_point_numbers",
-      "name": "Floating_Point_Numbers",
-      "blurb": "TODO: add blurb about floating_point_numbers"
     },
     {
       "uuid": "a7b463d3-4d7f-4b4a-8a47-28307219541d",
@@ -765,9 +759,9 @@
     },
     {
       "uuid": "CDB18430-5DF3-4A84-8BD3-3490A8B4ED4D",
-      "slug": "optional_values",
-      "name": "Optional_Values",
-      "blurb": "TODO: add blurb about optional_values"
+      "slug": "optional-values",
+      "name": "Optional-Values",
+      "blurb": "TODO: add blurb about optional-values"
     },
     {
       "uuid": "58adfe20-f67b-40df-a68a-4c5e07ab5c21",
@@ -855,9 +849,9 @@
     },
     {
       "uuid": "81703629-8F45-46D0-851D-0929DEDFB1D6",
-      "slug": "text_formatting",
-      "name": "Text_Formatting",
-      "blurb": "TODO: add blurb about text_formatting"
+      "slug": "text-formatting",
+      "name": "Text-Formatting",
+      "blurb": "TODO: add blurb about text-formatting"
     },
     {
       "uuid": "5F108669-35A8-4DED-BEA0-CE30B53DF702",
