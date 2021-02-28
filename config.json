@@ -126,7 +126,7 @@
           "conditionals",
           "sameness",
           "filtering",
-          "loops",
+          "iteration",
           "strings"
         ],
         "status": "beta"
@@ -164,7 +164,12 @@
         "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
         "prerequisites": [],
         "difficulty": 2,
-        "practices": ["conditionals", "integers", "loops", "text-formatting"],
+        "practices": [
+          "conditionals",
+          "integers",
+          "iteration",
+          "text-formatting"
+        ],
         "status": "beta"
       },
       {
@@ -176,7 +181,7 @@
         "practices": [
           "conditionals",
           "integers",
-          "loops",
+          "iteration",
           "strings",
           "text-formatting"
         ],
@@ -188,7 +193,7 @@
         "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
         "prerequisites": [],
         "difficulty": 2,
-        "practices": ["conditionals", "filtering", "loops", "strings"],
+        "practices": ["conditionals", "filtering", "iteration", "strings"],
         "status": "beta"
       },
       {
@@ -206,7 +211,7 @@
         "uuid": "40ce6656-b8f5-4156-94b6-d634876215b2",
         "prerequisites": [],
         "difficulty": 4,
-        "practices": ["strings", "text-formatting", "looping"],
+        "practices": ["strings", "text-formatting", "iteration"],
         "status": "beta"
       },
       {
@@ -270,7 +275,7 @@
         "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["loops", "sequences", "strings"],
+        "practices": ["iteration", "sequences", "strings"],
         "status": "beta"
       },
       {
@@ -291,7 +296,7 @@
         "practices": [
           "floating-point-numbers",
           "integers",
-          "loops",
+          "iteration",
           "arithmetic"
         ],
         "status": "beta"
@@ -302,7 +307,7 @@
         "uuid": "52ac3dd0-8803-445f-93cf-e984b59d6702",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["loops", "maps", "transforming"],
+        "practices": ["iteration", "maps", "transforming"],
         "status": "beta"
       },
       {
@@ -338,7 +343,7 @@
         "uuid": "b2ad38c2-2962-4a47-9b14-20ca262ebff6",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["loops", "maps", "sorting", "strings"],
+        "practices": ["iteration", "maps", "sorting", "strings"],
         "status": "beta"
       },
       {
@@ -347,7 +352,7 @@
         "uuid": "34bc4fbe-f148-4519-a699-91efed432703",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["integers", "loops", "arithmetic", "sequences"],
+        "practices": ["integers", "iteration", "arithmetic", "sequences"],
         "status": "beta"
       },
       {
@@ -374,7 +379,7 @@
         "uuid": "f350f23d-72f8-4f47-a0f5-fe3c00f3f5f1",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["games", "loops", "maps", "strings"],
+        "practices": ["games", "iteration", "maps", "strings"],
         "status": "beta"
       },
       {
@@ -387,7 +392,7 @@
           "conditionals",
           "filtering",
           "integers",
-          "loops",
+          "iteration",
           "maps",
           "arithmetic"
         ],
@@ -408,7 +413,7 @@
         "uuid": "1a81aac9-9128-48ab-aa6a-4d981d6eb602",
         "prerequisites": [],
         "difficulty": 1,
-        "practices": ["conditionals", "filtering", "loops", "sequences"],
+        "practices": ["conditionals", "filtering", "iteration", "sequences"],
         "status": "beta"
       },
       {
@@ -449,7 +454,7 @@
         "uuid": "71a1fdb6-414e-452c-8d24-03f2a5621e62",
         "prerequisites": [],
         "difficulty": 2,
-        "practices": ["conditionals", "loops", "sequences", "transforming"],
+        "practices": ["conditionals", "iteration", "sequences", "transforming"],
         "status": "beta"
       },
       {
@@ -480,7 +485,7 @@
           "conditionals",
           "filtering",
           "integers",
-          "loops",
+          "iteration",
           "maps",
           "arithmetic"
         ],
@@ -501,7 +506,7 @@
         "uuid": "d218cf9e-3b35-4357-9734-87142c22d551",
         "prerequisites": [],
         "difficulty": 2,
-        "practices": ["loops", "sequences", "strings"],
+        "practices": ["iteration", "sequences", "strings"],
         "status": "beta"
       },
       {
@@ -513,7 +518,7 @@
         "practices": [
           "arrays",
           "conditionals",
-          "loops",
+          "iteration",
           "strings",
           "transforming"
         ],
@@ -716,16 +721,10 @@
       "blurb": "TODO: add blurb for loop.basic concept"
     },
     {
-      "uuid": "339804CB-9945-4C0A-B6D8-6EE94F494358",
-      "slug": "looping",
-      "name": "Looping",
-      "blurb": "TODO: add blurb about looping"
-    },
-    {
       "uuid": "AB9BCE83-F376-4276-BEF4-FAB1F2A647CE",
-      "slug": "loops",
-      "name": "Loops",
-      "blurb": "TODO: add blurb about loops"
+      "slug": "iteration",
+      "name": "Iteration",
+      "blurb": "TODO: add blurb about iteration"
     },
     {
       "uuid": "78C45D84-393A-4BD9-A7F6-953D0EB77180",
