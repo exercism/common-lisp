@@ -716,9 +716,9 @@
     },
     {
       "uuid": "5a6598c3-8d92-4eca-b36e-42ba4b435237",
-      "slug": "loop.basic",
-      "name": "Loop Basic",
-      "blurb": "TODO: add blurb for loop.basic concept"
+      "slug": "loop",
+      "name": "Loop",
+      "blurb": "TODO: add blurb for loop expression concept"
     },
     {
       "uuid": "AB9BCE83-F376-4276-BEF4-FAB1F2A647CE",
