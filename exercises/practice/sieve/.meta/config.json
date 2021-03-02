@@ -1,16 +1,17 @@
 {
-  "source_url":"http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes",
-  "source":"Sieve of Eratosthenes at Wikipedia",
-  "files":{
-    "test":[
+  "blurb": "Use the Sieve of Eratosthenes to find all the primes from 2 up to a given number.",
+  "source_url": "http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes",
+  "source": "Sieve of Eratosthenes at Wikipedia",
+  "files": {
+    "test": [
       "sieve-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "sieve.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

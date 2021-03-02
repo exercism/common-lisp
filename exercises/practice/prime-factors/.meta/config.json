@@ -1,16 +1,17 @@
 {
-  "source_url":"http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata",
-  "source":"The Prime Factors Kata by Uncle Bob",
-  "files":{
-    "test":[
+  "blurb": "Compute the prime factors of a given natural number.",
+  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata",
+  "source": "The Prime Factors Kata by Uncle Bob",
+  "files": {
+    "test": [
       "prime-factors-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "prime-factors.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

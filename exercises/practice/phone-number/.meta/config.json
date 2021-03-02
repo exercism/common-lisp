@@ -1,16 +1,17 @@
 {
-  "source_url":"http://tutorials.jumpstartlab.com/projects/eventmanager.html",
-  "source":"Event Manager by JumpstartLab",
-  "files":{
-    "test":[
+  "blurb": "Clean up user-entered phone numbers so that they can be sent SMS messages.",
+  "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html",
+  "source": "Event Manager by JumpstartLab",
+  "files": {
+    "test": [
       "phone-number-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "phone-number.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

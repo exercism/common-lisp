@@ -1,16 +1,17 @@
 {
-  "source_url":"http://en.wikipedia.org/wiki/Luhn_algorithm",
-  "source":"The Luhn Algorithm on Wikipedia",
-  "files":{
-    "test":[
+  "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
+  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm",
+  "source": "The Luhn Algorithm on Wikipedia",
+  "files": {
+    "test": [
       "luhn-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "luhn.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

@@ -1,16 +1,17 @@
 {
-  "source_url":"http://gschool.it",
-  "source":"A pairing session with Phil Battos at gSchool",
-  "files":{
-    "test":[
+  "blurb": "Given students' names along with the grade that they are in, create a roster for the school",
+  "source_url": "http://gschool.it",
+  "source": "A pairing session with Phil Battos at gSchool",
+  "files": {
+    "test": [
       "grade-school-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "grade-school.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

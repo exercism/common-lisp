@@ -1,14 +1,15 @@
 {
-  "files":{
-    "test":[
+  "blurb": "Write a function to determine if a list is a sublist of another list.",
+  "files": {
+    "test": [
       "sublist-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "sublist.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }
