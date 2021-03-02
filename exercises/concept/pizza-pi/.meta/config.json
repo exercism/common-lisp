@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for pizza-pi exercise",
   "authors": [
     {
       "github_username": "TheLostLambda",
@@ -10,8 +11,14 @@
     }
   ],
   "files": {
-    "solution": ["pizza-pi.lisp"],
-    "test": ["pizza-pi-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "pizza-pi.lisp"
+    ],
+    "test": [
+      "pizza-pi-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   }
 }

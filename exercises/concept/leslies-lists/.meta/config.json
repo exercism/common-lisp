@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for leslies-lists exercise",
   "authors": [
     {
       "github_username": "verdammelt",
@@ -6,8 +7,14 @@
     }
   ],
   "files": {
-    "solution": ["leslies-lists.lisp"],
-    "test": ["leslies-lists-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "leslies-lists.lisp"
+    ],
+    "test": [
+      "leslies-lists-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   }
 }
