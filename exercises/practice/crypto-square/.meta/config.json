@@ -1,16 +1,17 @@
 {
-  "source_url":"http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html",
-  "source":"J Dalbey's Programming Practice problems",
-  "files":{
-    "test":[
+  "blurb": "Implement the classic method for composing secret messages called a square code.",
+  "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html",
+  "source": "J Dalbey's Programming Practice problems",
+  "files": {
+    "test": [
       "crypto-square-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "crypto-square.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

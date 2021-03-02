@@ -1,16 +1,17 @@
 {
-  "source_url":"http://pine.fm/LearnToProgram/?Chapter=06",
-  "source":"Learn to Program by Chris Pine",
-  "files":{
-    "test":[
+  "blurb": "Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.",
+  "source_url": "http://pine.fm/LearnToProgram/?Chapter=06",
+  "source": "Learn to Program by Chris Pine",
+  "files": {
+    "test": [
       "beer-song-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "beer-song.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

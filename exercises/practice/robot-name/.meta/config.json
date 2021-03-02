@@ -1,15 +1,16 @@
 {
-  "source":"A debugging session with Paul Blackwell at gSchool.",
-  "files":{
-    "test":[
+  "blurb": "Manage robot factory settings.",
+  "source": "A debugging session with Paul Blackwell at gSchool.",
+  "files": {
+    "test": [
       "robot-name-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "robot-name.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

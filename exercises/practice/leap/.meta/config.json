@@ -1,16 +1,17 @@
 {
-  "source_url":"http://www.javaranch.com/leap.jsp",
-  "source":"JavaRanch Cattle Drive, exercise 3",
-  "files":{
-    "test":[
+  "blurb": "Given a year, report if it is a leap year.",
+  "source_url": "http://www.javaranch.com/leap.jsp",
+  "source": "JavaRanch Cattle Drive, exercise 3",
+  "files": {
+    "test": [
       "leap-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "leap.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

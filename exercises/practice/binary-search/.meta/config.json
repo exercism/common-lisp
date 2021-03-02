@@ -1,16 +1,17 @@
 {
-  "source_url":"http://en.wikipedia.org/wiki/Binary_search_algorithm",
-  "source":"Wikipedia",
-  "files":{
-    "test":[
+  "blurb": "Implement a binary search algorithm.",
+  "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm",
+  "source": "Wikipedia",
+  "files": {
+    "test": [
       "binary-search-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "binary-search.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

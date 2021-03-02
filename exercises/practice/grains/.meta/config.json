@@ -1,16 +1,17 @@
 {
-  "source_url":"http://www.javaranch.com/grains.jsp",
-  "source":"JavaRanch Cattle Drive, exercise 6",
-  "files":{
-    "test":[
+  "blurb": "Calculate the number of grains of wheat on a chessboard given that the number on each square doubles.",
+  "source_url": "http://www.javaranch.com/grains.jsp",
+  "source": "JavaRanch Cattle Drive, exercise 6",
+  "files": {
+    "test": [
       "grains-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "grains.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

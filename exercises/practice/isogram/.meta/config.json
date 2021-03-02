@@ -1,16 +1,17 @@
 {
-  "source_url":"https://en.wikipedia.org/wiki/Isogram",
-  "source":"Wikipedia",
-  "files":{
-    "test":[
+  "blurb": "Determine if a word or phrase is an isogram.",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram",
+  "source": "Wikipedia",
+  "files": {
+    "test": [
       "isogram-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "isogram.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }

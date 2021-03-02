@@ -1,16 +1,17 @@
 {
-  "source_url":"http://pine.fm/LearnToProgram/?Chapter=09",
-  "source":"Chapter 9 in Chris Pine's online Learn to Program tutorial.",
-  "files":{
-    "test":[
+  "blurb": "Given a moment, determine the moment that would be after a gigasecond has passed.",
+  "source_url": "http://pine.fm/LearnToProgram/?Chapter=09",
+  "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",
+  "files": {
+    "test": [
       "gigasecond-test.lisp"
     ],
-    "solution":[
+    "solution": [
       "gigasecond.lisp"
     ],
-    "example":[
+    "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors":null
+  "authors": null
 }
