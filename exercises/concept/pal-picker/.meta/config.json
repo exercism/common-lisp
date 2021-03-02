@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for pal-picker exercise",
   "authors": [
     {
       "github_username": "TheLostLambda",
@@ -6,8 +7,14 @@
     }
   ],
   "files": {
-    "solution": ["pal-picker.lisp"],
-    "test": ["pal-picker-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "pal-picker.lisp"
+    ],
+    "test": [
+      "pal-picker-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   }
 }

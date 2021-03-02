@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for key-comparison exercise",
   "authors": [
     {
       "github_username": "verdammelt",
@@ -10,8 +11,14 @@
     }
   ],
   "files": {
-    "solution": ["key-comparison.lisp"],
-    "test": ["key-comparison-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "key-comparison.lisp"
+    ],
+    "test": [
+      "key-comparison-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   }
 }

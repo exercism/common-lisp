@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for socks-and-sexprs exercise",
   "authors": [
     {
       "github_username": "verdammelt",
@@ -10,8 +11,14 @@
     }
   ],
   "files": {
-    "solution": ["socks-and-sexprs.lisp"],
-    "test": ["socks-and-sexprs-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "socks-and-sexprs.lisp"
+    ],
+    "test": [
+      "socks-and-sexprs-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   }
 }
