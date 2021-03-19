@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "uuid": "909ffa25-1fcb-47d3-ba3a-4af70cbbab6b",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing Common Lisp locally",
+      "blurb": "Learn how to install Common Lisp locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "1ddb9ed1-1cfd-4d11-8721-8f338b977962",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn Common Lisp",
+      "blurb": "An overview of how to get started from scratch with Common Lisp"
+    },
+    {
+      "uuid": "0aef4e6b-db32-4eb1-9abb-334897a89715",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the Common Lisp track",
+      "blurb": "Learn how to test your Common Lisp exercises on Exercism"
+    },
+    {
+      "uuid": "d297945d-5bf2-4be2-a558-48500f35c46e",
+      "slug": "resources",
+      "path": "docs/RESOURCES.md",
+      "title": "Useful Common Lisp resources",
+      "blurb": "A collection of useful resources to help you master Common Lisp"
+    }
+  ]
+}
