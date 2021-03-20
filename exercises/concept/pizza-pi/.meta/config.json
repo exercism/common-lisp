@@ -1,18 +1,12 @@
 {
-  "blurb": "TODO: add blurb for pizza-pi exercise",
+  "blurb": "Learn about arithmetic with intergers and floating-point numbers by helping to make pizza.",
   "authors": [
     "TheLostLambda",
     "verdammelt"
   ],
   "files": {
-    "solution": [
-      "pizza-pi.lisp"
-    ],
-    "test": [
-      "pizza-pi-test.lisp"
-    ],
-    "exemplar": [
-      ".meta/exemplar.lisp"
-    ]
+    "solution": ["pizza-pi.lisp"],
+    "test": ["pizza-pi-test.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
   }
 }
