@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for lillys-lasagna-leftovers exercise",
+  "blurb": "Learn about keyword, optional and rest arguments by again helping with lasagna.",
   "authors": [
     {
       "github_username": "verdammelt",
@@ -7,18 +7,10 @@
     }
   ],
   "contributors": [],
-  "forked_from": [
-    "swift/lasagna-master"
-  ],
+  "forked_from": ["swift/lasagna-master"],
   "files": {
-    "solution": [
-      "lillys-lasagna-leftovers.lisp"
-    ],
-    "test": [
-      "lillys-lasagna-leftovers-test.lisp"
-    ],
-    "exemplar": [
-      ".meta/exemplar.lisp"
-    ]
+    "solution": ["lillys-lasagna-leftovers.lisp"],
+    "test": ["lillys-lasagna-leftovers-test.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
   }
 }

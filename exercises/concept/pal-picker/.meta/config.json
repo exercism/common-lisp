@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for pal-picker exercise",
+  "blurb": "Learn about conditionals and truth and falseness by helping to choose and take care of a pet.",
   "authors": [
     {
       "github_username": "TheLostLambda",
@@ -7,14 +7,8 @@
     }
   ],
   "files": {
-    "solution": [
-      "pal-picker.lisp"
-    ],
-    "test": [
-      "pal-picker-test.lisp"
-    ],
-    "exemplar": [
-      ".meta/exemplar.lisp"
-    ]
+    "solution": ["pal-picker.lisp"],
+    "test": ["pal-picker-test.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
   }
 }

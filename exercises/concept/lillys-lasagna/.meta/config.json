@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for lillys-lasagna exercise",
+  "blurb": "Learn about functions by helping to cook lasagna.",
   "authors": [
     {
       "github_username": "verdammelt",
@@ -7,18 +7,10 @@
     }
   ],
   "contributors": [],
-  "forked_from": [
-    "ruby/lasagna"
-  ],
+  "forked_from": ["ruby/lasagna"],
   "files": {
-    "solution": [
-      "lillys-lasagna.lisp"
-    ],
-    "test": [
-      "lillys-lasagna-test.lisp"
-    ],
-    "exemplar": [
-      ".meta/exemplar.lisp"
-    ]
+    "solution": ["lillys-lasagna.lisp"],
+    "test": ["lillys-lasagna-test.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
   }
 }
