@@ -1,10 +1,7 @@
 {
   "blurb": "TODO: add blurb for pal-picker exercise",
   "authors": [
-    {
-      "github_username": "TheLostLambda",
-      "exercism_username": "TheLostLambda"
-    }
+    "TheLostLambda"
   ],
   "files": {
     "solution": [

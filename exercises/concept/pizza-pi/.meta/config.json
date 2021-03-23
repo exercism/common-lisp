@@ -1,14 +1,8 @@
 {
   "blurb": "TODO: add blurb for pizza-pi exercise",
   "authors": [
-    {
-      "github_username": "TheLostLambda",
-      "exercism_username": "TheLostLambda"
-    },
-    {
-      "github_username": "verdammelt",
-      "exercism_username": "verdammelt"
-    }
+    "TheLostLambda",
+    "verdammelt"
   ],
   "files": {
     "solution": [

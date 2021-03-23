@@ -1,14 +1,8 @@
 {
   "blurb": "TODO: add blurb for socks-and-sexprs exercise",
   "authors": [
-    {
-      "github_username": "verdammelt",
-      "exercism_username": "verdammelt"
-    },
-    {
-      "github_username": "TheLostLambda",
-      "exercism_username": "TheLostLambda"
-    }
+    "verdammelt",
+    "TheLostLambda"
   ],
   "files": {
     "solution": [

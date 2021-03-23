@@ -1,10 +1,7 @@
 {
   "blurb": "TODO: add blurb for lillys-lasagna-leftovers exercise",
   "authors": [
-    {
-      "github_username": "verdammelt",
-      "exercism_username": "verdammelt"
-    }
+    "verdammelt"
   ],
   "contributors": [],
   "forked_from": [

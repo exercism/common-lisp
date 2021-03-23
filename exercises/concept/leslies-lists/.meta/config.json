@@ -1,10 +1,7 @@
 {
   "blurb": "TODO: add blurb for leslies-lists exercise",
   "authors": [
-    {
-      "github_username": "verdammelt",
-      "exercism_username": "verdammelt"
-    }
+    "verdammelt"
   ],
   "files": {
     "solution": [
