@@ -13,5 +13,15 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": null
+  "authors": [
+    "kytrinyx"
+  ],
+  "contributors": [
+    "azrazalea",
+    "dnmfarrell",
+    "serialhex",
+    "sjakobi",
+    "verdammelt",
+    "wobh"
+  ]
 }

@@ -11,5 +11,12 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": null
+  "authors": [
+    "Average-user"
+  ],
+  "contributors": [
+    "azrazalea",
+    "kephas",
+    "verdammelt"
+  ]
 }

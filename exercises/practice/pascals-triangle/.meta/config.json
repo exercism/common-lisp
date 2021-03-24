@@ -13,5 +13,13 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": null
+  "authors": [
+    "daantjie"
+  ],
+  "contributors": [
+    "azrazalea",
+    "serialhex",
+    "verdammelt",
+    "wobh"
+  ]
 }

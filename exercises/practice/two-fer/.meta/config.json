@@ -12,5 +12,11 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": null
+  "authors": [
+    "verdammelt"
+  ],
+  "contributors": [
+    "OrdoFlammae",
+    "timotheosh"
+  ]
 }

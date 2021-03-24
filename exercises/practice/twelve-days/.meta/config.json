@@ -13,5 +13,11 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": null
+  "authors": [
+    "serialhex"
+  ],
+  "contributors": [
+    "dnmfarrell",
+    "verdammelt"
+  ]
 }

@@ -13,5 +13,7 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": null
+  "authors": [
+    "verdammelt"
+  ]
 }
