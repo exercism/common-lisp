@@ -13,5 +13,11 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": null
+  "authors": null,
+  "contributors": [
+    "azrazalea",
+    "sjwarner-bp",
+    "verdammelt",
+    "wobh"
+  ]
 }

@@ -13,5 +13,13 @@
       ".meta/example.lisp"
     ]
   },
-  "authors": []
+  "authors": [
+    "wobh"
+  ],
+  "contributors": [
+    "azrazalea",
+    "dnmfarrell",
+    "serialhex",
+    "verdammelt"
+  ]
 }
