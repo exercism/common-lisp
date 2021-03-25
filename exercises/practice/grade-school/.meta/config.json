@@ -3,23 +3,10 @@
   "source_url": "http://gschool.it",
   "source": "A pairing session with Phil Battos at gSchool",
   "files": {
-    "test": [
-      "grade-school-test.lisp"
-    ],
-    "solution": [
-      "grade-school.lisp"
-    ],
-    "example": [
-      ".meta/example.lisp"
-    ]
+    "test": ["grade-school-test.lisp"],
+    "solution": ["grade-school.lisp"],
+    "example": [".meta/example.lisp"]
   },
-  "authors": [
-    "kytrinyx"
-  ],
-  "contributors": [
-    "azrazalea",
-    "serialhex",
-    "verdammelt",
-    "wobh"
-  ]
+  "authors": ["verdammelt"],
+  "contributors": ["azrazalea", "serialhex", "wobh"]
 }
