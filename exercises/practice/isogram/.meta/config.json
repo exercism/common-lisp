@@ -3,21 +3,10 @@
   "source_url": "https://en.wikipedia.org/wiki/Isogram",
   "source": "Wikipedia",
   "files": {
-    "test": [
-      "isogram-test.lisp"
-    ],
-    "solution": [
-      "isogram.lisp"
-    ],
-    "example": [
-      ".meta/example.lisp"
-    ]
+    "test": ["isogram-test.lisp"],
+    "solution": ["isogram.lisp"],
+    "example": [".meta/example.lisp"]
   },
-  "authors": null,
-  "contributors": [
-    "azrazalea",
-    "sjwarner-bp",
-    "verdammelt",
-    "wobh"
-  ]
+  "authors": ["Average-user"],
+  "contributors": ["azrazalea", "sjwarner-bp", "verdammelt", "wobh"]
 }
