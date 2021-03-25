@@ -3,24 +3,10 @@
   "source_url": "https://github.com/monkbroc",
   "source": "Julien Vanier",
   "files": {
-    "test": [
-      "acronym-test.lisp"
-    ],
-    "solution": [
-      "acronym.lisp"
-    ],
-    "example": [
-      ".meta/example.lisp"
-    ]
+    "test": ["acronym-test.lisp"],
+    "solution": ["acronym.lisp"],
+    "example": [".meta/example.lisp"]
   },
-  "authors": [
-    "serialhex"
-  ],
-  "contributors": [
-    "azrazalea",
-    "daveyarwood",
-    "dnmfarrell",
-    "verdammelt",
-    "viztor"
-  ]
+  "authors": ["serialhex"],
+  "contributors": ["daveyarwood", "dnmfarrell", "verdammelt", "viztor"]
 }

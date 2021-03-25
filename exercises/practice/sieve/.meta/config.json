@@ -3,22 +3,10 @@
   "source_url": "http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes",
   "source": "Sieve of Eratosthenes at Wikipedia",
   "files": {
-    "test": [
-      "sieve-test.lisp"
-    ],
-    "solution": [
-      "sieve.lisp"
-    ],
-    "example": [
-      ".meta/example.lisp"
-    ]
+    "test": ["sieve-test.lisp"],
+    "solution": ["sieve.lisp"],
+    "example": [".meta/example.lisp"]
   },
-  "authors": [
-    "wobh"
-  ],
-  "contributors": [
-    "azrazalea",
-    "dnmfarrell",
-    "verdammelt"
-  ]
+  "authors": ["wobh"],
+  "contributors": ["dnmfarrell", "verdammelt"]
 }

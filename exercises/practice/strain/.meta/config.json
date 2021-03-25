@@ -3,22 +3,10 @@
   "source_url": "https://twitter.com/jeg2",
   "source": "Conversation with James Edward Gray II",
   "files": {
-    "test": [
-      "strain-test.lisp"
-    ],
-    "solution": [
-      "strain.lisp"
-    ],
-    "example": [
-      ".meta/example.lisp"
-    ]
+    "test": ["strain-test.lisp"],
+    "solution": ["strain.lisp"],
+    "example": [".meta/example.lisp"]
   },
-  "authors": [
-    "verdammelt"
-  ],
-  "contributors": [
-    "azrazalea",
-    "dnmfarrell",
-    "wobh"
-  ]
+  "authors": ["verdammelt"],
+  "contributors": ["dnmfarrell", "wobh"]
 }

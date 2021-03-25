@@ -3,22 +3,10 @@
   "source_url": "http://en.wikipedia.org/wiki/Atbash",
   "source": "Wikipedia",
   "files": {
-    "test": [
-      "atbash-cipher-test.lisp"
-    ],
-    "solution": [
-      "atbash-cipher.lisp"
-    ],
-    "example": [
-      ".meta/example.lisp"
-    ]
+    "test": ["atbash-cipher-test.lisp"],
+    "solution": ["atbash-cipher.lisp"],
+    "example": [".meta/example.lisp"]
   },
-  "authors": [
-    "verdammelt"
-  ],
-  "contributors": [
-    "azrazalea",
-    "serialhex",
-    "wobh"
-  ]
+  "authors": ["verdammelt"],
+  "contributors": ["serialhex", "wobh"]
 }

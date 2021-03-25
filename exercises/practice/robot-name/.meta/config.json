@@ -7,5 +7,5 @@
     "example": [".meta/example.lisp"]
   },
   "authors": ["verdammelt"],
-  "contributors": ["azrazalea", "wobh"]
+  "contributors": ["wobh"]
 }
