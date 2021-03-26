@@ -8,5 +8,5 @@
     "example": [".meta/example.lisp"]
   },
   "authors": ["Average-user"],
-  "contributors": ["serialhex"]
+  "contributors": null
 }
