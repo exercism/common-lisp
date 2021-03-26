@@ -8,5 +8,5 @@
     "example": [".meta/example.lisp"]
   },
   "authors": ["wobh"],
-  "contributors": ["dnmfarrell", "serialhex", "verdammelt"]
+  "contributors": ["dnmfarrell", "serialhex"]
 }
