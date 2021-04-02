@@ -1,8 +1,5 @@
 {
   "blurb": "TODO: add blurb for arithmetic concept",
-  "authors": [
-    "TheLostLambda",
-    "verdammelt"
-  ],
-  "contributors": []
+  "authors": ["TheLostLambda"],
+  "contributors": ["verdammelt"]
 }

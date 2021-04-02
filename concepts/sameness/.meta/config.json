@@ -1,8 +1,5 @@
 {
   "blurb": "TODO: add blurb for sameness concept",
-  "authors": [
-    "verdammelt",
-    "TheLostLambda"
-  ],
-  "contributors": []
+  "authors": ["verdammelt"],
+  "contributors": ["TheLostLambda"]
 }
