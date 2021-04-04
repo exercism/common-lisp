@@ -483,17 +483,10 @@
         "name": "Gigasecond",
         "uuid": "25506c31-7274-402a-95e1-8475fcdb34e1",
         "difficulty": 1,
-        "practices": [
-          "dates",
-          "integers",
-          "time",
-          "transforming",
-          "variables"
-        ],
+        "practices": ["dates-times", "integers", "transforming", "variables"],
         "prerequisites": [
-          "dates",
+          "dates-times",
           "integers",
-          "time",
           "transforming",
           "variables"
         ],
@@ -862,16 +855,8 @@
         "name": "Meetup",
         "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
         "difficulty": 3,
-        "practices": [
-          "conditionals",
-          "dates",
-          "filtering"
-        ],
-        "prerequisites": [
-          "conditionals",
-          "dates",
-          "filtering"
-        ],
+        "practices": ["conditionals", "dates-times", "filtering"],
+        "prerequisites": ["conditionals", "dates-times", "filtering"],
         "status": "beta"
       },
       {
@@ -947,8 +932,8 @@
     },
     {
       "uuid": "0F266C74-D16D-4120-91AD-16B15F0F3C8C",
-      "slug": "dates",
-      "name": "Dates"
+      "slug": "dates-times",
+      "name": "Dates and Times"
     },
     {
       "uuid": "7F1F362F-68A1-4D6E-BA55-8EF17C8C1243",
@@ -1129,11 +1114,6 @@
       "uuid": "81703629-8F45-46D0-851D-0929DEDFB1D6",
       "slug": "text-formatting",
       "name": "Text-Formatting"
-    },
-    {
-      "uuid": "5F108669-35A8-4DED-BEA0-CE30B53DF702",
-      "slug": "time",
-      "name": "Time"
     },
     {
       "uuid": "DAB358F6-AD6C-4D78-8037-B54D1A284081",
