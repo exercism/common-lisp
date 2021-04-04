@@ -443,12 +443,8 @@
         "name": "Space Age",
         "uuid": "d24cf0ea-876f-4775-969b-99970425e413",
         "difficulty": 1,
-        "practices": ["floating-point-numbers", "interfaces", "transforming"],
-        "prerequisites": [
-          "floating-point-numbers",
-          "interfaces",
-          "transforming"
-        ],
+        "practices": ["floating-point-numbers", "transforming"],
+        "prerequisites": ["floating-point-numbers", "transforming"],
         "status": "beta"
       },
       {
@@ -521,14 +517,8 @@
         "name": "Grade School",
         "uuid": "841641f2-16ba-4dc5-af1b-ffae5052853a",
         "difficulty": 2,
-        "practices": ["interfaces", "lists", "maps", "sorting", "variables"],
-        "prerequisites": [
-          "interfaces",
-          "lists",
-          "maps",
-          "sorting",
-          "variables"
-        ],
+        "practices": ["lists", "maps", "sorting", "variables"],
+        "prerequisites": ["lists", "maps", "sorting", "variables"],
         "status": "beta"
       },
       {
@@ -536,8 +526,8 @@
         "name": "Phone Number",
         "uuid": "d1d86b51-a3f4-4276-a18c-6db54bc8dfcc",
         "difficulty": 2,
-        "practices": ["interfaces", "parsing", "strings"],
-        "prerequisites": ["interfaces", "parsing", "strings"],
+        "practices": ["parsing", "strings"],
+        "prerequisites": ["parsing", "strings"],
         "status": "beta"
       },
       {
@@ -733,11 +723,6 @@
       "uuid": "e5fefeda-9e02-48c4-9591-fc8a518d99f2",
       "slug": "integers",
       "name": "Integers"
-    },
-    {
-      "uuid": "521E9105-D752-4F8C-A980-51C33D7B97CA",
-      "slug": "interfaces",
-      "name": "Interfaces"
     },
     {
       "uuid": "4a364c88-4d16-11eb-8dd3-542696d187f9",
