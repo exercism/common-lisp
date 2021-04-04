@@ -1,0 +1,32 @@
+name: Config Check
+
+on: [push, pull_request]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install SBCL & QuickLisp
+        run: |
+          sudo apt install sbcl
+          curl -O http://beta.quicklisp.org/quicklisp.lisp
+          sbcl --disable-debugger \
+               --load quicklisp.lisp \
+               --eval "(quicklisp-quickstart:install)" \
+               --eval "(push (merge-pathnames \"src/\") asdf:*central-registry*)" \
+               --eval "(sb-ext:save-lisp-and-die \"${HOME}/ql-sbcl\" :executable t)" \
+               --quit
+
+      - name: SBCL Version
+        run: |
+          ${HOME}/ql-sbcl --eval "(format t \"~A-~A\" (lisp-implementation-type) (lisp-implementation-version))"
+
+      - name: Run Config Check
+        run: |
+          ${HOME}/ql-sbcl --eval "(ql:quickload \"config-checker\")" \
+                          --eval "(config-checker:ci-check-config)"  \
+                          --quit
