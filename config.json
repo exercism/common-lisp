@@ -891,16 +891,8 @@
         "name": "Luhn",
         "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
         "difficulty": 5,
-        "practices": [
-          "algorithms",
-          "strings",
-          "transforming"
-        ],
-        "prerequisites": [
-          "algorithms",
-          "strings",
-          "transforming"
-        ],
+        "practices": ["strings", "transforming"],
+        "prerequisites": ["strings", "transforming"],
         "status": "beta"
       }
     ],
@@ -910,11 +902,6 @@
     ]
   },
   "concepts": [
-    {
-      "uuid": "A3937CD9-A0E5-40CF-9ABC-5D9949BC32BA",
-      "slug": "algorithms",
-      "name": "Algorithms"
-    },
     {
       "uuid": "223d816f-c09e-4269-81fb-69db0c6fb1cd",
       "slug": "anonymous-functions",
