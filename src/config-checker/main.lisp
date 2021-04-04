@@ -11,6 +11,21 @@
         (format *error-output* "Concept: ~S does not have a directory~&" c))
       (error 'config-check-failure))))
 
+(defun each-concept-directory-is-a-concept (config)
+  (let ((concepts (sort (copy-seq (mapcar #'(lambda (h) (gethash "slug" h))
+                                          (gethash "concepts" config)))
+                        #'string<))
+        (directories (sort (apply #'append
+                                  (mapcar #'last
+                                          (mapcar #'pathname-directory
+                                                  (directory "./concepts/*/"))))
+                           #'string<)))
+    (let ((orphan-directories (set-difference directories concepts :test #'string=)))
+      (when orphan-directories
+        (format *error-output* "Concept Directories: ~S are not in concept list~&"
+                orphan-directories)
+        (error 'config-check-failure)))))
+
 (defun exercise-concepts-are-in-concept-list (config)
   (let* ((exercises (gethash "exercises" config))
          (concepts (sort (copy-seq (mapcar #'(lambda (h) (gethash "slug" h))
@@ -35,6 +50,7 @@
         (error 'config-check-failure)))))
 
 (defparameter *checkers* (list #'each-concept-has-a-directory
+                               #'each-concept-directory-is-a-concept
                                #'exercise-concepts-are-in-concept-list))
 
 (defun check-config ()
