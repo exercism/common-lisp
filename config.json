@@ -274,12 +274,7 @@
           "strings",
           "text-formatting"
         ],
-        "prerequisites": [
-          "functions",
-          "arithmetic",
-          "integer",
-          "iteration"
-        ],
+        "prerequisites": ["functions", "arithmetic", "integers", "iteration"],
         "status": "beta"
       },
       {
@@ -305,15 +300,8 @@
         "name": "Bob",
         "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
         "difficulty": 1,
-        "practices": [
-          "conditionals",
-          "parsing",
-          "strings"
-        ],
-        "prerequisites": [
-          "conditionals",
-          "string"
-        ],
+        "practices": ["conditionals", "parsing", "strings"],
+        "prerequisites": ["conditionals", "strings"],
         "status": "beta"
       },
       {
