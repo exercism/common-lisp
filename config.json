@@ -149,7 +149,7 @@
         "name": "Rna Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
-        "practices": ["conditionals", "strings", "transforming"],
+        "practices": ["conditionals", "strings"],
         "prerequisites": ["functions", "iteration", "strings"],
         "status": "beta"
       },
@@ -232,8 +232,8 @@
         "name": "Acronym",
         "uuid": "a999c375-f2e2-4d47-a9e2-5af923cd46d1",
         "difficulty": 1,
-        "practices": ["strings", "transforming"],
-        "prerequisites": ["strings", "transforming"],
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
         "status": "beta"
       },
       {
@@ -241,8 +241,8 @@
         "name": "All Your Base",
         "uuid": "9b01a3bd-68fe-4171-8e5e-ff3351865aaf",
         "difficulty": 1,
-        "practices": ["integers", "arithmetic", "transforming"],
-        "prerequisites": ["integers", "arithmetic", "transforming"],
+        "practices": ["integers", "arithmetic"],
+        "prerequisites": ["integers", "arithmetic"],
         "status": "beta"
       },
       {
@@ -334,8 +334,8 @@
         "name": "Etl",
         "uuid": "52ac3dd0-8803-445f-93cf-e984b59d6702",
         "difficulty": 1,
-        "practices": ["iteration", "maps", "transforming"],
-        "prerequisites": ["iteration", "maps", "transforming"],
+        "practices": ["iteration", "maps"],
+        "prerequisites": ["iteration", "maps"],
         "status": "beta"
       },
       {
@@ -343,13 +343,8 @@
         "name": "Gigasecond",
         "uuid": "25506c31-7274-402a-95e1-8475fcdb34e1",
         "difficulty": 1,
-        "practices": ["dates-times", "integers", "transforming", "variables"],
-        "prerequisites": [
-          "dates-times",
-          "integers",
-          "transforming",
-          "variables"
-        ],
+        "practices": ["dates-times", "integers", "variables"],
+        "prerequisites": ["dates-times", "integers", "variables"],
         "status": "beta"
       },
       {
@@ -443,8 +438,8 @@
         "name": "Space Age",
         "uuid": "d24cf0ea-876f-4775-969b-99970425e413",
         "difficulty": 1,
-        "practices": ["floating-point-numbers", "transforming"],
-        "prerequisites": ["floating-point-numbers", "transforming"],
+        "practices": ["floating-point-numbers"],
+        "prerequisites": ["floating-point-numbers"],
         "status": "beta"
       },
       {
@@ -503,13 +498,8 @@
         "name": "Atbash Cipher",
         "uuid": "71a1fdb6-414e-452c-8d24-03f2a5621e62",
         "difficulty": 2,
-        "practices": ["conditionals", "iteration", "sequences", "transforming"],
-        "prerequisites": [
-          "conditionals",
-          "iteration",
-          "sequences",
-          "transforming"
-        ],
+        "practices": ["conditionals", "iteration", "sequences"],
+        "prerequisites": ["conditionals", "iteration", "sequences"],
         "status": "beta"
       },
       {
@@ -576,20 +566,8 @@
         "name": "Crypto Square",
         "uuid": "fcfc6b44-597d-4a03-bf02-6be5c8f7ae4e",
         "difficulty": 3,
-        "practices": [
-          "arrays",
-          "conditionals",
-          "iteration",
-          "strings",
-          "transforming"
-        ],
-        "prerequisites": [
-          "arrays",
-          "conditionals",
-          "iteration",
-          "strings",
-          "transforming"
-        ],
+        "practices": ["arrays", "conditionals", "iteration", "strings"],
+        "prerequisites": ["arrays", "conditionals", "iteration", "strings"],
         "status": "beta"
       },
       {
@@ -606,8 +584,8 @@
         "name": "Luhn",
         "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
         "difficulty": 5,
-        "practices": ["strings", "transforming"],
-        "prerequisites": ["strings", "transforming"],
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
         "status": "beta"
       }
     ],
@@ -843,11 +821,6 @@
       "uuid": "81703629-8F45-46D0-851D-0929DEDFB1D6",
       "slug": "text-formatting",
       "name": "Text-Formatting"
-    },
-    {
-      "uuid": "DAB358F6-AD6C-4D78-8037-B54D1A284081",
-      "slug": "transforming",
-      "name": "Transforming"
     },
     {
       "uuid": "59de6711-b247-4f06-8030-94633cf16a65",
