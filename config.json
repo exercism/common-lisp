@@ -334,8 +334,8 @@
         "name": "Etl",
         "uuid": "52ac3dd0-8803-445f-93cf-e984b59d6702",
         "difficulty": 1,
-        "practices": ["iteration", "maps"],
-        "prerequisites": ["iteration", "maps"],
+        "practices": ["iteration", "mapping"],
+        "prerequisites": ["iteration", "mapping"],
         "status": "beta"
       },
       {
@@ -370,8 +370,8 @@
         "name": "Nucleotide Count",
         "uuid": "b2ad38c2-2962-4a47-9b14-20ca262ebff6",
         "difficulty": 1,
-        "practices": ["iteration", "maps", "sorting", "strings"],
-        "prerequisites": ["iteration", "maps", "sorting", "strings"],
+        "practices": ["iteration", "mapping", "sorting", "strings"],
+        "prerequisites": ["iteration", "mapping", "sorting", "strings"],
         "status": "beta"
       },
       {
@@ -406,8 +406,8 @@
         "name": "Scrabble Score",
         "uuid": "f350f23d-72f8-4f47-a0f5-fe3c00f3f5f1",
         "difficulty": 1,
-        "practices": ["iteration", "maps", "strings"],
-        "prerequisites": ["iteration", "maps", "strings"],
+        "practices": ["iteration", "mapping", "strings"],
+        "prerequisites": ["iteration", "mapping", "strings"],
         "status": "beta"
       },
       {
@@ -420,7 +420,7 @@
           "filtering",
           "integers",
           "iteration",
-          "maps",
+          "mapping",
           "arithmetic"
         ],
         "prerequisites": [
@@ -428,7 +428,7 @@
           "filtering",
           "integers",
           "iteration",
-          "maps",
+          "mapping",
           "arithmetic"
         ],
         "status": "beta"
@@ -507,8 +507,8 @@
         "name": "Grade School",
         "uuid": "841641f2-16ba-4dc5-af1b-ffae5052853a",
         "difficulty": 2,
-        "practices": ["lists", "maps", "sorting", "variables"],
-        "prerequisites": ["lists", "maps", "sorting", "variables"],
+        "practices": ["lists", "mapping", "sorting", "variables"],
+        "prerequisites": ["lists", "mapping", "sorting", "variables"],
         "status": "beta"
       },
       {
@@ -530,7 +530,7 @@
           "filtering",
           "integers",
           "iteration",
-          "maps",
+          "mapping",
           "arithmetic"
         ],
         "prerequisites": [
@@ -538,7 +538,7 @@
           "filtering",
           "integers",
           "iteration",
-          "maps",
+          "mapping",
           "arithmetic"
         ],
         "status": "beta"
@@ -729,8 +729,8 @@
     },
     {
       "uuid": "78C45D84-393A-4BD9-A7F6-953D0EB77180",
-      "slug": "maps",
-      "name": "Maps"
+      "slug": "mapping",
+      "name": "Mapping"
     },
     {
       "uuid": "eb5772d1-756f-48b3-bbaa-7481e10c2bfe",
