@@ -658,11 +658,6 @@
       "name": "Destructuring Assignment"
     },
     {
-      "uuid": "16d4b9d8-0484-463a-9273-e0a89d1842e1",
-      "slug": "enumeration",
-      "name": "Enumeration"
-    },
-    {
       "uuid": "80ea7d53-76aa-4e89-9d70-45548181a6eb",
       "slug": "expressions",
       "name": "Expressions"
