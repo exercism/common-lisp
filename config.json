@@ -158,7 +158,7 @@
         "name": "Leap",
         "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
         "difficulty": 1,
-        "practices": ["conditionals", "sameness", "integers", "logic"],
+        "practices": ["conditionals", "sameness", "integers"],
         "prerequisites": ["conditionals", "arithmetic", "integers"],
         "status": "beta"
       },
@@ -711,11 +711,6 @@
       "uuid": "65c600a7-7f6a-428f-9913-d6f127f35234",
       "slug": "lists",
       "name": "Lists"
-    },
-    {
-      "uuid": "0BAD981A-8BC8-4CD1-9FE5-D9D516702EA5",
-      "slug": "logic",
-      "name": "Logic"
     },
     {
       "uuid": "5a6598c3-8d92-4eca-b36e-42ba4b435237",
