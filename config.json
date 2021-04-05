@@ -214,7 +214,7 @@
         "name": "Bob",
         "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
         "difficulty": 1,
-        "practices": ["conditionals", "parsing", "strings"],
+        "practices": ["conditionals", "strings"],
         "prerequisites": ["conditionals", "strings"],
         "status": "beta"
       },
@@ -516,8 +516,8 @@
         "name": "Phone Number",
         "uuid": "d1d86b51-a3f4-4276-a18c-6db54bc8dfcc",
         "difficulty": 2,
-        "practices": ["parsing", "strings"],
-        "prerequisites": ["parsing", "strings"],
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
         "status": "beta"
       },
       {
@@ -746,11 +746,6 @@
       "uuid": "58adfe20-f67b-40df-a68a-4c5e07ab5c21",
       "slug": "packages",
       "name": "Packages"
-    },
-    {
-      "uuid": "AE0BD0F2-B0C4-4A2A-94C3-056762EF1C88",
-      "slug": "parsing",
-      "name": "Parsing"
     },
     {
       "uuid": "c54d3099-ce89-4745-942a-ab8e1ec00ad3",
