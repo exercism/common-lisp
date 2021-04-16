@@ -3,7 +3,7 @@
 (define-condition config-check-failure (error) ())
 
 (defun each-concept-has-a-directory (config)
-  (let* ((concepts (mapcar #'(lambda (h) (gethash "slug" h)) (gethash "concepts" config)))
+  (let* ((concepts (track-config:slugs (track-config:listed-concepts config)))
          (bad-concepts
            (remove-if #'(lambda (c) (probe-file (merge-pathnames c "./concepts/"))) concepts)))
     (when bad-concepts
@@ -12,38 +12,26 @@
       (error 'config-check-failure))))
 
 (defun each-concept-directory-is-a-concept (config)
-  (let ((concepts (sort (copy-seq (mapcar #'(lambda (h) (gethash "slug" h))
-                                          (gethash "concepts" config)))
-                        #'string<))
-        (directories (sort (apply #'append
-                                  (mapcar #'last
-                                          (mapcar #'pathname-directory
-                                                  (directory "./concepts/*/"))))
-                           #'string<)))
-    (let ((orphan-directories (set-difference directories concepts :test #'string=)))
+  (let ((concepts (track-config:slugs (track-config:listed-concepts config)))
+        (directories (flatten (mapcar #'last
+                                      (mapcar #'pathname-directory
+                                              (directory "./concepts/*/"))))))
+    (let ((orphan-directories (slug-set-diff directories concepts)))
       (when orphan-directories
         (format *error-output* "Concept Directories: ~S are not in concept list~&"
                 orphan-directories)
         (error 'config-check-failure)))))
 
 (defun exercise-concepts-are-in-concept-list (config)
-  (let* ((exercises (gethash "exercises" config))
-         (concepts (sort (copy-seq (mapcar #'(lambda (h) (gethash "slug" h))
-                                           (gethash "concepts" config)))
-                         #'string<))
-         (concept-exercises  (gethash "concept" exercises))
-         (practice-exercises (gethash "practice" exercises))
-
+  (let* ((concepts (track-config:slugs (track-config:listed-concepts config)))
+         (exercises (append (track-config:concept-exercises config)
+                            (track-config:practice-exercises config)))
          (exercise-concepts
-           (delete-duplicates
-            (sort
-             (append (apply #'append (mapcar #'(lambda (h) (gethash "concepts" h)) concept-exercises))
-                     (apply #'append (mapcar #'(lambda (h) (gethash "practices" h)) practice-exercises))
-                     (apply #'append (mapcar #'(lambda (h) (gethash "prerequisites" h)) practice-exercises)))
-             #'string<)
-            :test #'string=)))
+           (slug-remove-dups
+            (append (flat-mapcar #'track-config:practiced-concept-slugs exercises)
+                    (flat-mapcar #'track-config:prerequisite-concept-slugs exercises)))))
 
-    (let ((unlisted-concepts (set-difference exercise-concepts concepts :test #'string=)))
+    (let ((unlisted-concepts (slug-set-diff exercise-concepts concepts)))
       (when unlisted-concepts
         (format *error-output* "Concepts from exercises: ~S not in the concept list~&"
                 unlisted-concepts)
@@ -54,7 +42,7 @@
                                #'exercise-concepts-are-in-concept-list))
 
 (defun check-config ()
-  (let ((config (yason:parse (truename "./config.json"))))
+  (let ((config (track-config:read-config "./config.json")))
     (dolist (checker *checkers*)
       (funcall checker config))))
 
