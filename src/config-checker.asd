@@ -9,4 +9,6 @@
   :pathname "config-checker"
   :serial t
   :components ((:file "packages")
+               (:file "track-config")
+               (:file "utils")
                (:file "main")))
