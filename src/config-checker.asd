@@ -11,4 +11,8 @@
   :components ((:file "packages")
                (:file "track-config")
                (:file "utils")
-               (:file "main")))
+               (:file "main")
+               (:module "checkers"
+                :components ((:file "each-concept-directory-is-a-concept")
+                             (:file "each-concept-has-a-directory")
+                             (:file "exercise-concepts-are-in-concept-list")))))
