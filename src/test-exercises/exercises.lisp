@@ -9,8 +9,8 @@
   (destructuring-bind (type slug)
       (mapcar #'keywordize (last (pathname-directory dir) 2))
     (let ((config (slurp-exercise-config dir)))
-      (pairlis '(:directory :type :slug :files :v2)
-               (list dir type slug (aget :files config) (aget :v2 config))))))
+      (pairlis '(:directory :type :slug :files)
+               (list dir type slug (aget :files config))))))
 
 (defun load-exercise-file (exercise file)
   (let ((*default-pathname-defaults* (aget :directory exercise))
