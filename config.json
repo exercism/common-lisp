@@ -66,13 +66,7 @@
         "name": "Pal Picker",
         "uuid": "c0155014-4d11-4cb2-872b-6dfdf794f7cd",
         "concepts": ["conditionals", "truthy-and-falsy"],
-        "prerequisites": [
-          "expressions",
-          "integers",
-          "arithmetic",
-          "symbols",
-          "strings"
-        ],
+        "prerequisites": ["expressions", "integers", "arithmetic", "symbols"],
         "status": "beta"
       },
       {

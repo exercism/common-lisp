@@ -28,4 +28,3 @@
 - `integers`
 - `arithmetic`
 - `symbols`
-- `strings`
