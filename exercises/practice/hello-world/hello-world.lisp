@@ -3,4 +3,4 @@
   (:export #:hello))
 (in-package #:hello-world)
 
-(defun hello ())
+(defun hello () "Put your greeting here.")
