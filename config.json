@@ -96,8 +96,8 @@
         "slug": "hello-world",
         "name": "Hello World",
         "uuid": "d4af6cfa-d468-15b5-dcdf-7d717ddf6556",
-        "practices": ["strings"],
-        "prerequisites": ["expressions"],
+        "practices": [],
+        "prerequisites": [],
         "difficulty": 1,
         "status": "deprecated"
       },
