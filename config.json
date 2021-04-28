@@ -33,7 +33,7 @@
       {
         "slug": "key-comparison",
         "name": "The Key to Comparison",
-        "uuid": "d780fb3e-c9f8-11ea-af82-3200111e0c80",
+        "uuid": "8d7ba0dc-7d87-452c-8208-39491d8f40f4",
         "concepts": ["sameness"],
         "prerequisites": [
           "characters",
@@ -72,7 +72,7 @@
       {
         "slug": "lillys-lasagna",
         "name": "Lilly's Lasagna",
-        "uuid": "825df850-2f38-11eb-a817-542696d187f9",
+        "uuid": "60f4773a-e37e-4186-8542-a19ffbf6e6ae",
         "concepts": ["functions"],
         "prerequisites": ["expressions", "integers", "arithmetic"],
         "status": "beta"
@@ -80,7 +80,7 @@
       {
         "slug": "lillys-lasagna-leftovers",
         "name": "Lilly's Lasagna Leftovers",
-        "uuid": "44570800-47f5-11eb-9f38-542696d187f9",
+        "uuid": "994302db-c5e5-4342-a2a5-e2a5d09b10cc",
         "concepts": [
           "lambda-list",
           "named-parameters",
@@ -95,7 +95,7 @@
       {
         "slug": "hello-world",
         "name": "Hello World",
-        "uuid": "d4af6cfa-d468-15b5-dcdf-7d717ddf6556",
+        "uuid": "314e1322-c3b0-4f12-85be-c35d5ffc020c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
@@ -607,7 +607,7 @@
       "name": "Assignment"
     },
     {
-      "uuid": "C8E4BD5A-45C7-49BB-8258-FCD17ADA4AB1",
+      "uuid": "c85b14d9-284f-4efa-9b10-af33db6f7188",
       "slug": "bitwise-operations",
       "name": "Bitwise-Operations"
     },
@@ -637,12 +637,12 @@
       "name": "Constants"
     },
     {
-      "uuid": "0F266C74-D16D-4120-91AD-16B15F0F3C8C",
+      "uuid": "e81cd51b-5b8a-4191-b9c6-1f5e8589563c",
       "slug": "dates-times",
       "name": "Dates and Times"
     },
     {
-      "uuid": "7F1F362F-68A1-4D6E-BA55-8EF17C8C1243",
+      "uuid": "a291e615-6148-46a4-ada8-9ab6eb343eb9",
       "slug": "default-parameters",
       "name": "Default-Parameters"
     },
@@ -657,7 +657,7 @@
       "name": "Expressions"
     },
     {
-      "uuid": "303BC3DB-B089-45C5-804A-F01945278CD8",
+      "uuid": "e9bedb16-6c65-4ef4-8aa4-d939c3bddda5",
       "slug": "filtering",
       "name": "Filtering"
     },
@@ -687,7 +687,7 @@
       "name": "Integers"
     },
     {
-      "uuid": "4a364c88-4d16-11eb-8dd3-542696d187f9",
+      "uuid": "53cff6b3-65fc-40c7-afec-b5d2b242884c",
       "slug": "lambda-list",
       "name": "Lambda List"
     },
@@ -702,12 +702,12 @@
       "name": "Loop"
     },
     {
-      "uuid": "AB9BCE83-F376-4276-BEF4-FAB1F2A647CE",
+      "uuid": "247d0214-2d89-49d3-9f12-7710a500d394",
       "slug": "iteration",
       "name": "Iteration"
     },
     {
-      "uuid": "78C45D84-393A-4BD9-A7F6-953D0EB77180",
+      "uuid": "cf94aee8-5bc4-419d-8c57-3d946bc86cda",
       "slug": "mapping",
       "name": "Mapping"
     },
@@ -717,7 +717,7 @@
       "name": "Multiple Values"
     },
     {
-      "uuid": "26B42ED8-3CAF-4151-997C-D1C031082FEE",
+      "uuid": "727ade24-7e7a-46dc-92b0-188d5797edfa",
       "slug": "named-parameters",
       "name": "Named-Parameters"
     },
@@ -737,7 +737,7 @@
       "name": "Printing"
     },
     {
-      "uuid": "AD767D61-6694-4AD1-B32C-5E546A885748",
+      "uuid": "963a964e-3f9d-4fc7-ab75-d8052d55a7b7",
       "slug": "randomness",
       "name": "Randomness"
     },
@@ -747,7 +747,7 @@
       "name": "Recursion"
     },
     {
-      "uuid": "2EB9757E-E38C-49A7-B192-41E64D9E535A",
+      "uuid": "8d78a3b2-6adc-4013-a5cb-353b615945e5",
       "slug": "rest-parameters",
       "name": "Rest-Parameters"
     },
@@ -757,12 +757,12 @@
       "name": "Sameness"
     },
     {
-      "uuid": "5bbd40fe-3382-11eb-b6f1-542696d187f9",
+      "uuid": "4f179527-59cd-4e1b-91c3-50e825809d6b",
       "slug": "scope",
       "name": "Scope"
     },
     {
-      "uuid": "63AAB4A6-5E27-4A48-B8C3-8E6BD94E92B5",
+      "uuid": "d9fc086b-0e47-401a-aedd-82aed6180cb9",
       "slug": "sequences",
       "name": "Sequences"
     },
@@ -772,7 +772,7 @@
       "name": "Sets"
     },
     {
-      "uuid": "21035C93-D98F-40E2-9B20-BB3721FAAF87",
+      "uuid": "d4d7ae49-bf42-48d3-b5b8-78d3131c73a7",
       "slug": "sorting",
       "name": "Sorting"
     },
@@ -792,7 +792,7 @@
       "name": "Symbols"
     },
     {
-      "uuid": "81703629-8F45-46D0-851D-0929DEDFB1D6",
+      "uuid": "cbddf411-6cd1-430a-a5b9-515884dfdd19",
       "slug": "text-formatting",
       "name": "Text-Formatting"
     },
