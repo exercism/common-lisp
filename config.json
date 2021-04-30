@@ -91,6 +91,14 @@
         ],
         "prerequisites": ["functions", "symbols", "conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "log-levels",
+        "name": "Log Levels",
+        "uuid": "50b5e2a8-d13f-43c6-8481-78270ecf1591",
+        "concepts": ["strings"],
+        "prerequisites": ["conditionals", "symbols"],
+        "status": "beta"
       }
     ],
     "practice": [
