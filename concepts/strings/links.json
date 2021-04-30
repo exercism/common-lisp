@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "http://www.gigamonkeys.com/book/numbers-characters-and-strings.html",
+    "description": "Practial Common Lisp chapter covering strings"
+  },
+  {
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/16_a.htm",
+    "description": "Hyperspec section on strings"
+  },
+  {
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/c_string.htm",
+    "description": "Hyperspec string dictionary"
+  }
+]

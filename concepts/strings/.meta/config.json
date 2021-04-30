@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for strings concept",
-  "authors": [],
+  "blurb": "Strings are vectors of characters, they are represented as characters surrounded by double-quotes.",
+  "authors": ["verdammelt"],
   "contributors": []
 }
