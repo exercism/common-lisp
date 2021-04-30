@@ -1,0 +1,11 @@
+{
+  "blurb": "Learn about Common Lisp strings by processing log messages",
+  "files": {
+    "exemplar": [".meta/exemplar.lisp"],
+    "test": ["log-levels-test.lisp"],
+    "solution": ["log-levels.lisp"]
+  },
+  "authors": ["verdammelt"],
+  "contributors": [],
+  "forked_from": ["csharp/log-levels"]
+}
