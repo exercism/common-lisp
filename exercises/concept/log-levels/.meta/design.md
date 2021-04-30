@@ -7,7 +7,6 @@ This exercise should teach some basics of working with strings.
 ## Learning Objectives
 
 - Know how to split a string into sub-strings
-- Know how to trim whitespace from a string
 - Know how to check for string equality (case insensitive / case insensitivity)
 - Know how to manipulate strings to upcase, downcase, capitalize.
 
@@ -15,7 +14,7 @@ This exercise should teach some basics of working with strings.
 
 - string formatting with `format`
 - characters
-- variations on trim (trim-left/trim-right)
+- `string-trim` and related functions (which would need characters...)
 - destructive variations
 - string comparisons (`string<` _etc._)
 
