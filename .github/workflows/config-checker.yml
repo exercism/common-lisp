@@ -3,7 +3,7 @@ name: Config Check
 on: [push, pull_request]
 
 jobs:
-  run-tests:
+  config-check:
     runs-on: ubuntu-latest
 
     steps:
