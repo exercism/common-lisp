@@ -1,65 +1,40 @@
 # Installation
 
-*What's needed*
+## What's needed
 
 The basic items needed for developing in Common Lisp are:
 
 - A Lisp "Implementation", which will allow you to compile and execute code, as well as supply a REPL.
 - A Text editor with facilities for Lisp code. 
-- (Nice to have) The often-used reference for the Common Lisp language, the "Common Lisp Hyperspec", available online [here](http://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm)
+- (Nice to have) The often-used reference for the Common Lisp language, the ["Common Lisp Hyperspec"][hyperspec].
 
-*Fast Start*
+## Fast Start
 
-Newbies to CL, particularly ones with previous experience with Emacs, can get an easy & quick start by installing Portacle, the Portable Common Lisp Environment. Free and full featured, it works in all common platforms and comes pre-configured "out of the box". This will supply:
+For people new to Common Lisp, particularly ones with previous experience with Emacs, can get an easy & quick start by installing Portacle, the Portable Common Lisp Environment. 
+Free and full featured, it works in all common platforms and comes preconfigured "out of the box". This will supply:
 
 - A Lisp implementation: SBCL, including Quicklisp and ASDF.
 - A Text editor: Emacs
+
 ... with lots of add-ons for writing with Lisp code: 
 - SLIME, the "Superior Lisp Interaction Mode for Emacs" turns Emacs into a Common Lisp IDE
 - ParEdit, which makes working with parentheses easy. 
 
-Everything comes already configured out of the box. Install Portacle by downloading from the [front page](https://portacle.github.io/)
+Everything comes already configured out of the box. Install Portacle by downloading from the [front page][portacle].
 
 Note: Emacs (text editor) can be disorienting at first, if you're not accustomed to it. Fortunately there are many primers on Emacs and SLIME available online. 
 
-*Traditional Start*
 
-If you prefer installing components separately, besides installing your favorite editor for Lisp code, these would be the steps:
+## Traditional Start
 
-Install a lisp implementation such as [SBCL](http://www.sbcl.org/)
-or [CLisp](http://clisp.org/). Both can be installed via Homebrew on
-Mac OS X.
+If you prefer installing the needed tools separately you will need to install and set up:
 
-```bash
-brew install sbcl
-# or
-brew install clisp
-```
+- a Lisp-aware text editor: Emacs with the Slime or Sly package is a common choice but VIM with SLIMV, Atom with SLIMA or VSCode with Common Lisp plugin are also good.
+- a Common Lisp implementation: [SBCL][sbcl] is a "safe" choice which works across Linux, MacOS and Windows. Since the language is based upon a standard other (conforming implementations)[awesome-cl-implementations] will work as well.
+- [Quicklisp][quicklisp] for library management. After downloading it, follow the [instructions][quicklisp-install] to ensure it is properly integrated with your Common Lisp implementation.
 
-See their homepages for instructions for installing on other
-platforms.
-
-We will use [QuickLisp](http://www.quicklisp.org/beta/#installation) for Lisp library management. To install QuickLisp: 
-
-```bash
-curl -O https://beta.quicklisp.org/quicklisp.lisp
-```
-
-Now launch lisp, and copy-paste the following expressions to finish QuickLisp installation:
-
-```lisp
-> (load "quicklisp.lisp")         ;; this will load the downloaded lisp file
-> (quicklisp-quickstart:install)  ;; this will install quicklisp
-> (ql:add-to-init-file)           ;; this will add quicklisp setup to your init file (recommended)
-```
-
-See the documentation of your lisp implementation on how to load quicklisp.lisp into lisp.
-
-Optionally load lisp-unit:
-
-```lisp
-(ql:quickload "lisp-unit")
-```
-
-This will be done the first time you run any exercises tests. But you
-can do it now if you want.
+[awesome-cl-implementations]: https://github.com/GustavBertram/awesome-common-lisp-learning#common-lisp-implementations
+[hyperspec]:  http://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm
+[portacle]: https://portacle.github.io/
+[quicklisp]: http://www.quicklisp.org/beta/#installation
+[sbcl]: http://www.sbcl.org/
