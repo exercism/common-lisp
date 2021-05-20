@@ -1,53 +1,14 @@
 # Tests
 
-Start up your Lisp implementation in the directory of the exercise you are working on (or change the current directory for an already running Lisp implementation to that directory).
+Start up your Common Lisp implementation in the directory of the exercise you are working on (or change the current directory for an already running Common Lisp implementation to that directory).
 
-Load the test file into your running Lisp implementation, for example, `(load "point-mutations-test")`. 
-This will run the tests the first time automatically. 
-After that you can run the test suite in the REPL with `(lisp-unit:run-tests :all :point-mutations-test)`.
+Load the test file into your running Lisp implementation, for example, `(load "exercise-name-test")`. 
+(This will also load the solution file for you.)
+After the test file is loaded you may run the tests by evaluating `(exercise-name:run-tests)` in the REPL.
+(Change "`exercise-name`" to the correct name for the exercise you are working on.)
 
-## Making your first Common Lisp solution
+As you make changes to the solution you are writing use your editor's functionality to load the changes or evaluate `(load "exercise-name")` to load your solution file.
 
-To create lisp code that can be loaded with `(load "hamming")` for the first exercise, put this code in `hamming.lisp`:
+Remember to evaluate `(exercise-name:run-tests)` to re-run the tests after loading your updated solution.
 
-```lisp
-(defpackage #:hamming
-  (:use #:cl)
-  (:export #:distance))
-
-(in-package #:hamming)
-
-(defun distance (dna1 dna2)
-  "Number of positional differences in two equal length dna strands."
-  ;;; your solution here
-  )
-```
-
-## How to run the tests
-
-If you have a running Lisp implementation you can load the test file  with the command: `(load "hamming-tests")`.
-
-If instead you'd like to do it from the command line the command you need to run depends upon the implementation. 
-Please refer to the documentation for your implementation. 
-Here we'll give examples of how to do it in two common implementations:  [Clisp](https://clisp.sourceforge.io) & [SBCL](http://www.sbcl.org).
-
-It is important to make sure that the command you run will load the implementation's init file, which is needed to ensure QuickLisp is loaded, then loads the test file, then exits back the command line. 
-
-### Clisp
-
-Either of the following commands will work:
-
-```
-clisp -i ~/.clisprc.lisp hamming-test.lisp
-```
-
-```
-clisp -i hamming-test.lisp -x '(ext:exit)'
-```
-
-### SBCL
-
-```
-sbcl --load hamming-test.lisp --quit
-```
 
