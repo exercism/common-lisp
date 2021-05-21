@@ -29,12 +29,21 @@ Note: Emacs (text editor) can be disorienting at first, if you're not accustomed
 
 If you prefer installing the needed tools separately you will need to install and set up:
 
-- a Lisp-aware text editor: Emacs with the Slime or Sly package is a common choice but VIM with SLIMV, Atom with SLIMA or VSCode with Common Lisp plugin are also good.
+- a Lisp-aware text editor: [Emacs][emacs] with the [Slime][slime] or [Sly][sly] package is a common choice but [VIM][vim] with [SLIMV][slimv], [Atom][atom] with [SLIMA][slima] or [VSCode][vscode] with a [Common Lisp plugin][vscode-plugin] are also good.
 - a Common Lisp implementation: [SBCL][sbcl] is a "safe" choice which works across Linux, MacOS and Windows. Since the language is based upon a standard other (conforming implementations)[awesome-cl-implementations] will work as well.
 - [Quicklisp][quicklisp] for library management. After downloading it, follow the [instructions][quicklisp-install] to ensure it is properly integrated with your Common Lisp implementation.
 
+[atom]: https://atom.io
 [awesome-cl-implementations]: https://github.com/GustavBertram/awesome-common-lisp-learning#common-lisp-implementations
+[emacs]: https://www.gnu.org/software/emacs/
 [hyperspec]:  http://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm
 [portacle]: https://portacle.github.io/
 [quicklisp]: http://www.quicklisp.org/beta/#installation
 [sbcl]: http://www.sbcl.org/
+[slima]: https://atom.io/packages/slima
+[slime]: https://common-lisp.net/project/slime/
+[slimv]: https://github.com/kovisoft/slimv
+[sly]: https://github.com/joaotavora/sly
+[vim]: https://www.google.com/search?q=vim
+[vscode-plugin]:  https://marketplace.visualstudio.com/items?itemName=ailisp.commonlisp-vscode
+[vscode]:https://code.visualstudio.com
