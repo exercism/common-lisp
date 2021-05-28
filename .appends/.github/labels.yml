@@ -1,0 +1,56 @@
+- name: "bug"
+  description: ""
+  color: "fc2929"
+
+- name: "dependencies"
+  description: "Pull requests that update a dependency file"
+  color: "0366d6"
+
+- name: "documentation"
+  description: ""
+  color: "bfdadc"
+
+- name: "duplicate"
+  description: ""
+  color: "cccccc"
+
+- name: "enhancement"
+  description: ""
+  color: "84b6eb"
+
+- name: "first-timers only"
+  description: ""
+  color: "159818"
+
+- name: "good first patch"
+  description: ""
+  color: "159818"
+
+- name: "invalid"
+  description: ""
+  color: "e6e6e6"
+
+- name: "low-hanging-fruit"
+  description: ""
+  color: "fbca04"
+
+- name: "new-exercise"
+  description: ""
+  color: "bfe5bf"
+
+- name: "question"
+  description: ""
+  color: "cc317c"
+
+- name: "v3"
+  description: "required for v3 launch"
+  color: "E99695"
+
+- name: "v3-migration 🤖"
+  description: "Preparing for Exercism v3"
+  color: "E99695"
+
+- name: "wontfix"
+  description: ""
+  color: "ffffff"
+
