@@ -44,6 +44,21 @@ For pull requests specifically with [the analyzer][common-lisp-analyzer], [the r
 Pull Requests should be focused on a single change.
 They must pass the CI system before they will be merged.
 
+### Creating or Modifying Exercises
+
+There are two types of exercises: concept and practice.
+
+Concept exercises are intended to teach the student a particular concept of the language.
+They should be simple and short.
+Refer to the document on the [anatomy of a concept exercises][concept-exercise] for details of the parts that are needed for a concept exercises.
+The work needed for a concept exercise can be large, feel free to create an [issue][track-issues] or [pull request][track-pulls] to discuss ideas for a concept exercise so it can be worked on collaboratively.
+
+Practice exercises are intended to allow a student to further practice and extend their knowledge of a concept.
+They can be longer and/or more 'clever'.
+Refer to the document on the [anatomy of a practice exercise][practice-exercise] for details of the parts that are needed for a concept exercise.
+Many practice exercises are part of a canonical set of exercises shared across tracks (information on this can be found in the [problem specifications repository][problem-specs].
+Before creating a new practice exercise please see if there is already a canonical problem defined there, if there is, this track will want to adhere to it rather than implementing something different.
+
 ## Development Setup
 
 This track uses [SBCL][sbcl] for its development.
@@ -60,41 +75,6 @@ Please refer to its documentation for instructions on how to install it.
 The track contains some tools useful during development such as CI tasks.
 These are provided as [ASDF][asdf] systems.
 To ensure they are found appropriately by [QuickLisp][quicklisp] and [ASDF][asdf] either symbolic-link them into your `quickslip/local-projects` directory or by configuring your [ASDF registry][asdf-registry-config] appropriately.
-
-
-
-#### Creating a new exercise.
-
-There are many exercises for Exercism. This track does not yet
-implement all of them for Common Lisp. Please see the info about all
-exercises in the
-[`problem-specifications`](https://github.com/exercism/problem-specifications)
-repository. To create a good submission for a new exercise you will
-need to have cloned the above repository and ensure it is up to date.
-
-0. Choose the exercise you'd like to create from the
-   [`problem-specifications`](https://github.com/exercism/problem-specifications)
-   repository.
-1. Create an exercise sub-directory for your exercise: `mkdir
-   exercises/<your-exercise>`.
-2. Use `./bin/configlet` to get the `README`: `./bin/configlet
-   generate . --only <your-exercise> --spec-path
-   <path-to-problem-specifications>`.
-3. Using the canonical data found in the `problems-specifications`
-   repository create tests for the exercise. A template for the test
-   file can be found in
-   [`docs/template-test.lisp`](docs/template-test.lisp) (change
-   `exercise` to the name of your exercise in kebab-case).
-4. Create an example implementation which passes the tests. This does
-   not need to be clever or amazing (save that for your own solution
-   submission), but it should have good style and idiom and use
-   nothing outside of the Common Lisp specification.
-5. Create a stub "production file" for the mentee to start with. A
-   template for this file can be found in
-   [`/template-production.lisp`](docs/template-production.lisp). 
-6. Add your exercise to `config.json` and use `./bin/configlet` to
-   ensure that it is well formatted: `./bin/configlet fmt .`.
-7. Create a PR.
 
 ##### Experimental Exercise Generation
 
@@ -130,7 +110,10 @@ error code if there are problems):
 [common-lisp-representer]: https://github.com/exercism/common-lisp-representer.
 [common-lisp-test-runner]: https://github.com/exercism/common-lisp-test-runner
 [common-lisp]: https://common-lisp.net
+[concept-exercise]: https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md
 [language-track-guide]: https://github.com/exercism/docs/tree/main/building/tracks
+[practice-exercise]: https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md
+[problem-specs]: https://github.com/exercism/problem-specifications/
 [quicklisp]: https://www.quicklisp.org/beta/
 [sbcl]: http://www.sbcl.org
 [track-issues]: https://github.com/exercism/common-lisp/issues
