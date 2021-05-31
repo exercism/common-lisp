@@ -8,22 +8,30 @@ Exercism exercises in Lisp
 
 ## Contributing to the Common Lisp Track
 
-### Contributing Guide
+There are several ways to contribute to the Common Lisp track including (but not limited to):
 
-Please be familiar with the [language track contributing
-guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md)
-. This describes how all the language tracks are put together, as well
-as details about the common metadata, and high-level information about
-contributing to existing problems and adding new problems.
+- Reporting problems with the track.
+- Working on the [test runner][common-lisp-test-runner].
+- Working on the [representer][common-lisp-representer].
+- Working on the [analyzer][common-lisp-analyzer].
+- Working on concept exercises.
+- Working on practice exercises.
+- Working on track documents.
+
+There are two guides to the structure of the track and tooling which would be good to be familiar with.
+
+* The [language track guide][language-track-guide]. 
+This describes how all the language tracks are put together, as well
+as details about the common metadata.
+
+* The [track tooling guide][track-tooling-guide].
+This describes the interface to the various tooling (test runner, representer and analyzer) as well as how they are used and invoked.
 
 ### Issues
 
-Feel free to file an issues on the [track
- repository](https://github.com/exercism/common-lisp/issues) for
- problems of any size. Feel free to report typographical errors or
- poor wording for example. You can greatly help improve the quality of
- the exercises by filing reports of invalid solutions that pass tests
- or of valid solutions that fail tests
+Feel free to file an issues on the [track repository][track-issues] for problems of any size. 
+Feel free to report typographical errors or poor wording for example.
+You can greatly help improve the quality of the exercises by filing reports of invalid solutions that pass tests or of valid solutions that fail tests.
 
 ### Development setup
 
@@ -134,3 +142,9 @@ implementation can be done with (this will return with a non-zero
 error code if there are problems):
 
     ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
+[common-lisp-analyzer]: https://github.com/exercism/common-lisp-analyzer
+[common-lisp-representer]: https://github.com/exercism/common-lisp-representer.
+[common-lisp-test-runner]: https://github.com/exercism/common-lisp-test-runner
+[language-track-guide]: https://github.com/exercism/docs/tree/main/building/tracks
+[track-tooling-guide]: https://github.com/exercism/docs/tree/main/building/tooling
+[track-issues]: https://github.com/exercism/common-lisp/issues
