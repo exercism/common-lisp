@@ -1,7 +1,5 @@
 {
-  "blurb": "TODO: add blurb about named-parameters",
-  "authors": [
-    "verdammelt"
-  ],
+  "blurb": "Keyword arguments allow one to specify arguments in any order by their names.",
+  "authors": ["verdammelt"],
   "contributors": []
 }
