@@ -1,10 +1,10 @@
-# Common Lisp 
+# Common Lisp
 
 [![Configlet Lint Status](https://github.com/exercism/common-lisp/workflows/Configlet%20CI/badge.svg)](https://github.com/exercism/common-lisp/workflows/Configlet%20CI/badge.svg)
 [![Config Check Status](https://github.com/exercism/common-lisp/workflows/Config%20Check/badge.svg)](https://github.com/exercism/common-lisp/workflows/Config%20Check/badge.svg)
 [![Exercise Test Status](https://github.com/exercism/common-lisp/workflows/Test%20Exercises/badge.svg)](https://github.com/exercism/common-lisp/workflows/Test%20Exercises/badge.svg)
 
-Exercism exercises in Lisp
+Exercism exercises in [Common Lisp][common-lisp].
 
 ## Contributing to the Common Lisp Track
 
@@ -142,9 +142,11 @@ implementation can be done with (this will return with a non-zero
 error code if there are problems):
 
     ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
+
 [common-lisp-analyzer]: https://github.com/exercism/common-lisp-analyzer
 [common-lisp-representer]: https://github.com/exercism/common-lisp-representer.
 [common-lisp-test-runner]: https://github.com/exercism/common-lisp-test-runner
+[common-lisp]: https://common-lisp.net
 [language-track-guide]: https://github.com/exercism/docs/tree/main/building/tracks
-[track-tooling-guide]: https://github.com/exercism/docs/tree/main/building/tooling
 [track-issues]: https://github.com/exercism/common-lisp/issues
+[track-tooling-guide]: https://github.com/exercism/docs/tree/main/building/tooling
