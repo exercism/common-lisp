@@ -1,6 +1,7 @@
 # Introduction
 
-Common Lisp allows the programmer to write "comments" that are ignored by the computer. Single-line comments begin with one or more semi-colons (`;`) and, occasionally, you may see the following:
+Common Lisp allows the programmer to write "comments" that are ignored by the computer.
+Single-line comments begin with one or more semi-colons (`;`) and, occasionally, you may see the following:
 
 ```lisp
 (code...) ; => value
