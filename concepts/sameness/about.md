@@ -2,11 +2,15 @@
 
 Sameness is the concept about equality of things.
 
-Common Lisp, like other languages has a set of rules on how to decide if two objects are the 'same'. These rules define four levels, each with a function that performs that level of checking. The levels are ordered from strictest to loosest.
+Common Lisp, like other languages has a set of rules on how to decide if two objects are the 'same'.
+These rules define four levels, each with a function that performs that level of checking.
+The levels are ordered from strictest to loosest.
 
 ## `eq`
 
-The first level is object identity. This equality is checked with the function [`eq`][hyper-eq]. The two objects being checked for equality must be the very same object:
+The first level is object identity.
+This equality is checked with the function [`eq`][hyper-eq].
+The two objects being checked for equality must be the very same object:
 
 ```lisp
 (eq 'apples 'apples) ; => T
@@ -18,7 +22,9 @@ The first level is object identity. This equality is checked with the function [
 
 ## `eql`
 
-The second level adds equality of numbers and characters. This equality is checked with the function [`eql`][hyper-eql]. The way the checking is done depends upon the types of the arguments:
+The second level adds equality of numbers and characters.
+This equality is checked with the function [`eql`][hyper-eql].
+The way the checking is done depends upon the types of the arguments:
 
 - Any two objects which are `eq` are `eql`
 - Numbers are `eql` if they are of the same type and value
@@ -31,18 +37,24 @@ The second level adds equality of numbers and characters. This equality is check
 (eql #\c #\C) ; => NIL (case is different)
 ```
 
-One may wonder why numbers and characters are not compared for object identity with [`eq`][hyper-eq]. The Common Lisp standard allows implementations to copy numbers and characters if they choose to do so. Thus `0` and `0` may not be [`eq`][hyper-eq] as they may be different instances of the number `0`.
+One may wonder why numbers and characters are not compared for object identity with [`eq`][hyper-eq].
+The Common Lisp standard allows implementations to copy numbers and characters if they choose to do so.
+Thus `0` and `0` may not be [`eq`][hyper-eq] as they may be different instances of the number `0`.
 
 ## `equal`
 
-The third level checks for structural similarity. This equality is checked with [`equal`][hyper-equal]. The way the checking is done depends upon the types of the arguments:
+The third level checks for structural similarity.
+This equality is checked with [`equal`][hyper-equal].
+The way the checking is done depends upon the types of the arguments:
 
 - symbols are compared as if with [`eq`][hyper-eq]
 - characters, and numbers are compared as if with `eql`
-- conses are [`equal`][hyper-equal] if their elements are [`equal`][hyper-equal]. This is done recursively.
+- conses are [`equal`][hyper-equal] if their elements are [`equal`][hyper-equal].
+This is done recursively.
 - strings and bit vectors are [`equal`][hyper-equal] if their elements are `eql`
 - arrays of other types are compared as if with [`eq`][hyper-eq]
-- pathnames are [`equal`][hyper-equal] if they are functionality equivalent. (There is room for implementation dependendant behavior here with regards to case sensitivity of the strings which make up the components of the pathnames.)
+- pathnames are [`equal`][hyper-equal] if they are functionality equivalent.
+(There is room for implementation dependendant behavior here with regards to case sensitivity of the strings which make up the components of the pathnames.)
 - objects of any other type are compared as if with [`eq`][hyper-eq]
 
 ```lisp
@@ -55,12 +67,14 @@ The third level checks for structural similarity. This equality is checked with 
 
 ## `equalp`
 
-The fourth and most loose level of equality is checked with [`equalp`][hyper-equalp]. The how the checking is done depends upon the types:
+The fourth and most loose level of equality is checked with [`equalp`][hyper-equalp].
+The how the checking is done depends upon the types:
 
 - if the two objects are [`equalp`][hyper-equalp] then they are [`equalp`][hyper-equalp]
 - numbers are [`equalp`][hyper-equalp] if they have the same vaule even if they are not of the same type
 - characters and strings are compared case-insensitively
-- conses are [`equalp`][hyper-equalp] if their elements are [`equalp`][hyper-equalp]. This is done recursively.
+- conses are [`equalp`][hyper-equalp] if their elements are [`equalp`][hyper-equalp].
+This is done recursively.
 - arrays are [`equalp`][hyper-equalp] if they have the same number of dimensions, those dimensions are the same, and each element is [`equalp`][hyper-equalp].
 - structures are [`equalp`][hyper-equalp] if they have the same class and slots and each of those slots are [`equalp`][hyper-equalp] between the two structures.
 - hash tables are [`equalp`][hyper-equalp] if they both have the same `:test` function, they have the same keys (as compared with that `:test` function) and that those keys have the same values as compared with [`equalp`][hyper-equalp].
@@ -75,7 +89,12 @@ The fourth and most loose level of equality is checked with [`equalp`][hyper-equ
 
 ## Type-specific functions
 
-The above are the 'generic' equality functions. They work, as defined, for any type. This can be useful when one writes generic code that does not know the types of objects it will be comparing until run-time. However it is generally considered "better style" to use type specific equality functions when one knows the types being compared. For example `string=` rather than `equal`. These functions will be presented and discussed in later concepts.
+The above are the 'generic' equality functions.
+They work, as defined, for any type.
+This can be useful when one writes generic code that does not know the types of objects it will be comparing until run-time.
+However it is generally considered "better style" to use type specific equality functions when one knows the types being compared.
+For example `string=` rather than `equal`.
+These functions will be presented and discussed in later concepts.
 
 [hyper-eq]: http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm
 [hyper-eql]: http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm

@@ -2,7 +2,8 @@
 
 Common Lisp provides the programmer with several different conditionals that can be categorised by the number of "branches" they support.
 
-Also, unlike many other programming languages, all conditionals in Common Lisp are _expressions_ not statements. This means that all Lisp conditionals evaluate to some value and can be substituted for concrete parameters.
+Also, unlike many other programming languages, all conditionals in Common Lisp are _expressions_ not statements.
+This means that all Lisp conditionals evaluate to some value and can be substituted for concrete parameters.
 
 As an example:
 
@@ -30,7 +31,9 @@ The `if` conditional evaluates the first expression of the body when the test is
 
 ## Many-Branch Conditionals
 
-The Lisp "super-conditional" is `cond`, which can have an infinite number of branches. Each branch has a test condition and body expression that are surrounded by an extra pair of parentheses. If all of the tests evaluate to false, then `nil` is returned.
+The Lisp "super-conditional" is `cond`, which can have an infinite number of branches.
+Each branch has a test condition and body expression that are surrounded by an extra pair of parentheses.
+If all of the tests evaluate to false, then `nil` is returned.
 
 ```lisp
 (cond ((= 0 2) 'nope)
@@ -41,7 +44,9 @@ The Lisp "super-conditional" is `cond`, which can have an infinite number of bra
 ; => QUITE-TRUE
 ```
 
-If you just want to test one value against a number of branches, you can use the cleaner `case` expression. If none of the cases match, `nil` is returned. Both `t` and `otherwise` can be used as catch-all cases
+If you just want to test one value against a number of branches, you can use the cleaner `case` expression.
+If none of the cases match, `nil` is returned.
+Both `t` and `otherwise` can be used as catch-all cases:
 
 ```lisp
 (case 'elder-beast
@@ -54,20 +59,16 @@ If you just want to test one value against a number of branches, you can use the
 
 ## The Stealth Conditionals
 
-The boolean `and` and `or` operations in Common Lisp are short-circuiting macros
-that can be used to reduce the duplication of certain conditional
-expressions.
+The boolean `and` and `or` operations in Common Lisp are short-circuiting macros that can be used to reduce the duplication of certain conditional expressions.
 
-The `and` macro will immediately return `nil` if a single false value is
-encountered, but the last true value of the `and` otherwise:
+The `and` macro will immediately return `nil` if a single false value is encountered, but the last true value of the `and` otherwise:
 
 ```lisp
 (and 42 "Magic" :cool) ; => :COOL
 (and () "Magic" :cool) ; => NIL
 ```
 
-The `or` macro returns the first true value it encounters or `nil` if there were
-no true values:
+The `or` macro returns the first true value it encounters or `nil` if there were no true values:
 
 ```lisp
 (or () 42 nil) ; => 42
@@ -76,13 +77,10 @@ no true values:
 
 ## I'm Exhausted...
 
-As mentioned previously, when none of the branches in a `case` statement match,
-and there is no `otherwise` clause, `nil` is returned. Occasionally, however, a
-failure to match any branch should be treated as an error – this is where
-`ecase` (for **exhaustive** matching) comes in.
+As mentioned previously, when none of the branches in a `case` statement match, and there is no `otherwise` clause, `nil` is returned.
+Occasionally, however, a failure to match any branch should be treated as an error – this is where `ecase` (for **exhaustive** matching) comes in.
 
-It's used in exactly the same way as `case`, but signals an error instead of
-returning `nil` when there is no match.
+It's used in exactly the same way as `case`, but signals an error instead of returning `nil` when there is no match.
 
 ```lisp
 (case 'elder-beast
