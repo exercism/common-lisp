@@ -1,6 +1,8 @@
 # About
 
-Common Lisp uses the standard arithmetic operators for most operations but is somewhat unique in using a "prefix-notation" as opposed to the more familiar "infix-notion". More visually:
+Common Lisp uses the standard arithmetic operators for most operations but is somewhat unique in using a "prefix-notation" as opposed to the more familiar "infix-notion". 
+
+More visually:
 
 ```lisp
 ;; Infix-notation (non-lisp languages)
@@ -26,7 +28,8 @@ As a small quirk, the `-` and `/` operators have a special meanings when applied
 
 ## Comparing Numbers
 
-Finally, you may find it useful to compare different numbers using functions like `=` (equal), `/=` (not equal to), and `>=` (greater than or equal to). When these comparisons are true (as in `(= 1 1)`), they return `T` and when they aren't (as in `(> 0 1)`), they return `NIL`.
+Finally, you may find it useful to compare different numbers using functions like `=` (equal), `/=` (not equal to), and `>=` (greater than or equal to).
+When these comparisons are true (as in `(= 1 1)`), they return `T` and when they aren't (as in `(> 0 1)`), they return `NIL`.
 
 ## Reference
 
