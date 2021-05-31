@@ -1,7 +1,5 @@
 {
-  "blurb": "TODO: add blurb about default-parameters",
-  "authors": [
-    "verdammelt"
-  ],
+  "blurb": "Optional parameters allow some parameters to be not given and they will be assigned a default value instead.",
+  "authors": ["verdammelt"],
   "contributors": []
 }

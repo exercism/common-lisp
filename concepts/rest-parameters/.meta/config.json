@@ -1,7 +1,5 @@
 {
-  "blurb": "TODO: add blurb about rest-parameters",
-  "authors": [
-    "verdammelt"
-  ],
+  "blurb": "A parameter can be specified that will be assigned all the 'rest' of the parameters provided in a list.",
+  "authors": ["verdammelt"],
   "contributors": []
 }

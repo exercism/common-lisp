@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for sameness concept",
+  "blurb": "Common Lisp has four degrees of equality.",
   "authors": ["verdammelt"],
   "contributors": ["TheLostLambda"]
 }
