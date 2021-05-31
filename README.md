@@ -76,18 +76,6 @@ The track contains some tools useful during development such as CI tasks.
 These are provided as [ASDF][asdf] systems.
 To ensure they are found appropriately by [QuickLisp][quicklisp] and [ASDF][asdf] either symbolic-link them into your `quickslip/local-projects` directory or by configuring your [ASDF registry][asdf-registry-config] appropriately.
 
-##### Experimental Exercise Generation
-
-Load the `generate-exercise` ASDF system (found in `src`) and then
-call the function `generate-exercise:generate` with the name the
-exercise in problem specifications repository you'd like to stub out.
-Also provide the path to the problems specifications repository and
-the `exericses` directory to put the new exercise into.
-
-Alternatively use the `generate-exercise/executable` ASDF system to
-create the standalone executable `bin/generate-exercise` which can do
-the same (use `bin/generate-exercise -h` to see the usage info).
-
 ##### Building & Testing
 
 Before submitting a new exercise please ensure that it passes the
