@@ -44,56 +44,24 @@ For pull requests specifically with [the analyzer][common-lisp-analyzer], [the r
 Pull Requests should be focused on a single change.
 They must pass the CI system before they will be merged.
 
-### Development setup
+## Development Setup
 
-Direct contributions to the Common Lisp code in this track are always
-welcome. Refer to [Installing Common Lisp
-guide](http://exercism.io/languages/common-lisp/installation) to get
-your environment set up if needed.
+This track uses [SBCL][sbcl] for its development.
+Since Common Lisp is a standardized language and (at present) exercises only use features and behavior specified by the standard any other conforming implementation could be used for development of features for the track. 
+However any tooling created for this track (such as part of its build system) must work in [SBCL][sbcl]. 
+It is outside the scope of this document to describe how to install a Common Lisp implementation. 
+Please refer to the documentation for your chosen implementation for details.
 
-New exercises or changes to existing ones can be submitted via a pull
-request. You will need a GitHub account and you will need to fork
-`exercism/common-lisp` to your account. See
-[GitHub Help](https://help.github.com/articles/fork-a-repo/) if you
-are unfamiliar with the process.
+The track also uses [QuickLisp][quicklisp] for system management.
+Please refer to its documentation for instructions on how to install it.
 
-#### Development Guidelines
+### A note about QuickLisp & ASDF registries
 
-##### Setting up the development environment.
-
-[comment]: # (FIXME: no longer using travis)
-
-All changes will be built under several implementations via the
-[TravisCI build](https://travis-ci.org/exercism/common-lisp) so it advisable
-to be able to run at least some of those same builds locally before
-submitting the changes.
-
-A contributor will need to install:
-
-* [Roswell](https://github.com/roswell/roswell)
-* [QuickLisp](https://www.quicklisp.org/beta/)
-* and a few Lisp implementations.
+The track contains some tools useful during development such as CI tasks.
+These are provided as [ASDF][asdf] systems.
+To ensure they are found appropriately by [QuickLisp][quicklisp] and [ASDF][asdf] either symbolic-link them into your `quickslip/local-projects` directory or by configuring your [ASDF registry][asdf-registry-config] appropriately.
 
 
-###### Roswell
-
-Instructions for installing Roswell can be found in
-its
-[README](https://github.com/roswell/roswell#installation-dependency--usage).
-
-###### Lisp Implementations
-
-It is beyond the scope of this document to describe how to install
-different Lisp implementations. Please find those instructions on
-those implementations' websites.
-
-After installing Lisp implementations. Check that Roswell can see them by
-running `ros list installed`.
-
-###### QuickLisp
-
-Although [QuickLisp](https://www.quicklisp.org/beta/) is
-required, Roswell will install and configure it for you, by default.
 
 #### Creating a new exercise.
 
@@ -156,11 +124,15 @@ error code if there are problems):
 
     ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
 
+[asdf-registry-config]: https://common-lisp.net/project/asdf/asdf/Configuring-ASDF-to-find-your-systems.html
+[asdf]: https://common-lisp.net/project/asdf/
 [common-lisp-analyzer]: https://github.com/exercism/common-lisp-analyzer
 [common-lisp-representer]: https://github.com/exercism/common-lisp-representer.
 [common-lisp-test-runner]: https://github.com/exercism/common-lisp-test-runner
 [common-lisp]: https://common-lisp.net
 [language-track-guide]: https://github.com/exercism/docs/tree/main/building/tracks
+[quicklisp]: https://www.quicklisp.org/beta/
+[sbcl]: http://www.sbcl.org
 [track-issues]: https://github.com/exercism/common-lisp/issues
 [track-pulls]: https://github.com/exercism/common-lisp/pulls
 [track-tooling-guide]: https://github.com/exercism/docs/tree/main/building/tooling
