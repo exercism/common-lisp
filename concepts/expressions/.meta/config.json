@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for expressions concept",
+  "blurb": "Everything in Common Lisp is an expression. Either an atom or a list of expressions.",
   "authors": ["TheLostLambda"],
   "contributors": ["verdammelt"]
 }

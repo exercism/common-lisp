@@ -1,6 +1,6 @@
 # About
 
-TODO: add information on expressions concept
+Everything in Common Lisp is an expression. An expression is either a single thing (called an atom) or a list of things (delimited with parenthesis: `()`.
 
 ## Quoting
 
