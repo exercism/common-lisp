@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for symbols concept",
+  "blurb": "Symbols are identifiers for values. They can be used as the name of a varible, function or other values.",
   "authors": ["TheLostLambda"],
   "contributors": ["verdammelt"]
 }
