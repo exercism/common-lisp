@@ -2,5 +2,9 @@
   {
     "url": "https://lispcookbook.github.io/cl-cookbook/numbers.html",
     "description": "Advanced numbers reference (Common Lisp Cookbook)"
+  },
+  {
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/t_float.htm",
+    "description": "HyperSpec definition of the float type"
   }
 ]
