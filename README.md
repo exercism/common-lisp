@@ -33,6 +33,17 @@ Feel free to file an issues on the [track repository][track-issues] for problems
 Feel free to report typographical errors or poor wording for example.
 You can greatly help improve the quality of the exercises by filing reports of invalid solutions that pass tests or of valid solutions that fail tests.
 
+For issues specifically with [the analyzer][common-lisp-analyzer], [the representer][common-lisp-representer], or [the test runner][common-lisp-test-runner] please file the issues in the appropriate repository.
+
+### Pull Requests
+
+Feel free to submit [pull requests][track-pulls] to correct any [issues][track-issues] or to add new functionality.
+
+For pull requests specifically with [the analyzer][common-lisp-analyzer], [the representer][common-lisp-representer], or [the test runner][common-lisp-test-runner] please file the pull requests in the appropriate repository.
+
+Pull Requests should be focused on a single change.
+They must pass the CI system before they will be merged.
+
 ### Development setup
 
 Direct contributions to the Common Lisp code in this track are always
@@ -49,6 +60,8 @@ are unfamiliar with the process.
 #### Development Guidelines
 
 ##### Setting up the development environment.
+
+[comment]: # (FIXME: no longer using travis)
 
 All changes will be built under several implementations via the
 [TravisCI build](https://travis-ci.org/exercism/common-lisp) so it advisable
@@ -149,4 +162,5 @@ error code if there are problems):
 [common-lisp]: https://common-lisp.net
 [language-track-guide]: https://github.com/exercism/docs/tree/main/building/tracks
 [track-issues]: https://github.com/exercism/common-lisp/issues
+[track-pulls]: https://github.com/exercism/common-lisp/pulls
 [track-tooling-guide]: https://github.com/exercism/docs/tree/main/building/tooling
