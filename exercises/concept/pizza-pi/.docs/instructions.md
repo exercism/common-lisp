@@ -20,7 +20,7 @@ For example, to make 4 pizzas 30cm in diameter:
 
 Helpfully, Lilly has worked out the following equation for calculating grams of dough (g) from the number of pizzas (n) and their diameters (d): 
 
-$$g = n \cdot \left(\dfrac{45 \pi d}{20} + 200\right)$$
+`g = n * (((45 * pi * d) / 20) + 200)`
 
 ## 2. A Splash of Sauce
 
@@ -35,7 +35,7 @@ For example, given Lilly has used 250ml of sauce:
 
 For this task, Lilly has prepped the following equation relating milliliters of sauce applied (s) to the pizza diameter (d): 
 
-$$d = \sqrt{\dfrac{40s}{3\pi}}$$
+`d = square-root of ((40 * s) / (3 * pi))`
 
 ## 3. Some Cheese, Please
 
@@ -52,7 +52,7 @@ For example, given a 25x25x25cm cheese cube and pizzas 30cm in diameter:
 
 Once again, Lilly has come to the rescue with an equation calculating the number of pizzas (n) of some diameter (d) that can be made from a cheese cube of a side-length (l):
 
-$$n = \dfrac{2l^3}{3 \pi d^2}$$
+`n = (2 * (l^2))/(3 * pi * (d^2))`
 
 ## 4. A Fair Share
 
