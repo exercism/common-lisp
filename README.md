@@ -76,21 +76,23 @@ The track contains some tools useful during development such as CI tasks.
 These are provided as [ASDF][asdf] systems.
 To ensure they are found appropriately by [QuickLisp][quicklisp] and [ASDF][asdf] either symbolic-link them into your `quickslip/local-projects` directory or by configuring your [ASDF registry][asdf-registry-config] appropriately.
 
-##### Building & Testing
+## Track Build System
 
-Before submitting a new exercise please ensure that it passes the
-Travis build. This build will run all exercises on many Common Lisp
-implementations. To run the build yourself on your implementation load
-`src/xlisp-test/xlisp-test.lisp` and then evaluate
-`(xlisp-test:full-build)`. The same can be done by calling `asdf:make`
-on the `"xlisp-test/test"` system (ASDF system definition file is
-`src/xlisp-test.asd`).
+This track uses [GitHub Actions][github-actions] as a build system.
 
-If Roswell is installed then running all the tests for one
-implementation can be done with (this will return with a non-zero
-error code if there are problems):
+It contains several workflows:
 
-    ros run -l 'src/xlisp-test/xlisp-test.lisp' -e '(xlisp-test:travis-build)' -q
+* [`configlet.yml`][workflow-configlet] - runs [`configlet`][configlet] to do a general track structure check.
+* [`config-checker.yml`][workflow-config-checker] - runs the [`config-checker` system][config-checker-system] to do some other specific track structure checks.
+* [`test-exercises.yml`][workflow-text-exercises] - runs the [`test-execise` system][test-exercise-system] to run all exercise tests against the example/exemplar files to verify validity of the solutions.
+
+### Building & Testing
+
+To run the build "manually" execute the following from the root directory of the track:
+
+* In the shell: `./bin/fetch-configlet && ./configlet lint`
+* In the REPL: `(progn (asdf:load-system "config-checker") (config-checker:check-config))`
+* In the REPL: `(asdf:test-system "test-exercises")`
 
 [asdf-registry-config]: https://common-lisp.net/project/asdf/asdf/Configuring-ASDF-to-find-your-systems.html
 [asdf]: https://common-lisp.net/project/asdf/
@@ -99,11 +101,19 @@ error code if there are problems):
 [common-lisp-test-runner]: https://github.com/exercism/common-lisp-test-runner
 [common-lisp]: https://common-lisp.net
 [concept-exercise]: https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md
+[config-checker-system]: https://github.com/exercism/common-lisp/blob/main/src/config-checker.asd
+[configlet]: https://github.com/exercism/configlet
+[github-actions]: https://github.com/features/actions
 [language-track-guide]: https://github.com/exercism/docs/tree/main/building/tracks
 [practice-exercise]: https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md
 [problem-specs]: https://github.com/exercism/problem-specifications/
 [quicklisp]: https://www.quicklisp.org/beta/
 [sbcl]: http://www.sbcl.org
+[test-exercise-system]: https://github.com/exercism/common-lisp/blob/main/src/test-exercises.asd
 [track-issues]: https://github.com/exercism/common-lisp/issues
 [track-pulls]: https://github.com/exercism/common-lisp/pulls
 [track-tooling-guide]: https://github.com/exercism/docs/tree/main/building/tooling
+[workflow-config-checker]: https://github.com/exercism/common-lisp/blob/main/.github/workflows/config-checker.yml
+[workflow-configlet]: https://github.com/exercism/common-lisp/blob/main/.github/workflows/configlet.yml
+[workflow-text-exercises]: https://github.com/exercism/common-lisp/blob/main/.github/workflows/test-exercises.yml
+
