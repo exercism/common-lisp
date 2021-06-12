@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for characters concept",
+  "blurb": "Characters are objects representing individual tokens in text (e.g. strings or text streams)",
   "authors": ["verdammelt"],
   "contributors": []
 }
