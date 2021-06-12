@@ -101,6 +101,14 @@
         "concepts": ["strings"],
         "prerequisites": ["conditionals", "symbols"],
         "status": "beta"
+      },
+      {
+        "slug": "character-study",
+        "name": "Character Study",
+        "uuid": "67f00071-564c-4f77-a35c-329c7b69cdc8",
+        "concepts": ["characters"],
+        "prerequisites": [],
+        "status": "beta"
       }
     ],
     "practice": [
