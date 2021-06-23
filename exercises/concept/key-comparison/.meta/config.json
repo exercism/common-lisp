@@ -1,12 +1,10 @@
 {
   "blurb": "Learn about equality by helping find the keys to the rooms of a maze.",
-  "authors": [
-    "verdammelt",
-    "TheLostLambda"
-  ],
+  "authors": ["verdammelt", "TheLostLambda"],
   "files": {
     "solution": ["key-comparison.lisp"],
     "test": ["key-comparison-test.lisp"],
     "exemplar": [".meta/exemplar.lisp"]
-  }
+  },
+  "icon": "minesweeper"
 }

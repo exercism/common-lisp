@@ -1,13 +1,12 @@
 {
   "blurb": "Learn about keyword, optional and rest arguments by again helping with lasagna.",
-  "authors": [
-    "verdammelt"
-  ],
+  "authors": ["verdammelt"],
   "contributors": [],
   "forked_from": ["swift/lasagna-master"],
   "files": {
     "solution": ["lillys-lasagna-leftovers.lisp"],
     "test": ["lillys-lasagna-leftovers-test.lisp"],
     "exemplar": [".meta/exemplar.lisp"]
-  }
+  },
+  "icon": "lasanga"
 }

@@ -1,11 +1,10 @@
 {
   "blurb": "Learn about Lists by helping to keep track of a shopping list.",
-  "authors": [
-    "verdammelt"
-  ],
+  "authors": ["verdammelt"],
   "files": {
     "solution": ["leslies-lists.lisp"],
     "test": ["leslies-lists-test.lisp"],
     "exemplar": [".meta/exemplar.lisp"]
-  }
+  },
+  "icons": "sublist"
 }
