@@ -6,5 +6,5 @@
     "test": ["leslies-lists-test.lisp"],
     "exemplar": [".meta/exemplar.lisp"]
   },
-  "icons": "sublist"
+  "icon": "sublist"
 }
