@@ -8,5 +8,5 @@
     "test": ["lillys-lasagna-test.lisp"],
     "exemplar": [".meta/exemplar.lisp"]
   },
-  "icon": "lasanga"
+  "icon": "lasagna"
 }
