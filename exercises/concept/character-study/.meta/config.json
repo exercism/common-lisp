@@ -5,5 +5,5 @@
     "test": ["character-study-test.lisp"],
     "exemplar": [".meta/exemplar.lisp"]
   },
-  "blurb": "Learn the basics of Common Lisp characters by working on cyphers"
+  "blurb": "Learn the basics of Common Lisp characters by helpeing Lewis learn about Earth letters."
 }
