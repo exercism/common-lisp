@@ -64,7 +64,7 @@ argument as well as the same values as in the previous task.
 ## 4. Splitting the leftovers
 
 Now that you've helped improve the lasagna cooking functions there is
-_a lot of lasanga_! Lilly wants to repay you for all your help by
+_a lot of lasagna_! Lilly wants to repay you for all your help by
 splitting the leftovers with you. You will need to write a function
 that takes three parameters: the total amount of leftovers, the number
 of containers for leftovers Lilly found in their cupboards and the
