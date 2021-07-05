@@ -9,7 +9,7 @@ Characters are represented as `#\` followed by its name.
 The 'name' for common characters such as 'A' or 'b' or '9' or '!' are simply that: so `#\A`, `#\b`, `#\9` and `#\!`.
 Some non-graphical characters such as space or new-line have names such as `#\Space` and `#\Newline`.
 
-The standard only requires an implementation to have 96 characters (upper and lower case Latin alphabetic characters (`A-Za-z`), the digits (`0-9`), space (`#\Space`), newline (#\Newline) and punctuation (e.g. ``!$"'(),_-./:;?+<=>#%&*@[\]{|}`^~``)
+The standard only requires an implementation to have 96 characters (upper and lower case Latin alphabetic characters (`A-Za-z`), the digits (`0-9`), space (`#\Space`), newline (`#\Newline`) and punctuation (e.g. ``!$"'(),_-./:;?+<=>#%&*@[\]{|}`^~``)
 However most implementations will offer more than that, including implementations which provide all Unicode characters.
 
 ## Comparing characters.
