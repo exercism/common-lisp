@@ -9,15 +9,8 @@ Characters are represented as `#\` followed by its name.
 The 'name' for common characters such as 'A' or 'b' or '9' or '!' are simply that: so `#\A`, `#\b`, `#\9` and `#\!`.
 Some non-graphical characters such as space or new-line have names such as `#\Space` and `#\Newline`.
 
-The standard only requires an implementation to have 96 characters (upper and lower case Latin alphabetic characters (`A-Za-z`), the digits (`0-9`), space (`#\Space`), newline (#\Newline) and punctuation (e.g. ``!$"'(),_-./:;?+<=>#%&*@[\]{|}`^~``)
+The standard only requires an implementation to have 96 characters (upper and lower case Latin alphabetic characters (`A-Za-z`), the digits (`0-9`), space (`#\Space`), newline (`#\Newline`) and punctuation (e.g. ``!$"'(),_-./:;?+<=>#%&*@[\]{|}`^~``)
 However most implementations will offer more than that, including implementations which provide all Unicode characters.
-
-## Character codes
-
-Each character has a 'code' which is a non-negative integer which is unique to that character in a specific implementation.
-For example:
-
-(Note the mapping of character to integer is dependent upon implementation so your implementation may have the same or different codes as the examples.)
 
 ## Comparing characters.
 
@@ -30,3 +23,8 @@ Characters can be ordered with functions such as `char<`, `char>`, `char<=`, `ch
 Characters can be categorized as different types: graphical, alphabetic, alpha-numeric, digit, upper-case or lower-case. 
 A character can be more than one type such as an upper-case alphabetic character.
 There are predicates for each of these types: `graphic-char-p`, `alpha-char-p`, `alphanumericp`, `digit-char-p`, `upper-case-p` and `lower-case-p`.
+
+## Converting character case
+
+Some characters can be upper or lower case and can be converted between them with `char-upcase` and `char-downcase`.
+If either is called with a character that is not of the correct case (such as calling)
