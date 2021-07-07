@@ -2,7 +2,7 @@
 #-xlisp-test (load "exercise")
 
 (defpackage #:exercise-test
-  (:use #:common-lisp #:lisp-unit))
+  (:use #:cl #:lisp-unit))
 
 (in-package #:exercise-test)
 

@@ -1,5 +1,5 @@
 (defpackage #:binary
-  (:use :common-lisp)
+  (:use :cl)
   (:export :to-decimal))
 
 (in-package :binary)
