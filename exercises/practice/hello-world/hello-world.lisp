@@ -1,5 +1,5 @@
 (defpackage #:hello-world
-  (:use #:common-lisp)
+  (:use #:cl)
   (:export #:hello))
 
 (in-package #:hello-world)
