@@ -1,6 +1,6 @@
 (in-package #:cl-user)
 (defpackage #:exercise
-  (:use #:common-lisp)
+  (:use #:cl)
   (:shadow #:list)
   (:export #:function-under-test))
 
