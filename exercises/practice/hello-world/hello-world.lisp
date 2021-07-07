@@ -1,6 +1,7 @@
 (defpackage #:hello-world
-  (:use #:cl)
+  (:use #:common-lisp)
   (:export #:hello))
+
 (in-package #:hello-world)
 
-(defun hello () "Put your greeting here.")
+(defun hello () "Goodbye, Mars!")
