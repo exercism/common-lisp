@@ -49,9 +49,6 @@
   (is-false (fair-share-p 17 5))
   (is-true  (fair-share-p 16 64)))
 
-;; Either provides human-readable results to the user or machine-readable
-;; results to the test runner. The default upon calling `(run-tests)` is to
-;; explain the results in a human-readable way
-(defun run-tests (&optional (explain t))
-  (let ((tests (run 'pizza-pi-suite))) ; Run the tests once
-    (if explain (explain! tests) tests))) ; Optionally explain the results
+(defun run-tests (&optional (test-or-suite 'pizza-pi-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

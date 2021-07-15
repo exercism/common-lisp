@@ -56,9 +56,6 @@
   (is-true (play-fetch "Rabbit"))
   (is-true (play-fetch "Bird")))
 
-;; Either provides human-readable results to the user or machine-readable
-;; results to the test runner. The default upon calling `(run-tests)` is to
-;; explain the results in a human-readable way
-(defun run-tests (&optional (explain t))
-  (let ((tests (run 'pal-picker-suite))) ; Run the tests once
-    (if explain (explain! tests) tests))) ; Optionally explain the results
+(defun run-tests (&optional (test-or-suite 'pal-picker-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))

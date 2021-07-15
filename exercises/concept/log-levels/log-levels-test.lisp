@@ -36,9 +36,6 @@
       (is (string= "Did You Hear That?" (log-format "[warn]: did YOU hear THAT?")))
       (is (string= "WE SHOULD BE GOING" (log-format "[ohno]: we should be going"))))
 
-;; Either provides human-readable results to the user or machine-readable
-;; results to the test runner. The default upon calling `(run-tests)` is to
-;; explain the results in a human-readable way
-(defun run-tests (&optional (explain t))
-  (let ((tests (run 'log-levels-suite))) ; Run the tests once
-    (if explain (explain! tests) tests))) ; Optionally explain the results
+(defun run-tests (&optional (test-or-suite 'log-levels-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))
