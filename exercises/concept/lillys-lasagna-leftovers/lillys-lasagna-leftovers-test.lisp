@@ -49,9 +49,6 @@
   (is (eq :just-split-it (split-leftovers :human 5 :alien 5)))
   (is (eq :looks-like-someone-was-hungry (split-leftovers :weight NIL))))
 
-;; Either provides human-readable results to the user or machine-readable
-;; results to the test runner. The default upon calling `(run-tests)` is to
-;; explain the results in a human-readable way
-(defun run-tests (&optional (explain t))
-  (let ((tests (run 'lillys-lasagna-leftovers-suite))) ; Run the tests once
-    (if explain (explain! tests) tests))) ; Optionally explain the results
+(defun run-tests (&optional (test-or-suite 'lillys-lasagna-leftovers-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))
