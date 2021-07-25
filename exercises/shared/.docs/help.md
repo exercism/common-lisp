@@ -9,7 +9,7 @@ the [track's documentation pages](https://exercism.lol/docs/tracks/common-lisp).
 
 Any of the resources listed in the list of [Useful Common Lisp Resources](https://exercism.lol/docs/tracks/common-lisp/resources) are good places to look for information.
 
-If you are stuck and have a specific question you can also check out the [Lisp discord server]() and ask your question in the `beginners-questions` channel (please make it clear that you are asking a question about the language Common Lisp).
+There are also some [Online Communities](https://github.com/GustavBertram/awesome-common-lisp-learning#online-community) which may be good places to go for help.
 
 ## Formatting
 
