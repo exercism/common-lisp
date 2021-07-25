@@ -1,9 +1,9 @@
 ## Setup
 
 Check out [Installing Common
-Lisp](https://exercism.io/tracks/common-lisp/installation) for
+Lisp](https://exercism.lol/docs/tracks/common-lisp/installation) for
 instructions to get started or take a look at the guides available in
-the [track's side bar](https://exercism.io/my/tracks/common-lisp).
+the [track's documentation pages](https://exercism.lol/docs/tracks/common-lisp).
 
 ## Where to look for help
 
