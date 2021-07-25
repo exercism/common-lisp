@@ -5,6 +5,12 @@ Lisp](https://exercism.io/tracks/common-lisp/installation) for
 instructions to get started or take a look at the guides available in
 the [track's side bar](https://exercism.io/my/tracks/common-lisp).
 
+## Where to look for help
+
+Any of the resources listed in the list of [Useful Common Lisp Resources](https://exercism.lol/docs/tracks/common-lisp/resources) are good places to look for information.
+
+If you are stuck and have a specific question you can also check out the [Lisp discord server]() and ask your question in the `beginners-questions` channel (please make it clear that you are asking a question about the language Common Lisp).
+
 ## Formatting
 
 While Common Lisp doesn't care about indentation and layout of code,
