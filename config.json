@@ -829,32 +829,32 @@
   ],
   "key_features": [
     {
-      "icon": "feature-interactive",
+      "icon": "interactive",
       "title": "Interactive",
       "content": "Common Lisp has a full featured REPL, development can happen as a 'conversation' with the system."
     },
     {
-      "icon": "feature-inspectable",
+      "icon": "documentation",
       "title": "Inspectible",
       "content": "Common Lisp is fully inspectable with built-in functions for exploring every part of the language."
     },
     {
-      "icon": "feature-homoiconicity",
+      "icon": "homoiconic",
       "title": "Homoiconicity",
       "content": "Code has the same structure as data, allowing for powerful macros: code that writes code."
     },
     {
-      "icon": "feature-extensible",
+      "icon": "extensible",
       "title": "Extensible",
       "content": "Generic functions, reader-macros, and flexible namespacing allow for the extension of the language"
     },
     {
-      "icon": "feature-standardized",
+      "icon": "stable",
       "title": "Standardized",
       "content": "The language is very stable, with multiple implementations to match your needs – JVM, embedded, etc."
     },
     {
-      "icon": "feature-multiparadigm",
+      "icon": "multi-paradigm",
       "title": "Multiparadigm",
       "content": "Whether you prefer a functional style or something more object-oriented, Lisp adapts to your needs."
     }
