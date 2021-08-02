@@ -22,7 +22,7 @@ For example:
 ## 3. Winning condition
 
 If there is a case where there are 3 of the same symbol in a row then that player has won.
-Larry will need a function `all-the-same` which given an array of 3 items will evaluate to `T` if all the items are the same symbol.
+Larry will need a function `all-the-same-p` which given an array of 3 items will evaluate to `T` if all the items are the same symbol.
 (`eq` can be used to determine if two symbols are the same.)
 
 ## 4. In a row
@@ -33,4 +33,4 @@ The function `row` will take a board and a row number and should return an array
 ## 5. In a column
 
 Finally Larry needs a way to get the elements of a column.
-The function `row` will take a board and a column number and should return an array of the elements in that row.
+The function `column` will take a board and a column number and should return an array of the elements in that row.

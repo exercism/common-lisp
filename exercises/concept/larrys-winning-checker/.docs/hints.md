@@ -3,7 +3,7 @@
 ## 1. Starting from scratch
 
 - To create an array you can use `make-array`.
-- The dimensions of the array are specified as a list of `make-array`.
+- The dimensions of an array are specified as a list of `make-array`.
 - To set all elements to a initial value use the `:inital-element` keyword argument.
 
 ## 2. Starting from an existing board
@@ -13,7 +13,8 @@
 ## 3. Winning condition
 
 - `aref` can be used to get value of a cell of an array.
-- `eq` can be used to determine if symbols are the same.
+- `eq` can be used to determine if two symbols are the same.
+- `and` can be used to combine two `eq` expressions to compare three items.
 
 ## 4. In a row
 

@@ -3,8 +3,9 @@
   (:export
    :make-empty-board
    :make-board-from-list
-   :left-and-right
-   :above-and-below))
+   :all-the-same-p
+   :row
+   :column))
 
 (in-package :larrys-winning-checker)
 
@@ -12,6 +13,8 @@
 
 (defun make-board-from-list (list))
 
-(defun left-and-right (board col row))
+(defun all-the-same-p (row-or-col))
 
-(defun above-and-below (board col row))
+(defun row (board row-num))
+
+(defun column (board col-num))

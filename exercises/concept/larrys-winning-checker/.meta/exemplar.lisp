@@ -3,8 +3,9 @@
   (:export
    :make-empty-board
    :make-board-from-list
-   :left-and-right
-   :above-and-below))
+   :all-the-same-p
+   :row
+   :column))
 
 (in-package :larrys-winning-checker)
 
@@ -14,17 +15,20 @@
 (defun make-board-from-list (list)
   (make-array '(3 3) :initial-contents list))
 
-(defun board-cell (board col row)
-  (unless (or (or (< col 0) (> col 2))
-              (or (< row 0) (> row 2)))
-    (aref board col row)))
+(defun all-the-same-p (row-or-col)
+  (and (eq (aref row-or-col 0)
+           (aref row-or-col 1))
+       (eq (aref row-or-col 1)
+           (aref row-or-col 2))))
 
-(defun left-and-right (board col row)
-  (make-array 3 :initial-contents (list (board-cell board col (1- row))
-                                        (board-cell board col row)
-                                        (board-cell board col (1+ row)))))
+(defun row (board row-num)
+  (make-array 3 :initial-contents (list
+                                   (aref board 0 row-num)
+                                   (aref board 1 row-num)
+                                   (aref board 2 row-num))))
 
-(defun above-and-below (board col row)
-  (make-array 3 :initial-contents (list (board-cell board (1- col) row)
-                                        (board-cell board col row)
-                                        (board-cell board (1+ col) row))))
+(defun column (board col-num)
+  (make-array 3 :initial-contents (list
+                                   (aref board col-num 0)
+                                   (aref board col-num 1)
+                                   (aref board col-num 2))))
