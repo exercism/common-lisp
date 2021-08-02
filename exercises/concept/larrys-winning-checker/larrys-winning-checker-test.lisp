@@ -20,37 +20,20 @@
   (is (equalp #2A((O X O) (X O X) (X X O))
               (make-board-from-list '((O X O) (X O X) (X X O))))))
 
-(test left-and-right
-  (is (equalp (left-and-right #2A((X O X) (O X O) (X X O)) 1 1)
-             #(O X O)))
-  (is (equalp (left-and-right #2A((X O X) (O X O) (X X O)) 0 1)
-             #(X O X)))
-  (is (equalp (left-and-right #2A((X O X) (O X O) (X X O)) 2 1)
-             #(X X O))))
+(test winning
+  (is (all-the-same-p #(X X X)))
+  (is (all-the-same-p #(O O O)))
+  (is (not (all-the-same-p #(X O X)))))
 
-(test out-of-bounds-left-right
-  (is (equalp (left-and-right #2A((X O X) (O X O) (X X O)) 0 0)
-             #(NIL X O)))
-  (is (equalp (left-and-right #2A((X O X) (O X O) (X X O)) 2 2)
-             #(X O NIL)))
-  (is (equalp (left-and-right #2A((X O X) (O X O) (X X O)) 13 13)
-             #(NIL NIL NIL))))
+(test row
+  (is (row #2A((X O X) (O X O) (X X O)) 0) #(X O X))
+  (is (row #2A((X O X) (O X O) (X X O)) 1) #(O X O))
+  (is (row #2A((X O X) (O X O) (X X O)) 2) #(X X O)))
 
-(test above-and-below
-  (is (equalp (above-and-below #2A((X O X) (O X O) (X X O)) 1 1 )
-             #(O X X)))
-  (is (equalp (above-and-below #2A((X O X) (O X O) (X X O)) 1 0)
-             #(X O X)))
-  (is (equalp (above-and-below #2A((X O X) (O X O) (X X O)) 1 2)
-             #(X O O))))
-
-(test out-of-bounds-above-below
-  (is (equalp (above-and-below #2A((X O X) (O X O) (X X O)) 0 0)
-             #(NIL X O)))
-  (is (equalp (above-and-below #2A((X O X) (O X O) (X X O)) 2 2)
-             #(O O NIL)))
-  (is (equalp (above-and-below #2A((X O X) (O X O) (X X O)) 13 13)
-             #(NIL NIL NIL))))
+(test column
+  (is (column #2A((X O X) (O X O) (X X O)) 0) #(X O X))
+  (is (column #2A((X O X) (O X O) (X X O)) 1) #(O X X))
+  (is (column #2A((X O X) (O X O) (X X O)) 2) #(X O O)))
 
 (defun run-tests (&optional (test-or-suite 'larrys-winning-checker-suite))
   "Provides human readable results of test run. Default to entire suite."
