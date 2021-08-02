@@ -1,0 +1,9 @@
+{
+  "authors": ["verdammelt"],
+  "files": {
+    "solution": ["larrys-winning-checker.lisp"],
+    "test": ["larrys-winning-checker-test.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
+  },
+  "blurb": "Learn the basics of Common Lisp arrays by helping Larry check for winner of their tic-tac-toe like game."
+}
