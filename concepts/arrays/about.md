@@ -10,7 +10,7 @@ It also can take arguments to define the values to initialize the array with.
 ## Accessing Elements
 
 With `aref` elements can be accessed via a series of indexes which specify the element.
-An element can also be accessed with `row-major-aref` which takes a single integer specifying the element in row-major order.
+An element can also be accessed with `row-major-aref` which takes a single integer specifying the element in []row-major order][row-major-order].
 (The row-major index can be computed from the indexes via `array-row-major-index`.)
 
 ## Queries about Arrays
@@ -33,3 +33,4 @@ These limits are available in some defined constants:
 
 
 
+[row-major-order]: https://en.wikipedia.org/wiki/Row-_and_column-major_order
