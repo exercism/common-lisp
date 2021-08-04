@@ -1,6 +1,6 @@
 # About
 
-In Common Lisp like other languages an array is a set of elements which are accessed via integral indexes.
+In Common Lisp, like other languages, an array is a set of elements which are accessed via integral indexes.
 The types of the elements can be heterogeneous.
 The array can be multi-dimensional (not simply 1-dimensional).
 
@@ -10,7 +10,7 @@ It also can take arguments to define the values to initialize the array with.
 ## Accessing Elements
 
 With `aref` elements can be accessed via a series of indexes which specify the element.
-An element can also be accessed with `row-major-aref` which takes a single integer specifying the element in []row-major order][row-major-order].
+An element can also be accessed with `row-major-aref` which takes a single integer specifying the element in [row-major order][row-major-order].
 (The row-major index can be computed from the indexes via `array-row-major-index`.)
 
 ## Queries about Arrays

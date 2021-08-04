@@ -1,5 +1,5 @@
 {
-  "blurb": "An array is a sequence of elements which can be referred to by integral indexes. They can be multi-dimensional. They can contain hetergeneous data.",
+  "blurb": "An array is a sequence of indexable elements that can be multi-dimensional and contain heterogeneous data.",
   "authors": ["verdammelt"],
   "contributors": []
 }
