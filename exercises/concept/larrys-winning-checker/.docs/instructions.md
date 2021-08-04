@@ -33,4 +33,4 @@ The function `row` will take a board and a row number and should return an array
 ## 5. In a column
 
 Finally Larry needs a way to get the elements of a column.
-The function `column` will take a board and a column number and should return an array of the elements in that row.
+The function `column` will take a board and a column number and should return an array of the elements in that column.
