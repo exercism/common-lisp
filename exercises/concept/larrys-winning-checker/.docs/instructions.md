@@ -10,6 +10,10 @@ Like tic-tac-toe this game is played on a board which is a 3x3 grid.
 First Larry needs a function to make a blank board `make-empty-board`
 All the cells of the board should be `NIL`.
 
+```lisp
+(make-empty-board) ; => #2A((NIL NIL NIL) (NIL NIL NIL) (NIL NIL NIL))
+```
+
 ## 2. Starting from an existing board
 
 Next Larry needs a function to make a board from a list of rows. 
