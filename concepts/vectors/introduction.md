@@ -12,10 +12,6 @@ Vectors can be created via the `vector` function or by using its reader form `#(
 #(2 nil "bar" a)     ; => #(2 nil "bar" A)
 ```
 
-## Vector Predicate
-
-To check if object is a vector simply use the predicate `vectorp`.
-
 ## Accessing Elements
 
 To access elements of a vector use `aref`, the indexes are zero-based:
