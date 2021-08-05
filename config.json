@@ -114,7 +114,7 @@
         "slug": "larrys-winning-checker",
         "name": "Larry's Winning Checker",
         "uuid": "56958703-f77f-4545-b252-7fb06bdc3b2d",
-        "concepts": ["arrays"],
+        "concepts": ["arrays", "vectors"],
         "prerequisites": ["conditionals", "symbols"],
         "status": "beta"
       }
