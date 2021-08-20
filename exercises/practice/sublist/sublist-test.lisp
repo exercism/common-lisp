@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from sublist and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:sublist-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :sublist-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:sublist-test)
+(in-package :sublist-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* sublist-suite)

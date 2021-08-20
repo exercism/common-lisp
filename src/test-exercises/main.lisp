@@ -1,4 +1,4 @@
-(in-package #:test-exercises)
+(in-package :test-exercises)
 
 (defun run-all-tests ()
   (let ((all-exercise-directories (append (list-exercise-directories "concept")

@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from phone-number and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:phone-number-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :phone-number-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:phone-number-test)
+(in-package :phone-number-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* phone-number-suite)

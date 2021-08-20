@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from sieve and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:sieve-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :sieve-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:sieve-test)
+(in-package :sieve-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* sieve-suite)

@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from roman-numerals and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:roman-numerals-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :roman-numerals-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:roman-numerals-test)
+(in-package :roman-numerals-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* roman-numerals-suite)

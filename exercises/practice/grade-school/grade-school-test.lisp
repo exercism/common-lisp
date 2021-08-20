@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from grade-school and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:grade-school-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :grade-school-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:grade-school-test)
+(in-package :grade-school-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* grade-school-suite)

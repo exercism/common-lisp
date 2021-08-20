@@ -1,4 +1,4 @@
-(in-package #:track-config)
+(in-package :track-config)
 
 (defun read-config (&optional (config-file "./config.json"))
   (yason:parse (truename config-file)))

@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from two-fer and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:two-fer-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :two-fer-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:two-fer-test)
+(in-package :two-fer-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* two-fer-suite)

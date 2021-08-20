@@ -58,10 +58,10 @@
   (list (list :comment
               (format nil "Defines the testing package with symbols from ~A and FiveAM in scope" slug))
         (list :comment "The `run-tests` function is exported for use by both the user and test-runner")
-        (append (substitute-if '(:use #:cl #:fiveam)
+        (append (substitute-if '(:use :cl :fiveam)
                         #'(lambda (x) (and (listp x) (eq (car x) :use)))
                         form)
-                '((:export #:run-tests)))))
+                '((:export :run-tests)))))
 
 (defun transform-inpackage (slug form)
   (list (list :comment "Enter the testing package")

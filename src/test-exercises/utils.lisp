@@ -1,4 +1,4 @@
-(in-package #:test-exercises)
+(in-package :test-exercises)
 
 (defun aget (key alist) (cdr (assoc key alist)))
 

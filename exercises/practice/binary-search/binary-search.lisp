@@ -1,8 +1,8 @@
-(defpackage #:binary-search
-  (:use #:cl)
-  (:export #:binary-find #:value-error))
+(defpackage :binary-search
+  (:use :cl)
+  (:export :binary-find :value-error))
 
-(in-package #:binary-search)
+(in-package :binary-search)
 
 (defun binary-find (arr el)
   )

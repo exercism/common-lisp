@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from beer-song and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:beer-song-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :beer-song-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:beer-song-test)
+(in-package :beer-song-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* beer-song-suite)

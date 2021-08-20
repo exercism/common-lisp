@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from atbash-cipher and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:atbash-cipher-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :atbash-cipher-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:atbash-cipher-test)
+(in-package :atbash-cipher-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* atbash-cipher-suite)

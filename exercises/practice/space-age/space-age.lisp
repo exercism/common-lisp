@@ -1,15 +1,15 @@
-(defpackage #:space-age
-  (:use #:cl)
-  (:export #:on-mercury
-           #:on-venus
-           #:on-earth
-           #:on-mars
-           #:on-jupiter
-           #:on-saturn
-           #:on-uranus
-           #:on-neptune))
+(defpackage :space-age
+  (:use :cl)
+  (:export :on-mercury
+           :on-venus
+           :on-earth
+           :on-mars
+           :on-jupiter
+           :on-saturn
+           :on-uranus
+           :on-neptune))
 
-(in-package #:space-age)
+(in-package :space-age)
 
 (defun on-mercury (n)
   "Returns number of Mercury years for a given number of seconds."

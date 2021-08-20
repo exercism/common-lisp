@@ -1,4 +1,4 @@
-(in-package #:test-exercises)
+(in-package :test-exercises)
 
 (defun example-files (data)
   (or (aget :exemplar (aget :files data))

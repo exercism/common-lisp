@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from perfect-numbers and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:perfect-numbers-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :perfect-numbers-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:perfect-numbers-test)
+(in-package :perfect-numbers-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* perfect-numbers-suite)

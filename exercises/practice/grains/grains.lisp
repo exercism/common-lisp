@@ -1,7 +1,7 @@
-(defpackage #:grains
-  (:use #:cl)
+(defpackage :grains
+  (:use :cl)
   (:export :square :total))
-(in-package #:grains)
+(in-package :grains)
 
 (defun square (n) )
 

@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from anagram and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:anagram-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :anagram-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:anagram-test)
+(in-package :anagram-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* anagram-suite)

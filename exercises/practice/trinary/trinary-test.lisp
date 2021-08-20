@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from trinary and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:trinary-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :trinary-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:trinary-test)
+(in-package :trinary-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* trinary-suite)

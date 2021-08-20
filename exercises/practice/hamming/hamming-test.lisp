@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from hamming and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:hamming-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :hamming-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:hamming-test)
+(in-package :hamming-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* hamming-suite)

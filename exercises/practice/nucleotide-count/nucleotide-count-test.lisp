@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from nucleotide-count and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:nucleotide-count-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :nucleotide-count-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:nucleotide-count-test)
+(in-package :nucleotide-count-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* nucleotide-count-suite)

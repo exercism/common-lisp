@@ -1,4 +1,4 @@
-(in-package #:config-checker)
+(in-package :config-checker)
 
 (defun flatten (list-of-lists) (apply #'append list-of-lists))
 (defun flat-mapcar (fn &rest lists) (flatten (apply #'mapcar fn lists)))

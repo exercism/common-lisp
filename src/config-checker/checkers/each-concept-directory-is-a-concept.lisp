@@ -1,4 +1,4 @@
-(in-package #:config-checker)
+(in-package :config-checker)
 
 (defun each-concept-directory-is-a-concept (config)
   (let ((concepts (track-config:slugs (track-config:listed-concepts config)))

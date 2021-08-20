@@ -1,8 +1,8 @@
-(defpackage #:strain
-  (:use #:cl)
-  (:export #:keep #:discard))
+(defpackage :strain
+  (:use :cl)
+  (:export :keep :discard))
 
-(in-package #:strain)
+(in-package :strain)
 
 (defun keep (keep-p elements)
   "Returns a sublist of elements according to a given predicate."

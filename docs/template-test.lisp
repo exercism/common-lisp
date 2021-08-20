@@ -1,10 +1,10 @@
 (ql:quickload "lisp-unit")
 #-xlisp-test (load "exercise")
 
-(defpackage #:exercise-test
-  (:use #:cl #:lisp-unit))
+(defpackage :exercise-test
+  (:use :cl :lisp-unit))
 
-(in-package #:exercise-test)
+(in-package :exercise-test)
 
 ;;;
 ;;; tests go here...

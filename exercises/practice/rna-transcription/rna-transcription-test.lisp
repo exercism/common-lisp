@@ -6,11 +6,11 @@
 ;; Defines the testing package with symbols from rna-transcription and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
 (defpackage :rna-transcription-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:rna-transcription-test)
+(in-package :rna-transcription-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* rna-transcription-suite)

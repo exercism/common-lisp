@@ -1,8 +1,8 @@
-(defpackage #:beer-song
-  (:use #:cl)
-  (:export #:verse #:sing))
+(defpackage :beer-song
+  (:use :cl)
+  (:export :verse :sing))
 
-(in-package #:beer-song)
+(in-package :beer-song)
 (defun verse (n)
   "Returns a string verse for a given number."
   )

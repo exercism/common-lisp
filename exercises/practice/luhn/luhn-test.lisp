@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from luhn and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:luhn-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :luhn-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:luhn-test)
+(in-package :luhn-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* luhn-suite)

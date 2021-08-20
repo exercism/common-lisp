@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from robot-name and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:robot-name-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :robot-name-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:robot-name-test)
+(in-package :robot-name-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* robot-name-suite)
