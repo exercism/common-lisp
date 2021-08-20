@@ -1,4 +1,4 @@
-(defpackage #:binary
+(defpackage :binary
   (:use :cl)
   (:export :to-decimal))
 

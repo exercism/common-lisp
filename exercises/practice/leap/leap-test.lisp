@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from leap and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:leap-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :leap-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:leap-test)
+(in-package :leap-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* leap-suite)

@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from strain and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:strain-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :strain-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:strain-test)
+(in-package :strain-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* strain-suite)

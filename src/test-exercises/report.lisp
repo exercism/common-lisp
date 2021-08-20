@@ -1,4 +1,4 @@
-(in-package #:test-exercises)
+(in-package :test-exercises)
 
 (defun make-totals (&key (pass 0) (fail 0) (errors 0))
   (list :pass pass :fail fail :errors errors))

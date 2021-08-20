@@ -1,4 +1,4 @@
-(in-package #:test-exercises)
+(in-package :test-exercises)
 
 (defun slurp-exercise-config (dir)
   (let ((config-file (merge-pathnames ".meta/config.json" dir)))

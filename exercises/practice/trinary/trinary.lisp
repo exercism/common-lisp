@@ -1,7 +1,7 @@
-(defpackage #:trinary
-  (:use #:cl)
-  (:export #:to-decimal))
+(defpackage :trinary
+  (:use :cl)
+  (:export :to-decimal))
 
-(in-package #:trinary)
+(in-package :trinary)
 
 (defun to-decimal (str))

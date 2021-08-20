@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from prime-factors and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:prime-factors-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :prime-factors-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:prime-factors-test)
+(in-package :prime-factors-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* prime-factors-suite)

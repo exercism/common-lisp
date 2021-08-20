@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from raindrops and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:raindrops-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :raindrops-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:raindrops-test)
+(in-package :raindrops-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* raindrops-suite)

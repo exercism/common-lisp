@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from binary-search and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:binary-search-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :binary-search-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:binary-search-test)
+(in-package :binary-search-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* binary-search-suite)

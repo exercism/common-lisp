@@ -18,4 +18,4 @@
 
   :perform (test-op (o c)
                     (declare (ignore o c))
-                    (uiop:symbol-call :test-exercises '#:run-all-tests)))
+                    (uiop:symbol-call :test-exercises ':run-all-tests)))

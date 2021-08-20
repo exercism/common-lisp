@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from isogram and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:isogram-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :isogram-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:isogram-test)
+(in-package :isogram-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* isogram-suite)

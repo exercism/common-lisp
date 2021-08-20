@@ -1,8 +1,8 @@
-(defpackage #:raindrops
-  (:use #:cl)
-  (:export #:convert))
+(defpackage :raindrops
+  (:use :cl)
+  (:export :convert))
 
-(in-package #:raindrops)
+(in-package :raindrops)
 
 (defun convert (n)
   "Converts a number to a string of raindrop sounds."

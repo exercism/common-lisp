@@ -1,9 +1,9 @@
-(defpackage #:allergies
-  (:use #:cl)
-  (:shadow #:list)
-  (:export #:allergic-to-p #:list))
+(defpackage :allergies
+  (:use :cl)
+  (:shadow :list)
+  (:export :allergic-to-p :list))
 
-(in-package #:allergies)
+(in-package :allergies)
 
 (defun allergic-to-p (score allergen)
   "Returns true if given allergy score includes given allergen."

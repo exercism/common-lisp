@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from armstrong-numbers and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:armstrong-numbers-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :armstrong-numbers-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:armstrong-numbers-test)
+(in-package :armstrong-numbers-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* armstrong-numbers-suite)

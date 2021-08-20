@@ -1,10 +1,10 @@
-(defpackage #:difference-of-squares
-  (:use #:cl)
-  (:export #:sum-of-squares
-           #:square-of-sum
-           #:difference))
+(defpackage :difference-of-squares
+  (:use :cl)
+  (:export :sum-of-squares
+           :square-of-sum
+           :difference))
 
-(in-package #:difference-of-squares)
+(in-package :difference-of-squares)
 
 (defun square-of-sum (n)
   "Calculates the square of the sum for a given number."

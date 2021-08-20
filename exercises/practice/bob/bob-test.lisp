@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from bob and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:bob-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :bob-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:bob-test)
+(in-package :bob-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* bob-suite)

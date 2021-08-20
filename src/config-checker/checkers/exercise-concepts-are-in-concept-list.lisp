@@ -1,4 +1,4 @@
-(in-package #:config-checker)
+(in-package :config-checker)
 
 (defun exercise-concepts-are-in-concept-list (config)
   (let* ((concepts (track-config:slugs (track-config:listed-concepts config)))

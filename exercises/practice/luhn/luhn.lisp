@@ -1,7 +1,7 @@
-(defpackage #:luhn
-  (:use #:cl)
-  (:export #:validp))
+(defpackage :luhn
+  (:use :cl)
+  (:export :validp))
 
-(in-package #:luhn)
+(in-package :luhn)
 
 (defun validp (input))

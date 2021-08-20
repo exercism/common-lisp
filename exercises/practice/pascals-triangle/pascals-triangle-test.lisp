@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from pascals-triangle and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:pascals-triangle-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :pascals-triangle-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:pascals-triangle-test)
+(in-package :pascals-triangle-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* pascals-triangle-suite)

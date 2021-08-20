@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from collatz-conjecture and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:collatz-conjecture-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :collatz-conjecture-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:collatz-conjecture-test)
+(in-package :collatz-conjecture-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* collatz-conjecture-suite)

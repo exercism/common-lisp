@@ -1,4 +1,4 @@
-(in-package #:test-exercises)
+(in-package :test-exercises)
 
 (defparameter +source-directory-pathname+
   (make-pathname :directory (pathname-directory

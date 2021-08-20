@@ -5,12 +5,12 @@
 
 ;; Defines the testing package with symbols from all-your-base and FiveAM in scope
 ;; The `run-tests` function is exported for use by both the user and test-runner
-(defpackage #:all-your-base-test
-  (:use #:cl #:fiveam)
-  (:export #:run-tests))
+(defpackage :all-your-base-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
 
 ;; Enter the testing package
-(in-package #:all-your-base-test)
+(in-package :all-your-base-test)
 
 ;; Define and enter a new FiveAM test-suite
 (def-suite* all-your-base-suite)

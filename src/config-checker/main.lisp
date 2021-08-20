@@ -1,4 +1,4 @@
-(in-package #:config-checker)
+(in-package :config-checker)
 
 (define-condition config-check-failure (error) ())
 
