@@ -97,7 +97,7 @@ To run the build "manually" execute the following from the root directory of the
 [asdf-registry-config]: https://common-lisp.net/project/asdf/asdf/Configuring-ASDF-to-find-your-systems.html
 [asdf]: https://common-lisp.net/project/asdf/
 [common-lisp-analyzer]: https://github.com/exercism/common-lisp-analyzer
-[common-lisp-representer]: https://github.com/exercism/common-lisp-representer.
+[common-lisp-representer]: https://github.com/exercism/common-lisp-representer
 [common-lisp-test-runner]: https://github.com/exercism/common-lisp-test-runner
 [common-lisp]: https://common-lisp.net
 [concept-exercise]: https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md
