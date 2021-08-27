@@ -18,5 +18,5 @@ See also, within this Exercism Common Lisp track: [Important Resources][track-re
 [cliki-getting-started]: http://cliki.net/Getting%20Started
 [practical-cl]: http://www.gigamonkeys.com/book/
 [road-to-cl]: http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/
-[track-resources]: http://exercism.io/languages/common-lisp/resources
+[track-resources]: /languages/common-lisp/resources
 [wikibooks-cl-first-steps]: http://en.wikibooks.org/wiki/Common_Lisp/First_steps

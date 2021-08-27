@@ -56,6 +56,6 @@ It's possible to submit an incomplete solution so you can see how others have co
 
 [awesome-cl-communities]: https://github.com/GustavBertram/awesome-common-lisp-learning#online-community
 [slime]: https://github.com/slime/slime
-[track-docs]: https://exercism.lol/docs/tracks/common-lisp
-[track-install]: https://exercism.lol/docs/tracks/common-lisp/installation
-[track-resources]: https://exercism.lol/docs/tracks/common-lisp/resources
+[track-docs]: /docs/tracks/common-lisp
+[track-install]: /docs/tracks/common-lisp/installation
+[track-resources]: /docs/tracks/common-lisp/resources
