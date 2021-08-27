@@ -24,13 +24,12 @@ Everything comes already configured out of the box. Install Portacle by download
 
 Note: Emacs (text editor) can be disorienting at first, if you're not accustomed to it. Fortunately there are many primers on Emacs and SLIME available online. 
 
-
 ## Traditional Start
 
 If you prefer installing the needed tools separately you will need to install and set up:
 
 - a Lisp-aware text editor: [Emacs][emacs] with the [Slime][slime] or [Sly][sly] package is a common choice but [VIM][vim] with [SLIMV][slimv], [Atom][atom] with [SLIMA][slima] or [VSCode][vscode] with a [Common Lisp plugin][vscode-plugin] are also good.
-- a Common Lisp implementation: [SBCL][sbcl] is a "safe" choice which works across Linux, MacOS and Windows. Since the language is based upon a standard other (conforming implementations)[awesome-cl-implementations] will work as well.
+- a Common Lisp implementation: [SBCL][sbcl] is a "safe" choice which works across Linux, MacOS and Windows. Since the language is based upon a standard other [conforming implementations][awesome-cl-implementations] will work as well.
 - [Quicklisp][quicklisp] for library management. After downloading it, follow the [instructions][quicklisp-install] to ensure it is properly integrated with your Common Lisp implementation.
 
 [atom]: https://atom.io
