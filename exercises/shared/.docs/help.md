@@ -1,15 +1,15 @@
 ## Setup
 
 Check out [Installing Common
-Lisp](https://exercism.lol/docs/tracks/common-lisp/installation) for
+Lisp][track-install] for
 instructions to get started or take a look at the guides available in
-the [track's documentation pages](https://exercism.lol/docs/tracks/common-lisp).
+the [track's documentation pages][track-docs].
 
 ## Where to look for help
 
-Any of the resources listed in the list of [Useful Common Lisp Resources](https://exercism.lol/docs/tracks/common-lisp/resources) are good places to look for information.
+Any of the resources listed in the list of [Useful Common Lisp Resources][track-resources] are good places to look for information.
 
-There are also some [Online Communities](https://github.com/GustavBertram/awesome-common-lisp-learning#online-community) which may be good places to go for help.
+There are also some [Online Communities][awesome-cl-communities] which may be good places to go for help.
 
 ## Formatting
 
@@ -48,8 +48,14 @@ This can be placed in your `~/.emacs` (or `~/.emacs.d/init.el`) in
 order to have it set whenever Emacs is launched.
 
 One suggested add-on for Emacs and Common Lisp is
-[SLIME](https://github.com/slime/slime) which offers tight integration
+[SLIME][slime] which offers tight integration
 with the REPL; making iterative coding and testing very easy.
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+[awesome-cl-communities]: https://github.com/GustavBertram/awesome-common-lisp-learning#online-community
+[slime]: https://github.com/slime/slime
+[track-docs]: https://exercism.lol/docs/tracks/common-lisp
+[track-install]: https://exercism.lol/docs/tracks/common-lisp/installation
+[track-resources]: https://exercism.lol/docs/tracks/common-lisp/resources
