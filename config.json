@@ -615,11 +615,6 @@
   },
   "concepts": [
     {
-      "uuid": "223d816f-c09e-4269-81fb-69db0c6fb1cd",
-      "slug": "anonymous-functions",
-      "name": "Anonymous Functions"
-    },
-    {
       "uuid": "b2a3eef0-eb53-4b1b-bf32-167fd2f7d880",
       "slug": "arithmetic",
       "name": "Arithmetic"
@@ -628,11 +623,6 @@
       "uuid": "9afaa6c5-5c25-4f44-a908-5e0f156f7fb3",
       "slug": "arrays",
       "name": "Arrays"
-    },
-    {
-      "uuid": "0dcab94c-b2c3-4c9c-b55e-2fbdff83d8cb",
-      "slug": "assignment",
-      "name": "Assignment"
     },
     {
       "uuid": "c85b14d9-284f-4efa-9b10-af33db6f7188",
@@ -660,11 +650,6 @@
       "name": "Cons"
     },
     {
-      "uuid": "b9f5a5fd-57e9-4003-880b-499206e1554f",
-      "slug": "constants",
-      "name": "Constants"
-    },
-    {
       "uuid": "e81cd51b-5b8a-4191-b9c6-1f5e8589563c",
       "slug": "dates-times",
       "name": "Dates and Times"
@@ -673,11 +658,6 @@
       "uuid": "a291e615-6148-46a4-ada8-9ab6eb343eb9",
       "slug": "default-parameters",
       "name": "Default-Parameters"
-    },
-    {
-      "uuid": "92231d37-27e3-4692-96d4-ff9822a83132",
-      "slug": "destructuring-assignment",
-      "name": "Destructuring Assignment"
     },
     {
       "uuid": "80ea7d53-76aa-4e89-9d70-45548181a6eb",
@@ -700,16 +680,6 @@
       "name": "Functions"
     },
     {
-      "uuid": "778561a9-c735-4c26-8d07-1baa71b8f94a",
-      "slug": "hash-tables",
-      "name": "Hash Tables"
-    },
-    {
-      "uuid": "0f570f2a-3b77-408e-9bd1-3712b12bcd4a",
-      "slug": "higher-order-functions",
-      "name": "Higher Order Functions"
-    },
-    {
       "uuid": "e5fefeda-9e02-48c4-9591-fc8a518d99f2",
       "slug": "integers",
       "name": "Integers"
@@ -725,11 +695,6 @@
       "name": "Lists"
     },
     {
-      "uuid": "5a6598c3-8d92-4eca-b36e-42ba4b435237",
-      "slug": "loop",
-      "name": "Loop"
-    },
-    {
       "uuid": "247d0214-2d89-49d3-9f12-7710a500d394",
       "slug": "iteration",
       "name": "Iteration"
@@ -740,29 +705,9 @@
       "name": "Mapping"
     },
     {
-      "uuid": "eb5772d1-756f-48b3-bbaa-7481e10c2bfe",
-      "slug": "multiple-values",
-      "name": "Multiple Values"
-    },
-    {
       "uuid": "727ade24-7e7a-46dc-92b0-188d5797edfa",
       "slug": "named-parameters",
       "name": "Named-Parameters"
-    },
-    {
-      "uuid": "654667dc-547a-4ec9-8e83-d1b3df4bbeba",
-      "slug": "nested-functions",
-      "name": "Nested Functions"
-    },
-    {
-      "uuid": "58adfe20-f67b-40df-a68a-4c5e07ab5c21",
-      "slug": "packages",
-      "name": "Packages"
-    },
-    {
-      "uuid": "c54d3099-ce89-4745-942a-ab8e1ec00ad3",
-      "slug": "printing",
-      "name": "Printing"
     },
     {
       "uuid": "963a964e-3f9d-4fc7-ab75-d8052d55a7b7",
@@ -785,19 +730,9 @@
       "name": "Sameness"
     },
     {
-      "uuid": "4f179527-59cd-4e1b-91c3-50e825809d6b",
-      "slug": "scope",
-      "name": "Scope"
-    },
-    {
       "uuid": "d9fc086b-0e47-401a-aedd-82aed6180cb9",
       "slug": "sequences",
       "name": "Sequences"
-    },
-    {
-      "uuid": "5774aac1-e8c6-439f-97ee-27f4febc1b26",
-      "slug": "sets",
-      "name": "Sets"
     },
     {
       "uuid": "d4d7ae49-bf42-48d3-b5b8-78d3131c73a7",
@@ -808,11 +743,6 @@
       "uuid": "630eaa07-1239-4548-be46-e695c8a2c73f",
       "slug": "strings",
       "name": "Strings"
-    },
-    {
-      "uuid": "3d57a337-1bea-4677-923d-39b4fb2c1e7b",
-      "slug": "structures",
-      "name": "Structures"
     },
     {
       "uuid": "c9ac82a1-19da-4aff-8184-8727efa67364",
