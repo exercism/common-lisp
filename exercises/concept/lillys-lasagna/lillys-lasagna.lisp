@@ -7,10 +7,10 @@
 
 (in-package :lillys-lasagna)
 
-;; TODO: define function expected-time-in-oven
+;; Define function expected-time-in-oven
 
-;; TODO: define function remaining-minutes-in-oven
+;; Define function remaining-minutes-in-oven
 
-;; TODO: define function preparation-time-in-minutes
+;; Define function preparation-time-in-minutes
 
-;; TODO: define function elapsed-time-in-minutes
+;; Define function elapsed-time-in-minutes

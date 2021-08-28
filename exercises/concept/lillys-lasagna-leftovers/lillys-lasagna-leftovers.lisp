@@ -7,8 +7,8 @@
 
 (in-package :lillys-lasagna-leftovers)
 
-;; TODO: define function preparation-time
+;; Define function preparation-time
 
-;; TODO: define function remaining-minutes-in-oven
+;; Define function remaining-minutes-in-oven
 
-;; TODO: define function split-leftovers
+;; Define function split-leftovers
