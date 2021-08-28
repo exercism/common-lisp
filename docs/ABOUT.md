@@ -6,4 +6,6 @@ It's a multi-paradigm programming language that allows you to choose the approac
 Common Lisp has fast prototyping capabilities, and exceptional support for object oriented programming. 
 It also boasts a macro system which allows you to adapt the language to your needs, and a run-time environment which allows modification of running applications.
 
-To learn more about Common Lisp, take a look at [the Common Lisp homepage](https://common-lisp.net/).
+To learn more about Common Lisp, take a look at [the Common Lisp homepage][common-lisp-net]
+
+[common-lisp-net]: https://common-lisp.net/

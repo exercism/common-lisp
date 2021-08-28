@@ -40,7 +40,8 @@ Quick-guides / cheat sheets for Common Lisp:
 [cl-cookbook]: http://lispcookbook.github.io/cl-cookbook/
 [cl-quickref]: http://clqr.boundp.org/
 [cliki]: http://www.cliki.net/
-[common-lisp-gentle-introduction]: http://www-cgi.cs.cmu.edu/afs/cs.cmu.edu/user/dst/www/LispBook/index.html
+[common-lisp-gentle-introduction]: 
+https://www.cs.cmu.edu/~dst/LispBook/
 [common-lisp-interactive]: http://www.cse.buffalo.edu/~shapiro/Commonlisp/
 [common-lisp-net]: http://common-lisp.net/
 [hyperspec]: http://www.lispworks.com/documentation/common-lisp.html

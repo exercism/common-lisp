@@ -11,11 +11,12 @@ These resources can help you get started:
   by various contributors
 * [Awesome Common Lisp Learning][awesome-cl]
 
-See also, within this Exercism Common Lisp track: [Important Resources](http://exercism.io/languages/common-lisp/resources)
+See also, within this Exercism Common Lisp track: [Important Resources][track-resources].
 
 [awesome-cl]: https://github.com/GustavBertram/awesome-common-lisp-learning
 [cl-cookbook]: https://lispcookbook.github.io/cl-cookbook/
 [cliki-getting-started]: http://cliki.net/Getting%20Started
 [practical-cl]: http://www.gigamonkeys.com/book/
 [road-to-cl]: http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/
+[track-resources]: /docs/tracks/common-lisp
 [wikibooks-cl-first-steps]: http://en.wikibooks.org/wiki/Common_Lisp/First_steps
