@@ -1,7 +1,5 @@
 # About
 
-TODO: Add info about single and double-floats (as well as short and long?)
-
 Floating-Point Numbers are fractional or whole numbers including a decimal point (like `3.14`, `-1.7`, `99.99`, `2048.0`)
 
 The float type is subdivided into several subtypes: `short-float`, `single-float`, `double-float` and `long-float`.
