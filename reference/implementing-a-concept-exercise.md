@@ -21,9 +21,7 @@ placeholders are used:
 
 Before implementing the exercise, please make sure you have a good
 understanding of what the exercise should be teaching (and what not).
-This information can be found in the exercise's GitHub issue. Having
-done this, please read the [Common Lisp concept exercises
-introduction][concept-exercises].
+This information can be found in the exercise's GitHub issue.
 
 To implement a concept exercise, the following files must be added:
 
@@ -49,10 +47,6 @@ languages
                 ├── &lt;SLUG&gt;.lisp
                 └── &lt;SLUG&gt;-test.lisp
 </pre>
-
-**IMPORTANT NOTE:** To create these files, you should use the
-`generate-scaffolding` tool in the `bin/` directory. See [this
-document][scaffolder] to get started.
 
 ## Step 1: Add code files
 
@@ -103,12 +97,10 @@ post them as comments in the exercise's GitHub issue.
 
 [analyzer]: https://github.com/exercism/common-lisp-analyzer
 [representer]: https://github.com/exercism/common-lisp-representer
-[concept-exercises]: ../exercises/concept/README.md
 [how-to-implement-a-concept-exercise]: https://github.com/exercism/v3/blob/main/docs/maintainers/generic-how-to-implement-a-concept-exercise.md
 [docs-concept-exercises]: https://github.com/exercism/v3/blob/main/docs/concept-exercises.md
 [docs-rationale-for-v3]: https://github.com/exercism/v3/blob/main/docs/rationale-for-v3.md
 [docs-features-of-v3]: https://github.com/exercism/v3/blob/main/docs/features-of-v3.md
 [anatomy-of-a-concept-exercise]: https://www.youtube.com/watch?v=gkbBqd7hPrA
 [reference]: https://github.com/exercism/v3/blob/main/reference
-[socks-and-sexprs]: ../exercises/concept/socks-and-sexprs
-[scaffolder]: ../bin/generate-scaffolding/README.md
+[socks-and-sexprs]: https://github.com/exercism/common-lisp/exercises/concept/socks-and-sexprs
