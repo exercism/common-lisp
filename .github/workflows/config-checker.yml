@@ -28,5 +28,5 @@ jobs:
       - name: Run Config Check
         run: |
           ${HOME}/ql-sbcl --eval "(ql:quickload \"config-checker\")" \
-                          --eval "(config-checker:ci-check-config)"  \
+                          --eval "(asdf:test-system \"config-checker\")" \
                           --quit

@@ -15,4 +15,8 @@
                (:module "checkers"
                 :components ((:file "each-concept-directory-is-a-concept")
                              (:file "each-concept-has-a-directory")
-                             (:file "exercise-concepts-are-in-concept-list")))))
+                             (:file "exercise-concepts-are-in-concept-list"))))
+
+  :perform (test-op (o c)
+                    (declare (ignore o c))
+                    (uiop:symbol-call :config-checker ':check-config)))
