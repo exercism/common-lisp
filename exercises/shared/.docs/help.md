@@ -15,11 +15,11 @@ There are also some [Online Communities][awesome-cl-communities] which may be go
 
 While Common Lisp doesn't care about indentation and layout of code,
 nor whether you use spaces or tabs, this is an important consideration
-for submissions to exercism.io. Exercism.io's code widget cannot
-handle mixing of tab and space characters well so using only spaces is recommended to make
-the code more readable to the human reviewers. Please review your
-editors settings on how to accomplish this. Below are instructions for
-popular editors for Common Lisp.
+for submissions to exercism.
+Exercism.io's code widget cannot handle mixing of tab and space characters well so using only spaces is recommended to make
+the code more readable to the human reviewers.
+Please review your editors settings on how to accomplish this.
+Below are instructions for popular editors for Common Lisp.
 
 ### VIM
 
