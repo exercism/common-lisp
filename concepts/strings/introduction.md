@@ -18,7 +18,7 @@ If case of the characters should be ignored then `string-equal` can be used.
 
 ```lisp
 (string= "macaroni" "macaroni") ; => T
-(string= "macaroni" "MACARONI") ; => nil
+(string= "macaroni" "MACARONI") ; => NIL
 (string-equal "macaroni" "MACARONI") ; => T
 ```
 

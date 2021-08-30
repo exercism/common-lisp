@@ -52,7 +52,7 @@ One suggested add-on for Emacs and Common Lisp is
 with the REPL; making iterative coding and testing very easy.
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+It's possible to submit an incomplete solution so you can ask for mentoring to help you come to the correct solution.
 
 [awesome-cl-communities]: https://github.com/GustavBertram/awesome-common-lisp-learning#online-community
 [slime]: https://github.com/slime/slime

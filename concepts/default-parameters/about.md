@@ -19,7 +19,7 @@ Arguments are first bound to required parameters, then optional parameters and f
 ```
 
 While multiple types of parameters can be combined with other types of parameters (optional and keyword arguments) this can be be problematic and should be done carefully.
-See the section on ("Mixing Different Parameter Types")(pcl-function) in Practical Common Lisp.
+See the section on ["Mixing Different Parameter Types"][pcl-function] in Practical Common Lisp.
 
 --
 

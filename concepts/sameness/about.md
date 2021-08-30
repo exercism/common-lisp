@@ -94,7 +94,7 @@ They work, as defined, for any type.
 This can be useful when one writes generic code that does not know the types of objects it will be comparing until run-time.
 However it is generally considered "better style" to use type specific equality functions when one knows the types being compared.
 For example `string=` rather than `equal`.
-These functions will be presented and discussed in later concepts.
+These functions will be presented and discussed in the relevant concepts.
 
 [hyper-eq]: http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm
 [hyper-eql]: http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm
