@@ -567,6 +567,11 @@
       "name": "Functions"
     },
     {
+      "uuid": "0f67b390-b13a-4623-82e5-4ca724a5cdef",
+      "slug": "hash-tables",
+      "name": "Hash Tables"
+    },
+    {
       "uuid": "e5fefeda-9e02-48c4-9591-fc8a518d99f2",
       "slug": "integers",
       "name": "Integers"
