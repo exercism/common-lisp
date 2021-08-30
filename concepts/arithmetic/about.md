@@ -31,6 +31,10 @@ As a small quirk, the `-` and `/` operators have a special meanings when applied
 Finally, you may find it useful to compare different numbers using functions like `=` (equal), `/=` (not equal to), and `>=` (greater than or equal to).
 When these comparisons are true (as in `(= 1 1)`), they return `T` and when they aren't (as in `(> 0 1)`), they return `NIL`.
 
+## Numeric predicates
+
+The language also includes some useful predicates such as `zerop`, `evenp` and `oddp` which check for the obvious conditions.
+
 ## Reference
 
 ```lisp
