@@ -13,6 +13,18 @@ More visually:
 
 While prefix notion turns some operations like `2 + 2` into the somewhat unfamiliar `(+ 2 2)` form, it makes it much easier to operate on more than one number at a time.
 
+## Basic Math
+
+Common Lisp has all the typical functions: `+`, `-`, `*`, `/` for addition, subtraction, multiplication and division.
+
+When considering division one may want to know the remainder of a division, that is done by the `mod` (for modulo) function which takes a number and a divisor as arguments: 
+
+```lisp
+(mod 4 2)  ; => 0
+(mod 2 4)  ; => 2
+(mod 10 3) ; => 1
+```
+
 ## Comparing Numbers
 
 Finally, you may find it useful to compare different numbers using functions like `=` (equal), `/=` (not equal to), and `>=` (greater than or equal to).
