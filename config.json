@@ -148,8 +148,8 @@
         "name": "Hamming",
         "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
         "difficulty": 1,
-        "practices": ["conditionals", "sameness", "strings", "characters"],
-        "prerequisites": ["functions", "conditionals", "sameness", "strings"],
+        "practices": ["conditionals", "strings", "characters"],
+        "prerequisites": ["functions", "conditionals", "arithmetic", "strings"],
         "status": "beta"
       },
       {
