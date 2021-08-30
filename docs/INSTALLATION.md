@@ -10,7 +10,7 @@ The basic items needed for developing in Common Lisp are:
 
 ## Fast Start
 
-For people new to Common Lisp, particularly ones with previous experience with Emacs, can get an easy & quick start by installing Portacle, the Portable Common Lisp Environment. 
+For people new to Common Lisp, particularly ones with previous experience with Emacs, can get an easy & quick start by installing [Portacle, the Portable Common Lisp Environment][portacle]. 
 Free and full featured, it works in all common platforms and comes preconfigured "out of the box". This will supply:
 
 - A Lisp implementation: SBCL, including Quicklisp and ASDF.

@@ -17,7 +17,7 @@ Calling a function is done by using the name of the function as the first elemen
 Functions can also take [optional parameters](../default-parameters/about.md), [keyword parameters](../named-parameters/about.md), [rest parameters](../rest-parameters/about.md).
 These will be discussed in later concepts.
 
-The name of the function is in [scope](../scope/about.md) in the body of the function so that [recursion](../recursion/about.md) can be performed.
+The name of the function is in scope in the body of the function so that recursion can be performed.
 
 ```lisp
 (defun countdown (x)

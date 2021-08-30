@@ -4,7 +4,9 @@ Given that the name of the language is Lisp which stands of _LISt Processing_ on
 
 While Common Lisp has other data structures as well as lists, lists are still heavily used.
 
-A list in Common Lisp is a sequence of items. The items themselves do not have to be the same type. For example you can have a list of `1`, `two`, `"III"`.
+A list in Common Lisp is a sequence of items.
+The items themselves do not have to be the same type.
+For example you can have a list of `1`, `two`, `"III"`.
 
 ## Creating Lists
 
@@ -32,11 +34,13 @@ There are also two main functions used to create lists: `list` and `cons`.
 
 ## Length & Random Access
 
-The length of a list can be determined by the use of `length`. An empty list has length zero.
+The length of a list can be determined by the use of `length`.
+An empty list has length zero.
 
 An arbitrary item can be accessed with `nth` (note that lists are zero-indexed).
 
-It is _not_ an error to request an index that is more than the length. Instead it evaluates to `nil`:
+It is _not_ an error to request an index that is more than the length.
+Instead it evaluates to `nil`:
 
 ```lisp
 (nth 23 '(short list))` ; => nil

@@ -27,4 +27,3 @@ There are predicates for each of these types: `graphic-char-p`, `alpha-char-p`, 
 ## Converting character case
 
 Some characters can be upper or lower case and can be converted between them with `char-upcase` and `char-downcase`.
-If either is called with a character that is not of the correct case (such as calling)

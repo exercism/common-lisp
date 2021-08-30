@@ -1,7 +1,7 @@
 # Introduction
 
 To define a global function in Common Lisp one uses the `defun` expression.
-This expression takes as its first argument a list of parameters (and empty list means the function has no parameters).
+This expression takes as its first argument a list of parameters (an empty list means the function has no parameters).
 This is followed by an optional documentation string (see below), then zero or more expressions which make up the "body" of the function.
 
 Functions may have zero or more parameters.
@@ -16,7 +16,8 @@ Functions may have zero or more parameters.
 
 Calling a function is done by evaluating an expression with the symbol designating the function as the first element of the expression with the arguments to the function (if any) as the remaining items in the expression.
 
-The value that a function evaluates to is the value of the last expression in the function body that was evaluated. All functions evaluate to a value.
+The value that a function evaluates to is the value of the last expression in the function body that was evaluated. 
+All functions evaluate to a value.
 
 ```lisp
 (add-nums 2 2) ;; => 4
@@ -24,7 +25,7 @@ The value that a function evaluates to is the value of the last expression in th
 
 Functions can also have, optionally, a documentation string (also called a 'docstring').
 If provided it comes after the argument list but before the body of the function.
-The documentation string can be via `documentation`.
+The documentation string can be accessed via `documentation`.
 
 ```lisp
 (defun add-nums (x y) "Add X and Y together" (+ x y))
