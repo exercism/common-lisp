@@ -9,7 +9,7 @@ Hash tables can be created with the `make-hash-table` function.
 
 The `make-hash-table` function takes several [keyword arguments][/tracks/common-lisp/concepts/named-parameters] for fine-tuning the initial size of the hash table as well as its resizing threshold; refer to the [documentation][hyperspec-make-hash-table] for full info on those.
 More importantly it also takes a `test` [keyword argument][/tracks/common-lisp/concepts/named-parameters] which defines how keys are compared during the insertion, lookup and removal of keys and values.
-The values of the `test` argument can be one of `'eq`, `'eql`, `'equal`, or `'equalp` which correspond to the [generic equality predicates][/tracks/common-lisp/concepts/sameness]. 
+The values of the `test` argument can be one of `'eq`, `'eql`, `'equal`, or `'equalp` which correspond to the [generic equality predicates][/tracks/common-lisp/concepts/equality]. 
 The default value is `'eql`.
 
 ## Common operations on hash tables
