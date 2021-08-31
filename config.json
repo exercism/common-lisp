@@ -174,8 +174,8 @@
         "name": "Leap",
         "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
         "difficulty": 1,
-        "practices": ["conditionals", "sameness", "integers"],
-        "prerequisites": ["conditionals", "arithmetic", "integers"],
+        "practices": ["conditionals", "arithmetic"],
+        "prerequisites": ["conditionals", "arithmetic"],
         "status": "beta"
       },
       {
@@ -183,7 +183,7 @@
         "name": "Anagram",
         "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
         "difficulty": 1,
-        "practices": ["sameness", "strings"],
+        "practices": ["strings"],
         "prerequisites": ["functions", "strings"],
         "status": "beta"
       },
