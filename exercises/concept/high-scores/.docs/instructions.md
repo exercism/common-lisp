@@ -2,7 +2,7 @@
 
 Lamont is a Lisp alien that wants to write their own video game. One task they have asked for your help with is keeping track of a high score list.
 
-# Creating the high score table
+# 1. Creating the high score table
 
 Define a function `make-high-score-table` which does not take any arguments are evaluates to a new empty hash table:
 
@@ -10,7 +10,7 @@ Define a function `make-high-score-table` which does not take any arguments are 
 (make-high-score-table) ; => #<HASH-TABLE :TEST EQL :COUNT 0 {1005A90103}>
 ```
 
-# Adding a player to the table
+# 2. Adding a player to the table
 
 To add a player to the table define a function `add-player` which takes two arguments:
 - the high score table
@@ -21,7 +21,7 @@ To add a player to the table define a function `add-player` which takes two argu
 (add-player hash-table :lilly) ; => NIL
 ```
 
-# Setting a player's score
+# 3. Setting a player's score
 
 To set the score for a player define a function `set-score` which takes three arguments:
 - the high score table
@@ -32,7 +32,7 @@ To set the score for a player define a function `set-score` which takes three ar
 (set-score hash-table :louis 1234) ; => 1234
 ```
 
-# Getting a score from the table
+# 4. Getting a score from the table
 
 To get a score for a player from the table define a function `get-score` which takes two arguments:
 - the high score table
@@ -47,7 +47,7 @@ If there is no score stored for that player, or that player is not yet in the ta
 (get-score hash-table :not-a-character-in-this-story) ; => 0
 ```
 
-# Removing a player from the table
+# 5. Removing a player from the table
 
 To remove a player from the high score table define a function `remove-player` which takes two arguments:
 - the high score table
