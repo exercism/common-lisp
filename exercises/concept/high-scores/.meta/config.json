@@ -1,0 +1,9 @@
+{
+  "blurb": "TODO: blurb about high scores",
+  "authors": ["verdammelt"],
+  "files": {
+    "test": ["high-scores-test.lisp"],
+    "solution": ["high-scores.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
+  }
+}

@@ -117,6 +117,14 @@
         "concepts": ["arrays", "vectors"],
         "prerequisites": ["conditionals", "symbols"],
         "status": "beta"
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "40868cee-a480-48c4-b9e8-e11324c0708b",
+        "concepts": ["hash-tables"],
+        "prerequisites": ["functions", "integers"],
+        "status": "beta"
       }
     ],
     "practice": [
