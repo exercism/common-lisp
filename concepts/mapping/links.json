@@ -1,6 +1,15 @@
 [
   {
-    "url": "http://some-link-here",
-    "description": "TODO: link to mapping"
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm",
+    "description": "Hyperspec reference to list mapping functions"
+  },
+
+  {
+    "url": "https://gigamonkeys.com/book/they-called-it-lisp-for-a-reason-list-processing.html#mapping",
+    "description": "Practical Common Lisp on mapping across lists"
+  },
+  {
+    "url": "https://gigamonkeys.com/book/collections.html#sequence-mapping-functions",
+    "description": "Practical Common Lisp on mapping across sequences"
   }
 ]
