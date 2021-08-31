@@ -309,8 +309,8 @@
         "name": "Etl",
         "uuid": "52ac3dd0-8803-445f-93cf-e984b59d6702",
         "difficulty": 1,
-        "practices": [],
-        "prerequisites": ["sameness"],
+        "practices": ["hash-tables"],
+        "prerequisites": ["hash-tables"],
         "status": "beta"
       },
       {
