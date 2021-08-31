@@ -3,7 +3,7 @@
 (defun each-concept-has-a-directory (config)
   (let* ((concepts (track-config:slugs (track-config:listed-concepts config)))
          (bad-concepts
-           (remove-if #'(lambda (c) (probe-file (merge-pathnames c "./concepts/"))) concepts)))
+           (remove-if #'(lambda (c) (uiop:directory-exists-p (merge-pathnames c "./concepts/"))) concepts)))
     (when bad-concepts
       (dolist (c bad-concepts)
         (format *error-output* "Concept: ~S does not have a directory~&" c))
