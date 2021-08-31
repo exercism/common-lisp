@@ -117,6 +117,14 @@
         "concepts": ["arrays", "vectors"],
         "prerequisites": ["conditionals", "symbols"],
         "status": "beta"
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "40868cee-a480-48c4-b9e8-e11324c0708b",
+        "concepts": ["hash-tables"],
+        "prerequisites": ["functions", "integers"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -301,8 +309,8 @@
         "name": "Etl",
         "uuid": "52ac3dd0-8803-445f-93cf-e984b59d6702",
         "difficulty": 1,
-        "practices": [],
-        "prerequisites": ["sameness"],
+        "practices": ["hash-tables"],
+        "prerequisites": ["hash-tables"],
         "status": "beta"
       },
       {
@@ -565,6 +573,11 @@
       "uuid": "a7b463d3-4d7f-4b4a-8a47-28307219541d",
       "slug": "functions",
       "name": "Functions"
+    },
+    {
+      "uuid": "0f67b390-b13a-4623-82e5-4ca724a5cdef",
+      "slug": "hash-tables",
+      "name": "Hash Tables"
     },
     {
       "uuid": "e5fefeda-9e02-48c4-9591-fc8a518d99f2",

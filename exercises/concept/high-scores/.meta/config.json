@@ -1,0 +1,9 @@
+{
+  "blurb": "Learn about hash tables by keeping track of the high scores in a game that Lamont wants to write.",
+  "authors": ["verdammelt"],
+  "files": {
+    "test": ["high-scores-test.lisp"],
+    "solution": ["high-scores.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
+  }
+}

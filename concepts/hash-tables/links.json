@@ -1,0 +1,10 @@
+[
+  {
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/18_.htm",
+    "description": "Hyperspec chapter on hash tables"
+  },
+  {
+    "url": "https://gigamonkeys.com/book/collections.html#hash-tables",
+    "description": "Practical Common Lisp on hash tables"
+  }
+]
