@@ -1,6 +1,6 @@
 # Introduction
 
-In Common Lisp strings are vectors of characters (vectors and characters are described in other concept exercises).
+In Common Lisp strings are [vectors][concept-vectors] of [characters][concept-vectors].
 They are written as characters surrounded by double quotes (_e.g_ "Hello World!").
 
 The `stringp` predicate will return true only if the given value is a string.
@@ -29,3 +29,6 @@ Operations like upper-casing, lower-casing and capitalization of strings can be 
 (string-downcase "YELL IT FROM THE ROOFTOPS") ; => "yell it from the rooftops"
 (string-capitalize "practical COMMON LiSP") ; => "Practical Common Lisp"
 ```
+
+[concept-characters]: /tracks/common-lisp/concepts/characters
+[concept-vectors]: /tracks/common-lisp/concepts/vectors

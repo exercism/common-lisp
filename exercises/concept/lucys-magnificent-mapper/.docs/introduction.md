@@ -35,9 +35,11 @@ If the predicate was not true for any value then an empty sequence is returned.
 
 If one wants to remove a specific item from a sequence one can use `remove` which takes the item to remove and a sequence.
 All values in the sequence which are not equal to the item to remove are returned.
-NOTE: Equality is checked with the `eql` [generic equality predicate][/tracks/common-lisp/concepts/equality] by default.
+NOTE: Equality is checked with the `eql` [generic equality predicate][concept-equality] by default.
 
 ```lisp
 (remove 1 '(1 2 1 3 1 4)) ; => (2 3 4)
 (remove #\l "hello")      ; => "heo"
 ```
+
+[concept-equality]: /tracks/common-lisp/concepts/equality

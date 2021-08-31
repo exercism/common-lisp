@@ -35,19 +35,20 @@ All values in the sequence which are not equal to the item to remove are returne
 (remove #\l "hello")      ; => "heo"
 ```
 
-The function to use for equality can be specified with the `:test` [keyword argument][/tracks/common-lisp/concepts/named-parameters].
+The function to use for equality can be specified with the `:test` [keyword argument][concept-named-parameters].
 
 Note that `remove` could be implemented with `remove-if` by writing a predicate that tests an object for equality to a specific item.
 
 ## Lots of options
 
-Each of these functions also take many other [keyword arguments][/tracks/common-lisp/concepts/named-parameters] which allow them to work on only subsequences, only apply a certain number of times and others. Looks to the [Hyperspec documentation][hyperspec-remove] for full details
+Each of these functions also take many other [keyword arguments][concept-named-parameters] which allow them to work on only subsequences, only apply a certain number of times and others. Looks to the [Hyperspec documentation][hyperspec-remove] for full details
 
-
-[hyperspec-remove]: http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm
 
 ## Destructive options
 
 In addition to `remove`, `remove-if` and `remove-if-not` there are `delete`, `delete-if` and `delete-if-not` which have the equivalent affect except they may modify the sequence passed to them.
 
+
+[concept-named-parameters]: /tracks/common-lisp/concepts/named-parameters
+[hyperspec-remove]: http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm
 

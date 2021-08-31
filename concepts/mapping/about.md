@@ -40,7 +40,7 @@ This is used for side-effecting operations.
 
 ## Mapping on other sequences
 
-Mapping is not limited to lists. Any [sequence][/tracks/common-lisp/concepts/sequence] can be mapped over.
+Mapping is not limited to [lists][concept-lists]. Any sequence (covered in another concept) can be mapped over.
 In the case of non-list sequences the `map` function is used.
 
 `map` takes 3 or more arguments:
@@ -56,6 +56,4 @@ In the case of non-list sequences the `map` function is used.
 As a special case if `nil` is provided as the resulting sequence type then `nil` is returned.
 This (like `mapc` and `mapl` above) are used for side-effects.
 
-
-
-
+[concept-lists]: /tracks/common-lisp/concepts/lists

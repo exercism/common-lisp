@@ -14,7 +14,7 @@ Calling a function is done by using the name of the function as the first elemen
 (add-one 3) ;; => 4
 ```
 
-Functions can also take [optional parameters](../default-parameters/about.md), [keyword parameters](../named-parameters/about.md), [rest parameters](../rest-parameters/about.md).
+Functions can also take [optional parameters][concept-default-parameters], [keyword parameters][concept-named-parameters], [rest parameters][concept-rest-parameters].
 These will be discussed in later concepts.
 
 The name of the function is in scope in the body of the function so that recursion can be performed.
@@ -27,3 +27,7 @@ The name of the function is in scope in the body of the function so that recursi
 (countdown 3) ;; will print "3","2", "1" and "BLAST-OFF" to
               ;; standard output before evalutaing to 'BLAST-OFF
 ```
+
+[concept-default-parameters]: /tracks/common-lisp/concepts/default-parameters
+[concept-named-parameters]: /tracks/common-lisp/concepts/named-parameters
+[concept-rest-parameters]: /tracks/common-lisp/concepts/rest-parameters

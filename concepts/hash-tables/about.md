@@ -7,15 +7,15 @@ They map keys (which can be any object) to values (which can be any object).
 
 Hash tables can be created with the `make-hash-table` function.
 
-The `make-hash-table` function takes several [keyword arguments][/tracks/common-lisp/concepts/named-parameters] for fine-tuning the initial size of the hash table as well as its resizing threshold; refer to the [documentation][hyperspec-make-hash-table] for full info on those.
-More importantly it also takes a `test` [keyword argument][/tracks/common-lisp/concepts/named-parameters] which defines how keys are compared during the insertion, lookup and removal of keys and values.
-The values of the `test` argument can be one of `'eq`, `'eql`, `'equal`, or `'equalp` which correspond to the [generic equality predicates][/tracks/common-lisp/concepts/equality]. 
+The `make-hash-table` function takes several [keyword arguments][concept-named-parameters] for fine-tuning the initial size of the hash table as well as its resizing threshold; refer to the [documentation][hyperspec-make-hash-table] for full info on those.
+More importantly it also takes a `test` [keyword argument][concept-named-parameters] which defines how keys are compared during the insertion, lookup and removal of keys and values.
+The values of the `test` argument can be one of `'eq`, `'eql`, `'equal`, or `'equalp` which correspond to the [generic equality predicates][concept-equality]. 
 The default value is `'eql`.
 
 ## Common operations on hash tables
 
 To get a value by its key one uses `gethash`.
-`gethash` takes an [optional argument][/tracks/common-lisp/concepts/default-arguments] which acts as the value to be returned if the key is not present in the hash table.
+`gethash` takes an [optional argument][concept-defualt-arguments] which acts as the value to be returned if the key is not present in the hash table.
 `gethash` also returns _multiple values_ (explained in another concept). 
 The first value is the value of that key in the hash table, the default value if provided, or `NIL`.
 The second value is a boolean that indicates if the key was present in the hash table or not.
@@ -61,4 +61,7 @@ This can be done with `maphash`:
                             ;    NIL
 ```
 
+[concept-default-arguments]: /tracks/common-lisp/concepts/default-arguments
+[concept-equality]: /tracks/common-lisp/concepts/equality
+[concept-named-parameters]: /tracks/common-lisp/concepts/named-parameters
 [hyperspec-make-hash-table]: http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_has.htm#make-hash-table

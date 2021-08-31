@@ -2,7 +2,7 @@
 
 ## General 
 
-- You'll need [conditional expressions][/tracks/common-lisp/concepts/conditionals] for these exercises.
+- You'll need [conditional expressions][concept-conditionals] for these exercises.
 
 ## 1. Comparing characters
 
@@ -24,3 +24,5 @@
 - You can use `char=` to tell if two characters are equal.
 - The space character is written #\Space in Common Lisp.
 - The newline character is written #\Newline in Common Lisp.
+
+[concept-conditionals]: /tracks/common-lisp/concepts/conditionals
