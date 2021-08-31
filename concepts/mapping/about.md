@@ -12,6 +12,8 @@ Notice that the first argument is a function to call.
 The `#'` is a special quoting syntax to specify a function.
 (One can use `'double` here but the use of `#'` is idiomatic and arguably "more correct".)
 
+## More than one list
+
 Mapping is not limited to applying a function to a single sequence but can be done with multiple sequences.
 If `N` sequences are provided then the function must take `N` arguments.
 
