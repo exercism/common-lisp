@@ -52,7 +52,7 @@ For example, given a 25x25x25cm cheese cube and pizzas 30cm in diameter:
 
 Once again, Lilly has come to the rescue with an equation calculating the number of pizzas (n) of some diameter (d) that can be made from a cheese cube of a side-length (l):
 
-`n = (2 * (l^2))/(3 * pi * (d^2))`
+`n = (2 * (l^3))/(3 * pi * (d^2))`
 
 ## 4. A Fair Share
 
