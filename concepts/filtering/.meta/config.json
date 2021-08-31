@@ -1,4 +1,4 @@
 {
-  "blurb": "Filtering is the applying of a predicate to each element of a collection and returning those elements for which the predicate was 'true'",
+  "blurb": "Filtering is the process of creating a new sequence by copying all but some items from another sequence.",
   "authors": ["verdammelt"]
 }

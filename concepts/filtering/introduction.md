@@ -1,9 +1,9 @@
 # Introduction
 
-Filtering is the application of a predicate function (a function that evaluates to a boolean value) to a sequence of objects.
-Those objects for which the predicate evaluates to true are returned.
+Filtering is the process of creating a sequence from another sequence by copying all but certain elements from the original sequence.
+The choice of which items to include in the new sequence can be done by a predicate function (a function that evaluates to a boolean value), or by equality with a specific object.
 
-## Filtering by a predicate
+## Removing by a predicate
 
 `remove-if` is a function that takes a function and a sequence and evaluates to a sequence of those elements for which the predicate evaluated to a true value.
 If the predicate was not true for any value then an empty sequence is returned.
@@ -13,7 +13,7 @@ If the predicate was not true for any value then an empty sequence is returned.
 (remove-if #'evenp '(1 3 5))    ; => ()
 ```
 
-## Filtering out a specific item
+## Removing a specific item
 
 If one wants to remove a specific item from a sequence one can use `remove` which takes the item to remove and a sequence.
 All values in the sequence which are not equal to the item to remove are returned.
