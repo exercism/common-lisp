@@ -38,7 +38,7 @@
         "slug": "key-comparison",
         "name": "The Key to Comparison",
         "uuid": "8d7ba0dc-7d87-452c-8208-39491d8f40f4",
-        "concepts": ["sameness"],
+        "concepts": ["equality"],
         "prerequisites": [
           "characters",
           "strings",
@@ -606,8 +606,8 @@
     },
     {
       "uuid": "c04de4d9-d69f-429f-916f-48ab461112ee",
-      "slug": "sameness",
-      "name": "Sameness"
+      "slug": "equality",
+      "name": "Equality"
     },
     {
       "uuid": "630eaa07-1239-4548-be46-e695c8a2c73f",

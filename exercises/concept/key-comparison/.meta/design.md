@@ -14,7 +14,7 @@
 
 ## Concepts
 
-- sameness
+- equality
 
 ## Prerequisites
 

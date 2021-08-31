@@ -1,7 +1,5 @@
 # About
 
-Sameness is the concept about equality of things.
-
 Common Lisp, like other languages has a set of rules on how to decide if two objects are the 'same'.
 These rules define four levels, each with a function that performs that level of checking.
 The levels are ordered from strictest to loosest.

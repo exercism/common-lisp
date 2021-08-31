@@ -37,7 +37,7 @@ along with `car` and `cdr` (with additional tests showing that `first` and
 - Assignment of values to symbols
 - Keyword arguments or plists
 - Any further details of `defun`
-- Any discussion of value sameness
+- Any discussion of value equality
 
 ## Concepts
 

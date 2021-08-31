@@ -10,7 +10,7 @@
 
 ## Out of scope
 
-- Sameness / Equality (`eq`, `eql`, `equal`, `equalp`, etc.)
+- Equality (`eq`, `eql`, `equal`, `equalp`, etc.)
 - Short-circuit evaluation with `and` and `or`
 - Conditions and restarts – those are _very_ different ;)
 - The `ccase` macro, which actually does involve conditions and restarts
