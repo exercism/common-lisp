@@ -1,0 +1,4 @@
+{
+  "blurb": "Filtering is the applying of a predicate to each element of a collection and returning those elements for which the predicate was 'true'",
+  "authors": ["verdammelt"]
+}
