@@ -125,6 +125,14 @@
         "concepts": ["hash-tables"],
         "prerequisites": ["functions", "integers"],
         "status": "beta"
+      },
+      {
+        "slug": "lucys-magnificent-mapper",
+        "name": "Lucy's Magnificent Mapper",
+        "uuid": "85e6438a-0dc7-4d94-b984-98714c0bf850",
+        "concepts": ["mapping", "filtering"],
+        "prerequisites": ["functions", "lists"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -565,6 +573,11 @@
       "name": "Expressions"
     },
     {
+      "uuid": "fbf4b92b-37ba-4fa2-b5c4-e88125ad3ab6",
+      "slug": "filtering",
+      "name": "Filtering"
+    },
+    {
       "uuid": "0d0ae380-7f1f-4ac7-8900-d501afd7a48a",
       "slug": "floating-point-numbers",
       "name": "Floating Point Numbers"
@@ -593,6 +606,11 @@
       "uuid": "65c600a7-7f6a-428f-9913-d6f127f35234",
       "slug": "lists",
       "name": "Lists"
+    },
+    {
+      "uuid": "8cb78544-de29-40b2-8ae2-cfba83dea95c",
+      "slug": "mapping",
+      "name": "Mapping"
     },
     {
       "uuid": "727ade24-7e7a-46dc-92b0-188d5797edfa",
