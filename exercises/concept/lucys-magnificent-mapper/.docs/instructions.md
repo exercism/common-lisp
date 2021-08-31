@@ -24,12 +24,12 @@ They definitely know that 1 is *never* magnificent so you'll need to just remove
 
 But other than that Lucy changes their mind sometimes so again they'll give you a function which will tell you if a number is magnificent or not.
 
-You'll need to write a function `only-the-best` which takes a function and a list of numbers and returns only the best numbers (according to the above rules).
+You'll need to write a function `only-the-best` which takes a function and a list of numbers and returns only the best numbers (not `1` and not numbers that the function evaluates to true for).
 
 
 ```lisp
-(only-the-best #'oddp '(1 2 3 4 5)) ; => (3 5)
-(only-the-best #'evenp '(1 3 5))    ; => ()
+(only-the-best #'evenp '(1 2 3 4 5)) ; => (3 5)
+(only-the-best #'oddp '(1 3 5))    ; => ()
 ```
 
 
