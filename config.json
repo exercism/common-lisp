@@ -173,8 +173,8 @@
         "name": "Rna Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
-        "practices": ["conditionals", "strings"],
-        "prerequisites": ["functions", "strings"],
+        "practices": ["conditionals", "strings", "mapping"],
+        "prerequisites": ["functions", "strings", "mapping"],
         "status": "beta"
       },
       {
@@ -191,8 +191,8 @@
         "name": "Anagram",
         "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
         "difficulty": 1,
-        "practices": ["strings"],
-        "prerequisites": ["functions", "strings"],
+        "practices": ["strings", "filtering"],
+        "prerequisites": ["functions", "strings", "filtering"],
         "status": "beta"
       },
       {
@@ -263,8 +263,8 @@
         "name": "Allergies",
         "uuid": "d2fd481e-7156-452d-976d-ea6df220fa18",
         "difficulty": 1,
-        "practices": ["conditionals", "integers"],
-        "prerequisites": ["conditionals", "integers"],
+        "practices": ["conditionals", "integers", "mapping"],
+        "prerequisites": ["conditionals", "integers", "mapping"],
         "status": "beta"
       },
       {
@@ -272,8 +272,8 @@
         "name": "Armstrong Numbers",
         "uuid": "9319d1a6-276f-4b3b-8305-fc022cc48ef2",
         "difficulty": 1,
-        "practices": ["integers", "lists", "arithmetic"],
-        "prerequisites": ["integers", "lists", "arithmetic"],
+        "practices": ["integers", "lists", "arithmetic", "mapping"],
+        "prerequisites": ["integers", "lists", "arithmetic", "mapping"],
         "status": "beta"
       },
       {
@@ -416,8 +416,8 @@
         "name": "Strain",
         "uuid": "1a81aac9-9128-48ab-aa6a-4d981d6eb602",
         "difficulty": 1,
-        "practices": ["conditionals"],
-        "prerequisites": ["conditionals"],
+        "practices": ["conditionals", "filtering"],
+        "prerequisites": ["conditionals", "filtering"],
         "status": "beta"
       },
       {
