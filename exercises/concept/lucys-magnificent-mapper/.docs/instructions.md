@@ -1,6 +1,6 @@
 # Instructions
 
-Lucy the Lisp Alien likes Numbers, they think some of the are "magnificent".
+Lucy the Lisp Alien likes Numbers, they think some of them are "magnificent".
 
 They ask you to help them write functions to make numbers more magnificent.
 
@@ -26,10 +26,7 @@ But other than that Lucy changes their mind sometimes so again they'll give you 
 
 You'll need to write a function `only-the-best` which takes a function and a list of numbers and returns only the best numbers (not `1` and not numbers that the function evaluates to true for).
 
-
 ```lisp
 (only-the-best #'evenp '(1 2 3 4 5)) ; => (3 5)
 (only-the-best #'oddp '(1 3 5))    ; => ()
 ```
-
-
