@@ -13,6 +13,5 @@ If there are unused arguments then the rest parameter will be bound to a list of
 (rest-of-it 1 2 3 4 5) ;; => (1 2 (3 4 5))
 ```
 
---
 [lambda-list]: http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_l.htm#lambda_list
 [lambda-list-keyword]: http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_l.htm#lambda_list_keyword

@@ -8,7 +8,6 @@ Lambda lists can contain (lambda list keywords)[lambda-list-keyword] such as `&r
 While multiple types of parameters can be combined with other types of parameters (optional and keyword arguments) this can be be problematic and should be done carefully.
 See the section on ["Mixing Different Parameter Types"][pcl-function] in Practical Common Lisp.
 
---
 
 [lambda-list]: http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_l.htm#lambda_list
 [lambda-list-keyword]: http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_l.htm#lambda_list_keyword
