@@ -1,6 +1,6 @@
 # Introduction
 
-In Common Lisp strings are [vectors][concept-vectors] of [characters][concept-vectors].
+In Common Lisp strings are [vectors][concept-vectors] of [characters][concept-characters].
 They are written as characters surrounded by double quotes (_e.g_ "Hello World!").
 
 The `stringp` predicate will return true only if the given value is a string.

@@ -2,14 +2,14 @@
 
 %{concept:lambda-list}
 
-## default-parameters
+## Optional Parameters
 
-%{concept:default-parameters}
+%{concept:optional-parameters}
 
-## named-parameters
+## Keyword Parameters
 
-%{concept:named-parameters}
+%{concept:keyword-parameters}
 
-## rest-parameters
+## Rest Parameters
 
 %{concept:rest-parameters}

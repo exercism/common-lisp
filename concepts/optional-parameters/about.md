@@ -18,7 +18,7 @@ Arguments are first bound to required parameters, then optional parameters and f
 (req-and-opt 1 13) ;; => (1 13)
 ```
 
-While multiple types of parameters can be combined with other types of parameters (optional and keyword arguments) this can be be problematic and should be done carefully.
+While multiple types of parameters can be combined with other types of parameters (optional and keyword parameters) this can be be problematic and should be done carefully.
 See the section on ["Mixing Different Parameter Types"][pcl-function] in Practical Common Lisp.
 
 

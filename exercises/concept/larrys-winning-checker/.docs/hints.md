@@ -4,11 +4,11 @@
 
 - To create an array you can use `make-array`.
 - The dimensions of an array are specified as a list of `make-array`.
-- To set all elements to a initial value use the `:inital-element` keyword argument.
+- To set all elements to a initial value use the `:inital-element` keyword parameter.
 
 ## 2. Starting from an existing board
 
-- To set the initial contents of an array use the `:initial-contents` keyword argument.
+- To set the initial contents of an array use the `:initial-contents` keyword parameter.
 
 ## 3. Winning condition
 

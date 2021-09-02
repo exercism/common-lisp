@@ -87,8 +87,8 @@
         "uuid": "994302db-c5e5-4342-a2a5-e2a5d09b10cc",
         "concepts": [
           "lambda-list",
-          "named-parameters",
-          "default-parameters",
+          "keyword-parameters",
+          "optional-parameters",
           "rest-parameters"
         ],
         "prerequisites": ["functions", "symbols", "conditionals"],
@@ -149,11 +149,11 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
-        "practices": ["default-parameters", "conditionals"],
+        "practices": ["optional-parameters", "conditionals"],
         "prerequisites": [
           "expressions",
           "functions",
-          "default-parameters",
+          "optional-parameters",
           "conditionals"
         ],
         "difficulty": 1,
@@ -564,8 +564,8 @@
     },
     {
       "uuid": "a291e615-6148-46a4-ada8-9ab6eb343eb9",
-      "slug": "default-parameters",
-      "name": "Default-Parameters"
+      "slug": "optional-parameters",
+      "name": "Optional Parameters"
     },
     {
       "uuid": "80ea7d53-76aa-4e89-9d70-45548181a6eb",
@@ -614,8 +614,8 @@
     },
     {
       "uuid": "727ade24-7e7a-46dc-92b0-188d5797edfa",
-      "slug": "named-parameters",
-      "name": "Named-Parameters"
+      "slug": "keyword-parameters",
+      "name": "Keyword Parameters"
     },
     {
       "uuid": "8d78a3b2-6adc-4013-a5cb-353b615945e5",
