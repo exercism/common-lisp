@@ -35,13 +35,13 @@ All values in the sequence which are not equal to the item to remove are returne
 (remove #\l "hello")      ; => "heo"
 ```
 
-The function to use for equality can be specified with the `:test` [keyword argument][concept-named-parameters].
+The function to use for equality can be specified with the `:test` [keyword parameter][concept-named-parameters].
 
 Note that `remove` could be implemented with `remove-if` by writing a predicate that tests an object for equality to a specific item.
 
 ## Lots of options
 
-Each of these functions also take many other [keyword arguments][concept-named-parameters] which allow them to work on only subsequences, only apply a certain number of times and others. Looks to the [Hyperspec documentation][hyperspec-remove] for full details
+Each of these functions also take many other [keyword parameters][concept-named-parameters] which allow them to work on only subsequences, only apply a certain number of times and others. Looks to the [Hyperspec documentation][hyperspec-remove] for full details
 
 
 ## Destructive options

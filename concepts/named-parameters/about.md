@@ -19,7 +19,7 @@ It is possible to specify another name for the keyword parameter by using a list
 (other-keyword-name 'other-name 5) ;; => (5)
 ```
 
-While multiple types of parameters can be combined with other types of parameters (optional and keyword arguments) this can be be problematic and should be done carefully.
+While multiple types of parameters can be combined with other types of parameters (optional and keyword parameters) this can be be problematic and should be done carefully.
 See the section on ["Mixing Different Parameter Types"][pcl-function] in Practical Common Lisp.
 
 [pcl-function]: http://www.gigamonkeys.com/book/functions.html

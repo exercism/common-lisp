@@ -1,6 +1,6 @@
 # Introduction
 
-In Common Lisp a function can have named parameters (referred to as "keyword parameters" or "keyword arguments").
+In Common Lisp a function can have named parameters (referred to as  "keyword parameters").
 These are designated in the lambda list by the `&key` lambda list keyword.
 Keyword parameters are not required parameters.
 Like optional parameters they can be given default values and symbols to bind to their 'supplied-or-not' state.
@@ -18,7 +18,7 @@ Keyword parameters can be specified by the caller of the function in any order.
 (keyword-parameters :z 10 :x 5) ;; => (5 NIL (:Z-WAS-SUPPLIED 10))
 ```
 
-Care should be taken when combining optional and keyword arguments as the keyword name and argument could be consumed by optional parameters:
+Care should be taken when combining optional and keyword parameters as the keyword name and argument could be consumed by optional parameters:
 
 ```lisp
 (defun could-be-confusing (&optional x y &key z) (list x y z))
