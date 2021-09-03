@@ -13,13 +13,13 @@ the Lasagna?
 
 ## 1. Define the expected oven time in minutes
 
-Define the `expected-minutes-in-oven` function that does not take any
+Define the `expected-time-in-oven` function that does not take any
 parameters and returns how many minutes the lasagna should be in the
 oven. According to the Lisp Alien tradition (just like Lilly's
 parental-unit used to cook), the expected oven time in minutes is 337:
 
 ```lisp
-(expected-minutes-in-oven) ;; => 337
+(expected-time-in-oven) ;; => 337
 ```
 
 ## 2. Calculate the remaining oven time in minutes
