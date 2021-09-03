@@ -26,14 +26,14 @@
   (is (not (all-the-same-p #(X O X)))))
 
 (test row
-  (is (row #2A((X O X) (O X O) (X X O)) 0) #(X O X))
-  (is (row #2A((X O X) (O X O) (X X O)) 1) #(O X O))
-  (is (row #2A((X O X) (O X O) (X X O)) 2) #(X X O)))
+  (is (equalp #(X O X) (row #2A((X O X) (O X O) (X X O)) 0)))
+  (is (equalp #(O X O) (row #2A((X O X) (O X O) (X X O)) 1)))
+  (is (equalp #(X X O) (row #2A((X O X) (O X O) (X X O)) 2))))
 
 (test column
-  (is (column #2A((X O X) (O X O) (X X O)) 0) #(X O X))
-  (is (column #2A((X O X) (O X O) (X X O)) 1) #(O X X))
-  (is (column #2A((X O X) (O X O) (X X O)) 2) #(X O O)))
+  (is (equalp #(X O X) (column #2A((X O X) (O X O) (X X O)) 0)))
+  (is (equalp #(O X X) (column #2A((X O X) (O X O) (X X O)) 1)))
+  (is (equalp #(X O O) (column #2A((X O X) (O X O) (X X O)) 2))))
 
 (defun run-tests (&optional (test-or-suite 'larrys-winning-checker-suite))
   "Provides human readable results of test run. Default to entire suite."

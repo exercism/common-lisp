@@ -22,7 +22,7 @@
 (test name-matches-expected-pattern
   (let* ((robbie (robot-name:build-robot))
          (name (robot-name:robot-name robbie)))
-   (is (= (length name) 5))
+   (is (= 5 (length name)))
    (is (every #'is-upper-alpha-p (subseq name 0 2)))
    (is (every #'is-digit-p (subseq name 2 5)))))
 
