@@ -45,6 +45,7 @@ then the default value of 337 should be returned.
 (remaining-minutes-in-oven)             ;; => 337
 (remaining-minutes-in-oven :normal)     ;; => 337
 (remaining-minutes-in-oven :shorter)    ;; => 237
+(remaining-minutes-in-oven :very-short) ;; => 137
 (remaining-minutes-in-oven :longer)     ;; => 437
 (remaining-minutes-in-oven :very-long)  ;; => 537
 ```
@@ -102,9 +103,9 @@ that you or Lilly had... say 10 containers if it were not specified.
 
 Even better the function could _assume_ that there is enough leftovers
 to fit into the containers. So if the weight is not provided the
-function should return `'just-split-it`. _However_ if the weight is
-provided and it is `nil` or `0` then it should return
-`'looks-like-someone-was-hungry`.
+function should return `:just-split-it`. _However_ if the weight is
+provided and it is `nil` then it should return
+`:looks-like-someone-was-hungry`.
 
 ```lisp
 (split-left-overs :human 5 :alien 5) ;; => :JUST-SPLIT-IT
