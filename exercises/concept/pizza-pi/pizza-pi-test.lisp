@@ -17,25 +17,25 @@
 (in-suite pizza-pi-suite)
 
 (test dough-ratio "Calculate the grams of dough needed for given number and size of pizzas"
-  (is (= (dough-calculator 4 30) 1648))
-  (is (= (dough-calculator 2 35) 895))
-  (is (= (dough-calculator 6 20) 2048))
-  (is (= (dough-calculator 1 15) 306))
-  (is (= (dough-calculator 5 10) 1353)))
+  (is (= 1648 (dough-calculator 4 30)))
+  (is (= 895 (dough-calculator 2 35)))
+  (is (= 2048 (dough-calculator 6 20)))
+  (is (= 306 (dough-calculator 1 15)))
+  (is (= 1353 (dough-calculator 5 10))))
 
 (test splash-of-sauces "Calculates the diameter of a pizza from the amount of sauce applied"
-  (is (= (size-from-sauce 250) 32.573500793528d0))
-  (is (= (size-from-sauce 100) 20.601290774570113d0))
-  (is (= (size-from-sauce 330) 37.424103185095554d0))
-  (is (= (size-from-sauce 510) 46.52426491681278d0))
-  (is (= (size-from-sauce 680) 53.72159374714264d0)))
+  (is (= 32.573500793528d0 (size-from-sauce 250)))
+  (is (= 20.601290774570113d0 (size-from-sauce 100)))
+  (is (= 37.424103185095554d0 (size-from-sauce 330)))
+  (is (= 46.52426491681278d0 (size-from-sauce 510)))
+  (is (= 53.72159374714264d0 (size-from-sauce 680))))
 
 (test cheese-please "Calculates the number of pizzas of a certain size that can be made from an amount of cheese"
-  (is (= (pizzas-per-cube 25 30) 3))
-  (is (= (pizzas-per-cube 15 20) 1))
-  (is (= (pizzas-per-cube 100 40) 132))
-  (is (= (pizzas-per-cube 5 10) 0))
-  (is (= (pizzas-per-cube 45 15) 85)))
+  (is (= 3 (pizzas-per-cube 25 30)))
+  (is (= 1 (pizzas-per-cube 15 20)))
+  (is (= 132 (pizzas-per-cube 100 40)))
+  (is (= 0 (pizzas-per-cube 5 10)))
+  (is (= 85 (pizzas-per-cube 45 15))))
 
 (test fair-share "Calculates if some number of pizzas can be evenly divided between friends"
   (is-true  (fair-share-p 3 4))

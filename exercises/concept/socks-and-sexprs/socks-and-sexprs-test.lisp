@@ -53,15 +53,15 @@
   (is-false (is-a-cons-p nil)))
 
 (test first "Lenny can get the first item of a cons"
-  (is (equal (first-thing (cons 'a 'b)) 'a))
-  (is (equal (first-thing (list 'a 'b)) 'a)))
+  (is (equal 'a (first-thing (cons 'a 'b))))
+  (is (equal 'a (first-thing (list 'a 'b)))))
 
 (test rest "Lenny can get the rest of a cons"
-  (is (equal (rest-of-it (cons 'a 'b)) 'b))
-  (is (equal (rest-of-it (cons 'a (cons 'b nil))) '(b)))
-  (is (equal (rest-of-it (list 'a 'b)) '(b)))
-  (is (equal (rest-of-it (cons 'a nil)) nil))
-  (is (equal (rest-of-it (list 'a)) nil)))
+  (is (equal 'b (rest-of-it (cons 'a 'b))))
+  (is (equal '(b) (rest-of-it (cons 'a (cons 'b nil)))))
+  (is (equal '(b) (rest-of-it (list 'a 'b))))
+  (is (equal nil (rest-of-it (cons 'a nil))))
+  (is (equal nil (rest-of-it (list 'a)))))
 
 (defun run-tests (&optional (test-or-suite 'socks-and-sexprs-suite))
   "Provides human readable results of test run. Default to entire suite."
