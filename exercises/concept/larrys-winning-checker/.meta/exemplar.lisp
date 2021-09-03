@@ -23,12 +23,12 @@
 
 (defun row (board row-num)
   (make-array 3 :initial-contents (list
-                                   (aref board 0 row-num)
-                                   (aref board 1 row-num)
-                                   (aref board 2 row-num))))
+                                   (aref board row-num 0)
+                                   (aref board row-num 1)
+                                   (aref board row-num 2))))
 
 (defun column (board col-num)
   (make-array 3 :initial-contents (list
-                                   (aref board col-num 0)
-                                   (aref board col-num 1)
-                                   (aref board col-num 2))))
+                                   (aref board 0 col-num)
+                                   (aref board 1 col-num)
+                                   (aref board 2 col-num))))
