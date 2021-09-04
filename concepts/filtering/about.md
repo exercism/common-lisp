@@ -10,7 +10,7 @@ If the predicate was not true for any value then an empty sequence is returned.
 
 ```lisp
 (remove-if #'oddp '(1 2 3 4 5)) ; => (2 4)
-(remove-if #'evenp '(1 3 5))    ; => ()
+(remove-if #'evenp '(1 3 5))    ; => (1 3 5)
 ```
 
 ## Keeping elements by a predicate
