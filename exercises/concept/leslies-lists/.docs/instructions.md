@@ -64,5 +64,5 @@ Leslie realized they accidentally made two shopping lists not one! Write a funct
 Leslie is starting to get worried that this shopping trip is going to take quite a while. Just how many things are on this list? Write a function `just-how-long` to tell them just how long their list is.
 
 ```lisp
-(list-append '(bread milk butter salt)) ; => 4
+(just-how-long '(bread milk butter salt)) ; => 4
 ```
