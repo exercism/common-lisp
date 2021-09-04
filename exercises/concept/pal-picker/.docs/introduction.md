@@ -37,7 +37,7 @@ Note that both the then and else clauses can only be a single expression.
 ; => QUITE-TRUE
 ```
 
-Note that there is limit to the number of expressions after the test expression.
+Note that there is no limit to the number of expressions after the test expression.
 
 - `case` provides a classic 'switch' style construct: It checks a single value against a number of branches:
 
