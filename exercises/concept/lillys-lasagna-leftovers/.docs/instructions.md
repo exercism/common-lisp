@@ -108,6 +108,6 @@ provided and it is `nil` then it should return
 `:looks-like-someone-was-hungry`.
 
 ```lisp
-(split-left-overs :human 5 :alien 5) ;; => :JUST-SPLIT-IT
-(split-left-overs :weight NIL :human 5 :alien 5) ;; => :LOOKS-LIKE-SOMEONE-WAS-HUNGRY
+(split-leftovers :human 5 :alien 5) ;; => :JUST-SPLIT-IT
+(split-leftovers :weight NIL :human 5 :alien 5) ;; => :LOOKS-LIKE-SOMEONE-WAS-HUNGRY
 ```
