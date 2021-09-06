@@ -23,12 +23,13 @@ The choice of which items to include in the new sequence can be done by a predic
 
 ## Removing by a predicate
 
-`remove-if` is a function that takes a function and a sequence and evaluates to a sequence of those elements for which the predicate evaluated to a true value.
-If the predicate was not true for any value then an empty sequence is returned.
+`remove-if` is a function that takes a predicate function and a sequence as arguments, and returns a sequence of only those elements for which the predicate evaluated to a false value.
+In other words, it "removes" all elements of the sequence for which the predicate evaluates to true. However, note that this function does not modify the original sequence! 
+Instead, it returns a new sequence without the appropriate elements. If the predicate was true for all values then an empty sequence is returned.
 
 ```lisp
-(remove-if #'oddp '(1 2 3 4 5)) ; => (2 4)
-(remove-if #'evenp '(1 3 5))    ; => ()
+(remove-if #'evenp '(1 2 3 4 5)) ; => (1 3 5)
+(remove-if #'oddp '(1 3 5))      ; => ()
 ```
 
 ## Removing a specific item
