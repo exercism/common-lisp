@@ -16,6 +16,8 @@ As an example:
 
 The conditionals `when` and `unless` evaluate some code only when the provided test is true or false respectively – evaluating to `nil` otherwise.
 
+The section after the test expression may be more than one expression.
+
 ```lisp
 (when (= 2 2) "All is well")      ; => "All is well"
 (unless (= 2 2) "Time to panic!") ; => NIL
@@ -28,6 +30,8 @@ The `if` conditional evaluates the first expression of the body when the test is
 ```lisp
 (if (= 2 2) 'how-honest 'you-liar) ; => HOW-HONEST
 ```
+
+Note that both the then and else clauses can only be a single expression.
 
 ## Many-Branch Conditionals
 
@@ -44,6 +48,9 @@ If all of the tests evaluate to false, then `nil` is returned.
 ; => QUITE-TRUE
 ```
 
+Note that there is no limit to the number of expressions after the test expression. 
+
+
 If you just want to test one value against a number of branches, you can use the cleaner `case` expression.
 If none of the cases match, `nil` is returned.
 Both `t` and `otherwise` can be used as catch-all cases:
@@ -56,6 +63,8 @@ Both `t` and `otherwise` can be used as catch-all cases:
   (otherwise "???"))
 ; => "???"
 ```
+
+Note that like `cond` there is no limit to the number of expressions after the test expression.
 
 ## The Stealth Conditionals
 
