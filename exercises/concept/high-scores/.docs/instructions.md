@@ -58,8 +58,8 @@ Obviously after a player is removed if one gets their score from the table it wi
 
 ```lisp
 (set-score hash-table :louis 1234) ; => 1234
-(remove-player :louis)             ; => T
+(remove-player hash-table :louis)             ; => T
 (get-score hash-table :louis)      ; => 0
 
-(remove-player :not-in-the-table)  ; => NIL
+(remove-player hash-table :not-in-the-table)  ; => NIL
 ```
