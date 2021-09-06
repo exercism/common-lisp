@@ -35,7 +35,7 @@
   (third list))
 
 (defun twenty-third-thing (list)
-  (nth 23 list))
+  (nth 22 list))
 
 (defun remove-first-item (list)
   (rest list))
