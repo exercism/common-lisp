@@ -36,7 +36,7 @@ First to the entire list, then to `cdr`, then to the `cdr` of that etc.:
 `mapc` and `mapl` are like `mapcar` and `maplist` respectively but they do not collect the results and instead return the first list.
 This is used for side-effecting operations.
 
-`mapcar` and `mapcon` are like `mapcar` and `maplist` but the result is flattened by use of `nconc` which is like `append` but destructive to its first argument.
+`mapcan` and `mapcon` are like `mapcar` and `maplist` but the result is flattened by use of `nconc` which is like `append` but destructive to all but its last argument.
 
 ## Mapping on other sequences
 
