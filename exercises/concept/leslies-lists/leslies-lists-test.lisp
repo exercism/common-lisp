@@ -40,7 +40,7 @@
         (is (equal 'left-handed-frobz (first-thing shopping-list)))
         (is (equal 'salt (second-thing shopping-list)))
         (is (equal 'skquargzes (third-thing shopping-list)))
-        (is (equal 'cupcakes (twenty-third-thing shopping-list)))))
+        (is (equal 'birthday-candles (twenty-third-thing shopping-list)))))
 
 
 (test removing-a-item "Leslie needs to see the list after removing the first item"
