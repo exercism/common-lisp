@@ -53,7 +53,7 @@ When Leslie finds the first thing on the list on the shelf then want to remove t
 
 ## 5. Bigger lists out of smaller lists
 
-Leslie realized they accidentally made two shopping lists not one! Write a function called `list-append` which adds all the items from the second list provided to the end of the first list.
+Leslie realized they accidentally made two shopping lists not one! Write a function called `list-append` which returns a list that contains the elements from the first list followed by the ones from the second list.
 
 ```lisp
 (list-append '(bread salt) '(butter milk)) ; => '(bread salt butter milk)
