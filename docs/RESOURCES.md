@@ -10,21 +10,21 @@ There are many more excellent resources, most of them cross linked in one of the
   gateway
 * [The Common Lisp Wiki][cliki]
 
-## Free books
+## Books
 
 There are many other great books you can find links to. These are the most popularly linked introductory works.
 
 * [Practical Common Lisp][practical-common-lisp], by Peter
-  Seibel
+  Seibel (free on web)
 * [Land of Lisp][land-of-lisp], by Conrad Barski
-* [Common Lisp: A Gentle Introduction to Symbolic Computation][common-lisp-gentle-introduction] (PDF), by David S. Touretzky
+* [Common Lisp: A Gentle Introduction to Symbolic Computation][common-lisp-gentle-introduction] (PDF), by David S. Touretzky (free pdf)
 * [Common Lisp: An Interactive Approach][common-lisp-interactive] (PDF), by Stuart C. Shapiro
 * [Successful Lisp: How to Understand and Use Common Lisp][successful-lisp], by David B. Lamkins
 
 Following these are two more advanced books, but beginners shouldn't be afraid of them, they're quite accessible and "classics".
 
-* [On Lisp][on-lisp], by Paul Graham
-* [Structure and Interpretation of Computer Programs][sicp], by Abelson, Sussman, and Sussman
+* [On Lisp][on-lisp], by Paul Graham (free pdf)
+* [Structure and Interpretation of Computer Programs][sicp], by Abelson, Sussman, and Sussman (free on web)
 
 The last is actually on a related Lisp dialect, Scheme, but it's very helpful book, generally. 
 If you find you prefer Scheme, it's an excellent start.
@@ -45,6 +45,7 @@ https://www.cs.cmu.edu/~dst/LispBook/
 [common-lisp-interactive]: http://www.cse.buffalo.edu/~shapiro/Commonlisp/
 [common-lisp-net]: http://common-lisp.net/
 [hyperspec]: http://www.lispworks.com/documentation/common-lisp.html
+[land-of-lisp]: http://landoflisp.com
 [on-lisp]: http://www.paulgraham.com/onlisptext.html
 [practical-common-lisp]: http://www.gigamonkeys.com/book/
 [sicp]: http://mitpress.mit.edu/sicp/
