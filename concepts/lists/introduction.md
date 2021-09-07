@@ -47,3 +47,16 @@ Instead it evaluates to `nil`:
 ```
 
 There are also 10 helper methods for accessing the first 10 items of a list, they are named: `first`, `second`, `third`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, and `tenth`.
+
+## Combining lists
+
+Two, or more, lists can be combined with `append`: 
+
+```lisp
+(append '(a b c) '(1 2 3)) ; => (A B C 1 2 3)
+(append '(a b c) '()))     ; => (A B C)
+```
+
+Each argument given to `append` needs to be a list.
+
+
