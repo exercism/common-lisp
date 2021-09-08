@@ -3,23 +3,22 @@
 (defun stub-concept (concept)
   (let ((concept-directory (subdir (relative-directory "concepts") concept)))
 
-    (write-string-to-file
-     (format-template
-      "{\"blurb\": \"TODO: ~A blurb\", \"authors\": [~/stubs:github-username/]}"
-      concept)
-     (file-in-dir (subdir concept-directory ".meta") "config.json"))
+    (format-to-file
+     (file-in-dir (subdir concept-directory ".meta") "config.json")
+     "{\"blurb\": \" ~A: ~A blurb\", \"authors\": [~S]}"
+     "TODO" concept *github-username*)
 
-    (write-string-to-file
-     (format-template "# Introduction~%~%TODO: instruction to ~A~%" concept)
-     (file-in-dir concept-directory "introduction.md"))
+    (format-to-file
+     (file-in-dir concept-directory "introduction.md")
+     "# Introduction~%~%~A: instruction to ~A~%" "TODO" concept)
 
-    (write-string-to-file
-     (format-template "# About~%~%TODO: about ~A~%" concept)
-     (file-in-dir concept-directory "about.md"))
+    (format-to-file
+     (file-in-dir concept-directory "about.md")
+     "# About~%~%~A: about ~A~%" "TODO" concept)
 
-    (write-string-to-file
-     (format-template "[{\"url\": \"https://~A-link.html\", ~:*~
-                  \"description\": \"TODO: link to ~A\"}]" concept)
-     (file-in-dir concept-directory "links.json"))
+    (format-to-file
+     (file-in-dir concept-directory "links.json")
+     "[{\"url\": \"https://~A-link.html\", ~:*~
+        \"description\": \" ~A: link to ~A\"}]" "TODO" concept)
 
     (recursive-listing concept-directory)))

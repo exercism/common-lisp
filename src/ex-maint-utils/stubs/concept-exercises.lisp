@@ -4,28 +4,27 @@
   (let ((exercise-directory (subdir (relative-directory "exercises" "concept") name)))
 
     (let ((meta-directory (subdir exercise-directory ".meta")))
-      (write-string-to-file ";; TODO: exemplar code"
-       (file-in-dir meta-directory "exemplar.lisp"))
-      (write-string-to-file
-       (format nil "{\"blurb\": \"TODO: ~A blurb\", ~:*~
-                   \"authors\": [~/stubs:github-username/], ~:*~
-                   \"files\": {\"solution\": [\"~A.lisp\"], ~:*~
-                               \"test\": [\"~A-test.lisp\"], ~
-                               \"exemplar\": [\".meta/exemplar.lisp\"]}}"
-               name)
-       (file-in-dir meta-directory "config.json")))
+      (format-to-file (file-in-dir meta-directory "exemplar.lisp")
+                      ";; ~A: exemplar code" "TODO")
+      (format-to-file (file-in-dir meta-directory "config.json")
+                      "{\"blurb\": \" ~A: ~A blurb\", ~
+                        \"authors\": [~S], ~2:*~
+                        \"files\": {\"solution\": [\"~A.lisp\"], ~:*~
+                                    \"test\": [\"~A-test.lisp\"], ~
+                                    \"exemplar\": [\".meta/exemplar.lisp\"]}}"
+                      "TODO" name *github-username*))
 
     (let ((docs-directory (subdir exercise-directory ".docs")))
-      (write-string-to-file "TODO: introduction"
-                       (file-in-dir docs-directory "introduction.md"))
-      (write-string-to-file "TODO: instructions"
-                       (file-in-dir docs-directory "instructions.md"))
-      (write-string-to-file "TODO: hints"
-                       (file-in-dir docs-directory "hints.md")))
+      (format-to-file (file-in-dir docs-directory "introduction.md")
+                      " ~A: introduction" "TODO")
+      (format-to-file (file-in-dir docs-directory "instructions.md")
+                      " ~A: instructions" "TODO")
+      (format-to-file (file-in-dir docs-directory "hints.md")
+                      " ~A: hints" "TODO"))
 
-    (write-string-to-file ";; TODO: test file"
-     (file-in-dir exercise-directory (format nil "~A-test.lisp" name)))
-    (write-string-to-file ";; TODO: stub file"
-     (file-in-dir exercise-directory (format nil "~A.lisp" name)))
+    (format-to-file (file-in-dir exercise-directory (format nil "~A-test.lisp" name))
+                    ";; ~A: test file" "TODO")
+    (format-to-file (file-in-dir exercise-directory (format nil "~A.lisp" name))
+                    ";; ~A: stub file" "TODO")
 
     (recursive-listing exercise-directory)))

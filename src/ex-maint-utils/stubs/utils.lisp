@@ -3,11 +3,6 @@
 (defun relative-directory (&rest dirs)
   (make-pathname :directory `(:relative ,@dirs)))
 
-(defun write-string-to-file (string pathname)
-  (ensure-directories-exist pathname)
-  (alexandria:write-string-into-file
-   string pathname :if-exists :supersede :if-does-not-exist :create))
-
 (defun file-in-dir (dir file) (merge-pathnames file dir))
 (defun subdir (parent dir) (merge-pathnames (relative-directory dir) parent))
 
@@ -18,10 +13,10 @@
 
 (defparameter *github-username* "sir-not-appearing-in-this-film")
 
-(defun github-username (stream format-argument colon-p at-sign-p &rest supplied-arguments)
-  "FORMAT function to output the *GITHUB-USERNAME*"
-  (declare (ignore format-argument colon-p at-sign-p supplied-arguments))
-  (format stream "~S" *github-username*))
-
-(defun format-template (template slug)
-  (format nil template slug nil))
+(defun format-to-file (pathname string &rest args)
+  "Applies FORMAT to STRING and ARGS and outputs it to PATHNAME.
+Will overwrite PATHNAME if it already exists.
+Ensures directories leading to PATHNAME exist."
+  (ensure-directories-exist pathname)
+  (with-open-file (stream pathname :direction :output :if-exists :supersede)
+    (apply #'format stream string args)))
