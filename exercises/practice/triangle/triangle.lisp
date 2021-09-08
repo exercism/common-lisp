@@ -1,8 +1,9 @@
 (defpackage :triangle
   (:use :cl)
-  (:export :triangle))
+  (:export :triangle-type-p))
 
 (in-package :triangle)
-(defun triangle (a b c)
-  "Classifies a triangle for a given set of side lengths."
+
+(defun triangle-type-p (type a b c)
+  "Deterimines if a triangle (given by side lengths A, B, C) is of the given TYPE"
   )

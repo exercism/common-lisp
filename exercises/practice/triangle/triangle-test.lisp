@@ -15,19 +15,68 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* triangle-suite)
 
-(test equilateral-1 (is (equal :equilateral (triangle:triangle 2 2 2))))
+(def-suite* equilateral-suite :in triangle-suite)
 
-(test equilateral-2 (is (equal :equilateral (triangle:triangle 10 10 10))))
+(test all-sides-are-equal
+  (is (triangle:triangle-type-p :equilateral 2 2 2)))
 
-(test isoceles-1 (is (equal :isosceles (triangle:triangle 3 4 4))))
+(test any-side-is-unequal
+  (is (not (triangle:triangle-type-p :equilateral 2 3 2))))
 
-(test isoceles-2 (is (equal :isosceles (triangle:triangle 4 3 4))))
+(test no-sides-are-equal
+  (is (not (triangle:triangle-type-p :equilateral 5 4 6))))
 
-(test scalene (is (equal :scalene (triangle:triangle 3 4 5))))
+(test all-zero-sides-is-not-a-triangle
+  (is (not (triangle:triangle-type-p :equilateral 0 0 0))))
 
-(test invalid-1 (is (equal :illogical (triangle:triangle 1 1 50))))
+(test sides-may-be-floats
+  (is (triangle:triangle-type-p :equilateral 0.5 0.5 0.5)))
 
-(test invalid-2 (is (equal :illogical (triangle:triangle 1 2 1))))
+(def-suite* isosceles-suite :in triangle-suite)
+
+(test last-two-sides-are-equal
+  (is (triangle:triangle-type-p :isosceles 3 4 4)))
+
+(test first-two-sides-are-equal
+  (is (triangle:triangle-type-p :isosceles 4 4 3)))
+
+(test first-and-last-sides-are-equal
+  (is (triangle:triangle-type-p :isosceles 4 3 4)))
+
+(test equilateral-triangles-are-also-isosceles
+  (is (triangle:triangle-type-p :isosceles 4 4 4)))
+
+(test no-sides-are-equal
+  (is (not (triangle:triangle-type-p :isosceles 2 3 4))))
+
+(test first-triangle-inequality-violation
+  (is (not (triangle:triangle-type-p :isosceles 1 1 3))))
+
+(test second-triangle-inequality-violation
+  (is (not (triangle:triangle-type-p :isosceles 1 3 1))))
+
+(test third-triangle-inequality-violation
+  (is (not (triangle:triangle-type-p :isosceles 3 1 1))))
+
+(test sides-may-be-floats
+  (is (triangle:triangle-type-p :isosceles 0.5 0.4 0.5)))
+
+(def-suite* scalene-suite :in triangle-suite)
+
+(test no-sides-are-equal
+  (is (triangle:triangle-type-p :scalene 5 4 6)))
+
+(test all-sides-are-equal
+  (is (not (triangle:triangle-type-p :scalene 4 4 4))))
+
+(test two-sides-are-equal
+  (is (not (triangle:triangle-type-p :scalene 4 4 3))))
+
+(test may-not-violate-triangle-inequality
+  (is (not (triangle:triangle-type-p :scalene 7 3 2))))
+
+(test sides-may-be-floats
+  (is (triangle:triangle-type-p :scalene 0.5 0.4 0.6)))
 
 (defun run-tests (&optional (test-or-suite 'triangle-suite))
   "Provides human readable results of test run. Default to entire suite."
