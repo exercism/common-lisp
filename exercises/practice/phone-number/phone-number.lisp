@@ -1,13 +1,10 @@
 (defpackage :phone-number
   (:use :cl)
-  (:export :numbers :area-code :pretty-print))
+  (:export :clean))
 
 (in-package :phone-number)
 
-(defun numbers (phone-number)
-  "Converts a phone number string into a string of digits."
-  )
-
-(defun pretty-print (phone-number)
-  "Converts a phone number string to a human-readable representation."
+(defun clean (phrase)
+  "Converts a PHRASE string into a string of digits.
+Will evaluate to \"0000000000\" in case of an invalid input."
   )
