@@ -20,3 +20,11 @@ Ensures directories leading to PATHNAME exist."
   (ensure-directories-exist pathname)
   (with-open-file (stream pathname :direction :output :if-exists :supersede)
     (apply #'format stream string args)))
+
+(defun comment (tag str &optional (prefix ""))
+  (format nil "~A ~A: ~A" prefix tag str))
+
+(defun todo (string &rest args)
+  (comment "TODO" (apply #'format nil string args)))
+(defun lisp-todo (string &rest args)
+  (comment "TODO" (apply #'format nil string args) ";;"))

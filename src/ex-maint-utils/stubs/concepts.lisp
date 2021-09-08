@@ -5,20 +5,20 @@
 
     (format-to-file
      (file-in-dir (subdir concept-directory ".meta") "config.json")
-     "{\"blurb\": \" ~A: ~A blurb\", \"authors\": [~S]}"
-     "TODO" concept *github-username*)
+     "{\"blurb\": ~S, \"authors\": [~S]}"
+     (todo "blurb") *github-username*)
 
     (format-to-file
      (file-in-dir concept-directory "introduction.md")
-     "# Introduction~%~%~A: instruction to ~A~%" "TODO" concept)
+     "# Introduction~%~%~A~%" (todo "introduction to ~A" concept))
 
     (format-to-file
      (file-in-dir concept-directory "about.md")
-     "# About~%~%~A: about ~A~%" "TODO" concept)
+     "# About~%~%~A~%" (todo "about ~A" concept))
 
     (format-to-file
      (file-in-dir concept-directory "links.json")
-     "[{\"url\": \"https://~A-link.html\", ~:*~
-        \"description\": \" ~A: link to ~A\"}]" "TODO" concept)
+     "[{\"url\": \"https://~A-link.html\", ~
+        \"description\": ~S}]" concept (todo "link to ~A" concept))
 
     (recursive-listing concept-directory)))
