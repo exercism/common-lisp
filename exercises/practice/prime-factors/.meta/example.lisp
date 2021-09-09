@@ -1,9 +1,9 @@
-(defpackage #:prime-factors
-  (:use #:cl)
-  (:export #:factors-of)
+(defpackage :prime-factors
+  (:use :cl)
+  (:export :factors-of)
   (:documentation "Generates a list of prime factors of given integer."))
 
-(in-package #:prime-factors)
+(in-package :prime-factors)
 
 (defun make-wheel-2-3-5-7 ()
   "Returns function generating prime-ish numbers."

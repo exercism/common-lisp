@@ -1,8 +1,8 @@
-(defpackage #:atbash-cipher
-  (:use #:common-lisp)
-  (:export #:encode))
+(defpackage :atbash-cipher
+  (:use :common-lisp)
+  (:export :encode))
 
-(in-package #:atbash-cipher)
+(in-package :atbash-cipher)
 
 (defun to-string (seq)
   (concatenate 'string seq))

@@ -1,8 +1,8 @@
-(in-package #:cl-user)
-(defpackage #:crypto-square
-  (:use #:cl)
-  (:export #:encipher))
-(in-package #:crypto-square)
+(in-package :cl-user)
+(defpackage :crypto-square
+  (:use :cl)
+  (:export :encipher))
+(in-package :crypto-square)
 
 (defun normalize (text)
   (string-downcase (remove-if-not #'alphanumericp text)))

@@ -1,7 +1,7 @@
-(defpackage #:space-age
-  (:use #:common-lisp))
+(defpackage :space-age
+  (:use :common-lisp))
 
-(in-package #:space-age)
+(in-package :space-age)
 
 (defvar +earth-period+ 31557600)
 

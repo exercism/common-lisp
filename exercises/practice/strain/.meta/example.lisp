@@ -1,8 +1,8 @@
-(defpackage #:strain
-  (:use #:common-lisp)
-  (:export #:keep #:discard))
+(defpackage :strain
+  (:use :common-lisp)
+  (:export :keep :discard))
 
-(in-package #:strain)
+(in-package :strain)
 
 (defun keep (pred seq)
   (labels

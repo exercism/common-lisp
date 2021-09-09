@@ -1,8 +1,8 @@
-(defpackage #:collatz-conjecture
-  (:use #:common-lisp)
-  (:export #:collatz))
+(defpackage :collatz-conjecture
+  (:use :common-lisp)
+  (:export :collatz))
 
-(in-package #:collatz-conjecture)
+(in-package :collatz-conjecture)
 
 (defun collatz-helper (a n)
   (cond ((= n 1)   a)

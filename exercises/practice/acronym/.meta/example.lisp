@@ -1,9 +1,9 @@
-(in-package #:cl-user)
-(defpackage #:acronym
-  (:use #:cl)
-  (:export #:acronym))
+(in-package :cl-user)
+(defpackage :acronym
+  (:use :cl)
+  (:export :acronym))
 
-(in-package #:acronym)
+(in-package :acronym)
 
 (defun acronym (str)
   (labels ((recur (st ls)

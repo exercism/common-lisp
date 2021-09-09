@@ -1,8 +1,8 @@
-(defpackage #:perfect-numbers
-  (:use #:common-lisp)
-  (:export #:classify))
+(defpackage :perfect-numbers
+  (:use :common-lisp)
+  (:export :classify))
 
-(in-package #:perfect-numbers)
+(in-package :perfect-numbers)
 
 (defun divisors (n)
   (remove-if-not (lambda (x) (= 0 (rem n x)))

@@ -1,8 +1,8 @@
-(defpackage #:raindrops
-  (:use #:common-lisp)
-  (:export #:convert))
+(defpackage :raindrops
+  (:use :common-lisp)
+  (:export :convert))
 
-(in-package #:raindrops)
+(in-package :raindrops)
 
 (defparameter *raindrops*
   '((3 . "Pling")

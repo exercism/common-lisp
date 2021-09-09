@@ -1,8 +1,8 @@
-(defpackage #:hamming
-  (:use #:common-lisp)
-  (:export #:distance))
+(defpackage :hamming
+  (:use :common-lisp)
+  (:export :distance))
 
-(in-package #:hamming)
+(in-package :hamming)
 
 (defun distance (str1 str2 &key (test #'char=))
   "Number of positional differences in two equal length strings."

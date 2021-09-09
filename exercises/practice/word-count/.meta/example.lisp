@@ -1,8 +1,8 @@
-(defpackage #:word-count
-  (:use #:common-lisp)
-  (:export #:count-words))
+(defpackage :word-count
+  (:use :common-lisp)
+  (:export :count-words))
 
-(in-package #:word-count)
+(in-package :word-count)
 
 (defun split-string (string)
   (labels ((split-string-iter (string result)

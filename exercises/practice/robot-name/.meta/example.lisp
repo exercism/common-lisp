@@ -1,8 +1,8 @@
-(defpackage #:robot-name
-  (:use #:common-lisp)
-  (:export #:build-robot #:robot-name #:reset-name #:robot))
+(defpackage :robot-name
+  (:use :common-lisp)
+  (:export :build-robot :robot-name :reset-name :robot))
 
-(in-package #:robot-name)
+(in-package :robot-name)
 
 (defun random-alpha-char ()
   (code-char (+ (char-code #\A) (random 26))))

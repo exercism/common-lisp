@@ -1,8 +1,8 @@
-(defpackage #:trinary
-  (:use #:common-lisp)
-  (:export #:to-decimal))
+(defpackage :trinary
+  (:use :common-lisp)
+  (:export :to-decimal))
 
-(in-package #:trinary)
+(in-package :trinary)
 
 (defun to-decimal (string)
   "Return the decimal value for STRING which is in trinary. If STRING

@@ -1,9 +1,9 @@
-(in-package #:cl-user)
-(defpackage #:luhn
-  (:use #:cl)
-  (:export #:validp))
+(in-package :cl-user)
+(defpackage :luhn
+  (:use :cl)
+  (:export :validp))
 
-(in-package #:luhn)
+(in-package :luhn)
 
 (defun validp (input)
   (let ((num (remove #\Space input)))
