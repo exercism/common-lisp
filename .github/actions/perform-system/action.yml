@@ -1,0 +1,26 @@
+name: perform-system
+description: "Perform a ASDF operation on a system"
+inputs:
+  system:
+    description: "System to operate on"
+    required: true
+
+  operation:
+    description: "Operation to perform"
+    required: false
+    default: 'make'
+
+  location:
+    description: "Directory containing the system"
+    required: false
+    default: 'src/'
+
+runs:
+  using: 'docker'
+  image: Dockerfile
+  args:
+    - ${{inputs.location}}
+    - ${{inputs.operation}}
+    - ${{inputs.system}}
+        
+    
