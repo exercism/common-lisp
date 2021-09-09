@@ -1,8 +1,8 @@
 (defpackage :isogram
   (:use :cl)
-  (:export :is-isogram))
+  (:export :isogram-p))
 
 (in-package :isogram)
 
-(defun is-isogram (string)
+(defun isogram-p (string)
   "Is string an Isogram?")
