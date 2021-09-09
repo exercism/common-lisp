@@ -6,27 +6,24 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
 
+    container:
+      image: clfoundation/sbcl
+        
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
-      - name: Install SBCL & QuickLisp
+      - name: Install & Setup QuickLisp
         run: |
-          sudo apt install sbcl
-          curl -O http://beta.quicklisp.org/quicklisp.lisp
-          sbcl --disable-debugger \
-               --load quicklisp.lisp \
-               --eval "(quicklisp-quickstart:install)" \
-               --eval "(push (merge-pathnames \"src/\") asdf:*central-registry*)" \
-               --eval "(sb-ext:save-lisp-and-die \"${HOME}/ql-sbcl\" :executable t)" \
-               --quit
+          QUICKLISP_ADD_TO_INIT_FILE=true /usr/local/bin/install-quicklisp
+          echo '(push (merge-pathnames "src/") asdf:*central-registry*)' >> ~/.sbclrc
 
       - name: SBCL Version
-        run: |
-          ${HOME}/ql-sbcl --eval "(format t \"~A-~A\" (lisp-implementation-type) (lisp-implementation-version))"
+        run: (format t "~A-~A" (lisp-implementation-type) (lisp-implementation-version))
+        shell: sbcl --noinform --non-interactive --load {0}
 
       - name: Run Tests
         run: |
-          ${HOME}/ql-sbcl --eval "(ql:quickload \"test-exercises\")" \
-                          --eval "(asdf:test-system \"test-exercises\")" \
-                          --quit
+          (ql:quickload "test-exercises")
+          (asdf:test-system "test-exercises")
+        shell: sbcl --noinform --non-interactive --load {0}
