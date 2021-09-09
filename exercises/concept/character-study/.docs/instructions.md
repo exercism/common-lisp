@@ -11,7 +11,7 @@ The function should compare in a case-sensitive manner.
 ## 2. Determine the "size" of the character
 
 Lewis needs to know the if a character is "big" (a uppercase character) or "little" (a lowercase character), or "no-size" if it is neither. 
-Write a function `size-of-char` that will evaluate to `:big`, `:little` or `:no-size` depending upon the "size" of the character:
+Write a function `size-of-char` that will evaluate to `:big`, `:small` or `:no-size` depending upon the "size" of the character:
 
 ## 3. Changing the "size" of the character
 
