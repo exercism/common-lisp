@@ -13,17 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
-      - name: Install & Setup QuickLisp
-        run: |
-          QUICKLISP_ADD_TO_INIT_FILE=true /usr/local/bin/install-quicklisp
-          echo '(push (merge-pathnames "src/") asdf:*central-registry*)' >> ~/.sbclrc
-
-      - name: SBCL Version
-        run: (format t "~A-~A" (lisp-implementation-type) (lisp-implementation-version))
-        shell: sbcl --noinform --non-interactive --load {0}
-
-      - name: Run Config Check
-        run: |
-          (ql:quickload "config-checker")
-          (asdf:test-system "config-checker")
-        shell: sbcl --noinform --non-interactive --load {0}
+      - name: Check Config
+        uses: ./.github/actions/perform-system
+        with:
+          system: config-checker
+          operation: test-system
