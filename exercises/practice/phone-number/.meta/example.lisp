@@ -1,13 +1,11 @@
-(defpackage #:phone-number
-  (:use #:common-lisp)
-  (:export #:numbers #:area-code #:pretty-print))
+(defpackage :phone-number
+  (:use :common-lisp)
+  (:export :clean))
 
-(in-package #:phone-number)
-
-(defun is-digit-p (c) (char<= #\0 c #\9))
+(in-package :phone-number)
 
 (defun strip-non-digits (string)
-  (remove-if-not #'is-digit-p string))
+  (remove-if-not #'digit-char-p string))
 
 (defun trim-leading-one (string)
   (if (and (= 11 (length string))
@@ -15,25 +13,17 @@
       (subseq string 1)
       string))
 
-(defun ensure-valid (string)
-  (if (= 10 (length string)) string "0000000000"))
+(defun starts-with-0-or-1-p (string) (member (char string 0) '(#\0 #\1)))
 
-(defun numbers (number-string)
-  (reduce #'(lambda (s fn) (funcall fn s))
-          '(strip-non-digits trim-leading-one ensure-valid)
-          :initial-value number-string))
+(defun valid-length-p (string) (= (length string) 10))
+(defun valid-area-code-p (string) (not (starts-with-0-or-1-p (subseq string 0 3))))
+(defun valid-exchange-code-p (string) (not (starts-with-0-or-1-p (subseq string 3 6))))
 
-(defun area-code (number-string)
-  (subseq (numbers number-string) 0 3))
+(defun call-predicate-on (x) (lambda (pred) (funcall pred x)))
 
-(defun exchange (number-string)
-  (subseq (numbers number-string) 3 6))
-
-(defun subscriber (number-string)
-  (subseq (numbers number-string) 6 10))
-
-(defun pretty-print (number-string)
-  (format nil "(~D) ~D-~D"
-          (area-code number-string)
-          (exchange number-string)
-          (subscriber number-string)))
+(defun clean (phrase)
+  (let ((number-string (trim-leading-one (strip-non-digits phrase))))
+    (if (every (call-predicate-on number-string)
+               '(valid-length-p valid-area-code-p valid-exchange-code-p))
+        number-string
+        "0000000000")))

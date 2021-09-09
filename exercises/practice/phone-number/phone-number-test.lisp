@@ -16,27 +16,58 @@
 (def-suite* phone-number-suite)
 
 (test cleans-number
- (is (equal "1234567890" (phone-number:numbers "(123) 456-7890"))))
+      (is (string= "2234567890" (phone-number:clean "(223) 456-7890"))))
 
 (test cleans-number-with-dots
- (is (equal "1234567890" (phone-number:numbers "123.456.7890"))))
+      (is (string= "2234567890" (phone-number:clean "223.456.7890"))))
 
-(test valid-when-11-digits-and-first-is-1
- (is (equal "1234567890" (phone-number:numbers "11234567890"))))
-
-(test invalid-when-11-digits
- (is (equal "0000000000" (phone-number:numbers "21234567890"))))
+(test cleans-number-with-multiple-spaces
+      (is (string= "2234567890" (phone-number:clean "223 456   7890   "))))
 
 (test invalid-when-9-digits
- (is (equal "0000000000" (phone-number:numbers "123456789"))))
+      (is (string= "0000000000" (phone-number:clean "123456789"))))
 
-(test area-code (is (equal "123" (phone-number:area-code "1234567890"))))
+(test invalid-when-11-digits-does-not-start-with-a-1
+      (is (string= "0000000000" (phone-number:clean "22234567890"))))
 
-(test pretty-print
- (is (equal "(123) 456-7890" (phone-number:pretty-print "1234567890"))))
+(test valid-when-11-digits-and-starting-with-1
+      (is (string= "2234567890" (phone-number:clean "12234567890"))))
 
-(test pretty-print-with-full-us-phone-number
- (is (equal "(123) 456-7890" (phone-number:pretty-print "11234567890"))))
+(test valid-when-11-digits-and-starting-with-1-even-with-punctuation
+      (is (string= "2234567890" (phone-number:clean "+1 (223) 456-7890"))))
+
+(test invalid-when-more-than-11-digits
+      (is (string= "0000000000" (phone-number:clean "321234567890"))))
+
+(test invalid-with-letters
+      (is (string= "0000000000" (phone-number:clean "123-abc-7890"))))
+
+(test invalid-with-punctuations
+      (is (string= "0000000000" (phone-number:clean "123-@:!-7890"))))
+
+(test invalid-if-area-code-starts-with-0
+      (is (string= "0000000000" (phone-number:clean "(023) 456-7890"))))
+
+(test invalid-if-area-code-starts-with-1
+      (is (string= "0000000000" (phone-number:clean "(123) 456-7890"))))
+
+(test invalid-if-exchange-code-starts-with-0
+      (is (string= "0000000000" (phone-number:clean "(223) 056-7890"))))
+
+(test invalid-if-exchange-code-starts-with-1
+      (is (string= "0000000000" (phone-number:clean "(223) 156-7890"))))
+
+(test invalid-if-area-code-starts-with-0-on-valid-11-digit-number
+      (is (string= "0000000000" (phone-number:clean "1 (023) 456-7890"))))
+
+(test invalid-if-area-code-starts-with-1-on-valid-11-digit-number
+      (is (string= "0000000000" (phone-number:clean "1 (123) 456-7890"))))
+
+(test invalid-if-exchange-code-starts-with-0-on-valid-11-digit-number
+      (is (string= "0000000000" (phone-number:clean "1 (223) 056-7890"))))
+
+(test invalid-if-exchange-code-starts-with-1-on-valid-11-digit-number
+      (is (string= "0000000000" (phone-number:clean "1 (223) 156-7890"))))
 
 (defun run-tests (&optional (test-or-suite 'phone-number-suite))
   "Provides human readable results of test run. Default to entire suite."
