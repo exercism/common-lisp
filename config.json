@@ -326,9 +326,9 @@
         "name": "Gigasecond",
         "uuid": "25506c31-7274-402a-95e1-8475fcdb34e1",
         "difficulty": 1,
-        "practices": ["integers"],
-        "prerequisites": ["integers"],
-        "status": "beta"
+        "practices": ["lists", "integers"],
+        "prerequisites": ["lists", "integers"],
+        "status": "deprecated"
       },
       {
         "slug": "grains",
