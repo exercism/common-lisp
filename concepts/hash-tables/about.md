@@ -16,7 +16,7 @@ The default value is `'eql`.
 
 To get a value by its key one uses `gethash`.
 `gethash` takes an [optional argument][concept-defualt-arguments] which acts as the value to be returned if the key is not present in the hash table.
-`gethash` also returns _multiple values_ (explained in another concept). 
+`gethash` also returns [multiple values][concept-multiple-values] (explained in another concept). 
 The first value is the value of that key in the hash table, the default value if provided, or `NIL`.
 The second value is a boolean that indicates if the key was present in the hash table or not.
 
@@ -64,4 +64,5 @@ This can be done with `maphash`:
 [concept-default-arguments]: /tracks/common-lisp/concepts/default-arguments
 [concept-equality]: /tracks/common-lisp/concepts/equality
 [concept-keyword-parameters]: /tracks/common-lisp/concepts/keyword-parameters
+[concept-multiple-values]: /tracks/common-lisp/concepts/multiple-values
 [hyperspec-make-hash-table]: http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_has.htm#make-hash-table

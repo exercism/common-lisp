@@ -22,7 +22,7 @@ To get a value by a key from the hash table you use the `gethash` function:
                    ;    T
 ```
 
-`gethash` returns _multiple values_ which will be explained in another concept.
+`gethash` returns [multiple values][concepts-multiple-values] which will be explained in another concept.
 
 ## Inserting values
 
@@ -34,3 +34,5 @@ This will modify the value for the key `:foo` in the hash table `*hash-table*` t
 It returns the value.
 
 The use of `setf` will be explained in another concept.
+
+[concept-multiple-values]: /tracks/common-lisp/concepts/multiple-values
