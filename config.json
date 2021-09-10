@@ -135,8 +135,8 @@
         "status": "beta"
       },
       {
-        "slug": "gigasecond",
-        "name": "Gigasecond",
+        "slug": "gigasecond-anniversary",
+        "name": "Gigasecond Anniversary",
         "uuid": "4583eb37-0ca3-4c95-839c-3a167599718b",
         "concepts": ["date-time", "multiple-values"],
         "prerequisites": ["lists", "arithmetic"],
@@ -334,8 +334,8 @@
         "name": "Gigasecond",
         "uuid": "25506c31-7274-402a-95e1-8475fcdb34e1",
         "difficulty": 1,
-        "practices": ["lists", "integers"],
-        "prerequisites": ["lists", "integers"],
+        "practices": [],
+        "prerequisites": [],
         "status": "deprecated"
       },
       {
