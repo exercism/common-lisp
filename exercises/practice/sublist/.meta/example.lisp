@@ -1,8 +1,8 @@
-(defpackage #:sublist
-  (:use #:common-lisp)
-  (:export #:sublist))
+(defpackage :sublist
+  (:use :common-lisp)
+  (:export :sublist))
 
-(in-package #:sublist)
+(in-package :sublist)
 
 (defun is-prefix-of (xs ys)
   (cond ((null xs)                 T)

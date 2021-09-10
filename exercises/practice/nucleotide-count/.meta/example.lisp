@@ -1,8 +1,8 @@
-(defpackage #:nucleotide-count
-  (:use #:common-lisp)
-  (:export #:dna-count #:nucleotide-counts #:invalid-nucleotide))
+(defpackage :nucleotide-count
+  (:use :common-lisp)
+  (:export :dna-count :nucleotide-counts :invalid-nucleotide))
 
-(in-package #:nucleotide-count)
+(in-package :nucleotide-count)
 
 (define-condition invalid-nucleotide (error) ())
 

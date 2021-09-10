@@ -1,9 +1,9 @@
-(in-package #:cl-user)
-(defpackage #:twelve-days
-  (:use #:cl)
-  (:export #:recite))
+(in-package :cl-user)
+(defpackage :twelve-days
+  (:use :cl)
+  (:export :recite))
 
-(in-package #:twelve-days)
+(in-package :twelve-days)
 
 (defvar *gifts*
   (nreverse

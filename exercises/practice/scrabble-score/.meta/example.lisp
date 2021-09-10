@@ -1,8 +1,8 @@
-(defpackage #:scrabble-score
-  (:use #:cl)
-  (:export #:score-word))
+(defpackage :scrabble-score
+  (:use :cl)
+  (:export :score-word))
 
-(in-package #:scrabble-score)
+(in-package :scrabble-score)
 
 (defparameter *letter-scores*
   '((#\A . 1) (#\B . 3) (#\C . 3) (#\D . 2) (#\E . 1) (#\F . 4)

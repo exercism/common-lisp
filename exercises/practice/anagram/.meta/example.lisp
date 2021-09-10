@@ -1,8 +1,8 @@
-(defpackage #:anagram
-  (:use #:common-lisp)
-  (:export #:anagrams-for))
+(defpackage :anagram
+  (:use :common-lisp)
+  (:export :anagrams-for))
 
-(in-package #:anagram)
+(in-package :anagram)
 
 (defun anagram-equal (a b)
   (and

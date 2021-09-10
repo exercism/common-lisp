@@ -1,8 +1,8 @@
-(defpackage #:rna-transcription
-  (:use #:common-lisp)
-  (:export #:to-rna))
+(defpackage :rna-transcription
+  (:use :common-lisp)
+  (:export :to-rna))
 
-(in-package #:rna-transcription)
+(in-package :rna-transcription)
 
 (defun validate-strand (strand)
   (or (every #'(lambda (c) (find c "ATCGU"))

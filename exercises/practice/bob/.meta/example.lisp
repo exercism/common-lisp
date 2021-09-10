@@ -1,8 +1,8 @@
-(defpackage #:bob
-  (:use #:common-lisp)
-  (:export #:response))
+(defpackage :bob
+  (:use :common-lisp)
+  (:export :response))
 
-(in-package #:bob)
+(in-package :bob)
 
 (defun contains-alpha-chars-p (msg)
   (some #'(lambda (c) (char-not-greaterp #\a c #\z))

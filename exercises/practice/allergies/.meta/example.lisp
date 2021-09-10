@@ -1,9 +1,9 @@
-(defpackage #:allergies
-  (:use #:common-lisp)
-  (:shadow #:list)
-  (:export #:allergic-to-p #:list))
+(defpackage :allergies
+  (:use :common-lisp)
+  (:shadow :list)
+  (:export :allergic-to-p :list))
 
-(in-package #:allergies)
+(in-package :allergies)
 
 (defparameter *allergens-scores*
   '(("eggs" 1)

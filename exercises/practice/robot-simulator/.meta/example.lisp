@@ -1,9 +1,9 @@
-(defpackage #:robot-simulator
-  (:use #:common-lisp)
-  (:export #:+north+ #:+east+ #:+south+ #:+west+ #:execute-sequence
-           #:robot #:robot-position #:robot-bearing #:make-robot))
+(defpackage :robot-simulator
+  (:use :common-lisp)
+  (:export :+north+ :+east+ :+south+ :+west+ :execute-sequence
+           :robot :robot-position :robot-bearing :make-robot))
 
-(in-package #:robot-simulator)
+(in-package :robot-simulator)
 
 (defconstant +north+ #C(0 1))
 (defconstant +east+ #C(1 0))
