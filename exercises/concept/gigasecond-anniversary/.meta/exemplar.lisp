@@ -1,8 +1,8 @@
-(defpackage :gigasecond
+(defpackage :gigasecond-anniversary
   (:use :cl)
   (:export :from))
 
-(in-package :gigasecond)
+(in-package :gigasecond-anniversary)
 
 (defun from (year month day hour minute second)
   (reverse

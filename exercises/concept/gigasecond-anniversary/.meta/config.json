@@ -2,8 +2,8 @@
   "blurb": "Learn about handling dates and times in Common Lisp by helping compute Gigasecond Anniversary dates",
   "authors": ["verdammelt"],
   "files": {
-    "solution": ["gigasecond.lisp"],
-    "test": ["gigasecond-test.lisp"],
+    "solution": ["gigasecond-anniversary.lisp"],
+    "test": ["gigasecond-anniversary-test.lisp"],
     "exemplar": [".meta/exemplar.lisp"]
   }
 }
