@@ -38,6 +38,7 @@ If you prefer installing the needed tools separately you will need to install an
 [hyperspec]:  http://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm
 [portacle]: https://portacle.github.io/
 [quicklisp]: http://www.quicklisp.org/beta/#installation
+[quicklisp-install]: https://www.quicklisp.org/beta/#installation
 [sbcl]: http://www.sbcl.org/
 [slima]: https://atom.io/packages/slima
 [slime]: https://common-lisp.net/project/slime/
