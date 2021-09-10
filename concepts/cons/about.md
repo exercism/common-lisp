@@ -11,20 +11,20 @@ The parts of a cons may be accessed with the functions [`car`][hyper-car] and [`
 
 ```lisp
 ;; Testing for atoms
-(atom 'foo)       ; => T
-(atom '(bar baz)) ; => NIL
+(atom 'foo)              ; => T
+(atom '(bar baz))        ; => NIL
 
 ;; Testing for cons
-(consp 'foo)       ; => NIL
-(consp '(bar baz)) ; => T
+(consp 'foo)             ; => NIL
+(consp '(bar baz))       ; => T
 
 ;; First item of a cons
 (car '(one two three))   ; => ONE
 (first '(one two three)) ; => ONE
 
 ;; Rest of a cons
-(cdr '(one two three))  ; => (TWO THREE)
-(rest '(one two three)) ; => (TWO THREE)
+(cdr '(one two three))   ; => (TWO THREE)
+(rest '(one two three))  ; => (TWO THREE)
 ```
 
 [history]: https://en.wikipedia.org/wiki/CAR_and_CDR#Etymology

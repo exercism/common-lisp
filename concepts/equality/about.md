@@ -11,11 +11,12 @@ This equality is checked with the function [`eq`][hyper-eq].
 The two objects being checked for equality must be the very same object:
 
 ```lisp
-(eq 'apples 'apples) ; => T
+(eq 'apples 'apples)  ; => T
 (eq 'apples 'oranges) ; => NIL
 
 (eq '(a b c) '(a b c) ; => NIL (these two lists have the same contents but are not the same list)
-(let ((list1 '(a b c)) (list2 list1)) (eq list1 list2)) ; => T (these two lists are the same list)
+(let ((list1 '(a b c)) (list2 list1)) 
+  (eq list1 list2))   ; => T (these two lists are the same list)
 ```
 
 ## `eql`
@@ -29,8 +30,8 @@ The way the checking is done depends upon the types of the arguments:
 - Characters are `eql` if they they represent the same character.
 
 ```lisp
-(eql 1 1) ; => T
-(eql 1 1/1) ; => NIL (one number is an integer, the other a rational)
+(eql 1 1)     ; => T
+(eql 1 1/1)   ; => NIL (one number is an integer, the other a rational)
 (eql #\c #\c) ; => T
 (eql #\c #\C) ; => NIL (case is different)
 ```
@@ -56,10 +57,10 @@ This is done recursively.
 - objects of any other type are compared as if with [`eq`][hyper-eq]
 
 ```lisp
-(equal '(a (b c)) '(a (b c))) ; => T (conses are equal if their contents are equal)
-(equal "hello" "hello") ; => T
-(equal "hello" "HELLO") ; => NIL
-(equal #(1 2 3) #(1 2 3)) ; => NIL (arrays are equal only if eq)
+(equal '(a (b c)) '(a (b c)))         ; => T (conses are equal if their contents are equal)
+(equal "hello" "hello")               ; => T
+(equal "hello" "HELLO")               ; => NIL
+(equal #(1 2 3) #(1 2 3))             ; => NIL (arrays are equal only if eq)
 (equal #P"foo/bar.md" #P"foo/bar.md") ; => T (pathnames are equal if "functionally equivalent"
 ```
 
@@ -78,11 +79,12 @@ This is done recursively.
 - hash tables are [`equalp`][hyper-equalp] if they both have the same `:test` function, they have the same keys (as compared with that `:test` function) and that those keys have the same values as compared with [`equalp`][hyper-equalp].
 
 ```lisp
-(equalp 1 1.0) ; => T
-(equalp #\c #\C) ; => T
-(equalp "hello" "HELLO") ; => T
-(equalp #(1 2 3) #(1.0 2.0 3.0)) ; => T (arrays contain elements which are `equalp`)
-(equal #S(TEST :SLOT1 'a :SLOT2 'b) #S(TEST :SLOT1 'a :SLOT2 'b)) ; => T (structures of the same class with slots that have values which are `equalp`)
+(equalp 1 1.0)                       ; => T
+(equalp #\c #\C)                     ; => T
+(equalp "hello" "HELLO")             ; => T
+(equalp #(1 2 3) #(1.0 2.0 3.0))     ; => T (arrays contain elements which are `equalp`)
+(equal #S(TEST :SLOT1 'a :SLOT2 'b) 
+       #S(TEST :SLOT1 'a :SLOT2 'b)) ; => T (structures of the same class with slots that have values which are `equalp`)
 ```
 
 ## Type-specific functions

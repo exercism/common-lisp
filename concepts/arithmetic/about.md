@@ -8,7 +8,7 @@ More visually:
 ;; Infix-notation (non-lisp languages)
 1 + 2 + 3 + 4 + 5 ; => 15
 ;; Prefix-notation (lisp languages)
-(+ 1 2 3 4 5) ; => 15
+(+ 1 2 3 4 5)     ; => 15
 ```
 
 While prefix notion turns some operations like `2 + 2` into the somewhat unfamiliar `(+ 2 2)` form, it makes it much easier to operate on more than one number at a time.
@@ -42,26 +42,26 @@ The language also includes some useful predicates such as `zerop`, `evenp` and `
 (+ 1 2 3 4 5) ; => 15
 
 ;; Subtraction
-(- 15 3 2) ; => 10
-(- 42)     ; => -42
+(- 15 3 2)    ; => 10
+(- 42)        ; => -42
 
 ;; Multiplication
-(* 4 3 2 1) ; => 24
+(* 4 3 2 1)   ; => 24
 
 ;; Division
-(/ 64 16 2) ; => 2
-(/ 5)       ; => 1/5
+(/ 64 16 2)   ; => 2
+(/ 5)         ; => 1/5
 
 ;; Exponentiation
-(expt 2 8) ; => 256
+(expt 2 8)    ; => 256
 
 ;; Square Root
-(sqrt 25) ; => 25
+(sqrt 25)     ; => 25
 
 ;; Modulo (Similar to remainder)
-(mod 10 3) ; => 1
+(mod 10 3)    ; => 1
 
 ;; Equality
-(= 2 2) ; => T
-(= 3 5) ; => NIL
+(= 2 2)       ; => T
+(= 3 5)       ; => NIL
 ```

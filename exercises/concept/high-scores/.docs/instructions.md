@@ -42,8 +42,8 @@ This function should evaluate to the score stored for the player.
 If there is no score stored for that player, or that player is not yet in the table then evaluate to `0`.
 
 ```lisp
-(get-score hash-table :louis) ; => 1234
-(get-score hash-table :lilly) ; => 0
+(get-score hash-table :louis)                         ; => 1234
+(get-score hash-table :lilly)                         ; => 0
 (get-score hash-table :not-a-character-in-this-story) ; => 0
 ```
 
@@ -57,9 +57,9 @@ This function should gracefully handle cases where the player was not yet added 
 Obviously after a player is removed if one gets their score from the table it will be zero.
 
 ```lisp
-(set-score hash-table :louis 1234) ; => 1234
-(remove-player hash-table :louis)             ; => T
-(get-score hash-table :louis)      ; => 0
+(set-score hash-table :louis 1234)           ; => 1234
+(remove-player hash-table :louis)            ; => T
+(get-score hash-table :louis)                ; => 0
 
-(remove-player hash-table :not-in-the-table)  ; => NIL
+(remove-player hash-table :not-in-the-table) ; => NIL
 ```

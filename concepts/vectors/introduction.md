@@ -9,7 +9,7 @@ Vectors can be created via the `vector` function or by using its reader form `#(
 
 ```lisp
 (vector 1 t "foo" 'b) ; => #(1 t "foo" B)
-#(2 nil "bar" a)     ; => #(2 nil "bar" A)
+#(2 nil "bar" a)      ; => #(2 nil "bar" A)
 ```
 
 ## Accessing Elements

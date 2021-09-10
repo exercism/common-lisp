@@ -38,8 +38,11 @@ The number of indexes provided must match the rank of the array.
 
 ```lisp
 (aref #2A((1 2 3) (3 4 5)) 1 0) ; => 3
-(aref #3A(((a b) (c d)) ((e f) (g h)) ((t u) (v w))) 2) ; => U
-(aref #2A((1) (2)) 0) ; => ERROR (because not enough indexes provided)
+(aref #3A(((a b) (c d)) 
+          ((e f) (g h)) 
+          ((t u) (v w))) 
+      2 0 1)                    ; => U
+(aref #2A((1) (2)) 0)           ; => ERROR (because not enough indexes provided)
 ```
 
 Also the indexes provided must be 'in bounds' given the dimensions provided when the array was created.
@@ -55,7 +58,7 @@ An element can also be accessed with `row-major-aref` which takes a single integ
 
 ```lisp
 (array-row-major-index #2A((1 2 3) (4 5 6)) 1 1 ) ; => 4
-(row-major-aref #2A((1 2 3) (4 5 6)) 4) ; => 5
+(row-major-aref #2A((1 2 3) (4 5 6)) 4)           ; => 5
 ```
 
 ## Predicate
@@ -63,9 +66,9 @@ An element can also be accessed with `row-major-aref` which takes a single integ
 To deterine if an object is an array one can use `arrayp`.
 
 ```lisp
-(arrayp #(1 2 3)) ; => T
+(arrayp #(1 2 3))            ; => T
 (arrayp #2((1 2 3) (4 5 6))) ; => T
-(arrayp (list 1 2 3)) ; => NIL
+(arrayp (list 1 2 3))        ; => NIL
 ```
 
 ## Queries about Arrays
