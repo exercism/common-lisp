@@ -133,6 +133,14 @@
         "concepts": ["mapping", "filtering"],
         "prerequisites": ["functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "gigasecond-anniversary",
+        "name": "Gigasecond Anniversary",
+        "uuid": "4583eb37-0ca3-4c95-839c-3a167599718b",
+        "concepts": ["date-time", "multiple-values"],
+        "prerequisites": ["lists", "arithmetic"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -326,9 +334,9 @@
         "name": "Gigasecond",
         "uuid": "25506c31-7274-402a-95e1-8475fcdb34e1",
         "difficulty": 1,
-        "practices": ["integers"],
-        "prerequisites": ["integers"],
-        "status": "beta"
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "grains",
@@ -563,6 +571,11 @@
       "name": "Cons"
     },
     {
+      "uuid": "cb241bf3-a9f1-4f9d-b294-de660a23b713",
+      "slug": "date-time",
+      "name": "Date and Time"
+    },
+    {
       "uuid": "a291e615-6148-46a4-ada8-9ab6eb343eb9",
       "slug": "optional-parameters",
       "name": "Optional Parameters"
@@ -611,6 +624,11 @@
       "uuid": "8cb78544-de29-40b2-8ae2-cfba83dea95c",
       "slug": "mapping",
       "name": "Mapping"
+    },
+    {
+      "uuid": "28499ea1-b9b7-40e9-af27-1f207020ad87",
+      "slug": "multiple-values",
+      "name": "Multiple Values"
     },
     {
       "uuid": "727ade24-7e7a-46dc-92b0-188d5797edfa",

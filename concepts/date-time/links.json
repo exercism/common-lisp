@@ -1,0 +1,10 @@
+[
+  {
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/25_ad.htm",
+    "description": "Hyperspec section on Time"
+  },
+  {
+    "url": "https://lispcookbook.github.io/cl-cookbook/dates_and_times.html",
+    "description": "Lisp Cookbook on Dates and Times"
+  }
+]
