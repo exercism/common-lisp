@@ -8,10 +8,10 @@ Can you help Leslie keep track of the shopping list?
 
 ## 1. Making a new list
 
-First thing is that Leslie needs to create a new empty list. A function called `empty-list` would be perfect for that.
+First thing is that Leslie needs to create a new empty list. A function called `new-list` would be perfect for that.
 
 ```lisp
-(empty-list) ; => ()
+(new-list) ; => ()
 ```
 
 Oh no... Leslie actually has a few things in mind already so they need a function that takes a three items (luckily Leslie never creates a list if they have less or more than three items) and creates a new shopping list with those things. Write a function called `list-of-things` which will take three items and makes a list of them.
