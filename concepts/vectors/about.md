@@ -9,13 +9,13 @@ Vectors can be created via the `vector` function or by using its reader form `#(
 
 ```lisp
 (vector 1 t "foo" 'b) ; => #(1 T "foo" B)
-#(2 nil "bar" a)     ; => #(2 NIL "bar" A)
+#(2 nil "bar" a)      ; => #(2 NIL "bar" A)
 ```
 
 Since they are arrays they can also be created with `make-array`:
 
 ```lisp
-(make-array 3 :initial-element 'x) ; => #(X X X)
+(make-array 3 :initial-element 'x)        ; => #(X X X)
 (make-array 3 :initial-contents '(a b c)) ; => #(A B C D)
 ```
 

@@ -38,27 +38,28 @@ This can be done with `maphash`:
 ## Reference
 
 ```lisp
-(setf *hash-table* (make-hash-table)) ; => #<HASH-TABLE :TEST EQL :COUNT 0 {100375FD23}>
-(gethash :foo *hash-table*) ; => NIL
-                            ;    NIL
-(gethash :foo *hash-table* :default-value) ; => :DEFAULT-VALUE
-                                           ;    NIL
+(setf *hash-table* (make-hash-table))     ; => #<HASH-TABLE :TEST EQL :COUNT 0 {100375FD23}>
+(gethash :foo *hash-table*)               ; => NIL
+                                          ;    NIL
+(gethash :foo *hash-table* 
+         :default-value)                  ; => :DEFAULT-VALUE
+                                          ;    NIL
 
-(setf (gethash :foo *hash-table*) :bar)    ; => :BAR
-(gethash :foo *hash-table*) ; => :BAR
-                            ;    T
+(setf (gethash :foo *hash-table*) :bar)   ; => :BAR
+(gethash :foo *hash-table*)               ; => :BAR
+                                          ;    T
 
-(setf (gethash :key *hash-table*) :value)  ; => :RIGHT
-(gethash :key *hash-table*) ; => :VALUE
-                            ;    T
+(setf (gethash :key *hash-table*) :value) ; => :RIGHT
+(gethash :key *hash-table*)               ; => :VALUE
+                                          ;    T
 
-(remhash :key *hash-table*) ; => T
-(gethash :key *hash-table*) ; => NIL
-                            ; => NIL
+(remhash :key *hash-table*)               ; => T
+(gethash :key *hash-table*)               ; => NIL
+                                          ; => NIL
                             
-(clrhash *hash-table*) ; => #<HASH-TABLE :TEST EQL :COUNT 0 {1005A90103}>
-(gethash :foo *hash-table*) ; => NIL
-                            ;    NIL
+(clrhash *hash-table*)                    ; => #<HASH-TABLE :TEST EQL :COUNT 0 {1005A90103}>
+(gethash :foo *hash-table*)               ; => NIL
+                                          ;    NIL
 ```
 
 [concept-default-arguments]: /tracks/common-lisp/concepts/default-arguments

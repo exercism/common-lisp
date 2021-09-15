@@ -13,14 +13,14 @@ Keyword parameters can be specified by the caller of the function in any order.
   (list x y (if z-supplied-p (list :z-was-supplied z)
                              (list :z-was-not-supplied z))))
 
-(keyword-parameters)            ;; => (NIL DEFAULT (:Z-WAS-NOT-SUPPLIED NIL))
-(keyword-parameters :y 5)       ;; => (NIL 5 (:Z-WAS-NOT-SUPPLIED NIL))
-(keyword-parameters :z 10 :x 5) ;; => (5 NIL (:Z-WAS-SUPPLIED 10))
+(keyword-parameters)            ; => (NIL DEFAULT (:Z-WAS-NOT-SUPPLIED NIL))
+(keyword-parameters :y 5)       ; => (NIL 5 (:Z-WAS-NOT-SUPPLIED NIL))
+(keyword-parameters :z 10 :x 5) ; => (5 NIL (:Z-WAS-SUPPLIED 10))
 ```
 
 Care should be taken when combining optional and keyword parameters as the keyword name and argument could be consumed by optional parameters:
 
 ```lisp
 (defun could-be-confusing (&optional x y &key z) (list x y z))
-(could-be-confusing :z 'huh?) ;; => (:Z HUH? NIL)
+(could-be-confusing :z 'huh?) ; => (:Z HUH? NIL)
 ```

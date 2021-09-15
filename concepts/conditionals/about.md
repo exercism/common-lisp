@@ -80,7 +80,7 @@ The `and` macro will immediately return `nil` if a single false value is encount
 The `or` macro returns the first true value it encounters or `nil` if there were no true values:
 
 ```lisp
-(or () 42 nil) ; => 42
+(or () 42 nil)  ; => 42
 (or () NIL nil) ; => NIL
 ```
 

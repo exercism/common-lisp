@@ -13,8 +13,8 @@ This maze has only a single room. You need to provide a function that can tell i
 For example:
 
 ```lisp
-a ; => "pizza"
-b ; => "pizza"
+a                         ; => "pizza"
+b                         ; => "pizza"
 
 (key-object-equality a a) ; => T
 (key-object-equality a b) ; => NIL
@@ -29,12 +29,12 @@ This maze has two rooms. The first has a door that can be opened if your key can
 For example:
 
 ```lisp
-a ; => 13
-b ; => 13.0
-c ; => 13
+a                                    ; => 13
+b                                    ; => 13.0
+c                                    ; => 13
 
-(key-numbers a b) ; => NIL
-(key-numbers a c) ; => T
+(key-numbers a b)                    ; => NIL
+(key-numbers a c)                    ; => T
 (key-numbers-of-different-types a b) ; => T
 ```
 
@@ -47,12 +47,12 @@ This maze has two rooms. The first has a door that can be opened if your key can
 For example:
 
 ```lisp
-a ; => #\X
-b ; => #\x
-c ; => #\X
+a                                       ; => #\X
+b                                       ; => #\x
+c                                       ; => #\X
 
-(key-characters a b) ; => NIL
-(key-characters a c) ; => T
+(key-characters a b)                    ; => NIL
+(key-characters a c)                    ; => T
 (key-characters-case-insensitively a b) ; => T
 ```
 
@@ -65,12 +65,12 @@ Like the maze of characters the first room needs a key that checks if two string
 For example:
 
 ```lisp
-a ; => "pizza"
-b ; => "PIZZA"
-c ; => "pizza"
+a                                    ; => "pizza"
+b                                    ; => "PIZZA"
+c                                    ; => "pizza"
 
-(key-strings a b) ; => NIL
-(key-strings a c) ; => T
+(key-strings a b)                    ; => NIL
+(key-strings a c)                    ; => T
 (key-strings-case-insensitively a b) ; => T
 ```
 
@@ -83,27 +83,29 @@ This is a big maze with many rooms. Each room needs a key that will check if the
 For example:
 
 ```lisp
-syms-a ; => (left . right)
-syms-b ; => (up . down)
-syms-c ; => (left . right)
-chars-a ; => (#\x . #\y)
-chars-b ; => (#\x . #\Y)
-chars-c ; => (#\x . #\y)
-nums-a ; => (13 . 23)
-nums-b ; => (13 . 23.0)
-nums-c ; => (13 . 23)
+syms-a                                     ; => (left . right)
+syms-b                                     ; => (up . down)
+syms-c                                     ; => (left . right)
+chars-a                                    ; => (#\x . #\y)
+chars-b                                    ; => (#\x . #\Y)
+chars-c                                    ; => (#\x . #\y)
+nums-a                                     ; => (13 . 23)
+nums-b                                     ; => (13 . 23.0)
+nums-c                                     ; => (13 . 23)
 
 
-(key-conses-of-symbols syms-a syms-b) ; => NIL
-(key-conses-of-symbols syms-a syms-c) ; => T
+(key-conses-of-symbols syms-a syms-b)      ; => NIL
+(key-conses-of-symbols syms-a syms-c)      ; => T
 
 (key-conses-of-characters chars-a chars-b) ; => NIL
 (key-conses-of-characters chars-a chars-c) ; => T
-(key-conses-of-characters-case-insensitively chars-a chars-b) ; => T
+(key-conses-of-characters-case-insensitively 
+  chars-a chars-b)                         ; => T
 
-(key-conses-of-numbers nums-a nums-b) ; => NIL
-(key-conses-of-numbers nums-a nums-c) ; => T
-(key-conses-of-numbers-of-different-types nums-a nums-b) ; => T
+(key-conses-of-numbers nums-a nums-b)      ; => NIL
+(key-conses-of-numbers nums-a nums-c)      ; => T
+(key-conses-of-numbers-of-different-types 
+  nums-a nums-b)                           ; => T
 ```
 
 because even with an equality predicate that will look inside of a cons, it may still not be permissive enough to ignore case or numeric type when comparing.
@@ -115,10 +117,10 @@ This maze is simpler with only two rooms. The first needs a key that checks if t
 For example:
 
 ```lisp
-a ; => #[13 23]
-b ; => #[13 23.0]
+a                        ; => #[13 23]
+b                        ; => #[13 23.0]
 
-(key-arrays a b) ; => NIL
+(key-arrays a b)         ; => NIL
 (key-arrays-loosely a b) ; => T
 ```
 

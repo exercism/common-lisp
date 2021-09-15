@@ -49,7 +49,7 @@ In the case of non-list sequences the `map` function is used.
 - the third and remaining are the sequences to operate on.
 
 ```lisp
-(map 'list #'double '(1 2 3)) ; => (2 4 6)
+(map 'list #'double '(1 2 3))        ; => (2 4 6)
 (map 'string #'char-upcase "foobar") ; => "FOOBAR"
 ```
 

@@ -7,10 +7,10 @@ If there are unused arguments then the rest parameter will be bound to a list of
 
 ```lisp
 (defun rest-of-it (req &optional opt &rest rest) (list req opt rest))
-(rest-of-it 1)         ;; => (1 NIL NIL)
-(rest-of-it 1 2)       ;; => (1 2 NIL)
-(rest-of-it 1 2 3)     ;; => (1 2 (3))
-(rest-of-it 1 2 3 4 5) ;; => (1 2 (3 4 5))
+(rest-of-it 1)         ; => (1 NIL NIL)
+(rest-of-it 1 2)       ; => (1 2 NIL)
+(rest-of-it 1 2 3)     ; => (1 2 (3))
+(rest-of-it 1 2 3 4 5) ; => (1 2 (3 4 5))
 ```
 
 [lambda-list]: http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_l.htm#lambda_list

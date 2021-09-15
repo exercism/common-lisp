@@ -12,6 +12,6 @@ Finally a symbol an be specified for each optional parameter which will be bound
   (list x y (if z-supplied-p (list :z-was-supplied z)
                              (list :z-was-not-supplied z))))
 
-(optional-parameters)          ;; => (NIL DEFAULT (:Z-WAS-NOT-SUPPLIED NIL))
-(optional-parameters 5 nil 10) ;; => (5 NIL (:Z-WAS-SUPPLIED 10))
+(optional-parameters)          ; => (NIL DEFAULT (:Z-WAS-NOT-SUPPLIED NIL))
+(optional-parameters 5 nil 10) ; => (5 NIL (:Z-WAS-SUPPLIED 10))
 ```

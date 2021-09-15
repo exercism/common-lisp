@@ -30,8 +30,12 @@ To access elements of a vector use `aref`, the indexes are zero-based.
 The number of indexes provided must match the rank of the array.
 
 ```lisp
-(aref #2A((1 2 3) (3 4 5)) 1 0) ; => 3
-(aref #3A(((a b) (c d)) ((e f) (g h)) ((t u) (v w))) 2) ; => U
+(aref #2A((1 2 3) (3 4 5)) 
+       1 0)           ; => 3
+(aref #3A(((a b) (c d)) 
+           ((e f) (g h)) 
+           ((t u) (v w))) 
+       2 0 1)         ; => U
 (aref #2A((1) (2)) 0) ; => ERROR (because not enough indexes provided)
 ```
 

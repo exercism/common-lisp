@@ -23,8 +23,8 @@ There are also two main functions used to create lists: `list` and `cons`.
 `cons` takes two items and creates a list which has as its `car` the first item and as its `cdr` the second item:
 
 ```lisp
-(cons 1 2)       ; => (1 . 2) ;; (a list without `nil` as its `cdr` is printed in this way.)
-(cons 1 nil)     ; => (1)
+(cons 1 2)            ; => (1 . 2) ;; (a list without `nil` as its `cdr` is printed in this way.)
+(cons 1 nil)          ; => (1)
 (cons 1 (cons 2 nil)) ; => (1 2)
 ```
 
@@ -47,3 +47,14 @@ Instead it evaluates to `nil`:
 ```
 
 There are also 10 helper methods for accessing the first 10 items of a list, they are named: `first`, `second`, `third`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, and `tenth`.
+
+## Combining lists
+
+Two, or more, lists can be combined with `append`: 
+
+```lisp
+(append '(a b c) '(1 2 3)) ; => (A B C 1 2 3)
+(append '(a b c) '()))     ; => (A B C)
+```
+
+Each argument given to `append` needs to be a list.

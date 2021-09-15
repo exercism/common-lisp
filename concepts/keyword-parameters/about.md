@@ -7,8 +7,8 @@ Keyword parameters are not required, can have a default and also can specify a "
 
 ```lisp
 (defun keyword-parameter (&key (arg -1) arg)
-(keyword-parameter)         ;; => -1
-(keyword-parameter :arg 13) ;; => 13
+(keyword-parameter)         ; => -1
+(keyword-parameter :arg 13) ; => 13
 ```
 
 In the arguments to a function the keyword parameters are specified by their "keyword name" which is, by default, a keyword symbol version of the parameter name (_i.e._ keyword parameter `name` has a keyword name of `:name`).
@@ -16,7 +16,7 @@ It is possible to specify another name for the keyword parameter by using a list
 
 ```lisp
 (defun other-keyword-name (&key ((other-name arg))) (list arg))
-(other-keyword-name 'other-name 5) ;; => (5)
+(other-keyword-name 'other-name 5) ; => (5)
 ```
 
 While multiple types of parameters can be combined with other types of parameters (optional and keyword parameters) this can be be problematic and should be done carefully.
