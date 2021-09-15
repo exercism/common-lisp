@@ -18,6 +18,19 @@
     (handler-bind ((style-warning #'muffle-warning))
       (load file))))
 
+(defun missing-exercise-package-error-report (condition stream)
+  (format stream
+          "Could not find package ~S (perhaps exercise slug and code do not match?)"
+          (package-error-package condition)))
+
+(define-condition missing-exercise-package-error (package-error) ()
+  (:documentation "Error to signal if exercise package (or exercise test package) cannot be found")
+  (:report missing-exercise-package-error-report))
+
 (defun find-exercise-package (exercise &key (test nil))
-  (let ((slug (symbol-name (aget :slug exercise))))
-   (find-package (string-upcase (format nil "~A~@[-TEST~]" slug test)))))
+  (let* ((slug (symbol-name (aget :slug exercise)))
+         (package-name (string-upcase (format nil "~A~@[-TEST~]" slug test)))
+         (package (find-package package-name)))
+    (if (not package)
+        (error 'missing-exercise-package-error :package package-name)
+        package)))

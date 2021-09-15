@@ -7,16 +7,19 @@
 (defun %test-exercise (data)
   (let ((test-files (aget :test (aget :files data)))
         (exemplar-files (example-files data)))
-    (unwind-protect
-         (progn
-           (dolist (f (append test-files exemplar-files))
-             (load-exercise-file data f))
-           (let ((fiveam:*print-names* nil))
-             (fiveam:run (find-symbol
-                          (format nil "~A-SUITE" (symbol-name (aget :slug data)))
-                          (find-exercise-package data :test t)))))
-      (delete-package (find-exercise-package data :test t))
-      (delete-package (find-exercise-package data)))))
+    (handler-case
+     (unwind-protect
+          (progn
+            (dolist (f (append test-files exemplar-files))
+              (load-exercise-file data f))
+            (let ((fiveam:*print-names* nil))
+              (fiveam:run (find-symbol
+                           (format nil "~A-SUITE" (symbol-name (aget :slug data)))
+                           (find-exercise-package data :test t)))))
+       (delete-package (find-exercise-package data :test t))
+       (delete-package (find-exercise-package data)))
+      (package-error (c)
+        (error (format nil "PACKAGE-ERROR with package ~S" (package-error-package c)))))))
 
 (defun test-exercise (dir)
   (sb-ext:gc :full t)
