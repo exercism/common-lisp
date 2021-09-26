@@ -9,7 +9,7 @@ Functions may have zero or more parameters.
 ```lisp
 (defun no-args () (+ 1 1))
 
-(defun add-one (x) (+1 x))
+(defun add-one (x) (1+ x))
 
 (defun add-nums (x y) (+ x y))
 ```
