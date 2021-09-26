@@ -42,8 +42,8 @@ A quick set of definitions (leaving out a few details) are as follows:
   _e.g._:
 
 ```lisp
-(equal "foo" "FoO")                          ; => T
-(equal 3 3.0)                                ; => T
-(equal (make-a-structure :slot1 1 :slot2 2) 
-       (make-a-structure :slot1 1 :slot2 2)) ; => T
+(equalp "foo" "FoO")                          ; => T
+(equalp 3 3.0)                                ; => T
+(equalp (make-a-structure :slot1 1 :slot2 2) 
+        (make-a-structure :slot1 1 :slot2 2)) ; => T
 ```
