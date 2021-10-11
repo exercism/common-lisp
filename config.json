@@ -141,6 +141,19 @@
         "concepts": ["date-time", "multiple-values"],
         "prerequisites": ["lists", "arithmetic"],
         "status": "beta"
+      },
+      {
+        "slug": "logans-numeric-partition",
+        "name": "Logan's Numeric Partition",
+        "uuid": "63ee56a6-ed3d-42f5-9c95-cb4298fedc44",
+        "concepts": ["reducing"],
+        "prerequisites": [
+          "lists",
+          "functions",
+          "integers",
+          "keyword-parameters"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
