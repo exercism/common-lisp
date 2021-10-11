@@ -2,12 +2,12 @@
 
 Reducing is the repeated application of a function to each element of
 a sequence and accumulating, in some way, the results. 
-The function applied is takes two parameters: the current accumulated value and the item to process. 
+The function applied takes two parameters: the current accumulated value and the item to process. 
 It must evaluate to the new accumulated value.
 
 This is called accumulate or fold in some programming languages.
 
-In Common Lisp is process is done with the `reduce` function.
+In Common Lisp the process is done with the `reduce` function.
 In its simplest form it looks like:
 
 `(reduce #'function-to-apply sequence :initial-value value)`
