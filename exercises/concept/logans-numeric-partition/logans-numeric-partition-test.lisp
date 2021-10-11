@@ -16,15 +16,23 @@
 (def-suite logans-numeric-partition-suite)
 (in-suite logans-numeric-partition-suite)
 
-(test categorize-odd-numbers-into-first-sublist
-      (is (equal '((1) . ()) (categorize-number '(() . ()) 1)))
-      (is (equal '((3 1) . ()) (categorize-number '((1) . ()) 3)))
-      (is (equal '((3 1) . (2)) (categorize-number '((1) . (2)) 3))))
+(test categorize-odd-numbers-collection-is-empty
+  (is (equal '((1) . ()) (categorize-number '(() . ()) 1))))
 
-(test categorize-even-numbers-into-second-sublist
-      (is (equal '(() . (2)) (categorize-number '(() . ()) 2)))
-      (is (equal '(() . (4 2)) (categorize-number '(() . (2)) 4)))
-      (is (equal '((1) . (4 2)) (categorize-number '((1) . (2)) 4))))
+(test categorize-odd-numbers-add-to-existing-collection
+  (is (equal '((3 1) . ()) (categorize-number '((1) . ()) 3))))
+
+(test categorize-odd-numbers-does-not-affect-even-collection
+  (is (equal '((3 1) . (2)) (categorize-number '((1) . (2)) 3))))
+
+(test categorize-even-numbers-collection-is-empty
+      (is (equal '(() . (2)) (categorize-number '(() . ()) 2))))
+
+(test categorize-even-numbers-add-to-existing-collection
+  (is (equal '(() . (4 2)) (categorize-number '(() . (2)) 4))))
+
+(test categorize-even-numbers-does-not-affect-even-collection
+  (is (equal '((1) . (4 2)) (categorize-number '((1) . (2)) 4))))
 
 (test partion-an-empty-list
       (is (equal '(() . ()) (partition-numbers '()))))
