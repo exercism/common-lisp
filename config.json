@@ -141,6 +141,19 @@
         "concepts": ["date-time", "multiple-values"],
         "prerequisites": ["lists", "arithmetic"],
         "status": "beta"
+      },
+      {
+        "slug": "logans-numeric-partition",
+        "name": "Logan's Numeric Partition",
+        "uuid": "63ee56a6-ed3d-42f5-9c95-cb4298fedc44",
+        "concepts": ["reducing"],
+        "prerequisites": [
+          "lists",
+          "functions",
+          "integers",
+          "keyword-parameters"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -664,6 +677,11 @@
       "uuid": "f1077b68-24ad-49fc-8444-db759eaa8c9c",
       "slug": "vectors",
       "name": "Vectors"
+    },
+    {
+      "uuid": "3e3c4267-1e80-416f-8604-75c4ca9d1cc2",
+      "slug": "reducing",
+      "name": "Reducing"
     }
   ],
   "key_features": [

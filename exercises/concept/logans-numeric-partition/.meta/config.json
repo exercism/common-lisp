@@ -1,0 +1,9 @@
+{
+  "blurb": "Help Logan partition numbers into evens and odds by using reduce.",
+  "authors": ["verdammelt"],
+  "files": {
+    "solution": ["logans-numeric-partition.lisp"],
+    "test": ["logans-numeric-partition-test.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
+  }
+}
