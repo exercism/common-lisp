@@ -293,7 +293,7 @@
         "name": "Armstrong Numbers",
         "uuid": "9319d1a6-276f-4b3b-8305-fc022cc48ef2",
         "difficulty": 1,
-        "practices": ["integers", "lists", "arithmetic", "mapping"],
+        "practices": ["lists", "mapping"],
         "prerequisites": ["integers", "lists", "arithmetic", "mapping"],
         "status": "beta"
       },
@@ -383,7 +383,7 @@
         "name": "Pascals Triangle",
         "uuid": "34bc4fbe-f148-4519-a699-91efed432703",
         "difficulty": 1,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["integers"],
         "prerequisites": ["integers", "arithmetic"],
         "status": "beta"
       },
