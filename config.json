@@ -170,7 +170,7 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
-        "practices": ["optional-parameters", "conditionals"],
+        "practices": ["optional-parameters", "conditionals", "functions"],
         "prerequisites": [
           "expressions",
           "functions",
@@ -185,7 +185,7 @@
         "name": "Hamming",
         "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
         "difficulty": 1,
-        "practices": ["conditionals", "strings", "characters"],
+        "practices": ["strings", "characters"],
         "prerequisites": ["functions", "conditionals", "arithmetic", "strings"],
         "status": "beta"
       },
@@ -194,7 +194,7 @@
         "name": "Rna Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
-        "practices": ["conditionals", "strings", "mapping"],
+        "practices": ["strings", "mapping"],
         "prerequisites": ["functions", "strings", "mapping"],
         "status": "beta"
       },
@@ -221,8 +221,8 @@
         "name": "Beer Song",
         "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
         "difficulty": 2,
-        "practices": ["conditionals", "integers"],
-        "prerequisites": ["conditionals"],
+        "practices": ["integers"],
+        "prerequisites": ["conditionals", "strings"],
         "status": "beta"
       },
       {
@@ -230,7 +230,7 @@
         "name": "Roman Numerals",
         "uuid": "150d3608-d234-4c9e-ab6d-2d91f8a2c855",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "strings"],
+        "practices": ["integers", "strings"],
         "prerequisites": ["functions"],
         "status": "beta"
       },
@@ -239,8 +239,8 @@
         "name": "Word Count",
         "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
         "difficulty": 2,
-        "practices": ["conditionals", "strings"],
-        "prerequisites": ["strings", "conditionals"],
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
         "status": "beta"
       },
       {
@@ -284,8 +284,8 @@
         "name": "Allergies",
         "uuid": "d2fd481e-7156-452d-976d-ea6df220fa18",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "mapping"],
-        "prerequisites": ["conditionals", "integers", "mapping"],
+        "practices": ["integers", "mapping"],
+        "prerequisites": ["integers", "mapping"],
         "status": "beta"
       },
       {
@@ -401,7 +401,7 @@
         "name": "Raindrops",
         "uuid": "b5345fcb-d4cc-4ea0-b1b9-f1b0cb92f05c",
         "difficulty": 1,
-        "practices": ["conditionals", "integers"],
+        "practices": ["integers"],
         "prerequisites": ["conditionals", "integers"],
         "status": "beta"
       },
@@ -419,7 +419,7 @@
         "name": "Sieve",
         "uuid": "40f3b911-0739-4fec-95cc-cfab99788c19",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "arithmetic"],
+        "practices": ["integers", "arithmetic"],
         "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -472,9 +472,9 @@
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "71a1fdb6-414e-452c-8d24-03f2a5621e62",
-        "difficulty": 2,
-        "practices": ["conditionals"],
-        "prerequisites": ["conditionals"],
+        "difficulty": 1,
+        "practices": ["characters"],
+        "prerequisites": ["characters"],
         "status": "beta"
       },
       {
@@ -500,7 +500,7 @@
         "name": "Prime Factors",
         "uuid": "cc138097-7c0f-44b4-b07e-2a24f6475986",
         "difficulty": 2,
-        "practices": ["conditionals", "integers", "arithmetic"],
+        "practices": ["integers", "arithmetic"],
         "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -527,8 +527,8 @@
         "name": "Crypto Square",
         "uuid": "fcfc6b44-597d-4a03-bf02-6be5c8f7ae4e",
         "difficulty": 3,
-        "practices": ["arrays", "conditionals", "strings"],
-        "prerequisites": ["arrays", "conditionals", "strings"],
+        "practices": ["arrays", "strings"],
+        "prerequisites": ["arrays", "strings"],
         "status": "beta"
       },
       {
@@ -536,8 +536,8 @@
         "name": "Meetup",
         "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
         "difficulty": 3,
-        "practices": ["conditionals"],
-        "prerequisites": ["conditionals"],
+        "practices": ["date-time"],
+        "prerequisites": ["date-time"],
         "status": "beta"
       },
       {
