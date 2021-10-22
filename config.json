@@ -302,9 +302,9 @@
         "name": "Binary",
         "uuid": "005ff8b4-9df8-4b82-b919-a0c67356d654",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "arithmetic"],
-        "prerequisites": ["conditionals", "integers", "arithmetic"],
-        "status": "beta"
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "binary-search",
@@ -464,9 +464,9 @@
         "name": "Trinary",
         "uuid": "ff3eb2c5-c7ce-4352-805c-e01d4fb85aa6",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "arithmetic"],
-        "prerequisites": ["conditionals", "integers", "arithmetic"],
-        "status": "beta"
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "atbash-cipher",
