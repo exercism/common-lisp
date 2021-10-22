@@ -185,8 +185,8 @@
         "name": "Hamming",
         "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
         "difficulty": 1,
-        "practices": ["strings", "characters"],
-        "prerequisites": ["functions", "conditionals", "arithmetic", "strings"],
+        "practices": ["characters"],
+        "prerequisites": ["functions", "characters", "strings"],
         "status": "beta"
       },
       {
@@ -194,8 +194,8 @@
         "name": "Rna Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
-        "practices": ["strings", "mapping"],
-        "prerequisites": ["functions", "strings", "mapping"],
+        "practices": ["characters", "mapping"],
+        "prerequisites": ["functions", "characters", "mapping"],
         "status": "beta"
       },
       {
@@ -221,7 +221,7 @@
         "name": "Beer Song",
         "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
         "difficulty": 2,
-        "practices": ["integers"],
+        "practices": ["integers", "strings"],
         "prerequisites": ["conditionals", "strings"],
         "status": "beta"
       },
@@ -311,8 +311,8 @@
         "name": "Binary Search",
         "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
         "difficulty": 1,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["integers"],
+        "prerequisites": ["integers"],
         "status": "beta"
       },
       {
@@ -374,8 +374,8 @@
         "name": "Nucleotide Count",
         "uuid": "b2ad38c2-2962-4a47-9b14-20ca262ebff6",
         "difficulty": 1,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["characters"],
+        "prerequisites": ["strings", "characters"],
         "status": "beta"
       },
       {
@@ -401,8 +401,8 @@
         "name": "Raindrops",
         "uuid": "b5345fcb-d4cc-4ea0-b1b9-f1b0cb92f05c",
         "difficulty": 1,
-        "practices": ["integers"],
-        "prerequisites": ["conditionals", "integers"],
+        "practices": ["integers", "arithmetic"],
+        "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
       {
@@ -410,8 +410,8 @@
         "name": "Scrabble Score",
         "uuid": "f350f23d-72f8-4f47-a0f5-fe3c00f3f5f1",
         "difficulty": 1,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["characters"],
+        "prerequisites": ["characters"],
         "status": "beta"
       },
       {
@@ -518,8 +518,8 @@
         "name": "Robot Simulator",
         "uuid": "d218cf9e-3b35-4357-9734-87142c22d551",
         "difficulty": 2,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals"],
         "status": "beta"
       },
       {
@@ -527,7 +527,7 @@
         "name": "Crypto Square",
         "uuid": "fcfc6b44-597d-4a03-bf02-6be5c8f7ae4e",
         "difficulty": 3,
-        "practices": ["arrays", "strings"],
+        "practices": ["arrays"],
         "prerequisites": ["arrays", "strings"],
         "status": "beta"
       },
@@ -545,7 +545,7 @@
         "name": "Luhn",
         "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
         "difficulty": 5,
-        "practices": ["strings"],
+        "practices": ["integers"],
         "prerequisites": ["strings"],
         "status": "beta"
       }
