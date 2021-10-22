@@ -221,7 +221,7 @@
         "name": "Beer Song",
         "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
         "difficulty": 2,
-        "practices": ["integers", "strings"],
+        "practices": ["strings"],
         "prerequisites": ["conditionals", "strings"],
         "status": "beta"
       },
@@ -311,8 +311,8 @@
         "name": "Binary Search",
         "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
         "difficulty": 1,
-        "practices": ["integers"],
-        "prerequisites": ["integers"],
+        "practices": ["arrays"],
+        "prerequisites": ["arrays"],
         "status": "beta"
       },
       {
@@ -320,7 +320,7 @@
         "name": "Collatz Conjecture",
         "uuid": "b3ad38c2-2962-4b47-9b14-20ca262ebff6",
         "difficulty": 1,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["arithmetic"],
         "prerequisites": ["integers", "arithmetic"],
         "status": "beta"
       },
@@ -329,7 +329,7 @@
         "name": "Difference Of Squares",
         "uuid": "71804ace-6ca1-46b9-bf06-ff57faef7afa",
         "difficulty": 1,
-        "practices": ["floating-point-numbers", "integers", "arithmetic"],
+        "practices": ["floating-point-numbers", "arithmetic"],
         "prerequisites": ["floating-point-numbers", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -356,8 +356,8 @@
         "name": "Grains",
         "uuid": "eb3a92bf-0748-4406-ba67-9e27e367ae45",
         "difficulty": 1,
-        "practices": ["integers"],
-        "prerequisites": ["integers"],
+        "practices": ["arithmetic"],
+        "prerequisites": ["arithmetic"],
         "status": "beta"
       },
       {
@@ -401,7 +401,7 @@
         "name": "Raindrops",
         "uuid": "b5345fcb-d4cc-4ea0-b1b9-f1b0cb92f05c",
         "difficulty": 1,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["arithmetic"],
         "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -455,8 +455,8 @@
         "name": "Triangle",
         "uuid": "bd2a55e3-9874-4d2e-ad6f-4b2f8c5e2e0a",
         "difficulty": 1,
-        "practices": ["conditionals", "floating-point-numbers", "integers"],
-        "prerequisites": ["conditionals", "floating-point-numbers", "integers"],
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals"],
         "status": "beta"
       },
       {
