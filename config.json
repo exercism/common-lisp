@@ -170,7 +170,7 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
-        "practices": ["optional-parameters", "conditionals"],
+        "practices": ["optional-parameters", "conditionals", "functions"],
         "prerequisites": [
           "expressions",
           "functions",
@@ -185,8 +185,8 @@
         "name": "Hamming",
         "uuid": "c029678b-9b9f-4fb2-958f-3a118efa16a9",
         "difficulty": 1,
-        "practices": ["conditionals", "strings", "characters"],
-        "prerequisites": ["functions", "conditionals", "arithmetic", "strings"],
+        "practices": ["characters"],
+        "prerequisites": ["functions", "characters", "strings"],
         "status": "beta"
       },
       {
@@ -194,8 +194,8 @@
         "name": "Rna Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
-        "practices": ["conditionals", "strings", "mapping"],
-        "prerequisites": ["functions", "strings", "mapping"],
+        "practices": ["characters", "mapping"],
+        "prerequisites": ["functions", "characters", "mapping"],
         "status": "beta"
       },
       {
@@ -221,8 +221,8 @@
         "name": "Beer Song",
         "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
         "difficulty": 2,
-        "practices": ["conditionals", "integers"],
-        "prerequisites": ["conditionals"],
+        "practices": ["strings"],
+        "prerequisites": ["conditionals", "strings"],
         "status": "beta"
       },
       {
@@ -230,7 +230,7 @@
         "name": "Roman Numerals",
         "uuid": "150d3608-d234-4c9e-ab6d-2d91f8a2c855",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "strings"],
+        "practices": ["integers", "strings"],
         "prerequisites": ["functions"],
         "status": "beta"
       },
@@ -239,8 +239,8 @@
         "name": "Word Count",
         "uuid": "424ed7aa-24f3-4aec-9620-3cc9dc224166",
         "difficulty": 2,
-        "practices": ["conditionals", "strings"],
-        "prerequisites": ["strings", "conditionals"],
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
         "status": "beta"
       },
       {
@@ -284,8 +284,8 @@
         "name": "Allergies",
         "uuid": "d2fd481e-7156-452d-976d-ea6df220fa18",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "mapping"],
-        "prerequisites": ["conditionals", "integers", "mapping"],
+        "practices": ["integers", "mapping"],
+        "prerequisites": ["integers", "mapping"],
         "status": "beta"
       },
       {
@@ -293,7 +293,7 @@
         "name": "Armstrong Numbers",
         "uuid": "9319d1a6-276f-4b3b-8305-fc022cc48ef2",
         "difficulty": 1,
-        "practices": ["integers", "lists", "arithmetic", "mapping"],
+        "practices": ["lists", "mapping"],
         "prerequisites": ["integers", "lists", "arithmetic", "mapping"],
         "status": "beta"
       },
@@ -302,17 +302,17 @@
         "name": "Binary",
         "uuid": "005ff8b4-9df8-4b82-b919-a0c67356d654",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "arithmetic"],
-        "prerequisites": ["conditionals", "integers", "arithmetic"],
-        "status": "beta"
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
         "difficulty": 1,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["arrays"],
+        "prerequisites": ["arrays"],
         "status": "beta"
       },
       {
@@ -320,7 +320,7 @@
         "name": "Collatz Conjecture",
         "uuid": "b3ad38c2-2962-4b47-9b14-20ca262ebff6",
         "difficulty": 1,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["arithmetic"],
         "prerequisites": ["integers", "arithmetic"],
         "status": "beta"
       },
@@ -329,7 +329,7 @@
         "name": "Difference Of Squares",
         "uuid": "71804ace-6ca1-46b9-bf06-ff57faef7afa",
         "difficulty": 1,
-        "practices": ["floating-point-numbers", "integers", "arithmetic"],
+        "practices": ["floating-point-numbers", "arithmetic"],
         "prerequisites": ["floating-point-numbers", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -356,8 +356,8 @@
         "name": "Grains",
         "uuid": "eb3a92bf-0748-4406-ba67-9e27e367ae45",
         "difficulty": 1,
-        "practices": ["integers"],
-        "prerequisites": ["integers"],
+        "practices": ["arithmetic"],
+        "prerequisites": ["arithmetic"],
         "status": "beta"
       },
       {
@@ -374,8 +374,8 @@
         "name": "Nucleotide Count",
         "uuid": "b2ad38c2-2962-4a47-9b14-20ca262ebff6",
         "difficulty": 1,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["characters"],
+        "prerequisites": ["strings", "characters"],
         "status": "beta"
       },
       {
@@ -383,7 +383,7 @@
         "name": "Pascals Triangle",
         "uuid": "34bc4fbe-f148-4519-a699-91efed432703",
         "difficulty": 1,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["integers"],
         "prerequisites": ["integers", "arithmetic"],
         "status": "beta"
       },
@@ -401,8 +401,8 @@
         "name": "Raindrops",
         "uuid": "b5345fcb-d4cc-4ea0-b1b9-f1b0cb92f05c",
         "difficulty": 1,
-        "practices": ["conditionals", "integers"],
-        "prerequisites": ["conditionals", "integers"],
+        "practices": ["arithmetic"],
+        "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
       {
@@ -410,8 +410,8 @@
         "name": "Scrabble Score",
         "uuid": "f350f23d-72f8-4f47-a0f5-fe3c00f3f5f1",
         "difficulty": 1,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["characters"],
+        "prerequisites": ["characters"],
         "status": "beta"
       },
       {
@@ -419,7 +419,7 @@
         "name": "Sieve",
         "uuid": "40f3b911-0739-4fec-95cc-cfab99788c19",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "arithmetic"],
+        "practices": ["integers", "arithmetic"],
         "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -455,8 +455,8 @@
         "name": "Triangle",
         "uuid": "bd2a55e3-9874-4d2e-ad6f-4b2f8c5e2e0a",
         "difficulty": 1,
-        "practices": ["conditionals", "floating-point-numbers", "integers"],
-        "prerequisites": ["conditionals", "floating-point-numbers", "integers"],
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals"],
         "status": "beta"
       },
       {
@@ -464,17 +464,17 @@
         "name": "Trinary",
         "uuid": "ff3eb2c5-c7ce-4352-805c-e01d4fb85aa6",
         "difficulty": 1,
-        "practices": ["conditionals", "integers", "arithmetic"],
-        "prerequisites": ["conditionals", "integers", "arithmetic"],
-        "status": "beta"
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "71a1fdb6-414e-452c-8d24-03f2a5621e62",
-        "difficulty": 2,
-        "practices": ["conditionals"],
-        "prerequisites": ["conditionals"],
+        "difficulty": 1,
+        "practices": ["characters"],
+        "prerequisites": ["characters"],
         "status": "beta"
       },
       {
@@ -500,7 +500,7 @@
         "name": "Prime Factors",
         "uuid": "cc138097-7c0f-44b4-b07e-2a24f6475986",
         "difficulty": 2,
-        "practices": ["conditionals", "integers", "arithmetic"],
+        "practices": ["integers", "arithmetic"],
         "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -518,8 +518,8 @@
         "name": "Robot Simulator",
         "uuid": "d218cf9e-3b35-4357-9734-87142c22d551",
         "difficulty": 2,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals"],
         "status": "beta"
       },
       {
@@ -527,8 +527,8 @@
         "name": "Crypto Square",
         "uuid": "fcfc6b44-597d-4a03-bf02-6be5c8f7ae4e",
         "difficulty": 3,
-        "practices": ["arrays", "conditionals", "strings"],
-        "prerequisites": ["arrays", "conditionals", "strings"],
+        "practices": ["arrays"],
+        "prerequisites": ["arrays", "strings"],
         "status": "beta"
       },
       {
@@ -536,8 +536,8 @@
         "name": "Meetup",
         "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
         "difficulty": 3,
-        "practices": ["conditionals"],
-        "prerequisites": ["conditionals"],
+        "practices": ["date-time"],
+        "prerequisites": ["date-time"],
         "status": "beta"
       },
       {
@@ -545,7 +545,7 @@
         "name": "Luhn",
         "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
         "difficulty": 5,
-        "practices": ["strings"],
+        "practices": ["integers"],
         "prerequisites": ["strings"],
         "status": "beta"
       }
