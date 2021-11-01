@@ -2,7 +2,7 @@
 
 Logan the Lisp alien likes numbers and also like organizing.
 
-They ask you to help them write a function that will take a list of numbers and produce a pair of two lists - the first is all the odd numbers, the second are all the event numbers.
+They ask you to help them write a function that will take a list of numbers and produce a pair of two lists - the first is all the odd numbers, the second are all the even numbers.
 
 ## 1. Categorizing a number
 
