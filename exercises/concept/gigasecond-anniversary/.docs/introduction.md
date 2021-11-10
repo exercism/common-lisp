@@ -11,12 +11,12 @@ In Common Lisp time is represented in four ways, two of which will be touched up
 ## Universal Time
 
 To get current universal time one uses `get-universal-time` or `get-decoded-time`.
-The former returns the current seconds since `1900-01-01T00:00Z` and the later returns the same data in decoded format.
+The former returns the current seconds since `1900-01-01T00:00Z` and the latter returns the same data in decoded format.
 
 ## Decoded Time
 
 `decode-universal-time` and `encode-universal-time` are the primary functions for working with time.
-The former takes a universal time and returns a decoded time value as [multiple-values][concept-multiple-values] and the later takes the decoded time values as arguments and returns a universal time.
+The former takes a universal time and returns a decoded time value as [multiple-values][concept-multiple-values] and the latter takes the decoded time values as arguments and returns a universal time.
 
 Both take an optional time-zone argument.
 See below for the format of the time-zone.
