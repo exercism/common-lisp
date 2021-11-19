@@ -16,8 +16,9 @@
 (def-suite socks-and-sexprs-suite)
 (in-suite socks-and-sexprs-suite)
 
-(test symbols "Lenny's favorite food is a symbol"
+(test symbols "Lenny's favorite food is a non-null symbol"
   (is-true (symbolp (lennys-favorite-food)))
+  (is-false (null (lennys-favorite-food)))
   (is-false (keywordp (lennys-favorite-food))))
 
 (test keywords "Lenny's secret keyword is a keyword"
