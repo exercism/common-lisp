@@ -154,6 +154,14 @@
           "keyword-parameters"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "reporting-for-duty",
+        "name": "Reporting for Duty",
+        "uuid": "c72ffe7d-eda5-41b0-b1ae-10c9db1550fa",
+        "concepts": ["format-basics"],
+        "prerequisites": ["strings", "functions"],
+        "status": "beta"
       }
     ],
     "practice": [

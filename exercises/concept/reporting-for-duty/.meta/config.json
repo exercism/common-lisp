@@ -1,0 +1,9 @@
+{
+  "blurb": "Help Layla produce short reports",
+  "authors": ["verdammelt"],
+  "files": {
+    "solution": ["reporting-for-duty.lisp"],
+    "test": ["reporting-for-duty-test.lisp"],
+    "exemplar": [".meta/exemplar.lisp"]
+  }
+}
