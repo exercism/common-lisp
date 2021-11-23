@@ -609,6 +609,11 @@
       "name": "Floating Point Numbers"
     },
     {
+      "uuid": "b4d57dc7-761d-4a53-818f-21aaa19e8db8",
+      "slug": "format-basics",
+      "name": "Format - Basics"
+    },
+    {
       "uuid": "a7b463d3-4d7f-4b4a-8a47-28307219541d",
       "slug": "functions",
       "name": "Functions"
