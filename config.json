@@ -154,6 +154,14 @@
           "keyword-parameters"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "reporting-for-duty",
+        "name": "Reporting for Duty",
+        "uuid": "c72ffe7d-eda5-41b0-b1ae-10c9db1550fa",
+        "concepts": ["format-basics"],
+        "prerequisites": ["strings", "functions"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -170,12 +178,17 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
-        "practices": ["optional-parameters", "conditionals", "functions"],
+        "practices": [
+          "optional-parameters",
+          "conditionals",
+          "functions",
+          "format-basics"
+        ],
         "prerequisites": [
-          "expressions",
           "functions",
           "optional-parameters",
-          "conditionals"
+          "conditionals",
+          "format-basics"
         ],
         "difficulty": 1,
         "status": "beta"
@@ -248,8 +261,8 @@
         "name": "Bob",
         "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
         "difficulty": 1,
-        "practices": ["conditionals", "strings"],
-        "prerequisites": ["conditionals", "strings"],
+        "practices": ["conditionals", "strings", "format-basics"],
+        "prerequisites": ["conditionals", "strings", "format-basics"],
         "status": "beta"
       },
       {
@@ -257,8 +270,8 @@
         "name": "Twelve Days",
         "uuid": "40ce6656-b8f5-4156-94b6-d634876215b2",
         "difficulty": 4,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics"],
         "status": "beta"
       },
       {
@@ -607,6 +620,11 @@
       "uuid": "0d0ae380-7f1f-4ac7-8900-d501afd7a48a",
       "slug": "floating-point-numbers",
       "name": "Floating Point Numbers"
+    },
+    {
+      "uuid": "b4d57dc7-761d-4a53-818f-21aaa19e8db8",
+      "slug": "format-basics",
+      "name": "Format - Basics"
     },
     {
       "uuid": "a7b463d3-4d7f-4b4a-8a47-28307219541d",

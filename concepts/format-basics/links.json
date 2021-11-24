@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://gigamonkeys.com/book/a-few-format-recipes.html#basic-formatting",
+    "description": "Information about basic format directives."
+  },
+  {
+    "url": "https://gigamonkeys.com/book/a-few-format-recipes.html#the-format-function",
+    "description": "Description of the format function."
+  },
+  {
+    "url": "https://gigamonkeys.com/book/a-few-format-recipes.html#format-directives",
+    "description": "Overview of format directives."
+  },
+  {
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/22_c.htm",
+    "description": "Hyperspec chapter on formatting output."
+  }
+]
