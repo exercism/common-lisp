@@ -25,5 +25,5 @@ You can call `append` with any number of lists, including 1 or 0:
 
 As an alternative to `append` there is `nconc` which has the same result but has the side-effect of modifying the lists. You should be careful when using `nconc` as it may have surprising effects.
 
-[hyper-cons-as-list]: http://l1sp.org/cl/14.1.2
-[hyper-print-circle]: http://l1sp.org/cl/*print-circle*
+[hyper-cons-as-list]: http://www.lispworks.com/documentation/HyperSpec/Body/14_ab.htm
+[hyper-print-circle]: http://www.lispworks.com/documentation/HyperSpec/Body/v_pr_cir.htm

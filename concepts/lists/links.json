@@ -8,7 +8,7 @@
     "description": "Practical Common Lisp chapter on lists and conses."
   },
   {
-    "url": "http://l1sp.org/cl/14.1.2",
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/14_ab.htm",
     "description": "Hyperspec reference on conses as lists."
   }
 ]

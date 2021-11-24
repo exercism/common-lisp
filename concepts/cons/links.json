@@ -1,18 +1,18 @@
 [
   {
-    "url": "http://l1sp.org/cl/14",
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/14_.htm",
     "description": "Hyperspec Chapter on Conses"
   },
   {
-    "url": "http://l1sp.org/cl/cons",
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/f_cons.htm",
     "description": "Hyperspec reference for `cons`"
   },
   {
-    "url": "http://l1sp.org/cl/car",
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm",
     "description": "Hyperpsec reference for `car`"
   },
   {
-    "url": "http://l1sp.org/cl/cdr",
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm",
     "description": "Hyperspec reference for `cdr`"
   },
   {
@@ -24,7 +24,7 @@
     "description": "Practical Common Lisp chapter on lists and conses."
   },
   {
-    "url": "http://l1sp.org/cl/14.1.2",
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/14_ab.htm",
     "description": "Hyperspec reference on conses as lists."
   }
 ]
