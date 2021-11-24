@@ -40,7 +40,7 @@ This exercise should focus on teaching `defun` The student should be comfortable
 
 - [Practical Common
   Lisp](http://www.gigamonkeys.com/book/functions.html)
-- [Common Lisp Hyperspec](http://clhs.lisp.se/Body/m_defun.htm)
+- [Common Lisp Hyperspec](http://www.lispworks.com/documentation/HyperSpec/Body/m_defun.htm)
 
 ### Hints
 

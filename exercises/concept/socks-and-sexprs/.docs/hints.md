@@ -23,5 +23,5 @@
 - A couple options might have more intuitive names than you'd expect!
 
 [so-quoting]: https://stackoverflow.com/questions/134887/when-to-use-or-quote-in-lisp
-[clhs-keywordp]: http://clhs.lisp.se/Body/f_kwdp.htm#keywordp
-[clhs-conses]: http://clhs.lisp.se/Body/c_conses.htm
+[clhs-keywordp]: http://www.lispworks.com/documentation/HyperSpec/Body/f_kwdp.htm#keywordp
+[clhs-conses]: http://www.lispworks.com/documentation/HyperSpec/Body/c_conses.htm

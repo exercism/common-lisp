@@ -46,7 +46,7 @@ The concept file for `named-parameters` can (and perhaps should) mention `&allow
 
 - [Practical Common
   Lisp](http://www.gigamonkeys.com/book/functions.html)
-- [Common Lisp Hyperspec](http://clhs.lisp.se/Body/m_defun.htm)
+- [Common Lisp Hyperspec](http://www.lispworks.com/documentation/HyperSpec/Body/m_defun.htm)
 
 ### Hints
 
