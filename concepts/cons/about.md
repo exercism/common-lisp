@@ -28,7 +28,7 @@ The parts of a cons may be accessed with the functions [`car`][hyper-car] and [`
 ```
 
 [history]: https://en.wikipedia.org/wiki/CAR_and_CDR#Etymology
-[hyper-car]: http://l1sp.org/cl/car
-[hyper-cdr]: http://l1sp.org/cl/cdr
-[hyper-cons]: http://l1sp.org/cl/cons
-[hyper-conses]: http://l1sp.org/cl/14
+[hyper-car]: http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm
+[hyper-cdr]: http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm
+[hyper-cons]: http://www.lispworks.com/documentation/HyperSpec/Body/f_cons.htm
+[hyper-conses]: http://www.lispworks.com/documentation/HyperSpec/Body/14_.htm

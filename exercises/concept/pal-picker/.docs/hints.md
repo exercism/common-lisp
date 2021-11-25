@@ -19,7 +19,7 @@
 
 - This task requires a multi-branch conditional
 - It may be worth looking into the order in which branches of [this
-  expression](http://l1sp.org/cl/cond) are evaluated.
+  expression](http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm) are evaluated.
 
 ## 3. And Now, We Feast
 

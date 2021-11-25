@@ -8,7 +8,7 @@
     "description": "Practical Common Lisp on Functions"
   },
   {
-    "url": "http://l1sp.org/cl/defun",
+    "url": "http://www.lispworks.com/documentation/HyperSpec/Body/m_defun.htm",
     "description": "Hyperspec page on defun"
   }
 ]
