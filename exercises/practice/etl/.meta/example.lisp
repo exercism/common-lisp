@@ -14,7 +14,7 @@
          (loop
             for v in (second kv)
             with k = (first kv)
-            do (setf (gethash v h) k)
+            do (setf (gethash (char-downcase v) h) k)
             finally (return h)))
      old-kvs
      :initial-value (make-hash-table :test (hash-table-test data)))))
