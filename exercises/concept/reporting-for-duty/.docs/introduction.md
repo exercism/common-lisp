@@ -8,7 +8,7 @@ The abilities of `format` and the Lisp Printer in general is a large topic; here
 
 The function `format` takes at least two arguments: a stream to print to and control string defining what and how is to be printed. 
 
-Streams are a concept of their own and will be described elsewhere. But for now all one needs to know is that the printing is done to the stream and there are two special values: `t` and `nil` for this argument. `t` means to print to standard output (actually the stream to which the variable `*standard-output*` is bound). and `nil` means to create and string and return it.
+Streams are a concept of their own and will be described elsewhere. But for now all one needs to know is that the printing is done to the stream and there are two special values: `t` and `nil` for this argument. `t` means to print to standard output (actually the stream to which the variable `*standard-output*` is bound). and `nil` means to create a string and return it.
 
 Note that `format` will always evaluate to `nil` except in that latter case where `nil` is specified as the stream. This is a common way to do simply string interpolation or construction.
 
