@@ -7,7 +7,7 @@ The array can be multi-dimensional (not simply 1-dimensional).
 ## Creating
 
 `make-array` allows one to create arrays.
-It has many options but its simpler forms allow one to create N-dimensional arrays with all element initialized to a single value or the array initialized to the values in another sequence (such as a list). 
+It has many options but its simpler forms allow one to create N-dimensional arrays with all elements initialized to a single value or the array initialized to the values in another sequence (such as a list). 
 Its first argument is a list of the size of each dimension.
 
 ```lisp
