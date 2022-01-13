@@ -14,7 +14,7 @@ Lambda lists are also used in other constructs which will be discussed later suc
 
 ## Optional Parameters
 
-In Common Lisp a function can have some arguments are are optional.
+In Common Lisp a function can have some arguments that are optional.
 These are designated in the lambda list by `&optional` lambda list keyword.
 A parameter will be bound to the value `nil` if it is not specified.
 If there are several optional parameters they are bound in order.
