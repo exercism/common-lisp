@@ -13,7 +13,7 @@
       ".meta/example.lisp"
     ]
   },
-  "blurb": "Determine if a number is an Armstrong number",
+  "blurb": "Determine if a number is an Armstrong number.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"
 }
