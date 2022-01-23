@@ -29,6 +29,9 @@
 (test second-list-missing-element-from-first-list
  (is (equal :unequal (sublist:sublist (list 1 2 3) (list 1 3)))))
 
+(test first-list-missing-additional-digits-from-second-list
+ (is (equal :unequal (sublist:sublist (list 1 2) (list 1 22)))))
+
 (test order-matters-to-a-lists
  (is (equal :unequal (sublist:sublist (list 1 2 3) (list 3 2 1)))))
 
