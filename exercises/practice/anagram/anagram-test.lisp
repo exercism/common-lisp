@@ -23,6 +23,9 @@
 (test detect-simple-anagram
  (is (equal '("tan") (anagram:anagrams-for "ant" '("tan" "stand" "at")))))
 
+(test detects-two-anagrams
+  (is (equal '("lemons" "melons") (anagram:anagrams-for "solemn" '("lemons" "cherry" "melons")))))
+
 (test does-not-confuse-different-duplicates
  (is (equal 'nil (anagram:anagrams-for "galea" '("eagle")))))
 
