@@ -30,12 +30,15 @@
 (test larger-distance (is (equal 2 (hamming:distance "ACCAGGG" "ACTATGG"))))
 
 (test invalid-to-get-distance-for-different-length-strings
- (is (equal nil (hamming:distance "AGACAACAGCCAGCCGCCGGATT" "AGGCAA")))
+ (is (equal nil (hamming:distance "AATG" "AAA")))
  (is
   (equal nil
-         (hamming:distance "AGACAACAGCCAGCCGCCGGATT"
-                           "AGACATCTTTCAGCCGCCGGATTAGGCAA")))
- (is (equal nil (hamming:distance "AGG" "AGACAACAGCCAGCCGCCGGATT"))))
+         (hamming:distance "ATA"
+                           "AGTG"))))
+
+(test invalid-empty-strands
+  (is (equal nil (hamming:distance "" "G")))
+  (is (equal nil (hamming:distance "G" ""))))
 
 (defun run-tests (&optional (test-or-suite 'hamming-suite))
   "Provides human readable results of test run. Default to entire suite."
