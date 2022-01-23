@@ -1,7 +1,7 @@
 (defpackage :prime-factors
   (:use :cl)
-  (:export :factors-of))
+  (:export :factors))
 
 (in-package :prime-factors)
 
-(defun factors-of (n))
+(defun factors (n))

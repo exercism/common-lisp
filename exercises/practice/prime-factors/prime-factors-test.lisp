@@ -15,57 +15,41 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* prime-factors-suite)
 
-(test one (is (equal 'nil (prime-factors:factors-of 1))))
+(test no-factors
+  (is (equal '() (prime-factors:factors 1))))
 
-(test two (is (equal '(2) (prime-factors:factors-of 2))))
+(test prime-number
+  (is (equal '(2) (prime-factors:factors 2))))
 
-(test three (is (equal '(3) (prime-factors:factors-of 3))))
+(test another-prime-number]
+  (is (equal '(3) (prime-factors:factors 3))))
 
-(test four (is (equal '(2 2) (prime-factors:factors-of 4))))
+(test square-of-a-prime
+  (is (equal '(3 3) (prime-factors:factors 9))))
 
-(test six (is (equal '(2 3) (sort (prime-factors:factors-of 6) #'<))))
+(test product-of-first-prime
+  (is (equal '(2 2) (prime-factors:factors 4))))
 
-(test eight (is (equal '(2 2 2) (prime-factors:factors-of 8))))
+(test cube-of-a-prime
+  (is (equal '(2 2 2) (prime-factors:factors 8))))
 
-(test nine (is (equal '(3 3) (prime-factors:factors-of 9))))
+(test product-of-second-prime
+  (is (equal '(3 3 3) (prime-factors:factors 27))))
 
-(test twenty-seven (is (equal '(3 3 3) (prime-factors:factors-of 27))))
+(test product-of-third-prime
+  (is (equal '(5 5 5 5) (prime-factors:factors 625))))
 
-(test six-hundred-twenty-five
- (is (equal '(5 5 5 5) (prime-factors:factors-of 625))))
+(test product-of-first-and-second-prime
+  (is (equal '(2 3) (prime-factors:factors 6))))
 
-(test a-large-number
- (is (equal '(5 17 23 461) (sort (prime-factors:factors-of 901255) #'<))))
+(test product-of-primes-and-non-primes
+  (is (equal '(2 2 3) (prime-factors:factors 12))))
 
-(test a-huge-number
- (is
-  (equal '(11 9539 894119) (sort (prime-factors:factors-of 93819012551) #'<))))
+(test product-of-primes
+  (is (equal '(5 17 23 461) (prime-factors:factors 901255))))
 
-(test triple-squares-number
- (is (equal '(2 2 5 5 7 7) (sort (prime-factors:factors-of 4900) #'<))))
-
-(test mersenne-composite-1
- (is (equal '(23 89) (sort (prime-factors:factors-of 2047) #'<))))
-
-(test fermat-composite-1
- (is (equal '(641 6700417) (sort (prime-factors:factors-of 4294967297) #'<))))
-
-(test weak-probable-prime
- (is (equal '(11 31) (sort (prime-factors:factors-of 341) #'<))))
-
-(test strong-probable-prime
- (is (equal '(7 31 73) (sort (prime-factors:factors-of 15841) #'<))))
-
-(test carmichael-small-1
- (is (equal '(3 11 17) (sort (prime-factors:factors-of 561) #'<))))
-
-(test carmichael-small-2
- (is (equal '(11 13 17 31) (sort (prime-factors:factors-of 75361) #'<))))
-
-(test pseudoprime-smallish
- (is
-  (equal '(1303 16927 157543)
-         (sort (prime-factors:factors-of 3474749660383) #'<))))
+(test factors-include-a-large-prime
+  (is (equal '(11 9539 894119) (prime-factors:factors 93819012551))))
 
 (defun run-tests (&optional (test-or-suite 'prime-factors-suite))
   "Provides human readable results of test run. Default to entire suite."

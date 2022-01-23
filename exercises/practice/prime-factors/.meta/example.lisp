@@ -1,6 +1,6 @@
 (defpackage :prime-factors
   (:use :cl)
-  (:export :factors-of)
+  (:export :factors)
   (:documentation "Generates a list of prime factors of given integer."))
 
 (in-package :prime-factors)
@@ -19,7 +19,7 @@
           (setf last (pop next))
           (incf last (pop incr))))))
 
-(defun factors-of (number)
+(defun factors (number)
   "List prime factors of `number'.
 
 Based on algorithm A from TAoCP 4.3.4 but with a larger wheel."
