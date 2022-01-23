@@ -8,5 +8,5 @@
     "example": [".meta/example.lisp"]
   },
   "authors": ["wobh"],
-  "contributors": null
+  "contributors": []
 }

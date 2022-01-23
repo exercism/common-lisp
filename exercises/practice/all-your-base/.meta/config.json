@@ -6,5 +6,5 @@
     "example": [".meta/example.lisp"]
   },
   "authors": ["serialhex"],
-  "contributors": null
+  "contributors": []
 }
