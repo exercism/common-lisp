@@ -1,32 +1,27 @@
 (defpackage :grade-school
   (:use :common-lisp)
-  (:export :make-school :add :grade-roster :grade :sorted))
+  (:export :make-school :add :roster :grade))
 
 (in-package :grade-school)
 
-(defclass school ()
-  ((roster :accessor roster :initform (make-hash-table))))
+(defstruct school (roster (make-hash-table)))
 
-(defmethod grade-roster ((school school))
-  (with-slots (roster) school
-    (unless (zerop (hash-table-count roster))
-      (loop
-        for grade being each hash-key of roster
-          using (hash-value students)
-        collect (list :grade grade
-                      :students (sort students #'string<))))))
+(defun add (school name grade)
+  (let ((current-roster (roster school)))
+    (when (not (member name current-roster :test #'string=))
+      (push name (grade school grade)))))
 
-(defmethod grade ((school school) grade)
-  (gethash grade (roster school)))
+(defun roster (school)
+  (let ((grades-and-names (list)))
+    (maphash #'(lambda (grade names) (push (cons grade names) grades-and-names))
+             (school-roster school))
+    (reduce #'(lambda (roster grade-names) (append roster (cdr grade-names)))
+            (sort grades-and-names #'< :key #'car)
+            :initial-value (list))))
 
-(defun (setf grade) (new-value school grade)
-  (setf (gethash grade (roster school)) new-value))
+(defun grade (school grade)
+  (gethash grade (school-roster school)))
 
-(defun make-school ()
-  (make-instance 'school))
-
-(defmethod add ((school school) student grade)
-  (push student (grade school grade)))
-
-(defmethod sorted ((school school))
-  (sort (copy-list (grade-roster school)) #'< :key #'second))
+(defun (setf grade) (newval school grade)
+  (setf (gethash grade (school-roster school))
+        (sort newval #'string<)))
