@@ -1,12 +1,23 @@
 {
-  "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
-  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm",
-  "source": "The Luhn Algorithm on Wikipedia",
+  "authors": [
+    "serialhex"
+  ],
+  "contributors": [
+    "chuchana",
+    "wobh"
+  ],
   "files": {
-    "test": ["luhn-test.lisp"],
-    "solution": ["luhn.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "luhn.lisp"
+    ],
+    "test": [
+      "luhn-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["serialhex"],
-  "contributors": ["chuchana", "wobh"]
+  "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
+  "source": "The Luhn Algorithm on Wikipedia",
+  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"
 }

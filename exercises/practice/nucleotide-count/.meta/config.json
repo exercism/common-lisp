@@ -1,12 +1,23 @@
 {
-  "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
-  "source_url": "http://rosalind.info/problems/dna/",
-  "source": "The Calculating DNA Nucleotides_problem at Rosalind",
+  "authors": [
+    "verdammelt"
+  ],
+  "contributors": [
+    "dnmfarrell",
+    "sjakobi"
+  ],
   "files": {
-    "test": ["nucleotide-count-test.lisp"],
-    "solution": ["nucleotide-count.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "nucleotide-count.lisp"
+    ],
+    "test": [
+      "nucleotide-count-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": ["dnmfarrell", "sjakobi"]
+  "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
+  "source": "The Calculating DNA Nucleotides_problem at Rosalind",
+  "source_url": "http://rosalind.info/problems/dna/"
 }

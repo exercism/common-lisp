@@ -1,12 +1,19 @@
 {
-  "blurb": "Convert a binary number, represented as a string (e.g. '101010'), to its decimal equivalent using first principles",
-  "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-",
-  "source": "All of Computer Science",
+  "authors": [
+    "verdammelt"
+  ],
   "files": {
-    "test": ["binary-test.lisp"],
-    "solution": ["binary.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "binary.lisp"
+    ],
+    "test": [
+      "binary-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": null
+  "blurb": "Convert a binary number, represented as a string (e.g. '101010'), to its decimal equivalent using first principles",
+  "source": "All of Computer Science",
+  "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-"
 }

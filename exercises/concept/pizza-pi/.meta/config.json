@@ -1,10 +1,19 @@
 {
-  "blurb": "Learn about arithmetic with intergers and floating-point numbers by helping to make pizza.",
-  "authors": ["TheLostLambda", "verdammelt"],
+  "authors": [
+    "TheLostLambda",
+    "verdammelt"
+  ],
   "files": {
-    "solution": ["pizza-pi.lisp"],
-    "test": ["pizza-pi-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "pizza-pi.lisp"
+    ],
+    "test": [
+      "pizza-pi-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   },
-  "icon": "lasagna"
+  "icon": "lasagna",
+  "blurb": "Learn about arithmetic with intergers and floating-point numbers by helping to make pizza."
 }

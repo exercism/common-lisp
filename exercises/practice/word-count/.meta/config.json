@@ -1,11 +1,21 @@
 {
-  "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-  "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour.",
+  "authors": [
+    "verdammelt"
+  ],
+  "contributors": [
+    "spacebat"
+  ],
   "files": {
-    "test": ["word-count-test.lisp"],
-    "solution": ["word-count.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "word-count.lisp"
+    ],
+    "test": [
+      "word-count-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": ["spacebat"]
+  "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
+  "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }

@@ -1,10 +1,18 @@
 {
-  "blurb": "Help Lucy try to make numbers more magnificent and keep only those that are.",
-  "authors": ["verdammelt"],
-  "icon": "numbers",
+  "authors": [
+    "verdammelt"
+  ],
   "files": {
-    "solution": ["lucys-magnificent-mapper.lisp"],
-    "test": ["lucys-magnificent-mapper-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
-  }
+    "solution": [
+      "lucys-magnificent-mapper.lisp"
+    ],
+    "test": [
+      "lucys-magnificent-mapper-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
+  },
+  "icon": "numbers",
+  "blurb": "Help Lucy try to make numbers more magnificent and keep only those that are."
 }

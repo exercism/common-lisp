@@ -1,12 +1,19 @@
 {
-  "blurb": "Compute the prime factors of a given natural number.",
-  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata",
-  "source": "The Prime Factors Kata by Uncle Bob",
+  "authors": [
+    "wobh"
+  ],
   "files": {
-    "test": ["prime-factors-test.lisp"],
-    "solution": ["prime-factors.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "prime-factors.lisp"
+    ],
+    "test": [
+      "prime-factors-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["wobh"],
-  "contributors": null
+  "blurb": "Compute the prime factors of a given natural number.",
+  "source": "The Prime Factors Kata by Uncle Bob",
+  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"
 }

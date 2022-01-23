@@ -1,12 +1,19 @@
 {
-  "blurb": "Calculate the Hamming difference between two DNA strands.",
-  "source_url": "http://rosalind.info/problems/hamm/",
-  "source": "The Calculating Point Mutations problem at Rosalind",
+  "authors": [
+    "wobh"
+  ],
   "files": {
-    "test": ["hamming-test.lisp"],
-    "solution": ["hamming.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "hamming.lisp"
+    ],
+    "test": [
+      "hamming-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["wobh"],
-  "contributors": null
+  "blurb": "Calculate the Hamming difference between two DNA strands.",
+  "source": "The Calculating Point Mutations problem at Rosalind",
+  "source_url": "http://rosalind.info/problems/hamm/"
 }
