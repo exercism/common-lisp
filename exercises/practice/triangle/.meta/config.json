@@ -1,12 +1,22 @@
 {
-  "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
-  "source_url": "http://rubykoans.com",
-  "source": "The Ruby Koans triangle project, parts 1 & 2",
+  "authors": [
+    "verdammelt"
+  ],
+  "contributors": [
+    "dnmfarrell"
+  ],
   "files": {
-    "test": ["triangle-test.lisp"],
-    "solution": ["triangle.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "triangle.lisp"
+    ],
+    "test": [
+      "triangle-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": ["dnmfarrell"]
+  "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
+  "source": "The Ruby Koans triangle project, parts 1 & 2",
+  "source_url": "http://rubykoans.com"
 }

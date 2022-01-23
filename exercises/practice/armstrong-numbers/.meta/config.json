@@ -1,19 +1,19 @@
 {
-  "blurb": "Determine if a number is an Armstrong number",
-  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number",
-  "source": "Wikipedia",
+  "authors": [
+    "verdammelt"
+  ],
   "files": {
-    "test": [
-      "armstrong-numbers-test.lisp"
-    ],
     "solution": [
       "armstrong-numbers.lisp"
+    ],
+    "test": [
+      "armstrong-numbers-test.lisp"
     ],
     "example": [
       ".meta/example.lisp"
     ]
   },
-  "authors": [
-    "verdammelt"
-  ]
+  "blurb": "Determine if a number is an Armstrong number",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"
 }

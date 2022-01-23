@@ -1,12 +1,19 @@
 {
-  "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
-  "source_url": "http://en.wikipedia.org/wiki/Atbash",
-  "source": "Wikipedia",
+  "authors": [
+    "verdammelt"
+  ],
   "files": {
-    "test": ["atbash-cipher-test.lisp"],
-    "solution": ["atbash-cipher.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "atbash-cipher.lisp"
+    ],
+    "test": [
+      "atbash-cipher-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": null
+  "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
+  "source": "Wikipedia",
+  "source_url": "http://en.wikipedia.org/wiki/Atbash"
 }

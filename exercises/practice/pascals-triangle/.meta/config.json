@@ -1,12 +1,19 @@
 {
-  "blurb": "Compute Pascal's triangle up to a given number of rows.",
-  "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html",
-  "source": "Pascal's Triangle at Wolfram Math World",
+  "authors": [
+    "daantjie"
+  ],
   "files": {
-    "test": ["pascals-triangle-test.lisp"],
-    "solution": ["pascals-triangle.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "pascals-triangle.lisp"
+    ],
+    "test": [
+      "pascals-triangle-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["daantjie"],
-  "contributors": null
+  "blurb": "Compute Pascal's triangle up to a given number of rows.",
+  "source": "Pascal's Triangle at Wolfram Math World",
+  "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"
 }

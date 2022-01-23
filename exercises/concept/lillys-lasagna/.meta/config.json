@@ -1,12 +1,21 @@
 {
-  "blurb": "Learn about functions by helping to cook lasagna.",
-  "authors": ["verdammelt"],
-  "contributors": [],
-  "forked_from": ["ruby/lasagna"],
+  "authors": [
+    "verdammelt"
+  ],
   "files": {
-    "solution": ["lillys-lasagna.lisp"],
-    "test": ["lillys-lasagna-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "lillys-lasagna.lisp"
+    ],
+    "test": [
+      "lillys-lasagna-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   },
-  "icon": "lasagna"
+  "forked_from": [
+    "ruby/lasagna"
+  ],
+  "icon": "lasagna",
+  "blurb": "Learn about functions by helping to cook lasagna."
 }

@@ -1,12 +1,22 @@
 {
-  "blurb": "Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.",
-  "source_url": "http://jumpstartlab.com",
-  "source": "Jumpstart Lab Warm-up",
+  "authors": [
+    "verdammelt"
+  ],
+  "contributors": [
+    "dnmfarrell"
+  ],
   "files": {
-    "test": ["allergies-test.lisp"],
-    "solution": ["allergies.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "allergies.lisp"
+    ],
+    "test": [
+      "allergies-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": ["dnmfarrell"]
+  "blurb": "Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.",
+  "source": "Jumpstart Lab Warm-up",
+  "source_url": "http://jumpstartlab.com"
 }

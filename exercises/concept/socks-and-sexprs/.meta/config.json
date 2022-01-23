@@ -1,12 +1,18 @@
 {
-  "blurb": "Learn the basics of Common Lisp by helping your friend clean their room so they can go out and have some fun.",
   "authors": [
     "verdammelt",
     "TheLostLambda"
   ],
   "files": {
-    "solution": ["socks-and-sexprs.lisp"],
-    "test": ["socks-and-sexprs-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
-  }
+    "solution": [
+      "socks-and-sexprs.lisp"
+    ],
+    "test": [
+      "socks-and-sexprs-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
+  },
+  "blurb": "Learn the basics of Common Lisp by helping your friend clean their room so they can go out and have some fun."
 }

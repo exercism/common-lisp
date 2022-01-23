@@ -1,10 +1,17 @@
 {
-  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
+  "authors": [
+    "serialhex"
+  ],
   "files": {
-    "test": ["all-your-base-test.lisp"],
-    "solution": ["all-your-base.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "all-your-base.lisp"
+    ],
+    "test": [
+      "all-your-base-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["serialhex"],
-  "contributors": null
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
 }

@@ -1,11 +1,22 @@
 {
-  "blurb": "Create a sentence of the form \"One for X, one for me.\"",
-  "source_url": "https://github.com/exercism/problem-specifications/issues/757",
+  "authors": [
+    "verdammelt"
+  ],
+  "contributors": [
+    "OrdoFlammae",
+    "timotheosh"
+  ],
   "files": {
-    "test": ["two-fer-test.lisp"],
-    "solution": ["two-fer.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "two-fer.lisp"
+    ],
+    "test": [
+      "two-fer-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": ["OrdoFlammae", "timotheosh"]
+  "blurb": "Create a sentence of the form \"One for X, one for me.\"",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/757"
 }

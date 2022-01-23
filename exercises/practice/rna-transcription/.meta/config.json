@@ -1,12 +1,19 @@
 {
-  "blurb": "Given a DNA strand, return its RNA Complement Transcription.",
-  "source_url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html",
-  "source": "Hyperphysics",
+  "authors": [
+    "verdammelt"
+  ],
   "files": {
-    "test": ["rna-transcription-test.lisp"],
-    "solution": ["rna-transcription.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "rna-transcription.lisp"
+    ],
+    "test": [
+      "rna-transcription-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": null
+  "blurb": "Given a DNA strand, return its RNA Complement Transcription.",
+  "source": "Hyperphysics",
+  "source_url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html"
 }

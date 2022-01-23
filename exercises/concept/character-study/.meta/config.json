@@ -1,9 +1,17 @@
 {
-  "authors": ["verdammelt"],
+  "authors": [
+    "verdammelt"
+  ],
   "files": {
-    "solution": ["character-study.lisp"],
-    "test": ["character-study-test.lisp"],
-    "exemplar": [".meta/exemplar.lisp"]
+    "solution": [
+      "character-study.lisp"
+    ],
+    "test": [
+      "character-study-test.lisp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lisp"
+    ]
   },
   "blurb": "Learn the basics of Common Lisp characters by helping Lewis learn about Earth letters."
 }

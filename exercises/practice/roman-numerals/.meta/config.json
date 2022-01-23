@@ -1,12 +1,22 @@
 {
-  "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
-  "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals",
-  "source": "The Roman Numeral Kata",
+  "authors": [
+    "wobh"
+  ],
+  "contributors": [
+    "dnmfarrell"
+  ],
   "files": {
-    "test": ["roman-numerals-test.lisp"],
-    "solution": ["roman-numerals.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "roman-numerals.lisp"
+    ],
+    "test": [
+      "roman-numerals-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["wobh"],
-  "contributors": ["dnmfarrell"]
+  "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
+  "source": "The Roman Numeral Kata",
+  "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals"
 }

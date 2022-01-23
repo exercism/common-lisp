@@ -1,11 +1,21 @@
 {
-  "blurb": "Manage robot factory settings.",
-  "source": "A debugging session with Paul Blackwell at gSchool.",
+  "authors": [
+    "verdammelt"
+  ],
+  "contributors": [
+    "wobh"
+  ],
   "files": {
-    "test": ["robot-name-test.lisp"],
-    "solution": ["robot-name.lisp"],
-    "example": [".meta/example.lisp"]
+    "solution": [
+      "robot-name.lisp"
+    ],
+    "test": [
+      "robot-name-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
   },
-  "authors": ["verdammelt"],
-  "contributors": ["wobh"]
+  "blurb": "Manage robot factory settings.",
+  "source": "A debugging session with Paul Blackwell at gSchool."
 }
