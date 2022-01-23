@@ -36,14 +36,23 @@
 (test test-9
   (is (string= "IX" (roman-numerals:romanize 9))))
 
+(test test-16
+  (is (string= "XVI" (roman-numerals:romanize 16))))
+
 (test test-27
   (is (string= "XXVII" (roman-numerals:romanize 27))))
 
 (test test-48
   (is (string= "XLVIII" (roman-numerals:romanize 48))))
 
+(test test-49
+  (is (string= "XLIX" (roman-numerals:romanize 49))))
+
 (test test-59
   (is (string= "LIX" (roman-numerals:romanize 59))))
+
+(test test-66
+  (is (string= "LXVI" (roman-numerals:romanize 66))))
 
 (test test-93
   (is (string= "XCIII" (roman-numerals:romanize 93))))
@@ -54,17 +63,26 @@
 (test test-163
   (is (string= "CLXIII" (roman-numerals:romanize 163))))
 
+(test test-166
+  (is (string= "CLXVI" (roman-numerals:romanize 166))))
+
 (test test-402
   (is (string= "CDII" (roman-numerals:romanize 402))))
 
 (test test-575
   (is (string= "DLXXV" (roman-numerals:romanize 575))))
 
+(test test-666
+  (is (string= "DCLXVI" (roman-numerals:romanize 666))))
+
 (test test-911
   (is (string= "CMXI" (roman-numerals:romanize 911))))
 
 (test test-1024
   (is (string= "MXXIV" (roman-numerals:romanize 1024))))
+
+(test test-1666
+  (is (string= "MDCLXVI" (roman-numerals:romanize 1666))))
 
 (test test-3000
   (is (string= "MMM" (roman-numerals:romanize 3000))))
