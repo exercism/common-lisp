@@ -1,5 +1,5 @@
 (defpackage :grade-school
   (:use :cl)
-  (:export :make-school :add :grade-roster :grade :sorted))
+  (:export :make-school :add :roster :grade))
 
 (in-package :grade-school)
