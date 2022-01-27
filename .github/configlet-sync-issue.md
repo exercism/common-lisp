@@ -2,6 +2,11 @@
 title: Out of sync practice exercises
 ---
 
-# Out of sync practice exercises
+Out of sync practice exercises have been detected:
 
-`configlet sync --tests --docs --metadata --filepaths` found some out of sync practice exercises.
+Command: `configlet sync --tests --docs --metadata --filepaths`
+
+Output: 
+```
+{{ env.SYNC_OUTPUT }}
+```

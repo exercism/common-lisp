@@ -16,7 +16,14 @@ jobs:
       uses: exercism/github-actions/configlet-ci@main
         
     - name: Configlet Sync
-      run: configlet sync --tests --docs --metadata --filepaths
+      id: sync
+      shell: bash {0}
+      run: |
+        echo "SYNC_OUTPUT<<EOF" >> $GITHUB_ENV
+        configlet sync --tests --docs --metadata --filepaths >> $GITHUB_ENV
+        exit_code=$?
+        echo "EOF" >> $GITHUB_ENV
+        exit $exit_code
 
     - name: Create issue
       if: ${{ failure() }}
