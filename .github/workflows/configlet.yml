@@ -4,6 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   configlet:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
 
     steps:

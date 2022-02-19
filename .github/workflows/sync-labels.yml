@@ -14,6 +14,7 @@ jobs:
   sync-labels:
     name: Sync labels
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v2.4.0
       - uses: micnncim/action-label-syncer@3abd5ab72fda571e69fffd97bd4e0033dd5f495c
