@@ -16,7 +16,7 @@
 (def-suite* space-age-suite)
 
 (defun rounds-to (expected actual)
-  (flet ((to-2-places (n) (coerce (/ (fround (* 100 n)) 100.0) 'double-float)))
+  (flet ((to-2-places (n) (/ (round (* 100 n)) 100.0)))
     (is (= (to-2-places expected) (to-2-places actual)))))
 
 (test age-in-earth-years
