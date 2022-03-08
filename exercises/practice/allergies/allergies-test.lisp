@@ -15,50 +15,160 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* allergies-suite)
 
-(test no-allergies-at-all (is (equalp 'nil (allergies:list 0))))
+(test testing-for-eggs-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "eggs") ))
 
-(test allergic-to-just-eggs (is (equalp '("eggs") (allergies:list 1))))
+(test testing-for-eggs-allergy->allergic-only-to-eggs
+  (is-true (allergies:allergic-to-p 1 "eggs")))
 
-(test allergic-to-just-peanuts (is (equalp '("peanuts") (allergies:list 2))))
+(test testing-for-eggs-allergy->allergic-to-eggs-and-something-else
+  (is-true (allergies:allergic-to-p 3 "eggs")))
 
-(test allergic-to-just-strawberries
- (is (equalp '("strawberries") (allergies:list 8))))
+(test testing-for-eggs-allergy->allergic-to-something-but-not-eggs
+  (is-false (allergies:allergic-to-p 2 "eggs")))
 
-(test allergic-to-eggs-and-peanuts
- (is (equalp '("eggs" "peanuts") (allergies:list 3))))
+(test testing-for-eggs-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "eggs")))
 
-(test allergic-to-more-than-eggs-but-not-peanuts
- (is (equalp '("eggs" "shellfish") (allergies:list 5))))
+(test testing-for-peanuts-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "peanuts")))
 
-(test allergic-to-lots-of-stuff
- (is
-  (equalp '("strawberries" "tomatoes" "chocolate" "pollen" "cats")
-          (allergies:list 248))))
+(test testing-for-peanuts-allergy->allergic-only-to-peanuts
+  (is-true (allergies:allergic-to-p 2 "peanuts")))
 
-(test allergic-to-everything
- (is
-  (equalp
-   '("eggs" "peanuts" "shellfish" "strawberries" "tomatoes" "chocolate"
-     "pollen" "cats")
-   (allergies:list 255))))
+(test testing-for-peanuts-allergy->allergic-to-peanuts-and-something-else
+  (is-true (allergies:allergic-to-p 7 "peanuts")))
 
-(test no-allergies-means-not-allergic
- (is (not (allergies:allergic-to-p 0 "peanuts")))
- (is (not (allergies:allergic-to-p 0 "cats")))
- (is (not (allergies:allergic-to-p 0 "strawberries"))))
+(test testing-for-peanuts-allergy->allergic-to-something-but-not-peanuts
+  (is-false (allergies:allergic-to-p 5 "peanuts")))
 
-(test is-allergic-to-eggs (is (allergies:allergic-to-p 1 "eggs")))
+(test testing-for-peanuts-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "peanuts")))
 
-(test allergic-to-eggs-in-addition-to-other-stuff
- (is (allergies:allergic-to-p 5 "eggs")))
+(test testing-for-shellfish-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "shellfish")))
 
-(test case-insensitive (is (allergies:allergic-to-p 1 "EGGS")))
+(test testing-for-shellfish-allergy->allergic-only-to-shellfish
+  (is-true (allergies:allergic-to-p 4 "shellfish")))
 
-(test ignore-non-allergen-score-parts
- (is
-  (equalp
-   '("eggs" "shellfish" "strawberries" "tomatoes" "chocolate" "pollen" "cats")
-   (allergies:list 509))))
+(test testing-for-shellfish-allergy->allergic-to-shellfish-and-something-else
+  (is-true (allergies:allergic-to-p 14 "shellfish")))
+
+(test testing-for-shellfish-allergy->allergic-to-something-but-not-shellfish
+  (is-false (allergies:allergic-to-p 10 "shellfish")))
+
+(test testing-for-shellfish-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "shellfish")))
+
+(test testing-for-strawberries-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "strawberries")))
+
+(test testing-for-strawberries-allergy->allergic-only-to-strawberries
+  (is-true (allergies:allergic-to-p 8 "strawberries")))
+
+(test testing-for-strawberries-allergy->allergic-to-strawberries-and-something-else
+  (is-true (allergies:allergic-to-p 28 "strawberries")))
+
+(test testing-for-strawberries-allergy->allergic-to-something-but-not-strawberries
+  (is-false (allergies:allergic-to-p 20 "strawberries")))
+
+(test testing-for-strawberries-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "strawberries")))
+
+(test testing-for-tomatoes-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "tomatoes")))
+
+(test testing-for-tomatoes-allergy->allergic-only-to-tomatoes
+  (is-true (allergies:allergic-to-p 16 "tomatoes")))
+
+(test testing-for-tomatoes-allergy->allergic-to-tomatoes-and-something-else
+  (is-true (allergies:allergic-to-p 56 "tomatoes")))
+
+(test testing-for-tomatoes-allergy->allergic-to-something-but-not-tomatoes
+  (is-false (allergies:allergic-to-p 40 "tomatoes")))
+
+(test testing-for-tomatoes-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "tomatoes")))
+
+(test testing-for-chocolate-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "chocolate")))
+
+(test testing-for-chocolate-allergy->allergic-only-to-chocolate
+  (is-true (allergies:allergic-to-p 32 "chocolate")))
+
+(test testing-for-chocolate-allergy->allergic-to-chocolate-and-something-else
+  (is-true (allergies:allergic-to-p 112 "chocolate")))
+
+(test testing-for-chocolate-allergy->allergic-to-something-but-not-chocolate
+  (is-false (allergies:allergic-to-p 80 "chocolate")))
+
+(test testing-for-chocolate-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "chocolate")))
+
+(test testing-for-pollen-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "pollen")))
+
+(test testing-for-pollen-allergy->allergic-only-to-pollen
+  (is-true (allergies:allergic-to-p 64 "pollen")))
+
+(test testing-for-pollen-allergy->allergic-to-pollen-and-something-else
+  (is-true (allergies:allergic-to-p 224 "pollen")))
+
+(test testing-for-pollen-allergy->allergic-to-something-but-not-pollen
+  (is-false (allergies:allergic-to-p 160 "pollen")))
+
+(test testing-for-pollen-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "pollen")))
+
+(test testing-for-cats-allergy->not-allergic-to-anything
+  (is-false (allergies:allergic-to-p 0 "cats")))
+
+(test testing-for-cats-allergy->allergic-only-to-cats
+  (is-true (allergies:allergic-to-p 128 "cats")))
+
+(test testing-for-cats-allergy->allergic-to-cats-and-something-else
+  (is-true (allergies:allergic-to-p 192 "cats")))
+
+(test testing-for-cats-allergy->allergic-to-something-but-not-cats
+  (is-false (allergies:allergic-to-p 64 "cats")))
+
+(test testing-for-cats-allergy->allergic-to-everything
+  (is-true (allergies:allergic-to-p 255 "cats")))
+
+(test list-when->no-allergies
+  (is (equal '() (allergies:list 0))))
+
+(test list-when->just-eggs
+  (is (equal '("eggs") (allergies:list 1))))
+
+(test list-when->just-peanuts
+  (is (equal '("peanuts") (allergies:list 2))))
+
+(test list-when->just-strawberries
+  (is (equal '("strawberries") (allergies:list 8))))
+
+(test list-when->eggs-and-peanuts
+  (is (equal '("eggs" "peanuts") (allergies:list 3))))
+
+(test list-when->more-than-eggs-but-not-peanuts
+  (is (equal '("eggs" "shellfish") (allergies:list 5))))
+
+(test list-when->lots-of-stuff
+  (is (equal '("strawberries" "tomatoes" "chocolate" "pollen" "cats")
+             (allergies:list 248))))
+
+(test list-when->everything
+  (is (equal '("eggs" "peanuts" "shellfish" "strawberries" "tomatoes"
+               "chocolate" "pollen" "cats")
+             (allergies:list 255))))
+
+(test list-when->no-allergen-score-parts
+  (is (equal '("eggs" "shellfish" "strawberries" "tomatoes" "chocolate"
+               "pollen" "cats")
+             (allergies:list 509))))
+
+(test list-when->no-allergen-score-parts-without-highest-valid-score
+  (is (equal '("eggs") (allergies:list 257))))
 
 (defun run-tests (&optional (test-or-suite 'allergies-suite))
   "Provides human readable results of test run. Default to entire suite."
