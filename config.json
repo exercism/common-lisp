@@ -495,8 +495,8 @@
         "name": "Grade School",
         "uuid": "841641f2-16ba-4dc5-af1b-ffae5052853a",
         "difficulty": 2,
-        "practices": ["lists"],
-        "prerequisites": ["lists"],
+        "practices": ["hash-tables"],
+        "prerequisites": ["hash-tables"],
         "status": "beta"
       },
       {
