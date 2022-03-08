@@ -1,0 +1,6 @@
+#!/bin/sh -ex
+
+update="./bin/configlet sync --update --exercise $1"
+
+${update} --yes --docs --metadata --filepaths
+${update} --tests i
