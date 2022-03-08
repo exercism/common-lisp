@@ -15,40 +15,58 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* etl-suite)
 
-(defun make-hash (kvs)
+(defun hash-table-from-alist (kvs)
   "Test helper method to create a hash table from a list of key-value pairs."
   (reduce #'(lambda (h kv) (setf (gethash (car kv) h) (cdr kv)) h)
           kvs
           :initial-value (make-hash-table)))
 
+(defun hash-table-to-alist (table)
+  (let ((alist (list)))
+    (maphash #'(lambda (k v) (setq alist (acons k v alist))) table)
+    (sort alist #'char< :key #'first)))
+
+(defun hash-table-kv-equal (expected actual)
+  "Compare hash tables by comparing their key value pairs."
+  (equal (hash-table-to-alist expected) (hash-table-to-alist actual)))
+
+;; useful here for making nicer error messages in failed tests.
+(defmethod print-object ((obj hash-table) stream)
+  (print-unreadable-object (obj stream :type t)
+    (format stream "with keys & values: ~S" (hash-table-to-alist obj))))
+
 (test single-letter
-  (is (equalp (make-hash '((#\a . 1)))
-              (etl:transform (make-hash '((1 . (#\A))))))))
+  (is (hash-table-kv-equal
+       (hash-table-from-alist '((#\a . 1)))
+       (etl:transform (hash-table-from-alist '((1 . (#\A))))))))
 
 (test single-score-with-multiple-letters
-  (is (equalp (make-hash '((#\a . 1) (#\e . 1) (#\i . 1) (#\o . 1) (#\u . 1)))
-              (etl:transform (make-hash '((1 . (#\A #\E #\I #\O #\U))))))))
+  (is (hash-table-kv-equal
+       (hash-table-from-alist '((#\a . 1) (#\e . 1) (#\i . 1) (#\o . 1) (#\u . 1)))
+       (etl:transform (hash-table-from-alist '((1 . (#\A #\E #\I #\O #\U))))))))
 
 (test multiple-scores-with-multiple-letters
-  (is (equalp (make-hash '((#\a . 1) (#\d . 2) (#\e . 1) (#\g . 2)))
-              (etl:transform (make-hash '((1 . (#\A #\E)) (2 . (#\D #\G))))))))
+  (is (hash-table-kv-equal
+       (hash-table-from-alist '((#\a . 1) (#\d . 2) (#\e . 1) (#\g . 2)))
+       (etl:transform (hash-table-from-alist '((1 . (#\A #\E)) (2 . (#\D #\G))))))))
 
 (test multiple-scores-with-differing-numbers-of-letters
-  (is (equalp (make-hash
-               '((#\a . 1) (#\b . 3) (#\c . 3) (#\d . 2) (#\e . 1)
-                 (#\f . 4) (#\g . 2) (#\h . 4) (#\i . 1) (#\j . 8)
-                 (#\k . 5) (#\l . 1) (#\m . 3) (#\n . 1) (#\o . 1)
-                 (#\p . 3) (#\q . 10) (#\r . 1) (#\s . 1) (#\t . 1)
-                 (#\u . 1) (#\v . 4) (#\w . 4) (#\x . 8) (#\y . 4)
-                 (#\z . 10)))
-              (etl:transform (make-hash
-                              '((1 . (#\A #\E #\I #\O #\U #\L #\N #\R #\S #\T))
-                                (2 . (#\D #\G))
-                                (3 . (#\B #\C #\M #\P))
-                                (4 . (#\F #\H #\V #\W #\Y))
-                                (5 . (#\K))
-                                (8 . (#\J #\X))
-                                (10 . (#\Q #\Z))))))))
+  (is (hash-table-kv-equal
+       (hash-table-from-alist
+        '((#\a . 1) (#\b . 3) (#\c . 3) (#\d . 2) (#\e . 1)
+          (#\f . 4) (#\g . 2) (#\h . 4) (#\i . 1) (#\j . 8)
+          (#\k . 5) (#\l . 1) (#\m . 3) (#\n . 1) (#\o . 1)
+          (#\p . 3) (#\q . 10) (#\r . 1) (#\s . 1) (#\t . 1)
+          (#\u . 1) (#\v . 4) (#\w . 4) (#\x . 8) (#\y . 4)
+          (#\z . 10)))
+       (etl:transform (hash-table-from-alist
+                       '((1 . (#\A #\E #\I #\O #\U #\L #\N #\R #\S #\T))
+                         (2 . (#\D #\G))
+                         (3 . (#\B #\C #\M #\P))
+                         (4 . (#\F #\H #\V #\W #\Y))
+                         (5 . (#\K))
+                         (8 . (#\J #\X))
+                         (10 . (#\Q #\Z))))))))
 
 (defun run-tests (&optional (test-or-suite 'etl-suite))
   "Provides human readable results of test run. Default to entire suite."
