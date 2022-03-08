@@ -40,10 +40,10 @@
       (is (string= "0000000000" (phone-number:clean "321234567890"))))
 
 (test invalid-with-letters
-      (is (string= "0000000000" (phone-number:clean "123-abc-7890"))))
+      (is (string= "0000000000" (phone-number:clean "523-abc-7890"))))
 
 (test invalid-with-punctuations
-      (is (string= "0000000000" (phone-number:clean "123-@:!-7890"))))
+      (is (string= "0000000000" (phone-number:clean "523-@:!-7890"))))
 
 (test invalid-if-area-code-starts-with-0
       (is (string= "0000000000" (phone-number:clean "(023) 456-7890"))))
