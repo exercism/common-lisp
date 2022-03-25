@@ -160,7 +160,7 @@
         "name": "Reporting for Duty",
         "uuid": "c72ffe7d-eda5-41b0-b1ae-10c9db1550fa",
         "concepts": ["format-basics"],
-        "prerequisites": ["strings", "functions"],
+        "prerequisites": ["strings", "functions", "bar"],
         "status": "beta"
       }
     ],
@@ -566,6 +566,11 @@
     "foregone": ["accumulate", "bank-account"]
   },
   "concepts": [
+    {
+      "uuid": "0ffb0822-bf51-4502-973b-f637d0d42bab",
+      "slug": "foobar",
+      "name": "foobar"
+    },
     {
       "uuid": "b2a3eef0-eb53-4b1b-bf32-167fd2f7d880",
       "slug": "arithmetic",
