@@ -13,8 +13,7 @@
                (:file "utils")
                (:file "main")
                (:module "checkers"
-                :components ((:file "each-concept-has-a-directory")
-                             (:file "exercise-concepts-are-in-concept-list"))))
+                :components ()))
 
   :perform (test-op (o c)
                     (declare (ignore o c))
