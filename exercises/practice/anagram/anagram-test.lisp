@@ -16,46 +16,66 @@
 (def-suite* anagram-suite)
 
 (test no-matches
- (is
-  (equal 'nil
-         (anagram:anagrams-for "diaper" '("hello" "world" "zombies" "pants")))))
-
-(test detect-simple-anagram
- (is (equal '("tan") (anagram:anagrams-for "ant" '("tan" "stand" "at")))))
+  (is (equal nil
+             (anagram:anagrams-for "diaper" '("hello" "world" "zombies" "pants")))))
 
 (test detects-two-anagrams
-  (is (equal '("lemons" "melons") (anagram:anagrams-for "solemn" '("lemons" "cherry" "melons")))))
+  (is (equal '("lemons" "melons")
+             (anagram:anagrams-for "solemn" '("lemons" "cherry" "melons")))))
 
-(test does-not-confuse-different-duplicates
- (is (equal 'nil (anagram:anagrams-for "galea" '("eagle")))))
-
-(test eliminate-anagram-subsets
- (is (equal 'nil (anagram:anagrams-for "good" '("dog" "goody")))))
+(test does-not-detect-anagram-subsets
+  (is (equal nil (anagram:anagrams-for "good" '("dog" "goody")))))
 
 (test detect-anagram
- (is
-  (equal '("inlets")
-         (anagram:anagrams-for "listen"
-                               '("enlists" "google" "inlets" "banana")))))
+  (is (equal '("inlets")
+             (anagram:anagrams-for "listen"
+                                   '("enlists" "google" "inlets" "banana")))))
 
-(test multiple-anagrams
- (is
-  (equal '("gallery" "regally" "largely")
-         (anagram:anagrams-for "allergy"
-                               '("gallery" "ballerina" "regally" "clergy"
-                                 "largely" "leading")))))
+(test detects-three-anagrams
+  (is (equal '("gallery" "regally" "largely")
+             (anagram:anagrams-for "allergy"
+                                   '("gallery" "ballerina" "regally" "clergy"
+                                     "largely" "leading")))))
 
-(test case-insensitive-anagrams
- (is
-  (equal '("Carthorse")
-         (anagram:anagrams-for "Orchestra"
-                               '("cashregister" "Carthorse" "radishes")))))
+(test detects-multiple-anagrams-with-different-case
+  (is (equal '("Eons" "ONES") (anagram:anagrams-for "nose" '("Eons" "ONES")))))
 
-(test word-is-not-own-anagram
- (is (equal 'nil (anagram:anagrams-for "banana" '("banana")))))
+(test does-not-detect-non-anagrams-with-identical-checksum
+  (is (equal nil (anagram:anagrams-for "mass" '("last")))))
 
-(test word-is-not-own-anagram-case-insensitively
- (is (equal 'nil (anagram:anagrams-for "bananarama" '("BananaRama")))))
+(test detects-anagrams-case-insensitively
+  (is (equal '("Carthorse")
+             (anagram:anagrams-for "Orchestra"
+                                   '("cashregister" "Carthorse" "radishes")))))
+
+(test detects-anagrams-using-case-insensitive-subject
+  (is (equal '("carthorse")
+             (anagram:anagrams-for "Orchestra"
+                                   '("cashregister" "carthorse" "radishes")))))
+
+(test detects-anagrams-using-case-insensitive-possible-matches
+  (is (equal '("Carthorse")
+             (anagram:anagrams-for "orchestra"
+                                   '("cashregister" "Carthorse" "radishes")))))
+
+(test does-not-detect-an-anagram-if-the-original-word-is-repeated
+  (is (equal nil (anagram:anagrams-for "go" '("go" "Go" "GO")))))
+
+(test anagrams-must-use-all-letters-exactly-once
+  (is (equal nil (anagram:anagrams-for "tapper" '("patter")))))
+
+(test words-are-not-anagrams-of-themselves
+  (is (equal nil (anagram:anagrams-for "BANANA" '("BANANA")))))
+
+(test words-are-not-anagrams-of-themselves-even-if-letter-case-is-partially-different
+  (is (equal nil (anagram:anagrams-for "BANANA" '("Banana"))))  )
+
+(test words-are-not-anagrams-of-themselves-even-if-letter-case-is-completely-different
+  (is (equal nil (anagram:anagrams-for "BANANA" '("banana"))))  )
+
+(test words-other-than-themselves-can-be-anagrams
+  (is (equal '("Silent") (anagram:anagrams-for "LISTEN" '("LISTEN" "Silent")))))
+
 
 (defun run-tests (&optional (test-or-suite 'anagram-suite))
   "Provides human readable results of test run. Default to entire suite."

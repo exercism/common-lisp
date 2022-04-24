@@ -73,8 +73,10 @@ three"))))
 
 (test with-apostrophes
   (is (assert-alist-equal
-       '(("first" . 1) ("don't" . 2) ("laugh" . 1) ("then" . 1) ("cry" . 1))
-       (word-count:count-words "First: don't laugh. Then: don't cry."))))
+       '(("first" . 1) ("don't" . 2) ("laugh" . 1) ("then" . 1) ("cry" . 1)
+         ("you're" . 1) ("getting" . 1) ("it" . 1))
+       (word-count:count-words
+        "'First: don't laugh. Then: don't cry. You're getting it.'"))))
 
 
 (test with-quotations
