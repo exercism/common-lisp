@@ -9,7 +9,7 @@
 (defun calculate-price (basket)
  (if basket
   (let ((groupings (improve-groupings (create-groups basket))))
-    (apply '+ (mapcar #'calculate-group-price groupings)))
+   (round (apply '+ (mapcar #'calculate-group-price groupings))))
    0))
 
 (defun create-groups (basket)
