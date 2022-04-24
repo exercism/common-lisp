@@ -561,6 +561,15 @@
         "practices": ["integers"],
         "prerequisites": ["strings"],
         "status": "beta"
+      },
+      {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "7f4cc4e6-3bcd-4b63-9115-36e63fba21ec",
+        "difficulty": 6,
+        "practices": ["lists", "mapping", "functions"],
+        "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]

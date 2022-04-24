@@ -1,0 +1,12 @@
+{
+  "blurb": "To try and encourage more sales of different books from a popular 5 book series, a bookshop has decided to offer discounts of multiple-book purchases.",
+  "source_url": "http://cyber-dojo.org",
+  "source": "Inspired by the harry potter kata from Cyber-Dojo.",
+  "files": {
+    "test": ["book-store-test.lisp"],
+    "solution": ["book-store.lisp"],
+    "example": [".meta/example.lisp"]
+  },
+  "authors": ["PaulT89"],
+  "contributors": ["verdammelt"]
+}
