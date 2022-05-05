@@ -1,0 +1,340 @@
+import json, toml, os
+from custom_json_encoder import CustomJSONEncoder
+
+TARGET = os.path.abspath("./exercises/practice")
+
+def create_directory_structure(exercise_name):
+    """
+    Creates the exercise, .meta, and .docs directories.
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
+    """
+    if not os.path.exists(exercise := f"{TARGET}/{exercise_name}"):
+        os.makedirs(exercise)
+    if not os.path.exists(meta := f"{exercise}/.meta"):
+        os.makedirs(meta)
+    if not os.path.exists(docs := f"{exercise}/.docs"):
+        os.makedirs(docs)
+
+
+def create_meta_config(exercise_name, prob_spec_exercise, author):
+    """
+    Auto-generates the .meta/config.json file.
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
+
+    Parameter prob_spec_exercise: A filepath to the location of the exercise folder
+    in the problem-specifications repository.
+    Precondition: prob_spec_exercise is a string of a valid filepath.
+
+    Parameter author: The Github handle of the author.
+    Precondition: author is a string.
+    """
+    config_data = None
+    with open(f"{prob_spec_exercise}/metadata.toml") as file:
+        config_data = toml.load(file) # Get the blurb, source, and source_url
+
+    # Add the files, authors, and contributors to the config_data
+    config_data["files"] = {}
+    config_data["files"]["test"] = [f"{exercise_name}-test.lisp"]
+    config_data["files"]["solution"] = [f"{exercise_name}.lisp"]
+    config_data["files"]["example"] = [".meta/example.lisp"]
+    config_data["authors"] = [author]
+    config_data["contributors"] = []
+
+    with open(f"{TARGET}/{exercise_name}/.meta/config.json", 'w') as file:
+        # Encode into a string in json format and write to file
+        file.write(json.dumps(config_data, cls = CustomJSONEncoder, indent = 3))
+
+
+def create_instructions(exercise_name, prob_spec_exercise):
+    """
+    Auto-generates the .docs/instructions.md file
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
+
+    Parameter prob_spec_exercise: A filepath to the location of the exercise folder
+    in the problem-specifications repository.
+    Precondition: prob_spec_exercise is a string of a valid filepath.
+    """
+    with open(f"{prob_spec_exercise}/description.md", 'r') as read_from:
+        with open(f"{TARGET}/{exercise_name}/.docs/instructions.md", 'w') as write_to:
+            # Replace first line with "# Instructions\n" during copy process
+            write_to.write("# Instructions\n" + "\n".join(read_from.read().split("\n")[1:]))
+
+
+def create_test_example_solution_files(exercise_name, prob_spec_exercise):
+    """
+    Auto-generates the test file.
+
+    Function creates the test file in its own right, but also calls the
+    create_example_and_solution_files function.  This function also creates
+    the parameters to feed into the create_example_and_solution_files function.
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
+
+    Parameter prob_spec_exercise: A filepath to the location of the exercise folder
+    in the problem-specifications repository.
+    Precondition: prob_spec_exercise is a string of a valid filepath.
+    """
+    data = None
+    with open(f"{prob_spec_exercise}/canonical-data.json") as file:
+        data = json.load(file)
+
+    # Boilerplate test code.  Multiline docstring format used to maintain
+    # correct indentation and to increase readability.
+    exercise_string = """;; Ensures that {0}.lisp and the testing library are always loaded
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (load "{0}")
+  (quicklisp-client:quickload :fiveam))
+
+;; Defines the testing package with symbols from {0} and FiveAM in scope
+;; The `run-tests` function is exported for use by both the user and test-runner
+(defpackage :{0}-test
+  (:use :cl :fiveam)
+  (:export :run-tests))
+
+;; Enter the testing package
+(in-package :{0}-test)
+
+;; Define and enter a new FiveAM test-suite
+(def-suite* {0}-suite)
+""".format(exercise_name)
+
+    # func_name_dict is a dictionary of all function names and their
+    # expected input argument names.
+    func_name_dict, tests_string = create_test(data["cases"])
+
+    # tests_string is sandwiched between exercise_string and more boilerplate
+    # code at the end of the file.
+    exercise_string += tests_string + """
+(defun run-tests (&optional (test-or-suite '{0}-suite))
+  "Provides human readable results of test run. Default to entire suite."
+  (run! test-or-suite))
+""".format(exercise_name)
+
+    with open(f"{TARGET}/{exercise_name}/{exercise_name}-test.lisp", 'w') as file:
+        file.write(exercise_string)
+
+    create_example_and_solution_files(exercise_name, func_name_dict)
+
+
+def create_test(cases, fnd = dict()):
+    """
+    Auto-generates tests for the test file.
+
+    Parameter cases: A list of test cases to be Lispified.
+
+    Parameter fnd: A dictionary of all function names and their expected
+    input argument names.
+    Precondition: fnd is a dictionary.
+
+    Returns a tuple of fnd and the test string
+    """
+    output = ""
+    for case in cases:
+        try:
+            # Add function_name and func_params to fnd
+            function_name = case["property"]
+            func_params = list(case["input"])
+            fnd[function_name] = func_params
+
+            # Prepare the variables and their associated values for
+            # implementation inside a "let"
+            arg_pairs = ["({0} {1})".format(var, lispify(value)) for var, value in case["input"].items()]
+            let_args = ("\n" + " " * 10).join(arg_pairs)
+
+            # Create the test name and expected result
+            description = case["description"].replace(" ", "-").lower()
+            expected = lispify(case["expected"])
+
+            # Multiline docstring format used to maintain correct indentation
+            # and to increase readability.
+            output += """
+(test {0}
+    (let ({1})
+     (is (equalp {2} ({3}:{4} {5})))))
+""".format(description,
+           let_args,
+           expected,
+           exercise_name,
+           function_name,
+           " ".join(func_params))
+        except KeyError:
+            # Recursively dig further into the data structure
+            fnd, string = create_test(case["cases"], fnd)
+            output += string
+
+    return fnd, output
+
+
+def create_example_and_solution_files(exercise_name, func_name_dict):
+    """
+    Auto-generates the .meta/example.lisp and the 'exercise'.lisp files.
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
+
+    Parameter func_name_dict: A dictionary of all function names and their
+    expected input argument names.
+    Precondition: func_name_dict is a dictionary.
+    """
+    # Create keywords of function names to be exported (vertically aligned)
+    exports_string = ("\n" + " " * 11).join([":" + k for k in func_name_dict])
+
+    # Boilerplate code.  Multiline docstring format used to maintain
+    # correct indentation and to increase readability.
+    file_string = """(defpackage :{0}
+  (:use :cl)
+  (:export {1}))
+
+(in-package :{0})
+""".format(exercise_name, exports_string)
+
+    # For each function-parameters pairing, add the requisite function
+    # definition to the file.
+    for func, params in func_name_dict.items():
+        file_string += "\n(defun {0} ({1}))\n".format(func, " ".join(params))
+
+    with open(f"{TARGET}/{exercise_name}/{exercise_name}.lisp", 'w') as file:
+        file.write(file_string)
+
+    with open(f"{TARGET}/{exercise_name}/.meta/example.lisp", 'w') as file:
+        file.write(file_string)
+
+
+def create_test_toml(exercise_name, prob_spec_exercise):
+    """
+    Auto-generates the .meta/tests.toml file.
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
+
+    Parameter prob_spec_exercise: A filepath to the location of the exercise folder
+    in the problem-specifications repository.
+    Precondition: prob_spec_exercise is a string of a valid filepath.
+    """
+    # Nested helper function that will either build a string in a toml
+    # style, or recursively dig until it finds the data and then build
+    # a string.
+    def find_uuids_and_descriptions(cases):
+        output = ""
+        for case in cases:
+            try:
+                # Add lines in toml style
+                output += "\n[{0}]\ndescription = {1}\n".format(case["uuid"], case["description"])
+            except KeyError:
+                # Recursively dig further into the data structure
+                output += find_uuids_and_descriptions(case["cases"])
+
+        return output
+
+    # Non-nested code starts here
+    data = None
+    with open(f"{prob_spec_exercise}/canonical-data.json") as file:
+        data = json.load(file)
+
+    # Boilerplate comment at top of test.toml
+    toml_string = """# This is an auto-generated file. Regular comments will be removed when this
+# file is regenerated. Regenerating will not touch any manually added keys,
+# so comments can be added in a "comment" key.
+"""
+    toml_string += find_uuids_and_descriptions(data["cases"])
+
+    with open(f"{TARGET}/{exercise_name}/.meta/tests.toml", 'w') as file:
+        file.write(toml_string)
+
+
+def brand_new_exercise(exercise_name :str, prob_spec_exercise :str, author :str = ""):
+    """
+    A delegation function.
+
+    Call this function to build the exercise.
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
+
+    Parameter prob_spec_exercise: A filepath to the location of the exercise folder
+    in the problem-specifications repository.
+    Precondition: prob_spec_exercise is a string of a valid filepath.
+
+    Parameter author: The Github handle of the author.
+    Precondition: author is a string.
+    """
+    # This MUST be called first
+    create_directory_structure(exercise_name)
+
+    # The order that these functions are called is unimportant
+    create_meta_config(exercise_name, prob_spec_exercise, author)
+    create_instructions(exercise_name, prob_spec_exercise)
+    create_test_example_solution_files(exercise_name, prob_spec_exercise)
+    create_test_toml(exercise_name, prob_spec_exercise)
+
+
+def lispify(value):
+    """
+    Converts a given value from a Python data type into its Lisp counterpart.
+
+    Returns the following conversions:
+        lists/arrays -> lists
+        ints -> ints
+        floats -> floats
+        strings -> strings (or chars if string len == 1)
+        dicts -> acons lists (or NIL if key == "error")
+        bools -> T or NIL
+
+    Parameter value: The value which needs to be converted (i.e. Lispified).
+    """
+    if isinstance(value, list):
+        return "'(" + " ".join([lispify(v) for v in value]) + ")"
+    elif isinstance(value, int) or isinstance(value, float):
+        return str(value)
+    elif isinstance(value, str):
+        return "#/" + value if len(value) == 1 else '"' + value + '"'
+    elif isinstance(value, dict):
+        acons_list = []
+        for k, v in value.items():
+            if k == "error":
+                return "NIL"
+            acons_list += ["({0} . {1})".format(lispify(k), lispify(v))]
+        return "'(" + " ".join(acons_list) + ")"
+    elif isinstance(value, bool):
+        return "T" if value else "NIL"
+    else:
+        raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
+
+
+if __name__ == '__main__':
+    exercise_name = None
+    prob_spec = None
+
+    while prob_spec == None or not os.path.exists(f"{prob_spec}/exercises"):
+        fp = input("Enter the path (relative or absolute) to the problem-specifications repository: ")
+        prob_spec = os.path.abspath(fp)
+
+    top_loop = True
+    while top_loop:
+        while exercise_name == None or not os.path.exists(f"{prob_spec}/exercises/{exercise_name}"):
+            exercise_name = input("Enter the name of the exercise you wish to generate: ")
+        if os.path.exists(f"{TARGET}/{exercise_name}"):
+            while True:
+                confirmation = input("You are about to overwrite an existing exercise!  Confirm (Y/N): ")
+                confirmation = confirmation.upper()
+                if confirmation == "Y" or confirmation == "YES":
+                    top_loop = False
+                    break
+                elif confirmation == "N" or confirmation == "NO":
+                    exercise_name = None
+                    break
+        else:
+            break
+
+    author = input("Author Name: ")
+
+    prob_spec_exercise = f"{prob_spec}/exercises/{exercise_name}"
+    brand_new_exercise(exercise_name, prob_spec_exercise, author)
+    print("\nDone!")

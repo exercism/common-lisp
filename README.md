@@ -20,7 +20,7 @@ There are several ways to contribute to the Common Lisp track including (but not
 
 There are two guides to the structure of the track and tooling which would be good to be familiar with.
 
-* The [language track guide][language-track-guide]. 
+* The [language track guide][language-track-guide].
 This describes how all the language tracks are put together, as well
 as details about the common metadata.
 
@@ -29,7 +29,7 @@ This describes the interface to the various tooling (test runner, representer an
 
 ### Issues
 
-Feel free to file an issues on the [track repository][track-issues] for problems of any size. 
+Feel free to file an issues on the [track repository][track-issues] for problems of any size.
 Feel free to report typographical errors or poor wording for example.
 You can greatly help improve the quality of the exercises by filing reports of invalid solutions that pass tests or of valid solutions that fail tests.
 
@@ -56,15 +56,30 @@ The work needed for a concept exercise can be large, feel free to create an [iss
 Practice exercises are intended to allow a student to further practice and extend their knowledge of a concept.
 They can be longer and/or more 'clever'.
 Refer to the document on the [anatomy of a practice exercise][practice-exercise] for details of the parts that are needed for a concept exercise.
+
+#### Practice Exercise Generation
+
 Many practice exercises are part of a canonical set of exercises shared across tracks (information on this can be found in the [problem specifications repository][problem-specs].
-Before creating a new practice exercise please see if there is already a canonical problem defined there, if there is, this track will want to adhere to it rather than implementing something different.
+If you have Python installed, then there is a generator in the ./bin folder that you can use to generate all of the requisite files from the problem-specifications.
+To run it, navigate to your common-lisp repository and enter the following:
+
+```sh
+python ./bin/lisp_exercise_generator.py
+```
+
+From there, you will be prompted to provide three further pieces of information.
+(Note, you _will_ need to have cloned the [problem specifications repository][problem-specs].)
+This script will generate and fill in all the necessary files, with the exception of the .meta/example.lisp file, which you will need to complete yourself.
+*The common-lisp/config.json file will remain unaltered* - you will have to manually alter that file.
+
+A Common Lisp replacement for this generator will be coming "soon".
 
 ## Development Setup
 
 This track uses [SBCL][sbcl] for its development.
-Since Common Lisp is a standardized language and (at present) exercises only use features and behavior specified by the standard any other conforming implementation could be used for development of features for the track. 
-However any tooling created for this track (such as part of its build system) must work in [SBCL][sbcl]. 
-It is outside the scope of this document to describe how to install a Common Lisp implementation. 
+Since Common Lisp is a standardized language and (at present) exercises only use features and behavior specified by the standard any other conforming implementation could be used for development of features for the track.
+However any tooling created for this track (such as part of its build system) must work in [SBCL][sbcl].
+It is outside the scope of this document to describe how to install a Common Lisp implementation.
 Please refer to the documentation for your chosen implementation for details.
 
 The track also uses [QuickLisp][quicklisp] for system management.
@@ -120,4 +135,3 @@ To run the build "manually" execute the following from the root directory of the
 [workflow-config-checker]: https://github.com/exercism/common-lisp/blob/main/.github/workflows/config-checker.yml
 [workflow-configlet]: https://github.com/exercism/common-lisp/blob/main/.github/workflows/configlet.yml
 [workflow-text-exercises]: https://github.com/exercism/common-lisp/blob/main/.github/workflows/test-exercises.yml
-
