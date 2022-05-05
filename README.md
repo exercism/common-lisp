@@ -60,16 +60,16 @@ Refer to the document on the [anatomy of a practice exercise][practice-exercise]
 #### Practice Exercise Generation
 
 Many practice exercises are part of a canonical set of exercises shared across tracks (information on this can be found in the [problem specifications repository][problem-specs].
-If you have Python installed, then there is a generator in the ./bin folder that you can use to generate all of the requisite files from the problem-specifications.
+There is a generator in the ./bin folder that you can use to generate all of the requisite files from the problem-specifications.
 To run it, navigate to your common-lisp repository and enter the following:
 
 ```sh
-python ./bin/lisp_exercise_generator.py
+./bin/lisp_exercise_generator
 ```
 
 From there, you will be prompted to provide three further pieces of information.
 (Note, you _will_ need to have cloned the [problem specifications repository][problem-specs].)
-This script will generate and fill in all the necessary files, with the exception of the .meta/example.lisp file, which you will need to complete yourself.
+This will generate and fill in all the necessary files, with the exception of the .meta/example.lisp file, which you will need to complete yourself.
 *The common-lisp/config.json file will remain unaltered* - you will have to manually alter that file.
 
 A Common Lisp replacement for this generator will be coming "soon".
