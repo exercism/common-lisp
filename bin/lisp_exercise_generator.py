@@ -1,7 +1,13 @@
-import json, toml, os
+import json, toml, os, argparse, sys
 from custom_json_encoder import CustomJSONEncoder
 
-TARGET = os.path.abspath("./exercises/practice")
+
+def find_common_lisp_main():
+    up_one = os.path.split(os.getcwd())[0]
+    return ".." if os.path.split(up_one)[1] == "common-lisp" else "."
+
+TARGET = os.path.abspath(find_common_lisp_main() + "/exercises/practice")
+
 
 def create_directory_structure(exercise_name):
     """
@@ -107,7 +113,7 @@ def create_test_example_solution_files(exercise_name, prob_spec_exercise):
 
     # func_name_dict is a dictionary of all function names and their
     # expected input argument names.
-    func_name_dict, tests_string = create_test(data["cases"])
+    func_name_dict, tests_string = create_test(data["cases"], exercise_name)
 
     # tests_string is sandwiched between exercise_string and more boilerplate
     # code at the end of the file.
@@ -123,11 +129,14 @@ def create_test_example_solution_files(exercise_name, prob_spec_exercise):
     create_example_and_solution_files(exercise_name, func_name_dict)
 
 
-def create_test(cases, fnd = dict()):
+def create_test(cases, exercise_name, fnd = dict()):
     """
     Auto-generates tests for the test file.
 
     Parameter cases: A list of test cases to be Lispified.
+
+    Parameter exercise_name: Name of the exercise to be generated.
+    Precondition: exercise_name is a string of a valid exercise.
 
     Parameter fnd: A dictionary of all function names and their expected
     input argument names.
@@ -166,7 +175,7 @@ def create_test(cases, fnd = dict()):
            " ".join(func_params))
         except KeyError:
             # Recursively dig further into the data structure
-            fnd, string = create_test(case["cases"], fnd)
+            fnd, string = create_test(case["cases"], exercise_name, fnd)
             output += string
 
     return fnd, output
@@ -308,7 +317,7 @@ def lispify(value):
         raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
 
 
-if __name__ == '__main__':
+def no_arguments():
     exercise_name = None
     prob_spec = None
 
@@ -333,8 +342,70 @@ if __name__ == '__main__':
         else:
             break
 
-    author = input("Author Name: ")
+    author = input("Author's Github handle: ")
 
     prob_spec_exercise = f"{prob_spec}/exercises/{exercise_name}"
     brand_new_exercise(exercise_name, prob_spec_exercise, author)
+
+
+def execute_via_cli(args):
+    prob_spec = os.path.abspath(args.Path)
+    if not os.path.exists(f"{prob_spec}/exercises"):
+        print("lisp_exercise_generator: error: problem-specifications repository not found")
+        sys.exit()
+
+    exercise_name = args.Exercise
+    if not os.path.exists(f"{prob_spec}/exercises/{exercise_name}"):
+        print("lisp_exercise_generator: error: exercise does not exist in problem-specifications repository")
+        sys.exit()
+
+    if os.path.exists(f"{TARGET}/{exercise_name}") and not args.f:
+        print("lisp_exercise_generator: error: exercise already exists in common-lisp repository")
+        sys.exit()
+
+    author = args.Author
+    prob_spec_exercise = f"{prob_spec}/exercises/{exercise_name}"
+    brand_new_exercise(exercise_name, prob_spec_exercise, author)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(prog = "lisp_exercise_generator",
+                                     description = "Practice exercise generator for Common Lisp",
+                                     usage = "%(prog)s [-f] [path exercise author]")
+
+    parser.add_argument("Path",
+                        metavar = "path",
+                        action = "store",
+                        type = str,
+                        help = "relative or absolute path to problem-specifications repository",
+                        nargs = "?")
+    parser.add_argument("Exercise",
+                        metavar = "exercise",
+                        action = "store",
+                        type = str,
+                        help = "name of the exercise to be generated",
+                        nargs = "?")
+    parser.add_argument("Author",
+                        metavar = "author",
+                        action = "store",
+                        type = str,
+                        help = "author's Github handle",
+                        nargs = "?")
+    parser.add_argument("-f",
+                        action = "store_true",
+                        help = "force overwrite of existing exercise folder")
+
+    args = parser.parse_args()
+
+    arg_states = [args.Path == None, args.Exercise == None, args.Author == None]
+
+    if all(arg_states):
+        no_arguments()
+    elif any(arg_states):
+        arg_num = arg_states.count(False)
+        print(f"lisp_exercise_generator: error: expected 0 or 3 arguments - received {arg_num}")
+        sys.exit()
+    else:
+        execute_via_cli(args)
+
     print("\nDone!")
