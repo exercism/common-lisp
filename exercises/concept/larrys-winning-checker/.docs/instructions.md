@@ -26,12 +26,12 @@ For example:
 ## 3. Winning condition
 
 If there is a case where there are 3 of the same symbol in a row then that player has won.
-Larry will need a function `all-the-same-p` which given an array of 3 items will evaluate to `T` if all the items are the same symbol.
+Larry will need a function, `all-the-same-p`, which given an array of 3 items will evaluate to `T` if all the items are the same symbol.
 (`eq` can be used to determine if two symbols are the same.)
 
 ```lisp
-(eq 'a 'a) ; => T
-(eq 'a 'b) ; => NIL
+(all-the-same-p #(A A A)) ; => T
+(all-the-same-p #(A B C)) ; => NIL
 ```
 
 ## 4. In a row
