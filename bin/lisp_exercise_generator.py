@@ -299,7 +299,7 @@ def lispify(value):
     Parameter value: The value which needs to be converted (i.e. Lispified).
     """
     if isinstance(value, list):
-        return "'(" + " ".join([lispify(v) for v in value]) + ")"
+        return "(list" + " ".join([lispify(v) for v in value]) + ")"
     elif isinstance(value, int) or isinstance(value, float):
         return str(value)
     elif isinstance(value, str):
@@ -310,7 +310,7 @@ def lispify(value):
             if k == "error":
                 return "NIL"
             acons_list += ["({0} . {1})".format(lispify(k), lispify(v))]
-        return "'(" + " ".join(acons_list) + ")"
+        return "(list" + " ".join(acons_list) + ")"
     elif isinstance(value, bool):
         return "T" if value else "NIL"
     else:
