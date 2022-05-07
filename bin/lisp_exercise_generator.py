@@ -300,6 +300,8 @@ def lispify(value):
     """
     if isinstance(value, list):
         return "(list" + " ".join([lispify(v) for v in value]) + ")"
+    elif isinstance(value, bool):
+        return "T" if value else "NIL"
     elif isinstance(value, int) or isinstance(value, float):
         return str(value)
     elif isinstance(value, str):
@@ -311,8 +313,6 @@ def lispify(value):
                 return "NIL"
             acons_list += ["({0} . {1})".format(lispify(k), lispify(v))]
         return "(list" + " ".join(acons_list) + ")"
-    elif isinstance(value, bool):
-        return "T" if value else "NIL"
     else:
         raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
 
