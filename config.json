@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run Length Encoding",
+        "uuid": "bb589f12-5aaf-48bf-a105-97396d7533de",
+        "difficulty": 4,
+        "practices": ["strings", "characters"],
+        "prerequisites": ["strings", "conditionals", "characters", "format-basics"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
