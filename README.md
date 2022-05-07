@@ -62,29 +62,30 @@ Refer to the document on the [anatomy of a practice exercise][practice-exercise]
 Many practice exercises are part of a canonical set of exercises shared across tracks (information on this can be found in the [problem specifications repository][problem-specs].
 There is a generator in the ./bin folder that you can use to generate all of the requisite files from the problem-specifications.
 (Note, you _will_ need to have cloned the [problem specifications repository][problem-specs] for the generator to work.)
-You can run the executable directly by double-clicking on it and following the prompts, or you can run it from the command line.
+The generator is written in Python, and you will therefore need to have Python 3.8 or later installed.
+You can run the script directly and follow the prompts, or you can run it from the command line.
 If you wish to run the generator from the command line, first navigate to your common-lisp repository.
 From here, there are two ways to run the generator, the first way being to enter the following:
 
 ```sh
-./bin/lisp_exercise_generator
+python ./bin/lisp_exercise_generator.py
 ```
 
 and from there, follow the prompts.
 The second way is to type in:
 
 ```sh
-./bin/lisp_exercise_generator [-f] [path-to-prob-spec exercise author]
+python ./bin/lisp_exercise_generator.py [-f] [path exercise author]
 ```
 
 where:
-- path-to-prob-spec is the relative or absolute path to your problem-specifications repository
+- path is the relative or absolute path to your problem-specifications repository
 - exercise is the name of the exercise to be generated
 - author is your Github handle
-- -f is a flag to force overwrite an existing exercise
+- -f is a flag to force overwrite an already existing exercise
 
 Any one of these methods will generate and fill in all the necessary files, with the exception of the .meta/example.lisp file, which you will need to complete yourself.
-**The common-lisp/config.json file will remain unaltered** - you will have to manually alter this file.
+**The common-lisp/config.json file will remain unaltered - you will have to manually alter this file.**
 
 A Common Lisp replacement for this generator will be coming "soon".
 

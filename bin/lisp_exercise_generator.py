@@ -166,7 +166,7 @@ def create_test(cases, exercise_name, fnd = dict()):
             output += """
 (test {0}
     (let ({1})
-     (is (equalp {2} ({3}:{4} {5})))))
+     (is (equal {2} ({3}:{4} {5})))))
 """.format(description,
            let_args,
            expected,
