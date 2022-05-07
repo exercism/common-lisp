@@ -31,7 +31,7 @@ Define a function `log-severity` which will take a log string and evaluate to th
 Unfortunately sometimes the log strings are not always formatted correctly. Specifically the log level may be not all lower case as specified above. Modify `log-severity` to handle this.
 
 ```lisp
-(log-severity "[WaRn] string case system failing") ; => :getting-worried
+(log-severity "[WaRn]: string case system failing") ; => :getting-worried
 ```
 
 ## 4. Reformatting the log message according to log severity
