@@ -11,7 +11,7 @@
 (defun eliminate-pairs (tracker bracket)
   (cond
     ((not tracker) (cons bracket tracker))
-    ((or (and (char= (car tracker) #\()) (char= bracket #\))
-         (and (char= (car tracker) #\{)) (char= bracket #\})
-         (and (char= (car tracker) #\[)) (char= bracket #\])) (cdr tracker))
+    ((or (and (char= #\( (car tracker)) (char= #\) bracket))
+         (and (char= #\{ (car tracker)) (char= #\} bracket))
+         (and (char= #\[ (car tracker)) (char= #\] bracket))) (cdr tracker))
     (t (cons bracket tracker))))
