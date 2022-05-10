@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "29edfde1-ba04-4502-80e2-8a52092e18a9",
+        "difficulty": 5,
+        "practices": ["functions", "mapping", "conditionals"],
+        "prerequisites": ["conditionals", "strings", "characters", "mapping", "functions"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
