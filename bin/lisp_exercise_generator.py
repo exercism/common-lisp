@@ -1,6 +1,7 @@
-import json, toml, os, argparse, sys
+import json, toml, os, argparse, sys, string
 from custom_json_encoder import CustomJSONEncoder
 
+LEGITIMATE_CHARS = string.ascii_lowercase + string.digits + " -"
 
 def find_common_lisp_main():
     up_one = os.path.split(os.getcwd())[0]
@@ -53,6 +54,7 @@ def create_meta_config(exercise_name, prob_spec_exercise, author):
     with open(f"{TARGET}/{exercise_name}/.meta/config.json", 'w') as file:
         # Encode into a string in json format and write to file
         file.write(json.dumps(config_data, cls = CustomJSONEncoder, indent = 3))
+        file.write("\n")
 
 
 def create_instructions(exercise_name, prob_spec_exercise):
@@ -144,12 +146,15 @@ def create_test(cases, exercise_name, fnd = dict()):
 
     Returns a tuple of fnd and the test string
     """
+    def camel_to_kebab_case(string):
+        return "".join([f"-{c.lower()}" if c.isupper() else c for c in string])
+
     output = ""
     for case in cases:
         try:
             # Add function_name and func_params to fnd
-            function_name = case["property"]
-            func_params = list(case["input"])
+            function_name = camel_to_kebab_case(case["property"])
+            func_params = [camel_to_kebab_case(param) for param in list(case["input"])]
             fnd[function_name] = func_params
 
             # Prepare the variables and their associated values for
@@ -158,7 +163,8 @@ def create_test(cases, exercise_name, fnd = dict()):
             let_args = ("\n" + " " * 10).join(arg_pairs)
 
             # Create the test name and expected result
-            description = case["description"].replace(" ", "-").lower()
+            cleaned = [c for c in case["description"].lower() if c in LEGITIMATE_CHARS]
+            description = "".join(cleaned).replace(" ", "-")
             expected = lispify(case["expected"])
 
             # Multiline docstring format used to maintain correct indentation
@@ -166,7 +172,7 @@ def create_test(cases, exercise_name, fnd = dict()):
             output += """
 (test {0}
     (let ({1})
-     (is (equal {2} ({3}:{4} {5})))))
+      (is (equal {2} ({3}:{4} {5})))))
 """.format(description,
            let_args,
            expected,
@@ -312,7 +318,7 @@ def lispify(value):
             if k == "error":
                 return "NIL"
             acons_list += ["({0} . {1})".format(lispify(k), lispify(v))]
-        return "(list" + " ".join(acons_list) + ")"
+        return "(list " + " ".join(acons_list) + ")"
     else:
         raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
 
