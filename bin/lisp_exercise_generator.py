@@ -296,16 +296,16 @@ def lispify(value):
 
     Returns the following conversions:
         lists/arrays -> lists
+        bools -> T or NIL
         ints -> ints
         floats -> floats
         strings -> strings (or chars if string len == 1)
         dicts -> acons lists (or NIL if key == "error")
-        bools -> T or NIL
 
     Parameter value: The value which needs to be converted (i.e. Lispified).
     """
     if isinstance(value, list):
-        return "(list" + " ".join([lispify(v) for v in value]) + ")"
+        return "(" + " ".join(["list"] + [lispify(v) for v in value]) + ")"
     elif isinstance(value, bool):
         return "T" if value else "NIL"
     elif isinstance(value, int) or isinstance(value, float):
@@ -317,8 +317,8 @@ def lispify(value):
         for k, v in value.items():
             if k == "error":
                 return "NIL"
-            acons_list += ["({0} . {1})".format(lispify(k), lispify(v))]
-        return "(list " + " ".join(acons_list) + ")"
+            acons_list += ["'({0} . {1})".format(lispify(k), lispify(v))]
+        return "(" + " ".join(["list"] + acons_list) + ")"
     else:
         raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
 
