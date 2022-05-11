@@ -149,11 +149,20 @@ def create_test(cases, exercise_name, fnd = dict()):
     def camel_to_kebab_case(string):
         return "".join([f"-{c.lower()}" if c.isupper() else c for c in string])
 
+    def convert_if_predicate(string, expected_result):
+        if not isinstance(expected_result, bool):
+            return string
+        if (partitioned := string.partition("-"))[2]:
+            return partitioned[2] + ("-p" if '-' in partitioned[2] else "p")
+        else:
+            return partioned[0] + "p"
+
     output = ""
     for case in cases:
         try:
             # Add function_name and func_params to fnd
-            function_name = camel_to_kebab_case(case["property"])
+            kebab_func_name = camel_to_kebab_case(case["property"])
+            function_name = convert_if_predicate(kebab_func_name, case["expected"])
             func_params = [camel_to_kebab_case(param) for param in list(case["input"])]
             fnd[function_name] = func_params
 
