@@ -687,6 +687,15 @@
         "practices": ["strings", "arrays"],
         "prerequisites": ["strings", "arrays", "functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "3b972dcf-536e-4a42-9b39-040ac7f40f2f",
+        "difficulty": 6,
+        "practices": ["conditionals", "functions"],
+        "prerequisites": ["conditionals", "functions"],
+        "status": "beta"
       }
     ],
     "foregone": [
