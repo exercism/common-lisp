@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "sum-of-multiples",
+        "name": "Sum of Multiples",
+        "uuid": "91d0b2c3-12b5-4413-9f34-cdae085da94e",
+        "difficulty": 3,
+        "practices": ["lists"],
+        "prerequisites": ["lists", "integers", "functions"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
