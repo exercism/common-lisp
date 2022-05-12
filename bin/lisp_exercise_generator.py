@@ -68,8 +68,10 @@ def create_instructions(exercise_name, prob_spec_exercise):
     in the problem-specifications repository.
     Precondition: prob_spec_exercise is a string of a valid filepath.
     """
-    with open(f"{prob_spec_exercise}/description.md", 'r') as read_from:
-        with open(f"{TARGET}/{exercise_name}/.docs/instructions.md", 'w') as write_to:
+    input_file = f"{prob_spec_exercise}/description.md"
+    output_file = f"{TARGET}/{exercise_name}/.docs/instructions.md"
+    with open(input_file, 'r', encoding = "utf-8") as read_from:
+        with open(output_file, 'w', encoding = "utf-8") as write_to:
             # Replace first line with "# Instructions\n" during copy process
             write_to.write("# Instructions\n" + "\n".join(read_from.read().split("\n")[1:]))
 
