@@ -175,23 +175,12 @@ def create_test(cases, exercise_name, fnd = dict()):
             arg_pairs = ["({0} {1})".format(var, lispify(value)) for var, value in case["input"].items()]
             let_args = ("\n" + " " * 10).join(arg_pairs)
 
-            # Create the test name and expected result
+            # Create the test name
             cleaned = [c for c in case["description"].lower() if c in LEGITIMATE_CHARS]
             description = "".join(cleaned).replace(" ", "-")
-            expected = lispify(case["expected"])
-
-            # Multiline docstring format used to maintain correct indentation
-            # and to increase readability.
-            output += """
-(test {0}
-    (let ({1})
-      (is (equal {2} ({3}:{4} {5})))))
-""".format(description,
-           let_args,
-           expected,
-           exercise_name,
-           function_name,
-           " ".join(func_params))
+            
+            output += create_test_string(description, let_args, case["expected"],
+                                         exercise_name, function_name, func_params)
         except KeyError:
             # Recursively dig further into the data structure
             fnd, string = create_test(case["cases"], exercise_name, fnd)
@@ -199,6 +188,30 @@ def create_test(cases, exercise_name, fnd = dict()):
 
     return fnd, output
 
+def create_test_string(desc, args, expected, exercise, func_name, func_params):
+    # Multiline docstring format used to maintain correct indentation
+    # and to increase readability.
+    if isinstance(expected, bool):
+        return """
+(test {0}
+    (let ({1})
+      (is-{2} ({3}:{4} {5}))))
+""".format(desc, args,
+           str(expected).lower(),
+           exercise,
+           func_name,
+           " ".join(func_params))
+    else:
+        return """
+(test {0}
+    (let ({1})
+      (is (equal {2} ({3}:{4} {5})))))
+""".format(desc,
+           args,
+           lispify(expected),
+           exercise,
+           func_name,
+           " ".join(func_params))
 
 def create_example_and_solution_files(exercise_name, func_name_dict):
     """
