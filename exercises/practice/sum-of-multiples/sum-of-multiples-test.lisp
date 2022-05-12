@@ -90,7 +90,7 @@
           (limit 4))
       (is (equal 3 (sum-of-multiples:sum factors limit)))))
 
-(test solutions-using-includeexclude-must-extend-to-cardinality-greater-than-3
+(test solutions-using-include-exclude-must-extend-to-cardinality-greater-than-3
     (let ((factors (list 2 3 5 7 11))
           (limit 10000))
       (is (equal 39614537 (sum-of-multiples:sum factors limit)))))
