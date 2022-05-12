@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "Isbn Verifier",
+        "uuid": "d234aba4-daa2-4573-b9df-4592589f2ccf",
+        "difficulty": 5,
+        "practices": ["strings", "filtering", "mapping", "arithmetic"],
+        "prerequisites": ["strings", "filtering", "mapping", "arithmetic", "functions", "conditionals"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
