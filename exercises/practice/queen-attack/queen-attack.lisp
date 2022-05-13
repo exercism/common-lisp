@@ -6,6 +6,8 @@
 
 (in-package :queen-attack)
 
+(defstruct queen row column)
+
 (defun create (coordinates))
 
 (defun attackp (white-queen black-queen))
