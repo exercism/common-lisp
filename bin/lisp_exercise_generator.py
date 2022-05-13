@@ -149,8 +149,10 @@ def create_test(cases, exercise_name, fnd = dict()):
     Returns a tuple of fnd and the test string
     """
     # Helper functions only used in create_test function
-    def camel_to_kebab_case(string):
-        return "".join([f"-{c.lower()}" if c.isupper() else c for c in string])
+    def to_kebab_case(string):
+        from_snake = string.replace("_", "-")
+        from_camel = "".join([f"-{c.lower()}" if c.isupper() else c for c in from_snake])
+        return from_camel
 
     def to_predicate(string, expected_result):
         if not isinstance(expected_result, bool):
@@ -165,20 +167,23 @@ def create_test(cases, exercise_name, fnd = dict()):
     for case in cases:
         try:
             # Add function_name and func_params to fnd
-            kebab_func_name = camel_to_kebab_case(case["property"])
+            kebab_func_name = to_kebab_case(case["property"])
             function_name = to_predicate(kebab_func_name, case["expected"])
-            func_params = [camel_to_kebab_case(param) for param in list(case["input"])]
+            func_params = [to_kebab_case(param) for param in list(case["input"])]
             fnd[function_name] = func_params
 
             # Prepare the variables and their associated values for
             # implementation inside a "let"
-            arg_pairs = ["({0} {1})".format(var, lispify(value)) for var, value in case["input"].items()]
+            arg_pairs = []
+            for var, value in case["input"].items():
+                arg = "({0} {1})".format(to_kebab_case(var), lispify(value))
+                arg_pairs.append(arg)
             let_args = ("\n" + " " * 10).join(arg_pairs)
 
             # Create the test name
             cleaned = [c for c in case["description"].lower() if c in LEGITIMATE_CHARS]
             description = "".join(cleaned).replace(" ", "-")
-            
+
             output += create_test_string(description, let_args, case["expected"],
                                          exercise_name, function_name, func_params)
         except KeyError:
