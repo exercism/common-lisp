@@ -194,29 +194,31 @@ def create_test(cases, exercise_name, fnd = dict()):
     return fnd, output
 
 def create_test_string(desc, args, expected, exercise, func_name, func_params):
+    result = ""
+    close_paren = ")"
+    if isinstance(expected, bool):
+        result = f"is-{str(expected).lower()}"
+        close_paren = ""
+    else:
+        equality = ""
+        if isinstance(expected, int) or isinstance(expected, float):
+            equality = "="
+        elif isinstance(expected, str) and len(expected) == 1:
+            equality = "char="
+        elif isinstance(expected, str):
+            equality = "string="
+        else:
+            equality = "equal"
+        result = f"is ({equality} {lispify(expected)}"
+
     # Multiline docstring format used to maintain correct indentation
     # and to increase readability.
-    if isinstance(expected, bool):
-        return """
+    return """
 (test {0}
     (let ({1})
-      (is-{2} ({3}:{4} {5}))))
-""".format(desc, args,
-           str(expected).lower(),
-           exercise,
-           func_name,
-           " ".join(func_params))
-    else:
-        return """
-(test {0}
-    (let ({1})
-      (is (equal {2} ({3}:{4} {5})))))
-""".format(desc,
-           args,
-           lispify(expected),
-           exercise,
-           func_name,
-           " ".join(func_params))
+      ({2} ({3}:{4} {5})))){6}
+""".format(desc, args, result, exercise, func_name, " ".join(func_params), close_paren)
+
 
 def create_example_and_solution_files(exercise_name, func_name_dict):
     """
