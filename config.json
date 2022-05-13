@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "d8756342-ee14-483f-9e2e-210b666ee4c1",
+        "difficulty": 6,
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals", "functions", "lists"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
