@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "7b699611-7119-4f4e-93bb-ff7dc3064357",
+        "difficulty": 7,
+        "practices": ["reducing", "mapping", "filtering"],
+        "prerequisites": ["reducing", "mapping", "filtering", "lists", "functions"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
