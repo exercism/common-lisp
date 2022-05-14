@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "22ad5969-163d-44db-a2a6-b9c6b0767598",
+        "difficulty": 4,
+        "practices": ["strings"],
+        "prerequisites": ["strings", "functions", "lists", "mapping"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]

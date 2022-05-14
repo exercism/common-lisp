@@ -1,0 +1,12 @@
+{
+   "blurb": "Implement encoding and decoding for the rail fence cipher.",
+   "source": "Wikipedia",
+   "source_url": "https://en.wikipedia.org/wiki/Transposition_cipher#Rail_Fence_cipher",
+   "files": {
+      "test": ["rail-fence-cipher-test.lisp"],
+      "solution": ["rail-fence-cipher.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}
