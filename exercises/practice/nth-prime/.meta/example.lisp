@@ -13,5 +13,5 @@
         when (= number primes) return x))))
 
 (defun not-prime-p (number)
-  (loop for x from 3 to (floor (sqrt number))
+  (loop for x from 3 to (isqrt number)
     when (zerop (mod number x)) return t))
