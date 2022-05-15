@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "761dc40f-7142-4f0c-abc8-a05042600f42",
+        "difficulty": 6,
+        "practices": ["strings", "functions"],
+        "prerequisites": ["strings", "functions", "lists", "format-basics"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account"]
