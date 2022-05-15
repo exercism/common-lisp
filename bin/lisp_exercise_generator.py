@@ -352,6 +352,8 @@ def lispify(value):
                 return "NIL"
             acons_list += ["'({0} . {1})".format(lispify(k), lispify(v))]
         return "(" + " ".join(["list"] + acons_list) + ")"
+    elif value is None:
+        return "NIL"
     else:
         raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
 
