@@ -16,7 +16,7 @@
     collect (subseq seq start end)))
 
 (defun string-to-product (seq)
-  (apply #'* (mapcar #'digit-char-p (coerce seq 'list))))
+  (apply #'* (map 'list #'digit-char-p seq)))
 
 (defun valid-input-p (digits span)
   (and (every #'digit-char-p digits)
