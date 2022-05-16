@@ -572,7 +572,7 @@
         "status": "beta"
       }
     ],
-    "foregone": ["accumulate", "bank-account"]
+    "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
   },
   "concepts": [
     {
