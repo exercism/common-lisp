@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "81ee1119-ddd8-412b-a9f4-7f4374c7cf46",
+        "difficulty": 5,
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals", "functions", "lists"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
