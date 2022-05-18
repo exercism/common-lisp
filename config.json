@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "5e5cc82c-48a5-4a9d-a07a-4a1e9990587c",
+        "difficulty": 3,
+        "practices": ["arrays"],
+        "prerequisites": ["arrays", "lists", "functions", "mapping", "filtering"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
