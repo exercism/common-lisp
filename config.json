@@ -570,6 +570,15 @@
         "practices": ["lists", "mapping", "functions"],
         "prerequisites": ["conditionals", "lists", "mapping", "arithmetic", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "93e19e42-f81d-42f0-b3ad-a0f5974ccf20",
+        "difficulty": 1,
+        "practices": ["arrays"],
+        "prerequisites": ["arrays"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
