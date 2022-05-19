@@ -4,6 +4,12 @@
 
 (in-package :saddle-points)
 
+(defun get-rows-or-columns (matrix dimension)
+  (loop for i from 0 below (array-dimension matrix dimension)
+    collect (loop for j from 0 below (array-dimension matrix (abs (1- dimension)))
+              if (zerop dimension) collect (aref matrix i j)
+              else collect (aref matrix j i))))
+
 (defun saddle-points (matrix)
   (unless (equal (array-dimensions matrix) '(1 0))
     (let* ((rows (get-rows-or-columns matrix 0))
@@ -15,9 +21,3 @@
              when (= r c)
              do (push (list i j) saddle-point-list))
         finally (return saddle-point-list)))))
-
-(defun get-rows-or-columns (matrix dimension)
-  (loop for i from 0 below (array-dimension matrix dimension)
-    collect (loop for j from 0 below (array-dimension matrix (abs (1- dimension)))
-              if (zerop dimension) collect (aref matrix i j)
-              else collect (aref matrix j i))))
