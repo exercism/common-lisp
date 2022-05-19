@@ -7,13 +7,6 @@
 
 (define-condition invalid-protein (error) ())
 
-(defun proteins (strand)
-  (let* ((len (length strand))
-         (cut-at (if (>= len 3) 3 len)))
-    (when (and (plusp len)
-               (setf codon (translate (subseq strand 0 cut-at))))
-      (cons codon (proteins (subseq strand 3))))))
-
 (defun translate (protein)
   (case (intern protein :keyword)
     (:AUG "Methionine")
@@ -25,3 +18,10 @@
     (:UGG "Tryptophan")
     ((:UAA :UAG :UGA) nil)
     (otherwise (error 'invalid-protein))))
+
+(defun proteins (strand)
+  (let* ((len (length strand))
+         (cut-at (if (>= len 3) 3 len)))
+    (when (and (plusp len)
+               (setf codon (translate (subseq strand 0 cut-at))))
+      (cons codon (proteins (subseq strand 3))))))

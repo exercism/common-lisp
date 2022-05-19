@@ -575,7 +575,7 @@
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "81ee1119-ddd8-412b-a9f4-7f4374c7cf46",
-        "difficulty": 5,
+        "difficulty": 4,
         "practices": ["conditionals"],
         "prerequisites": ["conditionals", "functions", "lists"],
         "status": "beta"
