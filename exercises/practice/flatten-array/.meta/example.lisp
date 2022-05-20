@@ -4,9 +4,6 @@
 
 (in-package :flatten-array)
 
-(defun flatten (nested)
-  (remove-if #'null (make-flat nested '())))
-
 (defun make-flat (nested flattened-list)
   (if (endp nested)
     flattened-list
@@ -15,3 +12,6 @@
       (if (atom item)
         (cons item (make-flat remains flattened-list))
         (make-flat item (make-flat remains flattened-list))))))
+
+(defun flatten (nested)
+  (remove-if #'null (make-flat nested '())))
