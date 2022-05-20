@@ -575,7 +575,7 @@
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "11ce78f7-7c28-4a8b-9560-055269aae7ff",
-        "difficulty": 3,
+        "difficulty": 2,
         "practices": ["arithmetic"],
         "prerequisites": ["arithmetic", "integers", "lists"],
         "status": "beta"
