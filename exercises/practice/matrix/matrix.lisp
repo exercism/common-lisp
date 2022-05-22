@@ -5,6 +5,6 @@
 
 (in-package :matrix)
 
-(defun row (input-array index))
+(defun row (input-matrix index))
 
-(defun column (input-array index))
+(defun column (input-matrix index))

@@ -575,9 +575,9 @@
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "93e19e42-f81d-42f0-b3ad-a0f5974ccf20",
-        "difficulty": 1,
-        "practices": ["arrays"],
-        "prerequisites": ["arrays"],
+        "difficulty": 4,
+        "practices": ["strings" "arrays"],
+        "prerequisites": ["strings", "arrays", "functions", "lists"],
         "status": "beta"
       }
     ],
