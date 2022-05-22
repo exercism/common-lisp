@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "22ad5969-163d-44db-a2a6-b9c6b0767598",
+        "difficulty": 4,
+        "practices": ["strings"],
+        "prerequisites": ["strings", "functions", "lists", "mapping"],
+        "status": "beta"
+      },
+      {
         "slug": "pig-latin",
         "name": "Pig Latin",
         "uuid": "761dc40f-7142-4f0c-abc8-a05042600f42",
