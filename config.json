@@ -579,6 +579,24 @@
         "practices": ["conditionals"],
         "prerequisites": ["conditionals", "functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "5e5cc82c-48a5-4a9d-a07a-4a1e9990587c",
+        "difficulty": 3,
+        "practices": ["arrays"],
+        "prerequisites": ["arrays", "lists", "functions", "mapping", "filtering"],
+        "status": "beta"
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "93e19e42-f81d-42f0-b3ad-a0f5974ccf20",
+        "difficulty": 4,
+        "practices": ["strings", "arrays"],
+        "prerequisites": ["strings", "arrays", "functions", "lists"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
