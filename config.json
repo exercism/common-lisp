@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "d8756342-ee14-483f-9e2e-210b666ee4c1",
+        "difficulty": 2,
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals"],
+        "status": "beta"
+      },
+      {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "11ce78f7-7c28-4a8b-9560-055269aae7ff",
