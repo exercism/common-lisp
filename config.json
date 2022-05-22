@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "11ce78f7-7c28-4a8b-9560-055269aae7ff",
+        "difficulty": 2,
+        "practices": ["arithmetic"],
+        "prerequisites": ["arithmetic", "integers", "lists"],
+        "status": "beta"
+      },
+      {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "7b699611-7119-4f4e-93bb-ff7dc3064357",
