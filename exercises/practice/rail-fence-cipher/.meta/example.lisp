@@ -5,15 +5,6 @@
 
 (in-package :rail-fence-cipher)
 
-(defun encode (msg rails)
-  (let ((fence (make-fence (length msg) rails)))
-    (populate-and-sort msg fence #'post-row)))
-
-(defun decode (msg rails)
-  (let ((fence (make-fence (length msg) rails)))
-    (sort fence #'< :key #'post-row) ; rearrange the fence into its encoded state
-    (populate-and-sort msg fence #'post-column)))
-
 (defstruct post letter row column)
 
 (defun make-fence (seq-length rails)
@@ -27,10 +18,21 @@ correct row.  Letters are not filled in here, and are set to nil."
     else
     collect (make-post :letter nil :column i :row (- r (mod i r))))) ; row = r - (i mod r)
 
-(defun populate-and-sort (msg fence sort-key)
- "Function populate-and-sort will populate the letters in each post struct from
-the chars in msg string.  It will then sort the posts by either rows or columns
-(according to the sort-key) and will recombine the letters into an output string."
-  (loop for p in fence for c across msg do (setf (post-letter p) c))
-  (sort fence #'< :key sort-key)
+(defun write-fence (msg fence)
+  (loop for p in fence for c across msg do (setf (post-letter p) c)))
+
+(defun read-fence (fence)
   (map 'string #'post-letter fence))
+
+(defun encode (msg rails)
+  (let ((fence (make-fence (length msg) rails)))
+    (write-fence msg fence)
+    (sort fence #'< :key #'post-row)
+    (read-fence fence)))
+
+(defun decode (msg rails)
+  (let ((fence (make-fence (length msg) rails)))
+    (sort fence #'< :key #'post-row)
+    (write-fence msg fence)
+    (sort fence #'< :key #'post-column)
+    (read-fence fence)))
