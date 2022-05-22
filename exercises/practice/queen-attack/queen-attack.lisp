@@ -1,13 +1,10 @@
 (defpackage :queen-attack
   (:use :cl)
-  (:export :create
-           :attackp
-           :queen))
+  (:export :valid-position-p
+           :attackp))
 
 (in-package :queen-attack)
 
-(defstruct queen row column)
-
-(defun create (coordinates))
+(defun valid-position-p (coordinates))
 
 (defun attackp (white-queen black-queen))

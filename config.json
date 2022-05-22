@@ -575,9 +575,9 @@
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "d8756342-ee14-483f-9e2e-210b666ee4c1",
-        "difficulty": 6,
+        "difficulty": 2,
         "practices": ["conditionals"],
-        "prerequisites": ["conditionals", "functions", "lists"],
+        "prerequisites": ["conditionals"],
         "status": "beta"
       }
     ],

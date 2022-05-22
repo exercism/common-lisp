@@ -16,63 +16,63 @@
 (def-suite* queen-attack-suite)
 
 (test queen-with-a-valid-position
-    (let ((coordinates '((:row . 2) (:column . 2))))
-      (is (equalp #S(queen-attack:queen :row 2 :column 2) (queen-attack:create coordinates)))))
+    (let ((coordinates '(2 . 2)))
+      (is-true (queen-attack:valid-position-p coordinates))))
 
 (test queen-must-have-positive-row
-    (let ((coordinates '((:row . -2) (:column . 2))))
-      (is (eql NIL (queen-attack:create coordinates)))))
+    (let ((coordinates '(-2 . 2)))
+      (is-false (queen-attack:valid-position-p coordinates))))
 
 (test queen-must-have-row-on-board
-    (let ((coordinates '((:row . 8) (:column . 4))))
-      (is (eql NIL (queen-attack:create coordinates)))))
+    (let ((coordinates '(8 . 4)))
+      (is-false (queen-attack:valid-position-p coordinates))))
 
 (test queen-must-have-positive-column
-    (let ((coordinates '((:row . 2) (:column . -2))))
-      (is (eql NIL (queen-attack:create coordinates)))))
+    (let ((coordinates '(2 . -2)))
+      (is-false (queen-attack:valid-position-p coordinates))))
 
 (test queen-must-have-column-on-board
-    (let ((coordinates '((:row . 4) (:column . 8))))
-      (is (eql NIL (queen-attack:create coordinates)))))
+    (let ((coordinates '(4 . 8)))
+      (is-false (queen-attack:valid-position-p coordinates))))
 
 (test cannot-attack
-    (let ((white-queen (queen-attack:create '((:row . 2) (:column . 4))))
-          (black-queen (queen-attack:create '((:row . 6) (:column . 6)))))
+    (let ((white-queen '(2 . 4))
+          (black-queen '(6 . 6)))
       (is-false (queen-attack:attackp white-queen black-queen))))
 
 (test can-attack-on-same-row
-    (let ((white-queen (queen-attack:create '((:row . 2) (:column . 4))))
-          (black-queen (queen-attack:create '((:row . 2) (:column . 6)))))
+    (let ((white-queen '(2 . 4))
+          (black-queen '(2 . 6)))
       (is-true (queen-attack:attackp white-queen black-queen))))
 
 (test can-attack-on-same-column
-    (let ((white-queen (queen-attack:create '((:row . 4) (:column . 5))))
-          (black-queen (queen-attack:create '((:row . 2) (:column . 5)))))
+    (let ((white-queen '(4 . 5))
+          (black-queen '(2 . 5)))
       (is-true (queen-attack:attackp white-queen black-queen))))
 
 (test can-attack-on-first-diagonal
-    (let ((white-queen (queen-attack:create '((:row . 2) (:column . 2))))
-          (black-queen (queen-attack:create '((:row . 0) (:column . 4)))))
+    (let ((white-queen '(2 . 2))
+          (black-queen '(0 . 4)))
       (is-true (queen-attack:attackp white-queen black-queen))))
 
 (test can-attack-on-second-diagonal
-    (let ((white-queen (queen-attack:create '((:row . 2) (:column . 2))))
-          (black-queen (queen-attack:create '((:row . 3) (:column . 1)))))
+    (let ((white-queen '(2 . 2))
+          (black-queen '(3 . 1)))
       (is-true (queen-attack:attackp white-queen black-queen))))
 
 (test can-attack-on-third-diagonal
-    (let ((white-queen (queen-attack:create '((:row . 2) (:column . 2))))
-          (black-queen (queen-attack:create '((:row . 1) (:column . 1)))))
+    (let ((white-queen '(2 . 2))
+          (black-queen '(1 . 1)))
       (is-true (queen-attack:attackp white-queen black-queen))))
 
 (test can-attack-on-fourth-diagonal
-    (let ((white-queen (queen-attack:create '((:row . 1) (:column . 7))))
-          (black-queen (queen-attack:create '((:row . 0) (:column . 6)))))
+    (let ((white-queen '(1 . 7))
+          (black-queen '(0 . 6)))
       (is-true (queen-attack:attackp white-queen black-queen))))
 
 (test cannot-attack-if-falling-diagonals-are-only-the-same-when-reflected-across-the-longest-falling-diagonal
-    (let ((white-queen (queen-attack:create '((:row . 4) (:column . 1))))
-          (black-queen (queen-attack:create '((:row . 2) (:column . 5)))))
+    (let ((white-queen '(4 . 1))
+          (black-queen '(2 . 5)))
       (is-false (queen-attack:attackp white-queen black-queen))))
 
 (defun run-tests (&optional (test-or-suite 'queen-attack-suite))

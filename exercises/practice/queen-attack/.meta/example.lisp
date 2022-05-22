@@ -1,21 +1,18 @@
 (defpackage :queen-attack
   (:use :cl)
-  (:export :create
-           :attackp
-           :queen))
+  (:export :valid-position-p
+           :attackp))
 
 (in-package :queen-attack)
 
-(defstruct queen row column)
-
-(defun create (coordinates)
-  (let ((row (cdr (assoc :row coordinates)))
-        (column (cdr (assoc :column coordinates))))
-    (unless (or (> row 7) (> column 7) (minusp row) (minusp column))
-      (make-queen :row row :column column))))
+(defun valid-position-p (coordinates)
+  (let ((row (car coordinates))
+        (column (cdr coordinates)))
+    (not (or (> row 7) (> column 7) (minusp row) (minusp column)))))
 
 (defun attackp (white-queen black-queen)
-  (or (= (queen-row white-queen) (queen-row black-queen))
-      (= (queen-column white-queen) (queen-column black-queen))
-      (= (abs (- (queen-row white-queen) (queen-row black-queen)))
-         (abs (- (queen-column white-queen) (queen-column black-queen))))))
+  (when (and (valid-position-p white-queen) (valid-position-p black-queen))
+    (or (= (car white-queen) (car black-queen))
+        (= (cdr white-queen) (cdr black-queen))
+        (= (abs (- (car white-queen) (car black-queen)))
+           (abs (- (cdr white-queen) (cdr black-queen)))))))
