@@ -696,6 +696,15 @@
         "practices": ["conditionals", "functions"],
         "prerequisites": ["conditionals", "functions"],
         "status": "beta"
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "c9a6f47c-53a2-4a65-bd1e-9a370a2db71c",
+        "difficulty": 3,
+        "practices": ["arrays"],
+        "prerequisites": ["arrays", "functions", "mapping"],
+        "status": "beta"
       }
     ],
     "foregone": [
