@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run Length Encoding",
+        "uuid": "bb589f12-5aaf-48bf-a105-97396d7533de",
+        "difficulty": 4,
+        "practices": ["strings", "characters"],
+        "prerequisites": ["strings", "conditionals", "characters", "format-basics"],
+        "status": "beta"
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "29edfde1-ba04-4502-80e2-8a52092e18a9",
