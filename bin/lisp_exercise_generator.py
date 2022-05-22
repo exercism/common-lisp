@@ -1,6 +1,7 @@
-import json, toml, os, argparse, sys
+import json, toml, os, argparse, sys, string
 from custom_json_encoder import CustomJSONEncoder
 
+LEGITIMATE_CHARS = string.ascii_lowercase + string.digits + " -"
 
 def find_common_lisp_main():
     up_one = os.path.split(os.getcwd())[0]
@@ -53,6 +54,7 @@ def create_meta_config(exercise_name, prob_spec_exercise, author):
     with open(f"{TARGET}/{exercise_name}/.meta/config.json", 'w') as file:
         # Encode into a string in json format and write to file
         file.write(json.dumps(config_data, cls = CustomJSONEncoder, indent = 3))
+        file.write("\n")
 
 
 def create_instructions(exercise_name, prob_spec_exercise):
@@ -66,8 +68,10 @@ def create_instructions(exercise_name, prob_spec_exercise):
     in the problem-specifications repository.
     Precondition: prob_spec_exercise is a string of a valid filepath.
     """
-    with open(f"{prob_spec_exercise}/description.md", 'r') as read_from:
-        with open(f"{TARGET}/{exercise_name}/.docs/instructions.md", 'w') as write_to:
+    input_file = f"{prob_spec_exercise}/description.md"
+    output_file = f"{TARGET}/{exercise_name}/.docs/instructions.md"
+    with open(input_file, 'r', encoding = "utf-8") as read_from:
+        with open(output_file, 'w', encoding = "utf-8") as write_to:
             # Replace first line with "# Instructions\n" during copy process
             write_to.write("# Instructions\n" + "\n".join(read_from.read().split("\n")[1:]))
 
@@ -144,41 +148,76 @@ def create_test(cases, exercise_name, fnd = dict()):
 
     Returns a tuple of fnd and the test string
     """
+    # Helper functions only used in create_test function
+    def to_kebab_case(string):
+        from_snake = string.replace("_", "-")
+        from_camel = "".join([f"-{c.lower()}" if c.isupper() else c for c in from_snake])
+        return from_camel
+
+    def to_predicate(string, expected_result):
+        if not isinstance(expected_result, bool):
+            return string
+        if (partitioned := string.partition("-"))[2]:
+            return partitioned[2] + ("-p" if '-' in partitioned[2] else "p")
+        else:
+            return partitioned[0] + "p"
+
+    # Normal code begins here
     output = ""
     for case in cases:
         try:
             # Add function_name and func_params to fnd
-            function_name = case["property"]
-            func_params = list(case["input"])
+            kebab_func_name = to_kebab_case(case["property"])
+            function_name = to_predicate(kebab_func_name, case["expected"])
+            func_params = [to_kebab_case(param) for param in list(case["input"])]
             fnd[function_name] = func_params
 
             # Prepare the variables and their associated values for
             # implementation inside a "let"
-            arg_pairs = ["({0} {1})".format(var, lispify(value)) for var, value in case["input"].items()]
+            arg_pairs = []
+            for var, value in case["input"].items():
+                arg = "({0} {1})".format(to_kebab_case(var), lispify(value))
+                arg_pairs.append(arg)
             let_args = ("\n" + " " * 10).join(arg_pairs)
 
-            # Create the test name and expected result
-            description = case["description"].replace(" ", "-").lower()
-            expected = lispify(case["expected"])
+            # Create the test name
+            cleaned = [c for c in case["description"].lower() if c in LEGITIMATE_CHARS]
+            description = "".join(cleaned).replace(" ", "-")
 
-            # Multiline docstring format used to maintain correct indentation
-            # and to increase readability.
-            output += """
-(test {0}
-    (let ({1})
-     (is (equal {2} ({3}:{4} {5})))))
-""".format(description,
-           let_args,
-           expected,
-           exercise_name,
-           function_name,
-           " ".join(func_params))
+            output += create_test_string(description, let_args, case["expected"],
+                                         exercise_name, function_name, func_params)
         except KeyError:
             # Recursively dig further into the data structure
             fnd, string = create_test(case["cases"], exercise_name, fnd)
             output += string
 
     return fnd, output
+
+def create_test_string(desc, args, expected, exercise, func_name, func_params):
+    result = ""
+    close_paren = ")"
+    if isinstance(expected, bool):
+        result = f"is-{str(expected).lower()}"
+        close_paren = ""
+    else:
+        equality = ""
+        if isinstance(expected, int) or isinstance(expected, float):
+            equality = "="
+        elif isinstance(expected, str) and len(expected) == 1:
+            equality = "char="
+        elif isinstance(expected, str):
+            equality = "string="
+        else:
+            equality = "equal"
+        result = f"is ({equality} {lispify(expected)}"
+
+    # Multiline docstring format used to maintain correct indentation
+    # and to increase readability.
+    return """
+(test {0}
+    (let ({1})
+      ({2} ({3}:{4} {5})))){6}
+""".format(desc, args, result, exercise, func_name, " ".join(func_params), close_paren)
 
 
 def create_example_and_solution_files(exercise_name, func_name_dict):
@@ -290,16 +329,16 @@ def lispify(value):
 
     Returns the following conversions:
         lists/arrays -> lists
+        bools -> T or NIL
         ints -> ints
         floats -> floats
         strings -> strings (or chars if string len == 1)
         dicts -> acons lists (or NIL if key == "error")
-        bools -> T or NIL
 
     Parameter value: The value which needs to be converted (i.e. Lispified).
     """
     if isinstance(value, list):
-        return "(list" + " ".join([lispify(v) for v in value]) + ")"
+        return "(" + " ".join(["list"] + [lispify(v) for v in value]) + ")"
     elif isinstance(value, bool):
         return "T" if value else "NIL"
     elif isinstance(value, int) or isinstance(value, float):
@@ -311,8 +350,10 @@ def lispify(value):
         for k, v in value.items():
             if k == "error":
                 return "NIL"
-            acons_list += ["({0} . {1})".format(lispify(k), lispify(v))]
-        return "(list" + " ".join(acons_list) + ")"
+            acons_list += ["'({0} . {1})".format(lispify(k), lispify(v))]
+        return "(" + " ".join(["list"] + acons_list) + ")"
+    elif value is None:
+        return "NIL"
     else:
         raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
 
