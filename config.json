@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "761dc40f-7142-4f0c-abc8-a05042600f42",
+        "difficulty": 6,
+        "practices": ["strings", "functions"],
+        "prerequisites": ["strings", "functions", "lists", "format-basics"],
+        "status": "beta"
+      },
+      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "81ee1119-ddd8-412b-a9f4-7f4374c7cf46",
