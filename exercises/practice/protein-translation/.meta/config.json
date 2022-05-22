@@ -1,0 +1,11 @@
+{
+   "blurb": "Translate RNA sequences into proteins.",
+   "source": "Tyler Long",
+   "files": {
+      "test": ["protein-translation-test.lisp"],
+      "solution": ["protein-translation.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}
