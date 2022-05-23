@@ -13,5 +13,6 @@
       (cons bracket tracker))))
 
 (defun pairedp (value)
-  (let ((only-brackets (remove-if-not (lambda (c) (find c "{}[]()")) value)))
+  (let* ((bracket-list (append (mapcar #'car +bracket-lookup+) (mapcar #'cdr +bracket-lookup+)))
+         (only-brackets (remove-if-not (lambda (c) (find c bracket-list)) value)))
     (zerop (length (reduce #'eliminate-pairs only-brackets :initial-value '())))))
