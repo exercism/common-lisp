@@ -157,10 +157,13 @@ def create_test(cases, exercise_name, fnd = dict()):
     def to_predicate(string, expected_result):
         if not isinstance(expected_result, bool):
             return string
-        if (partitioned := string.partition("-"))[2]:
-            return partitioned[2] + ("-p" if '-' in partitioned[2] else "p")
+        elif (partitioned := string.partition("-"))[2]:
+            if '-' in partitioned[2] or partitioned[2][-1] == 'p':
+                return partitioned[2] + "-p"
+            else:
+                return partitioned[2] + "p"
         else:
-            return partitioned[0] + "p"
+            return partitioned[0] + ("-p" if 'p' == partitioned[0][-1] else "p")
 
     # Normal code begins here
     output = ""
@@ -176,7 +179,7 @@ def create_test(cases, exercise_name, fnd = dict()):
             # implementation inside a "let"
             arg_pairs = []
             for var, value in case["input"].items():
-                arg = "({0} {1})".format(to_kebab_case(var), lispify(value))
+                arg = "({0} {1})".format(to_kebab_case(var), clean_lispification(lispify(value)))
                 arg_pairs.append(arg)
             let_args = ("\n" + " " * 10).join(arg_pairs)
 
@@ -194,8 +197,7 @@ def create_test(cases, exercise_name, fnd = dict()):
     return fnd, output
 
 def create_test_string(desc, args, expected, exercise, func_name, func_params):
-    result = ""
-    close_paren = ")"
+    result, let_result, close_paren = "", "", ")"
     if isinstance(expected, bool):
         result = f"is-{str(expected).lower()}"
         close_paren = ""
@@ -209,15 +211,22 @@ def create_test_string(desc, args, expected, exercise, func_name, func_params):
             equality = "string="
         else:
             equality = "equal"
-        result = f"is ({equality} {lispify(expected)}"
+
+        cleaned = clean_lispification(lispify(expected))
+        if len(result) < 55:
+            result = f"is ({equality} {cleaned}"
+        else:
+            result = f"is ({equality} result"
+            let_result = """
+          (result {0})""".format(cleaned)
 
     # Multiline docstring format used to maintain correct indentation
     # and to increase readability.
     return """
 (test {0}
-    (let ({1})
-      ({2} ({3}:{4} {5})))){6}
-""".format(desc, args, result, exercise, func_name, " ".join(func_params), close_paren)
+    (let ({1}{2})
+      ({3} ({4}:{5} {6})))){7}
+""".format(desc, args, let_result, result, exercise, func_name, " ".join(func_params), close_paren)
 
 
 def create_example_and_solution_files(exercise_name, func_name_dict):
@@ -323,7 +332,7 @@ def brand_new_exercise(exercise_name :str, prob_spec_exercise :str, author :str 
     create_test_toml(exercise_name, prob_spec_exercise)
 
 
-def lispify(value):
+def lispify(value, string_to_keyword = False):
     """
     Converts a given value from a Python data type into its Lisp counterpart.
 
@@ -332,10 +341,12 @@ def lispify(value):
         bools -> T or NIL
         ints -> ints
         floats -> floats
-        strings -> strings (or chars if string len == 1)
+        strings -> strings (or chars if string len == 1) or keywords
         dicts -> acons lists (or NIL if key == "error")
 
     Parameter value: The value which needs to be converted (i.e. Lispified).
+    Parameter string_to_keyword: Boolean to signal that strings should be
+    converted into keywords.
     """
     if isinstance(value, list):
         return "(" + " ".join(["list"] + [lispify(v) for v in value]) + ")"
@@ -344,18 +355,26 @@ def lispify(value):
     elif isinstance(value, int) or isinstance(value, float):
         return str(value)
     elif isinstance(value, str):
-        return "#/" + value if len(value) == 1 else '"' + value + '"'
+        if len(value) == 1:
+            return f"#\\{value}"
+        else:
+            return f":{value.lower()}" if string_to_keyword else f"\"{value}\""
     elif isinstance(value, dict):
         acons_list = []
         for k, v in value.items():
             if k == "error":
                 return "NIL"
-            acons_list += ["'({0} . {1})".format(lispify(k), lispify(v))]
+            acons_list += ["'({0} . {1})".format(lispify(k, True), lispify(v))]
         return "(" + " ".join(["list"] + acons_list) + ")"
     elif value is None:
         return "NIL"
     else:
         raise TypeError("lispify function does not know how to handle value of type: " + str(type(value)))
+
+
+def clean_lispification(lispified):
+    listless = lispified.replace("'", "").replace("list ", "")
+    return "'" + listless
 
 
 def no_arguments():
