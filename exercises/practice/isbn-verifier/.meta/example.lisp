@@ -11,6 +11,6 @@
   (let ((cleaned (remove-if-not #'alphanumericp isbn)))
     (when (= 10 (length cleaned)) ; Check isbn is 10 chars long
       (let ((num-list (map 'list #'char-to-num cleaned))) ; Map chars to numbers (or nil)
-        (unless (some #'null num-list) ; Return nil if any nils in num-list
-          (unless (member 10 (butlast num-list)) ; Return nil if any of the first 9 nums eql 10
-            (zerop (mod (apply #'+ (mapcar #'* num-list '(10 9 8 7 6 5 4 3 2 1))) 11))))))))
+        ; Return nil if any nils in num-list or if any of the first 9 nums eql 10
+        (unless (or (some #'null num-list) (member 10 (butlast num-list)))
+          (zerop (mod (apply #'+ (mapcar #'* num-list '(10 9 8 7 6 5 4 3 2 1))) 11)))))))
