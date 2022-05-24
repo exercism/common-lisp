@@ -687,6 +687,15 @@
         "practices": ["strings", "arrays"],
         "prerequisites": ["strings", "arrays", "functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "c1aff1f6-2b48-4b54-a784-c5dbe2a7a19c",
+        "difficulty": 1,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
