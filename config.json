@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "880223e2-2625-4753-917e-b1d82cc2a028",
+        "difficulty": 2,
+        "practices": ["reducing", "conditionals", "filtering"],
+        "prerequisites": ["reducing", "conditionals", "characters", "filtering", "functions"],
+        "status": "beta"
+      },
+      {
         "slug": "run-length-encoding",
         "name": "Run Length Encoding",
         "uuid": "bb589f12-5aaf-48bf-a105-97396d7533de",
