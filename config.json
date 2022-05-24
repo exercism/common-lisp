@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "isbn-verifier",
+        "name": "Isbn Verifier",
+        "uuid": "d234aba4-daa2-4573-b9df-4592589f2ccf",
+        "difficulty": 5,
+        "practices": ["strings", "filtering", "mapping", "arithmetic"],
+        "prerequisites": ["strings", "filtering", "mapping", "arithmetic", "functions", "conditionals"],
+        "status": "beta"
+      },
+      {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "91d0b2c3-12b5-4413-9f34-cdae085da94e",
