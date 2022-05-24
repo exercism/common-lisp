@@ -572,6 +572,15 @@
         "status": "beta"
       },
       {
+        "slug": "sum-of-multiples",
+        "name": "Sum of Multiples",
+        "uuid": "91d0b2c3-12b5-4413-9f34-cdae085da94e",
+        "difficulty": 3,
+        "practices": ["lists"],
+        "prerequisites": ["lists", "integers", "functions"],
+        "status": "beta"
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "880223e2-2625-4753-917e-b1d82cc2a028",
