@@ -1,0 +1,12 @@
+{
+   "blurb": "Implement run-length encoding and decoding.",
+   "source": "Wikipedia",
+   "source_url": "https://en.wikipedia.org/wiki/Run-length_encoding",
+   "files": {
+      "test": ["run-length-encoding-test.lisp"],
+      "solution": ["run-length-encoding.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}

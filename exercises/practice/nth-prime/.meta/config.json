@@ -1,0 +1,12 @@
+{
+   "blurb": "Given a number n, determine what the nth prime is.",
+   "source": "A variation on Problem 7 at Project Euler",
+   "source_url": "http://projecteuler.net/problem=7",
+   "files": {
+      "test": ["nth-prime-test.lisp"],
+      "solution": ["nth-prime.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}
