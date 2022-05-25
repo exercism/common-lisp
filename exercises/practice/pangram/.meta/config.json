@@ -1,0 +1,12 @@
+{
+   "blurb": "Determine if a sentence is a pangram.",
+   "source": "Wikipedia",
+   "source_url": "https://en.wikipedia.org/wiki/Pangram",
+   "files": {
+      "test": ["pangram-test.lisp"],
+      "solution": ["pangram.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}
