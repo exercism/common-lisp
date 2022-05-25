@@ -687,6 +687,15 @@
         "practices": ["strings", "arrays"],
         "prerequisites": ["strings", "arrays", "functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "b7885c80-d4d9-4636-a9c2-6051c6f9204c",
+        "difficulty": 4,
+        "practices": ["arithmetic", "strings", "characters"],
+        "prerequisites": ["arithmetic", "strings", "characters", "mapping", "filtering"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
