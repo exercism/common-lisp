@@ -374,7 +374,7 @@ def lispify(value, string_to_keyword = False):
 
 def clean_lispification(lispified):
     listless = lispified.replace("'", "").replace("list ", "")
-    if listless[1] == '(':
+    if len(listless) > 1 and listless[1] == '(':
         listless = "'" + listless
     return listless
 
