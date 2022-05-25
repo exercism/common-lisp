@@ -687,6 +687,15 @@
         "practices": ["strings", "arrays"],
         "prerequisites": ["strings", "arrays", "functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "2aeaa807-5037-423f-9829-6e09bb2b72ec",
+        "difficulty": 1,
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
