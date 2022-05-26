@@ -696,7 +696,8 @@
       "linked-list",
       "simple-linked-list",
       "parallel-letter-frequency",
-      "lens-person"
+      "lens-person",
+      "reverse-string"
      ]
   },
   "concepts": [
