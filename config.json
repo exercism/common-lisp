@@ -759,6 +759,15 @@
         "practices": ["arithmetic", "floating-point-numbers", "conditionals"],
         "prerequisites": ["arithmetic", "floating-point-numbers", "conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "2e88cea7-59ea-409b-87a0-93eaaf06a7ba",
+        "difficulty": 2,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics"],
+        "status": "beta"
       }
     ],
     "foregone": [
