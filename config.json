@@ -741,6 +741,15 @@
         "practices": ["filtering"],
         "prerequisites": ["filtering", "strings"],
         "status": "beta"
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "e2b72779-d795-45b8-8933-5914a0cb1937",
+        "difficulty": 2,
+        "practices": ["conditionals", "integers"],
+        "prerequisites": ["conditionals", "integers"],
+        "status": "beta"
       }
     ],
     "foregone": [
