@@ -764,7 +764,7 @@
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "2e88cea7-59ea-409b-87a0-93eaaf06a7ba",
-        "difficulty": 2,
+        "difficulty": 3,
         "practices": ["format-basics"],
         "prerequisites": ["format-basics"],
         "status": "beta"
