@@ -768,6 +768,15 @@
         "practices": ["format-basics"],
         "prerequisites": ["format-basics"],
         "status": "beta"
+      },
+      {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "98f7f477-a55f-46e9-9c0e-a90ba2298039",
+        "difficulty": 5,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics", "functions", "strings"],
+        "status": "beta"
       }
     ],
     "foregone": [
