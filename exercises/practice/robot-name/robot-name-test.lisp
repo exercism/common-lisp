@@ -15,16 +15,12 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* robot-name-suite)
 
-(defun is-upper-alpha-p (c) (char<= #\A c #\Z))
-
-(defun is-digit-p (c) (char-not-greaterp #\0 c #\9))
-
 (test name-matches-expected-pattern
   (let* ((robbie (robot-name:build-robot))
          (name (robot-name:robot-name robbie)))
    (is (= 5 (length name)))
-   (is (every #'is-upper-alpha-p (subseq name 0 2)))
-   (is (every #'is-digit-p (subseq name 2 5)))))
+   (is (every #'upper-case-p (subseq name 0 2)))
+   (is (every #'digit-char-p (subseq name 2 5)))))
 
 (test name-is-persistent
   (let ((robbie (robot-name:build-robot)))

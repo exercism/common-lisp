@@ -4,8 +4,10 @@
 
 (in-package :diamond)
 
+(defparameter +alphabet+ (coerce "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 'list))
+
 (defun rows (letter)
-  (let* ((letters (loop for i from 65 to (char-code letter) collect (code-char i)))
+  (let* ((letters (subseq +alphabet+ 0 (1+ (position letter +alphabet+))))
          (columns (1- (* 2 (length letters))))
          (unique-rows (loop for c in letters and idx from 0
                         collect (let ((mid-space (abs (1- (* 2 idx)))))
