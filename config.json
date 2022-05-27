@@ -714,6 +714,15 @@
         "practices": ["arrays"],
         "prerequisites": ["arrays", "functions", "mapping"],
         "status": "beta"
+      },
+      {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "410ff5ca-cbef-47a8-b33a-e3d5a70e4a99",
+        "difficulty": 5,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics"],
+        "status": "beta"
       }
     ],
     "foregone": [
