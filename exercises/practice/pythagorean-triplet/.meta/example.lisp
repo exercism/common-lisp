@@ -9,7 +9,7 @@
     (list (first triplet) (- n (first triplet) third-on-second) third-on-second)))
 
 (defun triplets-with-sum (n)
-  (let* ((unworked-triplets (loop for a from 1 to (floor (/ (* 2 n) 7))
-                              collect (list a (* 2 (- n a)) (- (+ (* 2 a a) (* n n)) (* 2 n a)))))
+  (let* ((unworked-triplets (loop for a from 1 to (floor (* 2 n) 7)
+                              collect (list a (* 2 (- n a)) (+ (expt a 2) (expt (- n a) 2)))))
          (filtered (remove-if (lambda (x) (plusp (mod (third x) (second x)))) unworked-triplets)))
     (mapcar (lambda (x) (work-triplet x n)) filtered)))
