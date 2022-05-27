@@ -687,6 +687,15 @@
         "practices": ["strings", "arrays"],
         "prerequisites": ["strings", "arrays", "functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "f7bbf16d-77d9-4d13-a20c-e60f416de764",
+        "difficulty": 6,
+        "practices": ["arithmetic", "lists"],
+        "prerequisites": ["arithmetic", "lists"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
