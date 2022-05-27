@@ -750,6 +750,15 @@
         "practices": ["conditionals", "integers"],
         "prerequisites": ["conditionals", "integers"],
         "status": "beta"
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "ce90fcd2-bf4d-4ed4-ba1d-eadca619022f",
+        "difficulty": 2,
+        "practices": ["arithmetic", "floating-point-numbers", "conditionals"],
+        "prerequisites": ["arithmetic", "floating-point-numbers", "conditionals"],
+        "status": "beta"
       }
     ],
     "foregone": [
