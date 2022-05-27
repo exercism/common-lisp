@@ -689,7 +689,16 @@
         "status": "beta"
       }
     ],
-    "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
+    "foregone": [
+      "accumulate",
+      "bank-account",
+      "list-ops",
+      "linked-list",
+      "simple-linked-list",
+      "parallel-letter-frequency",
+      "lens-person",
+      "reverse-string"
+     ]
   },
   "concepts": [
     {
