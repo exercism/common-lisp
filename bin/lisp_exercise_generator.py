@@ -213,7 +213,7 @@ def create_test_string(desc, args, expected, exercise, func_name, func_params):
             equality = "equal"
 
         cleaned = clean_lispification(lispify(expected))
-        if len(result) < 55:
+        if len(cleaned) < 35:
             result = f"is ({equality} {cleaned}"
         else:
             result = f"is ({equality} result"
@@ -373,8 +373,10 @@ def lispify(value, string_to_keyword = False):
 
 
 def clean_lispification(lispified):
-    listless = lispified.replace("'", "").replace("list ", "")
-    return "'" + listless
+    listless = lispified.replace(" '(", " (").replace("(list ", "(").replace("(list", "(")
+    if listless[0] == '(':
+        listless = "'" + listless
+    return listless
 
 
 def no_arguments():

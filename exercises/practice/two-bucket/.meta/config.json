@@ -1,0 +1,12 @@
+{
+   "blurb": "Given two buckets of different size, demonstrate how to measure an exact number of liters.",
+   "source": "Water Pouring Problem",
+   "source_url": "http://demonstrations.wolfram.com/WaterPouringProblem/",
+   "files": {
+      "test": ["two-bucket-test.lisp"],
+      "solution": ["two-bucket.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": ["verdammelt"]
+}

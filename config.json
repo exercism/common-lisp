@@ -696,9 +696,36 @@
         "practices": ["format-basics"],
         "prerequisites": ["format-basics"],
         "status": "beta"
+      },
+      {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "3b972dcf-536e-4a42-9b39-040ac7f40f2f",
+        "difficulty": 6,
+        "practices": ["conditionals", "functions"],
+        "prerequisites": ["conditionals", "functions"],
+        "status": "beta"
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "c9a6f47c-53a2-4a65-bd1e-9a370a2db71c",
+        "difficulty": 3,
+        "practices": ["arrays"],
+        "prerequisites": ["arrays", "functions", "mapping"],
+        "status": "beta"
       }
     ],
-    "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
+    "foregone": [
+      "accumulate",
+      "bank-account",
+      "list-ops",
+      "linked-list",
+      "simple-linked-list",
+      "parallel-letter-frequency",
+      "lens-person",
+      "reverse-string"
+     ]
   },
   "concepts": [
     {
