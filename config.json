@@ -723,6 +723,15 @@
         "practices": ["format-basics"],
         "prerequisites": ["format-basics"],
         "status": "beta"
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "d94532d1-9d7b-489d-8620-31310209ccee",
+        "difficulty": 3,
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
+        "status": "beta"
       }
     ],
     "foregone": [
