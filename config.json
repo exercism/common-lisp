@@ -707,6 +707,15 @@
         "status": "beta"
       },
       {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "008ae436-b9d5-4882-b1c7-8809baff70ea",
+        "difficulty": 6,
+        "practices": ["reducing"],
+        "prerequisites": ["functions", "lists", "conditionals", "filtering", "reducing"],
+        "status": "beta"
+      },
+      {
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "c9a6f47c-53a2-4a65-bd1e-9a370a2db71c",
