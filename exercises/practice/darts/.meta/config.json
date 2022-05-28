@@ -1,0 +1,11 @@
+{
+   "blurb": "Write a function that returns the earned points in a single toss of a Darts game.",
+   "source": "Inspired by an exercise created by a professor Della Paolera in Argentina",
+   "files": {
+      "test": ["darts-test.lisp"],
+      "solution": ["darts.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}

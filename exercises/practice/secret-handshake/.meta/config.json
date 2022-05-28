@@ -1,0 +1,12 @@
+{
+   "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
+   "source": "Bert, in Mary Poppins",
+   "source_url": "http://www.imdb.com/title/tt0058331/quotes/qt0437047",
+   "files": {
+      "test": ["secret-handshake-test.lisp"],
+      "solution": ["secret-handshake.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}
