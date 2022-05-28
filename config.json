@@ -701,9 +701,9 @@
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "008ae436-b9d5-4882-b1c7-8809baff70ea",
-        "difficulty": 7,
-        "practices": ["functions", "conditionals"],
-        "prerequisites": ["functions", "lists", "conditionals"],
+        "difficulty": 6,
+        "practices": ["reducing"],
+        "prerequisites": ["functions", "lists", "conditionals", "filtering", "reducing"],
         "status": "beta"
       }
     ],
