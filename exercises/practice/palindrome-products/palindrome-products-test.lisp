@@ -15,7 +15,7 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* palindrome-products-suite)
 
-(test finds-the-smallest-palindrome-from-single-digit-factors
+(test find-the-smallest-palindrome-from-single-digit-factors
     (let ((min-factor 1)
           (max-factor 9)
           (palindrome 1)
@@ -23,7 +23,7 @@
       (is (multiple-value-bind (p f) (palindrome-products:smallest min-factor max-factor)
                                (and (eql p palindrome) (equal f factors))))))
 
-(test finds-the-largest-palindrome-from-single-digit-factors
+(test find-the-largest-palindrome-from-single-digit-factors
     (let ((min-factor 1)
           (max-factor 9)
           (palindrome 9)
@@ -47,7 +47,7 @@
       (is (multiple-value-bind (p f) (palindrome-products:largest min-factor max-factor)
                                (and (eql p palindrome) (equal f factors))))))
 
-(test find-smallest-palindrome-from-triple-digit-factors
+(test find-the-smallest-palindrome-from-triple-digit-factors
     (let ((min-factor 100)
           (max-factor 999)
           (palindrome 10201)
@@ -63,7 +63,7 @@
       (is (multiple-value-bind (p f) (palindrome-products:largest min-factor max-factor)
                                (and (eql p palindrome) (equal f factors))))))
 
-(test find-smallest-palindrome-from-four-digit-factors
+(test find-the-smallest-palindrome-from-four-digit-factors
     (let ((min-factor 1000)
           (max-factor 9999)
           (palindrome 1002001)
