@@ -5,6 +5,8 @@
 
 (in-package :affine-cipher)
 
+(defparameter +letters+ "abcdefghijklmnopqrstuvwxyz")
+
 (defun group (amount str)
   (let* ((len (length str))
          (cut-at (if (> len amount) amount len)))
@@ -12,12 +14,12 @@
       (cons (subseq str 0 cut-at) (group amount (subseq str cut-at))))))
 
 (defun encode-math (character a b)
-  (let ((char-idx (- (char-code character) 97)))
-    (code-char (+ 97 (mod (+ (* a char-idx) b) 26)))))
+  (let ((char-idx (position character +letters+)))
+    (char +letters+ (mod (+ (* a char-idx) b) 26))))
 
 (defun decode-math (character inverse-a b)
-  (let ((char-idx (- (char-code character) 97)))
-    (code-char (+ 97 (mod (* inverse-a (- char-idx b)) 26)))))
+  (let ((char-idx (position character +letters+)))
+    (char +letters+ (mod (* inverse-a (- char-idx b)) 26))))
 
 (defun encode (plaintext a b)
   (when (= 1 (gcd a 26))
