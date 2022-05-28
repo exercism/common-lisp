@@ -1,0 +1,12 @@
+{
+   "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",
+   "source": "Wikipedia",
+   "source_url": "https://en.wikipedia.org/wiki/Caesar_cipher",
+   "files": {
+      "test": ["rotational-cipher-test.lisp"],
+      "solution": ["rotational-cipher.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}
