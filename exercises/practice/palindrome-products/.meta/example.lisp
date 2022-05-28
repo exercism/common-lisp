@@ -1,3 +1,8 @@
+;;;; This code works by finding the largest/smallest palindrome and then figures
+;;;; out the factors than fall within the max/min limits.  It may look inelegant,
+;;;; but it remains fast even when a large min/max range is used, and will not
+;;;; overflow the heap.
+
 (defpackage :palindrome-products
   (:use :cl)
   (:export :smallest
