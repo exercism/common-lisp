@@ -7,6 +7,6 @@
       "solution": ["flatten-array.lisp"],
       "example": [".meta/example.lisp"]
    },
-   "authors": ["PaulT89"],
+   "authors": ["PaulT89", "verdammelt"],
    "contributors": []
 }
