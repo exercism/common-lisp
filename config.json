@@ -689,7 +689,7 @@
         "status": "beta"
       },
       {
-        "slug": "palindrome-prodcuts",
+        "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "55744a77-e371-4963-bd8a-43048eb56ad4",
         "difficulty": 6,
@@ -752,7 +752,7 @@
         "status": "beta"
       },
       {
-         "slug": "pangram",
+        "slug": "pangram",
         "name": "Pangram",
         "uuid": "43760aca-393a-4cb2-9c5a-62a2d1e34032",
         "difficulty": 1,
