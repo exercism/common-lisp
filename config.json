@@ -687,6 +687,15 @@
         "practices": ["strings", "arrays"],
         "prerequisites": ["strings", "arrays", "functions", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "palindrome-prodcuts",
+        "name": "Palindrome Products",
+        "uuid": "55744a77-e371-4963-bd8a-43048eb56ad4",
+        "difficulty": 6,
+        "practices": ["multiple-values", "arithmetic"],
+        "prerequisites": ["multiple-values", "arithmetic", "functions", "lists"],
+        "status": "beta"
       }
     ],
     "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
