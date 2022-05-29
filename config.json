@@ -693,8 +693,8 @@
         "name": "Pythagorean Triplet",
         "uuid": "f7bbf16d-77d9-4d13-a20c-e60f416de764",
         "difficulty": 6,
-        "practices": ["arithmetic", "lists"],
-        "prerequisites": ["arithmetic", "lists"],
+        "practices": ["arithmetic"],
+        "prerequisites": ["arithmetic", "multiple-values", "lists"],
         "status": "beta"
       }
     ],
