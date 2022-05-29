@@ -752,7 +752,7 @@
         "status": "beta"
       },
       {
-         "slug": "pangram",
+        "slug": "pangram",
         "name": "Pangram",
         "uuid": "43760aca-393a-4cb2-9c5a-62a2d1e34032",
         "difficulty": 1,
