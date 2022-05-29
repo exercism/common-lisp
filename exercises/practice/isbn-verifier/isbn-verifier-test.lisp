@@ -31,6 +31,10 @@
     (let ((isbn "3-598-21507-A"))
       (is-false (isbn-verifier:validp isbn))))
 
+(test invalid-check-digit-in-isbn-is-not-treated-as-zero
+    (let ((isbn "4-598-21507-B"))
+      (is-false (isbn-verifier:validp isbn))))
+
 (test invalid-character-in-isbn-is-not-treated-as-zero
     (let ((isbn "3-598-P1581-X"))
       (is-false (isbn-verifier:validp isbn))))

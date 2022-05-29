@@ -696,9 +696,117 @@
         "practices": ["arithmetic"],
         "prerequisites": ["arithmetic", "multiple-values", "lists"],
         "status": "beta"
+      },
+      {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "c1aff1f6-2b48-4b54-a784-c5dbe2a7a19c",
+        "difficulty": 1,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics"],
+        "status": "beta"
+      },
+      {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "3b972dcf-536e-4a42-9b39-040ac7f40f2f",
+        "difficulty": 6,
+        "practices": ["conditionals", "functions"],
+        "prerequisites": ["conditionals", "functions"],
+        "status": "beta"
+      },
+      {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "008ae436-b9d5-4882-b1c7-8809baff70ea",
+        "difficulty": 6,
+        "practices": ["reducing"],
+        "prerequisites": ["functions", "lists", "conditionals", "filtering", "reducing"],
+        "status": "beta"
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "c9a6f47c-53a2-4a65-bd1e-9a370a2db71c",
+        "difficulty": 3,
+        "practices": ["arrays"],
+        "prerequisites": ["arrays", "functions", "mapping"],
+        "status": "beta"
+      },
+      {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "410ff5ca-cbef-47a8-b33a-e3d5a70e4a99",
+        "difficulty": 5,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics"],
+        "status": "beta"
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "d94532d1-9d7b-489d-8620-31310209ccee",
+        "difficulty": 3,
+        "practices": ["strings"],
+        "prerequisites": ["strings"],
+        "status": "beta"
+      },
+      {
+         "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "43760aca-393a-4cb2-9c5a-62a2d1e34032",
+        "difficulty": 1,
+        "practices": ["filtering"],
+        "prerequisites": ["filtering", "strings"],
+        "status": "beta"
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "e2b72779-d795-45b8-8933-5914a0cb1937",
+        "difficulty": 2,
+        "practices": ["conditionals", "integers"],
+        "prerequisites": ["conditionals", "integers"],
+        "status": "beta"
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "ce90fcd2-bf4d-4ed4-ba1d-eadca619022f",
+        "difficulty": 2,
+        "practices": ["arithmetic", "floating-point-numbers", "conditionals"],
+        "prerequisites": ["arithmetic", "floating-point-numbers", "conditionals"],
+        "status": "beta"
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "2e88cea7-59ea-409b-87a0-93eaaf06a7ba",
+        "difficulty": 3,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics"],
+        "status": "beta"
+      },
+      {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "98f7f477-a55f-46e9-9c0e-a90ba2298039",
+        "difficulty": 5,
+        "practices": ["format-basics"],
+        "prerequisites": ["format-basics", "functions", "strings"],
+        "status": "beta"
       }
     ],
-    "foregone": ["accumulate", "bank-account", "list-ops", "linked-list", "simple-linked-list"]
+    "foregone": [
+      "accumulate",
+      "bank-account",
+      "list-ops",
+      "linked-list",
+      "simple-linked-list",
+      "parallel-letter-frequency",
+      "lens-person",
+      "reverse-string"
+     ]
   },
   "concepts": [
     {
