@@ -689,6 +689,15 @@
         "status": "beta"
       },
       {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "f7bbf16d-77d9-4d13-a20c-e60f416de764",
+        "difficulty": 6,
+        "practices": ["arithmetic"],
+        "prerequisites": ["arithmetic", "multiple-values", "lists"],
+        "status": "beta"
+      },
+      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "b7885c80-d4d9-4636-a9c2-6051c6f9204c",
