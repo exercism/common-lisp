@@ -5,9 +5,12 @@
 (in-package :robot-name)
 
 (defun random-alpha-char ()
-  (code-char (+ (char-code #\A) (random 26))))
+  (let ((alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
+    (char alphabet (random 26))))
+
 (defun random-digit-char ()
-  (code-char (+ (char-code #\0) (random 10))))
+  (let ((digits "0123456789"))
+    (char digits (random 10))))
 
 (defun random-robot-name ()
   (concatenate 'string (list (random-alpha-char)
