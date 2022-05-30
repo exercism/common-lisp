@@ -15,22 +15,13 @@
                (zerop (mod i group-size)))
      collect #\Space))
 
-(defun cleanup-ciphered-sequence (seq)
-  (remove (code-char 0) seq))
+(defparameter +key+
+  (pairlis
+   (coerce "abcdefghijklmnopqrstuvwxyz1234567890" 'list)
+   (coerce "zyxwvutsrqponmlkjihgfedcba1234567890" 'list)))
 
-(defun opposite-char (c)
-  (code-char
-   (- (char-code #\z)
-      (- (char-code c)
-         (char-code #\a)))))
-
-(defun encipher (c)
-  (cond ((alpha-char-p c) (opposite-char (char-downcase c)))
-        ((digit-char-p c) c)
-        (t (code-char 0))))
-
-(defun to-cipher-sequence (plaintext)
-  (cleanup-ciphered-sequence (map 'list #'encipher plaintext)))
+(defun lookup-char (c) (cdr (assoc c +key+)))
 
 (defun encode (plaintext)
-  (to-string (group (to-cipher-sequence plaintext))))
+  (let ((filtered (remove-if-not #'alphanumericp (string-downcase plaintext))))
+     (to-string (group (map 'list #'lookup-char filtered)))))
