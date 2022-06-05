@@ -25,7 +25,7 @@
 (test age-in-mercury-years
   (let ((seconds 2134835688))
     (rounds-to 67.65 (space-age:on-earth seconds))
-    (rounds-to 280.88 (space-age:on-mercury seconds))))
+    (rounds-to 280.89 (space-age:on-mercury seconds))))
 
 (test age-in-venus-years
   (let ((seconds 189839836))
