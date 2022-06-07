@@ -207,7 +207,7 @@
         "name": "Rna Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
-        "practices": ["characters", "mapping"],
+        "practices": ["mapping"],
         "prerequisites": ["functions", "characters", "mapping"],
         "status": "beta"
       },
@@ -216,7 +216,7 @@
         "name": "Leap",
         "uuid": "8bfa54a8-4ee6-4e6e-b286-7fc8c70b9e9f",
         "difficulty": 1,
-        "practices": ["conditionals", "arithmetic"],
+        "practices": ["conditionals"],
         "prerequisites": ["conditionals", "arithmetic"],
         "status": "beta"
       },
@@ -225,7 +225,7 @@
         "name": "Anagram",
         "uuid": "b9fd0f13-966c-4085-ac9d-ed49a96ac0bf",
         "difficulty": 4,
-        "practices": ["strings", "filtering"],
+        "practices": ["filtering"],
         "prerequisites": ["functions", "strings", "filtering"],
         "status": "beta"
       },
@@ -234,8 +234,8 @@
         "name": "Beer Song",
         "uuid": "5c6f22e7-109c-4d9e-b8bf-4ea63b2823ca",
         "difficulty": 3,
-        "practices": ["strings"],
-        "prerequisites": ["conditionals", "strings"],
+        "practices": ["format-basics"],
+        "prerequisites": ["conditionals", "strings", "format-basics"],
         "status": "beta"
       },
       {
@@ -243,8 +243,8 @@
         "name": "Roman Numerals",
         "uuid": "150d3608-d234-4c9e-ab6d-2d91f8a2c855",
         "difficulty": 1,
-        "practices": ["integers", "strings"],
-        "prerequisites": ["functions"],
+        "practices": ["strings"],
+        "prerequisites": ["functions", "strings", "integers"],
         "status": "beta"
       },
       {
@@ -261,7 +261,7 @@
         "name": "Bob",
         "uuid": "1e6c8365-775d-4a4f-8fc7-e376912d7912",
         "difficulty": 2,
-        "practices": ["conditionals", "strings", "format-basics"],
+        "practices": ["conditionals", "format-basics"],
         "prerequisites": ["conditionals", "strings", "format-basics"],
         "status": "beta"
       },
@@ -288,7 +288,7 @@
         "name": "All Your Base",
         "uuid": "9b01a3bd-68fe-4171-8e5e-ff3351865aaf",
         "difficulty": 4,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["integers"],
         "prerequisites": ["integers", "arithmetic"],
         "status": "beta"
       },
@@ -306,7 +306,7 @@
         "name": "Armstrong Numbers",
         "uuid": "9319d1a6-276f-4b3b-8305-fc022cc48ef2",
         "difficulty": 2,
-        "practices": ["lists", "mapping", "arithmetic"],
+        "practices": ["lists", "mapping"],
         "prerequisites": ["integers", "lists", "arithmetic", "mapping"],
         "status": "beta"
       },
@@ -324,7 +324,7 @@
         "name": "Binary Search",
         "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
         "difficulty": 3,
-        "practices": ["arrays", "conditionals"],
+        "practices": ["arrays"],
         "prerequisites": ["arrays", "conditionals"],
         "status": "beta"
       },
@@ -405,7 +405,7 @@
         "name": "Perfect Numbers",
         "uuid": "b3ad38c2-2962-4b47-9b15-15ca262ebff6",
         "difficulty": 3,
-        "practices": ["arithmetic", "conditionals"],
+        "practices": ["conditionals"],
         "prerequisites": ["arithmetic", "conditionals"],
         "status": "beta"
       },
@@ -432,7 +432,7 @@
         "name": "Sieve",
         "uuid": "40f3b911-0739-4fec-95cc-cfab99788c19",
         "difficulty": 3,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["integers"],
         "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -449,9 +449,9 @@
         "slug": "strain",
         "name": "Strain",
         "uuid": "1a81aac9-9128-48ab-aa6a-4d981d6eb602",
-        "difficulty": 1,
-        "practices": ["conditionals", "filtering"],
-        "prerequisites": ["conditionals", "filtering"],
+        "difficulty": 4,
+        "practices": ["conditionals"],
+        "prerequisites": ["conditionals"],
         "status": "beta"
       },
       {
@@ -513,7 +513,7 @@
         "name": "Prime Factors",
         "uuid": "cc138097-7c0f-44b4-b07e-2a24f6475986",
         "difficulty": 3,
-        "practices": ["integers", "arithmetic"],
+        "practices": ["integers"],
         "prerequisites": ["conditionals", "integers", "arithmetic"],
         "status": "beta"
       },
@@ -559,7 +559,7 @@
         "uuid": "7cc9d827-b08e-437d-826e-244f220feca0",
         "difficulty": 5,
         "practices": ["integers"],
-        "prerequisites": ["strings"],
+        "prerequisites": ["strings", "integers", "arithmetic"],
         "status": "beta"
       },
       {
@@ -576,7 +576,7 @@
         "name": "Isbn Verifier",
         "uuid": "d234aba4-daa2-4573-b9df-4592589f2ccf",
         "difficulty": 5,
-        "practices": ["strings", "filtering", "mapping", "arithmetic"],
+        "practices": ["filtering", "mapping"],
         "prerequisites": ["strings", "filtering", "mapping", "arithmetic", "functions", "conditionals"],
         "status": "beta"
       },
@@ -594,7 +594,7 @@
         "name": "Matching Brackets",
         "uuid": "880223e2-2625-4753-917e-b1d82cc2a028",
         "difficulty": 2,
-        "practices": ["reducing", "conditionals", "filtering"],
+        "practices": ["reducing", "filtering"],
         "prerequisites": ["reducing", "conditionals", "characters", "filtering", "functions"],
         "status": "beta"
       },
@@ -612,7 +612,7 @@
         "name": "Largest Series Product",
         "uuid": "29edfde1-ba04-4502-80e2-8a52092e18a9",
         "difficulty": 5,
-        "practices": ["functions", "mapping", "conditionals"],
+        "practices": ["functions", "mapping"],
         "prerequisites": ["conditionals", "strings", "characters", "mapping", "functions"],
         "status": "beta"
       },
@@ -648,7 +648,7 @@
         "name": "Rail Fence Cipher",
         "uuid": "22ad5969-163d-44db-a2a6-b9c6b0767598",
         "difficulty": 4,
-        "practices": ["strings"],
+        "practices": ["functions"],
         "prerequisites": ["strings", "functions", "lists", "mapping"],
         "status": "beta"
       },
@@ -667,7 +667,7 @@
         "uuid": "81ee1119-ddd8-412b-a9f4-7f4374c7cf46",
         "difficulty": 4,
         "practices": ["conditionals"],
-        "prerequisites": ["conditionals", "functions", "lists"],
+        "prerequisites": ["conditionals", "functions", "lists", "strings"],
         "status": "beta"
       },
       {
@@ -694,7 +694,7 @@
         "uuid": "55744a77-e371-4963-bd8a-43048eb56ad4",
         "difficulty": 6,
         "practices": ["multiple-values", "arithmetic"],
-        "prerequisites": ["multiple-values", "arithmetic", "functions", "lists"],
+        "prerequisites": ["multiple-values", "arithmetic", "functions", "lists", "strings"],
         "status": "beta"
       },
       {
@@ -711,7 +711,7 @@
         "name": "Affine Cipher",
         "uuid": "b7885c80-d4d9-4636-a9c2-6051c6f9204c",
         "difficulty": 4,
-        "practices": ["arithmetic", "strings", "characters"],
+        "practices": ["arithmetic", "characters"],
         "prerequisites": ["arithmetic", "strings", "characters", "mapping", "filtering"],
         "status": "beta"
       },
