@@ -180,8 +180,6 @@
         "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
         "practices": [
           "optional-parameters",
-          "conditionals",
-          "functions",
           "format-basics"
         ],
         "prerequisites": [
@@ -531,8 +529,8 @@
         "name": "Robot Simulator",
         "uuid": "d218cf9e-3b35-4357-9734-87142c22d551",
         "difficulty": 7,
-        "practices": ["conditionals"],
-        "prerequisites": ["conditionals"],
+        "practices": ["functions"],
+        "prerequisites": ["conditionals", "functions"],
         "status": "beta"
       },
       {
