@@ -39,13 +39,4 @@ UGU, UGC              | Cysteine
 UGG                   | Tryptophan
 UAA, UAG, UGA         | STOP
 
-If your program encounters an invalid protein you should signal an error.
-
-For example:
-
-```text
-"AUG" -> "Methionine"
-"XYZ" -> error
-```
-
 Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki/Translation_(biology))
