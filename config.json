@@ -689,6 +689,15 @@
         "status": "beta"
       },
       {
+        "slug": "palindrome-products",
+        "name": "Palindrome Products",
+        "uuid": "55744a77-e371-4963-bd8a-43048eb56ad4",
+        "difficulty": 6,
+        "practices": ["multiple-values", "arithmetic"],
+        "prerequisites": ["multiple-values", "arithmetic", "functions", "lists"],
+        "status": "beta"
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "f7bbf16d-77d9-4d13-a20c-e60f416de764",

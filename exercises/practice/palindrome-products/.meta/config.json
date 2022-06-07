@@ -1,0 +1,12 @@
+{
+   "blurb": "Detect palindrome products in a given range.",
+   "source": "Problem 4 at Project Euler",
+   "source_url": "http://projecteuler.net/problem=4",
+   "files": {
+      "test": ["palindrome-products-test.lisp"],
+      "solution": ["palindrome-products.lisp"],
+      "example": [".meta/example.lisp"]
+   },
+   "authors": ["PaulT89"],
+   "contributors": []
+}
