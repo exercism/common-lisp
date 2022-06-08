@@ -283,7 +283,7 @@ def create_test_toml(exercise_name, prob_spec_exercise):
         for case in cases:
             try:
                 # Add lines in toml style
-                output += "\n[{0}]\ndescription = {1}\n".format(case["uuid"], case["description"])
+                output += "\n[{0}]\ndescription = \"{1}\"\n".format(case["uuid"], case["description"])
             except KeyError:
                 # Recursively dig further into the data structure
                 output += find_uuids_and_descriptions(case["cases"])
