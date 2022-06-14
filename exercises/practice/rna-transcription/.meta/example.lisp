@@ -14,6 +14,4 @@
 
 (defun to-rna (strand)
   (validate-strand strand)
-  (concatenate 'string
-               (mapcar #'(lambda (c) (cdr (assoc c dna->rna)))
-                       (coerce strand 'list))))
+  (map 'string #'(lambda (c) (cdr (assoc c dna->rna))) strand))
