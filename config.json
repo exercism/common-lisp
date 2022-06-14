@@ -197,8 +197,8 @@
         "name": "Rna Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["mapping"],
+        "prerequisites": ["mapping"],
         "status": "beta"
       },
       {
