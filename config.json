@@ -341,8 +341,8 @@
         "name": "Etl",
         "uuid": "52ac3dd0-8803-445f-93cf-e984b59d6702",
         "difficulty": 4,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["hash-tables"],
+        "prerequisites": ["hash-tables"],
         "status": "beta"
       },
       {
@@ -377,8 +377,8 @@
         "name": "Nucleotide Count",
         "uuid": "b2ad38c2-2962-4a47-9b14-20ca262ebff6",
         "difficulty": 4,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["hash-tables", "reducing"],
+        "prerequisites": ["hash-tables", "reducing"],
         "status": "beta"
       },
       {
