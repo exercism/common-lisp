@@ -449,8 +449,8 @@
         "name": "Sublist",
         "uuid": "428e5b28-31b6-4c84-8eae-d7753d45efc1",
         "difficulty": 1,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["cons", "conditionals", "symbols"],
+        "prerequisites": ["cons", "conditionals", "symbols"],
         "status": "beta"
       },
       {
@@ -458,8 +458,8 @@
         "name": "Triangle",
         "uuid": "bd2a55e3-9874-4d2e-ad6f-4b2f8c5e2e0a",
         "difficulty": 2,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["conditionals", "symbols"],
+        "prerequisites": ["conditionals", "symbols"],
         "status": "beta"
       },
       {
@@ -539,8 +539,8 @@
         "name": "Meetup",
         "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
         "difficulty": 4,
-        "practices": ["multiple-values", "date-time"],
-        "prerequisites": ["multiple-values", "date-time"],
+        "practices": ["multiple-values", "date-time", "symbols"],
+        "prerequisites": ["multiple-values", "date-time", "symbols"],
         "status": "beta"
       },
       {
@@ -629,8 +629,8 @@
         "name": "Knapsack",
         "uuid": "7b699611-7119-4f4e-93bb-ff7dc3064357",
         "difficulty": 7,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["reducing", "mapping", "filtering", "symbols"],
+        "prerequisites": ["reducing", "mapping", "filtering", "symbols"],
         "status": "beta"
       },
       {
