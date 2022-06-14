@@ -521,8 +521,8 @@
         "name": "Robot Simulator",
         "uuid": "d218cf9e-3b35-4357-9734-87142c22d551",
         "difficulty": 7,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["keyword-parameters"],
+        "prerequisites": ["keyword-parameters"],
         "status": "beta"
       },
       {
