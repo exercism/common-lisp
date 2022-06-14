@@ -278,8 +278,8 @@
         "name": "All Your Base",
         "uuid": "9b01a3bd-68fe-4171-8e5e-ff3351865aaf",
         "difficulty": 4,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["integers", "arithmetic"],
+        "prerequisites": ["integers", "arithmetic"],
         "status": "beta"
       },
       {
