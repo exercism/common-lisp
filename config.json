@@ -378,8 +378,8 @@
         "name": "Isogram",
         "uuid": "89ea51d0-3f7e-4e07-8e2b-4dde4c76608b",
         "difficulty": 2,
-        "practices": ["strings"],
-        "prerequisites": ["strings"],
+        "practices": ["filtering"],
+        "prerequisites": ["filtering"],
         "status": "beta"
       },
       {
