@@ -539,8 +539,8 @@
         "name": "Meetup",
         "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
         "difficulty": 4,
-        "practices": ["date-time"],
-        "prerequisites": ["date-time"],
+        "practices": ["multiple-values", "date-time"],
+        "prerequisites": ["multiple-values", "date-time"],
         "status": "beta"
       },
       {
@@ -683,8 +683,8 @@
         "name": "Palindrome Products",
         "uuid": "55744a77-e371-4963-bd8a-43048eb56ad4",
         "difficulty": 6,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["multiple-values"],
+        "prerequisites": ["multiple-values"],
         "status": "beta"
       },
       {
