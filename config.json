@@ -728,8 +728,8 @@
         "name": "Flatten Array",
         "uuid": "008ae436-b9d5-4882-b1c7-8809baff70ea",
         "difficulty": 6,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["lists"],
+        "prerequisites": ["lists"],
         "status": "beta"
       },
       {
