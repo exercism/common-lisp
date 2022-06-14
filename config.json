@@ -314,8 +314,8 @@
         "name": "Binary Search",
         "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
         "difficulty": 3,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["arrays", "vectors"],
+        "prerequisites": ["arrays", "vectors"],
         "status": "beta"
       },
       {
@@ -674,8 +674,8 @@
         "name": "Matrix",
         "uuid": "93e19e42-f81d-42f0-b3ad-a0f5974ccf20",
         "difficulty": 4,
-        "practices": ["strings", "arrays"],
-        "prerequisites": ["strings", "arrays"],
+        "practices": ["strings", "arrays", "vectors"],
+        "prerequisites": ["strings", "arrays", "vectors"],
         "status": "beta"
       },
       {
