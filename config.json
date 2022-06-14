@@ -539,8 +539,8 @@
         "name": "Meetup",
         "uuid": "6c702aa9-70f3-41d0-bc76-4323a08f8fbf",
         "difficulty": 4,
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["date-time"],
+        "prerequisites": ["date-time"],
         "status": "beta"
       },
       {
