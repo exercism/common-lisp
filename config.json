@@ -178,8 +178,8 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b80ab7d9-6152-4351-b405-07c2fb071962",
-        "practices": [],
-        "prerequisites": [],
+        "practices": ["format-basics", "optional-parameters"],
+        "prerequisites": ["format-basics", "optional-parameters", "conditionals"],
         "difficulty": 1,
         "status": "beta"
       },
