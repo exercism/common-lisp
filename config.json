@@ -441,8 +441,8 @@
         "name": "Space Age",
         "uuid": "d24cf0ea-876f-4775-969b-99970425e413",
         "difficulty": 1,
-        "practices": ["floating-point-numbers"],
-        "prerequisites": ["floating-point-numbers"],
+        "practices": ["functions", "floating-point-numbers"],
+        "prerequisites": ["functions", "floating-point-numbers"],
         "status": "beta"
       },
       {
