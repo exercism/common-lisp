@@ -1,5 +1,7 @@
 # Introduction
 
+## Lambda List
+
 In Common Lisp a function's argument list is known as a ['lambda list'][lambda-list].
 A lambda list can can have arguments of different types.
 These different types are designated with the use of ['lambda list keywords'][lambda-list-keyword] which all begin with `&`.

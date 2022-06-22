@@ -1,10 +1,12 @@
 # Introduction
 
+## Format - Basics
+
 Common Lisp has a concept of The Printer which includes all functions for writing textural representations of Lisp data. One such function is `format` which allows the programmer to format the data as they want.
 
 The abilities of `format` and the Lisp Printer in general is a large topic; here the basics of the use of `format` will be described.
 
-## The FORMAT function
+### The FORMAT function
 
 The function `format` takes at least two arguments: a stream to print to and control string defining what and how is to be printed. 
 
@@ -17,13 +19,13 @@ Note that `format` will always evaluate to `nil` except in that latter case wher
 (format t "hello world")   ; => NIL (but "hello world" is printed to standard output)
 ```
 
-## Format Directives
+### Format Directives
 
 The control string can contain "format directives" which give instructions to `format` about what to print and how to interpret any other parameters to `format`. In a sense the control string is a program which `format` will interpret and run. All directives start with `~` and are followed by a character (_e.g._ `~A`, `~D`, `~&`). The case of the character does not matter.
 
 Most format directives simply interpolate an argument to `format` into the output. This is said to "consume" the argument. Some directives do not consume arguments, or consume more than one. One directive even allows you to jump around in the argument list or skip arguments.
 
-## Basic formatting
+### Basic formatting
 
 A very general purpose format directive is `~A`. This will print a 'human readable' version of the data.
 

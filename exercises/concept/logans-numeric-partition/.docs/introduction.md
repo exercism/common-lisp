@@ -1,5 +1,7 @@
 # Introduction
 
+## Reducing
+
 Reducing is the repeated application of a function to each element of
 a sequence and accumulating, in some way, the results. 
 The function applied takes two parameters: the current accumulated value and the item to process. 

@@ -1,5 +1,7 @@
 # Introduction
 
+## Equality
+
 Common Lisp has many different equality predicates.
 This differs from other programming languages which may have only one or two (perhaps `==` and `===` for example).
 Some of these predicates in Common Lisp are specific to types, while others are generic.

@@ -1,5 +1,7 @@
 # Introduction
 
+## Functions
+
 To define a global function in Common Lisp one uses the `defun` expression.
 This expression takes as its first argument a list of parameters (an empty list means the function has no parameters).
 This is followed by an optional documentation string (see below), then zero or more expressions which make up the "body" of the function.

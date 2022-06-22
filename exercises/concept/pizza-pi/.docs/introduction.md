@@ -32,7 +32,7 @@ More visually:
 
 While prefix notion turns some operations like `2 + 2` into the somewhat unfamiliar `(+ 2 2)` form, it makes it much easier to operate on more than one number at a time.
 
-## Basic Math
+### Basic Math
 
 Common Lisp has all the typical functions: `+`, `-`, `*`, `/` for addition, subtraction, multiplication and division.
 
@@ -44,7 +44,7 @@ When considering division one may want to know the remainder of a division, that
 (mod 10 3) ; => 1
 ```
 
-## Comparing Numbers
+### Comparing Numbers
 
 Finally, you may find it useful to compare different numbers using functions like `=` (equal), `/=` (not equal to), and `>=` (greater than or equal to).
 When these comparisons are true (as in `(= 1 1)`), they return `T` and when they aren't (as in `(> 0 1)`), they return `NIL`.
