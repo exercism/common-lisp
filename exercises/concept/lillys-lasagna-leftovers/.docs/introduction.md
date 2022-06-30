@@ -56,7 +56,7 @@ Care should be taken when combining optional and keyword parameters as the keywo
 (could-be-confusing :z 'huh?) ; => (:Z HUH? NIL)
 ```
 
-## Rest Parameters
+## Rest-Parameters
 
 In Common Lisp a function can have a parameter that will contain the "rest" of the arguments after any required or optional parameters are processed.
 This parameter is designated by the `&rest` lambda list keyword.

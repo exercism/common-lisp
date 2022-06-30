@@ -1,6 +1,6 @@
 # Introduction
 
-## Dates and Times
+## Date and Time
 
 In Common Lisp time is represented in four ways, two of which will be touched upon here.
 
