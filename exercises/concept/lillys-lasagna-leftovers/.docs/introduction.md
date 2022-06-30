@@ -11,9 +11,6 @@ A lambda list keyword can only be used once in a lambda list.
 
 Lambda lists are also used in other constructs which will be discussed later such as destructuring and macros.
 
-[lambda-list]: http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_l.htm#lambda_list
-[lambda-list-keyword]: http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_l.htm#lambda_list_keyword
-
 ## Optional Parameters
 
 In Common Lisp a function can have some arguments that are optional.

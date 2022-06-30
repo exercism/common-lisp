@@ -56,8 +56,6 @@ The number is a rational number and must be a multiple of `1/3600`
                                    ;    0
 ```
 
-[concept-multiple-values]: /tracks/common-lisp/concepts/multiple-values
-
 ## Multiple Values
 
 In Common Lisp a function can not only return one value but can return multiple values. 
@@ -101,3 +99,5 @@ The second will let you bind variables to the individual values.
 ```
 
 Another useful function is `nthvalue`
+
+[concept-multiple-values]: /tracks/common-lisp/concepts/multiple-values
