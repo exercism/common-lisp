@@ -34,6 +34,9 @@
 (test invalid-long-number-with-even-remainder
   (is (not (luhn:validp "1 2345 6789 1234 5678 9012"))))
 
+(test invalid-long-number-with-a-remainder-divisible-by-5
+  (is (not (luhn:validp "1 2345 6789 1234 5678 9013"))))
+
 (test valid-number-with-even-number-of-digits
   (is (luhn:validp "095 245 88")))
 
