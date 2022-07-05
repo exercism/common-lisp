@@ -1,10 +1,12 @@
 # Introduction
 
+## Hash Tables
+
 Hash tables in Common Lisp are data structures for storing associative data. 
 They map keys (which can be any object) to values (which can be any object). 
 Other languages may refer to this concept as maps, dictionaries or hashes.
 
-## Creating hash tables
+### Creating hash tables
 
 Hash tables can be created with the `make-hash-table` function.
 
@@ -12,7 +14,7 @@ Hash tables can be created with the `make-hash-table` function.
 
 (Note the printed presentation of a hash table is implementation dependent so it may appear differently in your REPL.)
 
-## Retrieving values by keys
+### Retrieving values by keys
 
 To get a value by a key from the hash table you use the `gethash` function:
 
@@ -24,7 +26,7 @@ To get a value by a key from the hash table you use the `gethash` function:
 
 `gethash` returns [multiple values][concepts-multiple-values] which will be explained in another concept.
 
-## Inserting values
+### Inserting values
 
 To insert a value into a hash table you use `setf` with `gethash` like this:
 

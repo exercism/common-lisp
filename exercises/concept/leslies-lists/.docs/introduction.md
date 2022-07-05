@@ -1,5 +1,7 @@
 # Introduction
 
+## Lists
+
 Given that the name of the language is Lisp which stands of _LISt Processing_ one might assume that the language has facilities for handling lists of items, and you'd be correct!
 
 While Common Lisp has other data structures as well as lists, lists are still heavily used.
@@ -8,7 +10,7 @@ A list in Common Lisp is a sequence of items.
 The items themselves do not have to be the same type.
 For example you can have a list of `1`, `two`, `"III"`.
 
-## Creating Lists
+### Creating Lists
 
 One can simply type in a quoted list like this: `'(1 two "III")` and that will cause a list to be created and evaluated (it evaluates to: `(1 two "III")`.
 
@@ -32,7 +34,7 @@ There are also two main functions used to create lists: `list` and `cons`.
 
 (`first` and `rest` are synonyms of `car` and `cdr` and work exactly the same.)
 
-## Length & Random Access
+### Length & Random Access
 
 The length of a list can be determined by the use of `length`.
 An empty list has length zero.
@@ -48,7 +50,7 @@ Instead it evaluates to `nil`:
 
 There are also 10 helper methods for accessing the first 10 items of a list, they are named: `first`, `second`, `third`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, and `tenth`.
 
-## Combining lists
+### Combining lists
 
 Two, or more, lists can be combined with `append`: 
 

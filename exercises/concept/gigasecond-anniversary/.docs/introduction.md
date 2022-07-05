@@ -1,6 +1,6 @@
 # Introduction
 
-## Dates and Times
+## Date and Time
 
 In Common Lisp time is represented in four ways, two of which will be touched upon here.
 
@@ -8,12 +8,12 @@ In Common Lisp time is represented in four ways, two of which will be touched up
 - Decoded time is a tuple of 9 values, that together represent a specific calendar time: seconds, minutes, hour, day-of-month, year, day-of-week, DST flag, time zone.
 (Discussed in detail below.)
 
-## Universal Time
+### Universal Time
 
 To get current universal time one uses `get-universal-time` or `get-decoded-time`.
 The former returns the current seconds since `1900-01-01T00:00Z` and the latter returns the same data in decoded format.
 
-## Decoded Time
+### Decoded Time
 
 `decode-universal-time` and `encode-universal-time` are the primary functions for working with time.
 The former takes a universal time and returns a decoded time value as [multiple-values][concept-multiple-values] and the latter takes the decoded time values as arguments and returns a universal time.
@@ -56,8 +56,6 @@ The number is a rational number and must be a multiple of `1/3600`
                                    ;    0
 ```
 
-[concept-multiple-values]: /tracks/common-lisp/concepts/multiple-values
-
 ## Multiple Values
 
 In Common Lisp a function can not only return one value but can return multiple values. 
@@ -69,7 +67,7 @@ For example `floor` which rounds down toward zero, returns two values, the first
 ```
 (We will show multiple values returned on separate lines of the output.)
 
-## Return multiple values
+### Return multiple values
 
 If you want a function to return multiple values you use the `values` accessor:
 
@@ -80,7 +78,7 @@ If you want a function to return multiple values you use the `values` accessor:
                 ;    3
 ```
 
-## Handling multiple values
+### Handling multiple values
 
 If you only care about the first value then nothing special needs to be done - the language takes care of it:
 
@@ -101,3 +99,5 @@ The second will let you bind variables to the individual values.
 ```
 
 Another useful function is `nthvalue`
+
+[concept-multiple-values]: /tracks/common-lisp/concepts/multiple-values

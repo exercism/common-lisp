@@ -21,7 +21,7 @@ The results were collected into a list which is the value the expression evaluat
 Filtering is the process of creating a sequence from another sequence by copying all but certain elements from the original sequence.
 The choice of which items to include in the new sequence can be done by a predicate function (a function that evaluates to a boolean value), or by equality with a specific object.
 
-## Removing by a predicate
+### Removing by a predicate
 
 `remove-if` is a function that takes a predicate function and a sequence as arguments, and returns a sequence of only those elements for which the predicate evaluated to a false value.
 In other words, it "removes" all elements of the sequence for which the predicate evaluates to true. However, note that this function does not modify the original sequence! 
@@ -32,7 +32,7 @@ Instead, it returns a new sequence without the appropriate elements. If the pred
 (remove-if #'oddp '(1 3 5))      ; => ()
 ```
 
-## Removing a specific item
+### Removing a specific item
 
 If one wants to remove a specific item from a sequence one can use `remove` which takes the item to remove and a sequence.
 All values in the sequence which are not equal to the item to remove are returned.

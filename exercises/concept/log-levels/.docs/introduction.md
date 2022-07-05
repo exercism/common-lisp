@@ -1,5 +1,7 @@
 # Introduction
 
+## Strings
+
 In Common Lisp strings are [vectors][concept-vectors] of [characters][concept-characters].
 They are written as characters surrounded by double quotes (_e.g_ "Hello World!").
 

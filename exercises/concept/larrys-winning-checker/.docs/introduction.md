@@ -1,10 +1,12 @@
 # Introduction
 
+## Arrays
+
 In Common Lisp like other languages an array is a set of elements which are accessed via integral indexes.
 The types of the elements can be heterogeneous.
 The array can be multi-dimensional (not simply 1-dimensional).
 
-## Creating
+### Creating
 
 `make-array` allows one to create arrays.
 It has many options but its simpler forms allow one to create N-dimensional arrays with all elements initialized to a single value or the array initialized to the values in another sequence (such as a list). 
@@ -24,7 +26,7 @@ Arrays can also be created by using the same format they are printed in:
 #2A((1 2) (3 4)) ; => #2A((1 2) (3 4))
 ```
 
-## Accessing Elements
+### Accessing Elements
 
 To access elements of a vector use `aref`, the indexes are zero-based. 
 The number of indexes provided must match the rank of the array.
