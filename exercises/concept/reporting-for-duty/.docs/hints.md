@@ -4,7 +4,7 @@
 
 ## 1. Formatting quarterly values
 
-- `format` always returns `nil` unless the stream parameter is `nl`.
+- `format` always returns `nil` unless the stream parameter is `nil`.
 - `~A` can be used to format a value.
 
 ## 2. The Two-Quarter report
