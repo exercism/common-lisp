@@ -16,7 +16,7 @@ Since they are arrays they can also be created with `make-array`:
 
 ```lisp
 (make-array 3 :initial-element 'x)        ; => #(X X X)
-(make-array 3 :initial-contents '(a b c)) ; => #(A B C D)
+(make-array 3 :initial-contents '(a b c)) ; => #(A B C)
 ```
 
 ## Vector Predicate
