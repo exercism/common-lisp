@@ -69,8 +69,14 @@
 (test all-sides-are-equal
   (is (not (triangle:triangle-type-p :scalene 4 4 4))))
 
-(test two-sides-are-equal
+(test first-and-second-sides-are-equal
   (is (not (triangle:triangle-type-p :scalene 4 4 3))))
+
+(test first-and-third-sides-are-equal
+  (is (not (triangle:triangle-type-p :scalene 4 3 4))))
+
+(test second-and-third-sides-are-equal
+  (is (not (triangle:triangle-type-p :scalene 3 4 4))))
 
 (test may-not-violate-triangle-inequality
   (is (not (triangle:triangle-type-p :scalene 7 3 2))))
