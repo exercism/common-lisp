@@ -49,7 +49,7 @@ Also the indexes provided must be 'in bounds' given the dimensions provided when
 This can be checked with `array-in-bounds-p`:
 
 ```lisp
-(array-in-bounds-p #2A((1) (2)) 0 1) ; => T
+(array-in-bounds-p #2A((1) (2)) 0 0) ; => T
 (array-in-bounds-p #2A((1) (2)) 2 0) ; => NIL
 ```
 
