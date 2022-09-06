@@ -1,12 +1,19 @@
 {
-   "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
-   "source": "Seb Rose",
-   "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/",
-   "files": {
-      "test": ["diamond-test.lisp"],
-      "solution": ["diamond.lisp"],
-      "example": [".meta/example.lisp"]
-   },
-   "authors": ["PaulT89"],
-   "contributors": []
+  "authors": [
+    "PaulT89"
+  ],
+  "files": {
+    "solution": [
+      "diamond.lisp"
+    ],
+    "test": [
+      "diamond-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
+  },
+  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
+  "source": "Seb Rose",
+  "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"
 }

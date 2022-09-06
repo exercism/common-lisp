@@ -1,12 +1,19 @@
 {
-   "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",
-   "source": "Wikipedia",
-   "source_url": "http://en.wikipedia.org/wiki/Affine_cipher",
-   "files": {
-      "test": ["affine-cipher-test.lisp"],
-      "solution": ["affine-cipher.lisp"],
-      "example": [".meta/example.lisp"]
-   },
-   "authors": ["PaulT89"],
-   "contributors": []
+  "authors": [
+    "PaulT89"
+  ],
+  "files": {
+    "solution": [
+      "affine-cipher.lisp"
+    ],
+    "test": [
+      "affine-cipher-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
+  },
+  "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",
+  "source": "Wikipedia",
+  "source_url": "http://en.wikipedia.org/wiki/Affine_cipher"
 }

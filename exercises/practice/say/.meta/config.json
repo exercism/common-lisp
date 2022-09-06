@@ -1,12 +1,19 @@
 {
-   "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
-   "source": "A variation on JavaRanch CattleDrive, exercise 4a",
-   "source_url": "http://www.javaranch.com/say.jsp",
-   "files": {
-      "test": ["say-test.lisp"],
-      "solution": ["say.lisp"],
-      "example": [".meta/example.lisp"]
-   },
-   "authors": ["PaulT89"],
-   "contributors": []
+  "authors": [
+    "PaulT89"
+  ],
+  "files": {
+    "solution": [
+      "say.lisp"
+    ],
+    "test": [
+      "say-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
+  },
+  "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
+  "source": "A variation on JavaRanch CattleDrive, exercise 4a",
+  "source_url": "http://www.javaranch.com/say.jsp"
 }
