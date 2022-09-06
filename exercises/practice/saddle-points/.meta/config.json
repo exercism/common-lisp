@@ -1,12 +1,19 @@
 {
-   "blurb": "Detect saddle points in a matrix.",
-   "source": "J Dalbey's Programming Practice problems",
-   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html",
-   "files": {
-      "test": ["saddle-points-test.lisp"],
-      "solution": ["saddle-points.lisp"],
-      "example": [".meta/example.lisp"]
-   },
-   "authors": ["PaulT89"],
-   "contributors": []
+  "authors": [
+    "PaulT89"
+  ],
+  "files": {
+    "solution": [
+      "saddle-points.lisp"
+    ],
+    "test": [
+      "saddle-points-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
+  },
+  "blurb": "Detect saddle points in a matrix.",
+  "source": "J Dalbey's Programming Practice problems",
+  "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
 }

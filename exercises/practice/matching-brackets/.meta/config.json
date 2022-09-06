@@ -1,11 +1,21 @@
 {
-   "blurb": "Make sure the brackets and braces all match.",
-   "source": "Ginna Baker",
-   "files": {
-      "test": ["matching-brackets-test.lisp"],
-      "solution": ["matching-brackets.lisp"],
-      "example": [".meta/example.lisp"]
-   },
-   "authors": ["PaulT89"],
-   "contributors": ["verdammelt"]
+  "authors": [
+    "PaulT89"
+  ],
+  "contributors": [
+    "verdammelt"
+  ],
+  "files": {
+    "solution": [
+      "matching-brackets.lisp"
+    ],
+    "test": [
+      "matching-brackets-test.lisp"
+    ],
+    "example": [
+      ".meta/example.lisp"
+    ]
+  },
+  "blurb": "Make sure the brackets and braces all match.",
+  "source": "Ginna Baker"
 }
