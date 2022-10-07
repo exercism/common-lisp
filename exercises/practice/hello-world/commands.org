@@ -1,0 +1,44 @@
+;;;; -*- mode:org; coding:utf-8 -*-
+
+* Testing hello-world
+
+To run the tests of =hello-world=, type C-c C-c in the following block:
+
+#+BEGIN_SRC lisp 
+  (pushnew (make-pathname :defaults *load-truename* :name nil :type nil :version nil)
+           ql:*local-project-directories* :test (function equalp))
+  (ql:quickload "exercism.common-lisp.hello-world.tests")
+  (with-output-to-string (*standard-output*) (hello-world-test:run-tests))
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+
+hello-world-test::hello 
+Running test suite hello-world-suite
+ Running test say-hi! f
+ Did 1 check.
+    Pass: 0 ( 0%)
+    Skip: 0 ( 0%)
+    Fail: 1 (100%)
+ Failure Details:
+ --------------------------------
+ say-hi! in hello-world-suite []: 
+      
+(hello-world:hello)
+
+ evaluated to 
+
+"Goodbye, Mars!"
+
+ which is not 
+
+equal
+
+ to 
+
+"Hello, World!"
+
+
+ --------------------------------
+#+end_example
