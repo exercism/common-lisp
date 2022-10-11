@@ -1,6 +1,6 @@
 # Representations
 
-The [representer][representer] use `[read][cl-read]` to read the submission and `[write][cl-write]` to write the representation as well as applying some additional normalizations.
+The [representer][representer] uses `[read][cl-read]` to read the submission and `[write][cl-write]` to write the representation as well as applying some additional normalizations.
 In total each submission has the following normalizations applied to it:
 
 - [All comments are removed][remove-comments]
