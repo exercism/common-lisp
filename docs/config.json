@@ -28,7 +28,7 @@
       "title": "Useful Common Lisp resources",
       "blurb": "A collection of useful resources to help you master Common Lisp"
     },
-        {
+    {
        "uuid": "5e4cdf80-0347-418e-914e-56d1bbecde01",
        "slug": "representer-normalizations",
        "path": "docs/REPRESENTER_NORMALIZATIONS.md",
