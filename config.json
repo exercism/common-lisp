@@ -204,7 +204,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
         "difficulty": 1,
         "practices": ["characters", "mapping"],
@@ -339,7 +339,7 @@
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "71804ace-6ca1-46b9-bf06-ff57faef7afa",
         "difficulty": 2,
         "practices": ["arithmetic"],
@@ -348,7 +348,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "52ac3dd0-8803-445f-93cf-e984b59d6702",
         "difficulty": 4,
         "practices": ["hash-tables"],
@@ -393,7 +393,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "34bc4fbe-f148-4519-a699-91efed432703",
         "difficulty": 2,
         "practices": ["integers"],
@@ -573,7 +573,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "d234aba4-daa2-4573-b9df-4592589f2ccf",
         "difficulty": 5,
         "practices": ["strings", "filtering", "mapping", "arithmetic"],
@@ -600,7 +600,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "bb589f12-5aaf-48bf-a105-97396d7533de",
         "difficulty": 4,
         "practices": ["strings", "characters"],
