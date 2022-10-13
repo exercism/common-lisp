@@ -1,11 +1,11 @@
 # Representer normalizations
 
-The [representer][representer] uses `[read][cl-read]` to read the submission and `[write][cl-write]` to write the representation as well as applying some additional normalizations.
-In total each submission has the following normalizations applied to it:
+The [representer][representer] uses `[read][cl-read]` to read the submission and `[write][cl-write]` to write the representation, as well as applying some additional normalizations.
+Each submission has the following normalizations applied to it:
 
 ## Remove comments
 
-The submission is `[read][cl-read]` in and so all comments are removed.
+Because `[read][cl-read]` is used to load the submission, comments are removed.
 
 ## Remove documentation strings
 
@@ -14,7 +14,7 @@ However the representation will note if a documentation string was present or no
 
 ## Normalize text case
 
-The submission is `[read][cl-read]` in and so all symbols are normalized to uppercase.
+Because `[read][cl-read]` is used to load the submission, all symbols are normalized to uppercase.
 
 ## Normalize text formatting
 
