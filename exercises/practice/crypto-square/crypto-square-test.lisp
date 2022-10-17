@@ -18,6 +18,9 @@
 (test empty-plaintext-results-in-an-empty-ciphertext
  (is (equal "" (crypto-square:encipher ""))))
 
+(test normalization-results-in-empty-plaintext
+ (is (equal "" (crypto-square:encipher "... --- ..."))))
+
 (test lowercase (is (equal "a" (crypto-square:encipher "A"))))
 
 (test remove-spaces (is (equal "b" (crypto-square:encipher "  b "))))
