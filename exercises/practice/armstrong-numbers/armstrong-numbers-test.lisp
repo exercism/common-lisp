@@ -39,6 +39,13 @@
 (test seven-digit-number-that-is-not-an-armstrong-number
  (is (equal 'nil (armstrong-numbers:armstrong-number-p 9926314))))
 
+(test armstrong-number-containing-seven-zeroes
+ (is (equal t (armstrong-numbers:armstrong-number-p 186709961001538790100634132976990))))
+
+(test the-largest-and-last-armstrong-number
+ (is (equal t (armstrong-numbers:armstrong-number-p 115132219018763992565095597973971522401))))
+
 (defun run-tests (&optional (test-or-suite 'armstrong-numbers-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
+

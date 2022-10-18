@@ -18,6 +18,9 @@
 (test empty-plaintext-results-in-an-empty-ciphertext
  (is (equal "" (crypto-square:encipher ""))))
 
+(test normalization-results-in-empty-plaintext
+ (is (equal "" (crypto-square:encipher "... --- ..."))))
+
 (test lowercase (is (equal "a" (crypto-square:encipher "A"))))
 
 (test remove-spaces (is (equal "b" (crypto-square:encipher "  b "))))
@@ -41,3 +44,4 @@
 (defun run-tests (&optional (test-or-suite 'crypto-square-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
+

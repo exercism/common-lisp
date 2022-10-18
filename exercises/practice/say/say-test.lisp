@@ -35,6 +35,14 @@
     (let ((number 22))
       (is (string= "twenty-two" (say:say number)))))
 
+(test thirty
+    (let ((number 30))
+      (is (string= "thirty" (say:say number)))))
+
+(test ninety-nine
+    (let ((number 99))
+      (is (string= "ninety-nine" (say:say number)))))
+
 (test one-hundred
     (let ((number 100))
       (is (string= "one hundred" (say:say number)))))
@@ -42,6 +50,14 @@
 (test one-hundred-twenty-three
     (let ((number 123))
       (is (string= "one hundred twenty-three" (say:say number)))))
+
+(test two-hundred
+    (let ((number 200))
+      (is (string= "two hundred" (say:say number)))))
+
+(test nine-hundred-ninety-nine
+    (let ((number 999))
+      (is (string= "nine hundred ninety-nine" (say:say number)))))
 
 (test one-thousand
     (let ((number 1000))
@@ -79,3 +95,4 @@
 (defun run-tests (&optional (test-or-suite 'say-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
+

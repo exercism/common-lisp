@@ -55,6 +55,10 @@
     (let ((value "([{}({}[])])"))
      (is-true (matching-brackets:pairedp value))))
 
+(test paired-and-wrong-nested-brackets-but-innermost-are-correct
+    (let ((value "[({}])"))
+     (is-false (matching-brackets:pairedp value))))
+
 (test unopened-closing-brackets
     (let ((value "{[)][]}"))
      (is-false (matching-brackets:pairedp value))))
@@ -94,3 +98,4 @@
 (defun run-tests (&optional (test-or-suite 'matching-brackets-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
+
