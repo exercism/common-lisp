@@ -55,6 +55,10 @@
     (let ((value "([{}({}[])])"))
      (is-true (matching-brackets:pairedp value))))
 
+(test paired-and-wrong-nested-brackets-but-innermost-are-correct
+    (let ((value "[({}])"))
+     (is-false (matching-brackets:pairedp value))))
+
 (test unopened-closing-brackets
     (let ((value "{[)][]}"))
      (is-false (matching-brackets:pairedp value))))

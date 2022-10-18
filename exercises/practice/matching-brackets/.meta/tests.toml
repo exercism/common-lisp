@@ -32,6 +32,9 @@ description = "several paired brackets"
 [2e1f7b56-c137-4c92-9781-958638885a44]
 description = "paired and nested brackets"
 
+[1d5c093f-fc84-41fb-8c2a-e052f9581602]
+description = "paired and wrong nested brackets but innermost are correct"
+
 [84f6233b-e0f7-4077-8966-8085d295c19b]
 description = "unopened closing brackets"
 
