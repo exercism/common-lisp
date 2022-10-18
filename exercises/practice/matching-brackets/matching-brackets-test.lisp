@@ -98,3 +98,4 @@
 (defun run-tests (&optional (test-or-suite 'matching-brackets-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
+

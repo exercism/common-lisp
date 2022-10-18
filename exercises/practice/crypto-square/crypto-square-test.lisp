@@ -44,3 +44,4 @@
 (defun run-tests (&optional (test-or-suite 'crypto-square-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
+
