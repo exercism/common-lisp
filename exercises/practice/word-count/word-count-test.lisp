@@ -107,6 +107,12 @@ three"))))
  ,two
  'three'"))))
 
+(test quotation-for-word-with-apostrophe
+  (is (assert-alist-equal
+       '(("can" . 1) ("can't" . 2))
+       (word-count:count-words "can, can't, 'can't'"))))
+
 (defun run-tests (&optional (test-or-suite 'word-count-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
+
