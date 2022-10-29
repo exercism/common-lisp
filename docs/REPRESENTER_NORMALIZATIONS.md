@@ -1,11 +1,11 @@
 # Representer normalizations
 
-The [representer][representer] uses `[read][cl-read]` to read the submission and `[write][cl-write]` to write the representation, as well as applying some additional normalizations.
+The [representer][representer] uses [`read`][cl-read] to read the submission and [`write`][cl-write] to write the representation, as well as applying some additional normalizations.
 Each submission has the following normalizations applied to it:
 
 ## Remove comments
 
-Because `[read][cl-read]` is used to load the submission, comments are removed.
+Because [`read`][cl-read] is used to load the submission, comments are removed.
 
 ## Remove documentation strings
 
@@ -14,15 +14,15 @@ However the representation will note if a documentation string was present or no
 
 ## Normalize text case
 
-Because `[read][cl-read]` is used to load the submission, all symbols are normalized to uppercase.
+Because [`read`][cl-read] is used to load the submission, all symbols are normalized to uppercase.
 
 ## Normalize text formatting
 
-The representation is written with `[write][cl-write]` so any particulars of the submissions formatting (such as indentation, spacing, leaving closing parenthesis on empty lines) are not retained in the representation.
+The representation is written with [`write`][cl-write] so any particulars of the submissions formatting (such as indentation, spacing, leaving closing parenthesis on empty lines) are not retained in the representation.
 
 ## Normalize symbol names
 
-Symbols such as function, variable and macro names as well packages are mapped to `[gensyms][cl-gensym]` which are used in the representation.
+Symbols such as function, variable and macro names as well packages are mapped to [`gensyms`][cl-gensym] which are used in the representation.
 
 [cl-gensym]: http://www.lispworks.com/documentation/HyperSpec/Body/f_gensym.htm
 [cl-read]: http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_rd.htm
