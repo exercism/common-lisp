@@ -6,7 +6,7 @@
 
 ## 1. Comparing characters
 
-- Characters can be compared with functions such as `char-greater-p`, `char-less-p` and `char=`.
+- Characters can be compared with functions such as `char-greaterp`, `char-lessp` and `char=`.
 
 ## 2. Determine the "size" of the character
 
