@@ -23,12 +23,16 @@
   (is (= 306 (dough-calculator 1 15)))
   (is (= 1353 (dough-calculator 5 10))))
 
+(defun rounds-to (expected actual)
+  (flet ((to-2-places (n) (/ (round (* 100 n)) 100.0)))
+    (is (= (to-2-places expected) (to-2-places actual)))))
+
 (test splash-of-sauces "Calculates the diameter of a pizza from the amount of sauce applied"
-  (is (= 32.573500793528d0 (size-from-sauce 250)))
-  (is (= 20.601290774570113d0 (size-from-sauce 100)))
-  (is (= 37.424103185095554d0 (size-from-sauce 330)))
-  (is (= 46.52426491681278d0 (size-from-sauce 510)))
-  (is (= 53.72159374714264d0 (size-from-sauce 680))))
+  (is (rounds-to 32.57 (size-from-sauce 250)))
+  (is (rounds-to 20.60 (size-from-sauce 100)))
+  (is (rounds-to 37.42 (size-from-sauce 330)))
+  (is (rounds-to 46.52 (size-from-sauce 510)))
+  (is (rounds-to 53.72 (size-from-sauce 680))))
 
 (test cheese-please "Calculates the number of pizzas of a certain size that can be made from an amount of cheese"
   (is (= 3 (pizzas-per-cube 25 30)))
