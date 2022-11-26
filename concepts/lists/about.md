@@ -1,7 +1,7 @@
 # About
 
 [Lists][hyper-cons-as-list] are a very common data type in Common Lisp.
-They are made up of a sequence of [cons][../cons/about.md] cells.
+They are made up of a sequence of [cons][concept-cons] cells.
 Each `car` is an element of the list and every `cdr` is a either the next cons cell or a terminating atom.
 
 A list which terminates with the empty list is called a "proper list".
@@ -27,3 +27,4 @@ As an alternative to `append` there is `nconc` which has the same result but has
 
 [hyper-cons-as-list]: http://www.lispworks.com/documentation/HyperSpec/Body/14_ab.htm
 [hyper-print-circle]: http://www.lispworks.com/documentation/HyperSpec/Body/v_pr_cir.htm
+[concept-cons]: /track/common-lisp/concepts/cons
