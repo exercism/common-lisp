@@ -16,7 +16,7 @@
 
 ## 4. Removing a thing from the list
 
-- An idiomatic way to remove the first item of a list is to use a function which can separate the `cdr` of the list from the `car` of the list. In the Hyperspec one can find a [page][hyperspec-rest] describing one of the functions to do this.
+- An idiomatic way to remove the first item of a list is to use a function which can separate the `cdr` of the list from the `car` of the list. In the Hyperspec one can find a [page][hyper-rest] describing one of the functions to do this.
 
 ## 5. Bigger lists out of smaller lists
 
