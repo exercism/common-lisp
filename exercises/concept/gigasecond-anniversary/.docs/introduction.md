@@ -27,7 +27,7 @@ A decoded time is a set of values:
 - *minutes*: an integer between 0 and 59
 - *hour*: an integer between 0 and 23
 - *date*: an integer between 1 and 31 (upper limit actually depends upon month and year obviously)
-- *month*: and integer between 1 and 12
+- *month*: an integer between 1 and 12
 - *year*: an integer indicating the year.
 - *day of week*: an integer between 0 and 6. 0 means Monday, 1 means Tuesday etc. ... 6 means Sunday.
 - *daylight saving time flag*: true value indicates DST is in effect.
@@ -98,6 +98,6 @@ The second will let you bind variables to the individual values.
    (+ a b c)) ; => 6
 ```
 
-Another useful function is `nthvalue`
+Another useful function is `nth-value`
 
 [concept-multiple-values]: /tracks/common-lisp/concepts/multiple-values
