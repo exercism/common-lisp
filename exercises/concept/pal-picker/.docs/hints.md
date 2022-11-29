@@ -30,3 +30,4 @@
 - This task requires single-branch conditionals
 - One action is unfitting when `pet` is a particular pet
 - The other action is unfitting unless `pet` is a particular pet
+- For comparing two strings for equality, the `equal` or `string=` functions can be used (the concept of equality is covered later in the syllabus).
