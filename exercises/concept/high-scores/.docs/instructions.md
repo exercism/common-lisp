@@ -16,9 +16,11 @@ To add a player to the table define a function `add-player` which takes two argu
 - the high score table
 - the player's name as a keyword
 
+Set the player's initial score to zero.
+
 ```lisp
-(add-player hash-table :louis) ; => NIL
-(add-player hash-table :lilly) ; => NIL
+(add-player hash-table :louis) ; => 0
+(add-player hash-table :lilly) ; => 0
 ```
 
 ## 3. Setting a player's score
