@@ -7,7 +7,6 @@
 
 ## 2. Adding a player to the table
 
-- Since the player score is not being set here, the value for the key doesn't matter.
 - To add a key/value pair to a hash table use `(setf (gethash key table) value)`
 
 ## 3. Setting a player's score
