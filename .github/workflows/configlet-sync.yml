@@ -28,7 +28,7 @@ jobs:
 
     - name: Create issue
       if: ${{ failure() }}
-      uses: JasonEtco/create-an-issue@9e6213aec58987fa7d2f4deb8b256b99e63107a2
+      uses: JasonEtco/create-an-issue@77399b6110ef82b94c1c9f9f615acf9e604f7f56
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
