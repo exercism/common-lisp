@@ -40,4 +40,4 @@ The second will let you bind variables to the individual values.
    (+ a b c)) ; => 6
 ```
 
-Another useful function is `nthvalue`
+Another useful function is `nth-value`

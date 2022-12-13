@@ -48,7 +48,9 @@ The second will let you bind variables to the individual values.
    (+ a b c)) ; => 6
 ```
 
-Another useful macro is `nthvalue`. This is like `nth` for lists in that it returns the "nth" item from a set of multiple values:
+Note that the variables `a`, `b` and `c` are only in scope inside `multiple-values-bind`.
+
+Another useful macro is `nth-value`. This is like `nth` for lists in that it returns the "nth" item from a set of multiple values:
 
 ```lisp
 (nth-value 0 (values 1 2 3 )) ; => 1
