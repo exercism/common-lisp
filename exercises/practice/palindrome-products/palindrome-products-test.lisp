@@ -105,6 +105,14 @@
           (max-factor 1))
       (is (eql NIL (palindrome-products:largest min-factor max-factor)))))
 
+(test smallest-product-does-not-use-the-smallest-factor
+    (let ((min-factor 3215)
+          (max-factor 4000)
+          (palindrome 10988901)
+          (factors '((3297 3333))))
+      (is (multiple-value-bind (p f) (palindrome-products:smallest min-factor max-factor)
+                               (and (eql p palindrome) (equal f factors))))))
+
 (defun run-tests (&optional (test-or-suite 'palindrome-products-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
