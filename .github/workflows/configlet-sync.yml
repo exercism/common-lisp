@@ -7,6 +7,7 @@ on:
 
 jobs:
   configlet:
+    if: github.repository_owner == 'exercism' # Stops this job from running on forks
     timeout-minutes: 30
     runs-on: ubuntu-latest
 
