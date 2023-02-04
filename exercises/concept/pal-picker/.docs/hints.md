@@ -30,3 +30,7 @@
 - This task requires single-branch conditionals
 - One action is unfitting when `pet` is a particular pet
 - The other action is unfitting unless `pet` is a particular pet
+- For comparing two strings for equality, the `equal` or `string=` functions can be used (you'll see more about this in the [Equality] and [Strings] concepts)
+
+[Equality]: /tracks/common-lisp/concepts/equality
+[Strings]: /tracks/common-lisp/concepts/strings
