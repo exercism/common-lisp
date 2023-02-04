@@ -88,3 +88,11 @@ be pet.
 (pet "Dog")         ; => NIL
 (play-fetch "Fish") ; => "Maybe not with this pet..."
 ```
+
+~~~~exercism/note
+This task requires string comparisons. This can be done using the
+[`string=`][string-eq] function.  We'll learn more about this later in the
+syllabus in the Strings lesson.
+
+[string-eq]: https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node166.html
+~~~~
