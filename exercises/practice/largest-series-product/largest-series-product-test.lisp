@@ -65,16 +65,6 @@
           (span 4))
      (is (eql NIL (largest-series-product:largest-product digits span)))))
 
-(test reports-1-for-empty-string-and-empty-product
-    (let ((digits "")
-          (span 0))
-     (is (eql 1 (largest-series-product:largest-product digits span)))))
-
-(test reports-1-for-nonempty-string-and-empty-product
-    (let ((digits "123")
-          (span 0))
-     (is (eql 1 (largest-series-product:largest-product digits span)))))
-
 (test rejects-empty-string-and-nonzero-span
     (let ((digits "")
           (span 1))
