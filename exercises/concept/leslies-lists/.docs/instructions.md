@@ -45,7 +45,8 @@ When they are out shopping Leslie wants to know what to look for next. But they 
 
 ## 4. Removing a thing from the list
 
-When Leslie finds the first thing on the list on the shelf then want to remove the item from the list. Help them out by writing a function `remove-first-item` which will evaluate to a list with everything but the first thing on the input list.
+Leslie wants to find the first item of the list and remove the it from the shelf.
+Help her out by writing a function `remove-first-item` which will evaluate to a list with everything but the first thing on the input list.
 
 ```lisp
 (remove-first-item '(bread butter milk)) ; => '(butter milk)
