@@ -16,8 +16,8 @@ For example:
 a                         ; => "pizza"
 b                         ; => "pizza"
 
-(key-object-equality a a) ; => T
-(key-object-equality a b) ; => NIL
+(key-object-identity a a) ; => T
+(key-object-identity a b) ; => NIL
 ```
 
 because while `a` and `b` appear to be the same, they are not the same object.
