@@ -24,13 +24,13 @@ To get a value by a key from the hash table you use the `gethash` function:
                    ;    T
 ```
 
-`gethash` returns [multiple values][concepts-multiple-values] which will be explained in another concept.
+`gethash` returns [multiple values][concept-multiple-values] which will be explained in another concept.
 
 ### Inserting values
 
 To insert a value into a hash table you use `setf` with `gethash` like this:
 
-`(setf (gethash :foo *hash-table*) :bar) : => :bar`
+`(setf (gethash :foo *hash-table*) :bar) ; => :bar`
 
 This will modify the value for the key `:foo` in the hash table `*hash-table*` to be `:bar`.
 It returns the value.
