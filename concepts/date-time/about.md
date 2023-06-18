@@ -3,7 +3,7 @@
 In Common Lisp time is represented in three ways
 
 - Universal time is an absolute time, an integer representing the number of seconds since `1900-01-01T00:00:00Z` (that is midnight on January 1st, 1900 in the UTC).
-- Decoded time is a tuple of 9 values, that together represent a specific calendar time: seconds, minutes, hour, day-of-month, year, day-of-week, DST flag, time zone.
+- Decoded time is a tuple of 9 values, that together represent a specific calendar time: seconds, minutes, hour, date, month, year, day-of-week, DST flag, time zone.
 (Discussed in detail below.)
 - Internal time is an positive integer in implementation defined 'internal time units' which can be used for measurements of run time.
 
