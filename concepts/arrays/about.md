@@ -63,7 +63,7 @@ An element can also be accessed with `row-major-aref` which takes a single integ
 
 ## Predicate
 
-To deterine if an object is an array one can use `arrayp`.
+To determine if an object is an array one can use `arrayp`.
 
 ```lisp
 (arrayp #(1 2 3))            ; => T

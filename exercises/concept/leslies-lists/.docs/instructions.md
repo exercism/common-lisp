@@ -14,7 +14,7 @@ First thing is that Leslie needs to create a empty list. A function called `new-
 (new-list) ; => ()
 ```
 
-Oh no... Leslie has a few things in mind already, so they need a function that takes three items (luckily Leslie only creates a list of three items. Nothing more, nothing less!) and creates a new shopping list with those things. Write a function, `list-of-things` which takes three items and retunrs a list of them.
+Oh no... Leslie has a few things in mind already, so they need a function that takes three items (luckily Leslie only creates a list of three items. Nothing more, nothing less!) and creates a new shopping list with those things. Write a function, `list-of-things` which takes three items and returns a list of them.
 
 ```lisp
 (list-of-things 'bread 'milk 'butter) ; => '(bread milk butter)

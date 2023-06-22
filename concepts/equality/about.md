@@ -53,7 +53,7 @@ This is done recursively.
 - strings and bit vectors are [`equal`][hyper-equal] if their elements are `eql`
 - arrays of other types are compared as if with [`eq`][hyper-eq]
 - pathnames are [`equal`][hyper-equal] if they are functionality equivalent.
-(There is room for implementation dependendant behavior here with regards to case sensitivity of the strings which make up the components of the pathnames.)
+(There is room for implementation dependent behavior here with regards to case sensitivity of the strings which make up the components of the pathnames.)
 - objects of any other type are compared as if with [`eq`][hyper-eq]
 
 ```lisp
@@ -70,7 +70,7 @@ The fourth and most loose level of equality is checked with [`equalp`][hyper-equ
 The how the checking is done depends upon the types:
 
 - if the two objects are [`equalp`][hyper-equalp] then they are [`equalp`][hyper-equalp]
-- numbers are [`equalp`][hyper-equalp] if they have the same vaule even if they are not of the same type
+- numbers are [`equalp`][hyper-equalp] if they have the same value even if they are not of the same type
 - characters and strings are compared case-insensitively
 - conses are [`equalp`][hyper-equalp] if their elements are [`equalp`][hyper-equalp].
 This is done recursively.

@@ -1,6 +1,6 @@
 # Concepts of Roman Numerals
 
-This one is a bit of 'cheat' of an exericse - but the concept is real.
+This one is a bit of 'cheat' of an exercise - but the concept is real.
 
 ## Concepts
 
