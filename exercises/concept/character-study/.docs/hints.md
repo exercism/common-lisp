@@ -20,7 +20,7 @@
 ## 4. Determine the "type" of a character
 
 - Common Lisp has a predicate function `alpha-char-p` to tell if a character is an alphabetic character.
-- Common Lisp has a preidicate function `digit-char-p` to tell if a character is a numeric character.
+- Common Lisp has a predicate function `digit-char-p` to tell if a character is a numeric character.
 - You can use `char=` to tell if two characters are equal.
 - The space character is written #\Space in Common Lisp.
 - The newline character is written #\Newline in Common Lisp.
