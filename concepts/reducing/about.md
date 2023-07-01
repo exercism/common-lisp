@@ -36,10 +36,9 @@ It is usually easy to provide an initial value so that the program never gets to
 
 `reduce` takes some other keyword arguments which may be useful in some cases.
 
-* `:start` and `:end`: these specify indexes into the sequence to cause reduce to work on a sub-sequence. 
-They default to `0` and `nil` respectively meaning the beginning and end of the sequence.
-* `:from-end` if this true then instead of working left-to-right the reduction will happen right-to-left.
-* `:key` if this is set to function then that function will be called on each element *before* it is given to the reduction function.
+* `:start` and `:end`: these specify indices into the sequence which cause reduce to work on a sub-sequence. They default to `0` and `nil`, respectively, meaning the beginning and end of the sequence.
+* `:from-end` if this generalized boolean evaluates true then instead of working left-to-right, the reduction will happen right-to-left.
+* `:key` specifies a function to be called on each element *before* it is given to the reduction function. This function is *not* applied to the value specified as `:initial-value`.
 
 Some examples:
 
