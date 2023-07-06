@@ -5,7 +5,7 @@
 In Common Lisp time is represented in four ways, two of which will be touched upon here.
 
 - Universal time is an absolute time, an integer representing the number of seconds since `1900-01-01T00:00:00Z` (that is midnight on January 1st, 1900 in the UTC).
-- Decoded time is a tuple of 9 values, that together represent a specific calendar time: seconds, minutes, hour, day-of-month, year, day-of-week, DST flag, time zone.
+- Decoded time is a tuple of 9 values, that together represent a specific calendar time: seconds, minutes, hour, day-of-month, month, year, day-of-week, DST flag, time zone.
 (Discussed in detail below.)
 
 ### Universal Time
@@ -26,7 +26,7 @@ A decoded time is a set of values:
 - *seconds*: an integer between 0 and 59
 - *minutes*: an integer between 0 and 59
 - *hour*: an integer between 0 and 23
-- *date*: an integer between 1 and 31 (upper limit actually depends upon month and year obviously)
+- *day-of-month*: an integer between 1 and 31 (upper limit actually depends upon month and year obviously)
 - *month*: an integer between 1 and 12
 - *year*: an integer indicating the year.
 - *day of week*: an integer between 0 and 6. 0 means Monday, 1 means Tuesday etc. ... 6 means Sunday.
