@@ -3,7 +3,7 @@
 ## Lambda List
 
 In Common Lisp a function's argument list is known as a ['lambda list'][lambda-list].
-A lambda list can can have arguments of different types.
+A lambda list can have arguments of different types.
 These different types are designated with the use of ['lambda list keywords'][lambda-list-keyword] which all begin with `&`.
 The most commonly used types are optional, keyword and rest arguments types.
 Every parameter in the lambda list after a particular lambda list keyword will be of that type.
