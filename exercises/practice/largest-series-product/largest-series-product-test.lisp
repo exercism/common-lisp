@@ -80,11 +80,6 @@
           (span -1))
      (is (eql NIL (largest-series-product:largest-product digits span)))))
 
-(test rejects-negative-span
-    (let ((digits "12345")
-          (span -1))
-     (is (eql NIL (largest-series-product:largest-product digits span)))))
-
 (defun run-tests (&optional (test-or-suite 'largest-series-product-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
