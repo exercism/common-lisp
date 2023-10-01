@@ -59,7 +59,7 @@
                                    '("cashregister" "Carthorse" "radishes")))))
 
 (test does-not-detect-an-anagram-if-the-original-word-is-repeated
-  (is (equal nil (anagram:anagrams-for "go" '("go" "Go" "GO")))))
+  (is (equal nil (anagram:anagrams-for "go" '("goGoGO")))))
 
 (test anagrams-must-use-all-letters-exactly-once
   (is (equal nil (anagram:anagrams-for "tapper" '("patter")))))
