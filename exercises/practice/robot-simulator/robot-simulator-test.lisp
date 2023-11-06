@@ -99,7 +99,7 @@
    (is (equal '(0 . 1) (robot-simulator:robot-position robot)))
    (is (equal robot-simulator:+north+ (robot-simulator:robot-bearing robot)))))
 
-(test advance-decrements-y-when-facing-north
+(test advance-decrements-y-when-facing-south
  (let ((robot
         (robot-simulator:make-robot :position '(0 . 0) :bearing
          robot-simulator:+south+)))
@@ -123,7 +123,7 @@
    (is (equal '(-1 . 0) (robot-simulator:robot-position robot)))
    (is (equal robot-simulator:+west+ (robot-simulator:robot-bearing robot)))))
 
-(test move-east-and-north-readme
+(test move-east-and-north
  (let ((robot
         (robot-simulator:make-robot :position '(7 . 3) :bearing
          robot-simulator:+north+)))
