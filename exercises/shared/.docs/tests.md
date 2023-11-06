@@ -1,5 +1,12 @@
 # Tests
 
+To execute the test runner:
+
+* Linux & MacOS: `sh run-tests.sh`
+* Windows: `.\run-tests.ps1`
+
+## Testing interactively
+
 Start the REPL from the directory that you downloaded the exercise to.
 
 You can run the tests by loading the test file into the REPL with `(load "exercise-test")` (replacing "exercise" with appropriate name). Then evaluate `(exercise-test:run-tests)` to run all the tests.
