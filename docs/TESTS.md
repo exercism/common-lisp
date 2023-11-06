@@ -2,7 +2,7 @@
 
 ## Testing from the command line
 
-Use the `run_tests` script.
+Use the `run-tests` script.
 
 For Linux and MacOS:
 ```sh
