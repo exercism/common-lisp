@@ -264,40 +264,6 @@ def create_example_and_solution_files(exercise_name, func_name_dict):
         file.write(file_string)
 
 
-def create_test_launcher(exercise_name):
-    """
-    Creates the test launcher scripts
-    """
-    test_script = """#!/bin/sh
-exercise=${PWD##*/}
-tests="${exercise}-test.lisp"
-
-if ! [ -f "${tests}" ]; then
-    echo "Test file not found: $tests" >&2
-    exit 2
-fi
-
-# exit status: 0 if all tests pass, 1 otherwise
-ros run --load "${tests}" \\
-        --eval "(uiop:quit (if (${exercise}-test:run-tests) 0 1))"
-"""
-    with open(f"{TARGET}/{exercise_name}/run-tests.sh", 'w') as file:
-        file.write(test_script)
-
-    test_script = """
-$exercise = Split-Path -Path $PSScriptRoot -Leaf
-$tests = $exercise + "-test.lisp"
-
-if (-Not (Test-Path -Path $tests)) {
-    Write-Error "Test file not found: $tests"
-} else {
-    ros run --load $tests `
-            --eval "(uiop:quit (if (${exercise}-test:run-tests) 0 1))"
-}
-"""
-    with open(f"{TARGET}/{exercise_name}/run-tests.ps1", 'w') as file:
-        file.write(test_script)
-
 def create_test_toml(exercise_name, prob_spec_exercise):
     """
     Auto-generates the .meta/tests.toml file.
@@ -363,7 +329,6 @@ def brand_new_exercise(exercise_name :str, prob_spec_exercise :str, author :str 
     create_meta_config(exercise_name, prob_spec_exercise, author)
     create_instructions(exercise_name, prob_spec_exercise)
     create_test_example_solution_files(exercise_name, prob_spec_exercise)
-    create_test_launcher(exercise_name)
     create_test_toml(exercise_name, prob_spec_exercise)
 
 
