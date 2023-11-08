@@ -33,6 +33,11 @@ Just run this:
 ros help
 ```
 
+Enter the REPL with
+```sh
+ros run
+```
+
 ## Configure your text editor
 
 For people new to Common Lisp, particularly ones with previous experience with Emacs, can get an easy & quick start by installing [Portacle, the Portable Common Lisp Environment][portacle]. 
