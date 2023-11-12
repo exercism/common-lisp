@@ -24,6 +24,8 @@
 (test another-name-given
  (is (equal "One for Bob, one for me." (two-fer:twofer "Bob"))))
 
+(test blank-name-given (is (equal "One for you, one for me." (two-fer:twofer ""))))
+
 (test no-name-given (is (equal "One for you, one for me." (two-fer:twofer))))
 
 (defun run-tests (&optional (test-or-suite 'two-fer-suite))
