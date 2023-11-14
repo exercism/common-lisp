@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
 
       - name: Check Config
-        uses: ./.github/actions/perform-system@{"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+        uses: ./.github/actions/perform-system
         with:
           system: config-checker
           operation: test-system
