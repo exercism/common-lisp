@@ -1,8 +1,11 @@
 # Tests
 
-Start up your Common Lisp implementation in the directory of the exercise you are working on (or change the current directory for an already running Common Lisp implementation to that directory).
+## Testing interactively
 
-(All examples here assume an exercise called `exercise-name` - adjust s needed.)
+Start up your Common Lisp implementation in the directory of the exercise you are working on (or change the current directory for an already running Common Lisp implementation to that directory).
+Using roswell, do this with `ros run`.
+
+(All examples here assume an exercise called `exercise-name` - adjust as needed.)
 
 Load the test file into your running Lisp implementation, for example, `(load "exercise-name-test")`. 
 (This will also load the solution file for you.)
@@ -14,19 +17,11 @@ Remember to evaluate `(exercise-name-test:run-tests)` to re-run the tests after 
 
 ## Testing from the command line
 
-Executing the tests from the command line is possible, but it depends on which Common Lisp implementation you have chosen.
-For example, with SBCL you could execute this in the directory for exercise "foo"
+You can launch the tests with this command line invocation (again, replace "exercise" with the appropriate name in two places)
 
 ```sh
-sbcl --noinform \
-     --load foo-test \
-     --eval '(exit :code (if (foo-test:run-tests) 0 1))'
+ros run --load exercise-test.lisp --eval '(uiop:quit (if (exercise-test:run-tests) 0 1))'
 ```
 
-Other Common Lisp implementations will have similar but slightly different command-line options and exit commands.
-
-This assumes you have already installed SBCL and Quicklisp.
-See [Installing Common Lisp locally](https://exercism.org/docs/tracks/common-lisp/installation)
-
-That command is somewhat unwieldy.
-A method to wrap that into the `exercism` CLI is [shown here](https://glennj.github.io/exercism/cli).
+That command is pretty unwieldy.
+A contributor has written some notes about [how to make it easier to invoke](https://glennj.github.io/exercism/cli).

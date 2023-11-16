@@ -8,7 +8,37 @@ The basic items needed for developing in Common Lisp are:
 - A Text editor with facilities for Lisp code. 
 - (Nice to have) The often-used reference for the Common Lisp language, the ["Common Lisp Hyperspec"][hyperspec].
 
-## Fast Start
+## Roswell
+
+[Roswell][roswell] is a command to install and manage Common Lisp implementations, and many features to make developing and distrubuting Lisp applications easy.
+We're using it to simplify the install and testing steps.
+
+### Install Roswell
+
+See the [Installation Guide][ros-inst] and follow the instructions for your platform.
+For most users, the following will be sufficient:
+
+* For MacOS and Linux, [Homebrew][brew] makes this simple:
+  ```sh
+  brew install roswell
+  ```
+* For Windows, use [Scoop][scoop]:
+  ```powershell
+  scoop install roswell
+  ```
+
+The first time you use Roswell, it will fetch and install SBCL and Quicklisp.
+Just run this:
+```sh
+ros help
+```
+
+Enter the REPL with
+```sh
+ros run
+```
+
+## Configure your text editor
 
 For people new to Common Lisp, particularly ones with previous experience with Emacs, can get an easy & quick start by installing [Portacle, the Portable Common Lisp Environment][portacle]. 
 Free and full featured, it works in all common platforms and comes preconfigured "out of the box". This will supply:
@@ -47,3 +77,7 @@ If you prefer installing the needed tools separately you will need to install an
 [vim]: https://www.google.com/search?q=vim
 [vscode-plugin]:  https://marketplace.visualstudio.com/items?itemName=ailisp.commonlisp-vscode
 [vscode]:https://code.visualstudio.com
+[roswell]: https://roswell.github.io/
+[ros-inst]: https://github.com/roswell/roswell/wiki/Installation
+[brew]: https://brew.sh/
+[scoop]: https://scoop.sh/
