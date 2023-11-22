@@ -31,12 +31,12 @@ A quick set of definitions (leaving out a few details) are as follows:
 (eql #\a #\A) ; => NIL
 ```
 
-- `equal`: defines equality as meaning: two lists are `equal` if each element is also `equal`; two arrays are `equal` if each element is `eq`; two strings are `equal` if each element is `eql`; everything else is `equal` if they are `eql`.
+- `equal`: defines equality as meaning: two lists are `equal` if each element is also `equal`; two strings are `equal` if each element is `eql`; two arrays are `equal` if they are `eq`; everything else is `equal` if they are `eql`.
   _e.g._:
 
 ```lisp
 (equal (list 1 2) (list 1 2)) ; => T
-(equal #(1 2) #(1 2))         ; => T
+(equal #(1 2) #(1 2))         ; => NIL
 (equal "foo" "foo")           ; => T
 ```
 
