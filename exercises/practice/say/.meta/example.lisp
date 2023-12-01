@@ -5,5 +5,5 @@
 (in-package :say)
 
 (defun say (number)
-  (unless (or (minusp number) (>= number (expt 10 12)))
-    (remove #\, (format nil "~R" number))))
+  (when (< -1 number (expt 10 12))
+    (format nil "~r" number)))
