@@ -329,6 +329,14 @@
         "status": "beta"
       },
       {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "c2070351-2096-431d-be6f-caaaa9347de6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "b3ad38c2-2962-4b47-9b14-20ca262ebff6",

@@ -8,3 +8,4 @@ bin/configlet.exe
 bin/generate-exercise
 *~
 .mailmap
+.vscode/
