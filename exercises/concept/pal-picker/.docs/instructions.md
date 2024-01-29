@@ -39,7 +39,7 @@ Now that Ludwig has a new friend, they'll need a place to stay! Can you help
 Ludwig select the right size bed / tank / cage for their pet?
 
 Here, Ludwig needs a function called `habitat-fitter` for selecting the proper
-habitat size (a keyword) from their pet's weight in kilograms (a integer).
+habitat size (a keyword) from their pet's weight in kilograms (an integer).
 
 The habitats needed by each size pet are:
 
