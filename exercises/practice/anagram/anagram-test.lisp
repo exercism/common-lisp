@@ -76,6 +76,11 @@
 (test words-other-than-themselves-can-be-anagrams
   (is (equal '("Silent") (anagram:anagrams-for "LISTEN" '("LISTEN" "Silent")))))
 
+(test handles-case-of-greek-letters
+  (is (equal '("ΒΓΑ" "γβα") (anagram:anagrams-for "ΑΒΓ" '("ΒΓΑ" "ΒΓΔ" "γβα" "αβγ")))))
+
+(test different-characters-may-have-the-same-bytes
+  (is (equal nil (anagram:anagrams-for "a⬂" '("€a")))))
 
 (defun run-tests (&optional (test-or-suite 'anagram-suite))
   "Provides human readable results of test run. Default to entire suite."
