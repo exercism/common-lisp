@@ -112,16 +112,21 @@ because even with an equality predicate that will look inside of a cons, it may 
 
 ## 6. The maze of arrays
 
-This maze is simpler with only two rooms. The first needs a key that checks if the arrays contain the equal contents. The second needs a key that is more flexible about checking equality of numbers.
+This maze is simpler with only two rooms. 
+The first needs a key that checks if the arrays are the same arrays. 
+The second needs a key that will check the contents of the arrays.
 
 For example:
 
 ```lisp
 a                        ; => #[13 23]
-b                        ; => #[13 23.0]
+b                        ; => #[13 23]
+c                        ; => #[13 23.0]
 
 (key-arrays a b)         ; => NIL
+(key-arrays a c)         ; => NIL
 (key-arrays-loosely a b) ; => T
+(key-arrays-loosely a c) ; => T
 ```
 
-because a permissive equality predicate will not consider numeric type when comparing the contents of an array.
+because only very permissive equality checkers will check that if the contents of the array are equal.
