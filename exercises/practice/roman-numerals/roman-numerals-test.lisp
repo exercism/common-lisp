@@ -90,10 +90,12 @@
 (test test-3001
   (is (string= "MMMI" (roman-numerals:romanize 3001))))
 
+(test test-3888
+  (is (string= "MMMDCCCLXXXVIII" (roman-numerals:romanize 3888))))
+
 (test test-3999
   (is (string= "MMMCMXCIX" (roman-numerals:romanize 3999))))
 
 (defun run-tests (&optional (test-or-suite 'roman-numerals-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
-
