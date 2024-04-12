@@ -82,7 +82,7 @@
          finally (return 'room-explodes))))
 
 (defparameter +an-array+ #(1 2 3))
-(defparameter +a-similar-but-different-array+ #(1 2 3))
+(defparameter +a-similar-but-different-array+ #(1 2.0 3))
 (defparameter +a-different-array+ #(1 2 4))
 
 (defparameter +rooms+
