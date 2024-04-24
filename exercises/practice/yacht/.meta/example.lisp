@@ -29,7 +29,7 @@
          (vals (hash-values occurences)))
         (equal '(2 3) (sort vals #'<))))
 
-(defun four-of-a-king-dice (occurences)
+(defun four-of-a-kind-dice (occurences)
   (let ((pair nil))
     (maphash (lambda (key val)
               (if (>= val 4)
@@ -48,7 +48,7 @@
         ((equal category "full house") (if (full-house? scores)
                                            (reduce '+ scores)
                                            0))
-        ((equal category "four of a kind") (let ((dice (four-of-a-king-dice (frequencies scores))))
+        ((equal category "four of a kind") (let ((dice (four-of-a-kind-dice (frequencies scores))))
                                                 (if dice (* 4 dice) 0)))
         ((equal category "little straight") (if (equal '(1 2 3 4 5) (sort scores #'<))
                                                 30
