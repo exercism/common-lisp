@@ -4,35 +4,24 @@
 (in-package :yacht)
 
 (defun hash-values (ht)
-  (let ((vals '()))
-    (progn
-      (loop for v being each hash-value of ht do (setf vals (cons v vals)))
-      vals)))
+  (loop for v being each hash-value of ht collect v))
 
 (defun frequencies (sequence)
   (let ((occurences (make-hash-table)))
     (reduce (lambda (acc n)
-                (let ((freq (gethash n acc)))
-                  (if freq
-                      (progn
-                        (setf (gethash n acc) (+ freq 1))
-                        acc
-                      )
-                      (progn
-                        (setf (gethash n acc) 1))))
-                        acc)
+              (incf (gethash n acc 0))
+              acc)
             sequence
             :initial-value occurences)))
 
-(defun full-house? (scores)
-  (let* ((occurences (frequencies scores))
-         (vals (hash-values occurences)))
+(defun full-house (occurences)
+  (let ((vals (hash-values occurences)))
         (equal '(2 3) (sort vals #'<))))
 
 (defun four-of-a-kind-dice (occurences)
   (let ((pair nil))
     (maphash (lambda (key val)
-              (if (>= val 4)
+              (when (>= val 4)
                   (setf pair key)))
              occurences)
     pair))
@@ -45,7 +34,7 @@
         ((equal category "fours") (* 4 (count 4 scores)))
         ((equal category "fives") (* 5 (count 5 scores)))
         ((equal category "sixes") (* 6 (count 6 scores)))
-        ((equal category "full house") (if (full-house? scores)
+        ((equal category "full house") (if (full-house (frequencies scores))
                                            (reduce '+ scores)
                                            0))
         ((equal category "four of a kind") (let ((dice (four-of-a-kind-dice (frequencies scores))))
