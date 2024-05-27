@@ -28,25 +28,26 @@
 
 (defun score (scores category)
   "Returns the score of the dice for the given category."
-  (cond ((equal category "ones") (count 1 scores))
-        ((equal category "twos") (* 2 (count 2 scores)))
-        ((equal category "threes") (* 3 (count 3 scores)))
-        ((equal category "fours") (* 4 (count 4 scores)))
-        ((equal category "fives") (* 5 (count 5 scores)))
-        ((equal category "sixes") (* 6 (count 6 scores)))
-        ((equal category "full house") (if (full-house (frequencies scores))
-                                           (reduce '+ scores)
-                                           0))
-        ((equal category "four of a kind") (let ((dice (four-of-a-kind-dice (frequencies scores))))
-                                                (if dice (* 4 dice) 0)))
-        ((equal category "little straight") (if (equal '(1 2 3 4 5) (sort scores #'<))
-                                                30
-                                                0))
-        ((equal category "big straight") (if (equal '(2 3 4 5 6) (sort scores #'<))
-                                             30
-                                             0))
-        ((equal category "choice") (reduce '+ scores))
-        ((equal category "yacht") (if (= 1 (hash-table-count (frequencies scores)))
-                                      50
-                                      0))
-        (t 0)))
+  (case category
+    (:ones (count 1 scores))
+    (:twos (* 2 (count 2 scores)))
+    (:threes (* 3 (count 3 scores)))
+    (:fours (* 4 (count 4 scores)))
+    (:fives (* 5 (count 5 scores)))
+    (:sixes (* 6 (count 6 scores)))
+    (:full-house (if (full-house (frequencies scores))
+                                       (reduce '+ scores)
+                                       0))
+    (:four-of-a-kind (let ((dice (four-of-a-kind-dice (frequencies scores))))
+                                            (if dice (* 4 dice) 0)))
+    (:little-straight (if (equal '(1 2 3 4 5) (sort scores #'<))
+                                            30
+                                            0))
+    (:big-straight (if (equal '(2 3 4 5 6) (sort scores #'<))
+                                         30
+                                         0))
+    (:choice (reduce '+ scores))
+    (:yacht (if (= 1 (hash-table-count (frequencies scores)))
+                                  50
+                                  0))
+    (t 0)))
