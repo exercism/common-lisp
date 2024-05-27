@@ -1292,6 +1292,16 @@
         ],
         "difficulty": 5,
         "status": "beta"
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "a722b0da-7060-4dd5-930f-4fea566afebf",
+        "practices": [
+          "lists"
+        ],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ],
     "foregone": [

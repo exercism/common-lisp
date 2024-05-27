@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "SimaDovakin"
+  ],
+  "contributors": [
+    "verdammelt"
+  ],
+  "files": {
+    "solution": [
+      "./yacht.lisp"
+    ],
+    "test": [
+      "./yacht-test.lisp"
+    ],
+    "example": [
+      "./.meta/example.lisp"
+    ]
+  },
+  "blurb": "Score a single throw of dice in the game Yacht.",
+  "source": "James Kilfiger, using wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"
+}
