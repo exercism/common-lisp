@@ -7,13 +7,13 @@
   ],
   "files": {
     "solution": [
-      "./yacht.lisp"
+      "yacht.lisp"
     ],
     "test": [
-      "./yacht-test.lisp"
+      "yacht-test.lisp"
     ],
     "example": [
-      "./.meta/example.lisp"
+      ".meta/example.lisp"
     ]
   },
   "blurb": "Score a single throw of dice in the game Yacht.",
