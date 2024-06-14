@@ -2,7 +2,7 @@
 
 ## Lists
 
-Given that the name of the language is Lisp which stands of _LISt Processing_ one might assume that the language has facilities for handling lists of items, and you'd be correct!
+Given that the name of the language is Lisp which stands of _LIST Processing_ one might assume that the language has facilities for handling lists of items, and you'd be correct!
 
 While Common Lisp has other data structures as well as lists, lists are still heavily used.
 
