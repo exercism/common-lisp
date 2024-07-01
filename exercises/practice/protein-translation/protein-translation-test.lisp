@@ -145,6 +145,11 @@
           (result (list "Tryptophan" "Cysteine" "Tyrosine")))
       (is (equal result (protein-translation:proteins strand)))))
 
+(test sequence-of-two-non-stop-codons-does-not-translate-to-a-stop-codon
+    (let ((strand "AUGAUG")
+          (result (list "Methionine" "Methionine")))
+      (is (equal result (protein-translation:proteins strand)))))
+
 (test non-existing-codon-cant-translate
     (let ((strand "AAA"))
       (signals protein-translation:invalid-protein (protein-translation:proteins strand))))
