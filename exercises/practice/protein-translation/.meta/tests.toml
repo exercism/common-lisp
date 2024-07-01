@@ -91,3 +91,6 @@ description = "Incomplete RNA sequence can't translate"
 
 [43945cf7-9968-402d-ab9f-b8a28750b050]
 description = "Incomplete RNA sequence can translate if valid until a STOP codon"
+
+[f6f92714-769f-4187-9524-e353e8a41a80]
+description = "Sequence of two non-STOP codons does not translate to a STOP codon"
