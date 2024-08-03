@@ -18,8 +18,8 @@
 
 ## 4. In a row
 
-- The arguments of `aref` (for a two dimensional array) are "column" and "row"
+- The arguments of `aref` (for a two dimensional array) are "row" and "column".
 
 ## 5. In a column
 
-- The arguments of `aref` (for a two dimensional array) are "column" and "row"
+- The arguments of `aref` (for a two dimensional array) are "row" and "column".
