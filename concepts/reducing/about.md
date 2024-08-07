@@ -26,7 +26,7 @@ The `:initial-value` argument is not mandatory and `reduce` acts differently dep
 
 1. If the initial-value is not provided and the sequence has more than one element then the first time the function is called it is called with the first two elements of the sequence.
 2. If the initial-value is not provided and the sequence has one element then the form evaluates to that element and the function is not called.
-3. If the initial-value is provided and the element is empty then the form evaluates to the initial value and the function is not called.
+3. If the initial-value is provided and the sequence is empty then the form evaluates to the initial value and the function is not called.
 4. If the initial-value is not provided and the sequence is empty then the function is called with *zero* arguments.
 
 The last case is one that can trip people up.
