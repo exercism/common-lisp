@@ -78,11 +78,11 @@
 
 (test multiple-line-question
  (is
-  (equal "Whatever."
+  (equal "Sure."
          (bob:response
           (format nil "~%
-Does this cryogenic chamber make me look fat?~%
-No.")))))
+Does this cryogenic chamber make~%
+me look fat?")))))
 
 (test starting-with-whitespace
  (is (equal "Whatever." (bob:response "         hmmmmmmm..."))))
