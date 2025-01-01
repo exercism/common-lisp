@@ -39,6 +39,10 @@
     (let ((phrase "equal"))
       (is (string= "equalay" (pig-latin:translate phrase)))))
 
+(test word-beginning-with-consonant-and-vowel-containing-qu
+    (let ((phrase "liquid"))
+      (is (string= "iquidlay" (pig-latin:translate phrase)))))
+
 (test word-beginning-with-p
     (let ((phrase "pig"))
       (is (string= "igpay" (pig-latin:translate phrase)))))
