@@ -55,6 +55,10 @@
     (let ((phrase "qat"))
       (is (string= "atqay" (pig-latin:translate phrase)))))
 
+(test word-beginning-with-consonant-and-vowel-containing-qu
+    (let ((phrase "liquid"))
+      (is (string= "iquidlay" (pig-latin:translate phrase)))))
+
 (test word-beginning-with-ch
     (let ((phrase "chair"))
       (is (string= "airchay" (pig-latin:translate phrase)))))
