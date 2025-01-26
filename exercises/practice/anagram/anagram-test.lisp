@@ -15,12 +15,15 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* anagram-suite)
 
+(defun set-equal-p (set0 set1)
+  (null (set-exclusive-or set0 set1 :test #'equal)))
+
 (test no-matches
   (is (equal nil
              (anagram:anagrams-for "diaper" '("hello" "world" "zombies" "pants")))))
 
 (test detects-two-anagrams
-  (is (equal '("lemons" "melons")
+  (is (set-equal-p '("lemons" "melons")
              (anagram:anagrams-for "solemn" '("lemons" "cherry" "melons")))))
 
 (test does-not-detect-anagram-subsets
@@ -32,13 +35,13 @@
                                    '("enlists" "google" "inlets" "banana")))))
 
 (test detects-three-anagrams
-  (is (equal '("gallery" "regally" "largely")
+  (is (set-equal-p '("gallery" "regally" "largely")
              (anagram:anagrams-for "allergy"
                                    '("gallery" "ballerina" "regally" "clergy"
                                      "largely" "leading")))))
 
 (test detects-multiple-anagrams-with-different-case
-  (is (equal '("Eons" "ONES") (anagram:anagrams-for "nose" '("Eons" "ONES")))))
+  (is (set-equal-p '("Eons" "ONES") (anagram:anagrams-for "nose" '("Eons" "ONES")))))
 
 (test does-not-detect-non-anagrams-with-identical-checksum
   (is (equal nil (anagram:anagrams-for "mass" '("last")))))
@@ -77,7 +80,7 @@
   (is (equal '("Silent") (anagram:anagrams-for "LISTEN" '("LISTEN" "Silent")))))
 
 (test handles-case-of-greek-letters
-  (is (equal '("ΒΓΑ" "γβα") (anagram:anagrams-for "ΑΒΓ" '("ΒΓΑ" "ΒΓΔ" "γβα" "αβγ")))))
+  (is (set-equal-p '("ΒΓΑ" "γβα") (anagram:anagrams-for "ΑΒΓ" '("ΒΓΑ" "ΒΓΔ" "γβα" "αβγ")))))
 
 (test different-characters-may-have-the-same-bytes
   (is (equal nil (anagram:anagrams-for "a⬂" '("€a")))))
