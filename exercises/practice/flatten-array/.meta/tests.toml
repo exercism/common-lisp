@@ -34,3 +34,15 @@ description = "6 level nest list with null values"
 
 [85721643-705a-4150-93ab-7ae398e2942d]
 description = "all values in nested list are null"
+
+[bc72da10-5f55-4ada-baf3-50e4da02ec8e]
+description = "consecutive null values at the front of the array are omitted from the final result"
+
+[6991836d-0d9b-4703-80a0-3f1f23eb5981]
+description = "consecutive null values in the middle of the array are omitted from the final result"
+
+[dc90a09c-5376-449c-a7b3-c2d20d540069]
+description = "6 level nested array with null values"
+
+[51f5d9af-8f7f-4fb5-a156-69e8282cb275]
+description = "all values in nested list are null"
