@@ -26,7 +26,7 @@ Finally a symbol can be specified for each optional parameter which will be boun
                              (list :z-was-not-supplied z))))
 
 (optional-parameters)          ; => (NIL DEFAULT (:Z-WAS-NOT-SUPPLIED NIL))
-(optional-parameters 5 nil 10) ; => (5 DEFAULT (:Z-WAS-SUPPLIED 10))
+(optional-parameters 5 nil 10) ; => (5 NIL (:Z-WAS-SUPPLIED 10))
 ```
 
 ## Keyword Parameters
