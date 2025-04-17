@@ -1315,6 +1315,14 @@
         "difficulty": 1
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "bb0ee09d-5d5c-45d6-949b-b65b04a5f5e7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "59c87423-c430-4e46-9790-bef60c9c62eb",
