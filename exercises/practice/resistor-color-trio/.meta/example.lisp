@@ -6,7 +6,7 @@
 
 (defun label (colors)
     (let* ((tens (color-code (first colors)))
-           (one (color-code (second colors)))
+           (ones (color-code (second colors)))
            (multiplier (color-code (third colors)))
            (value (* (+ (* tens 10) ones) 
                       (expt 10 multiplier))))
