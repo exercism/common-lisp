@@ -292,6 +292,14 @@
         "status": "beta"
       },
       {
+        "slug": "house",
+        "name": "House",
+        "uuid": "142528c1-80e3-4d97-9a20-766a63089287",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "5c215cbf-a575-42ad-9b3f-892410a63077",
