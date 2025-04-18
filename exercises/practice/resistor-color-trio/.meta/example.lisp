@@ -5,10 +5,10 @@
 (in-package :resistor-color-trio)
 
 (defun label (colors)
-    (let* ((ones (color-code (first colors)))
-           (tens (color-code (second colors)))
+    (let* ((tens (color-code (first colors)))
+           (one (color-code (second colors)))
            (multiplier (color-code (third colors)))
-           (value (* (+ (* ones 10) tens) 
+           (value (* (+ (* tens 10) ones) 
                       (expt 10 multiplier))))
             (format-label value)))
 
