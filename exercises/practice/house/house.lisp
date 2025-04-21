@@ -4,4 +4,4 @@
 
 (in-package :house)
 
-(defun recite (startVerse endVerse))
+(defun recite (start-verse end-verse))
