@@ -20,16 +20,16 @@
   },
   "files": {
     "solution": [
-      "./%{kebab_slug}.lisp"
+      "%{kebab_slug}.lisp"
     ],
     "test": [
-      "./%{kebab_slug}-test.lisp"
+      "%{kebab_slug}-test.lisp"
     ],
     "example": [
-      "./.meta/example.lisp"
+      ".meta/example.lisp"
     ],
     "exemplar": [
-      "./.meta/exempler.lisp"
+      ".meta/exempler.lisp"
     ]
   },
   "exercises": {
