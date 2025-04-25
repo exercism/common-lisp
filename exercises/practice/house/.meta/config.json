@@ -4,13 +4,13 @@
   ],
   "files": {
     "solution": [
-      "./house.lisp"
+      "house.lisp"
     ],
     "test": [
-      "./house-test.lisp"
+      "house-test.lisp"
     ],
     "example": [
-      "./.meta/example.lisp"
+      ".meta/example.lisp"
     ]
   },
   "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",
