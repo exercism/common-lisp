@@ -35,7 +35,7 @@
  (is (equal "clu hlt io " (crypto-square:encipher "Chill out."))))
 
 (test
- 54-character-plaintext-results-in-7-chunks-the-last-two-with-trailing-spaces
+ 54-character-plaintext-results-in-8-chunks-the-last-two-with-trailing-spaces
  (is
   (equal "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
          (crypto-square:encipher
@@ -44,4 +44,3 @@
 (defun run-tests (&optional (test-or-suite 'crypto-square-suite))
   "Provides human readable results of test run. Default to entire suite."
   (run! test-or-suite))
-
