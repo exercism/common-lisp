@@ -15,16 +15,16 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* rna-transcription-suite)
 
-(test transcribes-cytidine-to-guanosine
+(test transcribes-cytosine-to-guanosine
  (is (equal "G" (rna-transcription:to-rna "C"))))
 
-(test transcribes-guanosine-to-cytidine
+(test transcribes-guanosine-to-cytosine
  (is (equal "C" (rna-transcription:to-rna "G"))))
 
-(test transcribes-adenosine-to-uracile
+(test transcribes-adenine-to-uracil
  (is (equal "U" (rna-transcription:to-rna "A"))))
 
-(test it-transcribes-thymidine-to-adenosine
+(test it-transcribes-thymine-to-adenine
  (is (equal "A" (rna-transcription:to-rna "T"))))
 
 (test it-transcribes-all-nucleotides
