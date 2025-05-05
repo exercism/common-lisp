@@ -15,27 +15,49 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* scrabble-score-suite)
 
-(test no-word-has-zero-score (is (equal 0 (scrabble-score:score-word ""))))
+(test lowercase-letter
+    (let ((word "a"))
+      (is (= 1 (scrabble-score:score-word word)))))
 
-(test whitespace-only-also-has-zero-score
- (is
-  (equal 0 (scrabble-score:score-word (concatenate 'string '(#\  #\Newline))))))
+(test uppercase-letter
+    (let ((word "A"))
+      (is (= 1 (scrabble-score:score-word word)))))
 
-(test scores-small-word (is (equal 1 (scrabble-score:score-word "a"))))
+(test valuable-letter
+    (let ((word "f"))
+      (is (= 4 (scrabble-score:score-word word)))))
 
-(test is-case-insensitive (is (equal 1 (scrabble-score:score-word "A"))))
+(test short-word
+    (let ((word "at"))
+      (is (= 2 (scrabble-score:score-word word)))))
 
-(test scores-a-slightly-bigger-word
- (is (equal 2 (scrabble-score:score-word "at"))))
+(test short-valuable-word
+    (let ((word "zoo"))
+      (is (= 12 (scrabble-score:score-word word)))))
 
-(test scores-a-middle-of-the-road-word
- (is (equal 6 (scrabble-score:score-word "street"))))
+(test medium-word
+    (let ((word "street"))
+      (is (= 6 (scrabble-score:score-word word)))))
 
-(test scores-a-peculiar-word
- (is (equal 22 (scrabble-score:score-word "quirky"))))
+(test medium-valuable-word
+    (let ((word "quirky"))
+      (is (= 22 (scrabble-score:score-word word)))))
 
-(test scores-a-very-long-word
- (is (equal 27 (scrabble-score:score-word "UNEXCLUSIVENESS"))))
+(test long-mixed-case-word
+    (let ((word "OxyphenButazone"))
+      (is (= 41 (scrabble-score:score-word word)))))
+
+(test english-like-word
+    (let ((word "pinata"))
+      (is (= 8 (scrabble-score:score-word word)))))
+
+(test empty-input
+    (let ((word ""))
+      (is (= 0 (scrabble-score:score-word word)))))
+
+(test entire-alphabet-available
+    (let ((word "abcdefghijklmnopqrstuvwxyz"))
+      (is (= 87 (scrabble-score:score-word word)))))
 
 (defun run-tests (&optional (test-or-suite 'scrabble-score-suite))
   "Provides human readable results of test run. Default to entire suite."
