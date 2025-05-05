@@ -4,6 +4,4 @@
 
 (in-package :scrabble-score)
 
-(defun score-word (word)
-  "Computes the score for an entire word."
-  )
+(defun score-word (word))
