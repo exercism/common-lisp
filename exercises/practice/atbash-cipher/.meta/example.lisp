@@ -1,6 +1,6 @@
 (defpackage :atbash-cipher
   (:use :common-lisp)
-  (:export :encode))
+  (:export :encode :decode))
 
 (in-package :atbash-cipher)
 
@@ -22,6 +22,11 @@
 
 (defun lookup-char (c) (cdr (assoc c +key+)))
 
+(defun normalize (str)
+  (remove-if-not #'alphanumericp (string-downcase str)))
+
 (defun encode (plaintext)
-  (let ((filtered (remove-if-not #'alphanumericp (string-downcase plaintext))))
-     (to-string (group (map 'list #'lookup-char filtered)))))
+  (to-string (group (map 'list #'lookup-char (normalize plaintext)))))
+
+(defun decode (ciphertext)
+  (map 'string #'lookup-char (normalize ciphertext)))
