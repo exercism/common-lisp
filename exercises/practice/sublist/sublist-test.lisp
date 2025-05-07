@@ -15,58 +15,95 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* sublist-suite)
 
-(test empty-lists (is (eq :equal (sublist:sublist (list) (list)))))
-
-(test list-equals-itself
- (is (eq :equal (sublist:sublist (list 1 2 3) (list 1 2 3)))))
-
-(test different-lists
- (is (eq :unequal (sublist:sublist (list 1 2 3) (list 2 3 4)))))
-
-(test first-list-missing-element-from-second-list
- (is (eq :unequal (sublist:sublist (list 1 3) (list 1 2 3)))))
-
-(test second-list-missing-element-from-first-list
- (is (eq :unequal (sublist:sublist (list 1 2 3) (list 1 3)))))
-
-(test first-list-missing-additional-digits-from-second-list
- (is (eq :unequal (sublist:sublist (list 1 2) (list 1 22)))))
-
-(test order-matters-to-a-lists
- (is (eq :unequal (sublist:sublist (list 1 2 3) (list 3 2 1)))))
-
-(test same-digits-different-numbers
- (is (eq :unequal (sublist:sublist (list 1 0 1) (list 10 1)))))
+(test empty-lists
+    (let ((list-one '())
+          (list-two '()))
+      (is (eq :equal (sublist:sublist list-one list-two)))))
 
 (test empty-list-within-non-empty-list
- (is (eq :sublist (sublist:sublist (list) (list 1 2 3)))))
+    (let ((list-one '())
+          (list-two '(1 2 3)))
+      (is (eq :sublist (sublist:sublist list-one list-two)))))
+
+(test non-empty-list-contains-empty-list
+    (let ((list-one '(1 2 3))
+          (list-two '()))
+      (is (eq :superlist (sublist:sublist list-one list-two)))))
+
+(test list-equals-itself
+    (let ((list-one '(1 2 3))
+          (list-two '(1 2 3)))
+      (is (eq :equal (sublist:sublist list-one list-two)))))
+
+(test different-lists
+    (let ((list-one '(1 2 3))
+          (list-two '(2 3 4)))
+      (is (eq :unequal (sublist:sublist list-one list-two)))))
 
 (test false-start
- (is (eq :sublist (sublist:sublist (list 1 2 5) (list 0 1 2 3 1 2 5 6)))))
+    (let ((list-one '(1 2 5))
+          (list-two '(0 1 2 3 1 2 5 6)))
+      (is (eq :sublist (sublist:sublist list-one list-two)))))
 
 (test consecutive
- (is (eq :sublist (sublist:sublist (list 1 1 2) (list 0 1 1 1 2 1 2)))))
+    (let ((list-one '(1 1 2))
+          (list-two '(0 1 1 1 2 1 2)))
+      (is (eq :sublist (sublist:sublist list-one list-two)))))
 
 (test sublist-at-start
- (is (eq :sublist (sublist:sublist (list 0 1 2) (list 0 1 2 3 4 5)))))
+    (let ((list-one '(0 1 2))
+          (list-two '(0 1 2 3 4 5)))
+      (is (eq :sublist (sublist:sublist list-one list-two)))))
 
 (test sublist-in-middle
- (is (eq :sublist (sublist:sublist (list 2 3 4) (list 0 1 2 3 4 5)))))
+    (let ((list-one '(2 3 4))
+          (list-two '(0 1 2 3 4 5)))
+      (is (eq :sublist (sublist:sublist list-one list-two)))))
 
 (test sublist-at-end
- (is (eq :sublist (sublist:sublist (list 3 4 5) (list 0 1 2 3 4 5)))))
-
-(test not-empty-list-contains-empty-list
- (is (eq :superlist (sublist:sublist (list 1 2 3) (list)))))
+    (let ((list-one '(3 4 5))
+          (list-two '(0 1 2 3 4 5)))
+      (is (eq :sublist (sublist:sublist list-one list-two)))))
 
 (test at-start-of-superlist
- (is (eq :superlist (sublist:sublist (list 0 1 2 3 4 5) (list 0 1 2)))))
+    (let ((list-one '(0 1 2 3 4 5))
+          (list-two '(0 1 2)))
+      (is (eq :superlist (sublist:sublist list-one list-two)))))
 
 (test in-middle-of-superlist
- (is (eq :superlist (sublist:sublist (list 0 1 2 3 4 5) (list 2 3)))))
+    (let ((list-one '(0 1 2 3 4 5))
+          (list-two '(2 3)))
+      (is (eq :superlist (sublist:sublist list-one list-two)))))
 
-(test at-end-superlist
- (is (eq :superlist (sublist:sublist (list 0 1 2 3 4 5) (list 3 4 5)))))
+(test at-end-of-superlist
+    (let ((list-one '(0 1 2 3 4 5))
+          (list-two '(3 4 5)))
+      (is (eq :superlist (sublist:sublist list-one list-two)))))
+
+(test first-list-missing-element-from-second-list
+    (let ((list-one '(1 3))
+          (list-two '(1 2 3)))
+      (is (eq :unequal (sublist:sublist list-one list-two)))))
+
+(test second-list-missing-element-from-first-list
+    (let ((list-one '(1 2 3))
+          (list-two '(1 3)))
+      (is (eq :unequal (sublist:sublist list-one list-two)))))
+
+(test first-list-missing-additional-digits-from-second-list
+    (let ((list-one '(1 2))
+          (list-two '(1 22)))
+      (is (eq :unequal (sublist:sublist list-one list-two)))))
+
+(test order-matters-to-a-list
+    (let ((list-one '(1 2 3))
+          (list-two '(3 2 1)))
+      (is (eq :unequal (sublist:sublist list-one list-two)))))
+
+(test same-digits-but-different-numbers
+    (let ((list-one '(1 0 1))
+          (list-two '(10 1)))
+      (is (eq :unequal (sublist:sublist list-one list-two)))))
 
 (defun run-tests (&optional (test-or-suite 'sublist-suite))
   "Provides human readable results of test run. Default to entire suite."
