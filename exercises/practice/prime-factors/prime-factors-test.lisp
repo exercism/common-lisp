@@ -21,7 +21,7 @@
 (test prime-number
   (is (equal '(2) (prime-factors:factors 2))))
 
-(test another-prime-number]
+(test another-prime-number
   (is (equal '(3) (prime-factors:factors 3))))
 
 (test square-of-a-prime
