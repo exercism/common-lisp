@@ -15,39 +15,57 @@
 ;; Define and enter a new FiveAM test-suite
 (def-suite* perfect-numbers-suite)
 
-(test smallest-perfect-number
- (is (equal "perfect" (perfect-numbers:classify 6))))
+(test smallest-perfect-number-is-classified-correctly
+    (let ((number 6))
+      (is (string= "perfect" (perfect-numbers:classify number)))))
 
-(test medium-perfect-number
- (is (equal "perfect" (perfect-numbers:classify 28))))
+(test medium-perfect-number-is-classified-correctly
+    (let ((number 28))
+      (is (string= "perfect" (perfect-numbers:classify number)))))
 
-(test large-perfect-number
- (is (equal "perfect" (perfect-numbers:classify 33550336))))
+(test large-perfect-number-is-classified-correctly
+    (let ((number 33550336))
+      (is (string= "perfect" (perfect-numbers:classify number)))))
 
-(test smallest-abundant-number
- (is (equal "abundant" (perfect-numbers:classify 12))))
+(test smallest-abundant-number-is-classified-correctly
+    (let ((number 12))
+      (is (string= "abundant" (perfect-numbers:classify number)))))
 
-(test medium-abundant-number
- (is (equal "abundant" (perfect-numbers:classify 30))))
+(test medium-abundant-number-is-classified-correctly
+    (let ((number 30))
+      (is (string= "abundant" (perfect-numbers:classify number)))))
 
-(test large-abundant-number
- (is (equal "abundant" (perfect-numbers:classify 33550335))))
+(test large-abundant-number-is-classified-correctly
+    (let ((number 33550335))
+      (is (string= "abundant" (perfect-numbers:classify number)))))
 
-(test smallest-prime-deficient-number
- (is (equal "deficient" (perfect-numbers:classify 2))))
+(test smallest-prime-deficient-number-is-classified-correctly
+    (let ((number 2))
+      (is (string= "deficient" (perfect-numbers:classify number)))))
 
-(test smallest-non-prime-deficient-number
- (is (equal "deficient" (perfect-numbers:classify 1))))
+(test smallest-non-prime-deficient-number-is-classified-correctly
+    (let ((number 4))
+      (is (string= "deficient" (perfect-numbers:classify number)))))
 
-(test medium-deficient-number
- (is (equal "deficient" (perfect-numbers:classify 32))))
+(test medium-deficient-number-is-classified-correctly
+    (let ((number 32))
+      (is (string= "deficient" (perfect-numbers:classify number)))))
 
-(test large-deficient-number
- (is (equal "deficient" (perfect-numbers:classify 33550337))))
+(test large-deficient-number-is-classified-correctly
+    (let ((number 33550337))
+      (is (string= "deficient" (perfect-numbers:classify number)))))
 
-(test undefinded-0 (is (equal nil (perfect-numbers:classify 0))))
+(test edge-case-no-factors-other-than-itself-is-classified-correctly
+    (let ((number 1))
+      (is (string= "deficient" (perfect-numbers:classify number)))))
 
-(test undefined-negative (is (equal nil (perfect-numbers:classify -3))))
+(test zero-is-rejected-as-it-is-not-a-positive-integer
+    (let ((number 0))
+      (is (equal NIL (perfect-numbers:classify number)))))
+
+(test negative-integer-is-rejected-as-it-is-not-a-positive-integer
+    (let ((number -1))
+      (is (equal NIL (perfect-numbers:classify number)))))
 
 (defun run-tests (&optional (test-or-suite 'perfect-numbers-suite))
   "Provides human readable results of test run. Default to entire suite."

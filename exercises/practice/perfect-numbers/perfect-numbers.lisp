@@ -4,4 +4,4 @@
 
 (in-package :perfect-numbers)
 
-(defun classify (n))
+(defun classify (number))
