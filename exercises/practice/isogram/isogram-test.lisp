@@ -43,7 +43,7 @@
 
 (test isogram-with-duplicated-hyphen (is (isogram:isogram-p "six-year-old")))
 
-(test made-up-name-that-is-an-isogam
+(test made-up-name-that-is-an-isogram
   (is (isogram:isogram-p "Emily Jung Schwartzkopf")))
 
 (test duplicated-character-in-the-middle
