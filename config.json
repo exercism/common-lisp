@@ -789,6 +789,21 @@
         "status": "beta"
       },
       {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "5e06855b-2894-4b30-992d-1a7af376d2ec",
+        "practices": [
+          "conditionals",
+          "hash-tables",
+          "mapping"
+        ],
+        "prerequisites": [
+          "conditionals",
+          "hash-tables"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "robot-name",
         "name": "Robot Name",
         "uuid": "79a4a35c-40d6-4e2d-92a1-005c40b4f4c5",
