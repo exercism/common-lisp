@@ -73,6 +73,24 @@
            (output (two-bucket:measure bucket-one bucket-two goal start-bucket)))
      (is (equal-alists result output))))
 
+(test measure-using-bucket-one-much-bigger-than-bucket-two
+    (let* ((bucket-one 5)
+           (bucket-two 1)
+           (goal 2)
+           (start-bucket :one)
+           (result '((:moves . 6) (:goal-bucket . :one) (:other-bucket . 1)))
+           (output (two-bucket:measure bucket-one bucket-two goal start-bucket)))
+     (is (equal-alists result output))))
+
+(test measure-using-bucket-one-much-smaller-than-bucket-two
+    (let* ((bucket-one 3)
+           (bucket-two 15)
+           (goal 9)
+           (start-bucket :one)
+           (result '((:moves . 6) (:goal-bucket . :two) (:other-bucket . 0)))
+           (output (two-bucket:measure bucket-one bucket-two goal start-bucket)))
+     (is (equal-alists result output))))
+
 (test not-possible-to-reach-the-goal
     (let ((bucket-one 6)
           (bucket-two 15)
