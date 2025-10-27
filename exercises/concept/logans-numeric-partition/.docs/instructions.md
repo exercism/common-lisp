@@ -15,7 +15,7 @@ First you'll need to create a function which takes a pair of two lists and a num
 
 ## 2. Categorizing lots of numbers
 
-Now that function you can write a function which takes a list of numbers and categorizes them like you did above:
+Now using the function you just created, you can write another function that takes a list of numbers and categorizes them like you did above:
 
 ```lisp
 (partition-numbers '(1 2 3 4))     ; => ((3 1) . (4 2))
