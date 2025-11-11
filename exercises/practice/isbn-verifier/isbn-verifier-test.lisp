@@ -43,6 +43,14 @@
     (let ((isbn "3-598-2X507-9"))
       (is-false (isbn-verifier:validp isbn))))
 
+(test only-one-check-digit-is-allowed
+    (let ((isbn "3-598-21508-96"))
+      (is-false (isbn-verifier:validp isbn))))
+
+(test x-is-not-substituted-by-the-value-ten
+    (let ((isbn "3-598-2X507-5"))
+      (is-false (isbn-verifier:validp isbn))))
+
 (test valid-isbn-without-separating-dashes
     (let ((isbn "3598215088"))
       (is-true (isbn-verifier:validp isbn))))

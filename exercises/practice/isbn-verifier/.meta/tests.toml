@@ -1,6 +1,13 @@
-# This is an auto-generated file. Regular comments will be removed when this
-# file is regenerated. Regenerating will not touch any manually added keys,
-# so comments can be added in a "comment" key.
+# This is an auto-generated file.
+#
+# Regenerating this file via `configlet sync` will:
+# - Recreate every `description` key/value pair
+# - Recreate every `reimplements` key/value pair, where they exist in problem-specifications
+# - Remove any `include = true` key/value pair (an omitted `include` key implies inclusion)
+# - Preserve any other key/value pair
+#
+# As user-added comments (using the # character) will be removed when this file
+# is regenerated, comments can be added via a `comment` key.
 
 [0caa3eac-d2e3-4c29-8df8-b188bc8c9292]
 description = "valid isbn"
@@ -22,6 +29,12 @@ description = "invalid character in isbn is not treated as zero"
 
 [28025280-2c39-4092-9719-f3234b89c627]
 description = "X is only valid as a check digit"
+
+[8005b57f-f194-44ee-88d2-a77ac4142591]
+description = "only one check digit is allowed"
+
+[fdb14c99-4cf8-43c5-b06d-eb1638eff343]
+description = "X is not substituted by the value 10"
 
 [f6294e61-7e79-46b3-977b-f48789a4945b]
 description = "valid isbn without separating dashes"
