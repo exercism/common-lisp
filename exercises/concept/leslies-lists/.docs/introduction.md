@@ -45,7 +45,7 @@ It is _not_ an error to request an index that is bigger than the list is long.
 Instead, it evaluates to `nil`:
 
 ```lisp
-(nth 23 '(short list))` ; => nil
+(nth 23 '(short list)) ; => nil
 ```
 
 There are also several helper methods for accessing the first items of a list: `first`, `second`, `third`, all the way until `tenth`. Nifty, huh?
