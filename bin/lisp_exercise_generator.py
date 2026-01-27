@@ -68,7 +68,9 @@ def create_instructions(exercise_name, prob_spec_exercise):
     in the problem-specifications repository.
     Precondition: prob_spec_exercise is a string of a valid filepath.
     """
-    input_file = f"{prob_spec_exercise}/description.md"
+    description = f"{prob_spec_exercise}/description.md"
+    instructions = f"{prob_spec_exercise}/instructions.md"
+    input_file = description if os.path.isfile(description) else instructions
     output_file = f"{TARGET}/{exercise_name}/.docs/instructions.md"
     with open(input_file, 'r', encoding = "utf-8") as read_from:
         with open(output_file, 'w', encoding = "utf-8") as write_to:
