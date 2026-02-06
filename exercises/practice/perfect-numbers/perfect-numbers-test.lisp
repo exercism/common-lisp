@@ -27,6 +27,10 @@
     (let ((number 33550336))
       (is (string= "perfect" (perfect-numbers:classify number)))))
 
+(test perfect-square-abundant-number-is-classified-correctly
+    (let ((number 196))
+      (is (string= "abundant" (perfect-numbers:classify number)))))
+
 (test smallest-abundant-number-is-classified-correctly
     (let ((number 12))
       (is (string= "abundant" (perfect-numbers:classify number)))))
