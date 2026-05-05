@@ -14,7 +14,7 @@
    :key-conses-of-characters-case-insensitively
    :key-conses-of-numbers-of-different-types
    :key-arrays
-   :key-arrays-losely))
+   :key-arrays-loosely))
 
 (in-package :key-comparison)
 
