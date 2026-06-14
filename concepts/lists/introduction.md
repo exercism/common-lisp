@@ -54,7 +54,7 @@ Two or more lists can be combined with `append`:
 
 ```lisp
 (append '(a b c) '(1 2 3)) ; => (A B C 1 2 3)
-(append '(a b c) '()))     ; => (A B C)
+(append '(a b c) '())     ; => (A B C)
 ```
 
 Each argument given to `append` needs to be a list.
