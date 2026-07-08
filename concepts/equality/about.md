@@ -52,8 +52,6 @@ The way the checking is done depends upon the types of the arguments:
 This is done recursively.
 - strings and bit vectors are [`equal`][hyper-equal] if their elements are `eql`
 - arrays of other types are compared as if with [`eq`][hyper-eq]
-- pathnames are [`equal`][hyper-equal] if they are functionality equivalent.
-(There is room for implementation dependent behavior here with regards to case sensitivity of the strings which make up the components of the pathnames.)
 - objects of any other type are compared as if with [`eq`][hyper-eq]
 
 ```lisp
@@ -61,7 +59,6 @@ This is done recursively.
 (equal "hello" "hello")               ; => T
 (equal "hello" "HELLO")               ; => NIL
 (equal #(1 2 3) #(1 2 3))             ; => NIL (arrays are equal only if eq)
-(equal #P"foo/bar.md" #P"foo/bar.md") ; => T (pathnames are equal if "functionally equivalent"
 ```
 
 ## `equalp`
@@ -75,7 +72,6 @@ The how the checking is done depends upon the types:
 - conses are [`equalp`][hyper-equalp] if their elements are [`equalp`][hyper-equalp].
 This is done recursively.
 - arrays are [`equalp`][hyper-equalp] if they have the same number of dimensions, those dimensions are the same, and each element is [`equalp`][hyper-equalp].
-- structures are [`equalp`][hyper-equalp] if they have the same class and slots and each of those slots are [`equalp`][hyper-equalp] between the two structures.
 - hash tables are [`equalp`][hyper-equalp] if they both have the same `:test` function, they have the same keys (as compared with that `:test` function) and that those keys have the same values as compared with [`equalp`][hyper-equalp].
 
 ```lisp
@@ -83,8 +79,6 @@ This is done recursively.
 (equalp #\c #\C)                     ; => T
 (equalp "hello" "HELLO")             ; => T
 (equalp #(1 2 3) #(1.0 2.0 3.0))     ; => T (arrays contain elements which are `equalp`)
-(equal #S(TEST :SLOT1 'a :SLOT2 'b) 
-       #S(TEST :SLOT1 'a :SLOT2 'b)) ; => T (structures of the same class with slots that have values which are `equalp`)
 ```
 
 ## Type-specific functions
