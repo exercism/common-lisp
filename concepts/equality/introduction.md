@@ -38,12 +38,10 @@ A quick set of definitions (leaving out a few details) are as follows:
 (equal "foo" "foo")           ; => T
 ```
 
-- `equalp`: defines equality as meaning: strings and characters are compared in a case-insensitive manner; numbers are compared with some type conversion; lists and arrays are `equalp` if every element is also `equalp`, structures if they are the same type and all slots are `equalp` and hash-tables if their keys and values are `equalp`
+- equalp: defines equality as meaning: strings and characters are compared in a case-insensitive manner; numbers are compared with some type conversion; lists and arrays are equalp if every element is also equalp; hash-tables if their keys and values are equalp.
   _e.g._:
 
 ```lisp
 (equalp "foo" "FoO")                          ; => T
 (equalp 3 3.0)                                ; => T
-(equalp (make-a-structure :slot1 1 :slot2 2) 
-        (make-a-structure :slot1 1 :slot2 2)) ; => T
 ```
