@@ -1,6 +1,6 @@
 (defpackage :pal-picker
   (:use :cl)
-  (:export :pal-picker :habitat-fitter :feeding-time-p
+  (:export :pal-picker :habitat-fitter :feeding-time
            :pet :play-fetch))
 
 (in-package :pal-picker)
@@ -22,7 +22,7 @@
     ((> weight 0) :small)
     (t :just-your-imagination)))
 
-(defun feeding-time-p (fullness)
+(defun feeding-time (fullness)
   (if (> fullness 20)
       "All is well."
       "It's feeding time!"))
