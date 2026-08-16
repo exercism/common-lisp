@@ -59,7 +59,7 @@ One thing all earthling pets have in common is their need for food! This concept
 is somewhat alien to Ludwig, however, as they are prone to forgetting to refill their
 pet's food-bowl.
 
-Ludwig could use a simple function called `feeding-time-p` to alert them when the
+Ludwig could use a simple function called `feeding-time` to alert them when the
 bowl needs refilling. The function would take a percent fullness (an integer)
 and return a message in the form of a string.
 
@@ -69,7 +69,7 @@ If the food level is:
 - 20% or below -> `"It's feeding time!"`
 
 ```lisp
-(feeding-time-p 15) ; => "It's feeding time!"
+(feeding-time 15) ; => "It's feeding time!"
 ```
 
 ## 4. A Code of Conduct

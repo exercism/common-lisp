@@ -1,6 +1,6 @@
 (defpackage :pal-picker
   (:use :cl)
-  (:export :pal-picker :habitat-fitter :feeding-time-p
+  (:export :pal-picker :habitat-fitter :feeding-time
            :pet :play-fetch))
 
 (in-package :pal-picker)
@@ -9,7 +9,7 @@
 
 (defun habitat-fitter (weight))
 
-(defun feeding-time-p (fullness))
+(defun feeding-time (fullness))
 
 (defun pet (pet))
 

@@ -37,11 +37,11 @@
   (is (eql :just-your-imagination (habitat-fitter -5))))
 
 (test we-feast "Determines whether the food-bowl needs refilling from its fullness"
-  (is (string= "It's feeding time!" (feeding-time-p 10)))
-  (is (string= "All is well." (feeding-time-p 36)))
-  (is (string= "All is well." (feeding-time-p 74)))
-  (is (string= "It's feeding time!" (feeding-time-p 3)))
-  (is (string= "All is well." (feeding-time-p 90))))
+  (is (string= "It's feeding time!" (feeding-time 10)))
+  (is (string= "All is well." (feeding-time 36)))
+  (is (string= "All is well." (feeding-time 74)))
+  (is (string= "It's feeding time!" (feeding-time 3)))
+  (is (string= "All is well." (feeding-time 90))))
 
 (test code-of-conduct "Is the given action unsuitable for the given pet?"
   (is-false (pet "Cat"))
