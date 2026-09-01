@@ -13,7 +13,7 @@
       ".meta/example.lisp"
     ]
   },
-  "blurb": "Determine if a sentence is a pangram.",
+  "blurb": "Determine whether a phrase uses every letter in the Latin alphabet.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Pangram"
 }
