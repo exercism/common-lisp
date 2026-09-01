@@ -23,6 +23,11 @@
 (test shouting-gibberish
  (is (equal "Whoa, chill out!" (bob:response "FCECDFCAAB"))))
 
+(test shouting-a-statement-containing-a-question-mark
+ (is
+  (equal "Whoa, chill out!"
+         (bob:response "DO LIONS EAT PEOPLE? AHHHHH."))))
+
 (test asking-a-question
  (is
   (equal "Sure."
