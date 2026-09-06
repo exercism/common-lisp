@@ -99,10 +99,40 @@
           (result "Washi, you are the 21st customer we serve today. Thank you!"))
       (is (string= result (line-up:format name number)))))
 
+(test format-exceptional-ordinal-numeral-22-ending-in-nd-even-though-it-is-a-multiple-of-11
+    (let ((name "Ingrid")
+          (number 22)
+          (result "Ingrid, you are the 22nd customer we serve today. Thank you!"))
+      (is (string= result (line-up:format name number)))))
+
+(test format-exceptional-ordinal-numeral-33-ending-in-rd-even-though-it-is-a-multiple-of-11
+    (let ((name "Mario")
+          (number 33)
+          (result "Mario, you are the 33rd customer we serve today. Thank you!"))
+      (is (string= result (line-up:format name number)))))
+
+(test format-exceptional-ordinal-numeral-52-ending-in-nd-even-though-it-is-a-multiple-of-13
+    (let ((name "Quentin")
+          (number 52)
+          (result "Quentin, you are the 52nd customer we serve today. Thank you!"))
+      (is (string= result (line-up:format name number)))))
+
 (test format-exceptional-ordinal-numeral-62
     (let ((name "Nayra")
           (number 62)
           (result "Nayra, you are the 62nd customer we serve today. Thank you!"))
+      (is (string= result (line-up:format name number)))))
+
+(test format-non-exceptional-ordinal-numeral-72-ending-in-nd-even-though-it-is-a-multiple-of-12
+    (let ((name "Ugo")
+          (number 72)
+          (result "Ugo, you are the 72nd customer we serve today. Thank you!"))
+      (is (string= result (line-up:format name number)))))
+
+(test format-exceptional-ordinal-numeral-91-ending-in-st-even-though-it-is-a-multiple-of-13
+    (let ((name "Boris")
+          (number 91)
+          (result "Boris, you are the 91st customer we serve today. Thank you!"))
       (is (string= result (line-up:format name number)))))
 
 (test format-exceptional-ordinal-numeral-100
@@ -127,6 +157,12 @@
     (let ((name "Yma")
           (number 123)
           (result "Yma, you are the 123rd customer we serve today. Thank you!"))
+      (is (string= result (line-up:format name number)))))
+
+(test format-large-number-972-ending-in-nd-even-though-it-is-a-multiple-of-12
+    (let ((name "Elias")
+          (number 972)
+          (result "Elias, you are the 972nd customer we serve today. Thank you!"))
       (is (string= result (line-up:format name number)))))
 
 (defun run-tests (&optional (test-or-suite 'line-up-suite))
