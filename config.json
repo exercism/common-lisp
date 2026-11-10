@@ -430,8 +430,7 @@
         "name": "All Your Base",
         "uuid": "9b01a3bd-68fe-4171-8e5e-ff3351865aaf",
         "practices": [
-          "integers",
-          "arithmetic"
+          "integers"
         ],
         "prerequisites": [
           "integers",
@@ -461,8 +460,7 @@
         "uuid": "9319d1a6-276f-4b3b-8305-fc022cc48ef2",
         "practices": [
           "lists",
-          "mapping",
-          "arithmetic"
+          "mapping"
         ],
         "prerequisites": [
           "integers",
@@ -487,8 +485,7 @@
         "name": "Binary Search",
         "uuid": "b327bd9a-b12e-490b-91cb-d3c21a23b4eb",
         "practices": [
-          "arrays",
-          "conditionals"
+          "arrays"
         ],
         "prerequisites": [
           "arrays",
@@ -614,7 +611,6 @@
         "name": "Perfect Numbers",
         "uuid": "b3ad38c2-2962-4b47-9b15-15ca262ebff6",
         "practices": [
-          "arithmetic",
           "conditionals"
         ],
         "prerequisites": [
@@ -657,8 +653,7 @@
         "name": "Sieve",
         "uuid": "40f3b911-0739-4fec-95cc-cfab99788c19",
         "practices": [
-          "integers",
-          "arithmetic"
+          "integers"
         ],
         "prerequisites": [
           "conditionals",
@@ -777,8 +772,7 @@
         "name": "Prime Factors",
         "uuid": "cc138097-7c0f-44b4-b07e-2a24f6475986",
         "practices": [
-          "integers",
-          "arithmetic"
+          "integers"
         ],
         "prerequisites": [
           "conditionals",
@@ -793,7 +787,6 @@
         "name": "Relative Distance",
         "uuid": "5e06855b-2894-4b30-992d-1a7af376d2ec",
         "practices": [
-          "conditionals",
           "hash-tables",
           "mapping"
         ],
@@ -893,7 +886,6 @@
         "name": "ISBN Verifier",
         "uuid": "d234aba4-daa2-4573-b9df-4592589f2ccf",
         "practices": [
-          "strings",
           "filtering",
           "mapping",
           "arithmetic"
@@ -930,7 +922,6 @@
         "uuid": "880223e2-2625-4753-917e-b1d82cc2a028",
         "practices": [
           "reducing",
-          "conditionals",
           "filtering"
         ],
         "prerequisites": [
@@ -966,8 +957,7 @@
         "uuid": "29edfde1-ba04-4502-80e2-8a52092e18a9",
         "practices": [
           "functions",
-          "mapping",
-          "conditionals"
+          "mapping"
         ],
         "prerequisites": [
           "conditionals",
@@ -1047,7 +1037,6 @@
         "name": "Pig Latin",
         "uuid": "761dc40f-7142-4f0c-abc8-a05042600f42",
         "practices": [
-          "strings",
           "functions"
         ],
         "prerequisites": [
@@ -1096,7 +1085,6 @@
         "name": "Matrix",
         "uuid": "93e19e42-f81d-42f0-b3ad-a0f5974ccf20",
         "practices": [
-          "strings",
           "arrays"
         ],
         "prerequisites": [
@@ -1113,8 +1101,7 @@
         "name": "Palindrome Products",
         "uuid": "55744a77-e371-4963-bd8a-43048eb56ad4",
         "practices": [
-          "multiple-values",
-          "arithmetic"
+          "multiple-values"
         ],
         "prerequisites": [
           "multiple-values",
@@ -1146,7 +1133,6 @@
         "uuid": "b7885c80-d4d9-4636-a9c2-6051c6f9204c",
         "practices": [
           "arithmetic",
-          "strings",
           "characters"
         ],
         "prerequisites": [
@@ -1177,7 +1163,6 @@
         "name": "Two Bucket",
         "uuid": "3b972dcf-536e-4a42-9b39-040ac7f40f2f",
         "practices": [
-          "conditionals",
           "functions"
         ],
         "prerequisites": [
@@ -1280,8 +1265,7 @@
         "uuid": "ce90fcd2-bf4d-4ed4-ba1d-eadca619022f",
         "practices": [
           "arithmetic",
-          "floating-point-numbers",
-          "conditionals"
+          "floating-point-numbers"
         ],
         "prerequisites": [
           "arithmetic",
